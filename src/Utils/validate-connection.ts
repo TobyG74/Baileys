@@ -36,11 +36,29 @@ const getUserAgent = (config: SocketConfig): proto.ClientPayload.IUserAgent => {
 	}
 }
 
+const PLATFORM_MAP = {
+	'Mac OS': proto.ClientPayload.WebInfo.WebSubPlatform.DARWIN,
+	'Windows': proto.ClientPayload.WebInfo.WebSubPlatform.WIN32
+}
+
+const getWebInfo = (config: SocketConfig): proto.ClientPayload.IWebInfo => {
+	let webSubPlatform = proto.ClientPayload.WebInfo.WebSubPlatform.WEB_BROWSER
+	if(config.syncFullHistory && PLATFORM_MAP[config.browser[0]]) {
+		webSubPlatform = PLATFORM_MAP[config.browser[0]]
+	}
+
+	return { webSubPlatform }
+}
+
 const getClientPayload = (config: SocketConfig) => {
 	const payload: proto.IClientPayload = {
 		connectType: proto.ClientPayload.ConnectType.WIFI_UNKNOWN,
 		connectReason: proto.ClientPayload.ConnectReason.USER_ACTIVATED,
 		userAgent: getUserAgent(config),
+	}
+
+	if(!config.mobile) {
+		payload.webInfo = getWebInfo(config)
 	}
 
 	return payload
