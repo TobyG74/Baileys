@@ -1,0 +1,822 @@
+/*eslint-disable block-scoped-var, id-length, no-control-regex, no-magic-numbers, no-prototype-builtins, no-redeclare, no-shadow, no-var, sort-vars*/
+import $protobuf from "protobufjs/minimal.js";
+
+const $Reader = $protobuf.Reader, $Writer = $protobuf.Writer, $util = $protobuf.util;
+
+const $root = $protobuf.roots["default"] || ($protobuf.roots["default"] = {});
+
+export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData = (() => {
+
+    const WAMdStorageChatRowOpaqueData = {};
+
+    WAMdStorageChatRowOpaqueData.ChatRowOpaqueData = (function() {
+
+        function ChatRowOpaqueData(p) {
+            if (p)
+                for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
+                    if (p[ks[i]] != null && ks[i] !== "__proto__")
+                        this[ks[i]] = p[ks[i]];
+        }
+
+        ChatRowOpaqueData.prototype.draftMessage = null;
+
+        let $oneOfFields;
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(ChatRowOpaqueData.prototype, "_draftMessage", {
+            get: $util.oneOfGetter($oneOfFields = ["draftMessage"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        ChatRowOpaqueData.create = function create(properties) {
+            return new ChatRowOpaqueData(properties);
+        };
+
+        ChatRowOpaqueData.encode = function encode(m, w) {
+            if (!w)
+                w = $Writer.create();
+            if (m.draftMessage != null && Object.hasOwnProperty.call(m, "draftMessage"))
+                $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.encode(m.draftMessage, w.uint32(10).fork()).ldelim();
+            return w;
+        };
+
+        ChatRowOpaqueData.decode = function decode(r, l, e, n) {
+            if (!(r instanceof $Reader))
+                r = $Reader.create(r);
+            if (n === undefined)
+                n = 0;
+            if (n > $Reader.recursionLimit)
+                throw Error("maximum nesting depth exceeded");
+            var c = l === undefined ? r.len : r.pos + l, m = new $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData();
+            while (r.pos < c) {
+                var t = r.uint32();
+                if (t === e)
+                    break;
+                switch (t >>> 3) {
+                case 1: {
+                        m.draftMessage = $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.decode(r, r.uint32(), undefined, n + 1);
+                        break;
+                    }
+                default:
+                    r.skipType(t & 7, n);
+                    break;
+                }
+            }
+            return m;
+        };
+
+        ChatRowOpaqueData.fromObject = function fromObject(d, n) {
+            if (d instanceof $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData)
+                return d;
+            if (n === undefined)
+                n = 0;
+            if (n > $util.recursionLimit)
+                throw Error("maximum nesting depth exceeded");
+            var m = new $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData();
+            if (d.draftMessage != null) {
+                if (typeof d.draftMessage !== "object")
+                    throw TypeError(".WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.draftMessage: object expected");
+                m.draftMessage = $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.fromObject(d.draftMessage, n + 1);
+            }
+            return m;
+        };
+
+        ChatRowOpaqueData.toObject = function toObject(m, o) {
+            if (!o)
+                o = {};
+            var d = {};
+            if (m.draftMessage != null && m.hasOwnProperty("draftMessage")) {
+                d.draftMessage = $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.toObject(m.draftMessage, o);
+                if (o.oneofs)
+                    d._draftMessage = "draftMessage";
+            }
+            return d;
+        };
+
+        ChatRowOpaqueData.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        ChatRowOpaqueData.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/WAMdStorageChatRowOpaqueData.ChatRowOpaqueData";
+        };
+
+        ChatRowOpaqueData.DraftMessage = (function() {
+
+            function DraftMessage(p) {
+                if (p)
+                    for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
+                        if (p[ks[i]] != null && ks[i] !== "__proto__")
+                            this[ks[i]] = p[ks[i]];
+            }
+
+            DraftMessage.prototype.text = null;
+            DraftMessage.prototype.omittedURL = null;
+            DraftMessage.prototype.ctwaContextLinkData = null;
+            DraftMessage.prototype.ctwaContext = null;
+            DraftMessage.prototype.timestamp = null;
+
+            let $oneOfFields;
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(DraftMessage.prototype, "_text", {
+                get: $util.oneOfGetter($oneOfFields = ["text"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(DraftMessage.prototype, "_omittedURL", {
+                get: $util.oneOfGetter($oneOfFields = ["omittedURL"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(DraftMessage.prototype, "_ctwaContextLinkData", {
+                get: $util.oneOfGetter($oneOfFields = ["ctwaContextLinkData"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(DraftMessage.prototype, "_ctwaContext", {
+                get: $util.oneOfGetter($oneOfFields = ["ctwaContext"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(DraftMessage.prototype, "_timestamp", {
+                get: $util.oneOfGetter($oneOfFields = ["timestamp"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            DraftMessage.create = function create(properties) {
+                return new DraftMessage(properties);
+            };
+
+            DraftMessage.encode = function encode(m, w) {
+                if (!w)
+                    w = $Writer.create();
+                if (m.text != null && Object.hasOwnProperty.call(m, "text"))
+                    w.uint32(10).string(m.text);
+                if (m.omittedURL != null && Object.hasOwnProperty.call(m, "omittedURL"))
+                    w.uint32(18).string(m.omittedURL);
+                if (m.ctwaContextLinkData != null && Object.hasOwnProperty.call(m, "ctwaContextLinkData"))
+                    $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextLinkData.encode(m.ctwaContextLinkData, w.uint32(26).fork()).ldelim();
+                if (m.ctwaContext != null && Object.hasOwnProperty.call(m, "ctwaContext"))
+                    $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextData.encode(m.ctwaContext, w.uint32(34).fork()).ldelim();
+                if (m.timestamp != null && Object.hasOwnProperty.call(m, "timestamp"))
+                    w.uint32(40).int64(m.timestamp);
+                return w;
+            };
+
+            DraftMessage.decode = function decode(r, l, e, n) {
+                if (!(r instanceof $Reader))
+                    r = $Reader.create(r);
+                if (n === undefined)
+                    n = 0;
+                if (n > $Reader.recursionLimit)
+                    throw Error("maximum nesting depth exceeded");
+                var c = l === undefined ? r.len : r.pos + l, m = new $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage();
+                while (r.pos < c) {
+                    var t = r.uint32();
+                    if (t === e)
+                        break;
+                    switch (t >>> 3) {
+                    case 1: {
+                            m.text = r.string();
+                            break;
+                        }
+                    case 2: {
+                            m.omittedURL = r.string();
+                            break;
+                        }
+                    case 3: {
+                            m.ctwaContextLinkData = $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextLinkData.decode(r, r.uint32(), undefined, n + 1);
+                            break;
+                        }
+                    case 4: {
+                            m.ctwaContext = $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextData.decode(r, r.uint32(), undefined, n + 1);
+                            break;
+                        }
+                    case 5: {
+                            m.timestamp = r.int64();
+                            break;
+                        }
+                    default:
+                        r.skipType(t & 7, n);
+                        break;
+                    }
+                }
+                return m;
+            };
+
+            DraftMessage.fromObject = function fromObject(d, n) {
+                if (d instanceof $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage)
+                    return d;
+                if (n === undefined)
+                    n = 0;
+                if (n > $util.recursionLimit)
+                    throw Error("maximum nesting depth exceeded");
+                var m = new $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage();
+                if (d.text != null) {
+                    m.text = String(d.text);
+                }
+                if (d.omittedURL != null) {
+                    m.omittedURL = String(d.omittedURL);
+                }
+                if (d.ctwaContextLinkData != null) {
+                    if (typeof d.ctwaContextLinkData !== "object")
+                        throw TypeError(".WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.ctwaContextLinkData: object expected");
+                    m.ctwaContextLinkData = $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextLinkData.fromObject(d.ctwaContextLinkData, n + 1);
+                }
+                if (d.ctwaContext != null) {
+                    if (typeof d.ctwaContext !== "object")
+                        throw TypeError(".WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.ctwaContext: object expected");
+                    m.ctwaContext = $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextData.fromObject(d.ctwaContext, n + 1);
+                }
+                if (d.timestamp != null) {
+                    if ($util.Long)
+                        (m.timestamp = $util.Long.fromValue(d.timestamp)).unsigned = false;
+                    else if (typeof d.timestamp === "string")
+                        m.timestamp = parseInt(d.timestamp, 10);
+                    else if (typeof d.timestamp === "number")
+                        m.timestamp = d.timestamp;
+                    else if (typeof d.timestamp === "object")
+                        m.timestamp = new $util.LongBits(d.timestamp.low >>> 0, d.timestamp.high >>> 0).toNumber();
+                }
+                return m;
+            };
+
+            DraftMessage.toObject = function toObject(m, o) {
+                if (!o)
+                    o = {};
+                var d = {};
+                if (m.text != null && m.hasOwnProperty("text")) {
+                    d.text = m.text;
+                    if (o.oneofs)
+                        d._text = "text";
+                }
+                if (m.omittedURL != null && m.hasOwnProperty("omittedURL")) {
+                    d.omittedURL = m.omittedURL;
+                    if (o.oneofs)
+                        d._omittedURL = "omittedURL";
+                }
+                if (m.ctwaContextLinkData != null && m.hasOwnProperty("ctwaContextLinkData")) {
+                    d.ctwaContextLinkData = $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextLinkData.toObject(m.ctwaContextLinkData, o);
+                    if (o.oneofs)
+                        d._ctwaContextLinkData = "ctwaContextLinkData";
+                }
+                if (m.ctwaContext != null && m.hasOwnProperty("ctwaContext")) {
+                    d.ctwaContext = $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextData.toObject(m.ctwaContext, o);
+                    if (o.oneofs)
+                        d._ctwaContext = "ctwaContext";
+                }
+                if (m.timestamp != null && m.hasOwnProperty("timestamp")) {
+                    if (typeof m.timestamp === "number")
+                        d.timestamp = o.longs === String ? String(m.timestamp) : m.timestamp;
+                    else
+                        d.timestamp = o.longs === String ? $util.Long.prototype.toString.call(m.timestamp) : o.longs === Number ? new $util.LongBits(m.timestamp.low >>> 0, m.timestamp.high >>> 0).toNumber() : m.timestamp;
+                    if (o.oneofs)
+                        d._timestamp = "timestamp";
+                }
+                return d;
+            };
+
+            DraftMessage.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            DraftMessage.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage";
+            };
+
+            DraftMessage.CtwaContextData = (function() {
+
+                function CtwaContextData(p) {
+                    if (p)
+                        for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
+                            if (p[ks[i]] != null && ks[i] !== "__proto__")
+                                this[ks[i]] = p[ks[i]];
+                }
+
+                CtwaContextData.prototype.conversionSource = null;
+                CtwaContextData.prototype.conversionData = null;
+                CtwaContextData.prototype.sourceURL = null;
+                CtwaContextData.prototype.sourceID = null;
+                CtwaContextData.prototype.sourceType = null;
+                CtwaContextData.prototype.title = null;
+                CtwaContextData.prototype.description = null;
+                CtwaContextData.prototype.thumbnail = null;
+                CtwaContextData.prototype.thumbnailURL = null;
+                CtwaContextData.prototype.mediaType = null;
+                CtwaContextData.prototype.mediaURL = null;
+                CtwaContextData.prototype.isSuspiciousLink = null;
+
+                let $oneOfFields;
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextData.prototype, "_conversionSource", {
+                    get: $util.oneOfGetter($oneOfFields = ["conversionSource"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextData.prototype, "_conversionData", {
+                    get: $util.oneOfGetter($oneOfFields = ["conversionData"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextData.prototype, "_sourceURL", {
+                    get: $util.oneOfGetter($oneOfFields = ["sourceURL"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextData.prototype, "_sourceID", {
+                    get: $util.oneOfGetter($oneOfFields = ["sourceID"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextData.prototype, "_sourceType", {
+                    get: $util.oneOfGetter($oneOfFields = ["sourceType"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextData.prototype, "_title", {
+                    get: $util.oneOfGetter($oneOfFields = ["title"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextData.prototype, "_description", {
+                    get: $util.oneOfGetter($oneOfFields = ["description"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextData.prototype, "_thumbnail", {
+                    get: $util.oneOfGetter($oneOfFields = ["thumbnail"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextData.prototype, "_thumbnailURL", {
+                    get: $util.oneOfGetter($oneOfFields = ["thumbnailURL"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextData.prototype, "_mediaType", {
+                    get: $util.oneOfGetter($oneOfFields = ["mediaType"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextData.prototype, "_mediaURL", {
+                    get: $util.oneOfGetter($oneOfFields = ["mediaURL"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextData.prototype, "_isSuspiciousLink", {
+                    get: $util.oneOfGetter($oneOfFields = ["isSuspiciousLink"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                CtwaContextData.create = function create(properties) {
+                    return new CtwaContextData(properties);
+                };
+
+                CtwaContextData.encode = function encode(m, w) {
+                    if (!w)
+                        w = $Writer.create();
+                    if (m.conversionSource != null && Object.hasOwnProperty.call(m, "conversionSource"))
+                        w.uint32(10).string(m.conversionSource);
+                    if (m.conversionData != null && Object.hasOwnProperty.call(m, "conversionData"))
+                        w.uint32(18).bytes(m.conversionData);
+                    if (m.sourceURL != null && Object.hasOwnProperty.call(m, "sourceURL"))
+                        w.uint32(26).string(m.sourceURL);
+                    if (m.sourceID != null && Object.hasOwnProperty.call(m, "sourceID"))
+                        w.uint32(34).string(m.sourceID);
+                    if (m.sourceType != null && Object.hasOwnProperty.call(m, "sourceType"))
+                        w.uint32(42).string(m.sourceType);
+                    if (m.title != null && Object.hasOwnProperty.call(m, "title"))
+                        w.uint32(50).string(m.title);
+                    if (m.description != null && Object.hasOwnProperty.call(m, "description"))
+                        w.uint32(58).string(m.description);
+                    if (m.thumbnail != null && Object.hasOwnProperty.call(m, "thumbnail"))
+                        w.uint32(66).string(m.thumbnail);
+                    if (m.thumbnailURL != null && Object.hasOwnProperty.call(m, "thumbnailURL"))
+                        w.uint32(74).string(m.thumbnailURL);
+                    if (m.mediaType != null && Object.hasOwnProperty.call(m, "mediaType"))
+                        w.uint32(80).int32(m.mediaType);
+                    if (m.mediaURL != null && Object.hasOwnProperty.call(m, "mediaURL"))
+                        w.uint32(90).string(m.mediaURL);
+                    if (m.isSuspiciousLink != null && Object.hasOwnProperty.call(m, "isSuspiciousLink"))
+                        w.uint32(96).bool(m.isSuspiciousLink);
+                    return w;
+                };
+
+                CtwaContextData.decode = function decode(r, l, e, n) {
+                    if (!(r instanceof $Reader))
+                        r = $Reader.create(r);
+                    if (n === undefined)
+                        n = 0;
+                    if (n > $Reader.recursionLimit)
+                        throw Error("maximum nesting depth exceeded");
+                    var c = l === undefined ? r.len : r.pos + l, m = new $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextData();
+                    while (r.pos < c) {
+                        var t = r.uint32();
+                        if (t === e)
+                            break;
+                        switch (t >>> 3) {
+                        case 1: {
+                                m.conversionSource = r.string();
+                                break;
+                            }
+                        case 2: {
+                                m.conversionData = r.bytes();
+                                break;
+                            }
+                        case 3: {
+                                m.sourceURL = r.string();
+                                break;
+                            }
+                        case 4: {
+                                m.sourceID = r.string();
+                                break;
+                            }
+                        case 5: {
+                                m.sourceType = r.string();
+                                break;
+                            }
+                        case 6: {
+                                m.title = r.string();
+                                break;
+                            }
+                        case 7: {
+                                m.description = r.string();
+                                break;
+                            }
+                        case 8: {
+                                m.thumbnail = r.string();
+                                break;
+                            }
+                        case 9: {
+                                m.thumbnailURL = r.string();
+                                break;
+                            }
+                        case 10: {
+                                m.mediaType = r.int32();
+                                break;
+                            }
+                        case 11: {
+                                m.mediaURL = r.string();
+                                break;
+                            }
+                        case 12: {
+                                m.isSuspiciousLink = r.bool();
+                                break;
+                            }
+                        default:
+                            r.skipType(t & 7, n);
+                            break;
+                        }
+                    }
+                    return m;
+                };
+
+                CtwaContextData.fromObject = function fromObject(d, n) {
+                    if (d instanceof $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextData)
+                        return d;
+                    if (n === undefined)
+                        n = 0;
+                    if (n > $util.recursionLimit)
+                        throw Error("maximum nesting depth exceeded");
+                    var m = new $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextData();
+                    if (d.conversionSource != null) {
+                        m.conversionSource = String(d.conversionSource);
+                    }
+                    if (d.conversionData != null) {
+                        if (typeof d.conversionData === "string")
+                            $util.base64.decode(d.conversionData, m.conversionData = $util.newBuffer($util.base64.length(d.conversionData)), 0);
+                        else if (d.conversionData.length >= 0)
+                            m.conversionData = d.conversionData;
+                    }
+                    if (d.sourceURL != null) {
+                        m.sourceURL = String(d.sourceURL);
+                    }
+                    if (d.sourceID != null) {
+                        m.sourceID = String(d.sourceID);
+                    }
+                    if (d.sourceType != null) {
+                        m.sourceType = String(d.sourceType);
+                    }
+                    if (d.title != null) {
+                        m.title = String(d.title);
+                    }
+                    if (d.description != null) {
+                        m.description = String(d.description);
+                    }
+                    if (d.thumbnail != null) {
+                        m.thumbnail = String(d.thumbnail);
+                    }
+                    if (d.thumbnailURL != null) {
+                        m.thumbnailURL = String(d.thumbnailURL);
+                    }
+                    switch (d.mediaType) {
+                    default:
+                        if (typeof d.mediaType === "number") {
+                            m.mediaType = d.mediaType;
+                            break;
+                        }
+                        break;
+                    case "NONE":
+                    case 0:
+                        m.mediaType = 0;
+                        break;
+                    case "IMAGE":
+                    case 1:
+                        m.mediaType = 1;
+                        break;
+                    case "VIDEO":
+                    case 2:
+                        m.mediaType = 2;
+                        break;
+                    }
+                    if (d.mediaURL != null) {
+                        m.mediaURL = String(d.mediaURL);
+                    }
+                    if (d.isSuspiciousLink != null) {
+                        m.isSuspiciousLink = Boolean(d.isSuspiciousLink);
+                    }
+                    return m;
+                };
+
+                CtwaContextData.toObject = function toObject(m, o) {
+                    if (!o)
+                        o = {};
+                    var d = {};
+                    if (m.conversionSource != null && m.hasOwnProperty("conversionSource")) {
+                        d.conversionSource = m.conversionSource;
+                        if (o.oneofs)
+                            d._conversionSource = "conversionSource";
+                    }
+                    if (m.conversionData != null && m.hasOwnProperty("conversionData")) {
+                        d.conversionData = o.bytes === String ? $util.base64.encode(m.conversionData, 0, m.conversionData.length) : o.bytes === Array ? Array.prototype.slice.call(m.conversionData) : m.conversionData;
+                        if (o.oneofs)
+                            d._conversionData = "conversionData";
+                    }
+                    if (m.sourceURL != null && m.hasOwnProperty("sourceURL")) {
+                        d.sourceURL = m.sourceURL;
+                        if (o.oneofs)
+                            d._sourceURL = "sourceURL";
+                    }
+                    if (m.sourceID != null && m.hasOwnProperty("sourceID")) {
+                        d.sourceID = m.sourceID;
+                        if (o.oneofs)
+                            d._sourceID = "sourceID";
+                    }
+                    if (m.sourceType != null && m.hasOwnProperty("sourceType")) {
+                        d.sourceType = m.sourceType;
+                        if (o.oneofs)
+                            d._sourceType = "sourceType";
+                    }
+                    if (m.title != null && m.hasOwnProperty("title")) {
+                        d.title = m.title;
+                        if (o.oneofs)
+                            d._title = "title";
+                    }
+                    if (m.description != null && m.hasOwnProperty("description")) {
+                        d.description = m.description;
+                        if (o.oneofs)
+                            d._description = "description";
+                    }
+                    if (m.thumbnail != null && m.hasOwnProperty("thumbnail")) {
+                        d.thumbnail = m.thumbnail;
+                        if (o.oneofs)
+                            d._thumbnail = "thumbnail";
+                    }
+                    if (m.thumbnailURL != null && m.hasOwnProperty("thumbnailURL")) {
+                        d.thumbnailURL = m.thumbnailURL;
+                        if (o.oneofs)
+                            d._thumbnailURL = "thumbnailURL";
+                    }
+                    if (m.mediaType != null && m.hasOwnProperty("mediaType")) {
+                        d.mediaType = o.enums === String ? $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextData.ContextInfoExternalAdReplyInfoMediaType[m.mediaType] === undefined ? m.mediaType : $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextData.ContextInfoExternalAdReplyInfoMediaType[m.mediaType] : m.mediaType;
+                        if (o.oneofs)
+                            d._mediaType = "mediaType";
+                    }
+                    if (m.mediaURL != null && m.hasOwnProperty("mediaURL")) {
+                        d.mediaURL = m.mediaURL;
+                        if (o.oneofs)
+                            d._mediaURL = "mediaURL";
+                    }
+                    if (m.isSuspiciousLink != null && m.hasOwnProperty("isSuspiciousLink")) {
+                        d.isSuspiciousLink = m.isSuspiciousLink;
+                        if (o.oneofs)
+                            d._isSuspiciousLink = "isSuspiciousLink";
+                    }
+                    return d;
+                };
+
+                CtwaContextData.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+
+                CtwaContextData.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                    if (typeUrlPrefix === undefined) {
+                        typeUrlPrefix = "type.googleapis.com";
+                    }
+                    return typeUrlPrefix + "/WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextData";
+                };
+
+                CtwaContextData.ContextInfoExternalAdReplyInfoMediaType = (function() {
+                    const valuesById = {}, values = Object.create(valuesById);
+                    values[valuesById[0] = "NONE"] = 0;
+                    values[valuesById[1] = "IMAGE"] = 1;
+                    values[valuesById[2] = "VIDEO"] = 2;
+                    return values;
+                })();
+
+                return CtwaContextData;
+            })();
+
+            DraftMessage.CtwaContextLinkData = (function() {
+
+                function CtwaContextLinkData(p) {
+                    if (p)
+                        for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
+                            if (p[ks[i]] != null && ks[i] !== "__proto__")
+                                this[ks[i]] = p[ks[i]];
+                }
+
+                CtwaContextLinkData.prototype.context = null;
+                CtwaContextLinkData.prototype.sourceURL = null;
+                CtwaContextLinkData.prototype.icebreaker = null;
+                CtwaContextLinkData.prototype.phone = null;
+
+                let $oneOfFields;
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextLinkData.prototype, "_context", {
+                    get: $util.oneOfGetter($oneOfFields = ["context"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextLinkData.prototype, "_sourceURL", {
+                    get: $util.oneOfGetter($oneOfFields = ["sourceURL"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextLinkData.prototype, "_icebreaker", {
+                    get: $util.oneOfGetter($oneOfFields = ["icebreaker"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                // Virtual OneOf for proto3 optional field
+                Object.defineProperty(CtwaContextLinkData.prototype, "_phone", {
+                    get: $util.oneOfGetter($oneOfFields = ["phone"]),
+                    set: $util.oneOfSetter($oneOfFields)
+                });
+
+                CtwaContextLinkData.create = function create(properties) {
+                    return new CtwaContextLinkData(properties);
+                };
+
+                CtwaContextLinkData.encode = function encode(m, w) {
+                    if (!w)
+                        w = $Writer.create();
+                    if (m.context != null && Object.hasOwnProperty.call(m, "context"))
+                        w.uint32(10).string(m.context);
+                    if (m.sourceURL != null && Object.hasOwnProperty.call(m, "sourceURL"))
+                        w.uint32(18).string(m.sourceURL);
+                    if (m.icebreaker != null && Object.hasOwnProperty.call(m, "icebreaker"))
+                        w.uint32(26).string(m.icebreaker);
+                    if (m.phone != null && Object.hasOwnProperty.call(m, "phone"))
+                        w.uint32(34).string(m.phone);
+                    return w;
+                };
+
+                CtwaContextLinkData.decode = function decode(r, l, e, n) {
+                    if (!(r instanceof $Reader))
+                        r = $Reader.create(r);
+                    if (n === undefined)
+                        n = 0;
+                    if (n > $Reader.recursionLimit)
+                        throw Error("maximum nesting depth exceeded");
+                    var c = l === undefined ? r.len : r.pos + l, m = new $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextLinkData();
+                    while (r.pos < c) {
+                        var t = r.uint32();
+                        if (t === e)
+                            break;
+                        switch (t >>> 3) {
+                        case 1: {
+                                m.context = r.string();
+                                break;
+                            }
+                        case 2: {
+                                m.sourceURL = r.string();
+                                break;
+                            }
+                        case 3: {
+                                m.icebreaker = r.string();
+                                break;
+                            }
+                        case 4: {
+                                m.phone = r.string();
+                                break;
+                            }
+                        default:
+                            r.skipType(t & 7, n);
+                            break;
+                        }
+                    }
+                    return m;
+                };
+
+                CtwaContextLinkData.fromObject = function fromObject(d, n) {
+                    if (d instanceof $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextLinkData)
+                        return d;
+                    if (n === undefined)
+                        n = 0;
+                    if (n > $util.recursionLimit)
+                        throw Error("maximum nesting depth exceeded");
+                    var m = new $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextLinkData();
+                    if (d.context != null) {
+                        m.context = String(d.context);
+                    }
+                    if (d.sourceURL != null) {
+                        m.sourceURL = String(d.sourceURL);
+                    }
+                    if (d.icebreaker != null) {
+                        m.icebreaker = String(d.icebreaker);
+                    }
+                    if (d.phone != null) {
+                        m.phone = String(d.phone);
+                    }
+                    return m;
+                };
+
+                CtwaContextLinkData.toObject = function toObject(m, o) {
+                    if (!o)
+                        o = {};
+                    var d = {};
+                    if (m.context != null && m.hasOwnProperty("context")) {
+                        d.context = m.context;
+                        if (o.oneofs)
+                            d._context = "context";
+                    }
+                    if (m.sourceURL != null && m.hasOwnProperty("sourceURL")) {
+                        d.sourceURL = m.sourceURL;
+                        if (o.oneofs)
+                            d._sourceURL = "sourceURL";
+                    }
+                    if (m.icebreaker != null && m.hasOwnProperty("icebreaker")) {
+                        d.icebreaker = m.icebreaker;
+                        if (o.oneofs)
+                            d._icebreaker = "icebreaker";
+                    }
+                    if (m.phone != null && m.hasOwnProperty("phone")) {
+                        d.phone = m.phone;
+                        if (o.oneofs)
+                            d._phone = "phone";
+                    }
+                    return d;
+                };
+
+                CtwaContextLinkData.prototype.toJSON = function toJSON() {
+                    return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                };
+
+                CtwaContextLinkData.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                    if (typeUrlPrefix === undefined) {
+                        typeUrlPrefix = "type.googleapis.com";
+                    }
+                    return typeUrlPrefix + "/WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextLinkData";
+                };
+
+                return CtwaContextLinkData;
+            })();
+
+            return DraftMessage;
+        })();
+
+        return ChatRowOpaqueData;
+    })();
+
+    return WAMdStorageChatRowOpaqueData;
+})();
+
+export { $root as default };
+

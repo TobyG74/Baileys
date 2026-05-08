@@ -1,0 +1,1991 @@
+/*eslint-disable block-scoped-var, id-length, no-control-regex, no-magic-numbers, no-prototype-builtins, no-redeclare, no-shadow, no-var, sort-vars*/
+import $protobuf from "protobufjs/minimal.js";
+
+const $Reader = $protobuf.Reader, $Writer = $protobuf.Writer, $util = $protobuf.util;
+
+const $root = $protobuf.roots["default"] || ($protobuf.roots["default"] = {});
+
+export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (() => {
+
+    const WAMdStorageMsgRowOpaqueData = {};
+
+    WAMdStorageMsgRowOpaqueData.MsgOpaqueData = (function() {
+
+        function MsgOpaqueData(p) {
+            this.pollOptions = [];
+            if (p)
+                for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
+                    if (p[ks[i]] != null && ks[i] !== "__proto__")
+                        this[ks[i]] = p[ks[i]];
+        }
+
+        MsgOpaqueData.prototype.body = null;
+        MsgOpaqueData.prototype.caption = null;
+        MsgOpaqueData.prototype.lng = null;
+        MsgOpaqueData.prototype.isLive = null;
+        MsgOpaqueData.prototype.lat = null;
+        MsgOpaqueData.prototype.paymentAmount1000 = null;
+        MsgOpaqueData.prototype.paymentNoteMsgBody = null;
+        MsgOpaqueData.prototype.matchedText = null;
+        MsgOpaqueData.prototype.title = null;
+        MsgOpaqueData.prototype.description = null;
+        MsgOpaqueData.prototype.futureproofBuffer = null;
+        MsgOpaqueData.prototype.clientURL = null;
+        MsgOpaqueData.prototype.loc = null;
+        MsgOpaqueData.prototype.pollName = null;
+        MsgOpaqueData.prototype.pollOptions = $util.emptyArray;
+        MsgOpaqueData.prototype.pollSelectableOptionsCount = null;
+        MsgOpaqueData.prototype.messageSecret = null;
+        MsgOpaqueData.prototype.originalSelfAuthor = null;
+        MsgOpaqueData.prototype.senderTimestampMS = null;
+        MsgOpaqueData.prototype.pollUpdateParentKey = null;
+        MsgOpaqueData.prototype.encPollVote = null;
+        MsgOpaqueData.prototype.isSentCagPollCreation = null;
+        MsgOpaqueData.prototype.pollContentType = null;
+        MsgOpaqueData.prototype.pollType = null;
+        MsgOpaqueData.prototype.correctOptionIndex = null;
+        MsgOpaqueData.prototype.pollVotesSnapshot = null;
+        MsgOpaqueData.prototype.encReactionTargetMessageKey = null;
+        MsgOpaqueData.prototype.encReactionEncPayload = null;
+        MsgOpaqueData.prototype.encReactionEncIv = null;
+        MsgOpaqueData.prototype.botMessageSecret = null;
+        MsgOpaqueData.prototype.targetMessageKey = null;
+        MsgOpaqueData.prototype.encPayload = null;
+        MsgOpaqueData.prototype.encIV = null;
+        MsgOpaqueData.prototype.eventName = null;
+        MsgOpaqueData.prototype.isEventCanceled = null;
+        MsgOpaqueData.prototype.eventDescription = null;
+        MsgOpaqueData.prototype.eventJoinLink = null;
+        MsgOpaqueData.prototype.eventStartTime = null;
+        MsgOpaqueData.prototype.eventLocation = null;
+        MsgOpaqueData.prototype.eventEndTime = null;
+        MsgOpaqueData.prototype.eventIsScheduledCall = null;
+        MsgOpaqueData.prototype.eventExtraGuestsAllowed = null;
+        MsgOpaqueData.prototype.plainProtobufBytes = null;
+        MsgOpaqueData.prototype.quarantineExtractedText = null;
+        MsgOpaqueData.prototype.pollEndTime = null;
+        MsgOpaqueData.prototype.pollHideVoterNames = null;
+        MsgOpaqueData.prototype.pollAllowAddOption = null;
+
+        let $oneOfFields;
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_body", {
+            get: $util.oneOfGetter($oneOfFields = ["body"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_caption", {
+            get: $util.oneOfGetter($oneOfFields = ["caption"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_lng", {
+            get: $util.oneOfGetter($oneOfFields = ["lng"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_isLive", {
+            get: $util.oneOfGetter($oneOfFields = ["isLive"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_lat", {
+            get: $util.oneOfGetter($oneOfFields = ["lat"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_paymentAmount1000", {
+            get: $util.oneOfGetter($oneOfFields = ["paymentAmount1000"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_paymentNoteMsgBody", {
+            get: $util.oneOfGetter($oneOfFields = ["paymentNoteMsgBody"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_matchedText", {
+            get: $util.oneOfGetter($oneOfFields = ["matchedText"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_title", {
+            get: $util.oneOfGetter($oneOfFields = ["title"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_description", {
+            get: $util.oneOfGetter($oneOfFields = ["description"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_futureproofBuffer", {
+            get: $util.oneOfGetter($oneOfFields = ["futureproofBuffer"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_clientURL", {
+            get: $util.oneOfGetter($oneOfFields = ["clientURL"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_loc", {
+            get: $util.oneOfGetter($oneOfFields = ["loc"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_pollName", {
+            get: $util.oneOfGetter($oneOfFields = ["pollName"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_pollSelectableOptionsCount", {
+            get: $util.oneOfGetter($oneOfFields = ["pollSelectableOptionsCount"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_messageSecret", {
+            get: $util.oneOfGetter($oneOfFields = ["messageSecret"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_originalSelfAuthor", {
+            get: $util.oneOfGetter($oneOfFields = ["originalSelfAuthor"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_senderTimestampMS", {
+            get: $util.oneOfGetter($oneOfFields = ["senderTimestampMS"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_pollUpdateParentKey", {
+            get: $util.oneOfGetter($oneOfFields = ["pollUpdateParentKey"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_encPollVote", {
+            get: $util.oneOfGetter($oneOfFields = ["encPollVote"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_isSentCagPollCreation", {
+            get: $util.oneOfGetter($oneOfFields = ["isSentCagPollCreation"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_pollContentType", {
+            get: $util.oneOfGetter($oneOfFields = ["pollContentType"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_pollType", {
+            get: $util.oneOfGetter($oneOfFields = ["pollType"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_correctOptionIndex", {
+            get: $util.oneOfGetter($oneOfFields = ["correctOptionIndex"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_pollVotesSnapshot", {
+            get: $util.oneOfGetter($oneOfFields = ["pollVotesSnapshot"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_encReactionTargetMessageKey", {
+            get: $util.oneOfGetter($oneOfFields = ["encReactionTargetMessageKey"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_encReactionEncPayload", {
+            get: $util.oneOfGetter($oneOfFields = ["encReactionEncPayload"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_encReactionEncIv", {
+            get: $util.oneOfGetter($oneOfFields = ["encReactionEncIv"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_botMessageSecret", {
+            get: $util.oneOfGetter($oneOfFields = ["botMessageSecret"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_targetMessageKey", {
+            get: $util.oneOfGetter($oneOfFields = ["targetMessageKey"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_encPayload", {
+            get: $util.oneOfGetter($oneOfFields = ["encPayload"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_encIV", {
+            get: $util.oneOfGetter($oneOfFields = ["encIV"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_eventName", {
+            get: $util.oneOfGetter($oneOfFields = ["eventName"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_isEventCanceled", {
+            get: $util.oneOfGetter($oneOfFields = ["isEventCanceled"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_eventDescription", {
+            get: $util.oneOfGetter($oneOfFields = ["eventDescription"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_eventJoinLink", {
+            get: $util.oneOfGetter($oneOfFields = ["eventJoinLink"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_eventStartTime", {
+            get: $util.oneOfGetter($oneOfFields = ["eventStartTime"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_eventLocation", {
+            get: $util.oneOfGetter($oneOfFields = ["eventLocation"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_eventEndTime", {
+            get: $util.oneOfGetter($oneOfFields = ["eventEndTime"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_eventIsScheduledCall", {
+            get: $util.oneOfGetter($oneOfFields = ["eventIsScheduledCall"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_eventExtraGuestsAllowed", {
+            get: $util.oneOfGetter($oneOfFields = ["eventExtraGuestsAllowed"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_plainProtobufBytes", {
+            get: $util.oneOfGetter($oneOfFields = ["plainProtobufBytes"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_quarantineExtractedText", {
+            get: $util.oneOfGetter($oneOfFields = ["quarantineExtractedText"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_pollEndTime", {
+            get: $util.oneOfGetter($oneOfFields = ["pollEndTime"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_pollHideVoterNames", {
+            get: $util.oneOfGetter($oneOfFields = ["pollHideVoterNames"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgOpaqueData.prototype, "_pollAllowAddOption", {
+            get: $util.oneOfGetter($oneOfFields = ["pollAllowAddOption"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        MsgOpaqueData.create = function create(properties) {
+            return new MsgOpaqueData(properties);
+        };
+
+        MsgOpaqueData.encode = function encode(m, w) {
+            if (!w)
+                w = $Writer.create();
+            if (m.body != null && Object.hasOwnProperty.call(m, "body"))
+                w.uint32(10).string(m.body);
+            if (m.caption != null && Object.hasOwnProperty.call(m, "caption"))
+                w.uint32(26).string(m.caption);
+            if (m.lng != null && Object.hasOwnProperty.call(m, "lng"))
+                w.uint32(41).double(m.lng);
+            if (m.isLive != null && Object.hasOwnProperty.call(m, "isLive"))
+                w.uint32(48).bool(m.isLive);
+            if (m.lat != null && Object.hasOwnProperty.call(m, "lat"))
+                w.uint32(57).double(m.lat);
+            if (m.paymentAmount1000 != null && Object.hasOwnProperty.call(m, "paymentAmount1000"))
+                w.uint32(64).int32(m.paymentAmount1000);
+            if (m.paymentNoteMsgBody != null && Object.hasOwnProperty.call(m, "paymentNoteMsgBody"))
+                w.uint32(74).string(m.paymentNoteMsgBody);
+            if (m.matchedText != null && Object.hasOwnProperty.call(m, "matchedText"))
+                w.uint32(90).string(m.matchedText);
+            if (m.title != null && Object.hasOwnProperty.call(m, "title"))
+                w.uint32(98).string(m.title);
+            if (m.description != null && Object.hasOwnProperty.call(m, "description"))
+                w.uint32(106).string(m.description);
+            if (m.futureproofBuffer != null && Object.hasOwnProperty.call(m, "futureproofBuffer"))
+                w.uint32(114).bytes(m.futureproofBuffer);
+            if (m.clientURL != null && Object.hasOwnProperty.call(m, "clientURL"))
+                w.uint32(122).string(m.clientURL);
+            if (m.loc != null && Object.hasOwnProperty.call(m, "loc"))
+                w.uint32(130).string(m.loc);
+            if (m.pollName != null && Object.hasOwnProperty.call(m, "pollName"))
+                w.uint32(138).string(m.pollName);
+            if (m.pollOptions != null && m.pollOptions.length) {
+                for (var i = 0; i < m.pollOptions.length; ++i)
+                    $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollOption.encode(m.pollOptions[i], w.uint32(146).fork()).ldelim();
+            }
+            if (m.pollSelectableOptionsCount != null && Object.hasOwnProperty.call(m, "pollSelectableOptionsCount"))
+                w.uint32(160).uint32(m.pollSelectableOptionsCount);
+            if (m.messageSecret != null && Object.hasOwnProperty.call(m, "messageSecret"))
+                w.uint32(170).bytes(m.messageSecret);
+            if (m.senderTimestampMS != null && Object.hasOwnProperty.call(m, "senderTimestampMS"))
+                w.uint32(176).int64(m.senderTimestampMS);
+            if (m.pollUpdateParentKey != null && Object.hasOwnProperty.call(m, "pollUpdateParentKey"))
+                w.uint32(186).string(m.pollUpdateParentKey);
+            if (m.encPollVote != null && Object.hasOwnProperty.call(m, "encPollVote"))
+                $root.WAMdStorageMsgRowOpaqueData.PollEncValue.encode(m.encPollVote, w.uint32(194).fork()).ldelim();
+            if (m.encReactionTargetMessageKey != null && Object.hasOwnProperty.call(m, "encReactionTargetMessageKey"))
+                w.uint32(202).string(m.encReactionTargetMessageKey);
+            if (m.encReactionEncPayload != null && Object.hasOwnProperty.call(m, "encReactionEncPayload"))
+                w.uint32(210).bytes(m.encReactionEncPayload);
+            if (m.encReactionEncIv != null && Object.hasOwnProperty.call(m, "encReactionEncIv"))
+                w.uint32(218).bytes(m.encReactionEncIv);
+            if (m.isSentCagPollCreation != null && Object.hasOwnProperty.call(m, "isSentCagPollCreation"))
+                w.uint32(224).bool(m.isSentCagPollCreation);
+            if (m.botMessageSecret != null && Object.hasOwnProperty.call(m, "botMessageSecret"))
+                w.uint32(234).bytes(m.botMessageSecret);
+            if (m.targetMessageKey != null && Object.hasOwnProperty.call(m, "targetMessageKey"))
+                w.uint32(242).string(m.targetMessageKey);
+            if (m.encPayload != null && Object.hasOwnProperty.call(m, "encPayload"))
+                w.uint32(250).bytes(m.encPayload);
+            if (m.encIV != null && Object.hasOwnProperty.call(m, "encIV"))
+                w.uint32(258).bytes(m.encIV);
+            if (m.eventName != null && Object.hasOwnProperty.call(m, "eventName"))
+                w.uint32(266).string(m.eventName);
+            if (m.isEventCanceled != null && Object.hasOwnProperty.call(m, "isEventCanceled"))
+                w.uint32(272).bool(m.isEventCanceled);
+            if (m.eventDescription != null && Object.hasOwnProperty.call(m, "eventDescription"))
+                w.uint32(282).string(m.eventDescription);
+            if (m.eventJoinLink != null && Object.hasOwnProperty.call(m, "eventJoinLink"))
+                w.uint32(290).string(m.eventJoinLink);
+            if (m.eventStartTime != null && Object.hasOwnProperty.call(m, "eventStartTime"))
+                w.uint32(296).int64(m.eventStartTime);
+            if (m.eventLocation != null && Object.hasOwnProperty.call(m, "eventLocation"))
+                $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.EventLocation.encode(m.eventLocation, w.uint32(306).fork()).ldelim();
+            if (m.eventEndTime != null && Object.hasOwnProperty.call(m, "eventEndTime"))
+                w.uint32(320).int64(m.eventEndTime);
+            if (m.pollVotesSnapshot != null && Object.hasOwnProperty.call(m, "pollVotesSnapshot"))
+                $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVotesSnapshot.encode(m.pollVotesSnapshot, w.uint32(330).fork()).ldelim();
+            if (m.pollContentType != null && Object.hasOwnProperty.call(m, "pollContentType"))
+                w.uint32(336).int32(m.pollContentType);
+            if (m.plainProtobufBytes != null && Object.hasOwnProperty.call(m, "plainProtobufBytes"))
+                w.uint32(346).bytes(m.plainProtobufBytes);
+            if (m.eventIsScheduledCall != null && Object.hasOwnProperty.call(m, "eventIsScheduledCall"))
+                w.uint32(352).bool(m.eventIsScheduledCall);
+            if (m.eventExtraGuestsAllowed != null && Object.hasOwnProperty.call(m, "eventExtraGuestsAllowed"))
+                w.uint32(360).bool(m.eventExtraGuestsAllowed);
+            if (m.pollType != null && Object.hasOwnProperty.call(m, "pollType"))
+                w.uint32(368).int32(m.pollType);
+            if (m.correctOptionIndex != null && Object.hasOwnProperty.call(m, "correctOptionIndex"))
+                w.uint32(376).int32(m.correctOptionIndex);
+            if (m.quarantineExtractedText != null && Object.hasOwnProperty.call(m, "quarantineExtractedText"))
+                w.uint32(386).string(m.quarantineExtractedText);
+            if (m.pollEndTime != null && Object.hasOwnProperty.call(m, "pollEndTime"))
+                w.uint32(392).int64(m.pollEndTime);
+            if (m.pollHideVoterNames != null && Object.hasOwnProperty.call(m, "pollHideVoterNames"))
+                w.uint32(400).bool(m.pollHideVoterNames);
+            if (m.originalSelfAuthor != null && Object.hasOwnProperty.call(m, "originalSelfAuthor"))
+                w.uint32(410).string(m.originalSelfAuthor);
+            if (m.pollAllowAddOption != null && Object.hasOwnProperty.call(m, "pollAllowAddOption"))
+                w.uint32(416).bool(m.pollAllowAddOption);
+            return w;
+        };
+
+        MsgOpaqueData.decode = function decode(r, l, e, n) {
+            if (!(r instanceof $Reader))
+                r = $Reader.create(r);
+            if (n === undefined)
+                n = 0;
+            if (n > $Reader.recursionLimit)
+                throw Error("maximum nesting depth exceeded");
+            var c = l === undefined ? r.len : r.pos + l, m = new $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData();
+            while (r.pos < c) {
+                var t = r.uint32();
+                if (t === e)
+                    break;
+                switch (t >>> 3) {
+                case 1: {
+                        m.body = r.string();
+                        break;
+                    }
+                case 3: {
+                        m.caption = r.string();
+                        break;
+                    }
+                case 5: {
+                        m.lng = r.double();
+                        break;
+                    }
+                case 6: {
+                        m.isLive = r.bool();
+                        break;
+                    }
+                case 7: {
+                        m.lat = r.double();
+                        break;
+                    }
+                case 8: {
+                        m.paymentAmount1000 = r.int32();
+                        break;
+                    }
+                case 9: {
+                        m.paymentNoteMsgBody = r.string();
+                        break;
+                    }
+                case 11: {
+                        m.matchedText = r.string();
+                        break;
+                    }
+                case 12: {
+                        m.title = r.string();
+                        break;
+                    }
+                case 13: {
+                        m.description = r.string();
+                        break;
+                    }
+                case 14: {
+                        m.futureproofBuffer = r.bytes();
+                        break;
+                    }
+                case 15: {
+                        m.clientURL = r.string();
+                        break;
+                    }
+                case 16: {
+                        m.loc = r.string();
+                        break;
+                    }
+                case 17: {
+                        m.pollName = r.string();
+                        break;
+                    }
+                case 18: {
+                        if (!(m.pollOptions && m.pollOptions.length))
+                            m.pollOptions = [];
+                        m.pollOptions.push($root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollOption.decode(r, r.uint32(), undefined, n + 1));
+                        break;
+                    }
+                case 20: {
+                        m.pollSelectableOptionsCount = r.uint32();
+                        break;
+                    }
+                case 21: {
+                        m.messageSecret = r.bytes();
+                        break;
+                    }
+                case 51: {
+                        m.originalSelfAuthor = r.string();
+                        break;
+                    }
+                case 22: {
+                        m.senderTimestampMS = r.int64();
+                        break;
+                    }
+                case 23: {
+                        m.pollUpdateParentKey = r.string();
+                        break;
+                    }
+                case 24: {
+                        m.encPollVote = $root.WAMdStorageMsgRowOpaqueData.PollEncValue.decode(r, r.uint32(), undefined, n + 1);
+                        break;
+                    }
+                case 28: {
+                        m.isSentCagPollCreation = r.bool();
+                        break;
+                    }
+                case 42: {
+                        m.pollContentType = r.int32();
+                        break;
+                    }
+                case 46: {
+                        m.pollType = r.int32();
+                        break;
+                    }
+                case 47: {
+                        m.correctOptionIndex = r.int32();
+                        break;
+                    }
+                case 41: {
+                        m.pollVotesSnapshot = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVotesSnapshot.decode(r, r.uint32(), undefined, n + 1);
+                        break;
+                    }
+                case 25: {
+                        m.encReactionTargetMessageKey = r.string();
+                        break;
+                    }
+                case 26: {
+                        m.encReactionEncPayload = r.bytes();
+                        break;
+                    }
+                case 27: {
+                        m.encReactionEncIv = r.bytes();
+                        break;
+                    }
+                case 29: {
+                        m.botMessageSecret = r.bytes();
+                        break;
+                    }
+                case 30: {
+                        m.targetMessageKey = r.string();
+                        break;
+                    }
+                case 31: {
+                        m.encPayload = r.bytes();
+                        break;
+                    }
+                case 32: {
+                        m.encIV = r.bytes();
+                        break;
+                    }
+                case 33: {
+                        m.eventName = r.string();
+                        break;
+                    }
+                case 34: {
+                        m.isEventCanceled = r.bool();
+                        break;
+                    }
+                case 35: {
+                        m.eventDescription = r.string();
+                        break;
+                    }
+                case 36: {
+                        m.eventJoinLink = r.string();
+                        break;
+                    }
+                case 37: {
+                        m.eventStartTime = r.int64();
+                        break;
+                    }
+                case 38: {
+                        m.eventLocation = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.EventLocation.decode(r, r.uint32(), undefined, n + 1);
+                        break;
+                    }
+                case 40: {
+                        m.eventEndTime = r.int64();
+                        break;
+                    }
+                case 44: {
+                        m.eventIsScheduledCall = r.bool();
+                        break;
+                    }
+                case 45: {
+                        m.eventExtraGuestsAllowed = r.bool();
+                        break;
+                    }
+                case 43: {
+                        m.plainProtobufBytes = r.bytes();
+                        break;
+                    }
+                case 48: {
+                        m.quarantineExtractedText = r.string();
+                        break;
+                    }
+                case 49: {
+                        m.pollEndTime = r.int64();
+                        break;
+                    }
+                case 50: {
+                        m.pollHideVoterNames = r.bool();
+                        break;
+                    }
+                case 52: {
+                        m.pollAllowAddOption = r.bool();
+                        break;
+                    }
+                default:
+                    r.skipType(t & 7, n);
+                    break;
+                }
+            }
+            return m;
+        };
+
+        MsgOpaqueData.fromObject = function fromObject(d, n) {
+            if (d instanceof $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData)
+                return d;
+            if (n === undefined)
+                n = 0;
+            if (n > $util.recursionLimit)
+                throw Error("maximum nesting depth exceeded");
+            var m = new $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData();
+            if (d.body != null) {
+                m.body = String(d.body);
+            }
+            if (d.caption != null) {
+                m.caption = String(d.caption);
+            }
+            if (d.lng != null) {
+                m.lng = Number(d.lng);
+            }
+            if (d.isLive != null) {
+                m.isLive = Boolean(d.isLive);
+            }
+            if (d.lat != null) {
+                m.lat = Number(d.lat);
+            }
+            if (d.paymentAmount1000 != null) {
+                m.paymentAmount1000 = d.paymentAmount1000 | 0;
+            }
+            if (d.paymentNoteMsgBody != null) {
+                m.paymentNoteMsgBody = String(d.paymentNoteMsgBody);
+            }
+            if (d.matchedText != null) {
+                m.matchedText = String(d.matchedText);
+            }
+            if (d.title != null) {
+                m.title = String(d.title);
+            }
+            if (d.description != null) {
+                m.description = String(d.description);
+            }
+            if (d.futureproofBuffer != null) {
+                if (typeof d.futureproofBuffer === "string")
+                    $util.base64.decode(d.futureproofBuffer, m.futureproofBuffer = $util.newBuffer($util.base64.length(d.futureproofBuffer)), 0);
+                else if (d.futureproofBuffer.length >= 0)
+                    m.futureproofBuffer = d.futureproofBuffer;
+            }
+            if (d.clientURL != null) {
+                m.clientURL = String(d.clientURL);
+            }
+            if (d.loc != null) {
+                m.loc = String(d.loc);
+            }
+            if (d.pollName != null) {
+                m.pollName = String(d.pollName);
+            }
+            if (d.pollOptions) {
+                if (!Array.isArray(d.pollOptions))
+                    throw TypeError(".WAMdStorageMsgRowOpaqueData.MsgOpaqueData.pollOptions: array expected");
+                m.pollOptions = [];
+                for (var i = 0; i < d.pollOptions.length; ++i) {
+                    if (typeof d.pollOptions[i] !== "object")
+                        throw TypeError(".WAMdStorageMsgRowOpaqueData.MsgOpaqueData.pollOptions: object expected");
+                    m.pollOptions[i] = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollOption.fromObject(d.pollOptions[i], n + 1);
+                }
+            }
+            if (d.pollSelectableOptionsCount != null) {
+                m.pollSelectableOptionsCount = d.pollSelectableOptionsCount >>> 0;
+            }
+            if (d.messageSecret != null) {
+                if (typeof d.messageSecret === "string")
+                    $util.base64.decode(d.messageSecret, m.messageSecret = $util.newBuffer($util.base64.length(d.messageSecret)), 0);
+                else if (d.messageSecret.length >= 0)
+                    m.messageSecret = d.messageSecret;
+            }
+            if (d.originalSelfAuthor != null) {
+                m.originalSelfAuthor = String(d.originalSelfAuthor);
+            }
+            if (d.senderTimestampMS != null) {
+                if ($util.Long)
+                    (m.senderTimestampMS = $util.Long.fromValue(d.senderTimestampMS)).unsigned = false;
+                else if (typeof d.senderTimestampMS === "string")
+                    m.senderTimestampMS = parseInt(d.senderTimestampMS, 10);
+                else if (typeof d.senderTimestampMS === "number")
+                    m.senderTimestampMS = d.senderTimestampMS;
+                else if (typeof d.senderTimestampMS === "object")
+                    m.senderTimestampMS = new $util.LongBits(d.senderTimestampMS.low >>> 0, d.senderTimestampMS.high >>> 0).toNumber();
+            }
+            if (d.pollUpdateParentKey != null) {
+                m.pollUpdateParentKey = String(d.pollUpdateParentKey);
+            }
+            if (d.encPollVote != null) {
+                if (typeof d.encPollVote !== "object")
+                    throw TypeError(".WAMdStorageMsgRowOpaqueData.MsgOpaqueData.encPollVote: object expected");
+                m.encPollVote = $root.WAMdStorageMsgRowOpaqueData.PollEncValue.fromObject(d.encPollVote, n + 1);
+            }
+            if (d.isSentCagPollCreation != null) {
+                m.isSentCagPollCreation = Boolean(d.isSentCagPollCreation);
+            }
+            switch (d.pollContentType) {
+            default:
+                if (typeof d.pollContentType === "number") {
+                    m.pollContentType = d.pollContentType;
+                    break;
+                }
+                break;
+            case "UNKNOWN":
+            case 0:
+                m.pollContentType = 0;
+                break;
+            case "TEXT":
+            case 1:
+                m.pollContentType = 1;
+                break;
+            case "IMAGE":
+            case 2:
+                m.pollContentType = 2;
+                break;
+            }
+            switch (d.pollType) {
+            default:
+                if (typeof d.pollType === "number") {
+                    m.pollType = d.pollType;
+                    break;
+                }
+                break;
+            case "POLL":
+            case 0:
+                m.pollType = 0;
+                break;
+            case "QUIZ":
+            case 1:
+                m.pollType = 1;
+                break;
+            }
+            if (d.correctOptionIndex != null) {
+                m.correctOptionIndex = d.correctOptionIndex | 0;
+            }
+            if (d.pollVotesSnapshot != null) {
+                if (typeof d.pollVotesSnapshot !== "object")
+                    throw TypeError(".WAMdStorageMsgRowOpaqueData.MsgOpaqueData.pollVotesSnapshot: object expected");
+                m.pollVotesSnapshot = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVotesSnapshot.fromObject(d.pollVotesSnapshot, n + 1);
+            }
+            if (d.encReactionTargetMessageKey != null) {
+                m.encReactionTargetMessageKey = String(d.encReactionTargetMessageKey);
+            }
+            if (d.encReactionEncPayload != null) {
+                if (typeof d.encReactionEncPayload === "string")
+                    $util.base64.decode(d.encReactionEncPayload, m.encReactionEncPayload = $util.newBuffer($util.base64.length(d.encReactionEncPayload)), 0);
+                else if (d.encReactionEncPayload.length >= 0)
+                    m.encReactionEncPayload = d.encReactionEncPayload;
+            }
+            if (d.encReactionEncIv != null) {
+                if (typeof d.encReactionEncIv === "string")
+                    $util.base64.decode(d.encReactionEncIv, m.encReactionEncIv = $util.newBuffer($util.base64.length(d.encReactionEncIv)), 0);
+                else if (d.encReactionEncIv.length >= 0)
+                    m.encReactionEncIv = d.encReactionEncIv;
+            }
+            if (d.botMessageSecret != null) {
+                if (typeof d.botMessageSecret === "string")
+                    $util.base64.decode(d.botMessageSecret, m.botMessageSecret = $util.newBuffer($util.base64.length(d.botMessageSecret)), 0);
+                else if (d.botMessageSecret.length >= 0)
+                    m.botMessageSecret = d.botMessageSecret;
+            }
+            if (d.targetMessageKey != null) {
+                m.targetMessageKey = String(d.targetMessageKey);
+            }
+            if (d.encPayload != null) {
+                if (typeof d.encPayload === "string")
+                    $util.base64.decode(d.encPayload, m.encPayload = $util.newBuffer($util.base64.length(d.encPayload)), 0);
+                else if (d.encPayload.length >= 0)
+                    m.encPayload = d.encPayload;
+            }
+            if (d.encIV != null) {
+                if (typeof d.encIV === "string")
+                    $util.base64.decode(d.encIV, m.encIV = $util.newBuffer($util.base64.length(d.encIV)), 0);
+                else if (d.encIV.length >= 0)
+                    m.encIV = d.encIV;
+            }
+            if (d.eventName != null) {
+                m.eventName = String(d.eventName);
+            }
+            if (d.isEventCanceled != null) {
+                m.isEventCanceled = Boolean(d.isEventCanceled);
+            }
+            if (d.eventDescription != null) {
+                m.eventDescription = String(d.eventDescription);
+            }
+            if (d.eventJoinLink != null) {
+                m.eventJoinLink = String(d.eventJoinLink);
+            }
+            if (d.eventStartTime != null) {
+                if ($util.Long)
+                    (m.eventStartTime = $util.Long.fromValue(d.eventStartTime)).unsigned = false;
+                else if (typeof d.eventStartTime === "string")
+                    m.eventStartTime = parseInt(d.eventStartTime, 10);
+                else if (typeof d.eventStartTime === "number")
+                    m.eventStartTime = d.eventStartTime;
+                else if (typeof d.eventStartTime === "object")
+                    m.eventStartTime = new $util.LongBits(d.eventStartTime.low >>> 0, d.eventStartTime.high >>> 0).toNumber();
+            }
+            if (d.eventLocation != null) {
+                if (typeof d.eventLocation !== "object")
+                    throw TypeError(".WAMdStorageMsgRowOpaqueData.MsgOpaqueData.eventLocation: object expected");
+                m.eventLocation = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.EventLocation.fromObject(d.eventLocation, n + 1);
+            }
+            if (d.eventEndTime != null) {
+                if ($util.Long)
+                    (m.eventEndTime = $util.Long.fromValue(d.eventEndTime)).unsigned = false;
+                else if (typeof d.eventEndTime === "string")
+                    m.eventEndTime = parseInt(d.eventEndTime, 10);
+                else if (typeof d.eventEndTime === "number")
+                    m.eventEndTime = d.eventEndTime;
+                else if (typeof d.eventEndTime === "object")
+                    m.eventEndTime = new $util.LongBits(d.eventEndTime.low >>> 0, d.eventEndTime.high >>> 0).toNumber();
+            }
+            if (d.eventIsScheduledCall != null) {
+                m.eventIsScheduledCall = Boolean(d.eventIsScheduledCall);
+            }
+            if (d.eventExtraGuestsAllowed != null) {
+                m.eventExtraGuestsAllowed = Boolean(d.eventExtraGuestsAllowed);
+            }
+            if (d.plainProtobufBytes != null) {
+                if (typeof d.plainProtobufBytes === "string")
+                    $util.base64.decode(d.plainProtobufBytes, m.plainProtobufBytes = $util.newBuffer($util.base64.length(d.plainProtobufBytes)), 0);
+                else if (d.plainProtobufBytes.length >= 0)
+                    m.plainProtobufBytes = d.plainProtobufBytes;
+            }
+            if (d.quarantineExtractedText != null) {
+                m.quarantineExtractedText = String(d.quarantineExtractedText);
+            }
+            if (d.pollEndTime != null) {
+                if ($util.Long)
+                    (m.pollEndTime = $util.Long.fromValue(d.pollEndTime)).unsigned = false;
+                else if (typeof d.pollEndTime === "string")
+                    m.pollEndTime = parseInt(d.pollEndTime, 10);
+                else if (typeof d.pollEndTime === "number")
+                    m.pollEndTime = d.pollEndTime;
+                else if (typeof d.pollEndTime === "object")
+                    m.pollEndTime = new $util.LongBits(d.pollEndTime.low >>> 0, d.pollEndTime.high >>> 0).toNumber();
+            }
+            if (d.pollHideVoterNames != null) {
+                m.pollHideVoterNames = Boolean(d.pollHideVoterNames);
+            }
+            if (d.pollAllowAddOption != null) {
+                m.pollAllowAddOption = Boolean(d.pollAllowAddOption);
+            }
+            return m;
+        };
+
+        MsgOpaqueData.toObject = function toObject(m, o) {
+            if (!o)
+                o = {};
+            var d = {};
+            if (o.arrays || o.defaults) {
+                d.pollOptions = [];
+            }
+            if (m.body != null && m.hasOwnProperty("body")) {
+                d.body = m.body;
+                if (o.oneofs)
+                    d._body = "body";
+            }
+            if (m.caption != null && m.hasOwnProperty("caption")) {
+                d.caption = m.caption;
+                if (o.oneofs)
+                    d._caption = "caption";
+            }
+            if (m.lng != null && m.hasOwnProperty("lng")) {
+                d.lng = o.json && !isFinite(m.lng) ? String(m.lng) : m.lng;
+                if (o.oneofs)
+                    d._lng = "lng";
+            }
+            if (m.isLive != null && m.hasOwnProperty("isLive")) {
+                d.isLive = m.isLive;
+                if (o.oneofs)
+                    d._isLive = "isLive";
+            }
+            if (m.lat != null && m.hasOwnProperty("lat")) {
+                d.lat = o.json && !isFinite(m.lat) ? String(m.lat) : m.lat;
+                if (o.oneofs)
+                    d._lat = "lat";
+            }
+            if (m.paymentAmount1000 != null && m.hasOwnProperty("paymentAmount1000")) {
+                d.paymentAmount1000 = m.paymentAmount1000;
+                if (o.oneofs)
+                    d._paymentAmount1000 = "paymentAmount1000";
+            }
+            if (m.paymentNoteMsgBody != null && m.hasOwnProperty("paymentNoteMsgBody")) {
+                d.paymentNoteMsgBody = m.paymentNoteMsgBody;
+                if (o.oneofs)
+                    d._paymentNoteMsgBody = "paymentNoteMsgBody";
+            }
+            if (m.matchedText != null && m.hasOwnProperty("matchedText")) {
+                d.matchedText = m.matchedText;
+                if (o.oneofs)
+                    d._matchedText = "matchedText";
+            }
+            if (m.title != null && m.hasOwnProperty("title")) {
+                d.title = m.title;
+                if (o.oneofs)
+                    d._title = "title";
+            }
+            if (m.description != null && m.hasOwnProperty("description")) {
+                d.description = m.description;
+                if (o.oneofs)
+                    d._description = "description";
+            }
+            if (m.futureproofBuffer != null && m.hasOwnProperty("futureproofBuffer")) {
+                d.futureproofBuffer = o.bytes === String ? $util.base64.encode(m.futureproofBuffer, 0, m.futureproofBuffer.length) : o.bytes === Array ? Array.prototype.slice.call(m.futureproofBuffer) : m.futureproofBuffer;
+                if (o.oneofs)
+                    d._futureproofBuffer = "futureproofBuffer";
+            }
+            if (m.clientURL != null && m.hasOwnProperty("clientURL")) {
+                d.clientURL = m.clientURL;
+                if (o.oneofs)
+                    d._clientURL = "clientURL";
+            }
+            if (m.loc != null && m.hasOwnProperty("loc")) {
+                d.loc = m.loc;
+                if (o.oneofs)
+                    d._loc = "loc";
+            }
+            if (m.pollName != null && m.hasOwnProperty("pollName")) {
+                d.pollName = m.pollName;
+                if (o.oneofs)
+                    d._pollName = "pollName";
+            }
+            if (m.pollOptions && m.pollOptions.length) {
+                d.pollOptions = [];
+                for (var j = 0; j < m.pollOptions.length; ++j) {
+                    d.pollOptions[j] = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollOption.toObject(m.pollOptions[j], o);
+                }
+            }
+            if (m.pollSelectableOptionsCount != null && m.hasOwnProperty("pollSelectableOptionsCount")) {
+                d.pollSelectableOptionsCount = m.pollSelectableOptionsCount;
+                if (o.oneofs)
+                    d._pollSelectableOptionsCount = "pollSelectableOptionsCount";
+            }
+            if (m.messageSecret != null && m.hasOwnProperty("messageSecret")) {
+                d.messageSecret = o.bytes === String ? $util.base64.encode(m.messageSecret, 0, m.messageSecret.length) : o.bytes === Array ? Array.prototype.slice.call(m.messageSecret) : m.messageSecret;
+                if (o.oneofs)
+                    d._messageSecret = "messageSecret";
+            }
+            if (m.senderTimestampMS != null && m.hasOwnProperty("senderTimestampMS")) {
+                if (typeof m.senderTimestampMS === "number")
+                    d.senderTimestampMS = o.longs === String ? String(m.senderTimestampMS) : m.senderTimestampMS;
+                else
+                    d.senderTimestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.senderTimestampMS) : o.longs === Number ? new $util.LongBits(m.senderTimestampMS.low >>> 0, m.senderTimestampMS.high >>> 0).toNumber() : m.senderTimestampMS;
+                if (o.oneofs)
+                    d._senderTimestampMS = "senderTimestampMS";
+            }
+            if (m.pollUpdateParentKey != null && m.hasOwnProperty("pollUpdateParentKey")) {
+                d.pollUpdateParentKey = m.pollUpdateParentKey;
+                if (o.oneofs)
+                    d._pollUpdateParentKey = "pollUpdateParentKey";
+            }
+            if (m.encPollVote != null && m.hasOwnProperty("encPollVote")) {
+                d.encPollVote = $root.WAMdStorageMsgRowOpaqueData.PollEncValue.toObject(m.encPollVote, o);
+                if (o.oneofs)
+                    d._encPollVote = "encPollVote";
+            }
+            if (m.encReactionTargetMessageKey != null && m.hasOwnProperty("encReactionTargetMessageKey")) {
+                d.encReactionTargetMessageKey = m.encReactionTargetMessageKey;
+                if (o.oneofs)
+                    d._encReactionTargetMessageKey = "encReactionTargetMessageKey";
+            }
+            if (m.encReactionEncPayload != null && m.hasOwnProperty("encReactionEncPayload")) {
+                d.encReactionEncPayload = o.bytes === String ? $util.base64.encode(m.encReactionEncPayload, 0, m.encReactionEncPayload.length) : o.bytes === Array ? Array.prototype.slice.call(m.encReactionEncPayload) : m.encReactionEncPayload;
+                if (o.oneofs)
+                    d._encReactionEncPayload = "encReactionEncPayload";
+            }
+            if (m.encReactionEncIv != null && m.hasOwnProperty("encReactionEncIv")) {
+                d.encReactionEncIv = o.bytes === String ? $util.base64.encode(m.encReactionEncIv, 0, m.encReactionEncIv.length) : o.bytes === Array ? Array.prototype.slice.call(m.encReactionEncIv) : m.encReactionEncIv;
+                if (o.oneofs)
+                    d._encReactionEncIv = "encReactionEncIv";
+            }
+            if (m.isSentCagPollCreation != null && m.hasOwnProperty("isSentCagPollCreation")) {
+                d.isSentCagPollCreation = m.isSentCagPollCreation;
+                if (o.oneofs)
+                    d._isSentCagPollCreation = "isSentCagPollCreation";
+            }
+            if (m.botMessageSecret != null && m.hasOwnProperty("botMessageSecret")) {
+                d.botMessageSecret = o.bytes === String ? $util.base64.encode(m.botMessageSecret, 0, m.botMessageSecret.length) : o.bytes === Array ? Array.prototype.slice.call(m.botMessageSecret) : m.botMessageSecret;
+                if (o.oneofs)
+                    d._botMessageSecret = "botMessageSecret";
+            }
+            if (m.targetMessageKey != null && m.hasOwnProperty("targetMessageKey")) {
+                d.targetMessageKey = m.targetMessageKey;
+                if (o.oneofs)
+                    d._targetMessageKey = "targetMessageKey";
+            }
+            if (m.encPayload != null && m.hasOwnProperty("encPayload")) {
+                d.encPayload = o.bytes === String ? $util.base64.encode(m.encPayload, 0, m.encPayload.length) : o.bytes === Array ? Array.prototype.slice.call(m.encPayload) : m.encPayload;
+                if (o.oneofs)
+                    d._encPayload = "encPayload";
+            }
+            if (m.encIV != null && m.hasOwnProperty("encIV")) {
+                d.encIV = o.bytes === String ? $util.base64.encode(m.encIV, 0, m.encIV.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIV) : m.encIV;
+                if (o.oneofs)
+                    d._encIV = "encIV";
+            }
+            if (m.eventName != null && m.hasOwnProperty("eventName")) {
+                d.eventName = m.eventName;
+                if (o.oneofs)
+                    d._eventName = "eventName";
+            }
+            if (m.isEventCanceled != null && m.hasOwnProperty("isEventCanceled")) {
+                d.isEventCanceled = m.isEventCanceled;
+                if (o.oneofs)
+                    d._isEventCanceled = "isEventCanceled";
+            }
+            if (m.eventDescription != null && m.hasOwnProperty("eventDescription")) {
+                d.eventDescription = m.eventDescription;
+                if (o.oneofs)
+                    d._eventDescription = "eventDescription";
+            }
+            if (m.eventJoinLink != null && m.hasOwnProperty("eventJoinLink")) {
+                d.eventJoinLink = m.eventJoinLink;
+                if (o.oneofs)
+                    d._eventJoinLink = "eventJoinLink";
+            }
+            if (m.eventStartTime != null && m.hasOwnProperty("eventStartTime")) {
+                if (typeof m.eventStartTime === "number")
+                    d.eventStartTime = o.longs === String ? String(m.eventStartTime) : m.eventStartTime;
+                else
+                    d.eventStartTime = o.longs === String ? $util.Long.prototype.toString.call(m.eventStartTime) : o.longs === Number ? new $util.LongBits(m.eventStartTime.low >>> 0, m.eventStartTime.high >>> 0).toNumber() : m.eventStartTime;
+                if (o.oneofs)
+                    d._eventStartTime = "eventStartTime";
+            }
+            if (m.eventLocation != null && m.hasOwnProperty("eventLocation")) {
+                d.eventLocation = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.EventLocation.toObject(m.eventLocation, o);
+                if (o.oneofs)
+                    d._eventLocation = "eventLocation";
+            }
+            if (m.eventEndTime != null && m.hasOwnProperty("eventEndTime")) {
+                if (typeof m.eventEndTime === "number")
+                    d.eventEndTime = o.longs === String ? String(m.eventEndTime) : m.eventEndTime;
+                else
+                    d.eventEndTime = o.longs === String ? $util.Long.prototype.toString.call(m.eventEndTime) : o.longs === Number ? new $util.LongBits(m.eventEndTime.low >>> 0, m.eventEndTime.high >>> 0).toNumber() : m.eventEndTime;
+                if (o.oneofs)
+                    d._eventEndTime = "eventEndTime";
+            }
+            if (m.pollVotesSnapshot != null && m.hasOwnProperty("pollVotesSnapshot")) {
+                d.pollVotesSnapshot = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVotesSnapshot.toObject(m.pollVotesSnapshot, o);
+                if (o.oneofs)
+                    d._pollVotesSnapshot = "pollVotesSnapshot";
+            }
+            if (m.pollContentType != null && m.hasOwnProperty("pollContentType")) {
+                d.pollContentType = o.enums === String ? $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollContentType[m.pollContentType] === undefined ? m.pollContentType : $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollContentType[m.pollContentType] : m.pollContentType;
+                if (o.oneofs)
+                    d._pollContentType = "pollContentType";
+            }
+            if (m.plainProtobufBytes != null && m.hasOwnProperty("plainProtobufBytes")) {
+                d.plainProtobufBytes = o.bytes === String ? $util.base64.encode(m.plainProtobufBytes, 0, m.plainProtobufBytes.length) : o.bytes === Array ? Array.prototype.slice.call(m.plainProtobufBytes) : m.plainProtobufBytes;
+                if (o.oneofs)
+                    d._plainProtobufBytes = "plainProtobufBytes";
+            }
+            if (m.eventIsScheduledCall != null && m.hasOwnProperty("eventIsScheduledCall")) {
+                d.eventIsScheduledCall = m.eventIsScheduledCall;
+                if (o.oneofs)
+                    d._eventIsScheduledCall = "eventIsScheduledCall";
+            }
+            if (m.eventExtraGuestsAllowed != null && m.hasOwnProperty("eventExtraGuestsAllowed")) {
+                d.eventExtraGuestsAllowed = m.eventExtraGuestsAllowed;
+                if (o.oneofs)
+                    d._eventExtraGuestsAllowed = "eventExtraGuestsAllowed";
+            }
+            if (m.pollType != null && m.hasOwnProperty("pollType")) {
+                d.pollType = o.enums === String ? $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollType[m.pollType] === undefined ? m.pollType : $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollType[m.pollType] : m.pollType;
+                if (o.oneofs)
+                    d._pollType = "pollType";
+            }
+            if (m.correctOptionIndex != null && m.hasOwnProperty("correctOptionIndex")) {
+                d.correctOptionIndex = m.correctOptionIndex;
+                if (o.oneofs)
+                    d._correctOptionIndex = "correctOptionIndex";
+            }
+            if (m.quarantineExtractedText != null && m.hasOwnProperty("quarantineExtractedText")) {
+                d.quarantineExtractedText = m.quarantineExtractedText;
+                if (o.oneofs)
+                    d._quarantineExtractedText = "quarantineExtractedText";
+            }
+            if (m.pollEndTime != null && m.hasOwnProperty("pollEndTime")) {
+                if (typeof m.pollEndTime === "number")
+                    d.pollEndTime = o.longs === String ? String(m.pollEndTime) : m.pollEndTime;
+                else
+                    d.pollEndTime = o.longs === String ? $util.Long.prototype.toString.call(m.pollEndTime) : o.longs === Number ? new $util.LongBits(m.pollEndTime.low >>> 0, m.pollEndTime.high >>> 0).toNumber() : m.pollEndTime;
+                if (o.oneofs)
+                    d._pollEndTime = "pollEndTime";
+            }
+            if (m.pollHideVoterNames != null && m.hasOwnProperty("pollHideVoterNames")) {
+                d.pollHideVoterNames = m.pollHideVoterNames;
+                if (o.oneofs)
+                    d._pollHideVoterNames = "pollHideVoterNames";
+            }
+            if (m.originalSelfAuthor != null && m.hasOwnProperty("originalSelfAuthor")) {
+                d.originalSelfAuthor = m.originalSelfAuthor;
+                if (o.oneofs)
+                    d._originalSelfAuthor = "originalSelfAuthor";
+            }
+            if (m.pollAllowAddOption != null && m.hasOwnProperty("pollAllowAddOption")) {
+                d.pollAllowAddOption = m.pollAllowAddOption;
+                if (o.oneofs)
+                    d._pollAllowAddOption = "pollAllowAddOption";
+            }
+            return d;
+        };
+
+        MsgOpaqueData.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        MsgOpaqueData.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/WAMdStorageMsgRowOpaqueData.MsgOpaqueData";
+        };
+
+        MsgOpaqueData.PollType = (function() {
+            const valuesById = {}, values = Object.create(valuesById);
+            values[valuesById[0] = "POLL"] = 0;
+            values[valuesById[1] = "QUIZ"] = 1;
+            return values;
+        })();
+
+        MsgOpaqueData.PollContentType = (function() {
+            const valuesById = {}, values = Object.create(valuesById);
+            values[valuesById[0] = "UNKNOWN"] = 0;
+            values[valuesById[1] = "TEXT"] = 1;
+            values[valuesById[2] = "IMAGE"] = 2;
+            return values;
+        })();
+
+        MsgOpaqueData.EventLocation = (function() {
+
+            function EventLocation(p) {
+                if (p)
+                    for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
+                        if (p[ks[i]] != null && ks[i] !== "__proto__")
+                            this[ks[i]] = p[ks[i]];
+            }
+
+            EventLocation.prototype.degreesLatitude = null;
+            EventLocation.prototype.degreesLongitude = null;
+            EventLocation.prototype.name = null;
+            EventLocation.prototype.address = null;
+            EventLocation.prototype.URL = null;
+            EventLocation.prototype.JPEGThumbnail = null;
+
+            let $oneOfFields;
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(EventLocation.prototype, "_degreesLatitude", {
+                get: $util.oneOfGetter($oneOfFields = ["degreesLatitude"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(EventLocation.prototype, "_degreesLongitude", {
+                get: $util.oneOfGetter($oneOfFields = ["degreesLongitude"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(EventLocation.prototype, "_name", {
+                get: $util.oneOfGetter($oneOfFields = ["name"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(EventLocation.prototype, "_address", {
+                get: $util.oneOfGetter($oneOfFields = ["address"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(EventLocation.prototype, "_URL", {
+                get: $util.oneOfGetter($oneOfFields = ["URL"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(EventLocation.prototype, "_JPEGThumbnail", {
+                get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            EventLocation.create = function create(properties) {
+                return new EventLocation(properties);
+            };
+
+            EventLocation.encode = function encode(m, w) {
+                if (!w)
+                    w = $Writer.create();
+                if (m.degreesLatitude != null && Object.hasOwnProperty.call(m, "degreesLatitude"))
+                    w.uint32(9).double(m.degreesLatitude);
+                if (m.degreesLongitude != null && Object.hasOwnProperty.call(m, "degreesLongitude"))
+                    w.uint32(17).double(m.degreesLongitude);
+                if (m.name != null && Object.hasOwnProperty.call(m, "name"))
+                    w.uint32(26).string(m.name);
+                if (m.address != null && Object.hasOwnProperty.call(m, "address"))
+                    w.uint32(34).string(m.address);
+                if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
+                    w.uint32(42).string(m.URL);
+                if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
+                    w.uint32(50).bytes(m.JPEGThumbnail);
+                return w;
+            };
+
+            EventLocation.decode = function decode(r, l, e, n) {
+                if (!(r instanceof $Reader))
+                    r = $Reader.create(r);
+                if (n === undefined)
+                    n = 0;
+                if (n > $Reader.recursionLimit)
+                    throw Error("maximum nesting depth exceeded");
+                var c = l === undefined ? r.len : r.pos + l, m = new $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.EventLocation();
+                while (r.pos < c) {
+                    var t = r.uint32();
+                    if (t === e)
+                        break;
+                    switch (t >>> 3) {
+                    case 1: {
+                            m.degreesLatitude = r.double();
+                            break;
+                        }
+                    case 2: {
+                            m.degreesLongitude = r.double();
+                            break;
+                        }
+                    case 3: {
+                            m.name = r.string();
+                            break;
+                        }
+                    case 4: {
+                            m.address = r.string();
+                            break;
+                        }
+                    case 5: {
+                            m.URL = r.string();
+                            break;
+                        }
+                    case 6: {
+                            m.JPEGThumbnail = r.bytes();
+                            break;
+                        }
+                    default:
+                        r.skipType(t & 7, n);
+                        break;
+                    }
+                }
+                return m;
+            };
+
+            EventLocation.fromObject = function fromObject(d, n) {
+                if (d instanceof $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.EventLocation)
+                    return d;
+                if (n === undefined)
+                    n = 0;
+                if (n > $util.recursionLimit)
+                    throw Error("maximum nesting depth exceeded");
+                var m = new $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.EventLocation();
+                if (d.degreesLatitude != null) {
+                    m.degreesLatitude = Number(d.degreesLatitude);
+                }
+                if (d.degreesLongitude != null) {
+                    m.degreesLongitude = Number(d.degreesLongitude);
+                }
+                if (d.name != null) {
+                    m.name = String(d.name);
+                }
+                if (d.address != null) {
+                    m.address = String(d.address);
+                }
+                if (d.URL != null) {
+                    m.URL = String(d.URL);
+                }
+                if (d.JPEGThumbnail != null) {
+                    if (typeof d.JPEGThumbnail === "string")
+                        $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
+                    else if (d.JPEGThumbnail.length >= 0)
+                        m.JPEGThumbnail = d.JPEGThumbnail;
+                }
+                return m;
+            };
+
+            EventLocation.toObject = function toObject(m, o) {
+                if (!o)
+                    o = {};
+                var d = {};
+                if (m.degreesLatitude != null && m.hasOwnProperty("degreesLatitude")) {
+                    d.degreesLatitude = o.json && !isFinite(m.degreesLatitude) ? String(m.degreesLatitude) : m.degreesLatitude;
+                    if (o.oneofs)
+                        d._degreesLatitude = "degreesLatitude";
+                }
+                if (m.degreesLongitude != null && m.hasOwnProperty("degreesLongitude")) {
+                    d.degreesLongitude = o.json && !isFinite(m.degreesLongitude) ? String(m.degreesLongitude) : m.degreesLongitude;
+                    if (o.oneofs)
+                        d._degreesLongitude = "degreesLongitude";
+                }
+                if (m.name != null && m.hasOwnProperty("name")) {
+                    d.name = m.name;
+                    if (o.oneofs)
+                        d._name = "name";
+                }
+                if (m.address != null && m.hasOwnProperty("address")) {
+                    d.address = m.address;
+                    if (o.oneofs)
+                        d._address = "address";
+                }
+                if (m.URL != null && m.hasOwnProperty("URL")) {
+                    d.URL = m.URL;
+                    if (o.oneofs)
+                        d._URL = "URL";
+                }
+                if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
+                    d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+                    if (o.oneofs)
+                        d._JPEGThumbnail = "JPEGThumbnail";
+                }
+                return d;
+            };
+
+            EventLocation.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            EventLocation.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/WAMdStorageMsgRowOpaqueData.MsgOpaqueData.EventLocation";
+            };
+
+            return EventLocation;
+        })();
+
+        MsgOpaqueData.PollVotesSnapshot = (function() {
+
+            function PollVotesSnapshot(p) {
+                this.pollVotes = [];
+                if (p)
+                    for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
+                        if (p[ks[i]] != null && ks[i] !== "__proto__")
+                            this[ks[i]] = p[ks[i]];
+            }
+
+            PollVotesSnapshot.prototype.pollVotes = $util.emptyArray;
+
+            PollVotesSnapshot.create = function create(properties) {
+                return new PollVotesSnapshot(properties);
+            };
+
+            PollVotesSnapshot.encode = function encode(m, w) {
+                if (!w)
+                    w = $Writer.create();
+                if (m.pollVotes != null && m.pollVotes.length) {
+                    for (var i = 0; i < m.pollVotes.length; ++i)
+                        $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVoteSnapshot.encode(m.pollVotes[i], w.uint32(10).fork()).ldelim();
+                }
+                return w;
+            };
+
+            PollVotesSnapshot.decode = function decode(r, l, e, n) {
+                if (!(r instanceof $Reader))
+                    r = $Reader.create(r);
+                if (n === undefined)
+                    n = 0;
+                if (n > $Reader.recursionLimit)
+                    throw Error("maximum nesting depth exceeded");
+                var c = l === undefined ? r.len : r.pos + l, m = new $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVotesSnapshot();
+                while (r.pos < c) {
+                    var t = r.uint32();
+                    if (t === e)
+                        break;
+                    switch (t >>> 3) {
+                    case 1: {
+                            if (!(m.pollVotes && m.pollVotes.length))
+                                m.pollVotes = [];
+                            m.pollVotes.push($root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVoteSnapshot.decode(r, r.uint32(), undefined, n + 1));
+                            break;
+                        }
+                    default:
+                        r.skipType(t & 7, n);
+                        break;
+                    }
+                }
+                return m;
+            };
+
+            PollVotesSnapshot.fromObject = function fromObject(d, n) {
+                if (d instanceof $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVotesSnapshot)
+                    return d;
+                if (n === undefined)
+                    n = 0;
+                if (n > $util.recursionLimit)
+                    throw Error("maximum nesting depth exceeded");
+                var m = new $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVotesSnapshot();
+                if (d.pollVotes) {
+                    if (!Array.isArray(d.pollVotes))
+                        throw TypeError(".WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVotesSnapshot.pollVotes: array expected");
+                    m.pollVotes = [];
+                    for (var i = 0; i < d.pollVotes.length; ++i) {
+                        if (typeof d.pollVotes[i] !== "object")
+                            throw TypeError(".WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVotesSnapshot.pollVotes: object expected");
+                        m.pollVotes[i] = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVoteSnapshot.fromObject(d.pollVotes[i], n + 1);
+                    }
+                }
+                return m;
+            };
+
+            PollVotesSnapshot.toObject = function toObject(m, o) {
+                if (!o)
+                    o = {};
+                var d = {};
+                if (o.arrays || o.defaults) {
+                    d.pollVotes = [];
+                }
+                if (m.pollVotes && m.pollVotes.length) {
+                    d.pollVotes = [];
+                    for (var j = 0; j < m.pollVotes.length; ++j) {
+                        d.pollVotes[j] = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVoteSnapshot.toObject(m.pollVotes[j], o);
+                    }
+                }
+                return d;
+            };
+
+            PollVotesSnapshot.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            PollVotesSnapshot.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVotesSnapshot";
+            };
+
+            return PollVotesSnapshot;
+        })();
+
+        MsgOpaqueData.PollVoteSnapshot = (function() {
+
+            function PollVoteSnapshot(p) {
+                if (p)
+                    for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
+                        if (p[ks[i]] != null && ks[i] !== "__proto__")
+                            this[ks[i]] = p[ks[i]];
+            }
+
+            PollVoteSnapshot.prototype.option = null;
+            PollVoteSnapshot.prototype.optionVoteCount = null;
+
+            let $oneOfFields;
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(PollVoteSnapshot.prototype, "_option", {
+                get: $util.oneOfGetter($oneOfFields = ["option"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(PollVoteSnapshot.prototype, "_optionVoteCount", {
+                get: $util.oneOfGetter($oneOfFields = ["optionVoteCount"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            PollVoteSnapshot.create = function create(properties) {
+                return new PollVoteSnapshot(properties);
+            };
+
+            PollVoteSnapshot.encode = function encode(m, w) {
+                if (!w)
+                    w = $Writer.create();
+                if (m.option != null && Object.hasOwnProperty.call(m, "option"))
+                    $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollOption.encode(m.option, w.uint32(10).fork()).ldelim();
+                if (m.optionVoteCount != null && Object.hasOwnProperty.call(m, "optionVoteCount"))
+                    w.uint32(16).int32(m.optionVoteCount);
+                return w;
+            };
+
+            PollVoteSnapshot.decode = function decode(r, l, e, n) {
+                if (!(r instanceof $Reader))
+                    r = $Reader.create(r);
+                if (n === undefined)
+                    n = 0;
+                if (n > $Reader.recursionLimit)
+                    throw Error("maximum nesting depth exceeded");
+                var c = l === undefined ? r.len : r.pos + l, m = new $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVoteSnapshot();
+                while (r.pos < c) {
+                    var t = r.uint32();
+                    if (t === e)
+                        break;
+                    switch (t >>> 3) {
+                    case 1: {
+                            m.option = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollOption.decode(r, r.uint32(), undefined, n + 1);
+                            break;
+                        }
+                    case 2: {
+                            m.optionVoteCount = r.int32();
+                            break;
+                        }
+                    default:
+                        r.skipType(t & 7, n);
+                        break;
+                    }
+                }
+                return m;
+            };
+
+            PollVoteSnapshot.fromObject = function fromObject(d, n) {
+                if (d instanceof $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVoteSnapshot)
+                    return d;
+                if (n === undefined)
+                    n = 0;
+                if (n > $util.recursionLimit)
+                    throw Error("maximum nesting depth exceeded");
+                var m = new $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVoteSnapshot();
+                if (d.option != null) {
+                    if (typeof d.option !== "object")
+                        throw TypeError(".WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVoteSnapshot.option: object expected");
+                    m.option = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollOption.fromObject(d.option, n + 1);
+                }
+                if (d.optionVoteCount != null) {
+                    m.optionVoteCount = d.optionVoteCount | 0;
+                }
+                return m;
+            };
+
+            PollVoteSnapshot.toObject = function toObject(m, o) {
+                if (!o)
+                    o = {};
+                var d = {};
+                if (m.option != null && m.hasOwnProperty("option")) {
+                    d.option = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollOption.toObject(m.option, o);
+                    if (o.oneofs)
+                        d._option = "option";
+                }
+                if (m.optionVoteCount != null && m.hasOwnProperty("optionVoteCount")) {
+                    d.optionVoteCount = m.optionVoteCount;
+                    if (o.oneofs)
+                        d._optionVoteCount = "optionVoteCount";
+                }
+                return d;
+            };
+
+            PollVoteSnapshot.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            PollVoteSnapshot.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollVoteSnapshot";
+            };
+
+            return PollVoteSnapshot;
+        })();
+
+        MsgOpaqueData.PollOption = (function() {
+
+            function PollOption(p) {
+                if (p)
+                    for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
+                        if (p[ks[i]] != null && ks[i] !== "__proto__")
+                            this[ks[i]] = p[ks[i]];
+            }
+
+            PollOption.prototype.name = null;
+            PollOption.prototype.hash = null;
+
+            let $oneOfFields;
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(PollOption.prototype, "_name", {
+                get: $util.oneOfGetter($oneOfFields = ["name"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            // Virtual OneOf for proto3 optional field
+            Object.defineProperty(PollOption.prototype, "_hash", {
+                get: $util.oneOfGetter($oneOfFields = ["hash"]),
+                set: $util.oneOfSetter($oneOfFields)
+            });
+
+            PollOption.create = function create(properties) {
+                return new PollOption(properties);
+            };
+
+            PollOption.encode = function encode(m, w) {
+                if (!w)
+                    w = $Writer.create();
+                if (m.name != null && Object.hasOwnProperty.call(m, "name"))
+                    w.uint32(10).string(m.name);
+                if (m.hash != null && Object.hasOwnProperty.call(m, "hash"))
+                    w.uint32(18).string(m.hash);
+                return w;
+            };
+
+            PollOption.decode = function decode(r, l, e, n) {
+                if (!(r instanceof $Reader))
+                    r = $Reader.create(r);
+                if (n === undefined)
+                    n = 0;
+                if (n > $Reader.recursionLimit)
+                    throw Error("maximum nesting depth exceeded");
+                var c = l === undefined ? r.len : r.pos + l, m = new $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollOption();
+                while (r.pos < c) {
+                    var t = r.uint32();
+                    if (t === e)
+                        break;
+                    switch (t >>> 3) {
+                    case 1: {
+                            m.name = r.string();
+                            break;
+                        }
+                    case 2: {
+                            m.hash = r.string();
+                            break;
+                        }
+                    default:
+                        r.skipType(t & 7, n);
+                        break;
+                    }
+                }
+                return m;
+            };
+
+            PollOption.fromObject = function fromObject(d, n) {
+                if (d instanceof $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollOption)
+                    return d;
+                if (n === undefined)
+                    n = 0;
+                if (n > $util.recursionLimit)
+                    throw Error("maximum nesting depth exceeded");
+                var m = new $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollOption();
+                if (d.name != null) {
+                    m.name = String(d.name);
+                }
+                if (d.hash != null) {
+                    m.hash = String(d.hash);
+                }
+                return m;
+            };
+
+            PollOption.toObject = function toObject(m, o) {
+                if (!o)
+                    o = {};
+                var d = {};
+                if (m.name != null && m.hasOwnProperty("name")) {
+                    d.name = m.name;
+                    if (o.oneofs)
+                        d._name = "name";
+                }
+                if (m.hash != null && m.hasOwnProperty("hash")) {
+                    d.hash = m.hash;
+                    if (o.oneofs)
+                        d._hash = "hash";
+                }
+                return d;
+            };
+
+            PollOption.prototype.toJSON = function toJSON() {
+                return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+            };
+
+            PollOption.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                if (typeUrlPrefix === undefined) {
+                    typeUrlPrefix = "type.googleapis.com";
+                }
+                return typeUrlPrefix + "/WAMdStorageMsgRowOpaqueData.MsgOpaqueData.PollOption";
+            };
+
+            return PollOption;
+        })();
+
+        return MsgOpaqueData;
+    })();
+
+    WAMdStorageMsgRowOpaqueData.MsgRowOpaqueData = (function() {
+
+        function MsgRowOpaqueData(p) {
+            if (p)
+                for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
+                    if (p[ks[i]] != null && ks[i] !== "__proto__")
+                        this[ks[i]] = p[ks[i]];
+        }
+
+        MsgRowOpaqueData.prototype.currentMsg = null;
+        MsgRowOpaqueData.prototype.quotedMsg = null;
+
+        let $oneOfFields;
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgRowOpaqueData.prototype, "_currentMsg", {
+            get: $util.oneOfGetter($oneOfFields = ["currentMsg"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(MsgRowOpaqueData.prototype, "_quotedMsg", {
+            get: $util.oneOfGetter($oneOfFields = ["quotedMsg"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        MsgRowOpaqueData.create = function create(properties) {
+            return new MsgRowOpaqueData(properties);
+        };
+
+        MsgRowOpaqueData.encode = function encode(m, w) {
+            if (!w)
+                w = $Writer.create();
+            if (m.currentMsg != null && Object.hasOwnProperty.call(m, "currentMsg"))
+                $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.encode(m.currentMsg, w.uint32(10).fork()).ldelim();
+            if (m.quotedMsg != null && Object.hasOwnProperty.call(m, "quotedMsg"))
+                $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.encode(m.quotedMsg, w.uint32(18).fork()).ldelim();
+            return w;
+        };
+
+        MsgRowOpaqueData.decode = function decode(r, l, e, n) {
+            if (!(r instanceof $Reader))
+                r = $Reader.create(r);
+            if (n === undefined)
+                n = 0;
+            if (n > $Reader.recursionLimit)
+                throw Error("maximum nesting depth exceeded");
+            var c = l === undefined ? r.len : r.pos + l, m = new $root.WAMdStorageMsgRowOpaqueData.MsgRowOpaqueData();
+            while (r.pos < c) {
+                var t = r.uint32();
+                if (t === e)
+                    break;
+                switch (t >>> 3) {
+                case 1: {
+                        m.currentMsg = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.decode(r, r.uint32(), undefined, n + 1);
+                        break;
+                    }
+                case 2: {
+                        m.quotedMsg = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.decode(r, r.uint32(), undefined, n + 1);
+                        break;
+                    }
+                default:
+                    r.skipType(t & 7, n);
+                    break;
+                }
+            }
+            return m;
+        };
+
+        MsgRowOpaqueData.fromObject = function fromObject(d, n) {
+            if (d instanceof $root.WAMdStorageMsgRowOpaqueData.MsgRowOpaqueData)
+                return d;
+            if (n === undefined)
+                n = 0;
+            if (n > $util.recursionLimit)
+                throw Error("maximum nesting depth exceeded");
+            var m = new $root.WAMdStorageMsgRowOpaqueData.MsgRowOpaqueData();
+            if (d.currentMsg != null) {
+                if (typeof d.currentMsg !== "object")
+                    throw TypeError(".WAMdStorageMsgRowOpaqueData.MsgRowOpaqueData.currentMsg: object expected");
+                m.currentMsg = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.fromObject(d.currentMsg, n + 1);
+            }
+            if (d.quotedMsg != null) {
+                if (typeof d.quotedMsg !== "object")
+                    throw TypeError(".WAMdStorageMsgRowOpaqueData.MsgRowOpaqueData.quotedMsg: object expected");
+                m.quotedMsg = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.fromObject(d.quotedMsg, n + 1);
+            }
+            return m;
+        };
+
+        MsgRowOpaqueData.toObject = function toObject(m, o) {
+            if (!o)
+                o = {};
+            var d = {};
+            if (m.currentMsg != null && m.hasOwnProperty("currentMsg")) {
+                d.currentMsg = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.toObject(m.currentMsg, o);
+                if (o.oneofs)
+                    d._currentMsg = "currentMsg";
+            }
+            if (m.quotedMsg != null && m.hasOwnProperty("quotedMsg")) {
+                d.quotedMsg = $root.WAMdStorageMsgRowOpaqueData.MsgOpaqueData.toObject(m.quotedMsg, o);
+                if (o.oneofs)
+                    d._quotedMsg = "quotedMsg";
+            }
+            return d;
+        };
+
+        MsgRowOpaqueData.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        MsgRowOpaqueData.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/WAMdStorageMsgRowOpaqueData.MsgRowOpaqueData";
+        };
+
+        return MsgRowOpaqueData;
+    })();
+
+    WAMdStorageMsgRowOpaqueData.PollEncValue = (function() {
+
+        function PollEncValue(p) {
+            if (p)
+                for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
+                    if (p[ks[i]] != null && ks[i] !== "__proto__")
+                        this[ks[i]] = p[ks[i]];
+        }
+
+        PollEncValue.prototype.encPayload = null;
+        PollEncValue.prototype.encIV = null;
+
+        let $oneOfFields;
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(PollEncValue.prototype, "_encPayload", {
+            get: $util.oneOfGetter($oneOfFields = ["encPayload"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        // Virtual OneOf for proto3 optional field
+        Object.defineProperty(PollEncValue.prototype, "_encIV", {
+            get: $util.oneOfGetter($oneOfFields = ["encIV"]),
+            set: $util.oneOfSetter($oneOfFields)
+        });
+
+        PollEncValue.create = function create(properties) {
+            return new PollEncValue(properties);
+        };
+
+        PollEncValue.encode = function encode(m, w) {
+            if (!w)
+                w = $Writer.create();
+            if (m.encPayload != null && Object.hasOwnProperty.call(m, "encPayload"))
+                w.uint32(10).bytes(m.encPayload);
+            if (m.encIV != null && Object.hasOwnProperty.call(m, "encIV"))
+                w.uint32(18).bytes(m.encIV);
+            return w;
+        };
+
+        PollEncValue.decode = function decode(r, l, e, n) {
+            if (!(r instanceof $Reader))
+                r = $Reader.create(r);
+            if (n === undefined)
+                n = 0;
+            if (n > $Reader.recursionLimit)
+                throw Error("maximum nesting depth exceeded");
+            var c = l === undefined ? r.len : r.pos + l, m = new $root.WAMdStorageMsgRowOpaqueData.PollEncValue();
+            while (r.pos < c) {
+                var t = r.uint32();
+                if (t === e)
+                    break;
+                switch (t >>> 3) {
+                case 1: {
+                        m.encPayload = r.bytes();
+                        break;
+                    }
+                case 2: {
+                        m.encIV = r.bytes();
+                        break;
+                    }
+                default:
+                    r.skipType(t & 7, n);
+                    break;
+                }
+            }
+            return m;
+        };
+
+        PollEncValue.fromObject = function fromObject(d, n) {
+            if (d instanceof $root.WAMdStorageMsgRowOpaqueData.PollEncValue)
+                return d;
+            if (n === undefined)
+                n = 0;
+            if (n > $util.recursionLimit)
+                throw Error("maximum nesting depth exceeded");
+            var m = new $root.WAMdStorageMsgRowOpaqueData.PollEncValue();
+            if (d.encPayload != null) {
+                if (typeof d.encPayload === "string")
+                    $util.base64.decode(d.encPayload, m.encPayload = $util.newBuffer($util.base64.length(d.encPayload)), 0);
+                else if (d.encPayload.length >= 0)
+                    m.encPayload = d.encPayload;
+            }
+            if (d.encIV != null) {
+                if (typeof d.encIV === "string")
+                    $util.base64.decode(d.encIV, m.encIV = $util.newBuffer($util.base64.length(d.encIV)), 0);
+                else if (d.encIV.length >= 0)
+                    m.encIV = d.encIV;
+            }
+            return m;
+        };
+
+        PollEncValue.toObject = function toObject(m, o) {
+            if (!o)
+                o = {};
+            var d = {};
+            if (m.encPayload != null && m.hasOwnProperty("encPayload")) {
+                d.encPayload = o.bytes === String ? $util.base64.encode(m.encPayload, 0, m.encPayload.length) : o.bytes === Array ? Array.prototype.slice.call(m.encPayload) : m.encPayload;
+                if (o.oneofs)
+                    d._encPayload = "encPayload";
+            }
+            if (m.encIV != null && m.hasOwnProperty("encIV")) {
+                d.encIV = o.bytes === String ? $util.base64.encode(m.encIV, 0, m.encIV.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIV) : m.encIV;
+                if (o.oneofs)
+                    d._encIV = "encIV";
+            }
+            return d;
+        };
+
+        PollEncValue.prototype.toJSON = function toJSON() {
+            return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+        };
+
+        PollEncValue.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+            if (typeUrlPrefix === undefined) {
+                typeUrlPrefix = "type.googleapis.com";
+            }
+            return typeUrlPrefix + "/WAMdStorageMsgRowOpaqueData.PollEncValue";
+        };
+
+        return PollEncValue;
+    })();
+
+    return WAMdStorageMsgRowOpaqueData;
+})();
+
+export { $root as default };
+
