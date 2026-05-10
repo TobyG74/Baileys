@@ -55,3 +55,14 @@ export const proto = {
 	...WAWa6,
 	...WAWeb,
 }
+
+// Assign WAE2E sub-types to proto.Message for backward compatibility.
+// The code generator places nested types (e.g. AppStateSyncKeyData, ProtocolMessage)
+// at the WAE2E top level, but Baileys' lib code expects them under proto.Message.
+if (proto.Message) {
+	for (const key of Object.keys(WAE2E)) {
+		if (key !== 'Message' && !(key in proto.Message)) {
+			proto.Message[key] = WAE2E[key];
+		}
+	}
+}
