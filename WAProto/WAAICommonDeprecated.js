@@ -40,16 +40,16 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        AIRichResponseInlineImageMetadata.prototype.imageURL = null;
+        AIRichResponseInlineImageMetadata.prototype.imageUrl = null;
         AIRichResponseInlineImageMetadata.prototype.imageText = null;
         AIRichResponseInlineImageMetadata.prototype.alignment = null;
-        AIRichResponseInlineImageMetadata.prototype.tapLinkURL = null;
+        AIRichResponseInlineImageMetadata.prototype.tapLinkUrl = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseInlineImageMetadata.prototype, "_imageURL", {
-            get: $util.oneOfGetter($oneOfFields = ["imageURL"]),
+        Object.defineProperty(AIRichResponseInlineImageMetadata.prototype, "_imageUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["imageUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -66,8 +66,8 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseInlineImageMetadata.prototype, "_tapLinkURL", {
-            get: $util.oneOfGetter($oneOfFields = ["tapLinkURL"]),
+        Object.defineProperty(AIRichResponseInlineImageMetadata.prototype, "_tapLinkUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["tapLinkUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -78,14 +78,14 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
         AIRichResponseInlineImageMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.imageURL != null && Object.hasOwnProperty.call(m, "imageURL"))
-                $root.WAAICommonDeprecated.AIRichResponseImageURL.encode(m.imageURL, w.uint32(10).fork()).ldelim();
+            if (m.imageUrl != null && Object.hasOwnProperty.call(m, "imageUrl"))
+                $root.WAAICommonDeprecated.AIRichResponseImageURL.encode(m.imageUrl, w.uint32(10).fork()).ldelim();
             if (m.imageText != null && Object.hasOwnProperty.call(m, "imageText"))
                 w.uint32(18).string(m.imageText);
             if (m.alignment != null && Object.hasOwnProperty.call(m, "alignment"))
                 w.uint32(24).int32(m.alignment);
-            if (m.tapLinkURL != null && Object.hasOwnProperty.call(m, "tapLinkURL"))
-                w.uint32(34).string(m.tapLinkURL);
+            if (m.tapLinkUrl != null && Object.hasOwnProperty.call(m, "tapLinkUrl"))
+                w.uint32(34).string(m.tapLinkUrl);
             return w;
         };
 
@@ -103,7 +103,7 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.imageURL = $root.WAAICommonDeprecated.AIRichResponseImageURL.decode(r, r.uint32(), undefined, n + 1);
+                        m.imageUrl = $root.WAAICommonDeprecated.AIRichResponseImageURL.decode(r, r.uint32(), undefined, n + 1);
                         break;
                     }
                 case 2: {
@@ -115,7 +115,7 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                         break;
                     }
                 case 4: {
-                        m.tapLinkURL = r.string();
+                        m.tapLinkUrl = r.string();
                         break;
                     }
                 default:
@@ -134,10 +134,10 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAICommonDeprecated.AIRichResponseInlineImageMetadata();
-            if (d.imageURL != null) {
-                if (typeof d.imageURL !== "object")
-                    throw TypeError(".WAAICommonDeprecated.AIRichResponseInlineImageMetadata.imageURL: object expected");
-                m.imageURL = $root.WAAICommonDeprecated.AIRichResponseImageURL.fromObject(d.imageURL, n + 1);
+            if (d.imageUrl != null) {
+                if (typeof d.imageUrl !== "object")
+                    throw TypeError(".WAAICommonDeprecated.AIRichResponseInlineImageMetadata.imageUrl: object expected");
+                m.imageUrl = $root.WAAICommonDeprecated.AIRichResponseImageURL.fromObject(d.imageUrl, n + 1);
             }
             if (d.imageText != null) {
                 m.imageText = String(d.imageText);
@@ -162,8 +162,8 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                 m.alignment = 2;
                 break;
             }
-            if (d.tapLinkURL != null) {
-                m.tapLinkURL = String(d.tapLinkURL);
+            if (d.tapLinkUrl != null) {
+                m.tapLinkUrl = String(d.tapLinkUrl);
             }
             return m;
         };
@@ -172,10 +172,10 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.imageURL != null && m.hasOwnProperty("imageURL")) {
-                d.imageURL = $root.WAAICommonDeprecated.AIRichResponseImageURL.toObject(m.imageURL, o);
+            if (m.imageUrl != null && m.hasOwnProperty("imageUrl")) {
+                d.imageUrl = $root.WAAICommonDeprecated.AIRichResponseImageURL.toObject(m.imageUrl, o);
                 if (o.oneofs)
-                    d._imageURL = "imageURL";
+                    d._imageUrl = "imageUrl";
             }
             if (m.imageText != null && m.hasOwnProperty("imageText")) {
                 d.imageText = m.imageText;
@@ -187,10 +187,10 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                 if (o.oneofs)
                     d._alignment = "alignment";
             }
-            if (m.tapLinkURL != null && m.hasOwnProperty("tapLinkURL")) {
-                d.tapLinkURL = m.tapLinkURL;
+            if (m.tapLinkUrl != null && m.hasOwnProperty("tapLinkUrl")) {
+                d.tapLinkUrl = m.tapLinkUrl;
                 if (o.oneofs)
-                    d._tapLinkURL = "tapLinkURL";
+                    d._tapLinkUrl = "tapLinkUrl";
             }
             return d;
         };
@@ -512,7 +512,7 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
 
         AIRichResponseDynamicMetadata.prototype.type = null;
         AIRichResponseDynamicMetadata.prototype.version = null;
-        AIRichResponseDynamicMetadata.prototype.URL = null;
+        AIRichResponseDynamicMetadata.prototype.url = null;
         AIRichResponseDynamicMetadata.prototype.loopCount = null;
 
         let $oneOfFields;
@@ -530,8 +530,8 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseDynamicMetadata.prototype, "_URL", {
-            get: $util.oneOfGetter($oneOfFields = ["URL"]),
+        Object.defineProperty(AIRichResponseDynamicMetadata.prototype, "_url", {
+            get: $util.oneOfGetter($oneOfFields = ["url"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -552,8 +552,8 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                 w.uint32(8).int32(m.type);
             if (m.version != null && Object.hasOwnProperty.call(m, "version"))
                 w.uint32(16).uint64(m.version);
-            if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                w.uint32(26).string(m.URL);
+            if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                w.uint32(26).string(m.url);
             if (m.loopCount != null && Object.hasOwnProperty.call(m, "loopCount"))
                 w.uint32(32).uint32(m.loopCount);
             return w;
@@ -581,7 +581,7 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                         break;
                     }
                 case 3: {
-                        m.URL = r.string();
+                        m.url = r.string();
                         break;
                     }
                 case 4: {
@@ -634,8 +634,8 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                 else if (typeof d.version === "object")
                     m.version = new $util.LongBits(d.version.low >>> 0, d.version.high >>> 0).toNumber(true);
             }
-            if (d.URL != null) {
-                m.URL = String(d.URL);
+            if (d.url != null) {
+                m.url = String(d.url);
             }
             if (d.loopCount != null) {
                 m.loopCount = d.loopCount >>> 0;
@@ -660,10 +660,10 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                 if (o.oneofs)
                     d._version = "version";
             }
-            if (m.URL != null && m.hasOwnProperty("URL")) {
-                d.URL = m.URL;
+            if (m.url != null && m.hasOwnProperty("url")) {
+                d.url = m.url;
                 if (o.oneofs)
-                    d._URL = "URL";
+                    d._url = "url";
             }
             if (m.loopCount != null && m.hasOwnProperty("loopCount")) {
                 d.loopCount = m.loopCount;
@@ -946,9 +946,9 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
             }
 
             AIRichResponseReelItem.prototype.title = null;
-            AIRichResponseReelItem.prototype.profileIconURL = null;
-            AIRichResponseReelItem.prototype.thumbnailURL = null;
-            AIRichResponseReelItem.prototype.videoURL = null;
+            AIRichResponseReelItem.prototype.profileIconUrl = null;
+            AIRichResponseReelItem.prototype.thumbnailUrl = null;
+            AIRichResponseReelItem.prototype.videoUrl = null;
 
             let $oneOfFields;
 
@@ -959,20 +959,20 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIRichResponseReelItem.prototype, "_profileIconURL", {
-                get: $util.oneOfGetter($oneOfFields = ["profileIconURL"]),
+            Object.defineProperty(AIRichResponseReelItem.prototype, "_profileIconUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["profileIconUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIRichResponseReelItem.prototype, "_thumbnailURL", {
-                get: $util.oneOfGetter($oneOfFields = ["thumbnailURL"]),
+            Object.defineProperty(AIRichResponseReelItem.prototype, "_thumbnailUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["thumbnailUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIRichResponseReelItem.prototype, "_videoURL", {
-                get: $util.oneOfGetter($oneOfFields = ["videoURL"]),
+            Object.defineProperty(AIRichResponseReelItem.prototype, "_videoUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["videoUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -985,12 +985,12 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                     w = $Writer.create();
                 if (m.title != null && Object.hasOwnProperty.call(m, "title"))
                     w.uint32(10).string(m.title);
-                if (m.profileIconURL != null && Object.hasOwnProperty.call(m, "profileIconURL"))
-                    w.uint32(18).string(m.profileIconURL);
-                if (m.thumbnailURL != null && Object.hasOwnProperty.call(m, "thumbnailURL"))
-                    w.uint32(26).string(m.thumbnailURL);
-                if (m.videoURL != null && Object.hasOwnProperty.call(m, "videoURL"))
-                    w.uint32(34).string(m.videoURL);
+                if (m.profileIconUrl != null && Object.hasOwnProperty.call(m, "profileIconUrl"))
+                    w.uint32(18).string(m.profileIconUrl);
+                if (m.thumbnailUrl != null && Object.hasOwnProperty.call(m, "thumbnailUrl"))
+                    w.uint32(26).string(m.thumbnailUrl);
+                if (m.videoUrl != null && Object.hasOwnProperty.call(m, "videoUrl"))
+                    w.uint32(34).string(m.videoUrl);
                 return w;
             };
 
@@ -1012,15 +1012,15 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                             break;
                         }
                     case 2: {
-                            m.profileIconURL = r.string();
+                            m.profileIconUrl = r.string();
                             break;
                         }
                     case 3: {
-                            m.thumbnailURL = r.string();
+                            m.thumbnailUrl = r.string();
                             break;
                         }
                     case 4: {
-                            m.videoURL = r.string();
+                            m.videoUrl = r.string();
                             break;
                         }
                     default:
@@ -1042,14 +1042,14 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                 if (d.title != null) {
                     m.title = String(d.title);
                 }
-                if (d.profileIconURL != null) {
-                    m.profileIconURL = String(d.profileIconURL);
+                if (d.profileIconUrl != null) {
+                    m.profileIconUrl = String(d.profileIconUrl);
                 }
-                if (d.thumbnailURL != null) {
-                    m.thumbnailURL = String(d.thumbnailURL);
+                if (d.thumbnailUrl != null) {
+                    m.thumbnailUrl = String(d.thumbnailUrl);
                 }
-                if (d.videoURL != null) {
-                    m.videoURL = String(d.videoURL);
+                if (d.videoUrl != null) {
+                    m.videoUrl = String(d.videoUrl);
                 }
                 return m;
             };
@@ -1063,20 +1063,20 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                     if (o.oneofs)
                         d._title = "title";
                 }
-                if (m.profileIconURL != null && m.hasOwnProperty("profileIconURL")) {
-                    d.profileIconURL = m.profileIconURL;
+                if (m.profileIconUrl != null && m.hasOwnProperty("profileIconUrl")) {
+                    d.profileIconUrl = m.profileIconUrl;
                     if (o.oneofs)
-                        d._profileIconURL = "profileIconURL";
+                        d._profileIconUrl = "profileIconUrl";
                 }
-                if (m.thumbnailURL != null && m.hasOwnProperty("thumbnailURL")) {
-                    d.thumbnailURL = m.thumbnailURL;
+                if (m.thumbnailUrl != null && m.hasOwnProperty("thumbnailUrl")) {
+                    d.thumbnailUrl = m.thumbnailUrl;
                     if (o.oneofs)
-                        d._thumbnailURL = "thumbnailURL";
+                        d._thumbnailUrl = "thumbnailUrl";
                 }
-                if (m.videoURL != null && m.hasOwnProperty("videoURL")) {
-                    d.videoURL = m.videoURL;
+                if (m.videoUrl != null && m.hasOwnProperty("videoUrl")) {
+                    d.videoUrl = m.videoUrl;
                     if (o.oneofs)
-                        d._videoURL = "videoURL";
+                        d._videoUrl = "videoUrl";
                 }
                 return d;
             };
@@ -1107,27 +1107,27 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        AIRichResponseImageURL.prototype.imagePreviewURL = null;
-        AIRichResponseImageURL.prototype.imageHighResURL = null;
-        AIRichResponseImageURL.prototype.sourceURL = null;
+        AIRichResponseImageURL.prototype.imagePreviewUrl = null;
+        AIRichResponseImageURL.prototype.imageHighResUrl = null;
+        AIRichResponseImageURL.prototype.sourceUrl = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseImageURL.prototype, "_imagePreviewURL", {
-            get: $util.oneOfGetter($oneOfFields = ["imagePreviewURL"]),
+        Object.defineProperty(AIRichResponseImageURL.prototype, "_imagePreviewUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["imagePreviewUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseImageURL.prototype, "_imageHighResURL", {
-            get: $util.oneOfGetter($oneOfFields = ["imageHighResURL"]),
+        Object.defineProperty(AIRichResponseImageURL.prototype, "_imageHighResUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["imageHighResUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseImageURL.prototype, "_sourceURL", {
-            get: $util.oneOfGetter($oneOfFields = ["sourceURL"]),
+        Object.defineProperty(AIRichResponseImageURL.prototype, "_sourceUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["sourceUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1138,12 +1138,12 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
         AIRichResponseImageURL.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.imagePreviewURL != null && Object.hasOwnProperty.call(m, "imagePreviewURL"))
-                w.uint32(10).string(m.imagePreviewURL);
-            if (m.imageHighResURL != null && Object.hasOwnProperty.call(m, "imageHighResURL"))
-                w.uint32(18).string(m.imageHighResURL);
-            if (m.sourceURL != null && Object.hasOwnProperty.call(m, "sourceURL"))
-                w.uint32(26).string(m.sourceURL);
+            if (m.imagePreviewUrl != null && Object.hasOwnProperty.call(m, "imagePreviewUrl"))
+                w.uint32(10).string(m.imagePreviewUrl);
+            if (m.imageHighResUrl != null && Object.hasOwnProperty.call(m, "imageHighResUrl"))
+                w.uint32(18).string(m.imageHighResUrl);
+            if (m.sourceUrl != null && Object.hasOwnProperty.call(m, "sourceUrl"))
+                w.uint32(26).string(m.sourceUrl);
             return w;
         };
 
@@ -1161,15 +1161,15 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.imagePreviewURL = r.string();
+                        m.imagePreviewUrl = r.string();
                         break;
                     }
                 case 2: {
-                        m.imageHighResURL = r.string();
+                        m.imageHighResUrl = r.string();
                         break;
                     }
                 case 3: {
-                        m.sourceURL = r.string();
+                        m.sourceUrl = r.string();
                         break;
                     }
                 default:
@@ -1188,14 +1188,14 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAICommonDeprecated.AIRichResponseImageURL();
-            if (d.imagePreviewURL != null) {
-                m.imagePreviewURL = String(d.imagePreviewURL);
+            if (d.imagePreviewUrl != null) {
+                m.imagePreviewUrl = String(d.imagePreviewUrl);
             }
-            if (d.imageHighResURL != null) {
-                m.imageHighResURL = String(d.imageHighResURL);
+            if (d.imageHighResUrl != null) {
+                m.imageHighResUrl = String(d.imageHighResUrl);
             }
-            if (d.sourceURL != null) {
-                m.sourceURL = String(d.sourceURL);
+            if (d.sourceUrl != null) {
+                m.sourceUrl = String(d.sourceUrl);
             }
             return m;
         };
@@ -1204,20 +1204,20 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.imagePreviewURL != null && m.hasOwnProperty("imagePreviewURL")) {
-                d.imagePreviewURL = m.imagePreviewURL;
+            if (m.imagePreviewUrl != null && m.hasOwnProperty("imagePreviewUrl")) {
+                d.imagePreviewUrl = m.imagePreviewUrl;
                 if (o.oneofs)
-                    d._imagePreviewURL = "imagePreviewURL";
+                    d._imagePreviewUrl = "imagePreviewUrl";
             }
-            if (m.imageHighResURL != null && m.hasOwnProperty("imageHighResURL")) {
-                d.imageHighResURL = m.imageHighResURL;
+            if (m.imageHighResUrl != null && m.hasOwnProperty("imageHighResUrl")) {
+                d.imageHighResUrl = m.imageHighResUrl;
                 if (o.oneofs)
-                    d._imageHighResURL = "imageHighResURL";
+                    d._imageHighResUrl = "imageHighResUrl";
             }
-            if (m.sourceURL != null && m.hasOwnProperty("sourceURL")) {
-                d.sourceURL = m.sourceURL;
+            if (m.sourceUrl != null && m.hasOwnProperty("sourceUrl")) {
+                d.sourceUrl = m.sourceUrl;
                 if (o.oneofs)
-                    d._sourceURL = "sourceURL";
+                    d._sourceUrl = "sourceUrl";
             }
             return d;
         };
@@ -1239,21 +1239,21 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
     WAAICommonDeprecated.AIRichResponseGridImageMetadata = (function() {
 
         function AIRichResponseGridImageMetadata(p) {
-            this.imageURLs = [];
+            this.imageUrls = [];
             if (p)
                 for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
                     if (p[ks[i]] != null && ks[i] !== "__proto__")
                         this[ks[i]] = p[ks[i]];
         }
 
-        AIRichResponseGridImageMetadata.prototype.gridImageURL = null;
-        AIRichResponseGridImageMetadata.prototype.imageURLs = $util.emptyArray;
+        AIRichResponseGridImageMetadata.prototype.gridImageUrl = null;
+        AIRichResponseGridImageMetadata.prototype.imageUrls = $util.emptyArray;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseGridImageMetadata.prototype, "_gridImageURL", {
-            get: $util.oneOfGetter($oneOfFields = ["gridImageURL"]),
+        Object.defineProperty(AIRichResponseGridImageMetadata.prototype, "_gridImageUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["gridImageUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1264,11 +1264,11 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
         AIRichResponseGridImageMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.gridImageURL != null && Object.hasOwnProperty.call(m, "gridImageURL"))
-                $root.WAAICommonDeprecated.AIRichResponseImageURL.encode(m.gridImageURL, w.uint32(10).fork()).ldelim();
-            if (m.imageURLs != null && m.imageURLs.length) {
-                for (var i = 0; i < m.imageURLs.length; ++i)
-                    $root.WAAICommonDeprecated.AIRichResponseImageURL.encode(m.imageURLs[i], w.uint32(18).fork()).ldelim();
+            if (m.gridImageUrl != null && Object.hasOwnProperty.call(m, "gridImageUrl"))
+                $root.WAAICommonDeprecated.AIRichResponseImageURL.encode(m.gridImageUrl, w.uint32(10).fork()).ldelim();
+            if (m.imageUrls != null && m.imageUrls.length) {
+                for (var i = 0; i < m.imageUrls.length; ++i)
+                    $root.WAAICommonDeprecated.AIRichResponseImageURL.encode(m.imageUrls[i], w.uint32(18).fork()).ldelim();
             }
             return w;
         };
@@ -1287,13 +1287,13 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.gridImageURL = $root.WAAICommonDeprecated.AIRichResponseImageURL.decode(r, r.uint32(), undefined, n + 1);
+                        m.gridImageUrl = $root.WAAICommonDeprecated.AIRichResponseImageURL.decode(r, r.uint32(), undefined, n + 1);
                         break;
                     }
                 case 2: {
-                        if (!(m.imageURLs && m.imageURLs.length))
-                            m.imageURLs = [];
-                        m.imageURLs.push($root.WAAICommonDeprecated.AIRichResponseImageURL.decode(r, r.uint32(), undefined, n + 1));
+                        if (!(m.imageUrls && m.imageUrls.length))
+                            m.imageUrls = [];
+                        m.imageUrls.push($root.WAAICommonDeprecated.AIRichResponseImageURL.decode(r, r.uint32(), undefined, n + 1));
                         break;
                     }
                 default:
@@ -1312,19 +1312,19 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAICommonDeprecated.AIRichResponseGridImageMetadata();
-            if (d.gridImageURL != null) {
-                if (typeof d.gridImageURL !== "object")
-                    throw TypeError(".WAAICommonDeprecated.AIRichResponseGridImageMetadata.gridImageURL: object expected");
-                m.gridImageURL = $root.WAAICommonDeprecated.AIRichResponseImageURL.fromObject(d.gridImageURL, n + 1);
+            if (d.gridImageUrl != null) {
+                if (typeof d.gridImageUrl !== "object")
+                    throw TypeError(".WAAICommonDeprecated.AIRichResponseGridImageMetadata.gridImageUrl: object expected");
+                m.gridImageUrl = $root.WAAICommonDeprecated.AIRichResponseImageURL.fromObject(d.gridImageUrl, n + 1);
             }
-            if (d.imageURLs) {
-                if (!Array.isArray(d.imageURLs))
-                    throw TypeError(".WAAICommonDeprecated.AIRichResponseGridImageMetadata.imageURLs: array expected");
-                m.imageURLs = [];
-                for (var i = 0; i < d.imageURLs.length; ++i) {
-                    if (typeof d.imageURLs[i] !== "object")
-                        throw TypeError(".WAAICommonDeprecated.AIRichResponseGridImageMetadata.imageURLs: object expected");
-                    m.imageURLs[i] = $root.WAAICommonDeprecated.AIRichResponseImageURL.fromObject(d.imageURLs[i], n + 1);
+            if (d.imageUrls) {
+                if (!Array.isArray(d.imageUrls))
+                    throw TypeError(".WAAICommonDeprecated.AIRichResponseGridImageMetadata.imageUrls: array expected");
+                m.imageUrls = [];
+                for (var i = 0; i < d.imageUrls.length; ++i) {
+                    if (typeof d.imageUrls[i] !== "object")
+                        throw TypeError(".WAAICommonDeprecated.AIRichResponseGridImageMetadata.imageUrls: object expected");
+                    m.imageUrls[i] = $root.WAAICommonDeprecated.AIRichResponseImageURL.fromObject(d.imageUrls[i], n + 1);
                 }
             }
             return m;
@@ -1335,17 +1335,17 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                 o = {};
             var d = {};
             if (o.arrays || o.defaults) {
-                d.imageURLs = [];
+                d.imageUrls = [];
             }
-            if (m.gridImageURL != null && m.hasOwnProperty("gridImageURL")) {
-                d.gridImageURL = $root.WAAICommonDeprecated.AIRichResponseImageURL.toObject(m.gridImageURL, o);
+            if (m.gridImageUrl != null && m.hasOwnProperty("gridImageUrl")) {
+                d.gridImageUrl = $root.WAAICommonDeprecated.AIRichResponseImageURL.toObject(m.gridImageUrl, o);
                 if (o.oneofs)
-                    d._gridImageURL = "gridImageURL";
+                    d._gridImageUrl = "gridImageUrl";
             }
-            if (m.imageURLs && m.imageURLs.length) {
-                d.imageURLs = [];
-                for (var j = 0; j < m.imageURLs.length; ++j) {
-                    d.imageURLs[j] = $root.WAAICommonDeprecated.AIRichResponseImageURL.toObject(m.imageURLs[j], o);
+            if (m.imageUrls && m.imageUrls.length) {
+                d.imageUrls = [];
+                for (var j = 0; j < m.imageUrls.length; ++j) {
+                    d.imageUrls[j] = $root.WAAICommonDeprecated.AIRichResponseImageURL.toObject(m.imageUrls[j], o);
                 }
             }
             return d;
@@ -1751,7 +1751,7 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
             }
 
             AIRichResponseLatexExpression.prototype.latexExpression = null;
-            AIRichResponseLatexExpression.prototype.URL = null;
+            AIRichResponseLatexExpression.prototype.url = null;
             AIRichResponseLatexExpression.prototype.width = null;
             AIRichResponseLatexExpression.prototype.height = null;
             AIRichResponseLatexExpression.prototype.fontHeight = null;
@@ -1769,8 +1769,8 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIRichResponseLatexExpression.prototype, "_URL", {
-                get: $util.oneOfGetter($oneOfFields = ["URL"]),
+            Object.defineProperty(AIRichResponseLatexExpression.prototype, "_url", {
+                get: $util.oneOfGetter($oneOfFields = ["url"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -1825,8 +1825,8 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                     w = $Writer.create();
                 if (m.latexExpression != null && Object.hasOwnProperty.call(m, "latexExpression"))
                     w.uint32(10).string(m.latexExpression);
-                if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                    w.uint32(18).string(m.URL);
+                if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                    w.uint32(18).string(m.url);
                 if (m.width != null && Object.hasOwnProperty.call(m, "width"))
                     w.uint32(25).double(m.width);
                 if (m.height != null && Object.hasOwnProperty.call(m, "height"))
@@ -1862,7 +1862,7 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                             break;
                         }
                     case 2: {
-                            m.URL = r.string();
+                            m.url = r.string();
                             break;
                         }
                     case 3: {
@@ -1912,8 +1912,8 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                 if (d.latexExpression != null) {
                     m.latexExpression = String(d.latexExpression);
                 }
-                if (d.URL != null) {
-                    m.URL = String(d.URL);
+                if (d.url != null) {
+                    m.url = String(d.url);
                 }
                 if (d.width != null) {
                     m.width = Number(d.width);
@@ -1948,10 +1948,10 @@ export const WAAICommonDeprecated = $root.WAAICommonDeprecated = (() => {
                     if (o.oneofs)
                         d._latexExpression = "latexExpression";
                 }
-                if (m.URL != null && m.hasOwnProperty("URL")) {
-                    d.URL = m.URL;
+                if (m.url != null && m.hasOwnProperty("url")) {
+                    d.url = m.url;
                     if (o.oneofs)
-                        d._URL = "URL";
+                        d._url = "url";
                 }
                 if (m.width != null && m.hasOwnProperty("width")) {
                     d.width = o.json && !isFinite(m.width) ? String(m.width) : m.width;

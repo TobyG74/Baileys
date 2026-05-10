@@ -183,9 +183,9 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
                         this[ks[i]] = p[ks[i]];
         }
 
-        PreKeySignalMessage.prototype.registrationID = null;
-        PreKeySignalMessage.prototype.preKeyID = null;
-        PreKeySignalMessage.prototype.signedPreKeyID = null;
+        PreKeySignalMessage.prototype.registrationId = null;
+        PreKeySignalMessage.prototype.preKeyId = null;
+        PreKeySignalMessage.prototype.signedPreKeyId = null;
         PreKeySignalMessage.prototype.baseKey = null;
         PreKeySignalMessage.prototype.identityKey = null;
         PreKeySignalMessage.prototype.message = null;
@@ -193,20 +193,20 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PreKeySignalMessage.prototype, "_registrationID", {
-            get: $util.oneOfGetter($oneOfFields = ["registrationID"]),
+        Object.defineProperty(PreKeySignalMessage.prototype, "_registrationId", {
+            get: $util.oneOfGetter($oneOfFields = ["registrationId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PreKeySignalMessage.prototype, "_preKeyID", {
-            get: $util.oneOfGetter($oneOfFields = ["preKeyID"]),
+        Object.defineProperty(PreKeySignalMessage.prototype, "_preKeyId", {
+            get: $util.oneOfGetter($oneOfFields = ["preKeyId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PreKeySignalMessage.prototype, "_signedPreKeyID", {
-            get: $util.oneOfGetter($oneOfFields = ["signedPreKeyID"]),
+        Object.defineProperty(PreKeySignalMessage.prototype, "_signedPreKeyId", {
+            get: $util.oneOfGetter($oneOfFields = ["signedPreKeyId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -235,18 +235,18 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
         PreKeySignalMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.preKeyID != null && Object.hasOwnProperty.call(m, "preKeyID"))
-                w.uint32(8).uint32(m.preKeyID);
+            if (m.preKeyId != null && Object.hasOwnProperty.call(m, "preKeyId"))
+                w.uint32(8).uint32(m.preKeyId);
             if (m.baseKey != null && Object.hasOwnProperty.call(m, "baseKey"))
                 w.uint32(18).bytes(m.baseKey);
             if (m.identityKey != null && Object.hasOwnProperty.call(m, "identityKey"))
                 w.uint32(26).bytes(m.identityKey);
             if (m.message != null && Object.hasOwnProperty.call(m, "message"))
                 w.uint32(34).bytes(m.message);
-            if (m.registrationID != null && Object.hasOwnProperty.call(m, "registrationID"))
-                w.uint32(40).uint32(m.registrationID);
-            if (m.signedPreKeyID != null && Object.hasOwnProperty.call(m, "signedPreKeyID"))
-                w.uint32(48).uint32(m.signedPreKeyID);
+            if (m.registrationId != null && Object.hasOwnProperty.call(m, "registrationId"))
+                w.uint32(40).uint32(m.registrationId);
+            if (m.signedPreKeyId != null && Object.hasOwnProperty.call(m, "signedPreKeyId"))
+                w.uint32(48).uint32(m.signedPreKeyId);
             return w;
         };
 
@@ -264,15 +264,15 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
                     break;
                 switch (t >>> 3) {
                 case 5: {
-                        m.registrationID = r.uint32();
+                        m.registrationId = r.uint32();
                         break;
                     }
                 case 1: {
-                        m.preKeyID = r.uint32();
+                        m.preKeyId = r.uint32();
                         break;
                     }
                 case 6: {
-                        m.signedPreKeyID = r.uint32();
+                        m.signedPreKeyId = r.uint32();
                         break;
                     }
                 case 2: {
@@ -303,14 +303,14 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASignalWhisperTextProtocol.PreKeySignalMessage();
-            if (d.registrationID != null) {
-                m.registrationID = d.registrationID >>> 0;
+            if (d.registrationId != null) {
+                m.registrationId = d.registrationId >>> 0;
             }
-            if (d.preKeyID != null) {
-                m.preKeyID = d.preKeyID >>> 0;
+            if (d.preKeyId != null) {
+                m.preKeyId = d.preKeyId >>> 0;
             }
-            if (d.signedPreKeyID != null) {
-                m.signedPreKeyID = d.signedPreKeyID >>> 0;
+            if (d.signedPreKeyId != null) {
+                m.signedPreKeyId = d.signedPreKeyId >>> 0;
             }
             if (d.baseKey != null) {
                 if (typeof d.baseKey === "string")
@@ -337,10 +337,10 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
             if (!o)
                 o = {};
             var d = {};
-            if (m.preKeyID != null && m.hasOwnProperty("preKeyID")) {
-                d.preKeyID = m.preKeyID;
+            if (m.preKeyId != null && m.hasOwnProperty("preKeyId")) {
+                d.preKeyId = m.preKeyId;
                 if (o.oneofs)
-                    d._preKeyID = "preKeyID";
+                    d._preKeyId = "preKeyId";
             }
             if (m.baseKey != null && m.hasOwnProperty("baseKey")) {
                 d.baseKey = o.bytes === String ? $util.base64.encode(m.baseKey, 0, m.baseKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.baseKey) : m.baseKey;
@@ -357,15 +357,15 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
                 if (o.oneofs)
                     d._message = "message";
             }
-            if (m.registrationID != null && m.hasOwnProperty("registrationID")) {
-                d.registrationID = m.registrationID;
+            if (m.registrationId != null && m.hasOwnProperty("registrationId")) {
+                d.registrationId = m.registrationId;
                 if (o.oneofs)
-                    d._registrationID = "registrationID";
+                    d._registrationId = "registrationId";
             }
-            if (m.signedPreKeyID != null && m.hasOwnProperty("signedPreKeyID")) {
-                d.signedPreKeyID = m.signedPreKeyID;
+            if (m.signedPreKeyId != null && m.hasOwnProperty("signedPreKeyId")) {
+                d.signedPreKeyId = m.signedPreKeyId;
                 if (o.oneofs)
-                    d._signedPreKeyID = "signedPreKeyID";
+                    d._signedPreKeyId = "signedPreKeyId";
             }
             return d;
         };
@@ -393,7 +393,7 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
                         this[ks[i]] = p[ks[i]];
         }
 
-        KeyExchangeMessage.prototype.ID = null;
+        KeyExchangeMessage.prototype.id = null;
         KeyExchangeMessage.prototype.baseKey = null;
         KeyExchangeMessage.prototype.ratchetKey = null;
         KeyExchangeMessage.prototype.identityKey = null;
@@ -402,8 +402,8 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(KeyExchangeMessage.prototype, "_ID", {
-            get: $util.oneOfGetter($oneOfFields = ["ID"]),
+        Object.defineProperty(KeyExchangeMessage.prototype, "_id", {
+            get: $util.oneOfGetter($oneOfFields = ["id"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -438,8 +438,8 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
         KeyExchangeMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                w.uint32(8).uint32(m.ID);
+            if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                w.uint32(8).uint32(m.id);
             if (m.baseKey != null && Object.hasOwnProperty.call(m, "baseKey"))
                 w.uint32(18).bytes(m.baseKey);
             if (m.ratchetKey != null && Object.hasOwnProperty.call(m, "ratchetKey"))
@@ -465,7 +465,7 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.ID = r.uint32();
+                        m.id = r.uint32();
                         break;
                     }
                 case 2: {
@@ -500,8 +500,8 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASignalWhisperTextProtocol.KeyExchangeMessage();
-            if (d.ID != null) {
-                m.ID = d.ID >>> 0;
+            if (d.id != null) {
+                m.id = d.id >>> 0;
             }
             if (d.baseKey != null) {
                 if (typeof d.baseKey === "string")
@@ -534,10 +534,10 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
             if (!o)
                 o = {};
             var d = {};
-            if (m.ID != null && m.hasOwnProperty("ID")) {
-                d.ID = m.ID;
+            if (m.id != null && m.hasOwnProperty("id")) {
+                d.id = m.id;
                 if (o.oneofs)
-                    d._ID = "ID";
+                    d._id = "id";
             }
             if (m.baseKey != null && m.hasOwnProperty("baseKey")) {
                 d.baseKey = o.bytes === String ? $util.base64.encode(m.baseKey, 0, m.baseKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.baseKey) : m.baseKey;
@@ -585,15 +585,15 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
                         this[ks[i]] = p[ks[i]];
         }
 
-        SenderKeyMessage.prototype.ID = null;
+        SenderKeyMessage.prototype.id = null;
         SenderKeyMessage.prototype.iteration = null;
         SenderKeyMessage.prototype.ciphertext = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SenderKeyMessage.prototype, "_ID", {
-            get: $util.oneOfGetter($oneOfFields = ["ID"]),
+        Object.defineProperty(SenderKeyMessage.prototype, "_id", {
+            get: $util.oneOfGetter($oneOfFields = ["id"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -616,8 +616,8 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
         SenderKeyMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                w.uint32(8).uint32(m.ID);
+            if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                w.uint32(8).uint32(m.id);
             if (m.iteration != null && Object.hasOwnProperty.call(m, "iteration"))
                 w.uint32(16).uint32(m.iteration);
             if (m.ciphertext != null && Object.hasOwnProperty.call(m, "ciphertext"))
@@ -639,7 +639,7 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.ID = r.uint32();
+                        m.id = r.uint32();
                         break;
                     }
                 case 2: {
@@ -666,8 +666,8 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASignalWhisperTextProtocol.SenderKeyMessage();
-            if (d.ID != null) {
-                m.ID = d.ID >>> 0;
+            if (d.id != null) {
+                m.id = d.id >>> 0;
             }
             if (d.iteration != null) {
                 m.iteration = d.iteration >>> 0;
@@ -685,10 +685,10 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
             if (!o)
                 o = {};
             var d = {};
-            if (m.ID != null && m.hasOwnProperty("ID")) {
-                d.ID = m.ID;
+            if (m.id != null && m.hasOwnProperty("id")) {
+                d.id = m.id;
                 if (o.oneofs)
-                    d._ID = "ID";
+                    d._id = "id";
             }
             if (m.iteration != null && m.hasOwnProperty("iteration")) {
                 d.iteration = m.iteration;
@@ -726,7 +726,7 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
                         this[ks[i]] = p[ks[i]];
         }
 
-        SenderKeyDistributionMessage.prototype.ID = null;
+        SenderKeyDistributionMessage.prototype.id = null;
         SenderKeyDistributionMessage.prototype.iteration = null;
         SenderKeyDistributionMessage.prototype.chainKey = null;
         SenderKeyDistributionMessage.prototype.signingKey = null;
@@ -734,8 +734,8 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SenderKeyDistributionMessage.prototype, "_ID", {
-            get: $util.oneOfGetter($oneOfFields = ["ID"]),
+        Object.defineProperty(SenderKeyDistributionMessage.prototype, "_id", {
+            get: $util.oneOfGetter($oneOfFields = ["id"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -764,8 +764,8 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
         SenderKeyDistributionMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                w.uint32(8).uint32(m.ID);
+            if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                w.uint32(8).uint32(m.id);
             if (m.iteration != null && Object.hasOwnProperty.call(m, "iteration"))
                 w.uint32(16).uint32(m.iteration);
             if (m.chainKey != null && Object.hasOwnProperty.call(m, "chainKey"))
@@ -789,7 +789,7 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.ID = r.uint32();
+                        m.id = r.uint32();
                         break;
                     }
                 case 2: {
@@ -820,8 +820,8 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASignalWhisperTextProtocol.SenderKeyDistributionMessage();
-            if (d.ID != null) {
-                m.ID = d.ID >>> 0;
+            if (d.id != null) {
+                m.id = d.id >>> 0;
             }
             if (d.iteration != null) {
                 m.iteration = d.iteration >>> 0;
@@ -845,10 +845,10 @@ export const WASignalWhisperTextProtocol = $root.WASignalWhisperTextProtocol = (
             if (!o)
                 o = {};
             var d = {};
-            if (m.ID != null && m.hasOwnProperty("ID")) {
-                d.ID = m.ID;
+            if (m.id != null && m.hasOwnProperty("id")) {
+                d.id = m.id;
                 if (o.oneofs)
-                    d._ID = "ID";
+                    d._id = "id";
             }
             if (m.iteration != null && m.hasOwnProperty("iteration")) {
                 d.iteration = m.iteration;

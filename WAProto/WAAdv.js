@@ -27,7 +27,7 @@ export const WAAdv = $root.WAAdv = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        ADVKeyIndexList.prototype.rawID = null;
+        ADVKeyIndexList.prototype.rawId = null;
         ADVKeyIndexList.prototype.timestamp = null;
         ADVKeyIndexList.prototype.currentIndex = null;
         ADVKeyIndexList.prototype.validIndexes = $util.emptyArray;
@@ -36,8 +36,8 @@ export const WAAdv = $root.WAAdv = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ADVKeyIndexList.prototype, "_rawID", {
-            get: $util.oneOfGetter($oneOfFields = ["rawID"]),
+        Object.defineProperty(ADVKeyIndexList.prototype, "_rawId", {
+            get: $util.oneOfGetter($oneOfFields = ["rawId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -66,8 +66,8 @@ export const WAAdv = $root.WAAdv = (() => {
         ADVKeyIndexList.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.rawID != null && Object.hasOwnProperty.call(m, "rawID"))
-                w.uint32(8).uint32(m.rawID);
+            if (m.rawId != null && Object.hasOwnProperty.call(m, "rawId"))
+                w.uint32(8).uint32(m.rawId);
             if (m.timestamp != null && Object.hasOwnProperty.call(m, "timestamp"))
                 w.uint32(16).uint64(m.timestamp);
             if (m.currentIndex != null && Object.hasOwnProperty.call(m, "currentIndex"))
@@ -97,7 +97,7 @@ export const WAAdv = $root.WAAdv = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.rawID = r.uint32();
+                        m.rawId = r.uint32();
                         break;
                     }
                 case 2: {
@@ -139,8 +139,8 @@ export const WAAdv = $root.WAAdv = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAdv.ADVKeyIndexList();
-            if (d.rawID != null) {
-                m.rawID = d.rawID >>> 0;
+            if (d.rawId != null) {
+                m.rawId = d.rawId >>> 0;
             }
             if (d.timestamp != null) {
                 if ($util.Long)
@@ -193,10 +193,10 @@ export const WAAdv = $root.WAAdv = (() => {
             if (o.arrays || o.defaults) {
                 d.validIndexes = [];
             }
-            if (m.rawID != null && m.hasOwnProperty("rawID")) {
-                d.rawID = m.rawID;
+            if (m.rawId != null && m.hasOwnProperty("rawId")) {
+                d.rawId = m.rawId;
                 if (o.oneofs)
-                    d._rawID = "rawID";
+                    d._rawId = "rawId";
             }
             if (m.timestamp != null && m.hasOwnProperty("timestamp")) {
                 if (typeof m.timestamp === "number")
@@ -395,7 +395,7 @@ export const WAAdv = $root.WAAdv = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        ADVDeviceIdentity.prototype.rawID = null;
+        ADVDeviceIdentity.prototype.rawId = null;
         ADVDeviceIdentity.prototype.timestamp = null;
         ADVDeviceIdentity.prototype.keyIndex = null;
         ADVDeviceIdentity.prototype.accountType = null;
@@ -404,8 +404,8 @@ export const WAAdv = $root.WAAdv = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ADVDeviceIdentity.prototype, "_rawID", {
-            get: $util.oneOfGetter($oneOfFields = ["rawID"]),
+        Object.defineProperty(ADVDeviceIdentity.prototype, "_rawId", {
+            get: $util.oneOfGetter($oneOfFields = ["rawId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -440,8 +440,8 @@ export const WAAdv = $root.WAAdv = (() => {
         ADVDeviceIdentity.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.rawID != null && Object.hasOwnProperty.call(m, "rawID"))
-                w.uint32(8).uint32(m.rawID);
+            if (m.rawId != null && Object.hasOwnProperty.call(m, "rawId"))
+                w.uint32(8).uint32(m.rawId);
             if (m.timestamp != null && Object.hasOwnProperty.call(m, "timestamp"))
                 w.uint32(16).uint64(m.timestamp);
             if (m.keyIndex != null && Object.hasOwnProperty.call(m, "keyIndex"))
@@ -467,7 +467,7 @@ export const WAAdv = $root.WAAdv = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.rawID = r.uint32();
+                        m.rawId = r.uint32();
                         break;
                     }
                 case 2: {
@@ -502,8 +502,8 @@ export const WAAdv = $root.WAAdv = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAdv.ADVDeviceIdentity();
-            if (d.rawID != null) {
-                m.rawID = d.rawID >>> 0;
+            if (d.rawId != null) {
+                m.rawId = d.rawId >>> 0;
             }
             if (d.timestamp != null) {
                 if ($util.Long)
@@ -565,10 +565,10 @@ export const WAAdv = $root.WAAdv = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.rawID != null && m.hasOwnProperty("rawID")) {
-                d.rawID = m.rawID;
+            if (m.rawId != null && m.hasOwnProperty("rawId")) {
+                d.rawId = m.rawId;
                 if (o.oneofs)
-                    d._rawID = "rawID";
+                    d._rawId = "rawId";
             }
             if (m.timestamp != null && m.hasOwnProperty("timestamp")) {
                 if (typeof m.timestamp === "number")
@@ -791,7 +791,7 @@ export const WAAdv = $root.WAAdv = (() => {
         }
 
         ADVSignedDeviceIdentityHMAC.prototype.details = null;
-        ADVSignedDeviceIdentityHMAC.prototype.HMAC = null;
+        ADVSignedDeviceIdentityHMAC.prototype.hmac = null;
         ADVSignedDeviceIdentityHMAC.prototype.accountType = null;
 
         let $oneOfFields;
@@ -803,8 +803,8 @@ export const WAAdv = $root.WAAdv = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ADVSignedDeviceIdentityHMAC.prototype, "_HMAC", {
-            get: $util.oneOfGetter($oneOfFields = ["HMAC"]),
+        Object.defineProperty(ADVSignedDeviceIdentityHMAC.prototype, "_hmac", {
+            get: $util.oneOfGetter($oneOfFields = ["hmac"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -823,8 +823,8 @@ export const WAAdv = $root.WAAdv = (() => {
                 w = $Writer.create();
             if (m.details != null && Object.hasOwnProperty.call(m, "details"))
                 w.uint32(10).bytes(m.details);
-            if (m.HMAC != null && Object.hasOwnProperty.call(m, "HMAC"))
-                w.uint32(18).bytes(m.HMAC);
+            if (m.hmac != null && Object.hasOwnProperty.call(m, "hmac"))
+                w.uint32(18).bytes(m.hmac);
             if (m.accountType != null && Object.hasOwnProperty.call(m, "accountType"))
                 w.uint32(24).int32(m.accountType);
             return w;
@@ -848,7 +848,7 @@ export const WAAdv = $root.WAAdv = (() => {
                         break;
                     }
                 case 2: {
-                        m.HMAC = r.bytes();
+                        m.hmac = r.bytes();
                         break;
                     }
                 case 3: {
@@ -877,11 +877,11 @@ export const WAAdv = $root.WAAdv = (() => {
                 else if (d.details.length >= 0)
                     m.details = d.details;
             }
-            if (d.HMAC != null) {
-                if (typeof d.HMAC === "string")
-                    $util.base64.decode(d.HMAC, m.HMAC = $util.newBuffer($util.base64.length(d.HMAC)), 0);
-                else if (d.HMAC.length >= 0)
-                    m.HMAC = d.HMAC;
+            if (d.hmac != null) {
+                if (typeof d.hmac === "string")
+                    $util.base64.decode(d.hmac, m.hmac = $util.newBuffer($util.base64.length(d.hmac)), 0);
+                else if (d.hmac.length >= 0)
+                    m.hmac = d.hmac;
             }
             switch (d.accountType) {
             default:
@@ -915,10 +915,10 @@ export const WAAdv = $root.WAAdv = (() => {
                 if (o.oneofs)
                     d._details = "details";
             }
-            if (m.HMAC != null && m.hasOwnProperty("HMAC")) {
-                d.HMAC = o.bytes === String ? $util.base64.encode(m.HMAC, 0, m.HMAC.length) : o.bytes === Array ? Array.prototype.slice.call(m.HMAC) : m.HMAC;
+            if (m.hmac != null && m.hasOwnProperty("hmac")) {
+                d.hmac = o.bytes === String ? $util.base64.encode(m.hmac, 0, m.hmac.length) : o.bytes === Array ? Array.prototype.slice.call(m.hmac) : m.hmac;
                 if (o.oneofs)
-                    d._HMAC = "HMAC";
+                    d._hmac = "hmac";
             }
             if (m.accountType != null && m.hasOwnProperty("accountType")) {
                 d.accountType = o.enums === String ? $root.WAAdv.ADVEncryptionType[m.accountType] === undefined ? m.accountType : $root.WAAdv.ADVEncryptionType[m.accountType] : m.accountType;

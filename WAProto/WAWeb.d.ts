@@ -15,7 +15,7 @@ export namespace WAWeb {
         starred?: (boolean|null);
         broadcast?: (boolean|null);
         pushName?: (string|null);
-        mediaCiphertextSHA256?: (Uint8Array|null);
+        mediaCiphertextSha256?: (Uint8Array|null);
         multicast?: (boolean|null);
         urlText?: (boolean|null);
         urlNumber?: (boolean|null);
@@ -42,40 +42,40 @@ export namespace WAWeb {
         statusPsa?: (WAWeb.IStatusPSA|null);
         pollUpdates?: (WAWeb.IPollUpdate[]|null);
         pollAdditionalMetadata?: (WAWeb.IPollAdditionalMetadata|null);
-        agentID?: (string|null);
+        agentId?: (string|null);
         statusAlreadyViewed?: (boolean|null);
         messageSecret?: (Uint8Array|null);
         keepInChat?: (WAWeb.IKeepInChat|null);
-        originalSelfAuthorUserJIDString?: (string|null);
+        originalSelfAuthorUserJidString?: (string|null);
         revokeMessageTimestamp?: (number|Long|null);
         pinInChat?: (WAWeb.IPinInChat|null);
         premiumMessageInfo?: (WAWeb.IPremiumMessageInfo|null);
         is1PBizBotMessage?: (boolean|null);
         isGroupHistoryMessage?: (boolean|null);
-        botMessageInvokerJID?: (string|null);
+        botMessageInvokerJid?: (string|null);
         commentMetadata?: (WAWeb.ICommentMetadata|null);
         eventResponses?: (WAWeb.IEventResponse[]|null);
         reportingTokenInfo?: (WAWeb.IReportingTokenInfo|null);
-        newsletterServerID?: (number|Long|null);
+        newsletterServerId?: (number|Long|null);
         eventAdditionalMetadata?: (WAWeb.IEventAdditionalMetadata|null);
         isMentionedInStatus?: (boolean|null);
         statusMentions?: (string[]|null);
-        targetMessageID?: (WACommon.IMessageKey|null);
+        targetMessageId?: (WACommon.IMessageKey|null);
         messageAddOns?: (WAWeb.IMessageAddOn[]|null);
         statusMentionMessageInfo?: (WAWeb.IStatusMentionMessage|null);
         isSupportAiMessage?: (boolean|null);
         statusMentionSources?: (string[]|null);
         supportAiCitations?: (WAWeb.ICitation[]|null);
-        botTargetID?: (string|null);
+        botTargetId?: (string|null);
         groupHistoryIndividualMessageInfo?: (WAWeb.IGroupHistoryIndividualMessageInfo|null);
         groupHistoryBundleInfo?: (WAWeb.IGroupHistoryBundleInfo|null);
         interactiveMessageAdditionalMetadata?: (WAWeb.IInteractiveMessageAdditionalMetadata|null);
         quarantinedMessage?: (WAWeb.IQuarantinedMessage|null);
-        nonJIDMentions?: (number|null);
+        nonJidMentions?: (number|null);
         hsmTag?: (string|null);
         ephemeralExpirationTimestamp?: (number|Long|null);
         scheduledMessageMetadata?: (WAWeb.IScheduledMessageMetadata|null);
-        decisionID?: (string|null);
+        decisionId?: (string|null);
         decisionSources?: (string[]|null);
     }
 
@@ -91,7 +91,7 @@ export namespace WAWeb {
         public starred?: (boolean|null);
         public broadcast?: (boolean|null);
         public pushName?: (string|null);
-        public mediaCiphertextSHA256?: (Uint8Array|null);
+        public mediaCiphertextSha256?: (Uint8Array|null);
         public multicast?: (boolean|null);
         public urlText?: (boolean|null);
         public urlNumber?: (boolean|null);
@@ -118,40 +118,40 @@ export namespace WAWeb {
         public statusPsa?: (WAWeb.IStatusPSA|null);
         public pollUpdates: WAWeb.IPollUpdate[];
         public pollAdditionalMetadata?: (WAWeb.IPollAdditionalMetadata|null);
-        public agentID?: (string|null);
+        public agentId?: (string|null);
         public statusAlreadyViewed?: (boolean|null);
         public messageSecret?: (Uint8Array|null);
         public keepInChat?: (WAWeb.IKeepInChat|null);
-        public originalSelfAuthorUserJIDString?: (string|null);
+        public originalSelfAuthorUserJidString?: (string|null);
         public revokeMessageTimestamp?: (number|Long|null);
         public pinInChat?: (WAWeb.IPinInChat|null);
         public premiumMessageInfo?: (WAWeb.IPremiumMessageInfo|null);
         public is1PBizBotMessage?: (boolean|null);
         public isGroupHistoryMessage?: (boolean|null);
-        public botMessageInvokerJID?: (string|null);
+        public botMessageInvokerJid?: (string|null);
         public commentMetadata?: (WAWeb.ICommentMetadata|null);
         public eventResponses: WAWeb.IEventResponse[];
         public reportingTokenInfo?: (WAWeb.IReportingTokenInfo|null);
-        public newsletterServerID?: (number|Long|null);
+        public newsletterServerId?: (number|Long|null);
         public eventAdditionalMetadata?: (WAWeb.IEventAdditionalMetadata|null);
         public isMentionedInStatus?: (boolean|null);
         public statusMentions: string[];
-        public targetMessageID?: (WACommon.IMessageKey|null);
+        public targetMessageId?: (WACommon.IMessageKey|null);
         public messageAddOns: WAWeb.IMessageAddOn[];
         public statusMentionMessageInfo?: (WAWeb.IStatusMentionMessage|null);
         public isSupportAiMessage?: (boolean|null);
         public statusMentionSources: string[];
         public supportAiCitations: WAWeb.ICitation[];
-        public botTargetID?: (string|null);
+        public botTargetId?: (string|null);
         public groupHistoryIndividualMessageInfo?: (WAWeb.IGroupHistoryIndividualMessageInfo|null);
         public groupHistoryBundleInfo?: (WAWeb.IGroupHistoryBundleInfo|null);
         public interactiveMessageAdditionalMetadata?: (WAWeb.IInteractiveMessageAdditionalMetadata|null);
         public quarantinedMessage?: (WAWeb.IQuarantinedMessage|null);
-        public nonJIDMentions?: (number|null);
+        public nonJidMentions?: (number|null);
         public hsmTag?: (string|null);
         public ephemeralExpirationTimestamp?: (number|Long|null);
         public scheduledMessageMetadata?: (WAWeb.IScheduledMessageMetadata|null);
-        public decisionID?: (string|null);
+        public decisionId?: (string|null);
         public decisionSources: string[];
         public static create(properties?: WAWeb.IWebMessageInfo): WAWeb.WebMessageInfo;
         public static encode(m: WAWeb.IWebMessageInfo, w?: $protobuf.Writer): $protobuf.Writer;
@@ -413,7 +413,7 @@ export namespace WAWeb {
     interface IPaymentInfo {
         currencyDeprecated?: (WAWeb.PaymentInfo.Currency|null);
         amount1000?: (number|Long|null);
-        receiverJID?: (string|null);
+        receiverJid?: (string|null);
         status?: (WAWeb.PaymentInfo.Status|null);
         transactionTimestamp?: (number|Long|null);
         requestMessageKey?: (WACommon.IMessageKey|null);
@@ -430,7 +430,7 @@ export namespace WAWeb {
         constructor(p?: WAWeb.IPaymentInfo);
         public currencyDeprecated?: (WAWeb.PaymentInfo.Currency|null);
         public amount1000?: (number|Long|null);
-        public receiverJID?: (string|null);
+        public receiverJid?: (string|null);
         public status?: (WAWeb.PaymentInfo.Status|null);
         public transactionTimestamp?: (number|Long|null);
         public requestMessageKey?: (WACommon.IMessageKey|null);
@@ -526,7 +526,7 @@ export namespace WAWeb {
         mediaUpload?: (WAWeb.WebFeatures.Flag|null);
         mediaUploadRichQuickReplies?: (WAWeb.WebFeatures.Flag|null);
         vnameV2?: (WAWeb.WebFeatures.Flag|null);
-        videoPlaybackURL?: (WAWeb.WebFeatures.Flag|null);
+        videoPlaybackUrl?: (WAWeb.WebFeatures.Flag|null);
         statusRanking?: (WAWeb.WebFeatures.Flag|null);
         voipIndividualVideo?: (WAWeb.WebFeatures.Flag|null);
         thirdPartyStickers?: (WAWeb.WebFeatures.Flag|null);
@@ -575,7 +575,7 @@ export namespace WAWeb {
         public mediaUpload?: (WAWeb.WebFeatures.Flag|null);
         public mediaUploadRichQuickReplies?: (WAWeb.WebFeatures.Flag|null);
         public vnameV2?: (WAWeb.WebFeatures.Flag|null);
-        public videoPlaybackURL?: (WAWeb.WebFeatures.Flag|null);
+        public videoPlaybackUrl?: (WAWeb.WebFeatures.Flag|null);
         public statusRanking?: (WAWeb.WebFeatures.Flag|null);
         public voipIndividualVideo?: (WAWeb.WebFeatures.Flag|null);
         public thirdPartyStickers?: (WAWeb.WebFeatures.Flag|null);
@@ -625,8 +625,8 @@ export namespace WAWeb {
     interface IPinInChat {
         type?: (WAWeb.PinInChat.Type|null);
         key?: (WACommon.IMessageKey|null);
-        senderTimestampMS?: (number|Long|null);
-        serverTimestampMS?: (number|Long|null);
+        senderTimestampMs?: (number|Long|null);
+        serverTimestampMs?: (number|Long|null);
         messageAddOnContextInfo?: (WAWeb.IMessageAddOnContextInfo|null);
     }
 
@@ -634,8 +634,8 @@ export namespace WAWeb {
         constructor(p?: WAWeb.IPinInChat);
         public type?: (WAWeb.PinInChat.Type|null);
         public key?: (WACommon.IMessageKey|null);
-        public senderTimestampMS?: (number|Long|null);
-        public serverTimestampMS?: (number|Long|null);
+        public senderTimestampMs?: (number|Long|null);
+        public serverTimestampMs?: (number|Long|null);
         public messageAddOnContextInfo?: (WAWeb.IMessageAddOnContextInfo|null);
         public static create(properties?: WAWeb.IPinInChat): WAWeb.PinInChat;
         public static encode(m: WAWeb.IPinInChat, w?: $protobuf.Writer): $protobuf.Writer;
@@ -658,8 +658,8 @@ export namespace WAWeb {
     interface IMessageAddOn {
         messageAddOnType?: (WAWeb.MessageAddOn.MessageAddOnType|null);
         messageAddOn?: (WAE2E.IMessage|null);
-        senderTimestampMS?: (number|Long|null);
-        serverTimestampMS?: (number|Long|null);
+        senderTimestampMs?: (number|Long|null);
+        serverTimestampMs?: (number|Long|null);
         status?: (WAWeb.WebMessageInfo.Status|null);
         addOnContextInfo?: (WAWeb.IMessageAddOnContextInfo|null);
         messageAddOnKey?: (WACommon.IMessageKey|null);
@@ -670,8 +670,8 @@ export namespace WAWeb {
         constructor(p?: WAWeb.IMessageAddOn);
         public messageAddOnType?: (WAWeb.MessageAddOn.MessageAddOnType|null);
         public messageAddOn?: (WAE2E.IMessage|null);
-        public senderTimestampMS?: (number|Long|null);
-        public serverTimestampMS?: (number|Long|null);
+        public senderTimestampMs?: (number|Long|null);
+        public serverTimestampMs?: (number|Long|null);
         public status?: (WAWeb.WebMessageInfo.Status|null);
         public addOnContextInfo?: (WAWeb.IMessageAddOnContextInfo|null);
         public messageAddOnKey?: (WACommon.IMessageKey|null);
@@ -822,14 +822,14 @@ export namespace WAWeb {
     interface IPhotoChange {
         oldPhoto?: (Uint8Array|null);
         newPhoto?: (Uint8Array|null);
-        newPhotoID?: (number|null);
+        newPhotoId?: (number|null);
     }
 
     class PhotoChange implements IPhotoChange {
         constructor(p?: WAWeb.IPhotoChange);
         public oldPhoto?: (Uint8Array|null);
         public newPhoto?: (Uint8Array|null);
-        public newPhotoID?: (number|null);
+        public newPhotoId?: (number|null);
         public static create(properties?: WAWeb.IPhotoChange): WAWeb.PhotoChange;
         public static encode(m: WAWeb.IPhotoChange, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAWeb.PhotoChange;
@@ -840,13 +840,13 @@ export namespace WAWeb {
     }
 
     interface IStatusPSA {
-        campaignID?: (number|Long|null);
+        campaignId?: (number|Long|null);
         campaignExpirationTimestamp?: (number|Long|null);
     }
 
     class StatusPSA implements IStatusPSA {
         constructor(p?: WAWeb.IStatusPSA);
-        public campaignID?: (number|Long|null);
+        public campaignId: (number|Long);
         public campaignExpirationTimestamp?: (number|Long|null);
         public static create(properties?: WAWeb.IStatusPSA): WAWeb.StatusPSA;
         public static encode(m: WAWeb.IStatusPSA, w?: $protobuf.Writer): $protobuf.Writer;
@@ -858,22 +858,22 @@ export namespace WAWeb {
     }
 
     interface IUserReceipt {
-        userJID?: (string|null);
+        userJid?: (string|null);
         receiptTimestamp?: (number|Long|null);
         readTimestamp?: (number|Long|null);
         playedTimestamp?: (number|Long|null);
-        pendingDeviceJID?: (string[]|null);
-        deliveredDeviceJID?: (string[]|null);
+        pendingDeviceJid?: (string[]|null);
+        deliveredDeviceJid?: (string[]|null);
     }
 
     class UserReceipt implements IUserReceipt {
         constructor(p?: WAWeb.IUserReceipt);
-        public userJID?: (string|null);
+        public userJid: string;
         public receiptTimestamp?: (number|Long|null);
         public readTimestamp?: (number|Long|null);
         public playedTimestamp?: (number|Long|null);
-        public pendingDeviceJID: string[];
-        public deliveredDeviceJID: string[];
+        public pendingDeviceJid: string[];
+        public deliveredDeviceJid: string[];
         public static create(properties?: WAWeb.IUserReceipt): WAWeb.UserReceipt;
         public static encode(m: WAWeb.IUserReceipt, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAWeb.UserReceipt;
@@ -887,7 +887,7 @@ export namespace WAWeb {
         key?: (WACommon.IMessageKey|null);
         text?: (string|null);
         groupingKey?: (string|null);
-        senderTimestampMS?: (number|Long|null);
+        senderTimestampMs?: (number|Long|null);
         unread?: (boolean|null);
     }
 
@@ -896,7 +896,7 @@ export namespace WAWeb {
         public key?: (WACommon.IMessageKey|null);
         public text?: (string|null);
         public groupingKey?: (string|null);
-        public senderTimestampMS?: (number|Long|null);
+        public senderTimestampMs?: (number|Long|null);
         public unread?: (boolean|null);
         public static create(properties?: WAWeb.IReaction): WAWeb.Reaction;
         public static encode(m: WAWeb.IReaction, w?: $protobuf.Writer): $protobuf.Writer;
@@ -910,8 +910,8 @@ export namespace WAWeb {
     interface IPollUpdate {
         pollUpdateMessageKey?: (WACommon.IMessageKey|null);
         vote?: (WAE2E.IPollVoteMessage|null);
-        senderTimestampMS?: (number|Long|null);
-        serverTimestampMS?: (number|Long|null);
+        senderTimestampMs?: (number|Long|null);
+        serverTimestampMs?: (number|Long|null);
         unread?: (boolean|null);
     }
 
@@ -919,8 +919,8 @@ export namespace WAWeb {
         constructor(p?: WAWeb.IPollUpdate);
         public pollUpdateMessageKey?: (WACommon.IMessageKey|null);
         public vote?: (WAE2E.IPollVoteMessage|null);
-        public senderTimestampMS?: (number|Long|null);
-        public serverTimestampMS?: (number|Long|null);
+        public senderTimestampMs?: (number|Long|null);
+        public serverTimestampMs?: (number|Long|null);
         public unread?: (boolean|null);
         public static create(properties?: WAWeb.IPollUpdate): WAWeb.PollUpdate;
         public static encode(m: WAWeb.IPollUpdate, w?: $protobuf.Writer): $protobuf.Writer;
@@ -983,9 +983,9 @@ export namespace WAWeb {
         keepType?: (WAE2E.KeepType|null);
         serverTimestamp?: (number|Long|null);
         key?: (WACommon.IMessageKey|null);
-        deviceJID?: (string|null);
-        clientTimestampMS?: (number|Long|null);
-        serverTimestampMS?: (number|Long|null);
+        deviceJid?: (string|null);
+        clientTimestampMs?: (number|Long|null);
+        serverTimestampMs?: (number|Long|null);
     }
 
     class KeepInChat implements IKeepInChat {
@@ -993,9 +993,9 @@ export namespace WAWeb {
         public keepType?: (WAE2E.KeepType|null);
         public serverTimestamp?: (number|Long|null);
         public key?: (WACommon.IMessageKey|null);
-        public deviceJID?: (string|null);
-        public clientTimestampMS?: (number|Long|null);
-        public serverTimestampMS?: (number|Long|null);
+        public deviceJid?: (string|null);
+        public clientTimestampMs?: (number|Long|null);
+        public serverTimestampMs?: (number|Long|null);
         public static create(properties?: WAWeb.IKeepInChat): WAWeb.KeepInChat;
         public static encode(m: WAWeb.IKeepInChat, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAWeb.KeepInChat;
@@ -1024,12 +1024,12 @@ export namespace WAWeb {
     }
 
     interface IPremiumMessageInfo {
-        serverCampaignID?: (string|null);
+        serverCampaignId?: (string|null);
     }
 
     class PremiumMessageInfo implements IPremiumMessageInfo {
         constructor(p?: WAWeb.IPremiumMessageInfo);
-        public serverCampaignID?: (string|null);
+        public serverCampaignId?: (string|null);
         public static create(properties?: WAWeb.IPremiumMessageInfo): WAWeb.PremiumMessageInfo;
         public static encode(m: WAWeb.IPremiumMessageInfo, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAWeb.PremiumMessageInfo;
@@ -1041,7 +1041,7 @@ export namespace WAWeb {
 
     interface IEventResponse {
         eventResponseMessageKey?: (WACommon.IMessageKey|null);
-        timestampMS?: (number|Long|null);
+        timestampMs?: (number|Long|null);
         eventResponseMessage?: (WAE2E.IEventResponseMessage|null);
         unread?: (boolean|null);
     }
@@ -1049,7 +1049,7 @@ export namespace WAWeb {
     class EventResponse implements IEventResponse {
         constructor(p?: WAWeb.IEventResponse);
         public eventResponseMessageKey?: (WACommon.IMessageKey|null);
-        public timestampMS?: (number|Long|null);
+        public timestampMs?: (number|Long|null);
         public eventResponseMessage?: (WAE2E.IEventResponseMessage|null);
         public unread?: (boolean|null);
         public static create(properties?: WAWeb.IEventResponse): WAWeb.EventResponse;
@@ -1098,16 +1098,16 @@ export namespace WAWeb {
     interface ICitation {
         title?: (string|null);
         subtitle?: (string|null);
-        cmsID?: (string|null);
-        imageURL?: (string|null);
+        cmsId?: (string|null);
+        imageUrl?: (string|null);
     }
 
     class Citation implements ICitation {
         constructor(p?: WAWeb.ICitation);
-        public title?: (string|null);
-        public subtitle?: (string|null);
-        public cmsID?: (string|null);
-        public imageURL?: (string|null);
+        public title: string;
+        public subtitle: string;
+        public cmsId: string;
+        public imageUrl: string;
         public static create(properties?: WAWeb.ICitation): WAWeb.Citation;
         public static encode(m: WAWeb.ICitation, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAWeb.Citation;
@@ -1154,14 +1154,14 @@ export namespace WAWeb {
     }
 
     interface IScheduledMessageMetadata {
-        revealKeyID?: (string|null);
+        revealKeyId?: (string|null);
         revealKey?: (Uint8Array|null);
         scheduledTime?: (number|Long|null);
     }
 
     class ScheduledMessageMetadata implements IScheduledMessageMetadata {
         constructor(p?: WAWeb.IScheduledMessageMetadata);
-        public revealKeyID?: (string|null);
+        public revealKeyId?: (string|null);
         public revealKey?: (Uint8Array|null);
         public scheduledTime?: (number|Long|null);
         public static create(properties?: WAWeb.IScheduledMessageMetadata): WAWeb.ScheduledMessageMetadata;

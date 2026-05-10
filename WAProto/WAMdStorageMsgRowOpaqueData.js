@@ -30,14 +30,14 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
         MsgOpaqueData.prototype.title = null;
         MsgOpaqueData.prototype.description = null;
         MsgOpaqueData.prototype.futureproofBuffer = null;
-        MsgOpaqueData.prototype.clientURL = null;
+        MsgOpaqueData.prototype.clientUrl = null;
         MsgOpaqueData.prototype.loc = null;
         MsgOpaqueData.prototype.pollName = null;
         MsgOpaqueData.prototype.pollOptions = $util.emptyArray;
         MsgOpaqueData.prototype.pollSelectableOptionsCount = null;
         MsgOpaqueData.prototype.messageSecret = null;
         MsgOpaqueData.prototype.originalSelfAuthor = null;
-        MsgOpaqueData.prototype.senderTimestampMS = null;
+        MsgOpaqueData.prototype.senderTimestampMs = null;
         MsgOpaqueData.prototype.pollUpdateParentKey = null;
         MsgOpaqueData.prototype.encPollVote = null;
         MsgOpaqueData.prototype.isSentCagPollCreation = null;
@@ -51,7 +51,7 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
         MsgOpaqueData.prototype.botMessageSecret = null;
         MsgOpaqueData.prototype.targetMessageKey = null;
         MsgOpaqueData.prototype.encPayload = null;
-        MsgOpaqueData.prototype.encIV = null;
+        MsgOpaqueData.prototype.encIv = null;
         MsgOpaqueData.prototype.eventName = null;
         MsgOpaqueData.prototype.isEventCanceled = null;
         MsgOpaqueData.prototype.eventDescription = null;
@@ -136,8 +136,8 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MsgOpaqueData.prototype, "_clientURL", {
-            get: $util.oneOfGetter($oneOfFields = ["clientURL"]),
+        Object.defineProperty(MsgOpaqueData.prototype, "_clientUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["clientUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -172,8 +172,8 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MsgOpaqueData.prototype, "_senderTimestampMS", {
-            get: $util.oneOfGetter($oneOfFields = ["senderTimestampMS"]),
+        Object.defineProperty(MsgOpaqueData.prototype, "_senderTimestampMs", {
+            get: $util.oneOfGetter($oneOfFields = ["senderTimestampMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -256,8 +256,8 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MsgOpaqueData.prototype, "_encIV", {
-            get: $util.oneOfGetter($oneOfFields = ["encIV"]),
+        Object.defineProperty(MsgOpaqueData.prototype, "_encIv", {
+            get: $util.oneOfGetter($oneOfFields = ["encIv"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -374,8 +374,8 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                 w.uint32(106).string(m.description);
             if (m.futureproofBuffer != null && Object.hasOwnProperty.call(m, "futureproofBuffer"))
                 w.uint32(114).bytes(m.futureproofBuffer);
-            if (m.clientURL != null && Object.hasOwnProperty.call(m, "clientURL"))
-                w.uint32(122).string(m.clientURL);
+            if (m.clientUrl != null && Object.hasOwnProperty.call(m, "clientUrl"))
+                w.uint32(122).string(m.clientUrl);
             if (m.loc != null && Object.hasOwnProperty.call(m, "loc"))
                 w.uint32(130).string(m.loc);
             if (m.pollName != null && Object.hasOwnProperty.call(m, "pollName"))
@@ -388,8 +388,8 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                 w.uint32(160).uint32(m.pollSelectableOptionsCount);
             if (m.messageSecret != null && Object.hasOwnProperty.call(m, "messageSecret"))
                 w.uint32(170).bytes(m.messageSecret);
-            if (m.senderTimestampMS != null && Object.hasOwnProperty.call(m, "senderTimestampMS"))
-                w.uint32(176).int64(m.senderTimestampMS);
+            if (m.senderTimestampMs != null && Object.hasOwnProperty.call(m, "senderTimestampMs"))
+                w.uint32(176).int64(m.senderTimestampMs);
             if (m.pollUpdateParentKey != null && Object.hasOwnProperty.call(m, "pollUpdateParentKey"))
                 w.uint32(186).string(m.pollUpdateParentKey);
             if (m.encPollVote != null && Object.hasOwnProperty.call(m, "encPollVote"))
@@ -408,8 +408,8 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                 w.uint32(242).string(m.targetMessageKey);
             if (m.encPayload != null && Object.hasOwnProperty.call(m, "encPayload"))
                 w.uint32(250).bytes(m.encPayload);
-            if (m.encIV != null && Object.hasOwnProperty.call(m, "encIV"))
-                w.uint32(258).bytes(m.encIV);
+            if (m.encIv != null && Object.hasOwnProperty.call(m, "encIv"))
+                w.uint32(258).bytes(m.encIv);
             if (m.eventName != null && Object.hasOwnProperty.call(m, "eventName"))
                 w.uint32(266).string(m.eventName);
             if (m.isEventCanceled != null && Object.hasOwnProperty.call(m, "isEventCanceled"))
@@ -509,7 +509,7 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                         break;
                     }
                 case 15: {
-                        m.clientURL = r.string();
+                        m.clientUrl = r.string();
                         break;
                     }
                 case 16: {
@@ -539,7 +539,7 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                         break;
                     }
                 case 22: {
-                        m.senderTimestampMS = r.int64();
+                        m.senderTimestampMs = r.int64();
                         break;
                     }
                 case 23: {
@@ -595,7 +595,7 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                         break;
                     }
                 case 32: {
-                        m.encIV = r.bytes();
+                        m.encIv = r.bytes();
                         break;
                     }
                 case 33: {
@@ -706,8 +706,8 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                 else if (d.futureproofBuffer.length >= 0)
                     m.futureproofBuffer = d.futureproofBuffer;
             }
-            if (d.clientURL != null) {
-                m.clientURL = String(d.clientURL);
+            if (d.clientUrl != null) {
+                m.clientUrl = String(d.clientUrl);
             }
             if (d.loc != null) {
                 m.loc = String(d.loc);
@@ -737,15 +737,15 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
             if (d.originalSelfAuthor != null) {
                 m.originalSelfAuthor = String(d.originalSelfAuthor);
             }
-            if (d.senderTimestampMS != null) {
+            if (d.senderTimestampMs != null) {
                 if ($util.Long)
-                    (m.senderTimestampMS = $util.Long.fromValue(d.senderTimestampMS)).unsigned = false;
-                else if (typeof d.senderTimestampMS === "string")
-                    m.senderTimestampMS = parseInt(d.senderTimestampMS, 10);
-                else if (typeof d.senderTimestampMS === "number")
-                    m.senderTimestampMS = d.senderTimestampMS;
-                else if (typeof d.senderTimestampMS === "object")
-                    m.senderTimestampMS = new $util.LongBits(d.senderTimestampMS.low >>> 0, d.senderTimestampMS.high >>> 0).toNumber();
+                    (m.senderTimestampMs = $util.Long.fromValue(d.senderTimestampMs)).unsigned = false;
+                else if (typeof d.senderTimestampMs === "string")
+                    m.senderTimestampMs = parseInt(d.senderTimestampMs, 10);
+                else if (typeof d.senderTimestampMs === "number")
+                    m.senderTimestampMs = d.senderTimestampMs;
+                else if (typeof d.senderTimestampMs === "object")
+                    m.senderTimestampMs = new $util.LongBits(d.senderTimestampMs.low >>> 0, d.senderTimestampMs.high >>> 0).toNumber();
             }
             if (d.pollUpdateParentKey != null) {
                 m.pollUpdateParentKey = String(d.pollUpdateParentKey);
@@ -832,11 +832,11 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                 else if (d.encPayload.length >= 0)
                     m.encPayload = d.encPayload;
             }
-            if (d.encIV != null) {
-                if (typeof d.encIV === "string")
-                    $util.base64.decode(d.encIV, m.encIV = $util.newBuffer($util.base64.length(d.encIV)), 0);
-                else if (d.encIV.length >= 0)
-                    m.encIV = d.encIV;
+            if (d.encIv != null) {
+                if (typeof d.encIv === "string")
+                    $util.base64.decode(d.encIv, m.encIv = $util.newBuffer($util.base64.length(d.encIv)), 0);
+                else if (d.encIv.length >= 0)
+                    m.encIv = d.encIv;
             }
             if (d.eventName != null) {
                 m.eventName = String(d.eventName);
@@ -971,10 +971,10 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                 if (o.oneofs)
                     d._futureproofBuffer = "futureproofBuffer";
             }
-            if (m.clientURL != null && m.hasOwnProperty("clientURL")) {
-                d.clientURL = m.clientURL;
+            if (m.clientUrl != null && m.hasOwnProperty("clientUrl")) {
+                d.clientUrl = m.clientUrl;
                 if (o.oneofs)
-                    d._clientURL = "clientURL";
+                    d._clientUrl = "clientUrl";
             }
             if (m.loc != null && m.hasOwnProperty("loc")) {
                 d.loc = m.loc;
@@ -1002,13 +1002,13 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                 if (o.oneofs)
                     d._messageSecret = "messageSecret";
             }
-            if (m.senderTimestampMS != null && m.hasOwnProperty("senderTimestampMS")) {
-                if (typeof m.senderTimestampMS === "number")
-                    d.senderTimestampMS = o.longs === String ? String(m.senderTimestampMS) : m.senderTimestampMS;
+            if (m.senderTimestampMs != null && m.hasOwnProperty("senderTimestampMs")) {
+                if (typeof m.senderTimestampMs === "number")
+                    d.senderTimestampMs = o.longs === String ? String(m.senderTimestampMs) : m.senderTimestampMs;
                 else
-                    d.senderTimestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.senderTimestampMS) : o.longs === Number ? new $util.LongBits(m.senderTimestampMS.low >>> 0, m.senderTimestampMS.high >>> 0).toNumber() : m.senderTimestampMS;
+                    d.senderTimestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.senderTimestampMs) : o.longs === Number ? new $util.LongBits(m.senderTimestampMs.low >>> 0, m.senderTimestampMs.high >>> 0).toNumber() : m.senderTimestampMs;
                 if (o.oneofs)
-                    d._senderTimestampMS = "senderTimestampMS";
+                    d._senderTimestampMs = "senderTimestampMs";
             }
             if (m.pollUpdateParentKey != null && m.hasOwnProperty("pollUpdateParentKey")) {
                 d.pollUpdateParentKey = m.pollUpdateParentKey;
@@ -1055,10 +1055,10 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                 if (o.oneofs)
                     d._encPayload = "encPayload";
             }
-            if (m.encIV != null && m.hasOwnProperty("encIV")) {
-                d.encIV = o.bytes === String ? $util.base64.encode(m.encIV, 0, m.encIV.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIV) : m.encIV;
+            if (m.encIv != null && m.hasOwnProperty("encIv")) {
+                d.encIv = o.bytes === String ? $util.base64.encode(m.encIv, 0, m.encIv.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIv) : m.encIv;
                 if (o.oneofs)
-                    d._encIV = "encIV";
+                    d._encIv = "encIv";
             }
             if (m.eventName != null && m.hasOwnProperty("eventName")) {
                 d.eventName = m.eventName;
@@ -1206,8 +1206,8 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
             EventLocation.prototype.degreesLongitude = null;
             EventLocation.prototype.name = null;
             EventLocation.prototype.address = null;
-            EventLocation.prototype.URL = null;
-            EventLocation.prototype.JPEGThumbnail = null;
+            EventLocation.prototype.url = null;
+            EventLocation.prototype.jpegThumbnail = null;
 
             let $oneOfFields;
 
@@ -1236,14 +1236,14 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(EventLocation.prototype, "_URL", {
-                get: $util.oneOfGetter($oneOfFields = ["URL"]),
+            Object.defineProperty(EventLocation.prototype, "_url", {
+                get: $util.oneOfGetter($oneOfFields = ["url"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(EventLocation.prototype, "_JPEGThumbnail", {
-                get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+            Object.defineProperty(EventLocation.prototype, "_jpegThumbnail", {
+                get: $util.oneOfGetter($oneOfFields = ["jpegThumbnail"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -1262,10 +1262,10 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                     w.uint32(26).string(m.name);
                 if (m.address != null && Object.hasOwnProperty.call(m, "address"))
                     w.uint32(34).string(m.address);
-                if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                    w.uint32(42).string(m.URL);
-                if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                    w.uint32(50).bytes(m.JPEGThumbnail);
+                if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                    w.uint32(42).string(m.url);
+                if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                    w.uint32(50).bytes(m.jpegThumbnail);
                 return w;
             };
 
@@ -1299,11 +1299,11 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                             break;
                         }
                     case 5: {
-                            m.URL = r.string();
+                            m.url = r.string();
                             break;
                         }
                     case 6: {
-                            m.JPEGThumbnail = r.bytes();
+                            m.jpegThumbnail = r.bytes();
                             break;
                         }
                     default:
@@ -1334,14 +1334,14 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                 if (d.address != null) {
                     m.address = String(d.address);
                 }
-                if (d.URL != null) {
-                    m.URL = String(d.URL);
+                if (d.url != null) {
+                    m.url = String(d.url);
                 }
-                if (d.JPEGThumbnail != null) {
-                    if (typeof d.JPEGThumbnail === "string")
-                        $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                    else if (d.JPEGThumbnail.length >= 0)
-                        m.JPEGThumbnail = d.JPEGThumbnail;
+                if (d.jpegThumbnail != null) {
+                    if (typeof d.jpegThumbnail === "string")
+                        $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                    else if (d.jpegThumbnail.length >= 0)
+                        m.jpegThumbnail = d.jpegThumbnail;
                 }
                 return m;
             };
@@ -1370,15 +1370,15 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                     if (o.oneofs)
                         d._address = "address";
                 }
-                if (m.URL != null && m.hasOwnProperty("URL")) {
-                    d.URL = m.URL;
+                if (m.url != null && m.hasOwnProperty("url")) {
+                    d.url = m.url;
                     if (o.oneofs)
-                        d._URL = "URL";
+                        d._url = "url";
                 }
-                if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                    d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+                if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                    d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                     if (o.oneofs)
-                        d._JPEGThumbnail = "JPEGThumbnail";
+                        d._jpegThumbnail = "jpegThumbnail";
                 }
                 return d;
             };
@@ -1871,7 +1871,7 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
         }
 
         PollEncValue.prototype.encPayload = null;
-        PollEncValue.prototype.encIV = null;
+        PollEncValue.prototype.encIv = null;
 
         let $oneOfFields;
 
@@ -1882,8 +1882,8 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PollEncValue.prototype, "_encIV", {
-            get: $util.oneOfGetter($oneOfFields = ["encIV"]),
+        Object.defineProperty(PollEncValue.prototype, "_encIv", {
+            get: $util.oneOfGetter($oneOfFields = ["encIv"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1896,8 +1896,8 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                 w = $Writer.create();
             if (m.encPayload != null && Object.hasOwnProperty.call(m, "encPayload"))
                 w.uint32(10).bytes(m.encPayload);
-            if (m.encIV != null && Object.hasOwnProperty.call(m, "encIV"))
-                w.uint32(18).bytes(m.encIV);
+            if (m.encIv != null && Object.hasOwnProperty.call(m, "encIv"))
+                w.uint32(18).bytes(m.encIv);
             return w;
         };
 
@@ -1919,7 +1919,7 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                         break;
                     }
                 case 2: {
-                        m.encIV = r.bytes();
+                        m.encIv = r.bytes();
                         break;
                     }
                 default:
@@ -1944,11 +1944,11 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                 else if (d.encPayload.length >= 0)
                     m.encPayload = d.encPayload;
             }
-            if (d.encIV != null) {
-                if (typeof d.encIV === "string")
-                    $util.base64.decode(d.encIV, m.encIV = $util.newBuffer($util.base64.length(d.encIV)), 0);
-                else if (d.encIV.length >= 0)
-                    m.encIV = d.encIV;
+            if (d.encIv != null) {
+                if (typeof d.encIv === "string")
+                    $util.base64.decode(d.encIv, m.encIv = $util.newBuffer($util.base64.length(d.encIv)), 0);
+                else if (d.encIv.length >= 0)
+                    m.encIv = d.encIv;
             }
             return m;
         };
@@ -1962,10 +1962,10 @@ export const WAMdStorageMsgRowOpaqueData = $root.WAMdStorageMsgRowOpaqueData = (
                 if (o.oneofs)
                     d._encPayload = "encPayload";
             }
-            if (m.encIV != null && m.hasOwnProperty("encIV")) {
-                d.encIV = o.bytes === String ? $util.base64.encode(m.encIV, 0, m.encIV.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIV) : m.encIV;
+            if (m.encIv != null && m.hasOwnProperty("encIv")) {
+                d.encIv = o.bytes === String ? $util.base64.encode(m.encIv, 0, m.encIv.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIv) : m.encIv;
                 if (o.oneofs)
-                    d._encIV = "encIV";
+                    d._encIv = "encIv";
             }
             return d;
         };

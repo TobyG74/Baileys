@@ -30,7 +30,7 @@ export namespace WAHistorySync {
         progress?: (number|null);
         pushnames?: (WAHistorySync.IPushname[]|null);
         globalSettings?: (WAHistorySync.IGlobalSettings|null);
-        threadIDUserSecret?: (Uint8Array|null);
+        threadIdUserSecret?: (Uint8Array|null);
         threadDsTimeframeOffset?: (number|null);
         recentStickers?: (WAHistorySync.IStickerMetadata[]|null);
         pastParticipants?: (WAHistorySync.IPastParticipants[]|null);
@@ -47,14 +47,14 @@ export namespace WAHistorySync {
 
     class HistorySync implements IHistorySync {
         constructor(p?: WAHistorySync.IHistorySync);
-        public syncType?: (WAHistorySync.HistorySync.HistorySyncType|null);
+        public syncType: WAHistorySync.HistorySync.HistorySyncType;
         public conversations: WAHistorySync.IConversation[];
         public statusV3Messages: WAWeb.IWebMessageInfo[];
         public chunkOrder?: (number|null);
         public progress?: (number|null);
         public pushnames: WAHistorySync.IPushname[];
         public globalSettings?: (WAHistorySync.IGlobalSettings|null);
-        public threadIDUserSecret?: (Uint8Array|null);
+        public threadIdUserSecret?: (Uint8Array|null);
         public threadDsTimeframeOffset?: (number|null);
         public recentStickers: WAHistorySync.IStickerMetadata[];
         public pastParticipants: WAHistorySync.IPastParticipants[];
@@ -95,10 +95,10 @@ export namespace WAHistorySync {
     }
 
     interface IConversation {
-        ID?: (string|null);
+        id?: (string|null);
         messages?: (WAHistorySync.IHistorySyncMsg[]|null);
-        newJID?: (string|null);
-        oldJID?: (string|null);
+        newJid?: (string|null);
+        oldJid?: (string|null);
         lastMsgTimestamp?: (number|Long|null);
         unreadCount?: (number|null);
         readOnly?: (boolean|null);
@@ -130,13 +130,13 @@ export namespace WAHistorySync {
         description?: (string|null);
         support?: (boolean|null);
         isParentGroup?: (boolean|null);
-        parentGroupID?: (string|null);
+        parentGroupId?: (string|null);
         isDefaultSubgroup?: (boolean|null);
         displayName?: (string|null);
-        pnJID?: (string|null);
+        pnJid?: (string|null);
         shareOwnPn?: (boolean|null);
         pnhDuplicateLidThread?: (boolean|null);
-        lidJID?: (string|null);
+        lidJid?: (string|null);
         username?: (string|null);
         lidOriginType?: (string|null);
         commentsCount?: (number|null);
@@ -161,10 +161,10 @@ export namespace WAHistorySync {
 
     class Conversation implements IConversation {
         constructor(p?: WAHistorySync.IConversation);
-        public ID?: (string|null);
+        public id: string;
         public messages: WAHistorySync.IHistorySyncMsg[];
-        public newJID?: (string|null);
-        public oldJID?: (string|null);
+        public newJid?: (string|null);
+        public oldJid?: (string|null);
         public lastMsgTimestamp?: (number|Long|null);
         public unreadCount?: (number|null);
         public readOnly?: (boolean|null);
@@ -196,13 +196,13 @@ export namespace WAHistorySync {
         public description?: (string|null);
         public support?: (boolean|null);
         public isParentGroup?: (boolean|null);
-        public parentGroupID?: (string|null);
+        public parentGroupId?: (string|null);
         public isDefaultSubgroup?: (boolean|null);
         public displayName?: (string|null);
-        public pnJID?: (string|null);
+        public pnJid?: (string|null);
         public shareOwnPn?: (boolean|null);
         public pnhDuplicateLidThread?: (boolean|null);
-        public lidJID?: (string|null);
+        public lidJid?: (string|null);
         public username?: (string|null);
         public lidOriginType?: (string|null);
         public commentsCount?: (number|null);
@@ -250,14 +250,14 @@ export namespace WAHistorySync {
     }
 
     interface IGroupParticipant {
-        userJID?: (string|null);
+        userJid?: (string|null);
         rank?: (WAHistorySync.GroupParticipant.Rank|null);
         memberLabel?: (WAE2E.IMemberLabel|null);
     }
 
     class GroupParticipant implements IGroupParticipant {
         constructor(p?: WAHistorySync.IGroupParticipant);
-        public userJID?: (string|null);
+        public userJid: string;
         public rank?: (WAHistorySync.GroupParticipant.Rank|null);
         public memberLabel?: (WAE2E.IMemberLabel|null);
         public static create(properties?: WAHistorySync.IGroupParticipant): WAHistorySync.GroupParticipant;
@@ -279,16 +279,16 @@ export namespace WAHistorySync {
     }
 
     interface IPastParticipant {
-        userJID?: (string|null);
+        userJid?: (string|null);
         leaveReason?: (WAHistorySync.PastParticipant.LeaveReason|null);
-        leaveTS?: (number|Long|null);
+        leaveTs?: (number|Long|null);
     }
 
     class PastParticipant implements IPastParticipant {
         constructor(p?: WAHistorySync.IPastParticipant);
-        public userJID?: (string|null);
+        public userJid?: (string|null);
         public leaveReason?: (WAHistorySync.PastParticipant.LeaveReason|null);
-        public leaveTS?: (number|Long|null);
+        public leaveTs?: (number|Long|null);
         public static create(properties?: WAHistorySync.IPastParticipant): WAHistorySync.PastParticipant;
         public static encode(m: WAHistorySync.IPastParticipant, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAHistorySync.PastParticipant;
@@ -307,14 +307,14 @@ export namespace WAHistorySync {
     }
 
     interface IPhoneNumberToLIDMapping {
-        pnJID?: (string|null);
-        lidJID?: (string|null);
+        pnJid?: (string|null);
+        lidJid?: (string|null);
     }
 
     class PhoneNumberToLIDMapping implements IPhoneNumberToLIDMapping {
         constructor(p?: WAHistorySync.IPhoneNumberToLIDMapping);
-        public pnJID?: (string|null);
-        public lidJID?: (string|null);
+        public pnJid?: (string|null);
+        public lidJid?: (string|null);
         public static create(properties?: WAHistorySync.IPhoneNumberToLIDMapping): WAHistorySync.PhoneNumberToLIDMapping;
         public static encode(m: WAHistorySync.IPhoneNumberToLIDMapping, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAHistorySync.PhoneNumberToLIDMapping;
@@ -325,8 +325,8 @@ export namespace WAHistorySync {
     }
 
     interface IInlineContact {
-        pnJID?: (string|null);
-        lidJID?: (string|null);
+        pnJid?: (string|null);
+        lidJid?: (string|null);
         fullName?: (string|null);
         firstName?: (string|null);
         username?: (string|null);
@@ -334,8 +334,8 @@ export namespace WAHistorySync {
 
     class InlineContact implements IInlineContact {
         constructor(p?: WAHistorySync.IInlineContact);
-        public pnJID?: (string|null);
-        public lidJID?: (string|null);
+        public pnJid?: (string|null);
+        public lidJid?: (string|null);
         public fullName?: (string|null);
         public firstName?: (string|null);
         public username?: (string|null);
@@ -372,13 +372,13 @@ export namespace WAHistorySync {
 
     interface IHistorySyncMsg {
         message?: (WAWeb.IWebMessageInfo|null);
-        msgOrderID?: (number|Long|null);
+        msgOrderId?: (number|Long|null);
     }
 
     class HistorySyncMsg implements IHistorySyncMsg {
         constructor(p?: WAHistorySync.IHistorySyncMsg);
         public message?: (WAWeb.IWebMessageInfo|null);
-        public msgOrderID?: (number|Long|null);
+        public msgOrderId?: (number|Long|null);
         public static create(properties?: WAHistorySync.IHistorySyncMsg): WAHistorySync.HistorySyncMsg;
         public static encode(m: WAHistorySync.IHistorySyncMsg, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAHistorySync.HistorySyncMsg;
@@ -389,13 +389,13 @@ export namespace WAHistorySync {
     }
 
     interface IPushname {
-        ID?: (string|null);
+        id?: (string|null);
         pushname?: (string|null);
     }
 
     class Pushname implements IPushname {
         constructor(p?: WAHistorySync.IPushname);
-        public ID?: (string|null);
+        public id?: (string|null);
         public pushname?: (string|null);
         public static create(properties?: WAHistorySync.IPushname): WAHistorySync.Pushname;
         public static encode(m: WAHistorySync.IPushname, w?: $protobuf.Writer): $protobuf.Writer;
@@ -503,9 +503,9 @@ export namespace WAHistorySync {
     }
 
     interface IStickerMetadata {
-        URL?: (string|null);
-        fileSHA256?: (Uint8Array|null);
-        fileEncSHA256?: (Uint8Array|null);
+        url?: (string|null);
+        fileSha256?: (Uint8Array|null);
+        fileEncSha256?: (Uint8Array|null);
         mediaKey?: (Uint8Array|null);
         mimetype?: (string|null);
         height?: (number|null);
@@ -513,7 +513,7 @@ export namespace WAHistorySync {
         directPath?: (string|null);
         fileLength?: (number|Long|null);
         weight?: (number|null);
-        lastStickerSentTS?: (number|Long|null);
+        lastStickerSentTs?: (number|Long|null);
         isLottie?: (boolean|null);
         imageHash?: (string|null);
         isAvatarSticker?: (boolean|null);
@@ -521,9 +521,9 @@ export namespace WAHistorySync {
 
     class StickerMetadata implements IStickerMetadata {
         constructor(p?: WAHistorySync.IStickerMetadata);
-        public URL?: (string|null);
-        public fileSHA256?: (Uint8Array|null);
-        public fileEncSHA256?: (Uint8Array|null);
+        public url?: (string|null);
+        public fileSha256?: (Uint8Array|null);
+        public fileEncSha256?: (Uint8Array|null);
         public mediaKey?: (Uint8Array|null);
         public mimetype?: (string|null);
         public height?: (number|null);
@@ -531,7 +531,7 @@ export namespace WAHistorySync {
         public directPath?: (string|null);
         public fileLength?: (number|Long|null);
         public weight?: (number|null);
-        public lastStickerSentTS?: (number|Long|null);
+        public lastStickerSentTs?: (number|Long|null);
         public isLottie?: (boolean|null);
         public imageHash?: (string|null);
         public isAvatarSticker?: (boolean|null);
@@ -545,13 +545,13 @@ export namespace WAHistorySync {
     }
 
     interface IPastParticipants {
-        groupJID?: (string|null);
+        groupJid?: (string|null);
         pastParticipants?: (WAHistorySync.IPastParticipant[]|null);
     }
 
     class PastParticipants implements IPastParticipants {
         constructor(p?: WAHistorySync.IPastParticipants);
-        public groupJID?: (string|null);
+        public groupJid?: (string|null);
         public pastParticipants: WAHistorySync.IPastParticipant[];
         public static create(properties?: WAHistorySync.IPastParticipants): WAHistorySync.PastParticipants;
         public static encode(m: WAHistorySync.IPastParticipants, w?: $protobuf.Writer): $protobuf.Writer;
@@ -563,13 +563,13 @@ export namespace WAHistorySync {
     }
 
     interface IAvatarUserSettings {
-        FBID?: (string|null);
+        fbid?: (string|null);
         password?: (string|null);
     }
 
     class AvatarUserSettings implements IAvatarUserSettings {
         constructor(p?: WAHistorySync.IAvatarUserSettings);
-        public FBID?: (string|null);
+        public fbid?: (string|null);
         public password?: (string|null);
         public static create(properties?: WAHistorySync.IAvatarUserSettings): WAHistorySync.AvatarUserSettings;
         public static encode(m: WAHistorySync.IAvatarUserSettings, w?: $protobuf.Writer): $protobuf.Writer;

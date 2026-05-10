@@ -259,7 +259,7 @@ export const WAVnameCert = $root.WAVnameCert = (() => {
         BizIdentityInfo.prototype.revoked = null;
         BizIdentityInfo.prototype.hostStorage = null;
         BizIdentityInfo.prototype.actualActors = null;
-        BizIdentityInfo.prototype.privacyModeTS = null;
+        BizIdentityInfo.prototype.privacyModeTs = null;
         BizIdentityInfo.prototype.featureControls = null;
 
         let $oneOfFields;
@@ -301,8 +301,8 @@ export const WAVnameCert = $root.WAVnameCert = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BizIdentityInfo.prototype, "_privacyModeTS", {
-            get: $util.oneOfGetter($oneOfFields = ["privacyModeTS"]),
+        Object.defineProperty(BizIdentityInfo.prototype, "_privacyModeTs", {
+            get: $util.oneOfGetter($oneOfFields = ["privacyModeTs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -331,8 +331,8 @@ export const WAVnameCert = $root.WAVnameCert = (() => {
                 w.uint32(40).int32(m.hostStorage);
             if (m.actualActors != null && Object.hasOwnProperty.call(m, "actualActors"))
                 w.uint32(48).int32(m.actualActors);
-            if (m.privacyModeTS != null && Object.hasOwnProperty.call(m, "privacyModeTS"))
-                w.uint32(56).uint64(m.privacyModeTS);
+            if (m.privacyModeTs != null && Object.hasOwnProperty.call(m, "privacyModeTs"))
+                w.uint32(56).uint64(m.privacyModeTs);
             if (m.featureControls != null && Object.hasOwnProperty.call(m, "featureControls"))
                 w.uint32(64).uint64(m.featureControls);
             return w;
@@ -376,7 +376,7 @@ export const WAVnameCert = $root.WAVnameCert = (() => {
                         break;
                     }
                 case 7: {
-                        m.privacyModeTS = r.uint64();
+                        m.privacyModeTs = r.uint64();
                         break;
                     }
                 case 8: {
@@ -462,15 +462,15 @@ export const WAVnameCert = $root.WAVnameCert = (() => {
                 m.actualActors = 1;
                 break;
             }
-            if (d.privacyModeTS != null) {
+            if (d.privacyModeTs != null) {
                 if ($util.Long)
-                    (m.privacyModeTS = $util.Long.fromValue(d.privacyModeTS)).unsigned = true;
-                else if (typeof d.privacyModeTS === "string")
-                    m.privacyModeTS = parseInt(d.privacyModeTS, 10);
-                else if (typeof d.privacyModeTS === "number")
-                    m.privacyModeTS = d.privacyModeTS;
-                else if (typeof d.privacyModeTS === "object")
-                    m.privacyModeTS = new $util.LongBits(d.privacyModeTS.low >>> 0, d.privacyModeTS.high >>> 0).toNumber(true);
+                    (m.privacyModeTs = $util.Long.fromValue(d.privacyModeTs)).unsigned = true;
+                else if (typeof d.privacyModeTs === "string")
+                    m.privacyModeTs = parseInt(d.privacyModeTs, 10);
+                else if (typeof d.privacyModeTs === "number")
+                    m.privacyModeTs = d.privacyModeTs;
+                else if (typeof d.privacyModeTs === "object")
+                    m.privacyModeTs = new $util.LongBits(d.privacyModeTs.low >>> 0, d.privacyModeTs.high >>> 0).toNumber(true);
             }
             if (d.featureControls != null) {
                 if ($util.Long)
@@ -519,13 +519,13 @@ export const WAVnameCert = $root.WAVnameCert = (() => {
                 if (o.oneofs)
                     d._actualActors = "actualActors";
             }
-            if (m.privacyModeTS != null && m.hasOwnProperty("privacyModeTS")) {
-                if (typeof m.privacyModeTS === "number")
-                    d.privacyModeTS = o.longs === String ? String(m.privacyModeTS) : m.privacyModeTS;
+            if (m.privacyModeTs != null && m.hasOwnProperty("privacyModeTs")) {
+                if (typeof m.privacyModeTs === "number")
+                    d.privacyModeTs = o.longs === String ? String(m.privacyModeTs) : m.privacyModeTs;
                 else
-                    d.privacyModeTS = o.longs === String ? $util.Long.prototype.toString.call(m.privacyModeTS) : o.longs === Number ? new $util.LongBits(m.privacyModeTS.low >>> 0, m.privacyModeTS.high >>> 0).toNumber(true) : m.privacyModeTS;
+                    d.privacyModeTs = o.longs === String ? $util.Long.prototype.toString.call(m.privacyModeTs) : o.longs === Number ? new $util.LongBits(m.privacyModeTs.low >>> 0, m.privacyModeTs.high >>> 0).toNumber(true) : m.privacyModeTs;
                 if (o.oneofs)
-                    d._privacyModeTS = "privacyModeTS";
+                    d._privacyModeTs = "privacyModeTs";
             }
             if (m.featureControls != null && m.hasOwnProperty("featureControls")) {
                 if (typeof m.featureControls === "number")

@@ -938,7 +938,7 @@ export const WAWa6 = $root.WAWa6 = (() => {
         ClientPayload.prototype.userAgent = null;
         ClientPayload.prototype.webInfo = null;
         ClientPayload.prototype.pushName = null;
-        ClientPayload.prototype.sessionID = null;
+        ClientPayload.prototype.sessionId = null;
         ClientPayload.prototype.shortConnect = null;
         ClientPayload.prototype.connectType = null;
         ClientPayload.prototype.connectReason = null;
@@ -953,8 +953,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
         ClientPayload.prototype.oc = null;
         ClientPayload.prototype.lc = null;
         ClientPayload.prototype.iosAppExtension = null;
-        ClientPayload.prototype.fbAppID = null;
-        ClientPayload.prototype.fbDeviceID = null;
+        ClientPayload.prototype.fbAppId = null;
+        ClientPayload.prototype.fbDeviceId = null;
         ClientPayload.prototype.pull = null;
         ClientPayload.prototype.paddingBytes = null;
         ClientPayload.prototype.yearClass = null;
@@ -968,7 +968,7 @@ export const WAWa6 = $root.WAWa6 = (() => {
         ClientPayload.prototype.preacksCount = null;
         ClientPayload.prototype.processingQueueSize = null;
         ClientPayload.prototype.pairedPeripherals = $util.emptyArray;
-        ClientPayload.prototype.testIsolationID = null;
+        ClientPayload.prototype.testIsolationId = null;
 
         let $oneOfFields;
 
@@ -1003,8 +1003,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ClientPayload.prototype, "_sessionID", {
-            get: $util.oneOfGetter($oneOfFields = ["sessionID"]),
+        Object.defineProperty(ClientPayload.prototype, "_sessionId", {
+            get: $util.oneOfGetter($oneOfFields = ["sessionId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1087,14 +1087,14 @@ export const WAWa6 = $root.WAWa6 = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ClientPayload.prototype, "_fbAppID", {
-            get: $util.oneOfGetter($oneOfFields = ["fbAppID"]),
+        Object.defineProperty(ClientPayload.prototype, "_fbAppId", {
+            get: $util.oneOfGetter($oneOfFields = ["fbAppId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ClientPayload.prototype, "_fbDeviceID", {
-            get: $util.oneOfGetter($oneOfFields = ["fbDeviceID"]),
+        Object.defineProperty(ClientPayload.prototype, "_fbDeviceId", {
+            get: $util.oneOfGetter($oneOfFields = ["fbDeviceId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1171,8 +1171,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ClientPayload.prototype, "_testIsolationID", {
-            get: $util.oneOfGetter($oneOfFields = ["testIsolationID"]),
+        Object.defineProperty(ClientPayload.prototype, "_testIsolationId", {
+            get: $util.oneOfGetter($oneOfFields = ["testIsolationId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1193,8 +1193,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
                 $root.WAWa6.ClientPayload.WebInfo.encode(m.webInfo, w.uint32(50).fork()).ldelim();
             if (m.pushName != null && Object.hasOwnProperty.call(m, "pushName"))
                 w.uint32(58).string(m.pushName);
-            if (m.sessionID != null && Object.hasOwnProperty.call(m, "sessionID"))
-                w.uint32(77).sfixed32(m.sessionID);
+            if (m.sessionId != null && Object.hasOwnProperty.call(m, "sessionId"))
+                w.uint32(77).sfixed32(m.sessionId);
             if (m.shortConnect != null && Object.hasOwnProperty.call(m, "shortConnect"))
                 w.uint32(80).bool(m.shortConnect);
             if (m.connectType != null && Object.hasOwnProperty.call(m, "connectType"))
@@ -1227,10 +1227,10 @@ export const WAWa6 = $root.WAWa6 = (() => {
                 w.uint32(192).int32(m.lc);
             if (m.iosAppExtension != null && Object.hasOwnProperty.call(m, "iosAppExtension"))
                 w.uint32(240).int32(m.iosAppExtension);
-            if (m.fbAppID != null && Object.hasOwnProperty.call(m, "fbAppID"))
-                w.uint32(248).uint64(m.fbAppID);
-            if (m.fbDeviceID != null && Object.hasOwnProperty.call(m, "fbDeviceID"))
-                w.uint32(258).bytes(m.fbDeviceID);
+            if (m.fbAppId != null && Object.hasOwnProperty.call(m, "fbAppId"))
+                w.uint32(248).uint64(m.fbAppId);
+            if (m.fbDeviceId != null && Object.hasOwnProperty.call(m, "fbDeviceId"))
+                w.uint32(258).bytes(m.fbDeviceId);
             if (m.pull != null && Object.hasOwnProperty.call(m, "pull"))
                 w.uint32(264).bool(m.pull);
             if (m.paddingBytes != null && Object.hasOwnProperty.call(m, "paddingBytes"))
@@ -1259,8 +1259,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
                 for (var i = 0; i < m.pairedPeripherals.length; ++i)
                     w.uint32(378).string(m.pairedPeripherals[i]);
             }
-            if (m.testIsolationID != null && Object.hasOwnProperty.call(m, "testIsolationID"))
-                w.uint32(386).bytes(m.testIsolationID);
+            if (m.testIsolationId != null && Object.hasOwnProperty.call(m, "testIsolationId"))
+                w.uint32(386).bytes(m.testIsolationId);
             return w;
         };
 
@@ -1298,7 +1298,7 @@ export const WAWa6 = $root.WAWa6 = (() => {
                         break;
                     }
                 case 9: {
-                        m.sessionID = r.sfixed32();
+                        m.sessionId = r.sfixed32();
                         break;
                     }
                 case 10: {
@@ -1365,11 +1365,11 @@ export const WAWa6 = $root.WAWa6 = (() => {
                         break;
                     }
                 case 31: {
-                        m.fbAppID = r.uint64();
+                        m.fbAppId = r.uint64();
                         break;
                     }
                 case 32: {
-                        m.fbDeviceID = r.bytes();
+                        m.fbDeviceId = r.bytes();
                         break;
                     }
                 case 33: {
@@ -1427,7 +1427,7 @@ export const WAWa6 = $root.WAWa6 = (() => {
                         break;
                     }
                 case 48: {
-                        m.testIsolationID = r.bytes();
+                        m.testIsolationId = r.bytes();
                         break;
                     }
                 default:
@@ -1472,8 +1472,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
             if (d.pushName != null) {
                 m.pushName = String(d.pushName);
             }
-            if (d.sessionID != null) {
-                m.sessionID = d.sessionID | 0;
+            if (d.sessionId != null) {
+                m.sessionId = d.sessionId | 0;
             }
             if (d.shortConnect != null) {
                 m.shortConnect = Boolean(d.shortConnect);
@@ -1672,21 +1672,21 @@ export const WAWa6 = $root.WAWa6 = (() => {
                 m.iosAppExtension = 2;
                 break;
             }
-            if (d.fbAppID != null) {
+            if (d.fbAppId != null) {
                 if ($util.Long)
-                    (m.fbAppID = $util.Long.fromValue(d.fbAppID)).unsigned = true;
-                else if (typeof d.fbAppID === "string")
-                    m.fbAppID = parseInt(d.fbAppID, 10);
-                else if (typeof d.fbAppID === "number")
-                    m.fbAppID = d.fbAppID;
-                else if (typeof d.fbAppID === "object")
-                    m.fbAppID = new $util.LongBits(d.fbAppID.low >>> 0, d.fbAppID.high >>> 0).toNumber(true);
+                    (m.fbAppId = $util.Long.fromValue(d.fbAppId)).unsigned = true;
+                else if (typeof d.fbAppId === "string")
+                    m.fbAppId = parseInt(d.fbAppId, 10);
+                else if (typeof d.fbAppId === "number")
+                    m.fbAppId = d.fbAppId;
+                else if (typeof d.fbAppId === "object")
+                    m.fbAppId = new $util.LongBits(d.fbAppId.low >>> 0, d.fbAppId.high >>> 0).toNumber(true);
             }
-            if (d.fbDeviceID != null) {
-                if (typeof d.fbDeviceID === "string")
-                    $util.base64.decode(d.fbDeviceID, m.fbDeviceID = $util.newBuffer($util.base64.length(d.fbDeviceID)), 0);
-                else if (d.fbDeviceID.length >= 0)
-                    m.fbDeviceID = d.fbDeviceID;
+            if (d.fbDeviceId != null) {
+                if (typeof d.fbDeviceId === "string")
+                    $util.base64.decode(d.fbDeviceId, m.fbDeviceId = $util.newBuffer($util.base64.length(d.fbDeviceId)), 0);
+                else if (d.fbDeviceId.length >= 0)
+                    m.fbDeviceId = d.fbDeviceId;
             }
             if (d.pull != null) {
                 m.pull = Boolean(d.pull);
@@ -1763,11 +1763,11 @@ export const WAWa6 = $root.WAWa6 = (() => {
                     m.pairedPeripherals[i] = String(d.pairedPeripherals[i]);
                 }
             }
-            if (d.testIsolationID != null) {
-                if (typeof d.testIsolationID === "string")
-                    $util.base64.decode(d.testIsolationID, m.testIsolationID = $util.newBuffer($util.base64.length(d.testIsolationID)), 0);
-                else if (d.testIsolationID.length >= 0)
-                    m.testIsolationID = d.testIsolationID;
+            if (d.testIsolationId != null) {
+                if (typeof d.testIsolationId === "string")
+                    $util.base64.decode(d.testIsolationId, m.testIsolationId = $util.newBuffer($util.base64.length(d.testIsolationId)), 0);
+                else if (d.testIsolationId.length >= 0)
+                    m.testIsolationId = d.testIsolationId;
             }
             return m;
         };
@@ -1808,10 +1808,10 @@ export const WAWa6 = $root.WAWa6 = (() => {
                 if (o.oneofs)
                     d._pushName = "pushName";
             }
-            if (m.sessionID != null && m.hasOwnProperty("sessionID")) {
-                d.sessionID = m.sessionID;
+            if (m.sessionId != null && m.hasOwnProperty("sessionId")) {
+                d.sessionId = m.sessionId;
                 if (o.oneofs)
-                    d._sessionID = "sessionID";
+                    d._sessionId = "sessionId";
             }
             if (m.shortConnect != null && m.hasOwnProperty("shortConnect")) {
                 d.shortConnect = m.shortConnect;
@@ -1884,18 +1884,18 @@ export const WAWa6 = $root.WAWa6 = (() => {
                 if (o.oneofs)
                     d._iosAppExtension = "iosAppExtension";
             }
-            if (m.fbAppID != null && m.hasOwnProperty("fbAppID")) {
-                if (typeof m.fbAppID === "number")
-                    d.fbAppID = o.longs === String ? String(m.fbAppID) : m.fbAppID;
+            if (m.fbAppId != null && m.hasOwnProperty("fbAppId")) {
+                if (typeof m.fbAppId === "number")
+                    d.fbAppId = o.longs === String ? String(m.fbAppId) : m.fbAppId;
                 else
-                    d.fbAppID = o.longs === String ? $util.Long.prototype.toString.call(m.fbAppID) : o.longs === Number ? new $util.LongBits(m.fbAppID.low >>> 0, m.fbAppID.high >>> 0).toNumber(true) : m.fbAppID;
+                    d.fbAppId = o.longs === String ? $util.Long.prototype.toString.call(m.fbAppId) : o.longs === Number ? new $util.LongBits(m.fbAppId.low >>> 0, m.fbAppId.high >>> 0).toNumber(true) : m.fbAppId;
                 if (o.oneofs)
-                    d._fbAppID = "fbAppID";
+                    d._fbAppId = "fbAppId";
             }
-            if (m.fbDeviceID != null && m.hasOwnProperty("fbDeviceID")) {
-                d.fbDeviceID = o.bytes === String ? $util.base64.encode(m.fbDeviceID, 0, m.fbDeviceID.length) : o.bytes === Array ? Array.prototype.slice.call(m.fbDeviceID) : m.fbDeviceID;
+            if (m.fbDeviceId != null && m.hasOwnProperty("fbDeviceId")) {
+                d.fbDeviceId = o.bytes === String ? $util.base64.encode(m.fbDeviceId, 0, m.fbDeviceId.length) : o.bytes === Array ? Array.prototype.slice.call(m.fbDeviceId) : m.fbDeviceId;
                 if (o.oneofs)
-                    d._fbDeviceID = "fbDeviceID";
+                    d._fbDeviceId = "fbDeviceId";
             }
             if (m.pull != null && m.hasOwnProperty("pull")) {
                 d.pull = m.pull;
@@ -1963,10 +1963,10 @@ export const WAWa6 = $root.WAWa6 = (() => {
                     d.pairedPeripherals[j] = m.pairedPeripherals[j];
                 }
             }
-            if (m.testIsolationID != null && m.hasOwnProperty("testIsolationID")) {
-                d.testIsolationID = o.bytes === String ? $util.base64.encode(m.testIsolationID, 0, m.testIsolationID.length) : o.bytes === Array ? Array.prototype.slice.call(m.testIsolationID) : m.testIsolationID;
+            if (m.testIsolationId != null && m.hasOwnProperty("testIsolationId")) {
+                d.testIsolationId = o.bytes === String ? $util.base64.encode(m.testIsolationId, 0, m.testIsolationId.length) : o.bytes === Array ? Array.prototype.slice.call(m.testIsolationId) : m.testIsolationId;
                 if (o.oneofs)
-                    d._testIsolationID = "testIsolationID";
+                    d._testIsolationId = "testIsolationId";
             }
             return d;
         };
@@ -2465,7 +2465,7 @@ export const WAWa6 = $root.WAWa6 = (() => {
                 WebdPayload.prototype.usesParticipantInKey = null;
                 WebdPayload.prototype.supportsStarredMessages = null;
                 WebdPayload.prototype.supportsDocumentMessages = null;
-                WebdPayload.prototype.supportsURLMessages = null;
+                WebdPayload.prototype.supportsUrlMessages = null;
                 WebdPayload.prototype.supportsMediaRetry = null;
                 WebdPayload.prototype.supportsE2EImage = null;
                 WebdPayload.prototype.supportsE2EVideo = null;
@@ -2495,8 +2495,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(WebdPayload.prototype, "_supportsURLMessages", {
-                    get: $util.oneOfGetter($oneOfFields = ["supportsURLMessages"]),
+                Object.defineProperty(WebdPayload.prototype, "_supportsUrlMessages", {
+                    get: $util.oneOfGetter($oneOfFields = ["supportsUrlMessages"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -2555,8 +2555,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
                         w.uint32(16).bool(m.supportsStarredMessages);
                     if (m.supportsDocumentMessages != null && Object.hasOwnProperty.call(m, "supportsDocumentMessages"))
                         w.uint32(24).bool(m.supportsDocumentMessages);
-                    if (m.supportsURLMessages != null && Object.hasOwnProperty.call(m, "supportsURLMessages"))
-                        w.uint32(32).bool(m.supportsURLMessages);
+                    if (m.supportsUrlMessages != null && Object.hasOwnProperty.call(m, "supportsUrlMessages"))
+                        w.uint32(32).bool(m.supportsUrlMessages);
                     if (m.supportsMediaRetry != null && Object.hasOwnProperty.call(m, "supportsMediaRetry"))
                         w.uint32(40).bool(m.supportsMediaRetry);
                     if (m.supportsE2EImage != null && Object.hasOwnProperty.call(m, "supportsE2EImage"))
@@ -2600,7 +2600,7 @@ export const WAWa6 = $root.WAWa6 = (() => {
                                 break;
                             }
                         case 4: {
-                                m.supportsURLMessages = r.bool();
+                                m.supportsUrlMessages = r.bool();
                                 break;
                             }
                         case 5: {
@@ -2656,8 +2656,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
                     if (d.supportsDocumentMessages != null) {
                         m.supportsDocumentMessages = Boolean(d.supportsDocumentMessages);
                     }
-                    if (d.supportsURLMessages != null) {
-                        m.supportsURLMessages = Boolean(d.supportsURLMessages);
+                    if (d.supportsUrlMessages != null) {
+                        m.supportsUrlMessages = Boolean(d.supportsUrlMessages);
                     }
                     if (d.supportsMediaRetry != null) {
                         m.supportsMediaRetry = Boolean(d.supportsMediaRetry);
@@ -2705,10 +2705,10 @@ export const WAWa6 = $root.WAWa6 = (() => {
                         if (o.oneofs)
                             d._supportsDocumentMessages = "supportsDocumentMessages";
                     }
-                    if (m.supportsURLMessages != null && m.hasOwnProperty("supportsURLMessages")) {
-                        d.supportsURLMessages = m.supportsURLMessages;
+                    if (m.supportsUrlMessages != null && m.hasOwnProperty("supportsUrlMessages")) {
+                        d.supportsUrlMessages = m.supportsUrlMessages;
                         if (o.oneofs)
-                            d._supportsURLMessages = "supportsURLMessages";
+                            d._supportsUrlMessages = "supportsUrlMessages";
                     }
                     if (m.supportsMediaRetry != null && m.hasOwnProperty("supportsMediaRetry")) {
                         d.supportsMediaRetry = m.supportsMediaRetry;
@@ -2782,12 +2782,12 @@ export const WAWa6 = $root.WAWa6 = (() => {
             UserAgent.prototype.manufacturer = null;
             UserAgent.prototype.device = null;
             UserAgent.prototype.osBuildNumber = null;
-            UserAgent.prototype.phoneID = null;
+            UserAgent.prototype.phoneId = null;
             UserAgent.prototype.releaseChannel = null;
             UserAgent.prototype.localeLanguageIso6391 = null;
             UserAgent.prototype.localeCountryIso31661Alpha2 = null;
             UserAgent.prototype.deviceBoard = null;
-            UserAgent.prototype.deviceExpID = null;
+            UserAgent.prototype.deviceExpId = null;
             UserAgent.prototype.deviceType = null;
             UserAgent.prototype.deviceModelType = null;
             UserAgent.prototype.distributionChannel = null;
@@ -2843,8 +2843,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(UserAgent.prototype, "_phoneID", {
-                get: $util.oneOfGetter($oneOfFields = ["phoneID"]),
+            Object.defineProperty(UserAgent.prototype, "_phoneId", {
+                get: $util.oneOfGetter($oneOfFields = ["phoneId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -2873,8 +2873,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(UserAgent.prototype, "_deviceExpID", {
-                get: $util.oneOfGetter($oneOfFields = ["deviceExpID"]),
+            Object.defineProperty(UserAgent.prototype, "_deviceExpId", {
+                get: $util.oneOfGetter($oneOfFields = ["deviceExpId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -2919,8 +2919,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
                     w.uint32(58).string(m.device);
                 if (m.osBuildNumber != null && Object.hasOwnProperty.call(m, "osBuildNumber"))
                     w.uint32(66).string(m.osBuildNumber);
-                if (m.phoneID != null && Object.hasOwnProperty.call(m, "phoneID"))
-                    w.uint32(74).string(m.phoneID);
+                if (m.phoneId != null && Object.hasOwnProperty.call(m, "phoneId"))
+                    w.uint32(74).string(m.phoneId);
                 if (m.releaseChannel != null && Object.hasOwnProperty.call(m, "releaseChannel"))
                     w.uint32(80).int32(m.releaseChannel);
                 if (m.localeLanguageIso6391 != null && Object.hasOwnProperty.call(m, "localeLanguageIso6391"))
@@ -2929,8 +2929,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
                     w.uint32(98).string(m.localeCountryIso31661Alpha2);
                 if (m.deviceBoard != null && Object.hasOwnProperty.call(m, "deviceBoard"))
                     w.uint32(106).string(m.deviceBoard);
-                if (m.deviceExpID != null && Object.hasOwnProperty.call(m, "deviceExpID"))
-                    w.uint32(114).string(m.deviceExpID);
+                if (m.deviceExpId != null && Object.hasOwnProperty.call(m, "deviceExpId"))
+                    w.uint32(114).string(m.deviceExpId);
                 if (m.deviceType != null && Object.hasOwnProperty.call(m, "deviceType"))
                     w.uint32(120).int32(m.deviceType);
                 if (m.deviceModelType != null && Object.hasOwnProperty.call(m, "deviceModelType"))
@@ -2986,7 +2986,7 @@ export const WAWa6 = $root.WAWa6 = (() => {
                             break;
                         }
                     case 9: {
-                            m.phoneID = r.string();
+                            m.phoneId = r.string();
                             break;
                         }
                     case 10: {
@@ -3006,7 +3006,7 @@ export const WAWa6 = $root.WAWa6 = (() => {
                             break;
                         }
                     case 14: {
-                            m.deviceExpID = r.string();
+                            m.deviceExpId = r.string();
                             break;
                         }
                     case 15: {
@@ -3220,8 +3220,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
                 if (d.osBuildNumber != null) {
                     m.osBuildNumber = String(d.osBuildNumber);
                 }
-                if (d.phoneID != null) {
-                    m.phoneID = String(d.phoneID);
+                if (d.phoneId != null) {
+                    m.phoneId = String(d.phoneId);
                 }
                 switch (d.releaseChannel) {
                 default:
@@ -3256,8 +3256,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
                 if (d.deviceBoard != null) {
                     m.deviceBoard = String(d.deviceBoard);
                 }
-                if (d.deviceExpID != null) {
-                    m.deviceExpID = String(d.deviceExpID);
+                if (d.deviceExpId != null) {
+                    m.deviceExpId = String(d.deviceExpId);
                 }
                 switch (d.deviceType) {
                 default:
@@ -3361,10 +3361,10 @@ export const WAWa6 = $root.WAWa6 = (() => {
                     if (o.oneofs)
                         d._osBuildNumber = "osBuildNumber";
                 }
-                if (m.phoneID != null && m.hasOwnProperty("phoneID")) {
-                    d.phoneID = m.phoneID;
+                if (m.phoneId != null && m.hasOwnProperty("phoneId")) {
+                    d.phoneId = m.phoneId;
                     if (o.oneofs)
-                        d._phoneID = "phoneID";
+                        d._phoneId = "phoneId";
                 }
                 if (m.releaseChannel != null && m.hasOwnProperty("releaseChannel")) {
                     d.releaseChannel = o.enums === String ? $root.WAWa6.ClientPayload.UserAgent.ReleaseChannel[m.releaseChannel] === undefined ? m.releaseChannel : $root.WAWa6.ClientPayload.UserAgent.ReleaseChannel[m.releaseChannel] : m.releaseChannel;
@@ -3386,10 +3386,10 @@ export const WAWa6 = $root.WAWa6 = (() => {
                     if (o.oneofs)
                         d._deviceBoard = "deviceBoard";
                 }
-                if (m.deviceExpID != null && m.hasOwnProperty("deviceExpID")) {
-                    d.deviceExpID = m.deviceExpID;
+                if (m.deviceExpId != null && m.hasOwnProperty("deviceExpId")) {
+                    d.deviceExpId = m.deviceExpId;
                     if (o.oneofs)
-                        d._deviceExpID = "deviceExpID";
+                        d._deviceExpId = "deviceExpId";
                 }
                 if (m.deviceType != null && m.hasOwnProperty("deviceType")) {
                     d.deviceType = o.enums === String ? $root.WAWa6.ClientPayload.UserAgent.DeviceType[m.deviceType] === undefined ? m.deviceType : $root.WAWa6.ClientPayload.UserAgent.DeviceType[m.deviceType] : m.deviceType;
@@ -3683,15 +3683,15 @@ export const WAWa6 = $root.WAWa6 = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            InteropData.prototype.accountID = null;
+            InteropData.prototype.accountId = null;
             InteropData.prototype.token = null;
             InteropData.prototype.enableReadReceipts = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(InteropData.prototype, "_accountID", {
-                get: $util.oneOfGetter($oneOfFields = ["accountID"]),
+            Object.defineProperty(InteropData.prototype, "_accountId", {
+                get: $util.oneOfGetter($oneOfFields = ["accountId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -3714,8 +3714,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
             InteropData.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.accountID != null && Object.hasOwnProperty.call(m, "accountID"))
-                    w.uint32(8).uint64(m.accountID);
+                if (m.accountId != null && Object.hasOwnProperty.call(m, "accountId"))
+                    w.uint32(8).uint64(m.accountId);
                 if (m.token != null && Object.hasOwnProperty.call(m, "token"))
                     w.uint32(18).bytes(m.token);
                 if (m.enableReadReceipts != null && Object.hasOwnProperty.call(m, "enableReadReceipts"))
@@ -3737,7 +3737,7 @@ export const WAWa6 = $root.WAWa6 = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.accountID = r.uint64();
+                            m.accountId = r.uint64();
                             break;
                         }
                     case 2: {
@@ -3764,15 +3764,15 @@ export const WAWa6 = $root.WAWa6 = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAWa6.ClientPayload.InteropData();
-                if (d.accountID != null) {
+                if (d.accountId != null) {
                     if ($util.Long)
-                        (m.accountID = $util.Long.fromValue(d.accountID)).unsigned = true;
-                    else if (typeof d.accountID === "string")
-                        m.accountID = parseInt(d.accountID, 10);
-                    else if (typeof d.accountID === "number")
-                        m.accountID = d.accountID;
-                    else if (typeof d.accountID === "object")
-                        m.accountID = new $util.LongBits(d.accountID.low >>> 0, d.accountID.high >>> 0).toNumber(true);
+                        (m.accountId = $util.Long.fromValue(d.accountId)).unsigned = true;
+                    else if (typeof d.accountId === "string")
+                        m.accountId = parseInt(d.accountId, 10);
+                    else if (typeof d.accountId === "number")
+                        m.accountId = d.accountId;
+                    else if (typeof d.accountId === "object")
+                        m.accountId = new $util.LongBits(d.accountId.low >>> 0, d.accountId.high >>> 0).toNumber(true);
                 }
                 if (d.token != null) {
                     if (typeof d.token === "string")
@@ -3790,13 +3790,13 @@ export const WAWa6 = $root.WAWa6 = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.accountID != null && m.hasOwnProperty("accountID")) {
-                    if (typeof m.accountID === "number")
-                        d.accountID = o.longs === String ? String(m.accountID) : m.accountID;
+                if (m.accountId != null && m.hasOwnProperty("accountId")) {
+                    if (typeof m.accountId === "number")
+                        d.accountId = o.longs === String ? String(m.accountId) : m.accountId;
                     else
-                        d.accountID = o.longs === String ? $util.Long.prototype.toString.call(m.accountID) : o.longs === Number ? new $util.LongBits(m.accountID.low >>> 0, m.accountID.high >>> 0).toNumber(true) : m.accountID;
+                        d.accountId = o.longs === String ? $util.Long.prototype.toString.call(m.accountId) : o.longs === Number ? new $util.LongBits(m.accountId.low >>> 0, m.accountId.high >>> 0).toNumber(true) : m.accountId;
                     if (o.oneofs)
-                        d._accountID = "accountID";
+                        d._accountId = "accountId";
                 }
                 if (m.token != null && m.hasOwnProperty("token")) {
                     d.token = o.bytes === String ? $util.base64.encode(m.token, 0, m.token.length) : o.bytes === Array ? Array.prototype.slice.call(m.token) : m.token;
@@ -3837,7 +3837,7 @@ export const WAWa6 = $root.WAWa6 = (() => {
             DevicePairingRegistrationData.prototype.eRegid = null;
             DevicePairingRegistrationData.prototype.eKeytype = null;
             DevicePairingRegistrationData.prototype.eIdent = null;
-            DevicePairingRegistrationData.prototype.eSkeyID = null;
+            DevicePairingRegistrationData.prototype.eSkeyId = null;
             DevicePairingRegistrationData.prototype.eSkeyVal = null;
             DevicePairingRegistrationData.prototype.eSkeySig = null;
             DevicePairingRegistrationData.prototype.buildHash = null;
@@ -3864,8 +3864,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(DevicePairingRegistrationData.prototype, "_eSkeyID", {
-                get: $util.oneOfGetter($oneOfFields = ["eSkeyID"]),
+            Object.defineProperty(DevicePairingRegistrationData.prototype, "_eSkeyId", {
+                get: $util.oneOfGetter($oneOfFields = ["eSkeyId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -3906,8 +3906,8 @@ export const WAWa6 = $root.WAWa6 = (() => {
                     w.uint32(18).bytes(m.eKeytype);
                 if (m.eIdent != null && Object.hasOwnProperty.call(m, "eIdent"))
                     w.uint32(26).bytes(m.eIdent);
-                if (m.eSkeyID != null && Object.hasOwnProperty.call(m, "eSkeyID"))
-                    w.uint32(34).bytes(m.eSkeyID);
+                if (m.eSkeyId != null && Object.hasOwnProperty.call(m, "eSkeyId"))
+                    w.uint32(34).bytes(m.eSkeyId);
                 if (m.eSkeyVal != null && Object.hasOwnProperty.call(m, "eSkeyVal"))
                     w.uint32(42).bytes(m.eSkeyVal);
                 if (m.eSkeySig != null && Object.hasOwnProperty.call(m, "eSkeySig"))
@@ -3945,7 +3945,7 @@ export const WAWa6 = $root.WAWa6 = (() => {
                             break;
                         }
                     case 4: {
-                            m.eSkeyID = r.bytes();
+                            m.eSkeyId = r.bytes();
                             break;
                         }
                     case 5: {
@@ -3998,11 +3998,11 @@ export const WAWa6 = $root.WAWa6 = (() => {
                     else if (d.eIdent.length >= 0)
                         m.eIdent = d.eIdent;
                 }
-                if (d.eSkeyID != null) {
-                    if (typeof d.eSkeyID === "string")
-                        $util.base64.decode(d.eSkeyID, m.eSkeyID = $util.newBuffer($util.base64.length(d.eSkeyID)), 0);
-                    else if (d.eSkeyID.length >= 0)
-                        m.eSkeyID = d.eSkeyID;
+                if (d.eSkeyId != null) {
+                    if (typeof d.eSkeyId === "string")
+                        $util.base64.decode(d.eSkeyId, m.eSkeyId = $util.newBuffer($util.base64.length(d.eSkeyId)), 0);
+                    else if (d.eSkeyId.length >= 0)
+                        m.eSkeyId = d.eSkeyId;
                 }
                 if (d.eSkeyVal != null) {
                     if (typeof d.eSkeyVal === "string")
@@ -4050,10 +4050,10 @@ export const WAWa6 = $root.WAWa6 = (() => {
                     if (o.oneofs)
                         d._eIdent = "eIdent";
                 }
-                if (m.eSkeyID != null && m.hasOwnProperty("eSkeyID")) {
-                    d.eSkeyID = o.bytes === String ? $util.base64.encode(m.eSkeyID, 0, m.eSkeyID.length) : o.bytes === Array ? Array.prototype.slice.call(m.eSkeyID) : m.eSkeyID;
+                if (m.eSkeyId != null && m.hasOwnProperty("eSkeyId")) {
+                    d.eSkeyId = o.bytes === String ? $util.base64.encode(m.eSkeyId, 0, m.eSkeyId.length) : o.bytes === Array ? Array.prototype.slice.call(m.eSkeyId) : m.eSkeyId;
                     if (o.oneofs)
-                        d._eSkeyID = "eSkeyID";
+                        d._eSkeyId = "eSkeyId";
                 }
                 if (m.eSkeyVal != null && m.hasOwnProperty("eSkeyVal")) {
                     d.eSkeyVal = o.bytes === String ? $util.base64.encode(m.eSkeyVal, 0, m.eSkeyVal.length) : o.bytes === Array ? Array.prototype.slice.call(m.eSkeyVal) : m.eSkeyVal;

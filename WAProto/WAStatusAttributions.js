@@ -25,7 +25,7 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
         StatusAttribution.prototype.rlAttribution = null;
         StatusAttribution.prototype.aiCreatedAttribution = null;
         StatusAttribution.prototype.type = null;
-        StatusAttribution.prototype.actionURL = null;
+        StatusAttribution.prototype.actionUrl = null;
 
         let $oneOfFields;
 
@@ -41,8 +41,8 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StatusAttribution.prototype, "_actionURL", {
-            get: $util.oneOfGetter($oneOfFields = ["actionURL"]),
+        Object.defineProperty(StatusAttribution.prototype, "_actionUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["actionUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -55,8 +55,8 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                 w = $Writer.create();
             if (m.type != null && Object.hasOwnProperty.call(m, "type"))
                 w.uint32(8).int32(m.type);
-            if (m.actionURL != null && Object.hasOwnProperty.call(m, "actionURL"))
-                w.uint32(18).string(m.actionURL);
+            if (m.actionUrl != null && Object.hasOwnProperty.call(m, "actionUrl"))
+                w.uint32(18).string(m.actionUrl);
             if (m.statusReshare != null && Object.hasOwnProperty.call(m, "statusReshare"))
                 $root.WAStatusAttributions.StatusAttribution.StatusReshare.encode(m.statusReshare, w.uint32(26).fork()).ldelim();
             if (m.externalShare != null && Object.hasOwnProperty.call(m, "externalShare"))
@@ -114,7 +114,7 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                         break;
                     }
                 case 2: {
-                        m.actionURL = r.string();
+                        m.actionUrl = r.string();
                         break;
                     }
                 default:
@@ -219,8 +219,8 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                 m.type = 11;
                 break;
             }
-            if (d.actionURL != null) {
-                m.actionURL = String(d.actionURL);
+            if (d.actionUrl != null) {
+                m.actionUrl = String(d.actionUrl);
             }
             return m;
         };
@@ -234,10 +234,10 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                 if (o.oneofs)
                     d._type = "type";
             }
-            if (m.actionURL != null && m.hasOwnProperty("actionURL")) {
-                d.actionURL = m.actionURL;
+            if (m.actionUrl != null && m.hasOwnProperty("actionUrl")) {
+                d.actionUrl = m.actionUrl;
                 if (o.oneofs)
-                    d._actionURL = "actionURL";
+                    d._actionUrl = "actionUrl";
             }
             if (m.statusReshare != null && m.hasOwnProperty("statusReshare")) {
                 d.statusReshare = $root.WAStatusAttributions.StatusAttribution.StatusReshare.toObject(m.statusReshare, o);
@@ -551,16 +551,16 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            ExternalShare.prototype.actionURL = null;
+            ExternalShare.prototype.actionUrl = null;
             ExternalShare.prototype.source = null;
             ExternalShare.prototype.duration = null;
-            ExternalShare.prototype.actionFallbackURL = null;
+            ExternalShare.prototype.actionFallbackUrl = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ExternalShare.prototype, "_actionURL", {
-                get: $util.oneOfGetter($oneOfFields = ["actionURL"]),
+            Object.defineProperty(ExternalShare.prototype, "_actionUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["actionUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -577,8 +577,8 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ExternalShare.prototype, "_actionFallbackURL", {
-                get: $util.oneOfGetter($oneOfFields = ["actionFallbackURL"]),
+            Object.defineProperty(ExternalShare.prototype, "_actionFallbackUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["actionFallbackUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -589,14 +589,14 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
             ExternalShare.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.actionURL != null && Object.hasOwnProperty.call(m, "actionURL"))
-                    w.uint32(10).string(m.actionURL);
+                if (m.actionUrl != null && Object.hasOwnProperty.call(m, "actionUrl"))
+                    w.uint32(10).string(m.actionUrl);
                 if (m.source != null && Object.hasOwnProperty.call(m, "source"))
                     w.uint32(16).int32(m.source);
                 if (m.duration != null && Object.hasOwnProperty.call(m, "duration"))
                     w.uint32(24).int32(m.duration);
-                if (m.actionFallbackURL != null && Object.hasOwnProperty.call(m, "actionFallbackURL"))
-                    w.uint32(34).string(m.actionFallbackURL);
+                if (m.actionFallbackUrl != null && Object.hasOwnProperty.call(m, "actionFallbackUrl"))
+                    w.uint32(34).string(m.actionFallbackUrl);
                 return w;
             };
 
@@ -614,7 +614,7 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.actionURL = r.string();
+                            m.actionUrl = r.string();
                             break;
                         }
                     case 2: {
@@ -626,7 +626,7 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                             break;
                         }
                     case 4: {
-                            m.actionFallbackURL = r.string();
+                            m.actionFallbackUrl = r.string();
                             break;
                         }
                     default:
@@ -645,8 +645,8 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAStatusAttributions.StatusAttribution.ExternalShare();
-                if (d.actionURL != null) {
-                    m.actionURL = String(d.actionURL);
+                if (d.actionUrl != null) {
+                    m.actionUrl = String(d.actionUrl);
                 }
                 switch (d.source) {
                 default:
@@ -711,8 +711,8 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                 if (d.duration != null) {
                     m.duration = d.duration | 0;
                 }
-                if (d.actionFallbackURL != null) {
-                    m.actionFallbackURL = String(d.actionFallbackURL);
+                if (d.actionFallbackUrl != null) {
+                    m.actionFallbackUrl = String(d.actionFallbackUrl);
                 }
                 return m;
             };
@@ -721,10 +721,10 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.actionURL != null && m.hasOwnProperty("actionURL")) {
-                    d.actionURL = m.actionURL;
+                if (m.actionUrl != null && m.hasOwnProperty("actionUrl")) {
+                    d.actionUrl = m.actionUrl;
                     if (o.oneofs)
-                        d._actionURL = "actionURL";
+                        d._actionUrl = "actionUrl";
                 }
                 if (m.source != null && m.hasOwnProperty("source")) {
                     d.source = o.enums === String ? $root.WAStatusAttributions.StatusAttribution.ExternalShare.Source[m.source] === undefined ? m.source : $root.WAStatusAttributions.StatusAttribution.ExternalShare.Source[m.source] : m.source;
@@ -736,10 +736,10 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                     if (o.oneofs)
                         d._duration = "duration";
                 }
-                if (m.actionFallbackURL != null && m.hasOwnProperty("actionFallbackURL")) {
-                    d.actionFallbackURL = m.actionFallbackURL;
+                if (m.actionFallbackUrl != null && m.hasOwnProperty("actionFallbackUrl")) {
+                    d.actionFallbackUrl = m.actionFallbackUrl;
                     if (o.oneofs)
-                        d._actionFallbackURL = "actionFallbackURL";
+                        d._actionFallbackUrl = "actionFallbackUrl";
                 }
                 return d;
             };
@@ -937,8 +937,8 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                 }
 
                 Metadata.prototype.duration = null;
-                Metadata.prototype.channelJID = null;
-                Metadata.prototype.channelMessageID = null;
+                Metadata.prototype.channelJid = null;
+                Metadata.prototype.channelMessageId = null;
                 Metadata.prototype.hasMultipleReshares = null;
 
                 let $oneOfFields;
@@ -950,14 +950,14 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(Metadata.prototype, "_channelJID", {
-                    get: $util.oneOfGetter($oneOfFields = ["channelJID"]),
+                Object.defineProperty(Metadata.prototype, "_channelJid", {
+                    get: $util.oneOfGetter($oneOfFields = ["channelJid"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(Metadata.prototype, "_channelMessageID", {
-                    get: $util.oneOfGetter($oneOfFields = ["channelMessageID"]),
+                Object.defineProperty(Metadata.prototype, "_channelMessageId", {
+                    get: $util.oneOfGetter($oneOfFields = ["channelMessageId"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -976,10 +976,10 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                         w = $Writer.create();
                     if (m.duration != null && Object.hasOwnProperty.call(m, "duration"))
                         w.uint32(8).int32(m.duration);
-                    if (m.channelJID != null && Object.hasOwnProperty.call(m, "channelJID"))
-                        w.uint32(18).string(m.channelJID);
-                    if (m.channelMessageID != null && Object.hasOwnProperty.call(m, "channelMessageID"))
-                        w.uint32(24).int32(m.channelMessageID);
+                    if (m.channelJid != null && Object.hasOwnProperty.call(m, "channelJid"))
+                        w.uint32(18).string(m.channelJid);
+                    if (m.channelMessageId != null && Object.hasOwnProperty.call(m, "channelMessageId"))
+                        w.uint32(24).int32(m.channelMessageId);
                     if (m.hasMultipleReshares != null && Object.hasOwnProperty.call(m, "hasMultipleReshares"))
                         w.uint32(32).bool(m.hasMultipleReshares);
                     return w;
@@ -1003,11 +1003,11 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                                 break;
                             }
                         case 2: {
-                                m.channelJID = r.string();
+                                m.channelJid = r.string();
                                 break;
                             }
                         case 3: {
-                                m.channelMessageID = r.int32();
+                                m.channelMessageId = r.int32();
                                 break;
                             }
                         case 4: {
@@ -1033,11 +1033,11 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                     if (d.duration != null) {
                         m.duration = d.duration | 0;
                     }
-                    if (d.channelJID != null) {
-                        m.channelJID = String(d.channelJID);
+                    if (d.channelJid != null) {
+                        m.channelJid = String(d.channelJid);
                     }
-                    if (d.channelMessageID != null) {
-                        m.channelMessageID = d.channelMessageID | 0;
+                    if (d.channelMessageId != null) {
+                        m.channelMessageId = d.channelMessageId | 0;
                     }
                     if (d.hasMultipleReshares != null) {
                         m.hasMultipleReshares = Boolean(d.hasMultipleReshares);
@@ -1054,15 +1054,15 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                         if (o.oneofs)
                             d._duration = "duration";
                     }
-                    if (m.channelJID != null && m.hasOwnProperty("channelJID")) {
-                        d.channelJID = m.channelJID;
+                    if (m.channelJid != null && m.hasOwnProperty("channelJid")) {
+                        d.channelJid = m.channelJid;
                         if (o.oneofs)
-                            d._channelJID = "channelJID";
+                            d._channelJid = "channelJid";
                     }
-                    if (m.channelMessageID != null && m.hasOwnProperty("channelMessageID")) {
-                        d.channelMessageID = m.channelMessageID;
+                    if (m.channelMessageId != null && m.hasOwnProperty("channelMessageId")) {
+                        d.channelMessageId = m.channelMessageId;
                         if (o.oneofs)
-                            d._channelMessageID = "channelMessageID";
+                            d._channelMessageId = "channelMessageId";
                     }
                     if (m.hasMultipleReshares != null && m.hasOwnProperty("hasMultipleReshares")) {
                         d.hasMultipleReshares = m.hasMultipleReshares;
@@ -1098,13 +1098,13 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            GroupStatus.prototype.authorJID = null;
+            GroupStatus.prototype.authorJid = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(GroupStatus.prototype, "_authorJID", {
-                get: $util.oneOfGetter($oneOfFields = ["authorJID"]),
+            Object.defineProperty(GroupStatus.prototype, "_authorJid", {
+                get: $util.oneOfGetter($oneOfFields = ["authorJid"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -1115,8 +1115,8 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
             GroupStatus.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.authorJID != null && Object.hasOwnProperty.call(m, "authorJID"))
-                    w.uint32(10).string(m.authorJID);
+                if (m.authorJid != null && Object.hasOwnProperty.call(m, "authorJid"))
+                    w.uint32(10).string(m.authorJid);
                 return w;
             };
 
@@ -1134,7 +1134,7 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.authorJID = r.string();
+                            m.authorJid = r.string();
                             break;
                         }
                     default:
@@ -1153,8 +1153,8 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAStatusAttributions.StatusAttribution.GroupStatus();
-                if (d.authorJID != null) {
-                    m.authorJID = String(d.authorJID);
+                if (d.authorJid != null) {
+                    m.authorJid = String(d.authorJid);
                 }
                 return m;
             };
@@ -1163,10 +1163,10 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.authorJID != null && m.hasOwnProperty("authorJID")) {
-                    d.authorJID = m.authorJID;
+                if (m.authorJid != null && m.hasOwnProperty("authorJid")) {
+                    d.authorJid = m.authorJid;
                     if (o.oneofs)
-                        d._authorJID = "authorJID";
+                        d._authorJid = "authorJid";
                 }
                 return d;
             };
@@ -1195,7 +1195,7 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
             }
 
             Music.prototype.authorName = null;
-            Music.prototype.songID = null;
+            Music.prototype.songId = null;
             Music.prototype.title = null;
             Music.prototype.author = null;
             Music.prototype.artistAttribution = null;
@@ -1210,8 +1210,8 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(Music.prototype, "_songID", {
-                get: $util.oneOfGetter($oneOfFields = ["songID"]),
+            Object.defineProperty(Music.prototype, "_songId", {
+                get: $util.oneOfGetter($oneOfFields = ["songId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -1248,8 +1248,8 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                     w = $Writer.create();
                 if (m.authorName != null && Object.hasOwnProperty.call(m, "authorName"))
                     w.uint32(10).string(m.authorName);
-                if (m.songID != null && Object.hasOwnProperty.call(m, "songID"))
-                    w.uint32(18).string(m.songID);
+                if (m.songId != null && Object.hasOwnProperty.call(m, "songId"))
+                    w.uint32(18).string(m.songId);
                 if (m.title != null && Object.hasOwnProperty.call(m, "title"))
                     w.uint32(26).string(m.title);
                 if (m.author != null && Object.hasOwnProperty.call(m, "author"))
@@ -1279,7 +1279,7 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                             break;
                         }
                     case 2: {
-                            m.songID = r.string();
+                            m.songId = r.string();
                             break;
                         }
                     case 3: {
@@ -1317,8 +1317,8 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                 if (d.authorName != null) {
                     m.authorName = String(d.authorName);
                 }
-                if (d.songID != null) {
-                    m.songID = String(d.songID);
+                if (d.songId != null) {
+                    m.songId = String(d.songId);
                 }
                 if (d.title != null) {
                     m.title = String(d.title);
@@ -1344,10 +1344,10 @@ export const WAStatusAttributions = $root.WAStatusAttributions = (() => {
                     if (o.oneofs)
                         d._authorName = "authorName";
                 }
-                if (m.songID != null && m.hasOwnProperty("songID")) {
-                    d.songID = m.songID;
+                if (m.songId != null && m.hasOwnProperty("songId")) {
+                    d.songId = m.songId;
                     if (o.oneofs)
-                        d._songID = "songID";
+                        d._songId = "songId";
                 }
                 if (m.title != null && m.hasOwnProperty("title")) {
                     d.title = m.title;

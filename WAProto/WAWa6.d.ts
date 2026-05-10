@@ -127,7 +127,7 @@ export namespace WAWa6 {
         userAgent?: (WAWa6.ClientPayload.IUserAgent|null);
         webInfo?: (WAWa6.ClientPayload.IWebInfo|null);
         pushName?: (string|null);
-        sessionID?: (number|null);
+        sessionId?: (number|null);
         shortConnect?: (boolean|null);
         connectType?: (WAWa6.ClientPayload.ConnectType|null);
         connectReason?: (WAWa6.ClientPayload.ConnectReason|null);
@@ -142,8 +142,8 @@ export namespace WAWa6 {
         oc?: (boolean|null);
         lc?: (number|null);
         iosAppExtension?: (WAWa6.ClientPayload.IOSAppExtension|null);
-        fbAppID?: (number|Long|null);
-        fbDeviceID?: (Uint8Array|null);
+        fbAppId?: (number|Long|null);
+        fbDeviceId?: (Uint8Array|null);
         pull?: (boolean|null);
         paddingBytes?: (Uint8Array|null);
         yearClass?: (number|null);
@@ -157,7 +157,7 @@ export namespace WAWa6 {
         preacksCount?: (number|null);
         processingQueueSize?: (number|null);
         pairedPeripherals?: (string[]|null);
-        testIsolationID?: (Uint8Array|null);
+        testIsolationId?: (Uint8Array|null);
     }
 
     class ClientPayload implements IClientPayload {
@@ -167,7 +167,7 @@ export namespace WAWa6 {
         public userAgent?: (WAWa6.ClientPayload.IUserAgent|null);
         public webInfo?: (WAWa6.ClientPayload.IWebInfo|null);
         public pushName?: (string|null);
-        public sessionID?: (number|null);
+        public sessionId?: (number|null);
         public shortConnect?: (boolean|null);
         public connectType?: (WAWa6.ClientPayload.ConnectType|null);
         public connectReason?: (WAWa6.ClientPayload.ConnectReason|null);
@@ -182,8 +182,8 @@ export namespace WAWa6 {
         public oc?: (boolean|null);
         public lc?: (number|null);
         public iosAppExtension?: (WAWa6.ClientPayload.IOSAppExtension|null);
-        public fbAppID?: (number|Long|null);
-        public fbDeviceID?: (Uint8Array|null);
+        public fbAppId?: (number|Long|null);
+        public fbDeviceId?: (Uint8Array|null);
         public pull?: (boolean|null);
         public paddingBytes?: (Uint8Array|null);
         public yearClass?: (number|null);
@@ -197,7 +197,7 @@ export namespace WAWa6 {
         public preacksCount?: (number|null);
         public processingQueueSize?: (number|null);
         public pairedPeripherals: string[];
-        public testIsolationID?: (Uint8Array|null);
+        public testIsolationId?: (Uint8Array|null);
         public static create(properties?: WAWa6.IClientPayload): WAWa6.ClientPayload;
         public static encode(m: WAWa6.IClientPayload, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAWa6.ClientPayload;
@@ -334,7 +334,7 @@ export namespace WAWa6 {
                 usesParticipantInKey?: (boolean|null);
                 supportsStarredMessages?: (boolean|null);
                 supportsDocumentMessages?: (boolean|null);
-                supportsURLMessages?: (boolean|null);
+                supportsUrlMessages?: (boolean|null);
                 supportsMediaRetry?: (boolean|null);
                 supportsE2EImage?: (boolean|null);
                 supportsE2EVideo?: (boolean|null);
@@ -349,7 +349,7 @@ export namespace WAWa6 {
                 public usesParticipantInKey?: (boolean|null);
                 public supportsStarredMessages?: (boolean|null);
                 public supportsDocumentMessages?: (boolean|null);
-                public supportsURLMessages?: (boolean|null);
+                public supportsUrlMessages?: (boolean|null);
                 public supportsMediaRetry?: (boolean|null);
                 public supportsE2EImage?: (boolean|null);
                 public supportsE2EVideo?: (boolean|null);
@@ -376,12 +376,12 @@ export namespace WAWa6 {
             manufacturer?: (string|null);
             device?: (string|null);
             osBuildNumber?: (string|null);
-            phoneID?: (string|null);
+            phoneId?: (string|null);
             releaseChannel?: (WAWa6.ClientPayload.UserAgent.ReleaseChannel|null);
             localeLanguageIso6391?: (string|null);
             localeCountryIso31661Alpha2?: (string|null);
             deviceBoard?: (string|null);
-            deviceExpID?: (string|null);
+            deviceExpId?: (string|null);
             deviceType?: (WAWa6.ClientPayload.UserAgent.DeviceType|null);
             deviceModelType?: (string|null);
             distributionChannel?: (WAWa6.ClientPayload.UserAgent.DistributionChannel|null);
@@ -397,12 +397,12 @@ export namespace WAWa6 {
             public manufacturer?: (string|null);
             public device?: (string|null);
             public osBuildNumber?: (string|null);
-            public phoneID?: (string|null);
+            public phoneId?: (string|null);
             public releaseChannel?: (WAWa6.ClientPayload.UserAgent.ReleaseChannel|null);
             public localeLanguageIso6391?: (string|null);
             public localeCountryIso31661Alpha2?: (string|null);
             public deviceBoard?: (string|null);
-            public deviceExpID?: (string|null);
+            public deviceExpId?: (string|null);
             public deviceType?: (WAWa6.ClientPayload.UserAgent.DeviceType|null);
             public deviceModelType?: (string|null);
             public distributionChannel?: (WAWa6.ClientPayload.UserAgent.DistributionChannel|null);
@@ -506,14 +506,14 @@ export namespace WAWa6 {
         }
 
         interface IInteropData {
-            accountID?: (number|Long|null);
+            accountId?: (number|Long|null);
             token?: (Uint8Array|null);
             enableReadReceipts?: (boolean|null);
         }
 
         class InteropData implements IInteropData {
             constructor(p?: WAWa6.ClientPayload.IInteropData);
-            public accountID?: (number|Long|null);
+            public accountId?: (number|Long|null);
             public token?: (Uint8Array|null);
             public enableReadReceipts?: (boolean|null);
             public static create(properties?: WAWa6.ClientPayload.IInteropData): WAWa6.ClientPayload.InteropData;
@@ -529,7 +529,7 @@ export namespace WAWa6 {
             eRegid?: (Uint8Array|null);
             eKeytype?: (Uint8Array|null);
             eIdent?: (Uint8Array|null);
-            eSkeyID?: (Uint8Array|null);
+            eSkeyId?: (Uint8Array|null);
             eSkeyVal?: (Uint8Array|null);
             eSkeySig?: (Uint8Array|null);
             buildHash?: (Uint8Array|null);
@@ -541,7 +541,7 @@ export namespace WAWa6 {
             public eRegid?: (Uint8Array|null);
             public eKeytype?: (Uint8Array|null);
             public eIdent?: (Uint8Array|null);
-            public eSkeyID?: (Uint8Array|null);
+            public eSkeyId?: (Uint8Array|null);
             public eSkeyVal?: (Uint8Array|null);
             public eSkeySig?: (Uint8Array|null);
             public buildHash?: (Uint8Array|null);

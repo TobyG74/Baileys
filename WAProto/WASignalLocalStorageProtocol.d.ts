@@ -12,8 +12,8 @@ export namespace WASignalLocalStorageProtocol {
         receiverChains?: (WASignalLocalStorageProtocol.SessionStructure.IChain[]|null);
         pendingKeyExchange?: (WASignalLocalStorageProtocol.SessionStructure.IPendingKeyExchange|null);
         pendingPreKey?: (WASignalLocalStorageProtocol.SessionStructure.IPendingPreKey|null);
-        remoteRegistrationID?: (number|null);
-        localRegistrationID?: (number|null);
+        remoteRegistrationId?: (number|null);
+        localRegistrationId?: (number|null);
         needsRefresh?: (boolean|null);
         aliceBaseKey?: (Uint8Array|null);
     }
@@ -29,8 +29,8 @@ export namespace WASignalLocalStorageProtocol {
         public receiverChains: WASignalLocalStorageProtocol.SessionStructure.IChain[];
         public pendingKeyExchange?: (WASignalLocalStorageProtocol.SessionStructure.IPendingKeyExchange|null);
         public pendingPreKey?: (WASignalLocalStorageProtocol.SessionStructure.IPendingPreKey|null);
-        public remoteRegistrationID?: (number|null);
-        public localRegistrationID?: (number|null);
+        public remoteRegistrationId?: (number|null);
+        public localRegistrationId?: (number|null);
         public needsRefresh?: (boolean|null);
         public aliceBaseKey?: (Uint8Array|null);
         public static create(properties?: WASignalLocalStorageProtocol.ISessionStructure): WASignalLocalStorageProtocol.SessionStructure;
@@ -45,15 +45,15 @@ export namespace WASignalLocalStorageProtocol {
     namespace SessionStructure {
 
         interface IPendingPreKey {
-            preKeyID?: (number|null);
-            signedPreKeyID?: (number|null);
+            preKeyId?: (number|null);
+            signedPreKeyId?: (number|null);
             baseKey?: (Uint8Array|null);
         }
 
         class PendingPreKey implements IPendingPreKey {
             constructor(p?: WASignalLocalStorageProtocol.SessionStructure.IPendingPreKey);
-            public preKeyID?: (number|null);
-            public signedPreKeyID?: (number|null);
+            public preKeyId?: (number|null);
+            public signedPreKeyId?: (number|null);
             public baseKey?: (Uint8Array|null);
             public static create(properties?: WASignalLocalStorageProtocol.SessionStructure.IPendingPreKey): WASignalLocalStorageProtocol.SessionStructure.PendingPreKey;
             public static encode(m: WASignalLocalStorageProtocol.SessionStructure.IPendingPreKey, w?: $protobuf.Writer): $protobuf.Writer;
@@ -120,7 +120,7 @@ export namespace WASignalLocalStorageProtocol {
                 index?: (number|null);
                 cipherKey?: (Uint8Array|null);
                 macKey?: (Uint8Array|null);
-                IV?: (Uint8Array|null);
+                iv?: (Uint8Array|null);
             }
 
             class MessageKey implements IMessageKey {
@@ -128,7 +128,7 @@ export namespace WASignalLocalStorageProtocol {
                 public index?: (number|null);
                 public cipherKey?: (Uint8Array|null);
                 public macKey?: (Uint8Array|null);
-                public IV?: (Uint8Array|null);
+                public iv?: (Uint8Array|null);
                 public static create(properties?: WASignalLocalStorageProtocol.SessionStructure.Chain.IMessageKey): WASignalLocalStorageProtocol.SessionStructure.Chain.MessageKey;
                 public static encode(m: WASignalLocalStorageProtocol.SessionStructure.Chain.IMessageKey, w?: $protobuf.Writer): $protobuf.Writer;
                 public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASignalLocalStorageProtocol.SessionStructure.Chain.MessageKey;
@@ -177,14 +177,14 @@ export namespace WASignalLocalStorageProtocol {
     }
 
     interface IPreKeyRecordStructure {
-        ID?: (number|null);
+        id?: (number|null);
         publicKey?: (Uint8Array|null);
         privateKey?: (Uint8Array|null);
     }
 
     class PreKeyRecordStructure implements IPreKeyRecordStructure {
         constructor(p?: WASignalLocalStorageProtocol.IPreKeyRecordStructure);
-        public ID?: (number|null);
+        public id?: (number|null);
         public publicKey?: (Uint8Array|null);
         public privateKey?: (Uint8Array|null);
         public static create(properties?: WASignalLocalStorageProtocol.IPreKeyRecordStructure): WASignalLocalStorageProtocol.PreKeyRecordStructure;
@@ -197,7 +197,7 @@ export namespace WASignalLocalStorageProtocol {
     }
 
     interface ISignedPreKeyRecordStructure {
-        ID?: (number|null);
+        id?: (number|null);
         publicKey?: (Uint8Array|null);
         privateKey?: (Uint8Array|null);
         signature?: (Uint8Array|null);
@@ -206,7 +206,7 @@ export namespace WASignalLocalStorageProtocol {
 
     class SignedPreKeyRecordStructure implements ISignedPreKeyRecordStructure {
         constructor(p?: WASignalLocalStorageProtocol.ISignedPreKeyRecordStructure);
-        public ID?: (number|null);
+        public id?: (number|null);
         public publicKey?: (Uint8Array|null);
         public privateKey?: (Uint8Array|null);
         public signature?: (Uint8Array|null);
@@ -239,7 +239,7 @@ export namespace WASignalLocalStorageProtocol {
     }
 
     interface ISenderKeyStateStructure {
-        senderKeyID?: (number|null);
+        senderKeyId?: (number|null);
         senderChainKey?: (WASignalLocalStorageProtocol.SenderKeyStateStructure.ISenderChainKey|null);
         senderSigningKey?: (WASignalLocalStorageProtocol.SenderKeyStateStructure.ISenderSigningKey|null);
         senderMessageKeys?: (WASignalLocalStorageProtocol.SenderKeyStateStructure.ISenderMessageKey[]|null);
@@ -247,7 +247,7 @@ export namespace WASignalLocalStorageProtocol {
 
     class SenderKeyStateStructure implements ISenderKeyStateStructure {
         constructor(p?: WASignalLocalStorageProtocol.ISenderKeyStateStructure);
-        public senderKeyID?: (number|null);
+        public senderKeyId?: (number|null);
         public senderChainKey?: (WASignalLocalStorageProtocol.SenderKeyStateStructure.ISenderChainKey|null);
         public senderSigningKey?: (WASignalLocalStorageProtocol.SenderKeyStateStructure.ISenderSigningKey|null);
         public senderMessageKeys: WASignalLocalStorageProtocol.SenderKeyStateStructure.ISenderMessageKey[];
