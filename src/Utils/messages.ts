@@ -879,7 +879,7 @@ export const getDevice = (id: string) =>
 /** Upserts a receipt in the message */
 export const updateMessageWithReceipt = (msg: Pick<WAMessage, 'userReceipt'>, receipt: MessageUserReceipt) => {
 	msg.userReceipt = msg.userReceipt || []
-	const recp = msg.userReceipt.find(m => m.userJid === receipt.userJid)
+	const recp = msg.userReceipt.find((m: proto.IUserReceipt) => m.userJid === receipt.userJid)
 	if (recp) {
 		Object.assign(recp, receipt)
 	} else {
@@ -891,7 +891,7 @@ export const updateMessageWithReceipt = (msg: Pick<WAMessage, 'userReceipt'>, re
 export const updateMessageWithReaction = (msg: Pick<WAMessage, 'reactions'>, reaction: proto.IReaction) => {
 	const authorID = getKeyAuthor(reaction.key)
 
-	const reactions = (msg.reactions || []).filter(r => getKeyAuthor(r.key) !== authorID)
+	const reactions = (msg.reactions || []).filter((r: proto.IReaction) => getKeyAuthor(r.key) !== authorID)
 	reaction.text = reaction.text || ''
 	reactions.push(reaction)
 	msg.reactions = reactions
@@ -901,7 +901,7 @@ export const updateMessageWithReaction = (msg: Pick<WAMessage, 'reactions'>, rea
 export const updateMessageWithPollUpdate = (msg: Pick<WAMessage, 'pollUpdates'>, update: proto.IPollUpdate) => {
 	const authorID = getKeyAuthor(update.pollUpdateMessageKey)
 
-	const reactions = (msg.pollUpdates || []).filter(r => getKeyAuthor(r.pollUpdateMessageKey) !== authorID)
+	const reactions = (msg.pollUpdates || []).filter((r: proto.IPollUpdate) => getKeyAuthor(r.pollUpdateMessageKey) !== authorID)
 	if (update.vote?.selectedOptions?.length) {
 		reactions.push(update)
 	}
@@ -916,7 +916,7 @@ export const updateMessageWithEventResponse = (
 ) => {
 	const authorID = getKeyAuthor(update.eventResponseMessageKey)
 
-	const responses = (msg.eventResponses || []).filter(r => getKeyAuthor(r.eventResponseMessageKey) !== authorID)
+	const responses = (msg.eventResponses || []).filter((r: proto.IEventResponse) => getKeyAuthor(r.eventResponseMessageKey) !== authorID)
 	responses.push(update)
 
 	msg.eventResponses = responses
@@ -943,7 +943,7 @@ export function getAggregateVotesInPollMessage(
 		message?.pollCreationMessageV3?.options ||
 		[]
 	const voteHashMap = opts.reduce(
-		(acc, opt) => {
+		(acc: { [_: string]: VoteAggregation }, opt) => {
 			const hash = sha256(Buffer.from(opt.optionName || '')).toString()
 			acc[hash] = {
 				name: opt.optionName || '',
@@ -1075,11 +1075,11 @@ export const downloadMediaMessage = async <Type extends 'buffer' | 'stream'>(
 		}
 
 		const contentType = getContentType(mContent)
-		let mediaType = contentType?.replace('Message', '') as MediaType
+		let mediaType = (contentType as string | undefined)?.replace('Message', '') as MediaType
 		const media = mContent[contentType!]
 
 		if (!media || typeof media !== 'object' || (!('url' in media) && !('thumbnailDirectPath' in media))) {
-			throw new Boom(`"${contentType}" message is not a media message`)
+			throw new Boom(`"${String(contentType)}" message is not a media message`)
 		}
 
 		let download: DownloadableMessage
