@@ -222,6 +222,18 @@ export const WACommon = $root.WACommon = (() => {
         MessageKey.prototype.ID = null;
         MessageKey.prototype.participant = null;
 
+        // Aliases: Baileys lib uses camelCase (remoteJid, id) but proto uses remoteJID, ID
+        Object.defineProperty(MessageKey.prototype, "remoteJid", {
+            get() { return this.remoteJID; },
+            set(v) { this.remoteJID = v; },
+            enumerable: false, configurable: true
+        });
+        Object.defineProperty(MessageKey.prototype, "id", {
+            get() { return this.ID; },
+            set(v) { this.ID = v; },
+            enumerable: false, configurable: true
+        });
+
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
@@ -313,12 +325,16 @@ export const WACommon = $root.WACommon = (() => {
             var m = new $root.WACommon.MessageKey();
             if (d.remoteJID != null) {
                 m.remoteJID = String(d.remoteJID);
+            } else if (d.remoteJid != null) {
+                m.remoteJID = String(d.remoteJid);
             }
             if (d.fromMe != null) {
                 m.fromMe = Boolean(d.fromMe);
             }
             if (d.ID != null) {
                 m.ID = String(d.ID);
+            } else if (d.id != null) {
+                m.ID = String(d.id);
             }
             if (d.participant != null) {
                 m.participant = String(d.participant);
