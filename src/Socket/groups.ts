@@ -8,6 +8,7 @@ import {
 	getBinaryNodeChild,
 	getBinaryNodeChildren,
 	getBinaryNodeChildString,
+	isJidGroup,
 	isLidUser,
 	isPnUser,
 	jidEncode,
@@ -31,8 +32,12 @@ export const makeGroupsSocket = (config: SocketConfig) => {
 		})
 
 	const groupMetadata = async (jid: string) => {
+		if (!isJidGroup(jid)) {
+			throw new Boom(`Invalid group jid: ${jid}`, { statusCode: 400, data: { jid } })
+		}
+
 		const result = await groupQuery(jid, 'get', [{ tag: 'query', attrs: { request: 'interactive' } }])
-		return extractGroupMetadata(result)
+		return extractGroupMetadata(result, jid)
 	}
 
 	const groupFetchAllParticipating = async () => {
@@ -301,7 +306,7 @@ export const makeGroupsSocket = (config: SocketConfig) => {
 	}
 }
 
-export const extractGroupMetadata = (result: BinaryNode) => {
+export const extractGroupMetadata = (result: BinaryNode, requestedJid?: string) => {
 	const group = getBinaryNodeChild(result, 'group')
 	if (!group) {
 		// Mirror WAWeb: surface server/client errors with their code+text instead of crashing.
@@ -309,14 +314,24 @@ export const extractGroupMetadata = (result: BinaryNode) => {
 		if (errorNode) {
 			const code = errorNode.attrs.code ? +errorNode.attrs.code : 500
 			const text = errorNode.attrs.text || 'group metadata query failed'
-			throw new Boom(text, { statusCode: code, data: errorNode })
+			throw new Boom(text, { statusCode: code, data: { error: errorNode, jid: requestedJid } })
 		}
 
-		throw new Boom('Invalid group metadata response: missing <group> node', { data: result })
+		// No <group> and no <error>: server returned an empty/unknown iq result. Most common cause
+		// is querying a JID the user is no longer a member of, or a non-group JID that slipped past
+		// validation. Surface as 404 so callers can branch on error.output.statusCode.
+		const jidLabel = requestedJid ? ` for ${requestedJid}` : ''
+		throw new Boom(`Group metadata not found${jidLabel}: missing <group> node`, {
+			statusCode: 404,
+			data: { jid: requestedJid, response: result }
+		})
 	}
 
 	if (!group.attrs.id) {
-		throw new Boom('Invalid group metadata response: missing group id', { data: group })
+		throw new Boom('Invalid group metadata response: missing group id', {
+			statusCode: 502,
+			data: { jid: requestedJid, group }
+		})
 	}
 
 	const descChild = getBinaryNodeChild(group, 'description')

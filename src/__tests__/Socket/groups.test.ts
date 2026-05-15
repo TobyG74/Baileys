@@ -62,6 +62,25 @@ describe('extractGroupMetadata', () => {
 		expect(() => extractGroupMetadata(result)).toThrow(/missing <group>/)
 	})
 
+	it('uses 404 status when neither <group> nor <error> is present (group not found / not a member)', () => {
+		const result: BinaryNode = { tag: 'iq', attrs: { type: 'result' }, content: [] }
+
+		const captured = captureThrow(() => extractGroupMetadata(result))
+		expect(captured).toBeInstanceOf(Boom)
+		expect((captured as Boom).output.statusCode).toBe(404)
+	})
+
+	it('surfaces the requested jid in both the message and the Boom data when <group> is missing', () => {
+		const result: BinaryNode = { tag: 'iq', attrs: { type: 'result' }, content: [] }
+		const jid = '120363000000000000@g.us'
+
+		const captured = captureThrow(() => extractGroupMetadata(result, jid))
+		expect(captured).toBeInstanceOf(Boom)
+		expect((captured as Boom).output.statusCode).toBe(404)
+		expect((captured as Error).message).toContain(jid)
+		expect((captured as Boom).data).toEqual({ jid, response: result })
+	})
+
 	it('throws when the <group> node lacks an id', () => {
 		const group = minimalGroupNode()
 		delete (group.attrs as Record<string, string>).id
