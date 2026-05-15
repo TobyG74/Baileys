@@ -141,10 +141,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
         CallLogRecord.prototype.isVideo = null;
         CallLogRecord.prototype.isCallLink = null;
         CallLogRecord.prototype.callLinkToken = null;
-        CallLogRecord.prototype.scheduledCallID = null;
-        CallLogRecord.prototype.callID = null;
-        CallLogRecord.prototype.callCreatorJID = null;
-        CallLogRecord.prototype.groupJID = null;
+        CallLogRecord.prototype.scheduledCallId = null;
+        CallLogRecord.prototype.callId = null;
+        CallLogRecord.prototype.callCreatorJid = null;
+        CallLogRecord.prototype.groupJid = null;
         CallLogRecord.prototype.participants = $util.emptyArray;
         CallLogRecord.prototype.callType = null;
 
@@ -205,26 +205,26 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(CallLogRecord.prototype, "_scheduledCallID", {
-            get: $util.oneOfGetter($oneOfFields = ["scheduledCallID"]),
+        Object.defineProperty(CallLogRecord.prototype, "_scheduledCallId", {
+            get: $util.oneOfGetter($oneOfFields = ["scheduledCallId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(CallLogRecord.prototype, "_callID", {
-            get: $util.oneOfGetter($oneOfFields = ["callID"]),
+        Object.defineProperty(CallLogRecord.prototype, "_callId", {
+            get: $util.oneOfGetter($oneOfFields = ["callId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(CallLogRecord.prototype, "_callCreatorJID", {
-            get: $util.oneOfGetter($oneOfFields = ["callCreatorJID"]),
+        Object.defineProperty(CallLogRecord.prototype, "_callCreatorJid", {
+            get: $util.oneOfGetter($oneOfFields = ["callCreatorJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(CallLogRecord.prototype, "_groupJID", {
-            get: $util.oneOfGetter($oneOfFields = ["groupJID"]),
+        Object.defineProperty(CallLogRecord.prototype, "_groupJid", {
+            get: $util.oneOfGetter($oneOfFields = ["groupJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -259,14 +259,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w.uint32(64).bool(m.isCallLink);
             if (m.callLinkToken != null && Object.hasOwnProperty.call(m, "callLinkToken"))
                 w.uint32(74).string(m.callLinkToken);
-            if (m.scheduledCallID != null && Object.hasOwnProperty.call(m, "scheduledCallID"))
-                w.uint32(82).string(m.scheduledCallID);
-            if (m.callID != null && Object.hasOwnProperty.call(m, "callID"))
-                w.uint32(90).string(m.callID);
-            if (m.callCreatorJID != null && Object.hasOwnProperty.call(m, "callCreatorJID"))
-                w.uint32(98).string(m.callCreatorJID);
-            if (m.groupJID != null && Object.hasOwnProperty.call(m, "groupJID"))
-                w.uint32(106).string(m.groupJID);
+            if (m.scheduledCallId != null && Object.hasOwnProperty.call(m, "scheduledCallId"))
+                w.uint32(82).string(m.scheduledCallId);
+            if (m.callId != null && Object.hasOwnProperty.call(m, "callId"))
+                w.uint32(90).string(m.callId);
+            if (m.callCreatorJid != null && Object.hasOwnProperty.call(m, "callCreatorJid"))
+                w.uint32(98).string(m.callCreatorJid);
+            if (m.groupJid != null && Object.hasOwnProperty.call(m, "groupJid"))
+                w.uint32(106).string(m.groupJid);
             if (m.participants != null && m.participants.length) {
                 for (var i = 0; i < m.participants.length; ++i)
                     $root.WASyncAction.CallLogRecord.ParticipantInfo.encode(m.participants[i], w.uint32(114).fork()).ldelim();
@@ -326,19 +326,19 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 10: {
-                        m.scheduledCallID = r.string();
+                        m.scheduledCallId = r.string();
                         break;
                     }
                 case 11: {
-                        m.callID = r.string();
+                        m.callId = r.string();
                         break;
                     }
                 case 12: {
-                        m.callCreatorJID = r.string();
+                        m.callCreatorJid = r.string();
                         break;
                     }
                 case 13: {
-                        m.groupJID = r.string();
+                        m.groupJid = r.string();
                         break;
                     }
                 case 14: {
@@ -478,17 +478,17 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (d.callLinkToken != null) {
                 m.callLinkToken = String(d.callLinkToken);
             }
-            if (d.scheduledCallID != null) {
-                m.scheduledCallID = String(d.scheduledCallID);
+            if (d.scheduledCallId != null) {
+                m.scheduledCallId = String(d.scheduledCallId);
             }
-            if (d.callID != null) {
-                m.callID = String(d.callID);
+            if (d.callId != null) {
+                m.callId = String(d.callId);
             }
-            if (d.callCreatorJID != null) {
-                m.callCreatorJID = String(d.callCreatorJID);
+            if (d.callCreatorJid != null) {
+                m.callCreatorJid = String(d.callCreatorJid);
             }
-            if (d.groupJID != null) {
-                m.groupJID = String(d.groupJID);
+            if (d.groupJid != null) {
+                m.groupJid = String(d.groupJid);
             }
             if (d.participants) {
                 if (!Array.isArray(d.participants))
@@ -581,25 +581,25 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._callLinkToken = "callLinkToken";
             }
-            if (m.scheduledCallID != null && m.hasOwnProperty("scheduledCallID")) {
-                d.scheduledCallID = m.scheduledCallID;
+            if (m.scheduledCallId != null && m.hasOwnProperty("scheduledCallId")) {
+                d.scheduledCallId = m.scheduledCallId;
                 if (o.oneofs)
-                    d._scheduledCallID = "scheduledCallID";
+                    d._scheduledCallId = "scheduledCallId";
             }
-            if (m.callID != null && m.hasOwnProperty("callID")) {
-                d.callID = m.callID;
+            if (m.callId != null && m.hasOwnProperty("callId")) {
+                d.callId = m.callId;
                 if (o.oneofs)
-                    d._callID = "callID";
+                    d._callId = "callId";
             }
-            if (m.callCreatorJID != null && m.hasOwnProperty("callCreatorJID")) {
-                d.callCreatorJID = m.callCreatorJID;
+            if (m.callCreatorJid != null && m.hasOwnProperty("callCreatorJid")) {
+                d.callCreatorJid = m.callCreatorJid;
                 if (o.oneofs)
-                    d._callCreatorJID = "callCreatorJID";
+                    d._callCreatorJid = "callCreatorJid";
             }
-            if (m.groupJID != null && m.hasOwnProperty("groupJID")) {
-                d.groupJID = m.groupJID;
+            if (m.groupJid != null && m.hasOwnProperty("groupJid")) {
+                d.groupJid = m.groupJid;
                 if (o.oneofs)
-                    d._groupJID = "groupJID";
+                    d._groupJid = "groupJid";
             }
             if (m.participants && m.participants.length) {
                 d.participants = [];
@@ -668,14 +668,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            ParticipantInfo.prototype.userJID = null;
+            ParticipantInfo.prototype.userJid = null;
             ParticipantInfo.prototype.callResult = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ParticipantInfo.prototype, "_userJID", {
-                get: $util.oneOfGetter($oneOfFields = ["userJID"]),
+            Object.defineProperty(ParticipantInfo.prototype, "_userJid", {
+                get: $util.oneOfGetter($oneOfFields = ["userJid"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -692,8 +692,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             ParticipantInfo.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.userJID != null && Object.hasOwnProperty.call(m, "userJID"))
-                    w.uint32(10).string(m.userJID);
+                if (m.userJid != null && Object.hasOwnProperty.call(m, "userJid"))
+                    w.uint32(10).string(m.userJid);
                 if (m.callResult != null && Object.hasOwnProperty.call(m, "callResult"))
                     w.uint32(16).int32(m.callResult);
                 return w;
@@ -713,7 +713,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.userJID = r.string();
+                            m.userJid = r.string();
                             break;
                         }
                     case 2: {
@@ -736,8 +736,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WASyncAction.CallLogRecord.ParticipantInfo();
-                if (d.userJID != null) {
-                    m.userJID = String(d.userJID);
+                if (d.userJid != null) {
+                    m.userJid = String(d.userJid);
                 }
                 switch (d.callResult) {
                 default:
@@ -798,10 +798,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.userJID != null && m.hasOwnProperty("userJID")) {
-                    d.userJID = m.userJID;
+                if (m.userJid != null && m.hasOwnProperty("userJid")) {
+                    d.userJid = m.userJid;
                     if (o.oneofs)
-                        d._userJID = "userJID";
+                        d._userJid = "userJid";
                 }
                 if (m.callResult != null && m.hasOwnProperty("callResult")) {
                     d.callResult = o.enums === String ? $root.WASyncAction.CallLogRecord.CallResult[m.callResult] === undefined ? m.callResult : $root.WASyncAction.CallLogRecord.CallResult[m.callResult] : m.callResult;
@@ -848,10 +848,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
         SettingsSyncAction.prototype.isReactionsNotificationEnabled = null;
         SettingsSyncAction.prototype.isStatusReactionsNotificationEnabled = null;
         SettingsSyncAction.prototype.isTextPreviewForNotificationEnabled = null;
-        SettingsSyncAction.prototype.defaultNotificationToneID = null;
-        SettingsSyncAction.prototype.groupDefaultNotificationToneID = null;
+        SettingsSyncAction.prototype.defaultNotificationToneId = null;
+        SettingsSyncAction.prototype.groupDefaultNotificationToneId = null;
         SettingsSyncAction.prototype.appTheme = null;
-        SettingsSyncAction.prototype.wallpaperID = null;
+        SettingsSyncAction.prototype.wallpaperId = null;
         SettingsSyncAction.prototype.isDoodleWallpaperEnabled = null;
         SettingsSyncAction.prototype.fontSize = null;
         SettingsSyncAction.prototype.isPhotosAutodownloadEnabled = null;
@@ -859,17 +859,17 @@ export const WASyncAction = $root.WASyncAction = (() => {
         SettingsSyncAction.prototype.isVideosAutodownloadEnabled = null;
         SettingsSyncAction.prototype.isDocumentsAutodownloadEnabled = null;
         SettingsSyncAction.prototype.disableLinkPreviews = null;
-        SettingsSyncAction.prototype.notificationToneID = null;
+        SettingsSyncAction.prototype.notificationToneId = null;
         SettingsSyncAction.prototype.mediaUploadQuality = null;
         SettingsSyncAction.prototype.isSpellCheckEnabled = null;
         SettingsSyncAction.prototype.isEnterToSendEnabled = null;
         SettingsSyncAction.prototype.isGroupMessageNotificationEnabled = null;
         SettingsSyncAction.prototype.isGroupReactionsNotificationEnabled = null;
         SettingsSyncAction.prototype.isStatusNotificationEnabled = null;
-        SettingsSyncAction.prototype.statusNotificationToneID = null;
+        SettingsSyncAction.prototype.statusNotificationToneId = null;
         SettingsSyncAction.prototype.shouldPlaySoundForCallNotification = null;
-        SettingsSyncAction.prototype.chatThemeID = null;
-        SettingsSyncAction.prototype.colorSchemeID = null;
+        SettingsSyncAction.prototype.chatThemeId = null;
+        SettingsSyncAction.prototype.colorSchemeId = null;
 
         let $oneOfFields;
 
@@ -940,14 +940,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SettingsSyncAction.prototype, "_defaultNotificationToneID", {
-            get: $util.oneOfGetter($oneOfFields = ["defaultNotificationToneID"]),
+        Object.defineProperty(SettingsSyncAction.prototype, "_defaultNotificationToneId", {
+            get: $util.oneOfGetter($oneOfFields = ["defaultNotificationToneId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SettingsSyncAction.prototype, "_groupDefaultNotificationToneID", {
-            get: $util.oneOfGetter($oneOfFields = ["groupDefaultNotificationToneID"]),
+        Object.defineProperty(SettingsSyncAction.prototype, "_groupDefaultNotificationToneId", {
+            get: $util.oneOfGetter($oneOfFields = ["groupDefaultNotificationToneId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -958,8 +958,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SettingsSyncAction.prototype, "_wallpaperID", {
-            get: $util.oneOfGetter($oneOfFields = ["wallpaperID"]),
+        Object.defineProperty(SettingsSyncAction.prototype, "_wallpaperId", {
+            get: $util.oneOfGetter($oneOfFields = ["wallpaperId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1006,8 +1006,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SettingsSyncAction.prototype, "_notificationToneID", {
-            get: $util.oneOfGetter($oneOfFields = ["notificationToneID"]),
+        Object.defineProperty(SettingsSyncAction.prototype, "_notificationToneId", {
+            get: $util.oneOfGetter($oneOfFields = ["notificationToneId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1048,8 +1048,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SettingsSyncAction.prototype, "_statusNotificationToneID", {
-            get: $util.oneOfGetter($oneOfFields = ["statusNotificationToneID"]),
+        Object.defineProperty(SettingsSyncAction.prototype, "_statusNotificationToneId", {
+            get: $util.oneOfGetter($oneOfFields = ["statusNotificationToneId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1060,14 +1060,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SettingsSyncAction.prototype, "_chatThemeID", {
-            get: $util.oneOfGetter($oneOfFields = ["chatThemeID"]),
+        Object.defineProperty(SettingsSyncAction.prototype, "_chatThemeId", {
+            get: $util.oneOfGetter($oneOfFields = ["chatThemeId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SettingsSyncAction.prototype, "_colorSchemeID", {
-            get: $util.oneOfGetter($oneOfFields = ["colorSchemeID"]),
+        Object.defineProperty(SettingsSyncAction.prototype, "_colorSchemeId", {
+            get: $util.oneOfGetter($oneOfFields = ["colorSchemeId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1100,14 +1100,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w.uint32(80).bool(m.isStatusReactionsNotificationEnabled);
             if (m.isTextPreviewForNotificationEnabled != null && Object.hasOwnProperty.call(m, "isTextPreviewForNotificationEnabled"))
                 w.uint32(88).bool(m.isTextPreviewForNotificationEnabled);
-            if (m.defaultNotificationToneID != null && Object.hasOwnProperty.call(m, "defaultNotificationToneID"))
-                w.uint32(96).int32(m.defaultNotificationToneID);
-            if (m.groupDefaultNotificationToneID != null && Object.hasOwnProperty.call(m, "groupDefaultNotificationToneID"))
-                w.uint32(104).int32(m.groupDefaultNotificationToneID);
+            if (m.defaultNotificationToneId != null && Object.hasOwnProperty.call(m, "defaultNotificationToneId"))
+                w.uint32(96).int32(m.defaultNotificationToneId);
+            if (m.groupDefaultNotificationToneId != null && Object.hasOwnProperty.call(m, "groupDefaultNotificationToneId"))
+                w.uint32(104).int32(m.groupDefaultNotificationToneId);
             if (m.appTheme != null && Object.hasOwnProperty.call(m, "appTheme"))
                 w.uint32(112).int32(m.appTheme);
-            if (m.wallpaperID != null && Object.hasOwnProperty.call(m, "wallpaperID"))
-                w.uint32(120).int32(m.wallpaperID);
+            if (m.wallpaperId != null && Object.hasOwnProperty.call(m, "wallpaperId"))
+                w.uint32(120).int32(m.wallpaperId);
             if (m.isDoodleWallpaperEnabled != null && Object.hasOwnProperty.call(m, "isDoodleWallpaperEnabled"))
                 w.uint32(128).bool(m.isDoodleWallpaperEnabled);
             if (m.fontSize != null && Object.hasOwnProperty.call(m, "fontSize"))
@@ -1122,8 +1122,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w.uint32(168).bool(m.isDocumentsAutodownloadEnabled);
             if (m.disableLinkPreviews != null && Object.hasOwnProperty.call(m, "disableLinkPreviews"))
                 w.uint32(176).bool(m.disableLinkPreviews);
-            if (m.notificationToneID != null && Object.hasOwnProperty.call(m, "notificationToneID"))
-                w.uint32(184).int32(m.notificationToneID);
+            if (m.notificationToneId != null && Object.hasOwnProperty.call(m, "notificationToneId"))
+                w.uint32(184).int32(m.notificationToneId);
             if (m.mediaUploadQuality != null && Object.hasOwnProperty.call(m, "mediaUploadQuality"))
                 w.uint32(192).int32(m.mediaUploadQuality);
             if (m.isSpellCheckEnabled != null && Object.hasOwnProperty.call(m, "isSpellCheckEnabled"))
@@ -1136,14 +1136,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w.uint32(224).bool(m.isGroupReactionsNotificationEnabled);
             if (m.isStatusNotificationEnabled != null && Object.hasOwnProperty.call(m, "isStatusNotificationEnabled"))
                 w.uint32(232).bool(m.isStatusNotificationEnabled);
-            if (m.statusNotificationToneID != null && Object.hasOwnProperty.call(m, "statusNotificationToneID"))
-                w.uint32(240).int32(m.statusNotificationToneID);
+            if (m.statusNotificationToneId != null && Object.hasOwnProperty.call(m, "statusNotificationToneId"))
+                w.uint32(240).int32(m.statusNotificationToneId);
             if (m.shouldPlaySoundForCallNotification != null && Object.hasOwnProperty.call(m, "shouldPlaySoundForCallNotification"))
                 w.uint32(248).bool(m.shouldPlaySoundForCallNotification);
-            if (m.chatThemeID != null && Object.hasOwnProperty.call(m, "chatThemeID"))
-                w.uint32(258).string(m.chatThemeID);
-            if (m.colorSchemeID != null && Object.hasOwnProperty.call(m, "colorSchemeID"))
-                w.uint32(266).string(m.colorSchemeID);
+            if (m.chatThemeId != null && Object.hasOwnProperty.call(m, "chatThemeId"))
+                w.uint32(258).string(m.chatThemeId);
+            if (m.colorSchemeId != null && Object.hasOwnProperty.call(m, "colorSchemeId"))
+                w.uint32(266).string(m.colorSchemeId);
             return w;
         };
 
@@ -1205,11 +1205,11 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 12: {
-                        m.defaultNotificationToneID = r.int32();
+                        m.defaultNotificationToneId = r.int32();
                         break;
                     }
                 case 13: {
-                        m.groupDefaultNotificationToneID = r.int32();
+                        m.groupDefaultNotificationToneId = r.int32();
                         break;
                     }
                 case 14: {
@@ -1217,7 +1217,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 15: {
-                        m.wallpaperID = r.int32();
+                        m.wallpaperId = r.int32();
                         break;
                     }
                 case 16: {
@@ -1249,7 +1249,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 23: {
-                        m.notificationToneID = r.int32();
+                        m.notificationToneId = r.int32();
                         break;
                     }
                 case 24: {
@@ -1277,7 +1277,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 30: {
-                        m.statusNotificationToneID = r.int32();
+                        m.statusNotificationToneId = r.int32();
                         break;
                     }
                 case 31: {
@@ -1285,11 +1285,11 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 32: {
-                        m.chatThemeID = r.string();
+                        m.chatThemeId = r.string();
                         break;
                     }
                 case 33: {
-                        m.colorSchemeID = r.string();
+                        m.colorSchemeId = r.string();
                         break;
                     }
                 default:
@@ -1383,17 +1383,17 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (d.isTextPreviewForNotificationEnabled != null) {
                 m.isTextPreviewForNotificationEnabled = Boolean(d.isTextPreviewForNotificationEnabled);
             }
-            if (d.defaultNotificationToneID != null) {
-                m.defaultNotificationToneID = d.defaultNotificationToneID | 0;
+            if (d.defaultNotificationToneId != null) {
+                m.defaultNotificationToneId = d.defaultNotificationToneId | 0;
             }
-            if (d.groupDefaultNotificationToneID != null) {
-                m.groupDefaultNotificationToneID = d.groupDefaultNotificationToneID | 0;
+            if (d.groupDefaultNotificationToneId != null) {
+                m.groupDefaultNotificationToneId = d.groupDefaultNotificationToneId | 0;
             }
             if (d.appTheme != null) {
                 m.appTheme = d.appTheme | 0;
             }
-            if (d.wallpaperID != null) {
-                m.wallpaperID = d.wallpaperID | 0;
+            if (d.wallpaperId != null) {
+                m.wallpaperId = d.wallpaperId | 0;
             }
             if (d.isDoodleWallpaperEnabled != null) {
                 m.isDoodleWallpaperEnabled = Boolean(d.isDoodleWallpaperEnabled);
@@ -1416,8 +1416,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (d.disableLinkPreviews != null) {
                 m.disableLinkPreviews = Boolean(d.disableLinkPreviews);
             }
-            if (d.notificationToneID != null) {
-                m.notificationToneID = d.notificationToneID | 0;
+            if (d.notificationToneId != null) {
+                m.notificationToneId = d.notificationToneId | 0;
             }
             switch (d.mediaUploadQuality) {
             default:
@@ -1454,17 +1454,17 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (d.isStatusNotificationEnabled != null) {
                 m.isStatusNotificationEnabled = Boolean(d.isStatusNotificationEnabled);
             }
-            if (d.statusNotificationToneID != null) {
-                m.statusNotificationToneID = d.statusNotificationToneID | 0;
+            if (d.statusNotificationToneId != null) {
+                m.statusNotificationToneId = d.statusNotificationToneId | 0;
             }
             if (d.shouldPlaySoundForCallNotification != null) {
                 m.shouldPlaySoundForCallNotification = Boolean(d.shouldPlaySoundForCallNotification);
             }
-            if (d.chatThemeID != null) {
-                m.chatThemeID = String(d.chatThemeID);
+            if (d.chatThemeId != null) {
+                m.chatThemeId = String(d.chatThemeId);
             }
-            if (d.colorSchemeID != null) {
-                m.colorSchemeID = String(d.colorSchemeID);
+            if (d.colorSchemeId != null) {
+                m.colorSchemeId = String(d.colorSchemeId);
             }
             return m;
         };
@@ -1528,25 +1528,25 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._isTextPreviewForNotificationEnabled = "isTextPreviewForNotificationEnabled";
             }
-            if (m.defaultNotificationToneID != null && m.hasOwnProperty("defaultNotificationToneID")) {
-                d.defaultNotificationToneID = m.defaultNotificationToneID;
+            if (m.defaultNotificationToneId != null && m.hasOwnProperty("defaultNotificationToneId")) {
+                d.defaultNotificationToneId = m.defaultNotificationToneId;
                 if (o.oneofs)
-                    d._defaultNotificationToneID = "defaultNotificationToneID";
+                    d._defaultNotificationToneId = "defaultNotificationToneId";
             }
-            if (m.groupDefaultNotificationToneID != null && m.hasOwnProperty("groupDefaultNotificationToneID")) {
-                d.groupDefaultNotificationToneID = m.groupDefaultNotificationToneID;
+            if (m.groupDefaultNotificationToneId != null && m.hasOwnProperty("groupDefaultNotificationToneId")) {
+                d.groupDefaultNotificationToneId = m.groupDefaultNotificationToneId;
                 if (o.oneofs)
-                    d._groupDefaultNotificationToneID = "groupDefaultNotificationToneID";
+                    d._groupDefaultNotificationToneId = "groupDefaultNotificationToneId";
             }
             if (m.appTheme != null && m.hasOwnProperty("appTheme")) {
                 d.appTheme = m.appTheme;
                 if (o.oneofs)
                     d._appTheme = "appTheme";
             }
-            if (m.wallpaperID != null && m.hasOwnProperty("wallpaperID")) {
-                d.wallpaperID = m.wallpaperID;
+            if (m.wallpaperId != null && m.hasOwnProperty("wallpaperId")) {
+                d.wallpaperId = m.wallpaperId;
                 if (o.oneofs)
-                    d._wallpaperID = "wallpaperID";
+                    d._wallpaperId = "wallpaperId";
             }
             if (m.isDoodleWallpaperEnabled != null && m.hasOwnProperty("isDoodleWallpaperEnabled")) {
                 d.isDoodleWallpaperEnabled = m.isDoodleWallpaperEnabled;
@@ -1583,10 +1583,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._disableLinkPreviews = "disableLinkPreviews";
             }
-            if (m.notificationToneID != null && m.hasOwnProperty("notificationToneID")) {
-                d.notificationToneID = m.notificationToneID;
+            if (m.notificationToneId != null && m.hasOwnProperty("notificationToneId")) {
+                d.notificationToneId = m.notificationToneId;
                 if (o.oneofs)
-                    d._notificationToneID = "notificationToneID";
+                    d._notificationToneId = "notificationToneId";
             }
             if (m.mediaUploadQuality != null && m.hasOwnProperty("mediaUploadQuality")) {
                 d.mediaUploadQuality = o.enums === String ? $root.WASyncAction.SettingsSyncAction.MediaQualitySetting[m.mediaUploadQuality] === undefined ? m.mediaUploadQuality : $root.WASyncAction.SettingsSyncAction.MediaQualitySetting[m.mediaUploadQuality] : m.mediaUploadQuality;
@@ -1618,25 +1618,25 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._isStatusNotificationEnabled = "isStatusNotificationEnabled";
             }
-            if (m.statusNotificationToneID != null && m.hasOwnProperty("statusNotificationToneID")) {
-                d.statusNotificationToneID = m.statusNotificationToneID;
+            if (m.statusNotificationToneId != null && m.hasOwnProperty("statusNotificationToneId")) {
+                d.statusNotificationToneId = m.statusNotificationToneId;
                 if (o.oneofs)
-                    d._statusNotificationToneID = "statusNotificationToneID";
+                    d._statusNotificationToneId = "statusNotificationToneId";
             }
             if (m.shouldPlaySoundForCallNotification != null && m.hasOwnProperty("shouldPlaySoundForCallNotification")) {
                 d.shouldPlaySoundForCallNotification = m.shouldPlaySoundForCallNotification;
                 if (o.oneofs)
                     d._shouldPlaySoundForCallNotification = "shouldPlaySoundForCallNotification";
             }
-            if (m.chatThemeID != null && m.hasOwnProperty("chatThemeID")) {
-                d.chatThemeID = m.chatThemeID;
+            if (m.chatThemeId != null && m.hasOwnProperty("chatThemeId")) {
+                d.chatThemeId = m.chatThemeId;
                 if (o.oneofs)
-                    d._chatThemeID = "chatThemeID";
+                    d._chatThemeId = "chatThemeId";
             }
-            if (m.colorSchemeID != null && m.hasOwnProperty("colorSchemeID")) {
-                d.colorSchemeID = m.colorSchemeID;
+            if (m.colorSchemeId != null && m.hasOwnProperty("colorSchemeId")) {
+                d.colorSchemeId = m.colorSchemeId;
                 if (o.oneofs)
-                    d._colorSchemeID = "colorSchemeID";
+                    d._colorSchemeId = "colorSchemeId";
             }
             return d;
         };
@@ -1730,20 +1730,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        InteractiveMessageAction.prototype.type = null;
-        InteractiveMessageAction.prototype.agmID = null;
+        InteractiveMessageAction.prototype.type = 1;
+        InteractiveMessageAction.prototype.agmId = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InteractiveMessageAction.prototype, "_type", {
-            get: $util.oneOfGetter($oneOfFields = ["type"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InteractiveMessageAction.prototype, "_agmID", {
-            get: $util.oneOfGetter($oneOfFields = ["agmID"]),
+        Object.defineProperty(InteractiveMessageAction.prototype, "_agmId", {
+            get: $util.oneOfGetter($oneOfFields = ["agmId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1756,8 +1750,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w = $Writer.create();
             if (m.type != null && Object.hasOwnProperty.call(m, "type"))
                 w.uint32(8).int32(m.type);
-            if (m.agmID != null && Object.hasOwnProperty.call(m, "agmID"))
-                w.uint32(18).string(m.agmID);
+            if (m.agmId != null && Object.hasOwnProperty.call(m, "agmId"))
+                w.uint32(18).string(m.agmId);
             return w;
         };
 
@@ -1779,7 +1773,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 2: {
-                        m.agmID = r.string();
+                        m.agmId = r.string();
                         break;
                     }
                 default:
@@ -1810,8 +1804,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 m.type = 1;
                 break;
             }
-            if (d.agmID != null) {
-                m.agmID = String(d.agmID);
+            if (d.agmId != null) {
+                m.agmId = String(d.agmId);
             }
             return m;
         };
@@ -1820,15 +1814,16 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (!o)
                 o = {};
             var d = {};
+            if (o.defaults) {
+                d.type = o.enums === String ? "DISABLE_CTA" : 1;
+            }
             if (m.type != null && m.hasOwnProperty("type")) {
                 d.type = o.enums === String ? $root.WASyncAction.InteractiveMessageAction.InteractiveMessageActionMode[m.type] === undefined ? m.type : $root.WASyncAction.InteractiveMessageAction.InteractiveMessageActionMode[m.type] : m.type;
-                if (o.oneofs)
-                    d._type = "type";
             }
-            if (m.agmID != null && m.hasOwnProperty("agmID")) {
-                d.agmID = m.agmID;
+            if (m.agmId != null && m.hasOwnProperty("agmId")) {
+                d.agmId = m.agmId;
                 if (o.oneofs)
-                    d._agmID = "agmID";
+                    d._agmId = "agmId";
             }
             return d;
         };
@@ -2137,7 +2132,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
 
         BizAISettingsNudgeAction.prototype.category = null;
         BizAISettingsNudgeAction.prototype.version = null;
-        BizAISettingsNudgeAction.prototype.updatedAtMS = null;
+        BizAISettingsNudgeAction.prototype.updatedAtMs = null;
 
         let $oneOfFields;
 
@@ -2154,8 +2149,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BizAISettingsNudgeAction.prototype, "_updatedAtMS", {
-            get: $util.oneOfGetter($oneOfFields = ["updatedAtMS"]),
+        Object.defineProperty(BizAISettingsNudgeAction.prototype, "_updatedAtMs", {
+            get: $util.oneOfGetter($oneOfFields = ["updatedAtMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -2170,8 +2165,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w.uint32(8).int32(m.category);
             if (m.version != null && Object.hasOwnProperty.call(m, "version"))
                 w.uint32(16).int64(m.version);
-            if (m.updatedAtMS != null && Object.hasOwnProperty.call(m, "updatedAtMS"))
-                w.uint32(24).int64(m.updatedAtMS);
+            if (m.updatedAtMs != null && Object.hasOwnProperty.call(m, "updatedAtMs"))
+                w.uint32(24).int64(m.updatedAtMs);
             return w;
         };
 
@@ -2197,7 +2192,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 3: {
-                        m.updatedAtMS = r.int64();
+                        m.updatedAtMs = r.int64();
                         break;
                     }
                 default:
@@ -2258,15 +2253,15 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 else if (typeof d.version === "object")
                     m.version = new $util.LongBits(d.version.low >>> 0, d.version.high >>> 0).toNumber();
             }
-            if (d.updatedAtMS != null) {
+            if (d.updatedAtMs != null) {
                 if ($util.Long)
-                    (m.updatedAtMS = $util.Long.fromValue(d.updatedAtMS)).unsigned = false;
-                else if (typeof d.updatedAtMS === "string")
-                    m.updatedAtMS = parseInt(d.updatedAtMS, 10);
-                else if (typeof d.updatedAtMS === "number")
-                    m.updatedAtMS = d.updatedAtMS;
-                else if (typeof d.updatedAtMS === "object")
-                    m.updatedAtMS = new $util.LongBits(d.updatedAtMS.low >>> 0, d.updatedAtMS.high >>> 0).toNumber();
+                    (m.updatedAtMs = $util.Long.fromValue(d.updatedAtMs)).unsigned = false;
+                else if (typeof d.updatedAtMs === "string")
+                    m.updatedAtMs = parseInt(d.updatedAtMs, 10);
+                else if (typeof d.updatedAtMs === "number")
+                    m.updatedAtMs = d.updatedAtMs;
+                else if (typeof d.updatedAtMs === "object")
+                    m.updatedAtMs = new $util.LongBits(d.updatedAtMs.low >>> 0, d.updatedAtMs.high >>> 0).toNumber();
             }
             return m;
         };
@@ -2288,13 +2283,13 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._version = "version";
             }
-            if (m.updatedAtMS != null && m.hasOwnProperty("updatedAtMS")) {
-                if (typeof m.updatedAtMS === "number")
-                    d.updatedAtMS = o.longs === String ? String(m.updatedAtMS) : m.updatedAtMS;
+            if (m.updatedAtMs != null && m.hasOwnProperty("updatedAtMs")) {
+                if (typeof m.updatedAtMs === "number")
+                    d.updatedAtMs = o.longs === String ? String(m.updatedAtMs) : m.updatedAtMs;
                 else
-                    d.updatedAtMS = o.longs === String ? $util.Long.prototype.toString.call(m.updatedAtMS) : o.longs === Number ? new $util.LongBits(m.updatedAtMS.low >>> 0, m.updatedAtMS.high >>> 0).toNumber() : m.updatedAtMS;
+                    d.updatedAtMs = o.longs === String ? $util.Long.prototype.toString.call(m.updatedAtMs) : o.longs === Number ? new $util.LongBits(m.updatedAtMs.low >>> 0, m.updatedAtMs.high >>> 0).toNumber() : m.updatedAtMs;
                 if (o.oneofs)
-                    d._updatedAtMS = "updatedAtMS";
+                    d._updatedAtMs = "updatedAtMs";
             }
             return d;
         };
@@ -2454,22 +2449,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        PaymentTosAction.prototype.paymentNotice = null;
-        PaymentTosAction.prototype.accepted = null;
-
-        let $oneOfFields;
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PaymentTosAction.prototype, "_paymentNotice", {
-            get: $util.oneOfGetter($oneOfFields = ["paymentNotice"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PaymentTosAction.prototype, "_accepted", {
-            get: $util.oneOfGetter($oneOfFields = ["accepted"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        PaymentTosAction.prototype.paymentNotice = 0;
+        PaymentTosAction.prototype.accepted = false;
 
         PaymentTosAction.create = function create(properties) {
             return new PaymentTosAction(properties);
@@ -2544,15 +2525,15 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (!o)
                 o = {};
             var d = {};
+            if (o.defaults) {
+                d.paymentNotice = o.enums === String ? "BR_PAY_PRIVACY_POLICY" : 0;
+                d.accepted = false;
+            }
             if (m.paymentNotice != null && m.hasOwnProperty("paymentNotice")) {
                 d.paymentNotice = o.enums === String ? $root.WASyncAction.PaymentTosAction.PaymentNotice[m.paymentNotice] === undefined ? m.paymentNotice : $root.WASyncAction.PaymentTosAction.PaymentNotice[m.paymentNotice] : m.paymentNotice;
-                if (o.oneofs)
-                    d._paymentNotice = "paymentNotice";
             }
             if (m.accepted != null && m.hasOwnProperty("accepted")) {
                 d.accepted = m.accepted;
-                if (o.oneofs)
-                    d._accepted = "accepted";
             }
             return d;
         };
@@ -2833,24 +2814,12 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        MerchantPaymentPartnerAction.prototype.status = null;
-        MerchantPaymentPartnerAction.prototype.country = null;
+        MerchantPaymentPartnerAction.prototype.status = 0;
+        MerchantPaymentPartnerAction.prototype.country = "";
         MerchantPaymentPartnerAction.prototype.gatewayName = null;
-        MerchantPaymentPartnerAction.prototype.credentialID = null;
+        MerchantPaymentPartnerAction.prototype.credentialId = null;
 
         let $oneOfFields;
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MerchantPaymentPartnerAction.prototype, "_status", {
-            get: $util.oneOfGetter($oneOfFields = ["status"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MerchantPaymentPartnerAction.prototype, "_country", {
-            get: $util.oneOfGetter($oneOfFields = ["country"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
 
         // Virtual OneOf for proto3 optional field
         Object.defineProperty(MerchantPaymentPartnerAction.prototype, "_gatewayName", {
@@ -2859,8 +2828,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MerchantPaymentPartnerAction.prototype, "_credentialID", {
-            get: $util.oneOfGetter($oneOfFields = ["credentialID"]),
+        Object.defineProperty(MerchantPaymentPartnerAction.prototype, "_credentialId", {
+            get: $util.oneOfGetter($oneOfFields = ["credentialId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -2877,8 +2846,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w.uint32(18).string(m.country);
             if (m.gatewayName != null && Object.hasOwnProperty.call(m, "gatewayName"))
                 w.uint32(26).string(m.gatewayName);
-            if (m.credentialID != null && Object.hasOwnProperty.call(m, "credentialID"))
-                w.uint32(34).string(m.credentialID);
+            if (m.credentialId != null && Object.hasOwnProperty.call(m, "credentialId"))
+                w.uint32(34).string(m.credentialId);
             return w;
         };
 
@@ -2908,7 +2877,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 4: {
-                        m.credentialID = r.string();
+                        m.credentialId = r.string();
                         break;
                     }
                 default:
@@ -2949,8 +2918,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (d.gatewayName != null) {
                 m.gatewayName = String(d.gatewayName);
             }
-            if (d.credentialID != null) {
-                m.credentialID = String(d.credentialID);
+            if (d.credentialId != null) {
+                m.credentialId = String(d.credentialId);
             }
             return m;
         };
@@ -2959,25 +2928,25 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (!o)
                 o = {};
             var d = {};
+            if (o.defaults) {
+                d.status = o.enums === String ? "ACTIVE" : 0;
+                d.country = "";
+            }
             if (m.status != null && m.hasOwnProperty("status")) {
                 d.status = o.enums === String ? $root.WASyncAction.MerchantPaymentPartnerAction.Status[m.status] === undefined ? m.status : $root.WASyncAction.MerchantPaymentPartnerAction.Status[m.status] : m.status;
-                if (o.oneofs)
-                    d._status = "status";
             }
             if (m.country != null && m.hasOwnProperty("country")) {
                 d.country = m.country;
-                if (o.oneofs)
-                    d._country = "country";
             }
             if (m.gatewayName != null && m.hasOwnProperty("gatewayName")) {
                 d.gatewayName = m.gatewayName;
                 if (o.oneofs)
                     d._gatewayName = "gatewayName";
             }
-            if (m.credentialID != null && m.hasOwnProperty("credentialID")) {
-                d.credentialID = m.credentialID;
+            if (m.credentialId != null && m.hasOwnProperty("credentialId")) {
+                d.credentialId = m.credentialId;
                 if (o.oneofs)
-                    d._credentialID = "credentialID";
+                    d._credentialId = "credentialId";
             }
             return d;
         };
@@ -3013,7 +2982,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
         }
 
         NoteEditAction.prototype.type = null;
-        NoteEditAction.prototype.chatJID = null;
+        NoteEditAction.prototype.chatJid = null;
         NoteEditAction.prototype.createdAt = null;
         NoteEditAction.prototype.deleted = null;
         NoteEditAction.prototype.unstructuredContent = null;
@@ -3027,8 +2996,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(NoteEditAction.prototype, "_chatJID", {
-            get: $util.oneOfGetter($oneOfFields = ["chatJID"]),
+        Object.defineProperty(NoteEditAction.prototype, "_chatJid", {
+            get: $util.oneOfGetter($oneOfFields = ["chatJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -3059,8 +3028,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w = $Writer.create();
             if (m.type != null && Object.hasOwnProperty.call(m, "type"))
                 w.uint32(8).int32(m.type);
-            if (m.chatJID != null && Object.hasOwnProperty.call(m, "chatJID"))
-                w.uint32(18).string(m.chatJID);
+            if (m.chatJid != null && Object.hasOwnProperty.call(m, "chatJid"))
+                w.uint32(18).string(m.chatJid);
             if (m.createdAt != null && Object.hasOwnProperty.call(m, "createdAt"))
                 w.uint32(24).int64(m.createdAt);
             if (m.deleted != null && Object.hasOwnProperty.call(m, "deleted"))
@@ -3088,7 +3057,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 2: {
-                        m.chatJID = r.string();
+                        m.chatJid = r.string();
                         break;
                     }
                 case 3: {
@@ -3135,8 +3104,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 m.type = 2;
                 break;
             }
-            if (d.chatJID != null) {
-                m.chatJID = String(d.chatJID);
+            if (d.chatJid != null) {
+                m.chatJid = String(d.chatJid);
             }
             if (d.createdAt != null) {
                 if ($util.Long)
@@ -3166,10 +3135,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._type = "type";
             }
-            if (m.chatJID != null && m.hasOwnProperty("chatJID")) {
-                d.chatJID = m.chatJID;
+            if (m.chatJid != null && m.hasOwnProperty("chatJid")) {
+                d.chatJid = m.chatJid;
                 if (o.oneofs)
-                    d._chatJID = "chatJID";
+                    d._chatJid = "chatJid";
             }
             if (m.createdAt != null && m.hasOwnProperty("createdAt")) {
                 if (typeof m.createdAt === "number")
@@ -3216,7 +3185,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
     WASyncAction.StatusPrivacyAction = (function() {
 
         function StatusPrivacyAction(p) {
-            this.userJID = [];
+            this.userJid = [];
             this.customLists = [];
             this.modes = [];
             if (p)
@@ -3226,7 +3195,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
         }
 
         StatusPrivacyAction.prototype.mode = null;
-        StatusPrivacyAction.prototype.userJID = $util.emptyArray;
+        StatusPrivacyAction.prototype.userJid = $util.emptyArray;
         StatusPrivacyAction.prototype.shareToFB = null;
         StatusPrivacyAction.prototype.shareToIG = null;
         StatusPrivacyAction.prototype.customLists = $util.emptyArray;
@@ -3261,9 +3230,9 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w = $Writer.create();
             if (m.mode != null && Object.hasOwnProperty.call(m, "mode"))
                 w.uint32(8).int32(m.mode);
-            if (m.userJID != null && m.userJID.length) {
-                for (var i = 0; i < m.userJID.length; ++i)
-                    w.uint32(18).string(m.userJID[i]);
+            if (m.userJid != null && m.userJid.length) {
+                for (var i = 0; i < m.userJid.length; ++i)
+                    w.uint32(18).string(m.userJid[i]);
             }
             if (m.shareToFB != null && Object.hasOwnProperty.call(m, "shareToFB"))
                 w.uint32(24).bool(m.shareToFB);
@@ -3300,9 +3269,9 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 2: {
-                        if (!(m.userJID && m.userJID.length))
-                            m.userJID = [];
-                        m.userJID.push(r.string());
+                        if (!(m.userJid && m.userJid.length))
+                            m.userJid = [];
+                        m.userJid.push(r.string());
                         break;
                     }
                 case 3: {
@@ -3374,12 +3343,12 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 m.mode = 4;
                 break;
             }
-            if (d.userJID) {
-                if (!Array.isArray(d.userJID))
-                    throw TypeError(".WASyncAction.StatusPrivacyAction.userJID: array expected");
-                m.userJID = [];
-                for (var i = 0; i < d.userJID.length; ++i) {
-                    m.userJID[i] = String(d.userJID[i]);
+            if (d.userJid) {
+                if (!Array.isArray(d.userJid))
+                    throw TypeError(".WASyncAction.StatusPrivacyAction.userJid: array expected");
+                m.userJid = [];
+                for (var i = 0; i < d.userJid.length; ++i) {
+                    m.userJid[i] = String(d.userJid[i]);
                 }
             }
             if (d.shareToFB != null) {
@@ -3440,7 +3409,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 o = {};
             var d = {};
             if (o.arrays || o.defaults) {
-                d.userJID = [];
+                d.userJid = [];
                 d.customLists = [];
                 d.modes = [];
             }
@@ -3449,10 +3418,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._mode = "mode";
             }
-            if (m.userJID && m.userJID.length) {
-                d.userJID = [];
-                for (var j = 0; j < m.userJID.length; ++j) {
-                    d.userJID[j] = m.userJID[j];
+            if (m.userJid && m.userJid.length) {
+                d.userJid = [];
+                for (var j = 0; j < m.userJid.length; ++j) {
+                    d.userJid[j] = m.userJid[j];
                 }
             }
             if (m.shareToFB != null && m.hasOwnProperty("shareToFB")) {
@@ -3504,24 +3473,24 @@ export const WASyncAction = $root.WASyncAction = (() => {
         StatusPrivacyAction.CustomList = (function() {
 
             function CustomList(p) {
-                this.userJID = [];
+                this.userJid = [];
                 if (p)
                     for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
                         if (p[ks[i]] != null && ks[i] !== "__proto__")
                             this[ks[i]] = p[ks[i]];
             }
 
-            CustomList.prototype.listID = null;
+            CustomList.prototype.listId = null;
             CustomList.prototype.name = null;
             CustomList.prototype.emoji = null;
             CustomList.prototype.isSelected = null;
-            CustomList.prototype.userJID = $util.emptyArray;
+            CustomList.prototype.userJid = $util.emptyArray;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(CustomList.prototype, "_listID", {
-                get: $util.oneOfGetter($oneOfFields = ["listID"]),
+            Object.defineProperty(CustomList.prototype, "_listId", {
+                get: $util.oneOfGetter($oneOfFields = ["listId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -3550,17 +3519,17 @@ export const WASyncAction = $root.WASyncAction = (() => {
             CustomList.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.listID != null && Object.hasOwnProperty.call(m, "listID"))
-                    w.uint32(10).string(m.listID);
+                if (m.listId != null && Object.hasOwnProperty.call(m, "listId"))
+                    w.uint32(10).string(m.listId);
                 if (m.name != null && Object.hasOwnProperty.call(m, "name"))
                     w.uint32(18).string(m.name);
                 if (m.emoji != null && Object.hasOwnProperty.call(m, "emoji"))
                     w.uint32(26).string(m.emoji);
                 if (m.isSelected != null && Object.hasOwnProperty.call(m, "isSelected"))
                     w.uint32(32).bool(m.isSelected);
-                if (m.userJID != null && m.userJID.length) {
-                    for (var i = 0; i < m.userJID.length; ++i)
-                        w.uint32(42).string(m.userJID[i]);
+                if (m.userJid != null && m.userJid.length) {
+                    for (var i = 0; i < m.userJid.length; ++i)
+                        w.uint32(42).string(m.userJid[i]);
                 }
                 return w;
             };
@@ -3579,7 +3548,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.listID = r.string();
+                            m.listId = r.string();
                             break;
                         }
                     case 2: {
@@ -3595,9 +3564,9 @@ export const WASyncAction = $root.WASyncAction = (() => {
                             break;
                         }
                     case 5: {
-                            if (!(m.userJID && m.userJID.length))
-                                m.userJID = [];
-                            m.userJID.push(r.string());
+                            if (!(m.userJid && m.userJid.length))
+                                m.userJid = [];
+                            m.userJid.push(r.string());
                             break;
                         }
                     default:
@@ -3616,8 +3585,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WASyncAction.StatusPrivacyAction.CustomList();
-                if (d.listID != null) {
-                    m.listID = String(d.listID);
+                if (d.listId != null) {
+                    m.listId = String(d.listId);
                 }
                 if (d.name != null) {
                     m.name = String(d.name);
@@ -3628,12 +3597,12 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (d.isSelected != null) {
                     m.isSelected = Boolean(d.isSelected);
                 }
-                if (d.userJID) {
-                    if (!Array.isArray(d.userJID))
-                        throw TypeError(".WASyncAction.StatusPrivacyAction.CustomList.userJID: array expected");
-                    m.userJID = [];
-                    for (var i = 0; i < d.userJID.length; ++i) {
-                        m.userJID[i] = String(d.userJID[i]);
+                if (d.userJid) {
+                    if (!Array.isArray(d.userJid))
+                        throw TypeError(".WASyncAction.StatusPrivacyAction.CustomList.userJid: array expected");
+                    m.userJid = [];
+                    for (var i = 0; i < d.userJid.length; ++i) {
+                        m.userJid[i] = String(d.userJid[i]);
                     }
                 }
                 return m;
@@ -3644,12 +3613,12 @@ export const WASyncAction = $root.WASyncAction = (() => {
                     o = {};
                 var d = {};
                 if (o.arrays || o.defaults) {
-                    d.userJID = [];
+                    d.userJid = [];
                 }
-                if (m.listID != null && m.hasOwnProperty("listID")) {
-                    d.listID = m.listID;
+                if (m.listId != null && m.hasOwnProperty("listId")) {
+                    d.listId = m.listId;
                     if (o.oneofs)
-                        d._listID = "listID";
+                        d._listId = "listId";
                 }
                 if (m.name != null && m.hasOwnProperty("name")) {
                     d.name = m.name;
@@ -3666,10 +3635,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                     if (o.oneofs)
                         d._isSelected = "isSelected";
                 }
-                if (m.userJID && m.userJID.length) {
-                    d.userJID = [];
-                    for (var j = 0; j < m.userJID.length; ++j) {
-                        d.userJID[j] = m.userJID[j];
+                if (m.userJid && m.userJid.length) {
+                    d.userJid = [];
+                    for (var j = 0; j < m.userJid.length; ++j) {
+                        d.userJid[j] = m.userJid[j];
                     }
                 }
                 return d;
@@ -3707,7 +3676,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
         MarketingMessageAction.prototype.createdAt = null;
         MarketingMessageAction.prototype.lastSentAt = null;
         MarketingMessageAction.prototype.isDeleted = null;
-        MarketingMessageAction.prototype.mediaID = null;
+        MarketingMessageAction.prototype.mediaId = null;
 
         let $oneOfFields;
 
@@ -3748,8 +3717,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MarketingMessageAction.prototype, "_mediaID", {
-            get: $util.oneOfGetter($oneOfFields = ["mediaID"]),
+        Object.defineProperty(MarketingMessageAction.prototype, "_mediaId", {
+            get: $util.oneOfGetter($oneOfFields = ["mediaId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -3772,8 +3741,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w.uint32(40).int64(m.lastSentAt);
             if (m.isDeleted != null && Object.hasOwnProperty.call(m, "isDeleted"))
                 w.uint32(48).bool(m.isDeleted);
-            if (m.mediaID != null && Object.hasOwnProperty.call(m, "mediaID"))
-                w.uint32(58).string(m.mediaID);
+            if (m.mediaId != null && Object.hasOwnProperty.call(m, "mediaId"))
+                w.uint32(58).string(m.mediaId);
             return w;
         };
 
@@ -3815,7 +3784,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 7: {
-                        m.mediaID = r.string();
+                        m.mediaId = r.string();
                         break;
                     }
                 default:
@@ -3875,8 +3844,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (d.isDeleted != null) {
                 m.isDeleted = Boolean(d.isDeleted);
             }
-            if (d.mediaID != null) {
-                m.mediaID = String(d.mediaID);
+            if (d.mediaId != null) {
+                m.mediaId = String(d.mediaId);
             }
             return m;
         };
@@ -3921,10 +3890,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._isDeleted = "isDeleted";
             }
-            if (m.mediaID != null && m.hasOwnProperty("mediaID")) {
-                d.mediaID = m.mediaID;
+            if (m.mediaId != null && m.hasOwnProperty("mediaId")) {
+                d.mediaId = m.mediaId;
                 if (o.oneofs)
-                    d._mediaID = "mediaID";
+                    d._mediaId = "mediaId";
             }
             return d;
         };
@@ -4076,13 +4045,13 @@ export const WASyncAction = $root.WASyncAction = (() => {
 
         LabelEditAction.prototype.name = null;
         LabelEditAction.prototype.color = null;
-        LabelEditAction.prototype.predefinedID = null;
+        LabelEditAction.prototype.predefinedId = null;
         LabelEditAction.prototype.deleted = null;
         LabelEditAction.prototype.orderIndex = null;
         LabelEditAction.prototype.isActive = null;
         LabelEditAction.prototype.type = null;
         LabelEditAction.prototype.isImmutable = null;
-        LabelEditAction.prototype.muteEndTimeMS = null;
+        LabelEditAction.prototype.muteEndTimeMs = null;
 
         let $oneOfFields;
 
@@ -4099,8 +4068,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(LabelEditAction.prototype, "_predefinedID", {
-            get: $util.oneOfGetter($oneOfFields = ["predefinedID"]),
+        Object.defineProperty(LabelEditAction.prototype, "_predefinedId", {
+            get: $util.oneOfGetter($oneOfFields = ["predefinedId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -4135,8 +4104,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(LabelEditAction.prototype, "_muteEndTimeMS", {
-            get: $util.oneOfGetter($oneOfFields = ["muteEndTimeMS"]),
+        Object.defineProperty(LabelEditAction.prototype, "_muteEndTimeMs", {
+            get: $util.oneOfGetter($oneOfFields = ["muteEndTimeMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -4151,8 +4120,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w.uint32(10).string(m.name);
             if (m.color != null && Object.hasOwnProperty.call(m, "color"))
                 w.uint32(16).int32(m.color);
-            if (m.predefinedID != null && Object.hasOwnProperty.call(m, "predefinedID"))
-                w.uint32(24).int32(m.predefinedID);
+            if (m.predefinedId != null && Object.hasOwnProperty.call(m, "predefinedId"))
+                w.uint32(24).int32(m.predefinedId);
             if (m.deleted != null && Object.hasOwnProperty.call(m, "deleted"))
                 w.uint32(32).bool(m.deleted);
             if (m.orderIndex != null && Object.hasOwnProperty.call(m, "orderIndex"))
@@ -4163,8 +4132,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w.uint32(56).int32(m.type);
             if (m.isImmutable != null && Object.hasOwnProperty.call(m, "isImmutable"))
                 w.uint32(64).bool(m.isImmutable);
-            if (m.muteEndTimeMS != null && Object.hasOwnProperty.call(m, "muteEndTimeMS"))
-                w.uint32(72).int64(m.muteEndTimeMS);
+            if (m.muteEndTimeMs != null && Object.hasOwnProperty.call(m, "muteEndTimeMs"))
+                w.uint32(72).int64(m.muteEndTimeMs);
             return w;
         };
 
@@ -4190,7 +4159,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 3: {
-                        m.predefinedID = r.int32();
+                        m.predefinedId = r.int32();
                         break;
                     }
                 case 4: {
@@ -4214,7 +4183,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 9: {
-                        m.muteEndTimeMS = r.int64();
+                        m.muteEndTimeMs = r.int64();
                         break;
                     }
                 default:
@@ -4239,8 +4208,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (d.color != null) {
                 m.color = d.color | 0;
             }
-            if (d.predefinedID != null) {
-                m.predefinedID = d.predefinedID | 0;
+            if (d.predefinedId != null) {
+                m.predefinedId = d.predefinedId | 0;
             }
             if (d.deleted != null) {
                 m.deleted = Boolean(d.deleted);
@@ -4310,15 +4279,15 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (d.isImmutable != null) {
                 m.isImmutable = Boolean(d.isImmutable);
             }
-            if (d.muteEndTimeMS != null) {
+            if (d.muteEndTimeMs != null) {
                 if ($util.Long)
-                    (m.muteEndTimeMS = $util.Long.fromValue(d.muteEndTimeMS)).unsigned = false;
-                else if (typeof d.muteEndTimeMS === "string")
-                    m.muteEndTimeMS = parseInt(d.muteEndTimeMS, 10);
-                else if (typeof d.muteEndTimeMS === "number")
-                    m.muteEndTimeMS = d.muteEndTimeMS;
-                else if (typeof d.muteEndTimeMS === "object")
-                    m.muteEndTimeMS = new $util.LongBits(d.muteEndTimeMS.low >>> 0, d.muteEndTimeMS.high >>> 0).toNumber();
+                    (m.muteEndTimeMs = $util.Long.fromValue(d.muteEndTimeMs)).unsigned = false;
+                else if (typeof d.muteEndTimeMs === "string")
+                    m.muteEndTimeMs = parseInt(d.muteEndTimeMs, 10);
+                else if (typeof d.muteEndTimeMs === "number")
+                    m.muteEndTimeMs = d.muteEndTimeMs;
+                else if (typeof d.muteEndTimeMs === "object")
+                    m.muteEndTimeMs = new $util.LongBits(d.muteEndTimeMs.low >>> 0, d.muteEndTimeMs.high >>> 0).toNumber();
             }
             return m;
         };
@@ -4337,10 +4306,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._color = "color";
             }
-            if (m.predefinedID != null && m.hasOwnProperty("predefinedID")) {
-                d.predefinedID = m.predefinedID;
+            if (m.predefinedId != null && m.hasOwnProperty("predefinedId")) {
+                d.predefinedId = m.predefinedId;
                 if (o.oneofs)
-                    d._predefinedID = "predefinedID";
+                    d._predefinedId = "predefinedId";
             }
             if (m.deleted != null && m.hasOwnProperty("deleted")) {
                 d.deleted = m.deleted;
@@ -4367,13 +4336,13 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._isImmutable = "isImmutable";
             }
-            if (m.muteEndTimeMS != null && m.hasOwnProperty("muteEndTimeMS")) {
-                if (typeof m.muteEndTimeMS === "number")
-                    d.muteEndTimeMS = o.longs === String ? String(m.muteEndTimeMS) : m.muteEndTimeMS;
+            if (m.muteEndTimeMs != null && m.hasOwnProperty("muteEndTimeMs")) {
+                if (typeof m.muteEndTimeMs === "number")
+                    d.muteEndTimeMs = o.longs === String ? String(m.muteEndTimeMs) : m.muteEndTimeMs;
                 else
-                    d.muteEndTimeMS = o.longs === String ? $util.Long.prototype.toString.call(m.muteEndTimeMS) : o.longs === Number ? new $util.LongBits(m.muteEndTimeMS.low >>> 0, m.muteEndTimeMS.high >>> 0).toNumber() : m.muteEndTimeMS;
+                    d.muteEndTimeMs = o.longs === String ? $util.Long.prototype.toString.call(m.muteEndTimeMs) : o.longs === Number ? new $util.LongBits(m.muteEndTimeMs.low >>> 0, m.muteEndTimeMs.high >>> 0).toNumber() : m.muteEndTimeMs;
                 if (o.oneofs)
-                    d._muteEndTimeMS = "muteEndTimeMS";
+                    d._muteEndTimeMs = "muteEndTimeMs";
             }
             return d;
         };
@@ -4422,7 +4391,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
         PatchDebugData.prototype.newLthash = null;
         PatchDebugData.prototype.patchVersion = null;
         PatchDebugData.prototype.collectionName = null;
-        PatchDebugData.prototype.firstFourBytesFromAHashOfSnapshotMACKey = null;
+        PatchDebugData.prototype.firstFourBytesFromAHashOfSnapshotMacKey = null;
         PatchDebugData.prototype.newLthashSubtract = null;
         PatchDebugData.prototype.numberAdd = null;
         PatchDebugData.prototype.numberRemove = null;
@@ -4457,8 +4426,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PatchDebugData.prototype, "_firstFourBytesFromAHashOfSnapshotMACKey", {
-            get: $util.oneOfGetter($oneOfFields = ["firstFourBytesFromAHashOfSnapshotMACKey"]),
+        Object.defineProperty(PatchDebugData.prototype, "_firstFourBytesFromAHashOfSnapshotMacKey", {
+            get: $util.oneOfGetter($oneOfFields = ["firstFourBytesFromAHashOfSnapshotMacKey"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -4513,8 +4482,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w.uint32(26).bytes(m.patchVersion);
             if (m.collectionName != null && Object.hasOwnProperty.call(m, "collectionName"))
                 w.uint32(34).bytes(m.collectionName);
-            if (m.firstFourBytesFromAHashOfSnapshotMACKey != null && Object.hasOwnProperty.call(m, "firstFourBytesFromAHashOfSnapshotMACKey"))
-                w.uint32(42).bytes(m.firstFourBytesFromAHashOfSnapshotMACKey);
+            if (m.firstFourBytesFromAHashOfSnapshotMacKey != null && Object.hasOwnProperty.call(m, "firstFourBytesFromAHashOfSnapshotMacKey"))
+                w.uint32(42).bytes(m.firstFourBytesFromAHashOfSnapshotMacKey);
             if (m.newLthashSubtract != null && Object.hasOwnProperty.call(m, "newLthashSubtract"))
                 w.uint32(50).bytes(m.newLthashSubtract);
             if (m.numberAdd != null && Object.hasOwnProperty.call(m, "numberAdd"))
@@ -4560,7 +4529,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 5: {
-                        m.firstFourBytesFromAHashOfSnapshotMACKey = r.bytes();
+                        m.firstFourBytesFromAHashOfSnapshotMacKey = r.bytes();
                         break;
                     }
                 case 6: {
@@ -4627,11 +4596,11 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 else if (d.collectionName.length >= 0)
                     m.collectionName = d.collectionName;
             }
-            if (d.firstFourBytesFromAHashOfSnapshotMACKey != null) {
-                if (typeof d.firstFourBytesFromAHashOfSnapshotMACKey === "string")
-                    $util.base64.decode(d.firstFourBytesFromAHashOfSnapshotMACKey, m.firstFourBytesFromAHashOfSnapshotMACKey = $util.newBuffer($util.base64.length(d.firstFourBytesFromAHashOfSnapshotMACKey)), 0);
-                else if (d.firstFourBytesFromAHashOfSnapshotMACKey.length >= 0)
-                    m.firstFourBytesFromAHashOfSnapshotMACKey = d.firstFourBytesFromAHashOfSnapshotMACKey;
+            if (d.firstFourBytesFromAHashOfSnapshotMacKey != null) {
+                if (typeof d.firstFourBytesFromAHashOfSnapshotMacKey === "string")
+                    $util.base64.decode(d.firstFourBytesFromAHashOfSnapshotMacKey, m.firstFourBytesFromAHashOfSnapshotMacKey = $util.newBuffer($util.base64.length(d.firstFourBytesFromAHashOfSnapshotMacKey)), 0);
+                else if (d.firstFourBytesFromAHashOfSnapshotMacKey.length >= 0)
+                    m.firstFourBytesFromAHashOfSnapshotMacKey = d.firstFourBytesFromAHashOfSnapshotMacKey;
             }
             if (d.newLthashSubtract != null) {
                 if (typeof d.newLthashSubtract === "string")
@@ -4734,10 +4703,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._collectionName = "collectionName";
             }
-            if (m.firstFourBytesFromAHashOfSnapshotMACKey != null && m.hasOwnProperty("firstFourBytesFromAHashOfSnapshotMACKey")) {
-                d.firstFourBytesFromAHashOfSnapshotMACKey = o.bytes === String ? $util.base64.encode(m.firstFourBytesFromAHashOfSnapshotMACKey, 0, m.firstFourBytesFromAHashOfSnapshotMACKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.firstFourBytesFromAHashOfSnapshotMACKey) : m.firstFourBytesFromAHashOfSnapshotMACKey;
+            if (m.firstFourBytesFromAHashOfSnapshotMacKey != null && m.hasOwnProperty("firstFourBytesFromAHashOfSnapshotMacKey")) {
+                d.firstFourBytesFromAHashOfSnapshotMacKey = o.bytes === String ? $util.base64.encode(m.firstFourBytesFromAHashOfSnapshotMacKey, 0, m.firstFourBytesFromAHashOfSnapshotMacKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.firstFourBytesFromAHashOfSnapshotMacKey) : m.firstFourBytesFromAHashOfSnapshotMacKey;
                 if (o.oneofs)
-                    d._firstFourBytesFromAHashOfSnapshotMACKey = "firstFourBytesFromAHashOfSnapshotMACKey";
+                    d._firstFourBytesFromAHashOfSnapshotMacKey = "firstFourBytesFromAHashOfSnapshotMacKey";
             }
             if (m.newLthashSubtract != null && m.hasOwnProperty("newLthashSubtract")) {
                 d.newLthashSubtract = o.bytes === String ? $util.base64.encode(m.newLthashSubtract, 0, m.newLthashSubtract.length) : o.bytes === Array ? Array.prototype.slice.call(m.newLthashSubtract) : m.newLthashSubtract;
@@ -4990,7 +4959,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
         SyncActionValue.prototype.detectedOutcomesStatusAction = null;
         SyncActionValue.prototype.maibaAiFeaturesControlAction = null;
         SyncActionValue.prototype.businessBroadcastListAction = null;
-        SyncActionValue.prototype.musicUserIDAction = null;
+        SyncActionValue.prototype.musicUserIdAction = null;
         SyncActionValue.prototype.statusPostOptInNotificationPreferencesAction = null;
         SyncActionValue.prototype.avatarUpdatedAction = null;
         SyncActionValue.prototype.privateProcessingSettingAction = null;
@@ -5377,8 +5346,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SyncActionValue.prototype, "_musicUserIDAction", {
-            get: $util.oneOfGetter($oneOfFields = ["musicUserIDAction"]),
+        Object.defineProperty(SyncActionValue.prototype, "_musicUserIdAction", {
+            get: $util.oneOfGetter($oneOfFields = ["musicUserIdAction"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -5607,8 +5576,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 $root.WASyncAction.MaibaAIFeaturesControlAction.encode(m.maibaAiFeaturesControlAction, w.uint32(546).fork()).ldelim();
             if (m.businessBroadcastListAction != null && Object.hasOwnProperty.call(m, "businessBroadcastListAction"))
                 $root.WASyncAction.BusinessBroadcastListAction.encode(m.businessBroadcastListAction, w.uint32(554).fork()).ldelim();
-            if (m.musicUserIDAction != null && Object.hasOwnProperty.call(m, "musicUserIDAction"))
-                $root.WASyncAction.MusicUserIdAction.encode(m.musicUserIDAction, w.uint32(562).fork()).ldelim();
+            if (m.musicUserIdAction != null && Object.hasOwnProperty.call(m, "musicUserIdAction"))
+                $root.WASyncAction.MusicUserIdAction.encode(m.musicUserIdAction, w.uint32(562).fork()).ldelim();
             if (m.statusPostOptInNotificationPreferencesAction != null && Object.hasOwnProperty.call(m, "statusPostOptInNotificationPreferencesAction"))
                 $root.WASyncAction.StatusPostOptInNotificationPreferencesAction.encode(m.statusPostOptInNotificationPreferencesAction, w.uint32(570).fork()).ldelim();
             if (m.avatarUpdatedAction != null && Object.hasOwnProperty.call(m, "avatarUpdatedAction"))
@@ -5902,7 +5871,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 70: {
-                        m.musicUserIDAction = $root.WASyncAction.MusicUserIdAction.decode(r, r.uint32(), undefined, n + 1);
+                        m.musicUserIdAction = $root.WASyncAction.MusicUserIdAction.decode(r, r.uint32(), undefined, n + 1);
                         break;
                     }
                 case 71: {
@@ -6295,10 +6264,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                     throw TypeError(".WASyncAction.SyncActionValue.businessBroadcastListAction: object expected");
                 m.businessBroadcastListAction = $root.WASyncAction.BusinessBroadcastListAction.fromObject(d.businessBroadcastListAction, n + 1);
             }
-            if (d.musicUserIDAction != null) {
-                if (typeof d.musicUserIDAction !== "object")
-                    throw TypeError(".WASyncAction.SyncActionValue.musicUserIDAction: object expected");
-                m.musicUserIDAction = $root.WASyncAction.MusicUserIdAction.fromObject(d.musicUserIDAction, n + 1);
+            if (d.musicUserIdAction != null) {
+                if (typeof d.musicUserIdAction !== "object")
+                    throw TypeError(".WASyncAction.SyncActionValue.musicUserIdAction: object expected");
+                m.musicUserIdAction = $root.WASyncAction.MusicUserIdAction.fromObject(d.musicUserIdAction, n + 1);
             }
             if (d.statusPostOptInNotificationPreferencesAction != null) {
                 if (typeof d.statusPostOptInNotificationPreferencesAction !== "object")
@@ -6695,10 +6664,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._businessBroadcastListAction = "businessBroadcastListAction";
             }
-            if (m.musicUserIDAction != null && m.hasOwnProperty("musicUserIDAction")) {
-                d.musicUserIDAction = $root.WASyncAction.MusicUserIdAction.toObject(m.musicUserIDAction, o);
+            if (m.musicUserIdAction != null && m.hasOwnProperty("musicUserIdAction")) {
+                d.musicUserIdAction = $root.WASyncAction.MusicUserIdAction.toObject(m.musicUserIdAction, o);
                 if (o.oneofs)
-                    d._musicUserIDAction = "musicUserIDAction";
+                    d._musicUserIdAction = "musicUserIdAction";
             }
             if (m.statusPostOptInNotificationPreferencesAction != null && m.hasOwnProperty("statusPostOptInNotificationPreferencesAction")) {
                 d.statusPostOptInNotificationPreferencesAction = $root.WASyncAction.StatusPostOptInNotificationPreferencesAction.toObject(m.statusPostOptInNotificationPreferencesAction, o);
@@ -7105,7 +7074,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            SubscriptionInfo.prototype.ID = null;
+            SubscriptionInfo.prototype.id = null;
             SubscriptionInfo.prototype.tier = null;
             SubscriptionInfo.prototype.status = null;
             SubscriptionInfo.prototype.startTime = null;
@@ -7117,8 +7086,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(SubscriptionInfo.prototype, "_ID", {
-                get: $util.oneOfGetter($oneOfFields = ["ID"]),
+            Object.defineProperty(SubscriptionInfo.prototype, "_id", {
+                get: $util.oneOfGetter($oneOfFields = ["id"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -7171,8 +7140,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             SubscriptionInfo.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                    w.uint32(10).string(m.ID);
+                if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                    w.uint32(10).string(m.id);
                 if (m.tier != null && Object.hasOwnProperty.call(m, "tier"))
                     w.uint32(16).int32(m.tier);
                 if (m.status != null && Object.hasOwnProperty.call(m, "status"))
@@ -7204,7 +7173,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.ID = r.string();
+                            m.id = r.string();
                             break;
                         }
                     case 2: {
@@ -7251,8 +7220,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WASyncAction.SubscriptionsSyncV2Action.SubscriptionInfo();
-                if (d.ID != null) {
-                    m.ID = String(d.ID);
+                if (d.id != null) {
+                    m.id = String(d.id);
                 }
                 if (d.tier != null) {
                     m.tier = d.tier | 0;
@@ -7303,10 +7272,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.ID != null && m.hasOwnProperty("ID")) {
-                    d.ID = m.ID;
+                if (m.id != null && m.hasOwnProperty("id")) {
+                    d.id = m.id;
                     if (o.oneofs)
-                        d._ID = "ID";
+                        d._id = "id";
                 }
                 if (m.tier != null && m.hasOwnProperty("tier")) {
                     d.tier = m.tier;
@@ -7381,7 +7350,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        CustomerDataAction.prototype.chatJID = null;
+        CustomerDataAction.prototype.chatJid = null;
         CustomerDataAction.prototype.contactType = null;
         CustomerDataAction.prototype.email = null;
         CustomerDataAction.prototype.altPhoneNumbers = null;
@@ -7396,8 +7365,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(CustomerDataAction.prototype, "_chatJID", {
-            get: $util.oneOfGetter($oneOfFields = ["chatJID"]),
+        Object.defineProperty(CustomerDataAction.prototype, "_chatJid", {
+            get: $util.oneOfGetter($oneOfFields = ["chatJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -7468,8 +7437,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         CustomerDataAction.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.chatJID != null && Object.hasOwnProperty.call(m, "chatJID"))
-                w.uint32(10).string(m.chatJID);
+            if (m.chatJid != null && Object.hasOwnProperty.call(m, "chatJid"))
+                w.uint32(10).string(m.chatJid);
             if (m.contactType != null && Object.hasOwnProperty.call(m, "contactType"))
                 w.uint32(16).int32(m.contactType);
             if (m.email != null && Object.hasOwnProperty.call(m, "email"))
@@ -7507,7 +7476,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.chatJID = r.string();
+                        m.chatJid = r.string();
                         break;
                     }
                 case 2: {
@@ -7566,8 +7535,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASyncAction.CustomerDataAction();
-            if (d.chatJID != null) {
-                m.chatJID = String(d.chatJID);
+            if (d.chatJid != null) {
+                m.chatJid = String(d.chatJid);
             }
             if (d.contactType != null) {
                 m.contactType = d.contactType | 0;
@@ -7634,10 +7603,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.chatJID != null && m.hasOwnProperty("chatJID")) {
-                d.chatJID = m.chatJID;
+            if (m.chatJid != null && m.hasOwnProperty("chatJid")) {
+                d.chatJid = m.chatJid;
                 if (o.oneofs)
-                    d._chatJID = "chatJID";
+                    d._chatJid = "chatJid";
             }
             if (m.contactType != null && m.hasOwnProperty("contactType")) {
                 d.contactType = m.contactType;
@@ -8390,20 +8359,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BroadcastListParticipant.prototype.lidJID = null;
-        BroadcastListParticipant.prototype.pnJID = null;
+        BroadcastListParticipant.prototype.lidJid = "";
+        BroadcastListParticipant.prototype.pnJid = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BroadcastListParticipant.prototype, "_lidJID", {
-            get: $util.oneOfGetter($oneOfFields = ["lidJID"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BroadcastListParticipant.prototype, "_pnJID", {
-            get: $util.oneOfGetter($oneOfFields = ["pnJID"]),
+        Object.defineProperty(BroadcastListParticipant.prototype, "_pnJid", {
+            get: $util.oneOfGetter($oneOfFields = ["pnJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -8414,10 +8377,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
         BroadcastListParticipant.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.lidJID != null && Object.hasOwnProperty.call(m, "lidJID"))
-                w.uint32(10).string(m.lidJID);
-            if (m.pnJID != null && Object.hasOwnProperty.call(m, "pnJID"))
-                w.uint32(18).string(m.pnJID);
+            if (m.lidJid != null && Object.hasOwnProperty.call(m, "lidJid"))
+                w.uint32(10).string(m.lidJid);
+            if (m.pnJid != null && Object.hasOwnProperty.call(m, "pnJid"))
+                w.uint32(18).string(m.pnJid);
             return w;
         };
 
@@ -8435,11 +8398,11 @@ export const WASyncAction = $root.WASyncAction = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.lidJID = r.string();
+                        m.lidJid = r.string();
                         break;
                     }
                 case 2: {
-                        m.pnJID = r.string();
+                        m.pnJid = r.string();
                         break;
                     }
                 default:
@@ -8458,11 +8421,11 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASyncAction.BroadcastListParticipant();
-            if (d.lidJID != null) {
-                m.lidJID = String(d.lidJID);
+            if (d.lidJid != null) {
+                m.lidJid = String(d.lidJid);
             }
-            if (d.pnJID != null) {
-                m.pnJID = String(d.pnJID);
+            if (d.pnJid != null) {
+                m.pnJid = String(d.pnJid);
             }
             return m;
         };
@@ -8471,15 +8434,16 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.lidJID != null && m.hasOwnProperty("lidJID")) {
-                d.lidJID = m.lidJID;
-                if (o.oneofs)
-                    d._lidJID = "lidJID";
+            if (o.defaults) {
+                d.lidJid = "";
             }
-            if (m.pnJID != null && m.hasOwnProperty("pnJID")) {
-                d.pnJID = m.pnJID;
+            if (m.lidJid != null && m.hasOwnProperty("lidJid")) {
+                d.lidJid = m.lidJid;
+            }
+            if (m.pnJid != null && m.hasOwnProperty("pnJid")) {
+                d.pnJid = m.pnJid;
                 if (o.oneofs)
-                    d._pnJID = "pnJID";
+                    d._pnJid = "pnJid";
             }
             return d;
         };
@@ -8507,11 +8471,11 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BusinessBroadcastCampaignAction.prototype.deviceID = null;
-        BusinessBroadcastCampaignAction.prototype.adID = null;
+        BusinessBroadcastCampaignAction.prototype.deviceId = null;
+        BusinessBroadcastCampaignAction.prototype.adId = null;
         BusinessBroadcastCampaignAction.prototype.name = null;
-        BusinessBroadcastCampaignAction.prototype.msgID = null;
-        BusinessBroadcastCampaignAction.prototype.broadcastJID = null;
+        BusinessBroadcastCampaignAction.prototype.msgId = null;
+        BusinessBroadcastCampaignAction.prototype.broadcastJid = null;
         BusinessBroadcastCampaignAction.prototype.reservedQuota = null;
         BusinessBroadcastCampaignAction.prototype.scheduledTimestamp = null;
         BusinessBroadcastCampaignAction.prototype.createTimestamp = null;
@@ -8520,14 +8484,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BusinessBroadcastCampaignAction.prototype, "_deviceID", {
-            get: $util.oneOfGetter($oneOfFields = ["deviceID"]),
+        Object.defineProperty(BusinessBroadcastCampaignAction.prototype, "_deviceId", {
+            get: $util.oneOfGetter($oneOfFields = ["deviceId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BusinessBroadcastCampaignAction.prototype, "_adID", {
-            get: $util.oneOfGetter($oneOfFields = ["adID"]),
+        Object.defineProperty(BusinessBroadcastCampaignAction.prototype, "_adId", {
+            get: $util.oneOfGetter($oneOfFields = ["adId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -8538,14 +8502,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BusinessBroadcastCampaignAction.prototype, "_msgID", {
-            get: $util.oneOfGetter($oneOfFields = ["msgID"]),
+        Object.defineProperty(BusinessBroadcastCampaignAction.prototype, "_msgId", {
+            get: $util.oneOfGetter($oneOfFields = ["msgId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BusinessBroadcastCampaignAction.prototype, "_broadcastJID", {
-            get: $util.oneOfGetter($oneOfFields = ["broadcastJID"]),
+        Object.defineProperty(BusinessBroadcastCampaignAction.prototype, "_broadcastJid", {
+            get: $util.oneOfGetter($oneOfFields = ["broadcastJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -8580,16 +8544,16 @@ export const WASyncAction = $root.WASyncAction = (() => {
         BusinessBroadcastCampaignAction.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.deviceID != null && Object.hasOwnProperty.call(m, "deviceID"))
-                w.uint32(8).int32(m.deviceID);
-            if (m.adID != null && Object.hasOwnProperty.call(m, "adID"))
-                w.uint32(18).string(m.adID);
+            if (m.deviceId != null && Object.hasOwnProperty.call(m, "deviceId"))
+                w.uint32(8).int32(m.deviceId);
+            if (m.adId != null && Object.hasOwnProperty.call(m, "adId"))
+                w.uint32(18).string(m.adId);
             if (m.name != null && Object.hasOwnProperty.call(m, "name"))
                 w.uint32(26).string(m.name);
-            if (m.msgID != null && Object.hasOwnProperty.call(m, "msgID"))
-                w.uint32(34).string(m.msgID);
-            if (m.broadcastJID != null && Object.hasOwnProperty.call(m, "broadcastJID"))
-                w.uint32(42).string(m.broadcastJID);
+            if (m.msgId != null && Object.hasOwnProperty.call(m, "msgId"))
+                w.uint32(34).string(m.msgId);
+            if (m.broadcastJid != null && Object.hasOwnProperty.call(m, "broadcastJid"))
+                w.uint32(42).string(m.broadcastJid);
             if (m.reservedQuota != null && Object.hasOwnProperty.call(m, "reservedQuota"))
                 w.uint32(48).int32(m.reservedQuota);
             if (m.scheduledTimestamp != null && Object.hasOwnProperty.call(m, "scheduledTimestamp"))
@@ -8615,11 +8579,11 @@ export const WASyncAction = $root.WASyncAction = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.deviceID = r.int32();
+                        m.deviceId = r.int32();
                         break;
                     }
                 case 2: {
-                        m.adID = r.string();
+                        m.adId = r.string();
                         break;
                     }
                 case 3: {
@@ -8627,11 +8591,11 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 4: {
-                        m.msgID = r.string();
+                        m.msgId = r.string();
                         break;
                     }
                 case 5: {
-                        m.broadcastJID = r.string();
+                        m.broadcastJid = r.string();
                         break;
                     }
                 case 6: {
@@ -8666,20 +8630,20 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASyncAction.BusinessBroadcastCampaignAction();
-            if (d.deviceID != null) {
-                m.deviceID = d.deviceID | 0;
+            if (d.deviceId != null) {
+                m.deviceId = d.deviceId | 0;
             }
-            if (d.adID != null) {
-                m.adID = String(d.adID);
+            if (d.adId != null) {
+                m.adId = String(d.adId);
             }
             if (d.name != null) {
                 m.name = String(d.name);
             }
-            if (d.msgID != null) {
-                m.msgID = String(d.msgID);
+            if (d.msgId != null) {
+                m.msgId = String(d.msgId);
             }
-            if (d.broadcastJID != null) {
-                m.broadcastJID = String(d.broadcastJID);
+            if (d.broadcastJid != null) {
+                m.broadcastJid = String(d.broadcastJid);
             }
             if (d.reservedQuota != null) {
                 m.reservedQuota = d.reservedQuota | 0;
@@ -8739,30 +8703,30 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.deviceID != null && m.hasOwnProperty("deviceID")) {
-                d.deviceID = m.deviceID;
+            if (m.deviceId != null && m.hasOwnProperty("deviceId")) {
+                d.deviceId = m.deviceId;
                 if (o.oneofs)
-                    d._deviceID = "deviceID";
+                    d._deviceId = "deviceId";
             }
-            if (m.adID != null && m.hasOwnProperty("adID")) {
-                d.adID = m.adID;
+            if (m.adId != null && m.hasOwnProperty("adId")) {
+                d.adId = m.adId;
                 if (o.oneofs)
-                    d._adID = "adID";
+                    d._adId = "adId";
             }
             if (m.name != null && m.hasOwnProperty("name")) {
                 d.name = m.name;
                 if (o.oneofs)
                     d._name = "name";
             }
-            if (m.msgID != null && m.hasOwnProperty("msgID")) {
-                d.msgID = m.msgID;
+            if (m.msgId != null && m.hasOwnProperty("msgId")) {
+                d.msgId = m.msgId;
                 if (o.oneofs)
-                    d._msgID = "msgID";
+                    d._msgId = "msgId";
             }
-            if (m.broadcastJID != null && m.hasOwnProperty("broadcastJID")) {
-                d.broadcastJID = m.broadcastJID;
+            if (m.broadcastJid != null && m.hasOwnProperty("broadcastJid")) {
+                d.broadcastJid = m.broadcastJid;
                 if (o.oneofs)
-                    d._broadcastJID = "broadcastJID";
+                    d._broadcastJid = "broadcastJid";
             }
             if (m.reservedQuota != null && m.hasOwnProperty("reservedQuota")) {
                 d.reservedQuota = m.reservedQuota;
@@ -8811,7 +8775,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
 
         function BusinessBroadcastListAction(p) {
             this.participants = [];
-            this.labelIDs = [];
+            this.labelIds = [];
             if (p)
                 for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
                     if (p[ks[i]] != null && ks[i] !== "__proto__")
@@ -8821,7 +8785,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
         BusinessBroadcastListAction.prototype.deleted = null;
         BusinessBroadcastListAction.prototype.participants = $util.emptyArray;
         BusinessBroadcastListAction.prototype.listName = null;
-        BusinessBroadcastListAction.prototype.labelIDs = $util.emptyArray;
+        BusinessBroadcastListAction.prototype.labelIds = $util.emptyArray;
         BusinessBroadcastListAction.prototype.audienceExpression = null;
 
         let $oneOfFields;
@@ -8859,9 +8823,9 @@ export const WASyncAction = $root.WASyncAction = (() => {
             }
             if (m.listName != null && Object.hasOwnProperty.call(m, "listName"))
                 w.uint32(26).string(m.listName);
-            if (m.labelIDs != null && m.labelIDs.length) {
-                for (var i = 0; i < m.labelIDs.length; ++i)
-                    w.uint32(34).string(m.labelIDs[i]);
+            if (m.labelIds != null && m.labelIds.length) {
+                for (var i = 0; i < m.labelIds.length; ++i)
+                    w.uint32(34).string(m.labelIds[i]);
             }
             if (m.audienceExpression != null && Object.hasOwnProperty.call(m, "audienceExpression"))
                 w.uint32(42).string(m.audienceExpression);
@@ -8896,9 +8860,9 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 4: {
-                        if (!(m.labelIDs && m.labelIDs.length))
-                            m.labelIDs = [];
-                        m.labelIDs.push(r.string());
+                        if (!(m.labelIds && m.labelIds.length))
+                            m.labelIds = [];
+                        m.labelIds.push(r.string());
                         break;
                     }
                 case 5: {
@@ -8937,12 +8901,12 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (d.listName != null) {
                 m.listName = String(d.listName);
             }
-            if (d.labelIDs) {
-                if (!Array.isArray(d.labelIDs))
-                    throw TypeError(".WASyncAction.BusinessBroadcastListAction.labelIDs: array expected");
-                m.labelIDs = [];
-                for (var i = 0; i < d.labelIDs.length; ++i) {
-                    m.labelIDs[i] = String(d.labelIDs[i]);
+            if (d.labelIds) {
+                if (!Array.isArray(d.labelIds))
+                    throw TypeError(".WASyncAction.BusinessBroadcastListAction.labelIds: array expected");
+                m.labelIds = [];
+                for (var i = 0; i < d.labelIds.length; ++i) {
+                    m.labelIds[i] = String(d.labelIds[i]);
                 }
             }
             if (d.audienceExpression != null) {
@@ -8957,7 +8921,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
             var d = {};
             if (o.arrays || o.defaults) {
                 d.participants = [];
-                d.labelIDs = [];
+                d.labelIds = [];
             }
             if (m.deleted != null && m.hasOwnProperty("deleted")) {
                 d.deleted = m.deleted;
@@ -8975,10 +8939,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._listName = "listName";
             }
-            if (m.labelIDs && m.labelIDs.length) {
-                d.labelIDs = [];
-                for (var j = 0; j < m.labelIDs.length; ++j) {
-                    d.labelIDs[j] = m.labelIDs[j];
+            if (m.labelIds && m.labelIds.length) {
+                d.labelIds = [];
+                for (var j = 0; j < m.labelIds.length; ++j) {
+                    d.labelIds[j] = m.labelIds[j];
                 }
             }
             if (m.audienceExpression != null && m.hasOwnProperty("audienceExpression")) {
@@ -9560,13 +9524,13 @@ export const WASyncAction = $root.WASyncAction = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            Favorite.prototype.ID = null;
+            Favorite.prototype.id = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(Favorite.prototype, "_ID", {
-                get: $util.oneOfGetter($oneOfFields = ["ID"]),
+            Object.defineProperty(Favorite.prototype, "_id", {
+                get: $util.oneOfGetter($oneOfFields = ["id"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -9577,8 +9541,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             Favorite.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                    w.uint32(10).string(m.ID);
+                if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                    w.uint32(10).string(m.id);
                 return w;
             };
 
@@ -9596,7 +9560,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.ID = r.string();
+                            m.id = r.string();
                             break;
                         }
                     default:
@@ -9615,8 +9579,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WASyncAction.FavoritesAction.Favorite();
-                if (d.ID != null) {
-                    m.ID = String(d.ID);
+                if (d.id != null) {
+                    m.id = String(d.id);
                 }
                 return m;
             };
@@ -9625,10 +9589,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.ID != null && m.hasOwnProperty("ID")) {
-                    d.ID = m.ID;
+                if (m.id != null && m.hasOwnProperty("id")) {
+                    d.id = m.id;
                     if (o.oneofs)
-                        d._ID = "ID";
+                        d._id = "id";
                 }
                 return d;
             };
@@ -10148,30 +10112,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        CustomPaymentMethod.prototype.credentialID = null;
-        CustomPaymentMethod.prototype.country = null;
-        CustomPaymentMethod.prototype.type = null;
+        CustomPaymentMethod.prototype.credentialId = "";
+        CustomPaymentMethod.prototype.country = "";
+        CustomPaymentMethod.prototype.type = "";
         CustomPaymentMethod.prototype.metadata = $util.emptyArray;
-
-        let $oneOfFields;
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(CustomPaymentMethod.prototype, "_credentialID", {
-            get: $util.oneOfGetter($oneOfFields = ["credentialID"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(CustomPaymentMethod.prototype, "_country", {
-            get: $util.oneOfGetter($oneOfFields = ["country"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(CustomPaymentMethod.prototype, "_type", {
-            get: $util.oneOfGetter($oneOfFields = ["type"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
 
         CustomPaymentMethod.create = function create(properties) {
             return new CustomPaymentMethod(properties);
@@ -10180,8 +10124,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         CustomPaymentMethod.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.credentialID != null && Object.hasOwnProperty.call(m, "credentialID"))
-                w.uint32(10).string(m.credentialID);
+            if (m.credentialId != null && Object.hasOwnProperty.call(m, "credentialId"))
+                w.uint32(10).string(m.credentialId);
             if (m.country != null && Object.hasOwnProperty.call(m, "country"))
                 w.uint32(18).string(m.country);
             if (m.type != null && Object.hasOwnProperty.call(m, "type"))
@@ -10207,7 +10151,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.credentialID = r.string();
+                        m.credentialId = r.string();
                         break;
                     }
                 case 2: {
@@ -10240,8 +10184,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASyncAction.CustomPaymentMethod();
-            if (d.credentialID != null) {
-                m.credentialID = String(d.credentialID);
+            if (d.credentialId != null) {
+                m.credentialId = String(d.credentialId);
             }
             if (d.country != null) {
                 m.country = String(d.country);
@@ -10269,20 +10213,19 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (o.arrays || o.defaults) {
                 d.metadata = [];
             }
-            if (m.credentialID != null && m.hasOwnProperty("credentialID")) {
-                d.credentialID = m.credentialID;
-                if (o.oneofs)
-                    d._credentialID = "credentialID";
+            if (o.defaults) {
+                d.credentialId = "";
+                d.country = "";
+                d.type = "";
+            }
+            if (m.credentialId != null && m.hasOwnProperty("credentialId")) {
+                d.credentialId = m.credentialId;
             }
             if (m.country != null && m.hasOwnProperty("country")) {
                 d.country = m.country;
-                if (o.oneofs)
-                    d._country = "country";
             }
             if (m.type != null && m.hasOwnProperty("type")) {
                 d.type = m.type;
-                if (o.oneofs)
-                    d._type = "type";
             }
             if (m.metadata && m.metadata.length) {
                 d.metadata = [];
@@ -10316,22 +10259,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        CustomPaymentMethodMetadata.prototype.key = null;
-        CustomPaymentMethodMetadata.prototype.value = null;
-
-        let $oneOfFields;
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(CustomPaymentMethodMetadata.prototype, "_key", {
-            get: $util.oneOfGetter($oneOfFields = ["key"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(CustomPaymentMethodMetadata.prototype, "_value", {
-            get: $util.oneOfGetter($oneOfFields = ["value"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        CustomPaymentMethodMetadata.prototype.key = "";
+        CustomPaymentMethodMetadata.prototype.value = "";
 
         CustomPaymentMethodMetadata.create = function create(properties) {
             return new CustomPaymentMethodMetadata(properties);
@@ -10397,15 +10326,15 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (!o)
                 o = {};
             var d = {};
+            if (o.defaults) {
+                d.key = "";
+                d.value = "";
+            }
             if (m.key != null && m.hasOwnProperty("key")) {
                 d.key = m.key;
-                if (o.oneofs)
-                    d._key = "key";
             }
             if (m.value != null && m.hasOwnProperty("value")) {
                 d.value = m.value;
-                if (o.oneofs)
-                    d._value = "value";
             }
             return d;
         };
@@ -10523,14 +10452,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
     WASyncAction.LabelReorderingAction = (function() {
 
         function LabelReorderingAction(p) {
-            this.sortedLabelIDs = [];
+            this.sortedLabelIds = [];
             if (p)
                 for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
                     if (p[ks[i]] != null && ks[i] !== "__proto__")
                         this[ks[i]] = p[ks[i]];
         }
 
-        LabelReorderingAction.prototype.sortedLabelIDs = $util.emptyArray;
+        LabelReorderingAction.prototype.sortedLabelIds = $util.emptyArray;
 
         LabelReorderingAction.create = function create(properties) {
             return new LabelReorderingAction(properties);
@@ -10539,10 +10468,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
         LabelReorderingAction.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.sortedLabelIDs != null && m.sortedLabelIDs.length) {
+            if (m.sortedLabelIds != null && m.sortedLabelIds.length) {
                 w.uint32(10).fork();
-                for (var i = 0; i < m.sortedLabelIDs.length; ++i)
-                    w.int32(m.sortedLabelIDs[i]);
+                for (var i = 0; i < m.sortedLabelIds.length; ++i)
+                    w.int32(m.sortedLabelIds[i]);
                 w.ldelim();
             }
             return w;
@@ -10562,14 +10491,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        if (!(m.sortedLabelIDs && m.sortedLabelIDs.length))
-                            m.sortedLabelIDs = [];
+                        if (!(m.sortedLabelIds && m.sortedLabelIds.length))
+                            m.sortedLabelIds = [];
                         if ((t & 7) === 2) {
                             var c2 = r.uint32() + r.pos;
                             while (r.pos < c2)
-                                m.sortedLabelIDs.push(r.int32());
+                                m.sortedLabelIds.push(r.int32());
                         } else
-                            m.sortedLabelIDs.push(r.int32());
+                            m.sortedLabelIds.push(r.int32());
                         break;
                     }
                 default:
@@ -10588,12 +10517,12 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASyncAction.LabelReorderingAction();
-            if (d.sortedLabelIDs) {
-                if (!Array.isArray(d.sortedLabelIDs))
-                    throw TypeError(".WASyncAction.LabelReorderingAction.sortedLabelIDs: array expected");
-                m.sortedLabelIDs = [];
-                for (var i = 0; i < d.sortedLabelIDs.length; ++i) {
-                    m.sortedLabelIDs[i] = d.sortedLabelIDs[i] | 0;
+            if (d.sortedLabelIds) {
+                if (!Array.isArray(d.sortedLabelIds))
+                    throw TypeError(".WASyncAction.LabelReorderingAction.sortedLabelIds: array expected");
+                m.sortedLabelIds = [];
+                for (var i = 0; i < d.sortedLabelIds.length; ++i) {
+                    m.sortedLabelIds[i] = d.sortedLabelIds[i] | 0;
                 }
             }
             return m;
@@ -10604,12 +10533,12 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 o = {};
             var d = {};
             if (o.arrays || o.defaults) {
-                d.sortedLabelIDs = [];
+                d.sortedLabelIds = [];
             }
-            if (m.sortedLabelIDs && m.sortedLabelIDs.length) {
-                d.sortedLabelIDs = [];
-                for (var j = 0; j < m.sortedLabelIDs.length; ++j) {
-                    d.sortedLabelIDs[j] = m.sortedLabelIDs[j];
+            if (m.sortedLabelIds && m.sortedLabelIds.length) {
+                d.sortedLabelIds = [];
+                for (var j = 0; j < m.sortedLabelIds.length; ++j) {
+                    d.sortedLabelIds[j] = m.sortedLabelIds[j];
                 }
             }
             return d;
@@ -10638,14 +10567,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        DeleteIndividualCallLogAction.prototype.peerJID = null;
+        DeleteIndividualCallLogAction.prototype.peerJid = null;
         DeleteIndividualCallLogAction.prototype.isIncoming = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(DeleteIndividualCallLogAction.prototype, "_peerJID", {
-            get: $util.oneOfGetter($oneOfFields = ["peerJID"]),
+        Object.defineProperty(DeleteIndividualCallLogAction.prototype, "_peerJid", {
+            get: $util.oneOfGetter($oneOfFields = ["peerJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -10662,8 +10591,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         DeleteIndividualCallLogAction.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.peerJID != null && Object.hasOwnProperty.call(m, "peerJID"))
-                w.uint32(10).string(m.peerJID);
+            if (m.peerJid != null && Object.hasOwnProperty.call(m, "peerJid"))
+                w.uint32(10).string(m.peerJid);
             if (m.isIncoming != null && Object.hasOwnProperty.call(m, "isIncoming"))
                 w.uint32(16).bool(m.isIncoming);
             return w;
@@ -10683,7 +10612,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.peerJID = r.string();
+                        m.peerJid = r.string();
                         break;
                     }
                 case 2: {
@@ -10706,8 +10635,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASyncAction.DeleteIndividualCallLogAction();
-            if (d.peerJID != null) {
-                m.peerJID = String(d.peerJID);
+            if (d.peerJid != null) {
+                m.peerJid = String(d.peerJid);
             }
             if (d.isIncoming != null) {
                 m.isIncoming = Boolean(d.isIncoming);
@@ -10719,10 +10648,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.peerJID != null && m.hasOwnProperty("peerJID")) {
-                d.peerJID = m.peerJID;
+            if (m.peerJid != null && m.hasOwnProperty("peerJid")) {
+                d.peerJid = m.peerJid;
                 if (o.oneofs)
-                    d._peerJID = "peerJID";
+                    d._peerJid = "peerJid";
             }
             if (m.isIncoming != null && m.hasOwnProperty("isIncoming")) {
                 d.isIncoming = m.isIncoming;
@@ -10948,14 +10877,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        MusicUserIdAction.prototype.musicUserID = null;
+        MusicUserIdAction.prototype.musicUserId = null;
         MusicUserIdAction.prototype.musicUserIdMap = $util.emptyObject;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MusicUserIdAction.prototype, "_musicUserID", {
-            get: $util.oneOfGetter($oneOfFields = ["musicUserID"]),
+        Object.defineProperty(MusicUserIdAction.prototype, "_musicUserId", {
+            get: $util.oneOfGetter($oneOfFields = ["musicUserId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -10966,8 +10895,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         MusicUserIdAction.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.musicUserID != null && Object.hasOwnProperty.call(m, "musicUserID"))
-                w.uint32(10).string(m.musicUserID);
+            if (m.musicUserId != null && Object.hasOwnProperty.call(m, "musicUserId"))
+                w.uint32(10).string(m.musicUserId);
             if (m.musicUserIdMap != null && Object.hasOwnProperty.call(m, "musicUserIdMap")) {
                 for (var ks = Object.keys(m.musicUserIdMap), i = 0; i < ks.length; ++i) {
                     w.uint32(18).fork().uint32(10).string(ks[i]).uint32(18).bytes(m.musicUserIdMap[ks[i]]).ldelim();
@@ -10990,7 +10919,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.musicUserID = r.string();
+                        m.musicUserId = r.string();
                         break;
                     }
                 case 2: {
@@ -11034,8 +10963,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASyncAction.MusicUserIdAction();
-            if (d.musicUserID != null) {
-                m.musicUserID = String(d.musicUserID);
+            if (d.musicUserId != null) {
+                m.musicUserId = String(d.musicUserId);
             }
             if (d.musicUserIdMap) {
                 if (typeof d.musicUserIdMap !== "object")
@@ -11060,10 +10989,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (o.objects || o.defaults) {
                 d.musicUserIdMap = {};
             }
-            if (m.musicUserID != null && m.hasOwnProperty("musicUserID")) {
-                d.musicUserID = m.musicUserID;
+            if (m.musicUserId != null && m.hasOwnProperty("musicUserId")) {
+                d.musicUserId = m.musicUserId;
                 if (o.oneofs)
-                    d._musicUserID = "musicUserID";
+                    d._musicUserId = "musicUserId";
             }
             var ks2;
             if (m.musicUserIdMap && (ks2 = Object.keys(m.musicUserIdMap)).length) {
@@ -11681,13 +11610,13 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        PnForLidChatAction.prototype.pnJID = null;
+        PnForLidChatAction.prototype.pnJid = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PnForLidChatAction.prototype, "_pnJID", {
-            get: $util.oneOfGetter($oneOfFields = ["pnJID"]),
+        Object.defineProperty(PnForLidChatAction.prototype, "_pnJid", {
+            get: $util.oneOfGetter($oneOfFields = ["pnJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -11698,8 +11627,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         PnForLidChatAction.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.pnJID != null && Object.hasOwnProperty.call(m, "pnJID"))
-                w.uint32(10).string(m.pnJID);
+            if (m.pnJid != null && Object.hasOwnProperty.call(m, "pnJid"))
+                w.uint32(10).string(m.pnJid);
             return w;
         };
 
@@ -11717,7 +11646,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.pnJID = r.string();
+                        m.pnJid = r.string();
                         break;
                     }
                 default:
@@ -11736,8 +11665,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASyncAction.PnForLidChatAction();
-            if (d.pnJID != null) {
-                m.pnJID = String(d.pnJID);
+            if (d.pnJid != null) {
+                m.pnJid = String(d.pnJid);
             }
             return m;
         };
@@ -11746,10 +11675,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.pnJID != null && m.hasOwnProperty("pnJID")) {
-                d.pnJID = m.pnJID;
+            if (m.pnJid != null && m.hasOwnProperty("pnJid")) {
+                d.pnJid = m.pnJid;
                 if (o.oneofs)
-                    d._pnJID = "pnJID";
+                    d._pnJid = "pnJid";
             }
             return d;
         };
@@ -11969,8 +11898,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        StickerAction.prototype.URL = null;
-        StickerAction.prototype.fileEncSHA256 = null;
+        StickerAction.prototype.url = null;
+        StickerAction.prototype.fileEncSha256 = null;
         StickerAction.prototype.mediaKey = null;
         StickerAction.prototype.mimetype = null;
         StickerAction.prototype.height = null;
@@ -11978,7 +11907,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
         StickerAction.prototype.directPath = null;
         StickerAction.prototype.fileLength = null;
         StickerAction.prototype.isFavorite = null;
-        StickerAction.prototype.deviceIDHint = null;
+        StickerAction.prototype.deviceIdHint = null;
         StickerAction.prototype.isLottie = null;
         StickerAction.prototype.imageHash = null;
         StickerAction.prototype.isAvatarSticker = null;
@@ -11986,14 +11915,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StickerAction.prototype, "_URL", {
-            get: $util.oneOfGetter($oneOfFields = ["URL"]),
+        Object.defineProperty(StickerAction.prototype, "_url", {
+            get: $util.oneOfGetter($oneOfFields = ["url"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StickerAction.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(StickerAction.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -12040,8 +11969,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StickerAction.prototype, "_deviceIDHint", {
-            get: $util.oneOfGetter($oneOfFields = ["deviceIDHint"]),
+        Object.defineProperty(StickerAction.prototype, "_deviceIdHint", {
+            get: $util.oneOfGetter($oneOfFields = ["deviceIdHint"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -12070,10 +11999,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
         StickerAction.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                w.uint32(10).string(m.URL);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(18).bytes(m.fileEncSHA256);
+            if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                w.uint32(10).string(m.url);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(18).bytes(m.fileEncSha256);
             if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                 w.uint32(26).bytes(m.mediaKey);
             if (m.mimetype != null && Object.hasOwnProperty.call(m, "mimetype"))
@@ -12088,8 +12017,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w.uint32(64).uint64(m.fileLength);
             if (m.isFavorite != null && Object.hasOwnProperty.call(m, "isFavorite"))
                 w.uint32(72).bool(m.isFavorite);
-            if (m.deviceIDHint != null && Object.hasOwnProperty.call(m, "deviceIDHint"))
-                w.uint32(80).uint32(m.deviceIDHint);
+            if (m.deviceIdHint != null && Object.hasOwnProperty.call(m, "deviceIdHint"))
+                w.uint32(80).uint32(m.deviceIdHint);
             if (m.isLottie != null && Object.hasOwnProperty.call(m, "isLottie"))
                 w.uint32(88).bool(m.isLottie);
             if (m.imageHash != null && Object.hasOwnProperty.call(m, "imageHash"))
@@ -12113,11 +12042,11 @@ export const WASyncAction = $root.WASyncAction = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.URL = r.string();
+                        m.url = r.string();
                         break;
                     }
                 case 2: {
-                        m.fileEncSHA256 = r.bytes();
+                        m.fileEncSha256 = r.bytes();
                         break;
                     }
                 case 3: {
@@ -12149,7 +12078,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 10: {
-                        m.deviceIDHint = r.uint32();
+                        m.deviceIdHint = r.uint32();
                         break;
                     }
                 case 11: {
@@ -12180,14 +12109,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASyncAction.StickerAction();
-            if (d.URL != null) {
-                m.URL = String(d.URL);
+            if (d.url != null) {
+                m.url = String(d.url);
             }
-            if (d.fileEncSHA256 != null) {
-                if (typeof d.fileEncSHA256 === "string")
-                    $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                else if (d.fileEncSHA256.length >= 0)
-                    m.fileEncSHA256 = d.fileEncSHA256;
+            if (d.fileEncSha256 != null) {
+                if (typeof d.fileEncSha256 === "string")
+                    $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                else if (d.fileEncSha256.length >= 0)
+                    m.fileEncSha256 = d.fileEncSha256;
             }
             if (d.mediaKey != null) {
                 if (typeof d.mediaKey === "string")
@@ -12220,8 +12149,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (d.isFavorite != null) {
                 m.isFavorite = Boolean(d.isFavorite);
             }
-            if (d.deviceIDHint != null) {
-                m.deviceIDHint = d.deviceIDHint >>> 0;
+            if (d.deviceIdHint != null) {
+                m.deviceIdHint = d.deviceIdHint >>> 0;
             }
             if (d.isLottie != null) {
                 m.isLottie = Boolean(d.isLottie);
@@ -12239,15 +12168,15 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.URL != null && m.hasOwnProperty("URL")) {
-                d.URL = m.URL;
+            if (m.url != null && m.hasOwnProperty("url")) {
+                d.url = m.url;
                 if (o.oneofs)
-                    d._URL = "URL";
+                    d._url = "url";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
             if (m.mediaKey != null && m.hasOwnProperty("mediaKey")) {
                 d.mediaKey = o.bytes === String ? $util.base64.encode(m.mediaKey, 0, m.mediaKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.mediaKey) : m.mediaKey;
@@ -12287,10 +12216,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._isFavorite = "isFavorite";
             }
-            if (m.deviceIDHint != null && m.hasOwnProperty("deviceIDHint")) {
-                d.deviceIDHint = m.deviceIDHint;
+            if (m.deviceIdHint != null && m.hasOwnProperty("deviceIdHint")) {
+                d.deviceIdHint = m.deviceIdHint;
                 if (o.oneofs)
-                    d._deviceIDHint = "deviceIDHint";
+                    d._deviceIdHint = "deviceIdHint";
             }
             if (m.isLottie != null && m.hasOwnProperty("isLottie")) {
                 d.isLottie = m.isLottie;
@@ -12333,13 +12262,13 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        RemoveRecentStickerAction.prototype.lastStickerSentTS = null;
+        RemoveRecentStickerAction.prototype.lastStickerSentTs = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(RemoveRecentStickerAction.prototype, "_lastStickerSentTS", {
-            get: $util.oneOfGetter($oneOfFields = ["lastStickerSentTS"]),
+        Object.defineProperty(RemoveRecentStickerAction.prototype, "_lastStickerSentTs", {
+            get: $util.oneOfGetter($oneOfFields = ["lastStickerSentTs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -12350,8 +12279,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         RemoveRecentStickerAction.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.lastStickerSentTS != null && Object.hasOwnProperty.call(m, "lastStickerSentTS"))
-                w.uint32(8).int64(m.lastStickerSentTS);
+            if (m.lastStickerSentTs != null && Object.hasOwnProperty.call(m, "lastStickerSentTs"))
+                w.uint32(8).int64(m.lastStickerSentTs);
             return w;
         };
 
@@ -12369,7 +12298,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.lastStickerSentTS = r.int64();
+                        m.lastStickerSentTs = r.int64();
                         break;
                     }
                 default:
@@ -12388,15 +12317,15 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASyncAction.RemoveRecentStickerAction();
-            if (d.lastStickerSentTS != null) {
+            if (d.lastStickerSentTs != null) {
                 if ($util.Long)
-                    (m.lastStickerSentTS = $util.Long.fromValue(d.lastStickerSentTS)).unsigned = false;
-                else if (typeof d.lastStickerSentTS === "string")
-                    m.lastStickerSentTS = parseInt(d.lastStickerSentTS, 10);
-                else if (typeof d.lastStickerSentTS === "number")
-                    m.lastStickerSentTS = d.lastStickerSentTS;
-                else if (typeof d.lastStickerSentTS === "object")
-                    m.lastStickerSentTS = new $util.LongBits(d.lastStickerSentTS.low >>> 0, d.lastStickerSentTS.high >>> 0).toNumber();
+                    (m.lastStickerSentTs = $util.Long.fromValue(d.lastStickerSentTs)).unsigned = false;
+                else if (typeof d.lastStickerSentTs === "string")
+                    m.lastStickerSentTs = parseInt(d.lastStickerSentTs, 10);
+                else if (typeof d.lastStickerSentTs === "number")
+                    m.lastStickerSentTs = d.lastStickerSentTs;
+                else if (typeof d.lastStickerSentTs === "object")
+                    m.lastStickerSentTs = new $util.LongBits(d.lastStickerSentTs.low >>> 0, d.lastStickerSentTs.high >>> 0).toNumber();
             }
             return m;
         };
@@ -12405,13 +12334,13 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.lastStickerSentTS != null && m.hasOwnProperty("lastStickerSentTS")) {
-                if (typeof m.lastStickerSentTS === "number")
-                    d.lastStickerSentTS = o.longs === String ? String(m.lastStickerSentTS) : m.lastStickerSentTS;
+            if (m.lastStickerSentTs != null && m.hasOwnProperty("lastStickerSentTs")) {
+                if (typeof m.lastStickerSentTs === "number")
+                    d.lastStickerSentTs = o.longs === String ? String(m.lastStickerSentTs) : m.lastStickerSentTs;
                 else
-                    d.lastStickerSentTS = o.longs === String ? $util.Long.prototype.toString.call(m.lastStickerSentTS) : o.longs === Number ? new $util.LongBits(m.lastStickerSentTS.low >>> 0, m.lastStickerSentTS.high >>> 0).toNumber() : m.lastStickerSentTS;
+                    d.lastStickerSentTs = o.longs === String ? $util.Long.prototype.toString.call(m.lastStickerSentTs) : o.longs === Number ? new $util.LongBits(m.lastStickerSentTs.low >>> 0, m.lastStickerSentTs.high >>> 0).toNumber() : m.lastStickerSentTs;
                 if (o.oneofs)
-                    d._lastStickerSentTS = "lastStickerSentTS";
+                    d._lastStickerSentTs = "lastStickerSentTs";
             }
             return d;
         };
@@ -14552,7 +14481,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
 
         function QuickReplyAction(p) {
             this.keywords = [];
-            this.associatedLabelIDs = [];
+            this.associatedLabelIds = [];
             if (p)
                 for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
                     if (p[ks[i]] != null && ks[i] !== "__proto__")
@@ -14564,7 +14493,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
         QuickReplyAction.prototype.keywords = $util.emptyArray;
         QuickReplyAction.prototype.count = null;
         QuickReplyAction.prototype.deleted = null;
-        QuickReplyAction.prototype.associatedLabelIDs = $util.emptyArray;
+        QuickReplyAction.prototype.associatedLabelIds = $util.emptyArray;
 
         let $oneOfFields;
 
@@ -14611,9 +14540,9 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w.uint32(32).int32(m.count);
             if (m.deleted != null && Object.hasOwnProperty.call(m, "deleted"))
                 w.uint32(40).bool(m.deleted);
-            if (m.associatedLabelIDs != null && m.associatedLabelIDs.length) {
-                for (var i = 0; i < m.associatedLabelIDs.length; ++i)
-                    w.uint32(50).string(m.associatedLabelIDs[i]);
+            if (m.associatedLabelIds != null && m.associatedLabelIds.length) {
+                for (var i = 0; i < m.associatedLabelIds.length; ++i)
+                    w.uint32(50).string(m.associatedLabelIds[i]);
             }
             return w;
         };
@@ -14654,9 +14583,9 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 6: {
-                        if (!(m.associatedLabelIDs && m.associatedLabelIDs.length))
-                            m.associatedLabelIDs = [];
-                        m.associatedLabelIDs.push(r.string());
+                        if (!(m.associatedLabelIds && m.associatedLabelIds.length))
+                            m.associatedLabelIds = [];
+                        m.associatedLabelIds.push(r.string());
                         break;
                     }
                 default:
@@ -14695,12 +14624,12 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (d.deleted != null) {
                 m.deleted = Boolean(d.deleted);
             }
-            if (d.associatedLabelIDs) {
-                if (!Array.isArray(d.associatedLabelIDs))
-                    throw TypeError(".WASyncAction.QuickReplyAction.associatedLabelIDs: array expected");
-                m.associatedLabelIDs = [];
-                for (var i = 0; i < d.associatedLabelIDs.length; ++i) {
-                    m.associatedLabelIDs[i] = String(d.associatedLabelIDs[i]);
+            if (d.associatedLabelIds) {
+                if (!Array.isArray(d.associatedLabelIds))
+                    throw TypeError(".WASyncAction.QuickReplyAction.associatedLabelIds: array expected");
+                m.associatedLabelIds = [];
+                for (var i = 0; i < d.associatedLabelIds.length; ++i) {
+                    m.associatedLabelIds[i] = String(d.associatedLabelIds[i]);
                 }
             }
             return m;
@@ -14712,7 +14641,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
             var d = {};
             if (o.arrays || o.defaults) {
                 d.keywords = [];
-                d.associatedLabelIDs = [];
+                d.associatedLabelIds = [];
             }
             if (m.shortcut != null && m.hasOwnProperty("shortcut")) {
                 d.shortcut = m.shortcut;
@@ -14740,10 +14669,10 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._deleted = "deleted";
             }
-            if (m.associatedLabelIDs && m.associatedLabelIDs.length) {
-                d.associatedLabelIDs = [];
-                for (var j = 0; j < m.associatedLabelIDs.length; ++j) {
-                    d.associatedLabelIDs[j] = m.associatedLabelIDs[j];
+            if (m.associatedLabelIds && m.associatedLabelIds.length) {
+                d.associatedLabelIds = [];
+                for (var j = 0; j < m.associatedLabelIds.length; ++j) {
+                    d.associatedLabelIds[j] = m.associatedLabelIds[j];
                 }
             }
             return d;
@@ -15241,9 +15170,9 @@ export const WASyncAction = $root.WASyncAction = (() => {
 
         ContactAction.prototype.fullName = null;
         ContactAction.prototype.firstName = null;
-        ContactAction.prototype.lidJID = null;
+        ContactAction.prototype.lidJid = null;
         ContactAction.prototype.saveOnPrimaryAddressbook = null;
-        ContactAction.prototype.pnJID = null;
+        ContactAction.prototype.pnJid = null;
         ContactAction.prototype.username = null;
 
         let $oneOfFields;
@@ -15261,8 +15190,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ContactAction.prototype, "_lidJID", {
-            get: $util.oneOfGetter($oneOfFields = ["lidJID"]),
+        Object.defineProperty(ContactAction.prototype, "_lidJid", {
+            get: $util.oneOfGetter($oneOfFields = ["lidJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -15273,8 +15202,8 @@ export const WASyncAction = $root.WASyncAction = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ContactAction.prototype, "_pnJID", {
-            get: $util.oneOfGetter($oneOfFields = ["pnJID"]),
+        Object.defineProperty(ContactAction.prototype, "_pnJid", {
+            get: $util.oneOfGetter($oneOfFields = ["pnJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -15295,12 +15224,12 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 w.uint32(10).string(m.fullName);
             if (m.firstName != null && Object.hasOwnProperty.call(m, "firstName"))
                 w.uint32(18).string(m.firstName);
-            if (m.lidJID != null && Object.hasOwnProperty.call(m, "lidJID"))
-                w.uint32(26).string(m.lidJID);
+            if (m.lidJid != null && Object.hasOwnProperty.call(m, "lidJid"))
+                w.uint32(26).string(m.lidJid);
             if (m.saveOnPrimaryAddressbook != null && Object.hasOwnProperty.call(m, "saveOnPrimaryAddressbook"))
                 w.uint32(32).bool(m.saveOnPrimaryAddressbook);
-            if (m.pnJID != null && Object.hasOwnProperty.call(m, "pnJID"))
-                w.uint32(42).string(m.pnJID);
+            if (m.pnJid != null && Object.hasOwnProperty.call(m, "pnJid"))
+                w.uint32(42).string(m.pnJid);
             if (m.username != null && Object.hasOwnProperty.call(m, "username"))
                 w.uint32(50).string(m.username);
             return w;
@@ -15328,7 +15257,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 3: {
-                        m.lidJID = r.string();
+                        m.lidJid = r.string();
                         break;
                     }
                 case 4: {
@@ -15336,7 +15265,7 @@ export const WASyncAction = $root.WASyncAction = (() => {
                         break;
                     }
                 case 5: {
-                        m.pnJID = r.string();
+                        m.pnJid = r.string();
                         break;
                     }
                 case 6: {
@@ -15365,14 +15294,14 @@ export const WASyncAction = $root.WASyncAction = (() => {
             if (d.firstName != null) {
                 m.firstName = String(d.firstName);
             }
-            if (d.lidJID != null) {
-                m.lidJID = String(d.lidJID);
+            if (d.lidJid != null) {
+                m.lidJid = String(d.lidJid);
             }
             if (d.saveOnPrimaryAddressbook != null) {
                 m.saveOnPrimaryAddressbook = Boolean(d.saveOnPrimaryAddressbook);
             }
-            if (d.pnJID != null) {
-                m.pnJID = String(d.pnJID);
+            if (d.pnJid != null) {
+                m.pnJid = String(d.pnJid);
             }
             if (d.username != null) {
                 m.username = String(d.username);
@@ -15394,20 +15323,20 @@ export const WASyncAction = $root.WASyncAction = (() => {
                 if (o.oneofs)
                     d._firstName = "firstName";
             }
-            if (m.lidJID != null && m.hasOwnProperty("lidJID")) {
-                d.lidJID = m.lidJID;
+            if (m.lidJid != null && m.hasOwnProperty("lidJid")) {
+                d.lidJid = m.lidJid;
                 if (o.oneofs)
-                    d._lidJID = "lidJID";
+                    d._lidJid = "lidJid";
             }
             if (m.saveOnPrimaryAddressbook != null && m.hasOwnProperty("saveOnPrimaryAddressbook")) {
                 d.saveOnPrimaryAddressbook = m.saveOnPrimaryAddressbook;
                 if (o.oneofs)
                     d._saveOnPrimaryAddressbook = "saveOnPrimaryAddressbook";
             }
-            if (m.pnJID != null && m.hasOwnProperty("pnJID")) {
-                d.pnJID = m.pnJID;
+            if (m.pnJid != null && m.hasOwnProperty("pnJid")) {
+                d.pnJid = m.pnJid;
                 if (o.oneofs)
-                    d._pnJID = "pnJID";
+                    d._pnJid = "pnJid";
             }
             if (m.username != null && m.hasOwnProperty("username")) {
                 d.username = m.username;
@@ -17260,16 +17189,16 @@ export const WACommon = WACommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        MessageKey.prototype.remoteJID = null;
+        MessageKey.prototype.remoteJid = null;
         MessageKey.prototype.fromMe = null;
-        MessageKey.prototype.ID = null;
+        MessageKey.prototype.id = null;
         MessageKey.prototype.participant = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MessageKey.prototype, "_remoteJID", {
-            get: $util.oneOfGetter($oneOfFields = ["remoteJID"]),
+        Object.defineProperty(MessageKey.prototype, "_remoteJid", {
+            get: $util.oneOfGetter($oneOfFields = ["remoteJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -17280,8 +17209,8 @@ export const WACommon = WACommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MessageKey.prototype, "_ID", {
-            get: $util.oneOfGetter($oneOfFields = ["ID"]),
+        Object.defineProperty(MessageKey.prototype, "_id", {
+            get: $util.oneOfGetter($oneOfFields = ["id"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -17298,12 +17227,12 @@ export const WACommon = WACommon = (() => {
         MessageKey.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.remoteJID != null && Object.hasOwnProperty.call(m, "remoteJID"))
-                w.uint32(10).string(m.remoteJID);
+            if (m.remoteJid != null && Object.hasOwnProperty.call(m, "remoteJid"))
+                w.uint32(10).string(m.remoteJid);
             if (m.fromMe != null && Object.hasOwnProperty.call(m, "fromMe"))
                 w.uint32(16).bool(m.fromMe);
-            if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                w.uint32(26).string(m.ID);
+            if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                w.uint32(26).string(m.id);
             if (m.participant != null && Object.hasOwnProperty.call(m, "participant"))
                 w.uint32(34).string(m.participant);
             return w;
@@ -17323,7 +17252,7 @@ export const WACommon = WACommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.remoteJID = r.string();
+                        m.remoteJid = r.string();
                         break;
                     }
                 case 2: {
@@ -17331,7 +17260,7 @@ export const WACommon = WACommon = (() => {
                         break;
                     }
                 case 3: {
-                        m.ID = r.string();
+                        m.id = r.string();
                         break;
                     }
                 case 4: {
@@ -17354,14 +17283,14 @@ export const WACommon = WACommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WACommon.MessageKey();
-            if (d.remoteJID != null) {
-                m.remoteJID = String(d.remoteJID);
+            if (d.remoteJid != null) {
+                m.remoteJid = String(d.remoteJid);
             }
             if (d.fromMe != null) {
                 m.fromMe = Boolean(d.fromMe);
             }
-            if (d.ID != null) {
-                m.ID = String(d.ID);
+            if (d.id != null) {
+                m.id = String(d.id);
             }
             if (d.participant != null) {
                 m.participant = String(d.participant);
@@ -17373,20 +17302,20 @@ export const WACommon = WACommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.remoteJID != null && m.hasOwnProperty("remoteJID")) {
-                d.remoteJID = m.remoteJID;
+            if (m.remoteJid != null && m.hasOwnProperty("remoteJid")) {
+                d.remoteJid = m.remoteJid;
                 if (o.oneofs)
-                    d._remoteJID = "remoteJID";
+                    d._remoteJid = "remoteJid";
             }
             if (m.fromMe != null && m.hasOwnProperty("fromMe")) {
                 d.fromMe = m.fromMe;
                 if (o.oneofs)
                     d._fromMe = "fromMe";
             }
-            if (m.ID != null && m.hasOwnProperty("ID")) {
-                d.ID = m.ID;
+            if (m.id != null && m.hasOwnProperty("id")) {
+                d.id = m.id;
                 if (o.oneofs)
-                    d._ID = "ID";
+                    d._id = "id";
             }
             if (m.participant != null && m.hasOwnProperty("participant")) {
                 d.participant = m.participant;

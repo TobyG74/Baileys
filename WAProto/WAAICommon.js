@@ -113,16 +113,16 @@ export const WAAICommon = $root.WAAICommon = (() => {
 
         BotPluginMetadata.prototype.provider = null;
         BotPluginMetadata.prototype.pluginType = null;
-        BotPluginMetadata.prototype.thumbnailCDNURL = null;
-        BotPluginMetadata.prototype.profilePhotoCDNURL = null;
-        BotPluginMetadata.prototype.searchProviderURL = null;
+        BotPluginMetadata.prototype.thumbnailCdnUrl = null;
+        BotPluginMetadata.prototype.profilePhotoCdnUrl = null;
+        BotPluginMetadata.prototype.searchProviderUrl = null;
         BotPluginMetadata.prototype.referenceIndex = null;
         BotPluginMetadata.prototype.expectedLinksCount = null;
         BotPluginMetadata.prototype.searchQuery = null;
         BotPluginMetadata.prototype.parentPluginMessageKey = null;
         BotPluginMetadata.prototype.deprecatedField = null;
         BotPluginMetadata.prototype.parentPluginType = null;
-        BotPluginMetadata.prototype.faviconCDNURL = null;
+        BotPluginMetadata.prototype.faviconCdnUrl = null;
 
         let $oneOfFields;
 
@@ -139,20 +139,20 @@ export const WAAICommon = $root.WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotPluginMetadata.prototype, "_thumbnailCDNURL", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailCDNURL"]),
+        Object.defineProperty(BotPluginMetadata.prototype, "_thumbnailCdnUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailCdnUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotPluginMetadata.prototype, "_profilePhotoCDNURL", {
-            get: $util.oneOfGetter($oneOfFields = ["profilePhotoCDNURL"]),
+        Object.defineProperty(BotPluginMetadata.prototype, "_profilePhotoCdnUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["profilePhotoCdnUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotPluginMetadata.prototype, "_searchProviderURL", {
-            get: $util.oneOfGetter($oneOfFields = ["searchProviderURL"]),
+        Object.defineProperty(BotPluginMetadata.prototype, "_searchProviderUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["searchProviderUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -193,8 +193,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotPluginMetadata.prototype, "_faviconCDNURL", {
-            get: $util.oneOfGetter($oneOfFields = ["faviconCDNURL"]),
+        Object.defineProperty(BotPluginMetadata.prototype, "_faviconCdnUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["faviconCdnUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -209,12 +209,12 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 w.uint32(8).int32(m.provider);
             if (m.pluginType != null && Object.hasOwnProperty.call(m, "pluginType"))
                 w.uint32(16).int32(m.pluginType);
-            if (m.thumbnailCDNURL != null && Object.hasOwnProperty.call(m, "thumbnailCDNURL"))
-                w.uint32(26).string(m.thumbnailCDNURL);
-            if (m.profilePhotoCDNURL != null && Object.hasOwnProperty.call(m, "profilePhotoCDNURL"))
-                w.uint32(34).string(m.profilePhotoCDNURL);
-            if (m.searchProviderURL != null && Object.hasOwnProperty.call(m, "searchProviderURL"))
-                w.uint32(42).string(m.searchProviderURL);
+            if (m.thumbnailCdnUrl != null && Object.hasOwnProperty.call(m, "thumbnailCdnUrl"))
+                w.uint32(26).string(m.thumbnailCdnUrl);
+            if (m.profilePhotoCdnUrl != null && Object.hasOwnProperty.call(m, "profilePhotoCdnUrl"))
+                w.uint32(34).string(m.profilePhotoCdnUrl);
+            if (m.searchProviderUrl != null && Object.hasOwnProperty.call(m, "searchProviderUrl"))
+                w.uint32(42).string(m.searchProviderUrl);
             if (m.referenceIndex != null && Object.hasOwnProperty.call(m, "referenceIndex"))
                 w.uint32(48).uint32(m.referenceIndex);
             if (m.expectedLinksCount != null && Object.hasOwnProperty.call(m, "expectedLinksCount"))
@@ -227,8 +227,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 w.uint32(88).int32(m.deprecatedField);
             if (m.parentPluginType != null && Object.hasOwnProperty.call(m, "parentPluginType"))
                 w.uint32(96).int32(m.parentPluginType);
-            if (m.faviconCDNURL != null && Object.hasOwnProperty.call(m, "faviconCDNURL"))
-                w.uint32(106).string(m.faviconCDNURL);
+            if (m.faviconCdnUrl != null && Object.hasOwnProperty.call(m, "faviconCdnUrl"))
+                w.uint32(106).string(m.faviconCdnUrl);
             return w;
         };
 
@@ -254,15 +254,15 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     }
                 case 3: {
-                        m.thumbnailCDNURL = r.string();
+                        m.thumbnailCdnUrl = r.string();
                         break;
                     }
                 case 4: {
-                        m.profilePhotoCDNURL = r.string();
+                        m.profilePhotoCdnUrl = r.string();
                         break;
                     }
                 case 5: {
-                        m.searchProviderURL = r.string();
+                        m.searchProviderUrl = r.string();
                         break;
                     }
                 case 6: {
@@ -290,7 +290,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     }
                 case 13: {
-                        m.faviconCDNURL = r.string();
+                        m.faviconCdnUrl = r.string();
                         break;
                     }
                 default:
@@ -353,14 +353,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 m.pluginType = 2;
                 break;
             }
-            if (d.thumbnailCDNURL != null) {
-                m.thumbnailCDNURL = String(d.thumbnailCDNURL);
+            if (d.thumbnailCdnUrl != null) {
+                m.thumbnailCdnUrl = String(d.thumbnailCdnUrl);
             }
-            if (d.profilePhotoCDNURL != null) {
-                m.profilePhotoCDNURL = String(d.profilePhotoCDNURL);
+            if (d.profilePhotoCdnUrl != null) {
+                m.profilePhotoCdnUrl = String(d.profilePhotoCdnUrl);
             }
-            if (d.searchProviderURL != null) {
-                m.searchProviderURL = String(d.searchProviderURL);
+            if (d.searchProviderUrl != null) {
+                m.searchProviderUrl = String(d.searchProviderUrl);
             }
             if (d.referenceIndex != null) {
                 m.referenceIndex = d.referenceIndex >>> 0;
@@ -416,8 +416,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 m.parentPluginType = 2;
                 break;
             }
-            if (d.faviconCDNURL != null) {
-                m.faviconCDNURL = String(d.faviconCDNURL);
+            if (d.faviconCdnUrl != null) {
+                m.faviconCdnUrl = String(d.faviconCdnUrl);
             }
             return m;
         };
@@ -436,20 +436,20 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (o.oneofs)
                     d._pluginType = "pluginType";
             }
-            if (m.thumbnailCDNURL != null && m.hasOwnProperty("thumbnailCDNURL")) {
-                d.thumbnailCDNURL = m.thumbnailCDNURL;
+            if (m.thumbnailCdnUrl != null && m.hasOwnProperty("thumbnailCdnUrl")) {
+                d.thumbnailCdnUrl = m.thumbnailCdnUrl;
                 if (o.oneofs)
-                    d._thumbnailCDNURL = "thumbnailCDNURL";
+                    d._thumbnailCdnUrl = "thumbnailCdnUrl";
             }
-            if (m.profilePhotoCDNURL != null && m.hasOwnProperty("profilePhotoCDNURL")) {
-                d.profilePhotoCDNURL = m.profilePhotoCDNURL;
+            if (m.profilePhotoCdnUrl != null && m.hasOwnProperty("profilePhotoCdnUrl")) {
+                d.profilePhotoCdnUrl = m.profilePhotoCdnUrl;
                 if (o.oneofs)
-                    d._profilePhotoCDNURL = "profilePhotoCDNURL";
+                    d._profilePhotoCdnUrl = "profilePhotoCdnUrl";
             }
-            if (m.searchProviderURL != null && m.hasOwnProperty("searchProviderURL")) {
-                d.searchProviderURL = m.searchProviderURL;
+            if (m.searchProviderUrl != null && m.hasOwnProperty("searchProviderUrl")) {
+                d.searchProviderUrl = m.searchProviderUrl;
                 if (o.oneofs)
-                    d._searchProviderURL = "searchProviderURL";
+                    d._searchProviderUrl = "searchProviderUrl";
             }
             if (m.referenceIndex != null && m.hasOwnProperty("referenceIndex")) {
                 d.referenceIndex = m.referenceIndex;
@@ -481,10 +481,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (o.oneofs)
                     d._parentPluginType = "parentPluginType";
             }
-            if (m.faviconCDNURL != null && m.hasOwnProperty("faviconCDNURL")) {
-                d.faviconCDNURL = m.faviconCDNURL;
+            if (m.faviconCdnUrl != null && m.hasOwnProperty("faviconCdnUrl")) {
+                d.faviconCdnUrl = m.faviconCdnUrl;
                 if (o.oneofs)
-                    d._faviconCDNURL = "faviconCDNURL";
+                    d._faviconCdnUrl = "faviconCdnUrl";
             }
             return d;
         };
@@ -980,9 +980,9 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BotMediaMetadata.prototype.fileSHA256 = null;
+        BotMediaMetadata.prototype.fileSha256 = null;
         BotMediaMetadata.prototype.mediaKey = null;
-        BotMediaMetadata.prototype.fileEncSHA256 = null;
+        BotMediaMetadata.prototype.fileEncSha256 = null;
         BotMediaMetadata.prototype.directPath = null;
         BotMediaMetadata.prototype.mediaKeyTimestamp = null;
         BotMediaMetadata.prototype.mimetype = null;
@@ -991,8 +991,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMediaMetadata.prototype, "_fileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+        Object.defineProperty(BotMediaMetadata.prototype, "_fileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1003,8 +1003,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMediaMetadata.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(BotMediaMetadata.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1039,12 +1039,12 @@ export const WAAICommon = $root.WAAICommon = (() => {
         BotMediaMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                w.uint32(10).string(m.fileSHA256);
+            if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                w.uint32(10).string(m.fileSha256);
             if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                 w.uint32(18).string(m.mediaKey);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(26).string(m.fileEncSHA256);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(26).string(m.fileEncSha256);
             if (m.directPath != null && Object.hasOwnProperty.call(m, "directPath"))
                 w.uint32(34).string(m.directPath);
             if (m.mediaKeyTimestamp != null && Object.hasOwnProperty.call(m, "mediaKeyTimestamp"))
@@ -1070,7 +1070,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.fileSHA256 = r.string();
+                        m.fileSha256 = r.string();
                         break;
                     }
                 case 2: {
@@ -1078,7 +1078,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     }
                 case 3: {
-                        m.fileEncSHA256 = r.string();
+                        m.fileEncSha256 = r.string();
                         break;
                     }
                 case 4: {
@@ -1113,14 +1113,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAICommon.BotMediaMetadata();
-            if (d.fileSHA256 != null) {
-                m.fileSHA256 = String(d.fileSHA256);
+            if (d.fileSha256 != null) {
+                m.fileSha256 = String(d.fileSha256);
             }
             if (d.mediaKey != null) {
                 m.mediaKey = String(d.mediaKey);
             }
-            if (d.fileEncSHA256 != null) {
-                m.fileEncSHA256 = String(d.fileEncSHA256);
+            if (d.fileEncSha256 != null) {
+                m.fileEncSha256 = String(d.fileEncSha256);
             }
             if (d.directPath != null) {
                 m.directPath = String(d.directPath);
@@ -1165,20 +1165,20 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                d.fileSHA256 = m.fileSHA256;
+            if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                d.fileSha256 = m.fileSha256;
                 if (o.oneofs)
-                    d._fileSHA256 = "fileSHA256";
+                    d._fileSha256 = "fileSha256";
             }
             if (m.mediaKey != null && m.hasOwnProperty("mediaKey")) {
                 d.mediaKey = m.mediaKey;
                 if (o.oneofs)
                     d._mediaKey = "mediaKey";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
             if (m.directPath != null && m.hasOwnProperty("directPath")) {
                 d.directPath = m.directPath;
@@ -2115,7 +2115,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
 
                 BotPlanningSearchSourcesMetadata.prototype.sourceTitle = null;
                 BotPlanningSearchSourcesMetadata.prototype.provider = null;
-                BotPlanningSearchSourcesMetadata.prototype.sourceURL = null;
+                BotPlanningSearchSourcesMetadata.prototype.sourceUrl = null;
 
                 let $oneOfFields;
 
@@ -2132,8 +2132,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(BotPlanningSearchSourcesMetadata.prototype, "_sourceURL", {
-                    get: $util.oneOfGetter($oneOfFields = ["sourceURL"]),
+                Object.defineProperty(BotPlanningSearchSourcesMetadata.prototype, "_sourceUrl", {
+                    get: $util.oneOfGetter($oneOfFields = ["sourceUrl"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -2148,8 +2148,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         w.uint32(10).string(m.sourceTitle);
                     if (m.provider != null && Object.hasOwnProperty.call(m, "provider"))
                         w.uint32(16).int32(m.provider);
-                    if (m.sourceURL != null && Object.hasOwnProperty.call(m, "sourceURL"))
-                        w.uint32(26).string(m.sourceURL);
+                    if (m.sourceUrl != null && Object.hasOwnProperty.call(m, "sourceUrl"))
+                        w.uint32(26).string(m.sourceUrl);
                     return w;
                 };
 
@@ -2175,7 +2175,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                                 break;
                             }
                         case 3: {
-                                m.sourceURL = r.string();
+                                m.sourceUrl = r.string();
                                 break;
                             }
                         default:
@@ -2221,8 +2221,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         m.provider = 3;
                         break;
                     }
-                    if (d.sourceURL != null) {
-                        m.sourceURL = String(d.sourceURL);
+                    if (d.sourceUrl != null) {
+                        m.sourceUrl = String(d.sourceUrl);
                     }
                     return m;
                 };
@@ -2241,10 +2241,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         if (o.oneofs)
                             d._provider = "provider";
                     }
-                    if (m.sourceURL != null && m.hasOwnProperty("sourceURL")) {
-                        d.sourceURL = m.sourceURL;
+                    if (m.sourceUrl != null && m.hasOwnProperty("sourceUrl")) {
+                        d.sourceUrl = m.sourceUrl;
                         if (o.oneofs)
-                            d._sourceURL = "sourceURL";
+                            d._sourceUrl = "sourceUrl";
                     }
                     return d;
                 };
@@ -2431,8 +2431,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
 
                 BotPlanningSearchSourceMetadata.prototype.title = null;
                 BotPlanningSearchSourceMetadata.prototype.provider = null;
-                BotPlanningSearchSourceMetadata.prototype.sourceURL = null;
-                BotPlanningSearchSourceMetadata.prototype.favIconURL = null;
+                BotPlanningSearchSourceMetadata.prototype.sourceUrl = null;
+                BotPlanningSearchSourceMetadata.prototype.favIconUrl = null;
 
                 let $oneOfFields;
 
@@ -2449,14 +2449,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(BotPlanningSearchSourceMetadata.prototype, "_sourceURL", {
-                    get: $util.oneOfGetter($oneOfFields = ["sourceURL"]),
+                Object.defineProperty(BotPlanningSearchSourceMetadata.prototype, "_sourceUrl", {
+                    get: $util.oneOfGetter($oneOfFields = ["sourceUrl"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(BotPlanningSearchSourceMetadata.prototype, "_favIconURL", {
-                    get: $util.oneOfGetter($oneOfFields = ["favIconURL"]),
+                Object.defineProperty(BotPlanningSearchSourceMetadata.prototype, "_favIconUrl", {
+                    get: $util.oneOfGetter($oneOfFields = ["favIconUrl"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -2471,10 +2471,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         w.uint32(10).string(m.title);
                     if (m.provider != null && Object.hasOwnProperty.call(m, "provider"))
                         w.uint32(16).int32(m.provider);
-                    if (m.sourceURL != null && Object.hasOwnProperty.call(m, "sourceURL"))
-                        w.uint32(26).string(m.sourceURL);
-                    if (m.favIconURL != null && Object.hasOwnProperty.call(m, "favIconURL"))
-                        w.uint32(34).string(m.favIconURL);
+                    if (m.sourceUrl != null && Object.hasOwnProperty.call(m, "sourceUrl"))
+                        w.uint32(26).string(m.sourceUrl);
+                    if (m.favIconUrl != null && Object.hasOwnProperty.call(m, "favIconUrl"))
+                        w.uint32(34).string(m.favIconUrl);
                     return w;
                 };
 
@@ -2500,11 +2500,11 @@ export const WAAICommon = $root.WAAICommon = (() => {
                                 break;
                             }
                         case 3: {
-                                m.sourceURL = r.string();
+                                m.sourceUrl = r.string();
                                 break;
                             }
                         case 4: {
-                                m.favIconURL = r.string();
+                                m.favIconUrl = r.string();
                                 break;
                             }
                         default:
@@ -2550,11 +2550,11 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         m.provider = 3;
                         break;
                     }
-                    if (d.sourceURL != null) {
-                        m.sourceURL = String(d.sourceURL);
+                    if (d.sourceUrl != null) {
+                        m.sourceUrl = String(d.sourceUrl);
                     }
-                    if (d.favIconURL != null) {
-                        m.favIconURL = String(d.favIconURL);
+                    if (d.favIconUrl != null) {
+                        m.favIconUrl = String(d.favIconUrl);
                     }
                     return m;
                 };
@@ -2573,15 +2573,15 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         if (o.oneofs)
                             d._provider = "provider";
                     }
-                    if (m.sourceURL != null && m.hasOwnProperty("sourceURL")) {
-                        d.sourceURL = m.sourceURL;
+                    if (m.sourceUrl != null && m.hasOwnProperty("sourceUrl")) {
+                        d.sourceUrl = m.sourceUrl;
                         if (o.oneofs)
-                            d._sourceURL = "sourceURL";
+                            d._sourceUrl = "sourceUrl";
                     }
-                    if (m.favIconURL != null && m.hasOwnProperty("favIconURL")) {
-                        d.favIconURL = m.favIconURL;
+                    if (m.favIconUrl != null && m.hasOwnProperty("favIconUrl")) {
+                        d.favIconUrl = m.favIconUrl;
                         if (o.oneofs)
-                            d._favIconURL = "favIconURL";
+                            d._favIconUrl = "favIconUrl";
                     }
                     return d;
                 };
@@ -3893,10 +3893,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
             }
 
             BotSourceItem.prototype.provider = null;
-            BotSourceItem.prototype.thumbnailCDNURL = null;
-            BotSourceItem.prototype.sourceProviderURL = null;
+            BotSourceItem.prototype.thumbnailCdnUrl = null;
+            BotSourceItem.prototype.sourceProviderUrl = null;
             BotSourceItem.prototype.sourceQuery = null;
-            BotSourceItem.prototype.faviconCDNURL = null;
+            BotSourceItem.prototype.faviconCdnUrl = null;
             BotSourceItem.prototype.citationNumber = null;
             BotSourceItem.prototype.sourceTitle = null;
 
@@ -3909,14 +3909,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(BotSourceItem.prototype, "_thumbnailCDNURL", {
-                get: $util.oneOfGetter($oneOfFields = ["thumbnailCDNURL"]),
+            Object.defineProperty(BotSourceItem.prototype, "_thumbnailCdnUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["thumbnailCdnUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(BotSourceItem.prototype, "_sourceProviderURL", {
-                get: $util.oneOfGetter($oneOfFields = ["sourceProviderURL"]),
+            Object.defineProperty(BotSourceItem.prototype, "_sourceProviderUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["sourceProviderUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -3927,8 +3927,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(BotSourceItem.prototype, "_faviconCDNURL", {
-                get: $util.oneOfGetter($oneOfFields = ["faviconCDNURL"]),
+            Object.defineProperty(BotSourceItem.prototype, "_faviconCdnUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["faviconCdnUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -3953,14 +3953,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     w = $Writer.create();
                 if (m.provider != null && Object.hasOwnProperty.call(m, "provider"))
                     w.uint32(8).int32(m.provider);
-                if (m.thumbnailCDNURL != null && Object.hasOwnProperty.call(m, "thumbnailCDNURL"))
-                    w.uint32(18).string(m.thumbnailCDNURL);
-                if (m.sourceProviderURL != null && Object.hasOwnProperty.call(m, "sourceProviderURL"))
-                    w.uint32(26).string(m.sourceProviderURL);
+                if (m.thumbnailCdnUrl != null && Object.hasOwnProperty.call(m, "thumbnailCdnUrl"))
+                    w.uint32(18).string(m.thumbnailCdnUrl);
+                if (m.sourceProviderUrl != null && Object.hasOwnProperty.call(m, "sourceProviderUrl"))
+                    w.uint32(26).string(m.sourceProviderUrl);
                 if (m.sourceQuery != null && Object.hasOwnProperty.call(m, "sourceQuery"))
                     w.uint32(34).string(m.sourceQuery);
-                if (m.faviconCDNURL != null && Object.hasOwnProperty.call(m, "faviconCDNURL"))
-                    w.uint32(42).string(m.faviconCDNURL);
+                if (m.faviconCdnUrl != null && Object.hasOwnProperty.call(m, "faviconCdnUrl"))
+                    w.uint32(42).string(m.faviconCdnUrl);
                 if (m.citationNumber != null && Object.hasOwnProperty.call(m, "citationNumber"))
                     w.uint32(48).uint32(m.citationNumber);
                 if (m.sourceTitle != null && Object.hasOwnProperty.call(m, "sourceTitle"))
@@ -3986,11 +3986,11 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             break;
                         }
                     case 2: {
-                            m.thumbnailCDNURL = r.string();
+                            m.thumbnailCdnUrl = r.string();
                             break;
                         }
                     case 3: {
-                            m.sourceProviderURL = r.string();
+                            m.sourceProviderUrl = r.string();
                             break;
                         }
                     case 4: {
@@ -3998,7 +3998,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             break;
                         }
                     case 5: {
-                            m.faviconCDNURL = r.string();
+                            m.faviconCdnUrl = r.string();
                             break;
                         }
                     case 6: {
@@ -4053,17 +4053,17 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     m.provider = 4;
                     break;
                 }
-                if (d.thumbnailCDNURL != null) {
-                    m.thumbnailCDNURL = String(d.thumbnailCDNURL);
+                if (d.thumbnailCdnUrl != null) {
+                    m.thumbnailCdnUrl = String(d.thumbnailCdnUrl);
                 }
-                if (d.sourceProviderURL != null) {
-                    m.sourceProviderURL = String(d.sourceProviderURL);
+                if (d.sourceProviderUrl != null) {
+                    m.sourceProviderUrl = String(d.sourceProviderUrl);
                 }
                 if (d.sourceQuery != null) {
                     m.sourceQuery = String(d.sourceQuery);
                 }
-                if (d.faviconCDNURL != null) {
-                    m.faviconCDNURL = String(d.faviconCDNURL);
+                if (d.faviconCdnUrl != null) {
+                    m.faviconCdnUrl = String(d.faviconCdnUrl);
                 }
                 if (d.citationNumber != null) {
                     m.citationNumber = d.citationNumber >>> 0;
@@ -4083,25 +4083,25 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     if (o.oneofs)
                         d._provider = "provider";
                 }
-                if (m.thumbnailCDNURL != null && m.hasOwnProperty("thumbnailCDNURL")) {
-                    d.thumbnailCDNURL = m.thumbnailCDNURL;
+                if (m.thumbnailCdnUrl != null && m.hasOwnProperty("thumbnailCdnUrl")) {
+                    d.thumbnailCdnUrl = m.thumbnailCdnUrl;
                     if (o.oneofs)
-                        d._thumbnailCDNURL = "thumbnailCDNURL";
+                        d._thumbnailCdnUrl = "thumbnailCdnUrl";
                 }
-                if (m.sourceProviderURL != null && m.hasOwnProperty("sourceProviderURL")) {
-                    d.sourceProviderURL = m.sourceProviderURL;
+                if (m.sourceProviderUrl != null && m.hasOwnProperty("sourceProviderUrl")) {
+                    d.sourceProviderUrl = m.sourceProviderUrl;
                     if (o.oneofs)
-                        d._sourceProviderURL = "sourceProviderURL";
+                        d._sourceProviderUrl = "sourceProviderUrl";
                 }
                 if (m.sourceQuery != null && m.hasOwnProperty("sourceQuery")) {
                     d.sourceQuery = m.sourceQuery;
                     if (o.oneofs)
                         d._sourceQuery = "sourceQuery";
                 }
-                if (m.faviconCDNURL != null && m.hasOwnProperty("faviconCDNURL")) {
-                    d.faviconCDNURL = m.faviconCDNURL;
+                if (m.faviconCdnUrl != null && m.hasOwnProperty("faviconCdnUrl")) {
+                    d.faviconCdnUrl = m.faviconCdnUrl;
                     if (o.oneofs)
-                        d._faviconCDNURL = "faviconCDNURL";
+                        d._faviconCdnUrl = "faviconCdnUrl";
                 }
                 if (m.citationNumber != null && m.hasOwnProperty("citationNumber")) {
                     d.citationNumber = m.citationNumber;
@@ -4382,7 +4382,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
             }
 
             AIThreadClientInfo.prototype.type = null;
-            AIThreadClientInfo.prototype.sourceChatJID = null;
+            AIThreadClientInfo.prototype.sourceChatJid = null;
 
             let $oneOfFields;
 
@@ -4393,8 +4393,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIThreadClientInfo.prototype, "_sourceChatJID", {
-                get: $util.oneOfGetter($oneOfFields = ["sourceChatJID"]),
+            Object.defineProperty(AIThreadClientInfo.prototype, "_sourceChatJid", {
+                get: $util.oneOfGetter($oneOfFields = ["sourceChatJid"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -4407,8 +4407,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     w = $Writer.create();
                 if (m.type != null && Object.hasOwnProperty.call(m, "type"))
                     w.uint32(8).int32(m.type);
-                if (m.sourceChatJID != null && Object.hasOwnProperty.call(m, "sourceChatJID"))
-                    w.uint32(18).string(m.sourceChatJID);
+                if (m.sourceChatJid != null && Object.hasOwnProperty.call(m, "sourceChatJid"))
+                    w.uint32(18).string(m.sourceChatJid);
                 return w;
             };
 
@@ -4430,7 +4430,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             break;
                         }
                     case 2: {
-                            m.sourceChatJID = r.string();
+                            m.sourceChatJid = r.string();
                             break;
                         }
                     default:
@@ -4473,8 +4473,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     m.type = 3;
                     break;
                 }
-                if (d.sourceChatJID != null) {
-                    m.sourceChatJID = String(d.sourceChatJID);
+                if (d.sourceChatJid != null) {
+                    m.sourceChatJid = String(d.sourceChatJid);
                 }
                 return m;
             };
@@ -4488,10 +4488,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     if (o.oneofs)
                         d._type = "type";
                 }
-                if (m.sourceChatJID != null && m.hasOwnProperty("sourceChatJID")) {
-                    d.sourceChatJID = m.sourceChatJID;
+                if (m.sourceChatJid != null && m.hasOwnProperty("sourceChatJid")) {
+                    d.sourceChatJid = m.sourceChatJid;
                     if (o.oneofs)
-                        d._sourceChatJID = "sourceChatJID";
+                        d._sourceChatJid = "sourceChatJid";
                 }
                 return d;
             };
@@ -4995,27 +4995,27 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            SideBySideSurveyMetadata.prototype.selectedRequestID = null;
-            SideBySideSurveyMetadata.prototype.surveyID = null;
+            SideBySideSurveyMetadata.prototype.selectedRequestId = null;
+            SideBySideSurveyMetadata.prototype.surveyId = null;
             SideBySideSurveyMetadata.prototype.simonSessionFbid = null;
             SideBySideSurveyMetadata.prototype.responseOtid = null;
-            SideBySideSurveyMetadata.prototype.responseTimestampMSString = null;
+            SideBySideSurveyMetadata.prototype.responseTimestampMsString = null;
             SideBySideSurveyMetadata.prototype.isSelectedResponsePrimary = null;
-            SideBySideSurveyMetadata.prototype.messageIDToEdit = null;
+            SideBySideSurveyMetadata.prototype.messageIdToEdit = null;
             SideBySideSurveyMetadata.prototype.analyticsData = null;
             SideBySideSurveyMetadata.prototype.metaAiAnalyticsData = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_selectedRequestID", {
-                get: $util.oneOfGetter($oneOfFields = ["selectedRequestID"]),
+            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_selectedRequestId", {
+                get: $util.oneOfGetter($oneOfFields = ["selectedRequestId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_surveyID", {
-                get: $util.oneOfGetter($oneOfFields = ["surveyID"]),
+            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_surveyId", {
+                get: $util.oneOfGetter($oneOfFields = ["surveyId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -5032,8 +5032,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_responseTimestampMSString", {
-                get: $util.oneOfGetter($oneOfFields = ["responseTimestampMSString"]),
+            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_responseTimestampMsString", {
+                get: $util.oneOfGetter($oneOfFields = ["responseTimestampMsString"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -5044,8 +5044,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_messageIDToEdit", {
-                get: $util.oneOfGetter($oneOfFields = ["messageIDToEdit"]),
+            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_messageIdToEdit", {
+                get: $util.oneOfGetter($oneOfFields = ["messageIdToEdit"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -5068,20 +5068,20 @@ export const WAAICommon = $root.WAAICommon = (() => {
             SideBySideSurveyMetadata.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.selectedRequestID != null && Object.hasOwnProperty.call(m, "selectedRequestID"))
-                    w.uint32(10).string(m.selectedRequestID);
-                if (m.surveyID != null && Object.hasOwnProperty.call(m, "surveyID"))
-                    w.uint32(16).uint32(m.surveyID);
+                if (m.selectedRequestId != null && Object.hasOwnProperty.call(m, "selectedRequestId"))
+                    w.uint32(10).string(m.selectedRequestId);
+                if (m.surveyId != null && Object.hasOwnProperty.call(m, "surveyId"))
+                    w.uint32(16).uint32(m.surveyId);
                 if (m.simonSessionFbid != null && Object.hasOwnProperty.call(m, "simonSessionFbid"))
                     w.uint32(26).string(m.simonSessionFbid);
                 if (m.responseOtid != null && Object.hasOwnProperty.call(m, "responseOtid"))
                     w.uint32(34).string(m.responseOtid);
-                if (m.responseTimestampMSString != null && Object.hasOwnProperty.call(m, "responseTimestampMSString"))
-                    w.uint32(42).string(m.responseTimestampMSString);
+                if (m.responseTimestampMsString != null && Object.hasOwnProperty.call(m, "responseTimestampMsString"))
+                    w.uint32(42).string(m.responseTimestampMsString);
                 if (m.isSelectedResponsePrimary != null && Object.hasOwnProperty.call(m, "isSelectedResponsePrimary"))
                     w.uint32(48).bool(m.isSelectedResponsePrimary);
-                if (m.messageIDToEdit != null && Object.hasOwnProperty.call(m, "messageIDToEdit"))
-                    w.uint32(58).string(m.messageIDToEdit);
+                if (m.messageIdToEdit != null && Object.hasOwnProperty.call(m, "messageIdToEdit"))
+                    w.uint32(58).string(m.messageIdToEdit);
                 if (m.analyticsData != null && Object.hasOwnProperty.call(m, "analyticsData"))
                     $root.WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SideBySideSurveyAnalyticsData.encode(m.analyticsData, w.uint32(66).fork()).ldelim();
                 if (m.metaAiAnalyticsData != null && Object.hasOwnProperty.call(m, "metaAiAnalyticsData"))
@@ -5103,11 +5103,11 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.selectedRequestID = r.string();
+                            m.selectedRequestId = r.string();
                             break;
                         }
                     case 2: {
-                            m.surveyID = r.uint32();
+                            m.surveyId = r.uint32();
                             break;
                         }
                     case 3: {
@@ -5119,7 +5119,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             break;
                         }
                     case 5: {
-                            m.responseTimestampMSString = r.string();
+                            m.responseTimestampMsString = r.string();
                             break;
                         }
                     case 6: {
@@ -5127,7 +5127,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             break;
                         }
                     case 7: {
-                            m.messageIDToEdit = r.string();
+                            m.messageIdToEdit = r.string();
                             break;
                         }
                     case 8: {
@@ -5154,11 +5154,11 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata();
-                if (d.selectedRequestID != null) {
-                    m.selectedRequestID = String(d.selectedRequestID);
+                if (d.selectedRequestId != null) {
+                    m.selectedRequestId = String(d.selectedRequestId);
                 }
-                if (d.surveyID != null) {
-                    m.surveyID = d.surveyID >>> 0;
+                if (d.surveyId != null) {
+                    m.surveyId = d.surveyId >>> 0;
                 }
                 if (d.simonSessionFbid != null) {
                     m.simonSessionFbid = String(d.simonSessionFbid);
@@ -5166,14 +5166,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (d.responseOtid != null) {
                     m.responseOtid = String(d.responseOtid);
                 }
-                if (d.responseTimestampMSString != null) {
-                    m.responseTimestampMSString = String(d.responseTimestampMSString);
+                if (d.responseTimestampMsString != null) {
+                    m.responseTimestampMsString = String(d.responseTimestampMsString);
                 }
                 if (d.isSelectedResponsePrimary != null) {
                     m.isSelectedResponsePrimary = Boolean(d.isSelectedResponsePrimary);
                 }
-                if (d.messageIDToEdit != null) {
-                    m.messageIDToEdit = String(d.messageIDToEdit);
+                if (d.messageIdToEdit != null) {
+                    m.messageIdToEdit = String(d.messageIdToEdit);
                 }
                 if (d.analyticsData != null) {
                     if (typeof d.analyticsData !== "object")
@@ -5192,15 +5192,15 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.selectedRequestID != null && m.hasOwnProperty("selectedRequestID")) {
-                    d.selectedRequestID = m.selectedRequestID;
+                if (m.selectedRequestId != null && m.hasOwnProperty("selectedRequestId")) {
+                    d.selectedRequestId = m.selectedRequestId;
                     if (o.oneofs)
-                        d._selectedRequestID = "selectedRequestID";
+                        d._selectedRequestId = "selectedRequestId";
                 }
-                if (m.surveyID != null && m.hasOwnProperty("surveyID")) {
-                    d.surveyID = m.surveyID;
+                if (m.surveyId != null && m.hasOwnProperty("surveyId")) {
+                    d.surveyId = m.surveyId;
                     if (o.oneofs)
-                        d._surveyID = "surveyID";
+                        d._surveyId = "surveyId";
                 }
                 if (m.simonSessionFbid != null && m.hasOwnProperty("simonSessionFbid")) {
                     d.simonSessionFbid = m.simonSessionFbid;
@@ -5212,20 +5212,20 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     if (o.oneofs)
                         d._responseOtid = "responseOtid";
                 }
-                if (m.responseTimestampMSString != null && m.hasOwnProperty("responseTimestampMSString")) {
-                    d.responseTimestampMSString = m.responseTimestampMSString;
+                if (m.responseTimestampMsString != null && m.hasOwnProperty("responseTimestampMsString")) {
+                    d.responseTimestampMsString = m.responseTimestampMsString;
                     if (o.oneofs)
-                        d._responseTimestampMSString = "responseTimestampMSString";
+                        d._responseTimestampMsString = "responseTimestampMsString";
                 }
                 if (m.isSelectedResponsePrimary != null && m.hasOwnProperty("isSelectedResponsePrimary")) {
                     d.isSelectedResponsePrimary = m.isSelectedResponsePrimary;
                     if (o.oneofs)
                         d._isSelectedResponsePrimary = "isSelectedResponsePrimary";
                 }
-                if (m.messageIDToEdit != null && m.hasOwnProperty("messageIDToEdit")) {
-                    d.messageIDToEdit = m.messageIDToEdit;
+                if (m.messageIdToEdit != null && m.hasOwnProperty("messageIdToEdit")) {
+                    d.messageIdToEdit = m.messageIdToEdit;
                     if (o.oneofs)
-                        d._messageIDToEdit = "messageIDToEdit";
+                        d._messageIdToEdit = "messageIdToEdit";
                 }
                 if (m.analyticsData != null && m.hasOwnProperty("analyticsData")) {
                     d.analyticsData = $root.WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SideBySideSurveyAnalyticsData.toObject(m.analyticsData, o);
@@ -5260,10 +5260,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                                 this[ks[i]] = p[ks[i]];
                 }
 
-                SidebySideSurveyMetaAiAnalyticsData.prototype.surveyID = null;
-                SidebySideSurveyMetaAiAnalyticsData.prototype.primaryResponseID = null;
+                SidebySideSurveyMetaAiAnalyticsData.prototype.surveyId = null;
+                SidebySideSurveyMetaAiAnalyticsData.prototype.primaryResponseId = null;
                 SidebySideSurveyMetaAiAnalyticsData.prototype.testArmName = null;
-                SidebySideSurveyMetaAiAnalyticsData.prototype.timestampMSString = null;
+                SidebySideSurveyMetaAiAnalyticsData.prototype.timestampMsString = null;
                 SidebySideSurveyMetaAiAnalyticsData.prototype.ctaImpressionEvent = null;
                 SidebySideSurveyMetaAiAnalyticsData.prototype.ctaClickEvent = null;
                 SidebySideSurveyMetaAiAnalyticsData.prototype.cardImpressionEvent = null;
@@ -5273,14 +5273,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 let $oneOfFields;
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(SidebySideSurveyMetaAiAnalyticsData.prototype, "_surveyID", {
-                    get: $util.oneOfGetter($oneOfFields = ["surveyID"]),
+                Object.defineProperty(SidebySideSurveyMetaAiAnalyticsData.prototype, "_surveyId", {
+                    get: $util.oneOfGetter($oneOfFields = ["surveyId"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(SidebySideSurveyMetaAiAnalyticsData.prototype, "_primaryResponseID", {
-                    get: $util.oneOfGetter($oneOfFields = ["primaryResponseID"]),
+                Object.defineProperty(SidebySideSurveyMetaAiAnalyticsData.prototype, "_primaryResponseId", {
+                    get: $util.oneOfGetter($oneOfFields = ["primaryResponseId"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -5291,8 +5291,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(SidebySideSurveyMetaAiAnalyticsData.prototype, "_timestampMSString", {
-                    get: $util.oneOfGetter($oneOfFields = ["timestampMSString"]),
+                Object.defineProperty(SidebySideSurveyMetaAiAnalyticsData.prototype, "_timestampMsString", {
+                    get: $util.oneOfGetter($oneOfFields = ["timestampMsString"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -5333,14 +5333,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 SidebySideSurveyMetaAiAnalyticsData.encode = function encode(m, w) {
                     if (!w)
                         w = $Writer.create();
-                    if (m.surveyID != null && Object.hasOwnProperty.call(m, "surveyID"))
-                        w.uint32(8).uint32(m.surveyID);
-                    if (m.primaryResponseID != null && Object.hasOwnProperty.call(m, "primaryResponseID"))
-                        w.uint32(18).string(m.primaryResponseID);
+                    if (m.surveyId != null && Object.hasOwnProperty.call(m, "surveyId"))
+                        w.uint32(8).uint32(m.surveyId);
+                    if (m.primaryResponseId != null && Object.hasOwnProperty.call(m, "primaryResponseId"))
+                        w.uint32(18).string(m.primaryResponseId);
                     if (m.testArmName != null && Object.hasOwnProperty.call(m, "testArmName"))
                         w.uint32(26).string(m.testArmName);
-                    if (m.timestampMSString != null && Object.hasOwnProperty.call(m, "timestampMSString"))
-                        w.uint32(34).string(m.timestampMSString);
+                    if (m.timestampMsString != null && Object.hasOwnProperty.call(m, "timestampMsString"))
+                        w.uint32(34).string(m.timestampMsString);
                     if (m.ctaImpressionEvent != null && Object.hasOwnProperty.call(m, "ctaImpressionEvent"))
                         $root.WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyCTAImpressionEventData.encode(m.ctaImpressionEvent, w.uint32(42).fork()).ldelim();
                     if (m.ctaClickEvent != null && Object.hasOwnProperty.call(m, "ctaClickEvent"))
@@ -5368,11 +5368,11 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             break;
                         switch (t >>> 3) {
                         case 1: {
-                                m.surveyID = r.uint32();
+                                m.surveyId = r.uint32();
                                 break;
                             }
                         case 2: {
-                                m.primaryResponseID = r.string();
+                                m.primaryResponseId = r.string();
                                 break;
                             }
                         case 3: {
@@ -5380,7 +5380,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                                 break;
                             }
                         case 4: {
-                                m.timestampMSString = r.string();
+                                m.timestampMsString = r.string();
                                 break;
                             }
                         case 5: {
@@ -5419,17 +5419,17 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     if (n > $util.recursionLimit)
                         throw Error("maximum nesting depth exceeded");
                     var m = new $root.WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData();
-                    if (d.surveyID != null) {
-                        m.surveyID = d.surveyID >>> 0;
+                    if (d.surveyId != null) {
+                        m.surveyId = d.surveyId >>> 0;
                     }
-                    if (d.primaryResponseID != null) {
-                        m.primaryResponseID = String(d.primaryResponseID);
+                    if (d.primaryResponseId != null) {
+                        m.primaryResponseId = String(d.primaryResponseId);
                     }
                     if (d.testArmName != null) {
                         m.testArmName = String(d.testArmName);
                     }
-                    if (d.timestampMSString != null) {
-                        m.timestampMSString = String(d.timestampMSString);
+                    if (d.timestampMsString != null) {
+                        m.timestampMsString = String(d.timestampMsString);
                     }
                     if (d.ctaImpressionEvent != null) {
                         if (typeof d.ctaImpressionEvent !== "object")
@@ -5463,25 +5463,25 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     if (!o)
                         o = {};
                     var d = {};
-                    if (m.surveyID != null && m.hasOwnProperty("surveyID")) {
-                        d.surveyID = m.surveyID;
+                    if (m.surveyId != null && m.hasOwnProperty("surveyId")) {
+                        d.surveyId = m.surveyId;
                         if (o.oneofs)
-                            d._surveyID = "surveyID";
+                            d._surveyId = "surveyId";
                     }
-                    if (m.primaryResponseID != null && m.hasOwnProperty("primaryResponseID")) {
-                        d.primaryResponseID = m.primaryResponseID;
+                    if (m.primaryResponseId != null && m.hasOwnProperty("primaryResponseId")) {
+                        d.primaryResponseId = m.primaryResponseId;
                         if (o.oneofs)
-                            d._primaryResponseID = "primaryResponseID";
+                            d._primaryResponseId = "primaryResponseId";
                     }
                     if (m.testArmName != null && m.hasOwnProperty("testArmName")) {
                         d.testArmName = m.testArmName;
                         if (o.oneofs)
                             d._testArmName = "testArmName";
                     }
-                    if (m.timestampMSString != null && m.hasOwnProperty("timestampMSString")) {
-                        d.timestampMSString = m.timestampMSString;
+                    if (m.timestampMsString != null && m.hasOwnProperty("timestampMsString")) {
+                        d.timestampMsString = m.timestampMsString;
                         if (o.oneofs)
-                            d._timestampMSString = "timestampMSString";
+                            d._timestampMsString = "timestampMsString";
                     }
                     if (m.ctaImpressionEvent != null && m.hasOwnProperty("ctaImpressionEvent")) {
                         d.ctaImpressionEvent = $root.WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyCTAImpressionEventData.toObject(m.ctaImpressionEvent, o);
@@ -5531,13 +5531,13 @@ export const WAAICommon = $root.WAAICommon = (() => {
                                     this[ks[i]] = p[ks[i]];
                     }
 
-                    SideBySideSurveyAbandonEventData.prototype.abandonDwellTimeMSString = null;
+                    SideBySideSurveyAbandonEventData.prototype.abandonDwellTimeMsString = null;
 
                     let $oneOfFields;
 
                     // Virtual OneOf for proto3 optional field
-                    Object.defineProperty(SideBySideSurveyAbandonEventData.prototype, "_abandonDwellTimeMSString", {
-                        get: $util.oneOfGetter($oneOfFields = ["abandonDwellTimeMSString"]),
+                    Object.defineProperty(SideBySideSurveyAbandonEventData.prototype, "_abandonDwellTimeMsString", {
+                        get: $util.oneOfGetter($oneOfFields = ["abandonDwellTimeMsString"]),
                         set: $util.oneOfSetter($oneOfFields)
                     });
 
@@ -5548,8 +5548,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     SideBySideSurveyAbandonEventData.encode = function encode(m, w) {
                         if (!w)
                             w = $Writer.create();
-                        if (m.abandonDwellTimeMSString != null && Object.hasOwnProperty.call(m, "abandonDwellTimeMSString"))
-                            w.uint32(10).string(m.abandonDwellTimeMSString);
+                        if (m.abandonDwellTimeMsString != null && Object.hasOwnProperty.call(m, "abandonDwellTimeMsString"))
+                            w.uint32(10).string(m.abandonDwellTimeMsString);
                         return w;
                     };
 
@@ -5567,7 +5567,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                                 break;
                             switch (t >>> 3) {
                             case 1: {
-                                    m.abandonDwellTimeMSString = r.string();
+                                    m.abandonDwellTimeMsString = r.string();
                                     break;
                                 }
                             default:
@@ -5586,8 +5586,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         if (n > $util.recursionLimit)
                             throw Error("maximum nesting depth exceeded");
                         var m = new $root.WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyAbandonEventData();
-                        if (d.abandonDwellTimeMSString != null) {
-                            m.abandonDwellTimeMSString = String(d.abandonDwellTimeMSString);
+                        if (d.abandonDwellTimeMsString != null) {
+                            m.abandonDwellTimeMsString = String(d.abandonDwellTimeMsString);
                         }
                         return m;
                     };
@@ -5596,10 +5596,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         if (!o)
                             o = {};
                         var d = {};
-                        if (m.abandonDwellTimeMSString != null && m.hasOwnProperty("abandonDwellTimeMSString")) {
-                            d.abandonDwellTimeMSString = m.abandonDwellTimeMSString;
+                        if (m.abandonDwellTimeMsString != null && m.hasOwnProperty("abandonDwellTimeMsString")) {
+                            d.abandonDwellTimeMsString = m.abandonDwellTimeMsString;
                             if (o.oneofs)
-                                d._abandonDwellTimeMSString = "abandonDwellTimeMSString";
+                                d._abandonDwellTimeMsString = "abandonDwellTimeMsString";
                         }
                         return d;
                     };
@@ -5627,20 +5627,20 @@ export const WAAICommon = $root.WAAICommon = (() => {
                                     this[ks[i]] = p[ks[i]];
                     }
 
-                    SideBySideSurveyResponseEventData.prototype.responseDwellTimeMSString = null;
-                    SideBySideSurveyResponseEventData.prototype.selectedResponseID = null;
+                    SideBySideSurveyResponseEventData.prototype.responseDwellTimeMsString = null;
+                    SideBySideSurveyResponseEventData.prototype.selectedResponseId = null;
 
                     let $oneOfFields;
 
                     // Virtual OneOf for proto3 optional field
-                    Object.defineProperty(SideBySideSurveyResponseEventData.prototype, "_responseDwellTimeMSString", {
-                        get: $util.oneOfGetter($oneOfFields = ["responseDwellTimeMSString"]),
+                    Object.defineProperty(SideBySideSurveyResponseEventData.prototype, "_responseDwellTimeMsString", {
+                        get: $util.oneOfGetter($oneOfFields = ["responseDwellTimeMsString"]),
                         set: $util.oneOfSetter($oneOfFields)
                     });
 
                     // Virtual OneOf for proto3 optional field
-                    Object.defineProperty(SideBySideSurveyResponseEventData.prototype, "_selectedResponseID", {
-                        get: $util.oneOfGetter($oneOfFields = ["selectedResponseID"]),
+                    Object.defineProperty(SideBySideSurveyResponseEventData.prototype, "_selectedResponseId", {
+                        get: $util.oneOfGetter($oneOfFields = ["selectedResponseId"]),
                         set: $util.oneOfSetter($oneOfFields)
                     });
 
@@ -5651,10 +5651,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     SideBySideSurveyResponseEventData.encode = function encode(m, w) {
                         if (!w)
                             w = $Writer.create();
-                        if (m.responseDwellTimeMSString != null && Object.hasOwnProperty.call(m, "responseDwellTimeMSString"))
-                            w.uint32(10).string(m.responseDwellTimeMSString);
-                        if (m.selectedResponseID != null && Object.hasOwnProperty.call(m, "selectedResponseID"))
-                            w.uint32(18).string(m.selectedResponseID);
+                        if (m.responseDwellTimeMsString != null && Object.hasOwnProperty.call(m, "responseDwellTimeMsString"))
+                            w.uint32(10).string(m.responseDwellTimeMsString);
+                        if (m.selectedResponseId != null && Object.hasOwnProperty.call(m, "selectedResponseId"))
+                            w.uint32(18).string(m.selectedResponseId);
                         return w;
                     };
 
@@ -5672,11 +5672,11 @@ export const WAAICommon = $root.WAAICommon = (() => {
                                 break;
                             switch (t >>> 3) {
                             case 1: {
-                                    m.responseDwellTimeMSString = r.string();
+                                    m.responseDwellTimeMsString = r.string();
                                     break;
                                 }
                             case 2: {
-                                    m.selectedResponseID = r.string();
+                                    m.selectedResponseId = r.string();
                                     break;
                                 }
                             default:
@@ -5695,11 +5695,11 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         if (n > $util.recursionLimit)
                             throw Error("maximum nesting depth exceeded");
                         var m = new $root.WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyResponseEventData();
-                        if (d.responseDwellTimeMSString != null) {
-                            m.responseDwellTimeMSString = String(d.responseDwellTimeMSString);
+                        if (d.responseDwellTimeMsString != null) {
+                            m.responseDwellTimeMsString = String(d.responseDwellTimeMsString);
                         }
-                        if (d.selectedResponseID != null) {
-                            m.selectedResponseID = String(d.selectedResponseID);
+                        if (d.selectedResponseId != null) {
+                            m.selectedResponseId = String(d.selectedResponseId);
                         }
                         return m;
                     };
@@ -5708,15 +5708,15 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         if (!o)
                             o = {};
                         var d = {};
-                        if (m.responseDwellTimeMSString != null && m.hasOwnProperty("responseDwellTimeMSString")) {
-                            d.responseDwellTimeMSString = m.responseDwellTimeMSString;
+                        if (m.responseDwellTimeMsString != null && m.hasOwnProperty("responseDwellTimeMsString")) {
+                            d.responseDwellTimeMsString = m.responseDwellTimeMsString;
                             if (o.oneofs)
-                                d._responseDwellTimeMSString = "responseDwellTimeMSString";
+                                d._responseDwellTimeMsString = "responseDwellTimeMsString";
                         }
-                        if (m.selectedResponseID != null && m.hasOwnProperty("selectedResponseID")) {
-                            d.selectedResponseID = m.selectedResponseID;
+                        if (m.selectedResponseId != null && m.hasOwnProperty("selectedResponseId")) {
+                            d.selectedResponseId = m.selectedResponseId;
                             if (o.oneofs)
-                                d._selectedResponseID = "selectedResponseID";
+                                d._selectedResponseId = "selectedResponseId";
                         }
                         return d;
                     };
@@ -5813,7 +5813,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     }
 
                     SideBySideSurveyCTAClickEventData.prototype.isSurveyExpired = null;
-                    SideBySideSurveyCTAClickEventData.prototype.clickDwellTimeMSString = null;
+                    SideBySideSurveyCTAClickEventData.prototype.clickDwellTimeMsString = null;
 
                     let $oneOfFields;
 
@@ -5824,8 +5824,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     });
 
                     // Virtual OneOf for proto3 optional field
-                    Object.defineProperty(SideBySideSurveyCTAClickEventData.prototype, "_clickDwellTimeMSString", {
-                        get: $util.oneOfGetter($oneOfFields = ["clickDwellTimeMSString"]),
+                    Object.defineProperty(SideBySideSurveyCTAClickEventData.prototype, "_clickDwellTimeMsString", {
+                        get: $util.oneOfGetter($oneOfFields = ["clickDwellTimeMsString"]),
                         set: $util.oneOfSetter($oneOfFields)
                     });
 
@@ -5838,8 +5838,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             w = $Writer.create();
                         if (m.isSurveyExpired != null && Object.hasOwnProperty.call(m, "isSurveyExpired"))
                             w.uint32(8).bool(m.isSurveyExpired);
-                        if (m.clickDwellTimeMSString != null && Object.hasOwnProperty.call(m, "clickDwellTimeMSString"))
-                            w.uint32(18).string(m.clickDwellTimeMSString);
+                        if (m.clickDwellTimeMsString != null && Object.hasOwnProperty.call(m, "clickDwellTimeMsString"))
+                            w.uint32(18).string(m.clickDwellTimeMsString);
                         return w;
                     };
 
@@ -5861,7 +5861,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                                     break;
                                 }
                             case 2: {
-                                    m.clickDwellTimeMSString = r.string();
+                                    m.clickDwellTimeMsString = r.string();
                                     break;
                                 }
                             default:
@@ -5883,8 +5883,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         if (d.isSurveyExpired != null) {
                             m.isSurveyExpired = Boolean(d.isSurveyExpired);
                         }
-                        if (d.clickDwellTimeMSString != null) {
-                            m.clickDwellTimeMSString = String(d.clickDwellTimeMSString);
+                        if (d.clickDwellTimeMsString != null) {
+                            m.clickDwellTimeMsString = String(d.clickDwellTimeMsString);
                         }
                         return m;
                     };
@@ -5898,10 +5898,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             if (o.oneofs)
                                 d._isSurveyExpired = "isSurveyExpired";
                         }
-                        if (m.clickDwellTimeMSString != null && m.hasOwnProperty("clickDwellTimeMSString")) {
-                            d.clickDwellTimeMSString = m.clickDwellTimeMSString;
+                        if (m.clickDwellTimeMsString != null && m.hasOwnProperty("clickDwellTimeMsString")) {
+                            d.clickDwellTimeMsString = m.clickDwellTimeMsString;
                             if (o.oneofs)
-                                d._clickDwellTimeMSString = "clickDwellTimeMSString";
+                                d._clickDwellTimeMsString = "clickDwellTimeMsString";
                         }
                         return d;
                     };
@@ -6454,11 +6454,11 @@ export const WAAICommon = $root.WAAICommon = (() => {
             AIHomeOption.prototype.type = null;
             AIHomeOption.prototype.title = null;
             AIHomeOption.prototype.promptText = null;
-            AIHomeOption.prototype.sessionID = null;
+            AIHomeOption.prototype.sessionId = null;
             AIHomeOption.prototype.imageWdsIdentifier = null;
             AIHomeOption.prototype.imageTintColor = null;
             AIHomeOption.prototype.imageBackgroundColor = null;
-            AIHomeOption.prototype.cardTypeID = null;
+            AIHomeOption.prototype.cardTypeId = null;
 
             let $oneOfFields;
 
@@ -6481,8 +6481,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIHomeOption.prototype, "_sessionID", {
-                get: $util.oneOfGetter($oneOfFields = ["sessionID"]),
+            Object.defineProperty(AIHomeOption.prototype, "_sessionId", {
+                get: $util.oneOfGetter($oneOfFields = ["sessionId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -6505,8 +6505,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIHomeOption.prototype, "_cardTypeID", {
-                get: $util.oneOfGetter($oneOfFields = ["cardTypeID"]),
+            Object.defineProperty(AIHomeOption.prototype, "_cardTypeId", {
+                get: $util.oneOfGetter($oneOfFields = ["cardTypeId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -6523,16 +6523,16 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     w.uint32(18).string(m.title);
                 if (m.promptText != null && Object.hasOwnProperty.call(m, "promptText"))
                     w.uint32(26).string(m.promptText);
-                if (m.sessionID != null && Object.hasOwnProperty.call(m, "sessionID"))
-                    w.uint32(34).string(m.sessionID);
+                if (m.sessionId != null && Object.hasOwnProperty.call(m, "sessionId"))
+                    w.uint32(34).string(m.sessionId);
                 if (m.imageWdsIdentifier != null && Object.hasOwnProperty.call(m, "imageWdsIdentifier"))
                     w.uint32(42).string(m.imageWdsIdentifier);
                 if (m.imageTintColor != null && Object.hasOwnProperty.call(m, "imageTintColor"))
                     w.uint32(50).string(m.imageTintColor);
                 if (m.imageBackgroundColor != null && Object.hasOwnProperty.call(m, "imageBackgroundColor"))
                     w.uint32(58).string(m.imageBackgroundColor);
-                if (m.cardTypeID != null && Object.hasOwnProperty.call(m, "cardTypeID"))
-                    w.uint32(66).string(m.cardTypeID);
+                if (m.cardTypeId != null && Object.hasOwnProperty.call(m, "cardTypeId"))
+                    w.uint32(66).string(m.cardTypeId);
                 return w;
             };
 
@@ -6562,7 +6562,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             break;
                         }
                     case 4: {
-                            m.sessionID = r.string();
+                            m.sessionId = r.string();
                             break;
                         }
                     case 5: {
@@ -6578,7 +6578,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             break;
                         }
                     case 8: {
-                            m.cardTypeID = r.string();
+                            m.cardTypeId = r.string();
                             break;
                         }
                     default:
@@ -6635,8 +6635,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (d.promptText != null) {
                     m.promptText = String(d.promptText);
                 }
-                if (d.sessionID != null) {
-                    m.sessionID = String(d.sessionID);
+                if (d.sessionId != null) {
+                    m.sessionId = String(d.sessionId);
                 }
                 if (d.imageWdsIdentifier != null) {
                     m.imageWdsIdentifier = String(d.imageWdsIdentifier);
@@ -6647,8 +6647,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (d.imageBackgroundColor != null) {
                     m.imageBackgroundColor = String(d.imageBackgroundColor);
                 }
-                if (d.cardTypeID != null) {
-                    m.cardTypeID = String(d.cardTypeID);
+                if (d.cardTypeId != null) {
+                    m.cardTypeId = String(d.cardTypeId);
                 }
                 return m;
             };
@@ -6672,10 +6672,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     if (o.oneofs)
                         d._promptText = "promptText";
                 }
-                if (m.sessionID != null && m.hasOwnProperty("sessionID")) {
-                    d.sessionID = m.sessionID;
+                if (m.sessionId != null && m.hasOwnProperty("sessionId")) {
+                    d.sessionId = m.sessionId;
                     if (o.oneofs)
-                        d._sessionID = "sessionID";
+                        d._sessionId = "sessionId";
                 }
                 if (m.imageWdsIdentifier != null && m.hasOwnProperty("imageWdsIdentifier")) {
                     d.imageWdsIdentifier = m.imageWdsIdentifier;
@@ -6692,10 +6692,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     if (o.oneofs)
                         d._imageBackgroundColor = "imageBackgroundColor";
                 }
-                if (m.cardTypeID != null && m.hasOwnProperty("cardTypeID")) {
-                    d.cardTypeID = m.cardTypeID;
+                if (m.cardTypeId != null && m.hasOwnProperty("cardTypeId")) {
+                    d.cardTypeId = m.cardTypeId;
                     if (o.oneofs)
-                        d._cardTypeID = "cardTypeID";
+                        d._cardTypeId = "cardTypeId";
                 }
                 return d;
             };
@@ -6907,7 +6907,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
         BotSuggestedPromptMetadata.prototype.suggestedPrompts = $util.emptyArray;
         BotSuggestedPromptMetadata.prototype.selectedPromptIndex = null;
         BotSuggestedPromptMetadata.prototype.promptSuggestions = null;
-        BotSuggestedPromptMetadata.prototype.selectedPromptID = null;
+        BotSuggestedPromptMetadata.prototype.selectedPromptId = null;
 
         let $oneOfFields;
 
@@ -6924,8 +6924,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotSuggestedPromptMetadata.prototype, "_selectedPromptID", {
-            get: $util.oneOfGetter($oneOfFields = ["selectedPromptID"]),
+        Object.defineProperty(BotSuggestedPromptMetadata.prototype, "_selectedPromptId", {
+            get: $util.oneOfGetter($oneOfFields = ["selectedPromptId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -6944,8 +6944,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 w.uint32(16).uint32(m.selectedPromptIndex);
             if (m.promptSuggestions != null && Object.hasOwnProperty.call(m, "promptSuggestions"))
                 $root.WAAICommon.BotPromptSuggestions.encode(m.promptSuggestions, w.uint32(26).fork()).ldelim();
-            if (m.selectedPromptID != null && Object.hasOwnProperty.call(m, "selectedPromptID"))
-                w.uint32(34).string(m.selectedPromptID);
+            if (m.selectedPromptId != null && Object.hasOwnProperty.call(m, "selectedPromptId"))
+                w.uint32(34).string(m.selectedPromptId);
             return w;
         };
 
@@ -6977,7 +6977,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     }
                 case 4: {
-                        m.selectedPromptID = r.string();
+                        m.selectedPromptId = r.string();
                         break;
                     }
                 default:
@@ -7012,8 +7012,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     throw TypeError(".WAAICommon.BotSuggestedPromptMetadata.promptSuggestions: object expected");
                 m.promptSuggestions = $root.WAAICommon.BotPromptSuggestions.fromObject(d.promptSuggestions, n + 1);
             }
-            if (d.selectedPromptID != null) {
-                m.selectedPromptID = String(d.selectedPromptID);
+            if (d.selectedPromptId != null) {
+                m.selectedPromptId = String(d.selectedPromptId);
             }
             return m;
         };
@@ -7041,10 +7041,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (o.oneofs)
                     d._promptSuggestions = "promptSuggestions";
             }
-            if (m.selectedPromptID != null && m.hasOwnProperty("selectedPromptID")) {
-                d.selectedPromptID = m.selectedPromptID;
+            if (m.selectedPromptId != null && m.hasOwnProperty("selectedPromptId")) {
+                d.selectedPromptId = m.selectedPromptId;
                 if (o.oneofs)
-                    d._selectedPromptID = "selectedPromptID";
+                    d._selectedPromptId = "selectedPromptId";
             }
             return d;
         };
@@ -7177,7 +7177,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
         }
 
         BotPromptSuggestion.prototype.prompt = null;
-        BotPromptSuggestion.prototype.promptID = null;
+        BotPromptSuggestion.prototype.promptId = null;
 
         let $oneOfFields;
 
@@ -7188,8 +7188,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotPromptSuggestion.prototype, "_promptID", {
-            get: $util.oneOfGetter($oneOfFields = ["promptID"]),
+        Object.defineProperty(BotPromptSuggestion.prototype, "_promptId", {
+            get: $util.oneOfGetter($oneOfFields = ["promptId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -7202,8 +7202,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 w = $Writer.create();
             if (m.prompt != null && Object.hasOwnProperty.call(m, "prompt"))
                 w.uint32(10).string(m.prompt);
-            if (m.promptID != null && Object.hasOwnProperty.call(m, "promptID"))
-                w.uint32(18).string(m.promptID);
+            if (m.promptId != null && Object.hasOwnProperty.call(m, "promptId"))
+                w.uint32(18).string(m.promptId);
             return w;
         };
 
@@ -7225,7 +7225,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     }
                 case 2: {
-                        m.promptID = r.string();
+                        m.promptId = r.string();
                         break;
                     }
                 default:
@@ -7247,8 +7247,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (d.prompt != null) {
                 m.prompt = String(d.prompt);
             }
-            if (d.promptID != null) {
-                m.promptID = String(d.promptID);
+            if (d.promptId != null) {
+                m.promptId = String(d.promptId);
             }
             return m;
         };
@@ -7262,10 +7262,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (o.oneofs)
                     d._prompt = "prompt";
             }
-            if (m.promptID != null && m.hasOwnProperty("promptID")) {
-                d.promptID = m.promptID;
+            if (m.promptId != null && m.hasOwnProperty("promptId")) {
+                d.promptId = m.promptId;
                 if (o.oneofs)
-                    d._promptID = "promptID";
+                    d._promptId = "promptId";
             }
             return d;
         };
@@ -7601,7 +7601,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
         }
 
         BotMemoryFact.prototype.fact = null;
-        BotMemoryFact.prototype.factID = null;
+        BotMemoryFact.prototype.factId = null;
 
         let $oneOfFields;
 
@@ -7612,8 +7612,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMemoryFact.prototype, "_factID", {
-            get: $util.oneOfGetter($oneOfFields = ["factID"]),
+        Object.defineProperty(BotMemoryFact.prototype, "_factId", {
+            get: $util.oneOfGetter($oneOfFields = ["factId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -7626,8 +7626,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 w = $Writer.create();
             if (m.fact != null && Object.hasOwnProperty.call(m, "fact"))
                 w.uint32(10).string(m.fact);
-            if (m.factID != null && Object.hasOwnProperty.call(m, "factID"))
-                w.uint32(18).string(m.factID);
+            if (m.factId != null && Object.hasOwnProperty.call(m, "factId"))
+                w.uint32(18).string(m.factId);
             return w;
         };
 
@@ -7649,7 +7649,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     }
                 case 2: {
-                        m.factID = r.string();
+                        m.factId = r.string();
                         break;
                     }
                 default:
@@ -7671,8 +7671,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (d.fact != null) {
                 m.fact = String(d.fact);
             }
-            if (d.factID != null) {
-                m.factID = String(d.factID);
+            if (d.factId != null) {
+                m.factId = String(d.factId);
             }
             return m;
         };
@@ -7686,10 +7686,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (o.oneofs)
                     d._fact = "fact";
             }
-            if (m.factID != null && m.hasOwnProperty("factID")) {
-                d.factID = m.factID;
+            if (m.factId != null && m.hasOwnProperty("factId")) {
+                d.factId = m.factId;
                 if (o.oneofs)
-                    d._factID = "factID";
+                    d._factId = "factId";
             }
             return d;
         };
@@ -8050,15 +8050,15 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BotMetricsMetadata.prototype.destinationID = null;
+        BotMetricsMetadata.prototype.destinationId = null;
         BotMetricsMetadata.prototype.destinationEntryPoint = null;
         BotMetricsMetadata.prototype.threadOrigin = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMetricsMetadata.prototype, "_destinationID", {
-            get: $util.oneOfGetter($oneOfFields = ["destinationID"]),
+        Object.defineProperty(BotMetricsMetadata.prototype, "_destinationId", {
+            get: $util.oneOfGetter($oneOfFields = ["destinationId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -8081,8 +8081,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         BotMetricsMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.destinationID != null && Object.hasOwnProperty.call(m, "destinationID"))
-                w.uint32(10).string(m.destinationID);
+            if (m.destinationId != null && Object.hasOwnProperty.call(m, "destinationId"))
+                w.uint32(10).string(m.destinationId);
             if (m.destinationEntryPoint != null && Object.hasOwnProperty.call(m, "destinationEntryPoint"))
                 w.uint32(16).int32(m.destinationEntryPoint);
             if (m.threadOrigin != null && Object.hasOwnProperty.call(m, "threadOrigin"))
@@ -8104,7 +8104,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.destinationID = r.string();
+                        m.destinationId = r.string();
                         break;
                     }
                 case 2: {
@@ -8131,8 +8131,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAICommon.BotMetricsMetadata();
-            if (d.destinationID != null) {
-                m.destinationID = String(d.destinationID);
+            if (d.destinationId != null) {
+                m.destinationId = String(d.destinationId);
             }
             switch (d.destinationEntryPoint) {
             default:
@@ -8369,10 +8369,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.destinationID != null && m.hasOwnProperty("destinationID")) {
-                d.destinationID = m.destinationID;
+            if (m.destinationId != null && m.hasOwnProperty("destinationId")) {
+                d.destinationId = m.destinationId;
                 if (o.oneofs)
-                    d._destinationID = "destinationID";
+                    d._destinationId = "destinationId";
             }
             if (m.destinationEntryPoint != null && m.hasOwnProperty("destinationEntryPoint")) {
                 d.destinationEntryPoint = o.enums === String ? $root.WAAICommon.BotMetricsEntryPoint[m.destinationEntryPoint] === undefined ? m.destinationEntryPoint : $root.WAAICommon.BotMetricsEntryPoint[m.destinationEntryPoint] : m.destinationEntryPoint;
@@ -8410,14 +8410,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BotSessionMetadata.prototype.sessionID = null;
+        BotSessionMetadata.prototype.sessionId = null;
         BotSessionMetadata.prototype.sessionSource = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotSessionMetadata.prototype, "_sessionID", {
-            get: $util.oneOfGetter($oneOfFields = ["sessionID"]),
+        Object.defineProperty(BotSessionMetadata.prototype, "_sessionId", {
+            get: $util.oneOfGetter($oneOfFields = ["sessionId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -8434,8 +8434,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         BotSessionMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.sessionID != null && Object.hasOwnProperty.call(m, "sessionID"))
-                w.uint32(10).string(m.sessionID);
+            if (m.sessionId != null && Object.hasOwnProperty.call(m, "sessionId"))
+                w.uint32(10).string(m.sessionId);
             if (m.sessionSource != null && Object.hasOwnProperty.call(m, "sessionSource"))
                 w.uint32(16).int32(m.sessionSource);
             return w;
@@ -8455,7 +8455,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.sessionID = r.string();
+                        m.sessionId = r.string();
                         break;
                     }
                 case 2: {
@@ -8478,8 +8478,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAICommon.BotSessionMetadata();
-            if (d.sessionID != null) {
-                m.sessionID = String(d.sessionID);
+            if (d.sessionId != null) {
+                m.sessionId = String(d.sessionId);
             }
             switch (d.sessionSource) {
             default:
@@ -8528,10 +8528,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.sessionID != null && m.hasOwnProperty("sessionID")) {
-                d.sessionID = m.sessionID;
+            if (m.sessionId != null && m.hasOwnProperty("sessionId")) {
+                d.sessionId = m.sessionId;
                 if (o.oneofs)
-                    d._sessionID = "sessionID";
+                    d._sessionId = "sessionId";
             }
             if (m.sessionSource != null && m.hasOwnProperty("sessionSource")) {
                 d.sessionSource = o.enums === String ? $root.WAAICommon.BotSessionSource[m.sessionSource] === undefined ? m.sessionSource : $root.WAAICommon.BotSessionSource[m.sessionSource] : m.sessionSource;
@@ -8670,16 +8670,16 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        InThreadSurveyMetadata.prototype.tessaSessionID = null;
-        InThreadSurveyMetadata.prototype.simonSessionID = null;
-        InThreadSurveyMetadata.prototype.simonSurveyID = null;
-        InThreadSurveyMetadata.prototype.tessaRootID = null;
-        InThreadSurveyMetadata.prototype.requestID = null;
+        InThreadSurveyMetadata.prototype.tessaSessionId = null;
+        InThreadSurveyMetadata.prototype.simonSessionId = null;
+        InThreadSurveyMetadata.prototype.simonSurveyId = null;
+        InThreadSurveyMetadata.prototype.tessaRootId = null;
+        InThreadSurveyMetadata.prototype.requestId = null;
         InThreadSurveyMetadata.prototype.tessaEvent = null;
         InThreadSurveyMetadata.prototype.invitationHeaderText = null;
         InThreadSurveyMetadata.prototype.invitationBodyText = null;
         InThreadSurveyMetadata.prototype.invitationCtaText = null;
-        InThreadSurveyMetadata.prototype.invitationCtaURL = null;
+        InThreadSurveyMetadata.prototype.invitationCtaUrl = null;
         InThreadSurveyMetadata.prototype.surveyTitle = null;
         InThreadSurveyMetadata.prototype.questions = $util.emptyArray;
         InThreadSurveyMetadata.prototype.surveyContinueButtonText = null;
@@ -8692,32 +8692,32 @@ export const WAAICommon = $root.WAAICommon = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_tessaSessionID", {
-            get: $util.oneOfGetter($oneOfFields = ["tessaSessionID"]),
+        Object.defineProperty(InThreadSurveyMetadata.prototype, "_tessaSessionId", {
+            get: $util.oneOfGetter($oneOfFields = ["tessaSessionId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_simonSessionID", {
-            get: $util.oneOfGetter($oneOfFields = ["simonSessionID"]),
+        Object.defineProperty(InThreadSurveyMetadata.prototype, "_simonSessionId", {
+            get: $util.oneOfGetter($oneOfFields = ["simonSessionId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_simonSurveyID", {
-            get: $util.oneOfGetter($oneOfFields = ["simonSurveyID"]),
+        Object.defineProperty(InThreadSurveyMetadata.prototype, "_simonSurveyId", {
+            get: $util.oneOfGetter($oneOfFields = ["simonSurveyId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_tessaRootID", {
-            get: $util.oneOfGetter($oneOfFields = ["tessaRootID"]),
+        Object.defineProperty(InThreadSurveyMetadata.prototype, "_tessaRootId", {
+            get: $util.oneOfGetter($oneOfFields = ["tessaRootId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_requestID", {
-            get: $util.oneOfGetter($oneOfFields = ["requestID"]),
+        Object.defineProperty(InThreadSurveyMetadata.prototype, "_requestId", {
+            get: $util.oneOfGetter($oneOfFields = ["requestId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -8746,8 +8746,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_invitationCtaURL", {
-            get: $util.oneOfGetter($oneOfFields = ["invitationCtaURL"]),
+        Object.defineProperty(InThreadSurveyMetadata.prototype, "_invitationCtaUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["invitationCtaUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -8794,16 +8794,16 @@ export const WAAICommon = $root.WAAICommon = (() => {
         InThreadSurveyMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.tessaSessionID != null && Object.hasOwnProperty.call(m, "tessaSessionID"))
-                w.uint32(10).string(m.tessaSessionID);
-            if (m.simonSessionID != null && Object.hasOwnProperty.call(m, "simonSessionID"))
-                w.uint32(18).string(m.simonSessionID);
-            if (m.simonSurveyID != null && Object.hasOwnProperty.call(m, "simonSurveyID"))
-                w.uint32(26).string(m.simonSurveyID);
-            if (m.tessaRootID != null && Object.hasOwnProperty.call(m, "tessaRootID"))
-                w.uint32(34).string(m.tessaRootID);
-            if (m.requestID != null && Object.hasOwnProperty.call(m, "requestID"))
-                w.uint32(42).string(m.requestID);
+            if (m.tessaSessionId != null && Object.hasOwnProperty.call(m, "tessaSessionId"))
+                w.uint32(10).string(m.tessaSessionId);
+            if (m.simonSessionId != null && Object.hasOwnProperty.call(m, "simonSessionId"))
+                w.uint32(18).string(m.simonSessionId);
+            if (m.simonSurveyId != null && Object.hasOwnProperty.call(m, "simonSurveyId"))
+                w.uint32(26).string(m.simonSurveyId);
+            if (m.tessaRootId != null && Object.hasOwnProperty.call(m, "tessaRootId"))
+                w.uint32(34).string(m.tessaRootId);
+            if (m.requestId != null && Object.hasOwnProperty.call(m, "requestId"))
+                w.uint32(42).string(m.requestId);
             if (m.tessaEvent != null && Object.hasOwnProperty.call(m, "tessaEvent"))
                 w.uint32(50).string(m.tessaEvent);
             if (m.invitationHeaderText != null && Object.hasOwnProperty.call(m, "invitationHeaderText"))
@@ -8812,8 +8812,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 w.uint32(66).string(m.invitationBodyText);
             if (m.invitationCtaText != null && Object.hasOwnProperty.call(m, "invitationCtaText"))
                 w.uint32(74).string(m.invitationCtaText);
-            if (m.invitationCtaURL != null && Object.hasOwnProperty.call(m, "invitationCtaURL"))
-                w.uint32(82).string(m.invitationCtaURL);
+            if (m.invitationCtaUrl != null && Object.hasOwnProperty.call(m, "invitationCtaUrl"))
+                w.uint32(82).string(m.invitationCtaUrl);
             if (m.surveyTitle != null && Object.hasOwnProperty.call(m, "surveyTitle"))
                 w.uint32(90).string(m.surveyTitle);
             if (m.questions != null && m.questions.length) {
@@ -8851,23 +8851,23 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.tessaSessionID = r.string();
+                        m.tessaSessionId = r.string();
                         break;
                     }
                 case 2: {
-                        m.simonSessionID = r.string();
+                        m.simonSessionId = r.string();
                         break;
                     }
                 case 3: {
-                        m.simonSurveyID = r.string();
+                        m.simonSurveyId = r.string();
                         break;
                     }
                 case 4: {
-                        m.tessaRootID = r.string();
+                        m.tessaRootId = r.string();
                         break;
                     }
                 case 5: {
-                        m.requestID = r.string();
+                        m.requestId = r.string();
                         break;
                     }
                 case 6: {
@@ -8887,7 +8887,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     }
                 case 10: {
-                        m.invitationCtaURL = r.string();
+                        m.invitationCtaUrl = r.string();
                         break;
                     }
                 case 11: {
@@ -8942,20 +8942,20 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAICommon.InThreadSurveyMetadata();
-            if (d.tessaSessionID != null) {
-                m.tessaSessionID = String(d.tessaSessionID);
+            if (d.tessaSessionId != null) {
+                m.tessaSessionId = String(d.tessaSessionId);
             }
-            if (d.simonSessionID != null) {
-                m.simonSessionID = String(d.simonSessionID);
+            if (d.simonSessionId != null) {
+                m.simonSessionId = String(d.simonSessionId);
             }
-            if (d.simonSurveyID != null) {
-                m.simonSurveyID = String(d.simonSurveyID);
+            if (d.simonSurveyId != null) {
+                m.simonSurveyId = String(d.simonSurveyId);
             }
-            if (d.tessaRootID != null) {
-                m.tessaRootID = String(d.tessaRootID);
+            if (d.tessaRootId != null) {
+                m.tessaRootId = String(d.tessaRootId);
             }
-            if (d.requestID != null) {
-                m.requestID = String(d.requestID);
+            if (d.requestId != null) {
+                m.requestId = String(d.requestId);
             }
             if (d.tessaEvent != null) {
                 m.tessaEvent = String(d.tessaEvent);
@@ -8969,8 +8969,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (d.invitationCtaText != null) {
                 m.invitationCtaText = String(d.invitationCtaText);
             }
-            if (d.invitationCtaURL != null) {
-                m.invitationCtaURL = String(d.invitationCtaURL);
+            if (d.invitationCtaUrl != null) {
+                m.invitationCtaUrl = String(d.invitationCtaUrl);
             }
             if (d.surveyTitle != null) {
                 m.surveyTitle = String(d.surveyTitle);
@@ -9021,30 +9021,30 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 d.questions = [];
                 d.privacyStatementParts = [];
             }
-            if (m.tessaSessionID != null && m.hasOwnProperty("tessaSessionID")) {
-                d.tessaSessionID = m.tessaSessionID;
+            if (m.tessaSessionId != null && m.hasOwnProperty("tessaSessionId")) {
+                d.tessaSessionId = m.tessaSessionId;
                 if (o.oneofs)
-                    d._tessaSessionID = "tessaSessionID";
+                    d._tessaSessionId = "tessaSessionId";
             }
-            if (m.simonSessionID != null && m.hasOwnProperty("simonSessionID")) {
-                d.simonSessionID = m.simonSessionID;
+            if (m.simonSessionId != null && m.hasOwnProperty("simonSessionId")) {
+                d.simonSessionId = m.simonSessionId;
                 if (o.oneofs)
-                    d._simonSessionID = "simonSessionID";
+                    d._simonSessionId = "simonSessionId";
             }
-            if (m.simonSurveyID != null && m.hasOwnProperty("simonSurveyID")) {
-                d.simonSurveyID = m.simonSurveyID;
+            if (m.simonSurveyId != null && m.hasOwnProperty("simonSurveyId")) {
+                d.simonSurveyId = m.simonSurveyId;
                 if (o.oneofs)
-                    d._simonSurveyID = "simonSurveyID";
+                    d._simonSurveyId = "simonSurveyId";
             }
-            if (m.tessaRootID != null && m.hasOwnProperty("tessaRootID")) {
-                d.tessaRootID = m.tessaRootID;
+            if (m.tessaRootId != null && m.hasOwnProperty("tessaRootId")) {
+                d.tessaRootId = m.tessaRootId;
                 if (o.oneofs)
-                    d._tessaRootID = "tessaRootID";
+                    d._tessaRootId = "tessaRootId";
             }
-            if (m.requestID != null && m.hasOwnProperty("requestID")) {
-                d.requestID = m.requestID;
+            if (m.requestId != null && m.hasOwnProperty("requestId")) {
+                d.requestId = m.requestId;
                 if (o.oneofs)
-                    d._requestID = "requestID";
+                    d._requestId = "requestId";
             }
             if (m.tessaEvent != null && m.hasOwnProperty("tessaEvent")) {
                 d.tessaEvent = m.tessaEvent;
@@ -9066,10 +9066,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (o.oneofs)
                     d._invitationCtaText = "invitationCtaText";
             }
-            if (m.invitationCtaURL != null && m.hasOwnProperty("invitationCtaURL")) {
-                d.invitationCtaURL = m.invitationCtaURL;
+            if (m.invitationCtaUrl != null && m.hasOwnProperty("invitationCtaUrl")) {
+                d.invitationCtaUrl = m.invitationCtaUrl;
                 if (o.oneofs)
-                    d._invitationCtaURL = "invitationCtaURL";
+                    d._invitationCtaUrl = "invitationCtaUrl";
             }
             if (m.surveyTitle != null && m.hasOwnProperty("surveyTitle")) {
                 d.surveyTitle = m.surveyTitle;
@@ -9137,7 +9137,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
             }
 
             InThreadSurveyPrivacyStatementPart.prototype.text = null;
-            InThreadSurveyPrivacyStatementPart.prototype.URL = null;
+            InThreadSurveyPrivacyStatementPart.prototype.url = null;
 
             let $oneOfFields;
 
@@ -9148,8 +9148,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(InThreadSurveyPrivacyStatementPart.prototype, "_URL", {
-                get: $util.oneOfGetter($oneOfFields = ["URL"]),
+            Object.defineProperty(InThreadSurveyPrivacyStatementPart.prototype, "_url", {
+                get: $util.oneOfGetter($oneOfFields = ["url"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -9162,8 +9162,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     w = $Writer.create();
                 if (m.text != null && Object.hasOwnProperty.call(m, "text"))
                     w.uint32(10).string(m.text);
-                if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                    w.uint32(18).string(m.URL);
+                if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                    w.uint32(18).string(m.url);
                 return w;
             };
 
@@ -9185,7 +9185,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             break;
                         }
                     case 2: {
-                            m.URL = r.string();
+                            m.url = r.string();
                             break;
                         }
                     default:
@@ -9207,8 +9207,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (d.text != null) {
                     m.text = String(d.text);
                 }
-                if (d.URL != null) {
-                    m.URL = String(d.URL);
+                if (d.url != null) {
+                    m.url = String(d.url);
                 }
                 return m;
             };
@@ -9222,10 +9222,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     if (o.oneofs)
                         d._text = "text";
                 }
-                if (m.URL != null && m.hasOwnProperty("URL")) {
-                    d.URL = m.URL;
+                if (m.url != null && m.hasOwnProperty("url")) {
+                    d.url = m.url;
                     if (o.oneofs)
-                        d._URL = "URL";
+                        d._url = "url";
                 }
                 return d;
             };
@@ -9393,7 +9393,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
             }
 
             InThreadSurveyQuestion.prototype.questionText = null;
-            InThreadSurveyQuestion.prototype.questionID = null;
+            InThreadSurveyQuestion.prototype.questionId = null;
             InThreadSurveyQuestion.prototype.questionOptions = $util.emptyArray;
 
             let $oneOfFields;
@@ -9405,8 +9405,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(InThreadSurveyQuestion.prototype, "_questionID", {
-                get: $util.oneOfGetter($oneOfFields = ["questionID"]),
+            Object.defineProperty(InThreadSurveyQuestion.prototype, "_questionId", {
+                get: $util.oneOfGetter($oneOfFields = ["questionId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -9419,8 +9419,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     w = $Writer.create();
                 if (m.questionText != null && Object.hasOwnProperty.call(m, "questionText"))
                     w.uint32(10).string(m.questionText);
-                if (m.questionID != null && Object.hasOwnProperty.call(m, "questionID"))
-                    w.uint32(18).string(m.questionID);
+                if (m.questionId != null && Object.hasOwnProperty.call(m, "questionId"))
+                    w.uint32(18).string(m.questionId);
                 if (m.questionOptions != null && m.questionOptions.length) {
                     for (var i = 0; i < m.questionOptions.length; ++i)
                         $root.WAAICommon.InThreadSurveyMetadata.InThreadSurveyOption.encode(m.questionOptions[i], w.uint32(26).fork()).ldelim();
@@ -9446,7 +9446,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             break;
                         }
                     case 2: {
-                            m.questionID = r.string();
+                            m.questionId = r.string();
                             break;
                         }
                     case 3: {
@@ -9474,8 +9474,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (d.questionText != null) {
                     m.questionText = String(d.questionText);
                 }
-                if (d.questionID != null) {
-                    m.questionID = String(d.questionID);
+                if (d.questionId != null) {
+                    m.questionId = String(d.questionId);
                 }
                 if (d.questionOptions) {
                     if (!Array.isArray(d.questionOptions))
@@ -9502,10 +9502,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     if (o.oneofs)
                         d._questionText = "questionText";
                 }
-                if (m.questionID != null && m.hasOwnProperty("questionID")) {
-                    d.questionID = m.questionID;
+                if (m.questionId != null && m.hasOwnProperty("questionId")) {
+                    d.questionId = m.questionId;
                     if (o.oneofs)
-                        d._questionID = "questionID";
+                        d._questionId = "questionId";
                 }
                 if (m.questionOptions && m.questionOptions.length) {
                     d.questionOptions = [];
@@ -9772,15 +9772,15 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            MediaDetailsMetadata.prototype.ID = null;
+            MediaDetailsMetadata.prototype.id = null;
             MediaDetailsMetadata.prototype.highResMedia = null;
             MediaDetailsMetadata.prototype.previewMedia = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(MediaDetailsMetadata.prototype, "_ID", {
-                get: $util.oneOfGetter($oneOfFields = ["ID"]),
+            Object.defineProperty(MediaDetailsMetadata.prototype, "_id", {
+                get: $util.oneOfGetter($oneOfFields = ["id"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -9803,8 +9803,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             MediaDetailsMetadata.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                    w.uint32(10).string(m.ID);
+                if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                    w.uint32(10).string(m.id);
                 if (m.highResMedia != null && Object.hasOwnProperty.call(m, "highResMedia"))
                     $root.WAAICommon.BotMediaMetadata.encode(m.highResMedia, w.uint32(18).fork()).ldelim();
                 if (m.previewMedia != null && Object.hasOwnProperty.call(m, "previewMedia"))
@@ -9826,7 +9826,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.ID = r.string();
+                            m.id = r.string();
                             break;
                         }
                     case 2: {
@@ -9853,8 +9853,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAAICommon.BotUnifiedResponseMutation.MediaDetailsMetadata();
-                if (d.ID != null) {
-                    m.ID = String(d.ID);
+                if (d.id != null) {
+                    m.id = String(d.id);
                 }
                 if (d.highResMedia != null) {
                     if (typeof d.highResMedia !== "object")
@@ -9873,10 +9873,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.ID != null && m.hasOwnProperty("ID")) {
-                    d.ID = m.ID;
+                if (m.id != null && m.hasOwnProperty("id")) {
+                    d.id = m.id;
                     if (o.oneofs)
-                        d._ID = "ID";
+                        d._id = "id";
                 }
                 if (m.highResMedia != null && m.hasOwnProperty("highResMedia")) {
                     d.highResMedia = $root.WAAICommon.BotMediaMetadata.toObject(m.highResMedia, o);
@@ -9914,14 +9914,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            SideBySideMetadata.prototype.primaryResponseID = null;
+            SideBySideMetadata.prototype.primaryResponseId = null;
             SideBySideMetadata.prototype.surveyCtaHasRendered = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(SideBySideMetadata.prototype, "_primaryResponseID", {
-                get: $util.oneOfGetter($oneOfFields = ["primaryResponseID"]),
+            Object.defineProperty(SideBySideMetadata.prototype, "_primaryResponseId", {
+                get: $util.oneOfGetter($oneOfFields = ["primaryResponseId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -9938,8 +9938,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             SideBySideMetadata.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.primaryResponseID != null && Object.hasOwnProperty.call(m, "primaryResponseID"))
-                    w.uint32(10).string(m.primaryResponseID);
+                if (m.primaryResponseId != null && Object.hasOwnProperty.call(m, "primaryResponseId"))
+                    w.uint32(10).string(m.primaryResponseId);
                 if (m.surveyCtaHasRendered != null && Object.hasOwnProperty.call(m, "surveyCtaHasRendered"))
                     w.uint32(16).bool(m.surveyCtaHasRendered);
                 return w;
@@ -9959,7 +9959,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.primaryResponseID = r.string();
+                            m.primaryResponseId = r.string();
                             break;
                         }
                     case 2: {
@@ -9982,8 +9982,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAAICommon.BotUnifiedResponseMutation.SideBySideMetadata();
-                if (d.primaryResponseID != null) {
-                    m.primaryResponseID = String(d.primaryResponseID);
+                if (d.primaryResponseId != null) {
+                    m.primaryResponseId = String(d.primaryResponseId);
                 }
                 if (d.surveyCtaHasRendered != null) {
                     m.surveyCtaHasRendered = Boolean(d.surveyCtaHasRendered);
@@ -9995,10 +9995,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.primaryResponseID != null && m.hasOwnProperty("primaryResponseID")) {
-                    d.primaryResponseID = m.primaryResponseID;
+                if (m.primaryResponseId != null && m.hasOwnProperty("primaryResponseId")) {
+                    d.primaryResponseId = m.primaryResponseId;
                     if (o.oneofs)
-                        d._primaryResponseID = "primaryResponseID";
+                        d._primaryResponseId = "primaryResponseId";
                 }
                 if (m.surveyCtaHasRendered != null && m.hasOwnProperty("surveyCtaHasRendered")) {
                     d.surveyCtaHasRendered = m.surveyCtaHasRendered;
@@ -10034,14 +10034,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        AIMediaCollectionMetadata.prototype.collectionID = null;
+        AIMediaCollectionMetadata.prototype.collectionId = null;
         AIMediaCollectionMetadata.prototype.uploadOrderIndex = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIMediaCollectionMetadata.prototype, "_collectionID", {
-            get: $util.oneOfGetter($oneOfFields = ["collectionID"]),
+        Object.defineProperty(AIMediaCollectionMetadata.prototype, "_collectionId", {
+            get: $util.oneOfGetter($oneOfFields = ["collectionId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -10058,8 +10058,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         AIMediaCollectionMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.collectionID != null && Object.hasOwnProperty.call(m, "collectionID"))
-                w.uint32(10).string(m.collectionID);
+            if (m.collectionId != null && Object.hasOwnProperty.call(m, "collectionId"))
+                w.uint32(10).string(m.collectionId);
             if (m.uploadOrderIndex != null && Object.hasOwnProperty.call(m, "uploadOrderIndex"))
                 w.uint32(16).uint32(m.uploadOrderIndex);
             return w;
@@ -10079,7 +10079,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.collectionID = r.string();
+                        m.collectionId = r.string();
                         break;
                     }
                 case 2: {
@@ -10102,8 +10102,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAICommon.AIMediaCollectionMetadata();
-            if (d.collectionID != null) {
-                m.collectionID = String(d.collectionID);
+            if (d.collectionId != null) {
+                m.collectionId = String(d.collectionId);
             }
             if (d.uploadOrderIndex != null) {
                 m.uploadOrderIndex = d.uploadOrderIndex >>> 0;
@@ -10115,10 +10115,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.collectionID != null && m.hasOwnProperty("collectionID")) {
-                d.collectionID = m.collectionID;
+            if (m.collectionId != null && m.hasOwnProperty("collectionId")) {
+                d.collectionId = m.collectionId;
                 if (o.oneofs)
-                    d._collectionID = "collectionID";
+                    d._collectionId = "collectionId";
             }
             if (m.uploadOrderIndex != null && m.hasOwnProperty("uploadOrderIndex")) {
                 d.uploadOrderIndex = m.uploadOrderIndex;
@@ -10151,15 +10151,15 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        AIMediaCollectionMessage.prototype.collectionID = null;
+        AIMediaCollectionMessage.prototype.collectionId = null;
         AIMediaCollectionMessage.prototype.expectedMediaCount = null;
         AIMediaCollectionMessage.prototype.hasGlobalCaption = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIMediaCollectionMessage.prototype, "_collectionID", {
-            get: $util.oneOfGetter($oneOfFields = ["collectionID"]),
+        Object.defineProperty(AIMediaCollectionMessage.prototype, "_collectionId", {
+            get: $util.oneOfGetter($oneOfFields = ["collectionId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -10182,8 +10182,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         AIMediaCollectionMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.collectionID != null && Object.hasOwnProperty.call(m, "collectionID"))
-                w.uint32(10).string(m.collectionID);
+            if (m.collectionId != null && Object.hasOwnProperty.call(m, "collectionId"))
+                w.uint32(10).string(m.collectionId);
             if (m.expectedMediaCount != null && Object.hasOwnProperty.call(m, "expectedMediaCount"))
                 w.uint32(16).uint32(m.expectedMediaCount);
             if (m.hasGlobalCaption != null && Object.hasOwnProperty.call(m, "hasGlobalCaption"))
@@ -10205,7 +10205,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.collectionID = r.string();
+                        m.collectionId = r.string();
                         break;
                     }
                 case 2: {
@@ -10232,8 +10232,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAICommon.AIMediaCollectionMessage();
-            if (d.collectionID != null) {
-                m.collectionID = String(d.collectionID);
+            if (d.collectionId != null) {
+                m.collectionId = String(d.collectionId);
             }
             if (d.expectedMediaCount != null) {
                 m.expectedMediaCount = d.expectedMediaCount >>> 0;
@@ -10248,10 +10248,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.collectionID != null && m.hasOwnProperty("collectionID")) {
-                d.collectionID = m.collectionID;
+            if (m.collectionId != null && m.hasOwnProperty("collectionId")) {
+                d.collectionId = m.collectionId;
                 if (o.oneofs)
-                    d._collectionID = "collectionID";
+                    d._collectionId = "collectionId";
             }
             if (m.expectedMediaCount != null && m.hasOwnProperty("expectedMediaCount")) {
                 d.expectedMediaCount = m.expectedMediaCount;
@@ -10427,14 +10427,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BotResolvedToolCallMetadata.prototype.toolCallID = null;
+        BotResolvedToolCallMetadata.prototype.toolCallId = null;
         BotResolvedToolCallMetadata.prototype.resolutionDataSerialized = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotResolvedToolCallMetadata.prototype, "_toolCallID", {
-            get: $util.oneOfGetter($oneOfFields = ["toolCallID"]),
+        Object.defineProperty(BotResolvedToolCallMetadata.prototype, "_toolCallId", {
+            get: $util.oneOfGetter($oneOfFields = ["toolCallId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -10451,8 +10451,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         BotResolvedToolCallMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.toolCallID != null && Object.hasOwnProperty.call(m, "toolCallID"))
-                w.uint32(10).string(m.toolCallID);
+            if (m.toolCallId != null && Object.hasOwnProperty.call(m, "toolCallId"))
+                w.uint32(10).string(m.toolCallId);
             if (m.resolutionDataSerialized != null && Object.hasOwnProperty.call(m, "resolutionDataSerialized"))
                 w.uint32(18).string(m.resolutionDataSerialized);
             return w;
@@ -10472,7 +10472,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.toolCallID = r.string();
+                        m.toolCallId = r.string();
                         break;
                     }
                 case 2: {
@@ -10495,8 +10495,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAICommon.BotResolvedToolCallMetadata();
-            if (d.toolCallID != null) {
-                m.toolCallID = String(d.toolCallID);
+            if (d.toolCallId != null) {
+                m.toolCallId = String(d.toolCallId);
             }
             if (d.resolutionDataSerialized != null) {
                 m.resolutionDataSerialized = String(d.resolutionDataSerialized);
@@ -10508,10 +10508,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.toolCallID != null && m.hasOwnProperty("toolCallID")) {
-                d.toolCallID = m.toolCallID;
+            if (m.toolCallId != null && m.hasOwnProperty("toolCallId")) {
+                d.toolCallId = m.toolCallId;
                 if (o.oneofs)
-                    d._toolCallID = "toolCallID";
+                    d._toolCallId = "toolCallId";
             }
             if (m.resolutionDataSerialized != null && m.hasOwnProperty("resolutionDataSerialized")) {
                 d.resolutionDataSerialized = m.resolutionDataSerialized;
@@ -10544,10 +10544,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BotMetadata.prototype.personaID = null;
+        BotMetadata.prototype.personaId = null;
         BotMetadata.prototype.pluginMetadata = null;
         BotMetadata.prototype.suggestedPromptMetadata = null;
-        BotMetadata.prototype.invokerJID = null;
+        BotMetadata.prototype.invokerJid = null;
         BotMetadata.prototype.sessionMetadata = null;
         BotMetadata.prototype.memuMetadata = null;
         BotMetadata.prototype.timezone = null;
@@ -10567,8 +10567,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         BotMetadata.prototype.botModeSelectionMetadata = null;
         BotMetadata.prototype.botQuotaMetadata = null;
         BotMetadata.prototype.botAgeCollectionMetadata = null;
-        BotMetadata.prototype.conversationStarterPromptID = null;
-        BotMetadata.prototype.botResponseID = null;
+        BotMetadata.prototype.conversationStarterPromptId = null;
+        BotMetadata.prototype.botResponseId = null;
         BotMetadata.prototype.verificationMetadata = null;
         BotMetadata.prototype.unifiedResponseMutation = null;
         BotMetadata.prototype.botMessageOriginMetadata = null;
@@ -10589,8 +10589,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMetadata.prototype, "_personaID", {
-            get: $util.oneOfGetter($oneOfFields = ["personaID"]),
+        Object.defineProperty(BotMetadata.prototype, "_personaId", {
+            get: $util.oneOfGetter($oneOfFields = ["personaId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -10607,8 +10607,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMetadata.prototype, "_invokerJID", {
-            get: $util.oneOfGetter($oneOfFields = ["invokerJID"]),
+        Object.defineProperty(BotMetadata.prototype, "_invokerJid", {
+            get: $util.oneOfGetter($oneOfFields = ["invokerJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -10727,14 +10727,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMetadata.prototype, "_conversationStarterPromptID", {
-            get: $util.oneOfGetter($oneOfFields = ["conversationStarterPromptID"]),
+        Object.defineProperty(BotMetadata.prototype, "_conversationStarterPromptId", {
+            get: $util.oneOfGetter($oneOfFields = ["conversationStarterPromptId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMetadata.prototype, "_botResponseID", {
-            get: $util.oneOfGetter($oneOfFields = ["botResponseID"]),
+        Object.defineProperty(BotMetadata.prototype, "_botResponseId", {
+            get: $util.oneOfGetter($oneOfFields = ["botResponseId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -10841,14 +10841,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
         BotMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.personaID != null && Object.hasOwnProperty.call(m, "personaID"))
-                w.uint32(18).string(m.personaID);
+            if (m.personaId != null && Object.hasOwnProperty.call(m, "personaId"))
+                w.uint32(18).string(m.personaId);
             if (m.pluginMetadata != null && Object.hasOwnProperty.call(m, "pluginMetadata"))
                 $root.WAAICommon.BotPluginMetadata.encode(m.pluginMetadata, w.uint32(26).fork()).ldelim();
             if (m.suggestedPromptMetadata != null && Object.hasOwnProperty.call(m, "suggestedPromptMetadata"))
                 $root.WAAICommon.BotSuggestedPromptMetadata.encode(m.suggestedPromptMetadata, w.uint32(34).fork()).ldelim();
-            if (m.invokerJID != null && Object.hasOwnProperty.call(m, "invokerJID"))
-                w.uint32(42).string(m.invokerJID);
+            if (m.invokerJid != null && Object.hasOwnProperty.call(m, "invokerJid"))
+                w.uint32(42).string(m.invokerJid);
             if (m.sessionMetadata != null && Object.hasOwnProperty.call(m, "sessionMetadata"))
                 $root.WAAICommon.BotSessionMetadata.encode(m.sessionMetadata, w.uint32(50).fork()).ldelim();
             if (m.memuMetadata != null && Object.hasOwnProperty.call(m, "memuMetadata"))
@@ -10887,10 +10887,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 $root.WAAICommon.BotQuotaMetadata.encode(m.botQuotaMetadata, w.uint32(186).fork()).ldelim();
             if (m.botAgeCollectionMetadata != null && Object.hasOwnProperty.call(m, "botAgeCollectionMetadata"))
                 $root.WAAICommon.BotAgeCollectionMetadata.encode(m.botAgeCollectionMetadata, w.uint32(194).fork()).ldelim();
-            if (m.conversationStarterPromptID != null && Object.hasOwnProperty.call(m, "conversationStarterPromptID"))
-                w.uint32(202).string(m.conversationStarterPromptID);
-            if (m.botResponseID != null && Object.hasOwnProperty.call(m, "botResponseID"))
-                w.uint32(210).string(m.botResponseID);
+            if (m.conversationStarterPromptId != null && Object.hasOwnProperty.call(m, "conversationStarterPromptId"))
+                w.uint32(202).string(m.conversationStarterPromptId);
+            if (m.botResponseId != null && Object.hasOwnProperty.call(m, "botResponseId"))
+                w.uint32(210).string(m.botResponseId);
             if (m.verificationMetadata != null && Object.hasOwnProperty.call(m, "verificationMetadata"))
                 $root.WAAICommon.BotSignatureVerificationMetadata.encode(m.verificationMetadata, w.uint32(218).fork()).ldelim();
             if (m.unifiedResponseMutation != null && Object.hasOwnProperty.call(m, "unifiedResponseMutation"))
@@ -10940,7 +10940,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 2: {
-                        m.personaID = r.string();
+                        m.personaId = r.string();
                         break;
                     }
                 case 3: {
@@ -10952,7 +10952,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     }
                 case 5: {
-                        m.invokerJID = r.string();
+                        m.invokerJid = r.string();
                         break;
                     }
                 case 6: {
@@ -11032,11 +11032,11 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     }
                 case 25: {
-                        m.conversationStarterPromptID = r.string();
+                        m.conversationStarterPromptId = r.string();
                         break;
                     }
                 case 26: {
-                        m.botResponseID = r.string();
+                        m.botResponseId = r.string();
                         break;
                     }
                 case 27: {
@@ -11119,8 +11119,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAICommon.BotMetadata();
-            if (d.personaID != null) {
-                m.personaID = String(d.personaID);
+            if (d.personaId != null) {
+                m.personaId = String(d.personaId);
             }
             if (d.pluginMetadata != null) {
                 if (typeof d.pluginMetadata !== "object")
@@ -11132,8 +11132,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     throw TypeError(".WAAICommon.BotMetadata.suggestedPromptMetadata: object expected");
                 m.suggestedPromptMetadata = $root.WAAICommon.BotSuggestedPromptMetadata.fromObject(d.suggestedPromptMetadata, n + 1);
             }
-            if (d.invokerJID != null) {
-                m.invokerJID = String(d.invokerJID);
+            if (d.invokerJid != null) {
+                m.invokerJid = String(d.invokerJid);
             }
             if (d.sessionMetadata != null) {
                 if (typeof d.sessionMetadata !== "object")
@@ -11227,11 +11227,11 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     throw TypeError(".WAAICommon.BotMetadata.botAgeCollectionMetadata: object expected");
                 m.botAgeCollectionMetadata = $root.WAAICommon.BotAgeCollectionMetadata.fromObject(d.botAgeCollectionMetadata, n + 1);
             }
-            if (d.conversationStarterPromptID != null) {
-                m.conversationStarterPromptID = String(d.conversationStarterPromptID);
+            if (d.conversationStarterPromptId != null) {
+                m.conversationStarterPromptId = String(d.conversationStarterPromptId);
             }
-            if (d.botResponseID != null) {
-                m.botResponseID = String(d.botResponseID);
+            if (d.botResponseId != null) {
+                m.botResponseId = String(d.botResponseId);
             }
             if (d.verificationMetadata != null) {
                 if (typeof d.verificationMetadata !== "object")
@@ -11321,10 +11321,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.personaID != null && m.hasOwnProperty("personaID")) {
-                d.personaID = m.personaID;
+            if (m.personaId != null && m.hasOwnProperty("personaId")) {
+                d.personaId = m.personaId;
                 if (o.oneofs)
-                    d._personaID = "personaID";
+                    d._personaId = "personaId";
             }
             if (m.pluginMetadata != null && m.hasOwnProperty("pluginMetadata")) {
                 d.pluginMetadata = $root.WAAICommon.BotPluginMetadata.toObject(m.pluginMetadata, o);
@@ -11336,10 +11336,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (o.oneofs)
                     d._suggestedPromptMetadata = "suggestedPromptMetadata";
             }
-            if (m.invokerJID != null && m.hasOwnProperty("invokerJID")) {
-                d.invokerJID = m.invokerJID;
+            if (m.invokerJid != null && m.hasOwnProperty("invokerJid")) {
+                d.invokerJid = m.invokerJid;
                 if (o.oneofs)
-                    d._invokerJID = "invokerJID";
+                    d._invokerJid = "invokerJid";
             }
             if (m.sessionMetadata != null && m.hasOwnProperty("sessionMetadata")) {
                 d.sessionMetadata = $root.WAAICommon.BotSessionMetadata.toObject(m.sessionMetadata, o);
@@ -11436,15 +11436,15 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (o.oneofs)
                     d._botAgeCollectionMetadata = "botAgeCollectionMetadata";
             }
-            if (m.conversationStarterPromptID != null && m.hasOwnProperty("conversationStarterPromptID")) {
-                d.conversationStarterPromptID = m.conversationStarterPromptID;
+            if (m.conversationStarterPromptId != null && m.hasOwnProperty("conversationStarterPromptId")) {
+                d.conversationStarterPromptId = m.conversationStarterPromptId;
                 if (o.oneofs)
-                    d._conversationStarterPromptID = "conversationStarterPromptID";
+                    d._conversationStarterPromptId = "conversationStarterPromptId";
             }
-            if (m.botResponseID != null && m.hasOwnProperty("botResponseID")) {
-                d.botResponseID = m.botResponseID;
+            if (m.botResponseId != null && m.hasOwnProperty("botResponseId")) {
+                d.botResponseId = m.botResponseId;
                 if (o.oneofs)
-                    d._botResponseID = "botResponseID";
+                    d._botResponseId = "botResponseId";
             }
             if (m.verificationMetadata != null && m.hasOwnProperty("verificationMetadata")) {
                 d.verificationMetadata = $root.WAAICommon.BotSignatureVerificationMetadata.toObject(m.verificationMetadata, o);
@@ -11773,14 +11773,14 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BotRenderingConfigMetadata.prototype.bloksVersioningID = null;
+        BotRenderingConfigMetadata.prototype.bloksVersioningId = null;
         BotRenderingConfigMetadata.prototype.pixelDensity = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotRenderingConfigMetadata.prototype, "_bloksVersioningID", {
-            get: $util.oneOfGetter($oneOfFields = ["bloksVersioningID"]),
+        Object.defineProperty(BotRenderingConfigMetadata.prototype, "_bloksVersioningId", {
+            get: $util.oneOfGetter($oneOfFields = ["bloksVersioningId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -11797,8 +11797,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         BotRenderingConfigMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.bloksVersioningID != null && Object.hasOwnProperty.call(m, "bloksVersioningID"))
-                w.uint32(10).string(m.bloksVersioningID);
+            if (m.bloksVersioningId != null && Object.hasOwnProperty.call(m, "bloksVersioningId"))
+                w.uint32(10).string(m.bloksVersioningId);
             if (m.pixelDensity != null && Object.hasOwnProperty.call(m, "pixelDensity"))
                 w.uint32(17).double(m.pixelDensity);
             return w;
@@ -11818,7 +11818,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.bloksVersioningID = r.string();
+                        m.bloksVersioningId = r.string();
                         break;
                     }
                 case 2: {
@@ -11841,8 +11841,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAAICommon.BotRenderingConfigMetadata();
-            if (d.bloksVersioningID != null) {
-                m.bloksVersioningID = String(d.bloksVersioningID);
+            if (d.bloksVersioningId != null) {
+                m.bloksVersioningId = String(d.bloksVersioningId);
             }
             if (d.pixelDensity != null) {
                 m.pixelDensity = Number(d.pixelDensity);
@@ -11854,10 +11854,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.bloksVersioningID != null && m.hasOwnProperty("bloksVersioningID")) {
-                d.bloksVersioningID = m.bloksVersioningID;
+            if (m.bloksVersioningId != null && m.hasOwnProperty("bloksVersioningId")) {
+                d.bloksVersioningId = m.bloksVersioningId;
                 if (o.oneofs)
-                    d._bloksVersioningID = "bloksVersioningID";
+                    d._bloksVersioningId = "bloksVersioningId";
             }
             if (m.pixelDensity != null && m.hasOwnProperty("pixelDensity")) {
                 d.pixelDensity = o.json && !isFinite(m.pixelDensity) ? String(m.pixelDensity) : m.pixelDensity;
@@ -11987,7 +11987,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
         }
 
         ForwardedAIBotMessageInfo.prototype.botName = null;
-        ForwardedAIBotMessageInfo.prototype.botJID = null;
+        ForwardedAIBotMessageInfo.prototype.botJid = null;
         ForwardedAIBotMessageInfo.prototype.creatorName = null;
 
         let $oneOfFields;
@@ -11999,8 +11999,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ForwardedAIBotMessageInfo.prototype, "_botJID", {
-            get: $util.oneOfGetter($oneOfFields = ["botJID"]),
+        Object.defineProperty(ForwardedAIBotMessageInfo.prototype, "_botJid", {
+            get: $util.oneOfGetter($oneOfFields = ["botJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -12019,8 +12019,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 w = $Writer.create();
             if (m.botName != null && Object.hasOwnProperty.call(m, "botName"))
                 w.uint32(10).string(m.botName);
-            if (m.botJID != null && Object.hasOwnProperty.call(m, "botJID"))
-                w.uint32(18).string(m.botJID);
+            if (m.botJid != null && Object.hasOwnProperty.call(m, "botJid"))
+                w.uint32(18).string(m.botJid);
             if (m.creatorName != null && Object.hasOwnProperty.call(m, "creatorName"))
                 w.uint32(26).string(m.creatorName);
             return w;
@@ -12044,7 +12044,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     }
                 case 2: {
-                        m.botJID = r.string();
+                        m.botJid = r.string();
                         break;
                     }
                 case 3: {
@@ -12070,8 +12070,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (d.botName != null) {
                 m.botName = String(d.botName);
             }
-            if (d.botJID != null) {
-                m.botJID = String(d.botJID);
+            if (d.botJid != null) {
+                m.botJid = String(d.botJid);
             }
             if (d.creatorName != null) {
                 m.creatorName = String(d.creatorName);
@@ -12088,10 +12088,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (o.oneofs)
                     d._botName = "botName";
             }
-            if (m.botJID != null && m.hasOwnProperty("botJID")) {
-                d.botJID = m.botJID;
+            if (m.botJid != null && m.hasOwnProperty("botJid")) {
+                d.botJid = m.botJid;
                 if (o.oneofs)
-                    d._botJID = "botJID";
+                    d._botJid = "botJid";
             }
             if (m.creatorName != null && m.hasOwnProperty("creatorName")) {
                 d.creatorName = m.creatorName;
@@ -12538,7 +12538,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
         }
 
         AIRegenerateMetadata.prototype.messageKey = null;
-        AIRegenerateMetadata.prototype.responseTimestampMS = null;
+        AIRegenerateMetadata.prototype.responseTimestampMs = null;
 
         let $oneOfFields;
 
@@ -12549,8 +12549,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRegenerateMetadata.prototype, "_responseTimestampMS", {
-            get: $util.oneOfGetter($oneOfFields = ["responseTimestampMS"]),
+        Object.defineProperty(AIRegenerateMetadata.prototype, "_responseTimestampMs", {
+            get: $util.oneOfGetter($oneOfFields = ["responseTimestampMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -12563,8 +12563,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 w = $Writer.create();
             if (m.messageKey != null && Object.hasOwnProperty.call(m, "messageKey"))
                 WACommon.MessageKey.encode(m.messageKey, w.uint32(10).fork()).ldelim();
-            if (m.responseTimestampMS != null && Object.hasOwnProperty.call(m, "responseTimestampMS"))
-                w.uint32(16).int64(m.responseTimestampMS);
+            if (m.responseTimestampMs != null && Object.hasOwnProperty.call(m, "responseTimestampMs"))
+                w.uint32(16).int64(m.responseTimestampMs);
             return w;
         };
 
@@ -12586,7 +12586,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     }
                 case 2: {
-                        m.responseTimestampMS = r.int64();
+                        m.responseTimestampMs = r.int64();
                         break;
                     }
                 default:
@@ -12610,15 +12610,15 @@ export const WAAICommon = $root.WAAICommon = (() => {
                     throw TypeError(".WAAICommon.AIRegenerateMetadata.messageKey: object expected");
                 m.messageKey = WACommon.MessageKey.fromObject(d.messageKey, n + 1);
             }
-            if (d.responseTimestampMS != null) {
+            if (d.responseTimestampMs != null) {
                 if ($util.Long)
-                    (m.responseTimestampMS = $util.Long.fromValue(d.responseTimestampMS)).unsigned = false;
-                else if (typeof d.responseTimestampMS === "string")
-                    m.responseTimestampMS = parseInt(d.responseTimestampMS, 10);
-                else if (typeof d.responseTimestampMS === "number")
-                    m.responseTimestampMS = d.responseTimestampMS;
-                else if (typeof d.responseTimestampMS === "object")
-                    m.responseTimestampMS = new $util.LongBits(d.responseTimestampMS.low >>> 0, d.responseTimestampMS.high >>> 0).toNumber();
+                    (m.responseTimestampMs = $util.Long.fromValue(d.responseTimestampMs)).unsigned = false;
+                else if (typeof d.responseTimestampMs === "string")
+                    m.responseTimestampMs = parseInt(d.responseTimestampMs, 10);
+                else if (typeof d.responseTimestampMs === "number")
+                    m.responseTimestampMs = d.responseTimestampMs;
+                else if (typeof d.responseTimestampMs === "object")
+                    m.responseTimestampMs = new $util.LongBits(d.responseTimestampMs.low >>> 0, d.responseTimestampMs.high >>> 0).toNumber();
             }
             return m;
         };
@@ -12632,13 +12632,13 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (o.oneofs)
                     d._messageKey = "messageKey";
             }
-            if (m.responseTimestampMS != null && m.hasOwnProperty("responseTimestampMS")) {
-                if (typeof m.responseTimestampMS === "number")
-                    d.responseTimestampMS = o.longs === String ? String(m.responseTimestampMS) : m.responseTimestampMS;
+            if (m.responseTimestampMs != null && m.hasOwnProperty("responseTimestampMs")) {
+                if (typeof m.responseTimestampMs === "number")
+                    d.responseTimestampMs = o.longs === String ? String(m.responseTimestampMs) : m.responseTimestampMs;
                 else
-                    d.responseTimestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.responseTimestampMS) : o.longs === Number ? new $util.LongBits(m.responseTimestampMS.low >>> 0, m.responseTimestampMS.high >>> 0).toNumber() : m.responseTimestampMS;
+                    d.responseTimestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.responseTimestampMs) : o.longs === Number ? new $util.LongBits(m.responseTimestampMs.low >>> 0, m.responseTimestampMs.high >>> 0).toNumber() : m.responseTimestampMs;
                 if (o.oneofs)
-                    d._responseTimestampMS = "responseTimestampMS";
+                    d._responseTimestampMs = "responseTimestampMs";
             }
             return d;
         };
@@ -12667,7 +12667,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
         }
 
         SessionTransparencyMetadata.prototype.disclaimerText = null;
-        SessionTransparencyMetadata.prototype.hcaID = null;
+        SessionTransparencyMetadata.prototype.hcaId = null;
         SessionTransparencyMetadata.prototype.sessionTransparencyType = null;
 
         let $oneOfFields;
@@ -12679,8 +12679,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SessionTransparencyMetadata.prototype, "_hcaID", {
-            get: $util.oneOfGetter($oneOfFields = ["hcaID"]),
+        Object.defineProperty(SessionTransparencyMetadata.prototype, "_hcaId", {
+            get: $util.oneOfGetter($oneOfFields = ["hcaId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -12699,8 +12699,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 w = $Writer.create();
             if (m.disclaimerText != null && Object.hasOwnProperty.call(m, "disclaimerText"))
                 w.uint32(10).string(m.disclaimerText);
-            if (m.hcaID != null && Object.hasOwnProperty.call(m, "hcaID"))
-                w.uint32(18).string(m.hcaID);
+            if (m.hcaId != null && Object.hasOwnProperty.call(m, "hcaId"))
+                w.uint32(18).string(m.hcaId);
             if (m.sessionTransparencyType != null && Object.hasOwnProperty.call(m, "sessionTransparencyType"))
                 w.uint32(24).int32(m.sessionTransparencyType);
             return w;
@@ -12724,7 +12724,7 @@ export const WAAICommon = $root.WAAICommon = (() => {
                         break;
                     }
                 case 2: {
-                        m.hcaID = r.string();
+                        m.hcaId = r.string();
                         break;
                     }
                 case 3: {
@@ -12750,8 +12750,8 @@ export const WAAICommon = $root.WAAICommon = (() => {
             if (d.disclaimerText != null) {
                 m.disclaimerText = String(d.disclaimerText);
             }
-            if (d.hcaID != null) {
-                m.hcaID = String(d.hcaID);
+            if (d.hcaId != null) {
+                m.hcaId = String(d.hcaId);
             }
             switch (d.sessionTransparencyType) {
             default:
@@ -12781,10 +12781,10 @@ export const WAAICommon = $root.WAAICommon = (() => {
                 if (o.oneofs)
                     d._disclaimerText = "disclaimerText";
             }
-            if (m.hcaID != null && m.hasOwnProperty("hcaID")) {
-                d.hcaID = m.hcaID;
+            if (m.hcaId != null && m.hasOwnProperty("hcaId")) {
+                d.hcaId = m.hcaId;
                 if (o.oneofs)
-                    d._hcaID = "hcaID";
+                    d._hcaId = "hcaId";
             }
             if (m.sessionTransparencyType != null && m.hasOwnProperty("sessionTransparencyType")) {
                 d.sessionTransparencyType = o.enums === String ? $root.WAAICommon.SessionTransparencyType[m.sessionTransparencyType] === undefined ? m.sessionTransparencyType : $root.WAAICommon.SessionTransparencyType[m.sessionTransparencyType] : m.sessionTransparencyType;
@@ -13217,16 +13217,16 @@ export const WACommon = WACommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        MessageKey.prototype.remoteJID = null;
+        MessageKey.prototype.remoteJid = null;
         MessageKey.prototype.fromMe = null;
-        MessageKey.prototype.ID = null;
+        MessageKey.prototype.id = null;
         MessageKey.prototype.participant = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MessageKey.prototype, "_remoteJID", {
-            get: $util.oneOfGetter($oneOfFields = ["remoteJID"]),
+        Object.defineProperty(MessageKey.prototype, "_remoteJid", {
+            get: $util.oneOfGetter($oneOfFields = ["remoteJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -13237,8 +13237,8 @@ export const WACommon = WACommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MessageKey.prototype, "_ID", {
-            get: $util.oneOfGetter($oneOfFields = ["ID"]),
+        Object.defineProperty(MessageKey.prototype, "_id", {
+            get: $util.oneOfGetter($oneOfFields = ["id"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -13255,12 +13255,12 @@ export const WACommon = WACommon = (() => {
         MessageKey.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.remoteJID != null && Object.hasOwnProperty.call(m, "remoteJID"))
-                w.uint32(10).string(m.remoteJID);
+            if (m.remoteJid != null && Object.hasOwnProperty.call(m, "remoteJid"))
+                w.uint32(10).string(m.remoteJid);
             if (m.fromMe != null && Object.hasOwnProperty.call(m, "fromMe"))
                 w.uint32(16).bool(m.fromMe);
-            if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                w.uint32(26).string(m.ID);
+            if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                w.uint32(26).string(m.id);
             if (m.participant != null && Object.hasOwnProperty.call(m, "participant"))
                 w.uint32(34).string(m.participant);
             return w;
@@ -13280,7 +13280,7 @@ export const WACommon = WACommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.remoteJID = r.string();
+                        m.remoteJid = r.string();
                         break;
                     }
                 case 2: {
@@ -13288,7 +13288,7 @@ export const WACommon = WACommon = (() => {
                         break;
                     }
                 case 3: {
-                        m.ID = r.string();
+                        m.id = r.string();
                         break;
                     }
                 case 4: {
@@ -13311,14 +13311,14 @@ export const WACommon = WACommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WACommon.MessageKey();
-            if (d.remoteJID != null) {
-                m.remoteJID = String(d.remoteJID);
+            if (d.remoteJid != null) {
+                m.remoteJid = String(d.remoteJid);
             }
             if (d.fromMe != null) {
                 m.fromMe = Boolean(d.fromMe);
             }
-            if (d.ID != null) {
-                m.ID = String(d.ID);
+            if (d.id != null) {
+                m.id = String(d.id);
             }
             if (d.participant != null) {
                 m.participant = String(d.participant);
@@ -13330,20 +13330,20 @@ export const WACommon = WACommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.remoteJID != null && m.hasOwnProperty("remoteJID")) {
-                d.remoteJID = m.remoteJID;
+            if (m.remoteJid != null && m.hasOwnProperty("remoteJid")) {
+                d.remoteJid = m.remoteJid;
                 if (o.oneofs)
-                    d._remoteJID = "remoteJID";
+                    d._remoteJid = "remoteJid";
             }
             if (m.fromMe != null && m.hasOwnProperty("fromMe")) {
                 d.fromMe = m.fromMe;
                 if (o.oneofs)
                     d._fromMe = "fromMe";
             }
-            if (m.ID != null && m.hasOwnProperty("ID")) {
-                d.ID = m.ID;
+            if (m.id != null && m.hasOwnProperty("id")) {
+                d.id = m.id;
                 if (o.oneofs)
-                    d._ID = "ID";
+                    d._id = "id";
             }
             if (m.participant != null && m.hasOwnProperty("participant")) {
                 d.participant = m.participant;

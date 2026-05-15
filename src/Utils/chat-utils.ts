@@ -3,6 +3,7 @@ import { expandAppStateKeys } from 'whatsapp-rust-bridge'
 import { proto } from '../../WAProto/index.js'
 import type {
 	BaileysEventEmitter,
+	BufferedEventData,
 	Chat,
 	ChatModification,
 	ChatMutation,
@@ -333,7 +334,7 @@ export const decodeSyncdPatch = async (
 		}
 
 		const mainKey = mutationKeys(mainKeyObj.keyData!)
-		const mutationmacs = msg.mutations!.map(mutation => mutation.record!.value!.blob!.slice(-32))
+		const mutationmacs = msg.mutations!.map((mutation: proto.ISyncdMutation) => mutation.record!.value!.blob!.slice(-32))
 
 		const patchMac = generatePatchMac(
 			msg.snapshotMac!,
@@ -1020,7 +1021,7 @@ export const processSyncAction = (
 		msgRange: proto.SyncActionValue.ISyncActionMessageRange | null | undefined
 	): ChatUpdate['conditional'] {
 		return isInitialSync
-			? data => {
+			? (data: BufferedEventData) => {
 					const chat = data.historySets.chats[id] || data.chatUpserts[id]
 					if (chat) {
 						return msgRange ? isValidPatchBasedOnMessageRange(chat, msgRange) : true

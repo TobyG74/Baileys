@@ -28,8 +28,8 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
         SessionStructure.prototype.receiverChains = $util.emptyArray;
         SessionStructure.prototype.pendingKeyExchange = null;
         SessionStructure.prototype.pendingPreKey = null;
-        SessionStructure.prototype.remoteRegistrationID = null;
-        SessionStructure.prototype.localRegistrationID = null;
+        SessionStructure.prototype.remoteRegistrationId = null;
+        SessionStructure.prototype.localRegistrationId = null;
         SessionStructure.prototype.needsRefresh = null;
         SessionStructure.prototype.aliceBaseKey = null;
 
@@ -84,14 +84,14 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SessionStructure.prototype, "_remoteRegistrationID", {
-            get: $util.oneOfGetter($oneOfFields = ["remoteRegistrationID"]),
+        Object.defineProperty(SessionStructure.prototype, "_remoteRegistrationId", {
+            get: $util.oneOfGetter($oneOfFields = ["remoteRegistrationId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SessionStructure.prototype, "_localRegistrationID", {
-            get: $util.oneOfGetter($oneOfFields = ["localRegistrationID"]),
+        Object.defineProperty(SessionStructure.prototype, "_localRegistrationId", {
+            get: $util.oneOfGetter($oneOfFields = ["localRegistrationId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -134,10 +134,10 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                 $root.WASignalLocalStorageProtocol.SessionStructure.PendingKeyExchange.encode(m.pendingKeyExchange, w.uint32(66).fork()).ldelim();
             if (m.pendingPreKey != null && Object.hasOwnProperty.call(m, "pendingPreKey"))
                 $root.WASignalLocalStorageProtocol.SessionStructure.PendingPreKey.encode(m.pendingPreKey, w.uint32(74).fork()).ldelim();
-            if (m.remoteRegistrationID != null && Object.hasOwnProperty.call(m, "remoteRegistrationID"))
-                w.uint32(80).uint32(m.remoteRegistrationID);
-            if (m.localRegistrationID != null && Object.hasOwnProperty.call(m, "localRegistrationID"))
-                w.uint32(88).uint32(m.localRegistrationID);
+            if (m.remoteRegistrationId != null && Object.hasOwnProperty.call(m, "remoteRegistrationId"))
+                w.uint32(80).uint32(m.remoteRegistrationId);
+            if (m.localRegistrationId != null && Object.hasOwnProperty.call(m, "localRegistrationId"))
+                w.uint32(88).uint32(m.localRegistrationId);
             if (m.needsRefresh != null && Object.hasOwnProperty.call(m, "needsRefresh"))
                 w.uint32(96).bool(m.needsRefresh);
             if (m.aliceBaseKey != null && Object.hasOwnProperty.call(m, "aliceBaseKey"))
@@ -197,11 +197,11 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                         break;
                     }
                 case 10: {
-                        m.remoteRegistrationID = r.uint32();
+                        m.remoteRegistrationId = r.uint32();
                         break;
                     }
                 case 11: {
-                        m.localRegistrationID = r.uint32();
+                        m.localRegistrationId = r.uint32();
                         break;
                     }
                 case 12: {
@@ -277,11 +277,11 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                     throw TypeError(".WASignalLocalStorageProtocol.SessionStructure.pendingPreKey: object expected");
                 m.pendingPreKey = $root.WASignalLocalStorageProtocol.SessionStructure.PendingPreKey.fromObject(d.pendingPreKey, n + 1);
             }
-            if (d.remoteRegistrationID != null) {
-                m.remoteRegistrationID = d.remoteRegistrationID >>> 0;
+            if (d.remoteRegistrationId != null) {
+                m.remoteRegistrationId = d.remoteRegistrationId >>> 0;
             }
-            if (d.localRegistrationID != null) {
-                m.localRegistrationID = d.localRegistrationID >>> 0;
+            if (d.localRegistrationId != null) {
+                m.localRegistrationId = d.localRegistrationId >>> 0;
             }
             if (d.needsRefresh != null) {
                 m.needsRefresh = Boolean(d.needsRefresh);
@@ -348,15 +348,15 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                 if (o.oneofs)
                     d._pendingPreKey = "pendingPreKey";
             }
-            if (m.remoteRegistrationID != null && m.hasOwnProperty("remoteRegistrationID")) {
-                d.remoteRegistrationID = m.remoteRegistrationID;
+            if (m.remoteRegistrationId != null && m.hasOwnProperty("remoteRegistrationId")) {
+                d.remoteRegistrationId = m.remoteRegistrationId;
                 if (o.oneofs)
-                    d._remoteRegistrationID = "remoteRegistrationID";
+                    d._remoteRegistrationId = "remoteRegistrationId";
             }
-            if (m.localRegistrationID != null && m.hasOwnProperty("localRegistrationID")) {
-                d.localRegistrationID = m.localRegistrationID;
+            if (m.localRegistrationId != null && m.hasOwnProperty("localRegistrationId")) {
+                d.localRegistrationId = m.localRegistrationId;
                 if (o.oneofs)
-                    d._localRegistrationID = "localRegistrationID";
+                    d._localRegistrationId = "localRegistrationId";
             }
             if (m.needsRefresh != null && m.hasOwnProperty("needsRefresh")) {
                 d.needsRefresh = m.needsRefresh;
@@ -391,21 +391,21 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                             this[ks[i]] = p[ks[i]];
             }
 
-            PendingPreKey.prototype.preKeyID = null;
-            PendingPreKey.prototype.signedPreKeyID = null;
+            PendingPreKey.prototype.preKeyId = null;
+            PendingPreKey.prototype.signedPreKeyId = null;
             PendingPreKey.prototype.baseKey = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(PendingPreKey.prototype, "_preKeyID", {
-                get: $util.oneOfGetter($oneOfFields = ["preKeyID"]),
+            Object.defineProperty(PendingPreKey.prototype, "_preKeyId", {
+                get: $util.oneOfGetter($oneOfFields = ["preKeyId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(PendingPreKey.prototype, "_signedPreKeyID", {
-                get: $util.oneOfGetter($oneOfFields = ["signedPreKeyID"]),
+            Object.defineProperty(PendingPreKey.prototype, "_signedPreKeyId", {
+                get: $util.oneOfGetter($oneOfFields = ["signedPreKeyId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -422,12 +422,12 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
             PendingPreKey.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.preKeyID != null && Object.hasOwnProperty.call(m, "preKeyID"))
-                    w.uint32(8).uint32(m.preKeyID);
+                if (m.preKeyId != null && Object.hasOwnProperty.call(m, "preKeyId"))
+                    w.uint32(8).uint32(m.preKeyId);
                 if (m.baseKey != null && Object.hasOwnProperty.call(m, "baseKey"))
                     w.uint32(18).bytes(m.baseKey);
-                if (m.signedPreKeyID != null && Object.hasOwnProperty.call(m, "signedPreKeyID"))
-                    w.uint32(24).int32(m.signedPreKeyID);
+                if (m.signedPreKeyId != null && Object.hasOwnProperty.call(m, "signedPreKeyId"))
+                    w.uint32(24).int32(m.signedPreKeyId);
                 return w;
             };
 
@@ -445,11 +445,11 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.preKeyID = r.uint32();
+                            m.preKeyId = r.uint32();
                             break;
                         }
                     case 3: {
-                            m.signedPreKeyID = r.int32();
+                            m.signedPreKeyId = r.int32();
                             break;
                         }
                     case 2: {
@@ -472,11 +472,11 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WASignalLocalStorageProtocol.SessionStructure.PendingPreKey();
-                if (d.preKeyID != null) {
-                    m.preKeyID = d.preKeyID >>> 0;
+                if (d.preKeyId != null) {
+                    m.preKeyId = d.preKeyId >>> 0;
                 }
-                if (d.signedPreKeyID != null) {
-                    m.signedPreKeyID = d.signedPreKeyID | 0;
+                if (d.signedPreKeyId != null) {
+                    m.signedPreKeyId = d.signedPreKeyId | 0;
                 }
                 if (d.baseKey != null) {
                     if (typeof d.baseKey === "string")
@@ -491,20 +491,20 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.preKeyID != null && m.hasOwnProperty("preKeyID")) {
-                    d.preKeyID = m.preKeyID;
+                if (m.preKeyId != null && m.hasOwnProperty("preKeyId")) {
+                    d.preKeyId = m.preKeyId;
                     if (o.oneofs)
-                        d._preKeyID = "preKeyID";
+                        d._preKeyId = "preKeyId";
                 }
                 if (m.baseKey != null && m.hasOwnProperty("baseKey")) {
                     d.baseKey = o.bytes === String ? $util.base64.encode(m.baseKey, 0, m.baseKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.baseKey) : m.baseKey;
                     if (o.oneofs)
                         d._baseKey = "baseKey";
                 }
-                if (m.signedPreKeyID != null && m.hasOwnProperty("signedPreKeyID")) {
-                    d.signedPreKeyID = m.signedPreKeyID;
+                if (m.signedPreKeyId != null && m.hasOwnProperty("signedPreKeyId")) {
+                    d.signedPreKeyId = m.signedPreKeyId;
                     if (o.oneofs)
-                        d._signedPreKeyID = "signedPreKeyID";
+                        d._signedPreKeyId = "signedPreKeyId";
                 }
                 return d;
             };
@@ -949,7 +949,7 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                 MessageKey.prototype.index = null;
                 MessageKey.prototype.cipherKey = null;
                 MessageKey.prototype.macKey = null;
-                MessageKey.prototype.IV = null;
+                MessageKey.prototype.iv = null;
 
                 let $oneOfFields;
 
@@ -972,8 +972,8 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(MessageKey.prototype, "_IV", {
-                    get: $util.oneOfGetter($oneOfFields = ["IV"]),
+                Object.defineProperty(MessageKey.prototype, "_iv", {
+                    get: $util.oneOfGetter($oneOfFields = ["iv"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -990,8 +990,8 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                         w.uint32(18).bytes(m.cipherKey);
                     if (m.macKey != null && Object.hasOwnProperty.call(m, "macKey"))
                         w.uint32(26).bytes(m.macKey);
-                    if (m.IV != null && Object.hasOwnProperty.call(m, "IV"))
-                        w.uint32(34).bytes(m.IV);
+                    if (m.iv != null && Object.hasOwnProperty.call(m, "iv"))
+                        w.uint32(34).bytes(m.iv);
                     return w;
                 };
 
@@ -1021,7 +1021,7 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                                 break;
                             }
                         case 4: {
-                                m.IV = r.bytes();
+                                m.iv = r.bytes();
                                 break;
                             }
                         default:
@@ -1055,11 +1055,11 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                         else if (d.macKey.length >= 0)
                             m.macKey = d.macKey;
                     }
-                    if (d.IV != null) {
-                        if (typeof d.IV === "string")
-                            $util.base64.decode(d.IV, m.IV = $util.newBuffer($util.base64.length(d.IV)), 0);
-                        else if (d.IV.length >= 0)
-                            m.IV = d.IV;
+                    if (d.iv != null) {
+                        if (typeof d.iv === "string")
+                            $util.base64.decode(d.iv, m.iv = $util.newBuffer($util.base64.length(d.iv)), 0);
+                        else if (d.iv.length >= 0)
+                            m.iv = d.iv;
                     }
                     return m;
                 };
@@ -1083,10 +1083,10 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                         if (o.oneofs)
                             d._macKey = "macKey";
                     }
-                    if (m.IV != null && m.hasOwnProperty("IV")) {
-                        d.IV = o.bytes === String ? $util.base64.encode(m.IV, 0, m.IV.length) : o.bytes === Array ? Array.prototype.slice.call(m.IV) : m.IV;
+                    if (m.iv != null && m.hasOwnProperty("iv")) {
+                        d.iv = o.bytes === String ? $util.base64.encode(m.iv, 0, m.iv.length) : o.bytes === Array ? Array.prototype.slice.call(m.iv) : m.iv;
                         if (o.oneofs)
-                            d._IV = "IV";
+                            d._iv = "iv";
                     }
                     return d;
                 };
@@ -1369,15 +1369,15 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                         this[ks[i]] = p[ks[i]];
         }
 
-        PreKeyRecordStructure.prototype.ID = null;
+        PreKeyRecordStructure.prototype.id = null;
         PreKeyRecordStructure.prototype.publicKey = null;
         PreKeyRecordStructure.prototype.privateKey = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PreKeyRecordStructure.prototype, "_ID", {
-            get: $util.oneOfGetter($oneOfFields = ["ID"]),
+        Object.defineProperty(PreKeyRecordStructure.prototype, "_id", {
+            get: $util.oneOfGetter($oneOfFields = ["id"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1400,8 +1400,8 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
         PreKeyRecordStructure.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                w.uint32(8).uint32(m.ID);
+            if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                w.uint32(8).uint32(m.id);
             if (m.publicKey != null && Object.hasOwnProperty.call(m, "publicKey"))
                 w.uint32(18).bytes(m.publicKey);
             if (m.privateKey != null && Object.hasOwnProperty.call(m, "privateKey"))
@@ -1423,7 +1423,7 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.ID = r.uint32();
+                        m.id = r.uint32();
                         break;
                     }
                 case 2: {
@@ -1450,8 +1450,8 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASignalLocalStorageProtocol.PreKeyRecordStructure();
-            if (d.ID != null) {
-                m.ID = d.ID >>> 0;
+            if (d.id != null) {
+                m.id = d.id >>> 0;
             }
             if (d.publicKey != null) {
                 if (typeof d.publicKey === "string")
@@ -1472,10 +1472,10 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
             if (!o)
                 o = {};
             var d = {};
-            if (m.ID != null && m.hasOwnProperty("ID")) {
-                d.ID = m.ID;
+            if (m.id != null && m.hasOwnProperty("id")) {
+                d.id = m.id;
                 if (o.oneofs)
-                    d._ID = "ID";
+                    d._id = "id";
             }
             if (m.publicKey != null && m.hasOwnProperty("publicKey")) {
                 d.publicKey = o.bytes === String ? $util.base64.encode(m.publicKey, 0, m.publicKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.publicKey) : m.publicKey;
@@ -1513,7 +1513,7 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                         this[ks[i]] = p[ks[i]];
         }
 
-        SignedPreKeyRecordStructure.prototype.ID = null;
+        SignedPreKeyRecordStructure.prototype.id = null;
         SignedPreKeyRecordStructure.prototype.publicKey = null;
         SignedPreKeyRecordStructure.prototype.privateKey = null;
         SignedPreKeyRecordStructure.prototype.signature = null;
@@ -1522,8 +1522,8 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SignedPreKeyRecordStructure.prototype, "_ID", {
-            get: $util.oneOfGetter($oneOfFields = ["ID"]),
+        Object.defineProperty(SignedPreKeyRecordStructure.prototype, "_id", {
+            get: $util.oneOfGetter($oneOfFields = ["id"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1558,8 +1558,8 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
         SignedPreKeyRecordStructure.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                w.uint32(8).uint32(m.ID);
+            if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                w.uint32(8).uint32(m.id);
             if (m.publicKey != null && Object.hasOwnProperty.call(m, "publicKey"))
                 w.uint32(18).bytes(m.publicKey);
             if (m.privateKey != null && Object.hasOwnProperty.call(m, "privateKey"))
@@ -1585,7 +1585,7 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.ID = r.uint32();
+                        m.id = r.uint32();
                         break;
                     }
                 case 2: {
@@ -1620,8 +1620,8 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASignalLocalStorageProtocol.SignedPreKeyRecordStructure();
-            if (d.ID != null) {
-                m.ID = d.ID >>> 0;
+            if (d.id != null) {
+                m.id = d.id >>> 0;
             }
             if (d.publicKey != null) {
                 if (typeof d.publicKey === "string")
@@ -1658,10 +1658,10 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
             if (!o)
                 o = {};
             var d = {};
-            if (m.ID != null && m.hasOwnProperty("ID")) {
-                d.ID = m.ID;
+            if (m.id != null && m.hasOwnProperty("id")) {
+                d.id = m.id;
                 if (o.oneofs)
-                    d._ID = "ID";
+                    d._id = "id";
             }
             if (m.publicKey != null && m.hasOwnProperty("publicKey")) {
                 d.publicKey = o.bytes === String ? $util.base64.encode(m.publicKey, 0, m.publicKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.publicKey) : m.publicKey;
@@ -1836,7 +1836,7 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                         this[ks[i]] = p[ks[i]];
         }
 
-        SenderKeyStateStructure.prototype.senderKeyID = null;
+        SenderKeyStateStructure.prototype.senderKeyId = null;
         SenderKeyStateStructure.prototype.senderChainKey = null;
         SenderKeyStateStructure.prototype.senderSigningKey = null;
         SenderKeyStateStructure.prototype.senderMessageKeys = $util.emptyArray;
@@ -1844,8 +1844,8 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SenderKeyStateStructure.prototype, "_senderKeyID", {
-            get: $util.oneOfGetter($oneOfFields = ["senderKeyID"]),
+        Object.defineProperty(SenderKeyStateStructure.prototype, "_senderKeyId", {
+            get: $util.oneOfGetter($oneOfFields = ["senderKeyId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1868,8 +1868,8 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
         SenderKeyStateStructure.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.senderKeyID != null && Object.hasOwnProperty.call(m, "senderKeyID"))
-                w.uint32(8).uint32(m.senderKeyID);
+            if (m.senderKeyId != null && Object.hasOwnProperty.call(m, "senderKeyId"))
+                w.uint32(8).uint32(m.senderKeyId);
             if (m.senderChainKey != null && Object.hasOwnProperty.call(m, "senderChainKey"))
                 $root.WASignalLocalStorageProtocol.SenderKeyStateStructure.SenderChainKey.encode(m.senderChainKey, w.uint32(18).fork()).ldelim();
             if (m.senderSigningKey != null && Object.hasOwnProperty.call(m, "senderSigningKey"))
@@ -1895,7 +1895,7 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.senderKeyID = r.uint32();
+                        m.senderKeyId = r.uint32();
                         break;
                     }
                 case 2: {
@@ -1928,8 +1928,8 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WASignalLocalStorageProtocol.SenderKeyStateStructure();
-            if (d.senderKeyID != null) {
-                m.senderKeyID = d.senderKeyID >>> 0;
+            if (d.senderKeyId != null) {
+                m.senderKeyId = d.senderKeyId >>> 0;
             }
             if (d.senderChainKey != null) {
                 if (typeof d.senderChainKey !== "object")
@@ -1961,10 +1961,10 @@ export const WASignalLocalStorageProtocol = $root.WASignalLocalStorageProtocol =
             if (o.arrays || o.defaults) {
                 d.senderMessageKeys = [];
             }
-            if (m.senderKeyID != null && m.hasOwnProperty("senderKeyID")) {
-                d.senderKeyID = m.senderKeyID;
+            if (m.senderKeyId != null && m.hasOwnProperty("senderKeyId")) {
+                d.senderKeyId = m.senderKeyId;
                 if (o.oneofs)
-                    d._senderKeyID = "senderKeyID";
+                    d._senderKeyId = "senderKeyId";
             }
             if (m.senderChainKey != null && m.hasOwnProperty("senderChainKey")) {
                 d.senderChainKey = $root.WASignalLocalStorageProtocol.SenderKeyStateStructure.SenderChainKey.toObject(m.senderChainKey, o);

@@ -108,17 +108,9 @@ export const WAQuickPromotionSurfaces = $root.WAQuickPromotionSurfaces = (() => 
                             this[ks[i]] = p[ks[i]];
             }
 
-            FilterClause.prototype.clauseType = null;
+            FilterClause.prototype.clauseType = 1;
             FilterClause.prototype.clauses = $util.emptyArray;
             FilterClause.prototype.filters = $util.emptyArray;
-
-            let $oneOfFields;
-
-            // Virtual OneOf for proto3 optional field
-            Object.defineProperty(FilterClause.prototype, "_clauseType", {
-                get: $util.oneOfGetter($oneOfFields = ["clauseType"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
 
             FilterClause.create = function create(properties) {
                 return new FilterClause(properties);
@@ -236,10 +228,11 @@ export const WAQuickPromotionSurfaces = $root.WAQuickPromotionSurfaces = (() => 
                     d.clauses = [];
                     d.filters = [];
                 }
+                if (o.defaults) {
+                    d.clauseType = o.enums === String ? "AND" : 1;
+                }
                 if (m.clauseType != null && m.hasOwnProperty("clauseType")) {
                     d.clauseType = o.enums === String ? $root.WAQuickPromotionSurfaces.QP.ClauseType[m.clauseType] === undefined ? m.clauseType : $root.WAQuickPromotionSurfaces.QP.ClauseType[m.clauseType] : m.clauseType;
-                    if (o.oneofs)
-                        d._clauseType = "clauseType";
                 }
                 if (m.clauses && m.clauses.length) {
                     d.clauses = [];
@@ -280,28 +273,16 @@ export const WAQuickPromotionSurfaces = $root.WAQuickPromotionSurfaces = (() => 
                             this[ks[i]] = p[ks[i]];
             }
 
-            Filter.prototype.filterName = null;
+            Filter.prototype.filterName = "";
             Filter.prototype.parameters = $util.emptyArray;
             Filter.prototype.filterResult = null;
-            Filter.prototype.clientNotSupportedConfig = null;
+            Filter.prototype.clientNotSupportedConfig = 1;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(Filter.prototype, "_filterName", {
-                get: $util.oneOfGetter($oneOfFields = ["filterName"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            // Virtual OneOf for proto3 optional field
             Object.defineProperty(Filter.prototype, "_filterResult", {
                 get: $util.oneOfGetter($oneOfFields = ["filterResult"]),
-                set: $util.oneOfSetter($oneOfFields)
-            });
-
-            // Virtual OneOf for proto3 optional field
-            Object.defineProperty(Filter.prototype, "_clientNotSupportedConfig", {
-                get: $util.oneOfGetter($oneOfFields = ["clientNotSupportedConfig"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -431,10 +412,12 @@ export const WAQuickPromotionSurfaces = $root.WAQuickPromotionSurfaces = (() => 
                 if (o.arrays || o.defaults) {
                     d.parameters = [];
                 }
+                if (o.defaults) {
+                    d.filterName = "";
+                    d.clientNotSupportedConfig = o.enums === String ? "PASS_BY_DEFAULT" : 1;
+                }
                 if (m.filterName != null && m.hasOwnProperty("filterName")) {
                     d.filterName = m.filterName;
-                    if (o.oneofs)
-                        d._filterName = "filterName";
                 }
                 if (m.parameters && m.parameters.length) {
                     d.parameters = [];
@@ -449,8 +432,6 @@ export const WAQuickPromotionSurfaces = $root.WAQuickPromotionSurfaces = (() => 
                 }
                 if (m.clientNotSupportedConfig != null && m.hasOwnProperty("clientNotSupportedConfig")) {
                     d.clientNotSupportedConfig = o.enums === String ? $root.WAQuickPromotionSurfaces.QP.FilterClientNotSupportedConfig[m.clientNotSupportedConfig] === undefined ? m.clientNotSupportedConfig : $root.WAQuickPromotionSurfaces.QP.FilterClientNotSupportedConfig[m.clientNotSupportedConfig] : m.clientNotSupportedConfig;
-                    if (o.oneofs)
-                        d._clientNotSupportedConfig = "clientNotSupportedConfig";
                 }
                 return d;
             };

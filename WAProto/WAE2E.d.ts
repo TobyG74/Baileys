@@ -80,13 +80,13 @@ export namespace WAE2E {
     }
 
     interface IStickerPackMessage {
-        stickerPackID?: (string|null);
+        stickerPackId?: (string|null);
         name?: (string|null);
         publisher?: (string|null);
         stickers?: (WAE2E.StickerPackMessage.ISticker[]|null);
         fileLength?: (number|Long|null);
-        fileSHA256?: (Uint8Array|null);
-        fileEncSHA256?: (Uint8Array|null);
+        fileSha256?: (Uint8Array|null);
+        fileEncSha256?: (Uint8Array|null);
         mediaKey?: (Uint8Array|null);
         directPath?: (string|null);
         caption?: (string|null);
@@ -95,8 +95,8 @@ export namespace WAE2E {
         mediaKeyTimestamp?: (number|Long|null);
         trayIconFileName?: (string|null);
         thumbnailDirectPath?: (string|null);
-        thumbnailSHA256?: (Uint8Array|null);
-        thumbnailEncSHA256?: (Uint8Array|null);
+        thumbnailSha256?: (Uint8Array|null);
+        thumbnailEncSha256?: (Uint8Array|null);
         thumbnailHeight?: (number|null);
         thumbnailWidth?: (number|null);
         imageDataHash?: (string|null);
@@ -106,13 +106,13 @@ export namespace WAE2E {
 
     class StickerPackMessage implements IStickerPackMessage {
         constructor(p?: WAE2E.IStickerPackMessage);
-        public stickerPackID?: (string|null);
+        public stickerPackId?: (string|null);
         public name?: (string|null);
         public publisher?: (string|null);
         public stickers: WAE2E.StickerPackMessage.ISticker[];
         public fileLength?: (number|Long|null);
-        public fileSHA256?: (Uint8Array|null);
-        public fileEncSHA256?: (Uint8Array|null);
+        public fileSha256?: (Uint8Array|null);
+        public fileEncSha256?: (Uint8Array|null);
         public mediaKey?: (Uint8Array|null);
         public directPath?: (string|null);
         public caption?: (string|null);
@@ -121,8 +121,8 @@ export namespace WAE2E {
         public mediaKeyTimestamp?: (number|Long|null);
         public trayIconFileName?: (string|null);
         public thumbnailDirectPath?: (string|null);
-        public thumbnailSHA256?: (Uint8Array|null);
-        public thumbnailEncSHA256?: (Uint8Array|null);
+        public thumbnailSha256?: (Uint8Array|null);
+        public thumbnailEncSha256?: (Uint8Array|null);
         public thumbnailHeight?: (number|null);
         public thumbnailWidth?: (number|null);
         public imageDataHash?: (string|null);
@@ -198,7 +198,7 @@ export namespace WAE2E {
     }
 
     interface IBCallMessage {
-        sessionID?: (string|null);
+        sessionId?: (string|null);
         mediaType?: (WAE2E.BCallMessage.MediaType|null);
         masterKey?: (Uint8Array|null);
         caption?: (string|null);
@@ -206,7 +206,7 @@ export namespace WAE2E {
 
     class BCallMessage implements IBCallMessage {
         constructor(p?: WAE2E.IBCallMessage);
-        public sessionID?: (string|null);
+        public sessionId?: (string|null);
         public mediaType?: (WAE2E.BCallMessage.MediaType|null);
         public masterKey?: (Uint8Array|null);
         public caption?: (string|null);
@@ -272,13 +272,13 @@ export namespace WAE2E {
         }
 
         interface ICallParticipant {
-            JID?: (string|null);
+            jid?: (string|null);
             callOutcome?: (WAE2E.CallLogMessage.CallOutcome|null);
         }
 
         class CallParticipant implements ICallParticipant {
             constructor(p?: WAE2E.CallLogMessage.ICallParticipant);
-            public JID?: (string|null);
+            public jid?: (string|null);
             public callOutcome?: (WAE2E.CallLogMessage.CallOutcome|null);
             public static create(properties?: WAE2E.CallLogMessage.ICallParticipant): WAE2E.CallLogMessage.CallParticipant;
             public static encode(m: WAE2E.CallLogMessage.ICallParticipant, w?: $protobuf.Writer): $protobuf.Writer;
@@ -317,14 +317,14 @@ export namespace WAE2E {
     }
 
     interface IScheduledCallCreationMessage {
-        scheduledTimestampMS?: (number|Long|null);
+        scheduledTimestampMs?: (number|Long|null);
         callType?: (WAE2E.ScheduledCallCreationMessage.CallType|null);
         title?: (string|null);
     }
 
     class ScheduledCallCreationMessage implements IScheduledCallCreationMessage {
         constructor(p?: WAE2E.IScheduledCallCreationMessage);
-        public scheduledTimestampMS?: (number|Long|null);
+        public scheduledTimestampMs?: (number|Long|null);
         public callType?: (WAE2E.ScheduledCallCreationMessage.CallType|null);
         public title?: (string|null);
         public static create(properties?: WAE2E.IScheduledCallCreationMessage): WAE2E.ScheduledCallCreationMessage;
@@ -347,14 +347,14 @@ export namespace WAE2E {
 
     interface IEventResponseMessage {
         response?: (WAE2E.EventResponseMessage.EventResponseType|null);
-        timestampMS?: (number|Long|null);
+        timestampMs?: (number|Long|null);
         extraGuestCount?: (number|null);
     }
 
     class EventResponseMessage implements IEventResponseMessage {
         constructor(p?: WAE2E.IEventResponseMessage);
         public response?: (WAE2E.EventResponseMessage.EventResponseType|null);
-        public timestampMS?: (number|Long|null);
+        public timestampMs?: (number|Long|null);
         public extraGuestCount?: (number|null);
         public static create(properties?: WAE2E.IEventResponseMessage): WAE2E.EventResponseMessage;
         public static encode(m: WAE2E.IEventResponseMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -378,14 +378,14 @@ export namespace WAE2E {
     interface IPinInChatMessage {
         key?: (WACommon.IMessageKey|null);
         type?: (WAE2E.PinInChatMessage.Type|null);
-        senderTimestampMS?: (number|Long|null);
+        senderTimestampMs?: (number|Long|null);
     }
 
     class PinInChatMessage implements IPinInChatMessage {
         constructor(p?: WAE2E.IPinInChatMessage);
         public key?: (WACommon.IMessageKey|null);
         public type?: (WAE2E.PinInChatMessage.Type|null);
-        public senderTimestampMS?: (number|Long|null);
+        public senderTimestampMs?: (number|Long|null);
         public static create(properties?: WAE2E.IPinInChatMessage): WAE2E.PinInChatMessage;
         public static encode(m: WAE2E.IPinInChatMessage, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.PinInChatMessage;
@@ -434,7 +434,7 @@ export namespace WAE2E {
 
     interface IButtonsResponseMessage {
         selectedDisplayText?: (string|null);
-        selectedButtonID?: (string|null);
+        selectedButtonId?: (string|null);
         contextInfo?: (WAE2E.IContextInfo|null);
         type?: (WAE2E.ButtonsResponseMessage.Type|null);
     }
@@ -442,7 +442,7 @@ export namespace WAE2E {
     class ButtonsResponseMessage implements IButtonsResponseMessage {
         constructor(p?: WAE2E.IButtonsResponseMessage);
         public selectedDisplayText?: (string|null);
-        public selectedButtonID?: (string|null);
+        public selectedButtonId?: (string|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
         public type?: (WAE2E.ButtonsResponseMessage.Type|null);
         public response?: "selectedDisplayText";
@@ -511,7 +511,7 @@ export namespace WAE2E {
         }
 
         interface IButton {
-            buttonID?: (string|null);
+            buttonId?: (string|null);
             buttonText?: (WAE2E.ButtonsMessage.Button.IButtonText|null);
             type?: (WAE2E.ButtonsMessage.Button.Type|null);
             nativeFlowInfo?: (WAE2E.ButtonsMessage.Button.INativeFlowInfo|null);
@@ -519,7 +519,7 @@ export namespace WAE2E {
 
         class Button implements IButton {
             constructor(p?: WAE2E.ButtonsMessage.IButton);
-            public buttonID?: (string|null);
+            public buttonId?: (string|null);
             public buttonText?: (WAE2E.ButtonsMessage.Button.IButtonText|null);
             public type?: (WAE2E.ButtonsMessage.Button.Type|null);
             public nativeFlowInfo?: (WAE2E.ButtonsMessage.Button.INativeFlowInfo|null);
@@ -542,13 +542,13 @@ export namespace WAE2E {
 
             interface INativeFlowInfo {
                 name?: (string|null);
-                paramsJSON?: (string|null);
+                paramsJson?: (string|null);
             }
 
             class NativeFlowInfo implements INativeFlowInfo {
                 constructor(p?: WAE2E.ButtonsMessage.Button.INativeFlowInfo);
                 public name?: (string|null);
-                public paramsJSON?: (string|null);
+                public paramsJson?: (string|null);
                 public static create(properties?: WAE2E.ButtonsMessage.Button.INativeFlowInfo): WAE2E.ButtonsMessage.Button.NativeFlowInfo;
                 public static encode(m: WAE2E.ButtonsMessage.Button.INativeFlowInfo, w?: $protobuf.Writer): $protobuf.Writer;
                 public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.ButtonsMessage.Button.NativeFlowInfo;
@@ -578,17 +578,17 @@ export namespace WAE2E {
 
     interface IConditionalRevealMessage {
         encPayload?: (Uint8Array|null);
-        encIV?: (Uint8Array|null);
+        encIv?: (Uint8Array|null);
         conditionalRevealMessageType?: (WAE2E.ConditionalRevealMessage.ConditionalRevealMessageType|null);
-        revealKeyID?: (string|null);
+        revealKeyId?: (string|null);
     }
 
     class ConditionalRevealMessage implements IConditionalRevealMessage {
         constructor(p?: WAE2E.IConditionalRevealMessage);
         public encPayload?: (Uint8Array|null);
-        public encIV?: (Uint8Array|null);
+        public encIv?: (Uint8Array|null);
         public conditionalRevealMessageType?: (WAE2E.ConditionalRevealMessage.ConditionalRevealMessageType|null);
-        public revealKeyID?: (string|null);
+        public revealKeyId?: (string|null);
         public static create(properties?: WAE2E.IConditionalRevealMessage): WAE2E.ConditionalRevealMessage;
         public static encode(m: WAE2E.IConditionalRevealMessage, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.ConditionalRevealMessage;
@@ -609,18 +609,18 @@ export namespace WAE2E {
     interface ISecretEncryptedMessage {
         targetMessageKey?: (WACommon.IMessageKey|null);
         encPayload?: (Uint8Array|null);
-        encIV?: (Uint8Array|null);
+        encIv?: (Uint8Array|null);
         secretEncType?: (WAE2E.SecretEncryptedMessage.SecretEncType|null);
-        remoteKeyID?: (string|null);
+        remoteKeyId?: (string|null);
     }
 
     class SecretEncryptedMessage implements ISecretEncryptedMessage {
         constructor(p?: WAE2E.ISecretEncryptedMessage);
         public targetMessageKey?: (WACommon.IMessageKey|null);
         public encPayload?: (Uint8Array|null);
-        public encIV?: (Uint8Array|null);
+        public encIv?: (Uint8Array|null);
         public secretEncType?: (WAE2E.SecretEncryptedMessage.SecretEncType|null);
-        public remoteKeyID?: (string|null);
+        public remoteKeyId?: (string|null);
         public static create(properties?: WAE2E.ISecretEncryptedMessage): WAE2E.SecretEncryptedMessage;
         public static encode(m: WAE2E.ISecretEncryptedMessage, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.SecretEncryptedMessage;
@@ -643,11 +643,11 @@ export namespace WAE2E {
     }
 
     interface IGroupInviteMessage {
-        groupJID?: (string|null);
+        groupJid?: (string|null);
         inviteCode?: (string|null);
         inviteExpiration?: (number|Long|null);
         groupName?: (string|null);
-        JPEGThumbnail?: (Uint8Array|null);
+        jpegThumbnail?: (Uint8Array|null);
         caption?: (string|null);
         contextInfo?: (WAE2E.IContextInfo|null);
         groupType?: (WAE2E.GroupInviteMessage.GroupType|null);
@@ -655,11 +655,11 @@ export namespace WAE2E {
 
     class GroupInviteMessage implements IGroupInviteMessage {
         constructor(p?: WAE2E.IGroupInviteMessage);
-        public groupJID?: (string|null);
+        public groupJid?: (string|null);
         public inviteCode?: (string|null);
         public inviteExpiration?: (number|Long|null);
         public groupName?: (string|null);
-        public JPEGThumbnail?: (Uint8Array|null);
+        public jpegThumbnail?: (Uint8Array|null);
         public caption?: (string|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
         public groupType?: (WAE2E.GroupInviteMessage.GroupType|null);
@@ -731,14 +731,14 @@ export namespace WAE2E {
 
         interface INativeFlowResponseMessage {
             name?: (string|null);
-            paramsJSON?: (string|null);
+            paramsJson?: (string|null);
             version?: (number|null);
         }
 
         class NativeFlowResponseMessage implements INativeFlowResponseMessage {
             constructor(p?: WAE2E.InteractiveResponseMessage.INativeFlowResponseMessage);
             public name?: (string|null);
-            public paramsJSON?: (string|null);
+            public paramsJson?: (string|null);
             public version?: (number|null);
             public static create(properties?: WAE2E.InteractiveResponseMessage.INativeFlowResponseMessage): WAE2E.InteractiveResponseMessage.NativeFlowResponseMessage;
             public static encode(m: WAE2E.InteractiveResponseMessage.INativeFlowResponseMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -817,14 +817,14 @@ export namespace WAE2E {
         }
 
         interface IShopMessage {
-            ID?: (string|null);
+            id?: (string|null);
             surface?: (WAE2E.InteractiveMessage.ShopMessage.Surface|null);
             messageVersion?: (number|null);
         }
 
         class ShopMessage implements IShopMessage {
             constructor(p?: WAE2E.InteractiveMessage.IShopMessage);
-            public ID?: (string|null);
+            public id?: (string|null);
             public surface?: (WAE2E.InteractiveMessage.ShopMessage.Surface|null);
             public messageVersion?: (number|null);
             public static create(properties?: WAE2E.InteractiveMessage.IShopMessage): WAE2E.InteractiveMessage.ShopMessage;
@@ -848,14 +848,14 @@ export namespace WAE2E {
 
         interface INativeFlowMessage {
             buttons?: (WAE2E.InteractiveMessage.NativeFlowMessage.INativeFlowButton[]|null);
-            messageParamsJSON?: (string|null);
+            messageParamsJson?: (string|null);
             messageVersion?: (number|null);
         }
 
         class NativeFlowMessage implements INativeFlowMessage {
             constructor(p?: WAE2E.InteractiveMessage.INativeFlowMessage);
             public buttons: WAE2E.InteractiveMessage.NativeFlowMessage.INativeFlowButton[];
-            public messageParamsJSON?: (string|null);
+            public messageParamsJson?: (string|null);
             public messageVersion?: (number|null);
             public static create(properties?: WAE2E.InteractiveMessage.INativeFlowMessage): WAE2E.InteractiveMessage.NativeFlowMessage;
             public static encode(m: WAE2E.InteractiveMessage.INativeFlowMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -870,13 +870,13 @@ export namespace WAE2E {
 
             interface INativeFlowButton {
                 name?: (string|null);
-                buttonParamsJSON?: (string|null);
+                buttonParamsJson?: (string|null);
             }
 
             class NativeFlowButton implements INativeFlowButton {
                 constructor(p?: WAE2E.InteractiveMessage.NativeFlowMessage.INativeFlowButton);
                 public name?: (string|null);
-                public buttonParamsJSON?: (string|null);
+                public buttonParamsJson?: (string|null);
                 public static create(properties?: WAE2E.InteractiveMessage.NativeFlowMessage.INativeFlowButton): WAE2E.InteractiveMessage.NativeFlowMessage.NativeFlowButton;
                 public static encode(m: WAE2E.InteractiveMessage.NativeFlowMessage.INativeFlowButton, w?: $protobuf.Writer): $protobuf.Writer;
                 public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.InteractiveMessage.NativeFlowMessage.NativeFlowButton;
@@ -888,15 +888,15 @@ export namespace WAE2E {
         }
 
         interface ICollectionMessage {
-            bizJID?: (string|null);
-            ID?: (string|null);
+            bizJid?: (string|null);
+            id?: (string|null);
             messageVersion?: (number|null);
         }
 
         class CollectionMessage implements ICollectionMessage {
             constructor(p?: WAE2E.InteractiveMessage.ICollectionMessage);
-            public bizJID?: (string|null);
-            public ID?: (string|null);
+            public bizJid?: (string|null);
+            public id?: (string|null);
             public messageVersion?: (number|null);
             public static create(properties?: WAE2E.InteractiveMessage.ICollectionMessage): WAE2E.InteractiveMessage.CollectionMessage;
             public static encode(m: WAE2E.InteractiveMessage.ICollectionMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -967,7 +967,7 @@ export namespace WAE2E {
         interface IHeader {
             documentMessage?: (WAE2E.IDocumentMessage|null);
             imageMessage?: (WAE2E.IImageMessage|null);
-            JPEGThumbnail?: (Uint8Array|null);
+            jpegThumbnail?: (Uint8Array|null);
             videoMessage?: (WAE2E.IVideoMessage|null);
             locationMessage?: (WAE2E.ILocationMessage|null);
             productMessage?: (WAE2E.IProductMessage|null);
@@ -981,7 +981,7 @@ export namespace WAE2E {
             constructor(p?: WAE2E.InteractiveMessage.IHeader);
             public documentMessage?: (WAE2E.IDocumentMessage|null);
             public imageMessage?: (WAE2E.IImageMessage|null);
-            public JPEGThumbnail?: (Uint8Array|null);
+            public jpegThumbnail?: (Uint8Array|null);
             public videoMessage?: (WAE2E.IVideoMessage|null);
             public locationMessage?: (WAE2E.ILocationMessage|null);
             public productMessage?: (WAE2E.IProductMessage|null);
@@ -989,7 +989,7 @@ export namespace WAE2E {
             public subtitle?: (string|null);
             public hasMediaAttachment?: (boolean|null);
             public bloksWidget?: (WAE2E.InteractiveMessage.IBloksWidget|null);
-            public media?: ("documentMessage"|"imageMessage"|"JPEGThumbnail"|"videoMessage"|"locationMessage"|"productMessage");
+            public media?: ("documentMessage"|"imageMessage"|"jpegThumbnail"|"videoMessage"|"locationMessage"|"productMessage");
             public static create(properties?: WAE2E.InteractiveMessage.IHeader): WAE2E.InteractiveMessage.Header;
             public static encode(m: WAE2E.InteractiveMessage.IHeader, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.InteractiveMessage.Header;
@@ -1032,12 +1032,12 @@ export namespace WAE2E {
         }
 
         interface ISingleSelectReply {
-            selectedRowID?: (string|null);
+            selectedRowId?: (string|null);
         }
 
         class SingleSelectReply implements ISingleSelectReply {
             constructor(p?: WAE2E.ListResponseMessage.ISingleSelectReply);
-            public selectedRowID?: (string|null);
+            public selectedRowId?: (string|null);
             public static create(properties?: WAE2E.ListResponseMessage.ISingleSelectReply): WAE2E.ListResponseMessage.SingleSelectReply;
             public static encode(m: WAE2E.ListResponseMessage.ISingleSelectReply, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.ListResponseMessage.SingleSelectReply;
@@ -1089,14 +1089,14 @@ export namespace WAE2E {
         interface IProductListInfo {
             productSections?: (WAE2E.ListMessage.IProductSection[]|null);
             headerImage?: (WAE2E.ListMessage.IProductListHeaderImage|null);
-            businessOwnerJID?: (string|null);
+            businessOwnerJid?: (string|null);
         }
 
         class ProductListInfo implements IProductListInfo {
             constructor(p?: WAE2E.ListMessage.IProductListInfo);
             public productSections: WAE2E.ListMessage.IProductSection[];
             public headerImage?: (WAE2E.ListMessage.IProductListHeaderImage|null);
-            public businessOwnerJID?: (string|null);
+            public businessOwnerJid?: (string|null);
             public static create(properties?: WAE2E.ListMessage.IProductListInfo): WAE2E.ListMessage.ProductListInfo;
             public static encode(m: WAE2E.ListMessage.IProductListInfo, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.ListMessage.ProductListInfo;
@@ -1107,14 +1107,14 @@ export namespace WAE2E {
         }
 
         interface IProductListHeaderImage {
-            productID?: (string|null);
-            JPEGThumbnail?: (Uint8Array|null);
+            productId?: (string|null);
+            jpegThumbnail?: (Uint8Array|null);
         }
 
         class ProductListHeaderImage implements IProductListHeaderImage {
             constructor(p?: WAE2E.ListMessage.IProductListHeaderImage);
-            public productID?: (string|null);
-            public JPEGThumbnail?: (Uint8Array|null);
+            public productId?: (string|null);
+            public jpegThumbnail?: (Uint8Array|null);
             public static create(properties?: WAE2E.ListMessage.IProductListHeaderImage): WAE2E.ListMessage.ProductListHeaderImage;
             public static encode(m: WAE2E.ListMessage.IProductListHeaderImage, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.ListMessage.ProductListHeaderImage;
@@ -1143,12 +1143,12 @@ export namespace WAE2E {
         }
 
         interface IProduct {
-            productID?: (string|null);
+            productId?: (string|null);
         }
 
         class Product implements IProduct {
             constructor(p?: WAE2E.ListMessage.IProduct);
-            public productID?: (string|null);
+            public productId?: (string|null);
             public static create(properties?: WAE2E.ListMessage.IProduct): WAE2E.ListMessage.Product;
             public static encode(m: WAE2E.ListMessage.IProduct, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.ListMessage.Product;
@@ -1179,14 +1179,14 @@ export namespace WAE2E {
         interface IRow {
             title?: (string|null);
             description?: (string|null);
-            rowID?: (string|null);
+            rowId?: (string|null);
         }
 
         class Row implements IRow {
             constructor(p?: WAE2E.ListMessage.IRow);
             public title?: (string|null);
             public description?: (string|null);
-            public rowID?: (string|null);
+            public rowId?: (string|null);
             public static create(properties?: WAE2E.ListMessage.IRow): WAE2E.ListMessage.Row;
             public static encode(m: WAE2E.ListMessage.IRow, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.ListMessage.Row;
@@ -1198,39 +1198,39 @@ export namespace WAE2E {
     }
 
     interface IOrderMessage {
-        orderID?: (string|null);
+        orderId?: (string|null);
         thumbnail?: (Uint8Array|null);
         itemCount?: (number|null);
         status?: (WAE2E.OrderMessage.OrderStatus|null);
         surface?: (WAE2E.OrderMessage.OrderSurface|null);
         message?: (string|null);
         orderTitle?: (string|null);
-        sellerJID?: (string|null);
+        sellerJid?: (string|null);
         token?: (string|null);
         totalAmount1000?: (number|Long|null);
         totalCurrencyCode?: (string|null);
         contextInfo?: (WAE2E.IContextInfo|null);
         messageVersion?: (number|null);
-        orderRequestMessageID?: (WACommon.IMessageKey|null);
+        orderRequestMessageId?: (WACommon.IMessageKey|null);
         catalogType?: (string|null);
     }
 
     class OrderMessage implements IOrderMessage {
         constructor(p?: WAE2E.IOrderMessage);
-        public orderID?: (string|null);
+        public orderId?: (string|null);
         public thumbnail?: (Uint8Array|null);
         public itemCount?: (number|null);
         public status?: (WAE2E.OrderMessage.OrderStatus|null);
         public surface?: (WAE2E.OrderMessage.OrderSurface|null);
         public message?: (string|null);
         public orderTitle?: (string|null);
-        public sellerJID?: (string|null);
+        public sellerJid?: (string|null);
         public token?: (string|null);
         public totalAmount1000?: (number|Long|null);
         public totalCurrencyCode?: (string|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
         public messageVersion?: (number|null);
-        public orderRequestMessageID?: (WACommon.IMessageKey|null);
+        public orderRequestMessageId?: (WACommon.IMessageKey|null);
         public catalogType?: (string|null);
         public static create(properties?: WAE2E.IOrderMessage): WAE2E.OrderMessage;
         public static encode(m: WAE2E.IOrderMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1258,7 +1258,7 @@ export namespace WAE2E {
         type?: (WAE2E.StatusQuotedMessage.StatusQuotedMessageType|null);
         text?: (string|null);
         thumbnail?: (Uint8Array|null);
-        originalStatusID?: (WACommon.IMessageKey|null);
+        originalStatusId?: (WACommon.IMessageKey|null);
     }
 
     class StatusQuotedMessage implements IStatusQuotedMessage {
@@ -1266,7 +1266,7 @@ export namespace WAE2E {
         public type?: (WAE2E.StatusQuotedMessage.StatusQuotedMessageType|null);
         public text?: (string|null);
         public thumbnail?: (Uint8Array|null);
-        public originalStatusID?: (WACommon.IMessageKey|null);
+        public originalStatusId?: (WACommon.IMessageKey|null);
         public static create(properties?: WAE2E.IStatusQuotedMessage): WAE2E.StatusQuotedMessage;
         public static encode(m: WAE2E.IStatusQuotedMessage, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.StatusQuotedMessage;
@@ -1284,14 +1284,14 @@ export namespace WAE2E {
     }
 
     interface ISplitPaymentParticipant {
-        JID?: (string|null);
+        jid?: (string|null);
         amount?: (WAE2E.IMoney|null);
         status?: (WAE2E.SplitPaymentParticipant.SplitPaymentStatus|null);
     }
 
     class SplitPaymentParticipant implements ISplitPaymentParticipant {
         constructor(p?: WAE2E.ISplitPaymentParticipant);
-        public JID?: (string|null);
+        public jid?: (string|null);
         public amount?: (WAE2E.IMoney|null);
         public status?: (WAE2E.SplitPaymentParticipant.SplitPaymentStatus|null);
         public static create(properties?: WAE2E.ISplitPaymentParticipant): WAE2E.SplitPaymentParticipant;
@@ -1312,31 +1312,31 @@ export namespace WAE2E {
     }
 
     interface IP2PPaymentReminderNotification {
-        reminderID?: (string|null);
+        reminderId?: (string|null);
         amount?: (WAE2E.IMoney|null);
         frequency?: (WAE2E.P2PPaymentReminderNotification.ReminderFrequency|null);
         nextReminderTimestamp?: (number|Long|null);
         expiryTimestamp?: (number|Long|null);
         state?: (WAE2E.P2PPaymentReminderNotification.ReminderState|null);
         description?: (string|null);
-        creatorJID?: (string|null);
-        receiverJID?: (string|null);
-        upiID?: (string|null);
+        creatorJid?: (string|null);
+        receiverJid?: (string|null);
+        upiId?: (string|null);
         createdTimestamp?: (number|Long|null);
     }
 
     class P2PPaymentReminderNotification implements IP2PPaymentReminderNotification {
         constructor(p?: WAE2E.IP2PPaymentReminderNotification);
-        public reminderID?: (string|null);
+        public reminderId?: (string|null);
         public amount?: (WAE2E.IMoney|null);
         public frequency?: (WAE2E.P2PPaymentReminderNotification.ReminderFrequency|null);
         public nextReminderTimestamp?: (number|Long|null);
         public expiryTimestamp?: (number|Long|null);
         public state?: (WAE2E.P2PPaymentReminderNotification.ReminderState|null);
         public description?: (string|null);
-        public creatorJID?: (string|null);
-        public receiverJID?: (string|null);
-        public upiID?: (string|null);
+        public creatorJid?: (string|null);
+        public receiverJid?: (string|null);
+        public upiId?: (string|null);
         public createdTimestamp?: (number|Long|null);
         public static create(properties?: WAE2E.IP2PPaymentReminderNotification): WAE2E.P2PPaymentReminderNotification;
         public static encode(m: WAE2E.IP2PPaymentReminderNotification, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1371,7 +1371,7 @@ export namespace WAE2E {
         serviceType?: (WAE2E.PaymentInviteMessage.ServiceType|null);
         expiryTimestamp?: (number|Long|null);
         incentiveEligible?: (boolean|null);
-        referralID?: (string|null);
+        referralId?: (string|null);
         inviteType?: (WAE2E.PaymentInviteMessage.InviteType|null);
     }
 
@@ -1380,7 +1380,7 @@ export namespace WAE2E {
         public serviceType?: (WAE2E.PaymentInviteMessage.ServiceType|null);
         public expiryTimestamp?: (number|Long|null);
         public incentiveEligible?: (boolean|null);
-        public referralID?: (string|null);
+        public referralId?: (string|null);
         public inviteType?: (WAE2E.PaymentInviteMessage.InviteType|null);
         public static create(properties?: WAE2E.IPaymentInviteMessage): WAE2E.PaymentInviteMessage;
         public static encode(m: WAE2E.IPaymentInviteMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1569,14 +1569,14 @@ export namespace WAE2E {
 
     interface IPeerDataOperationRequestResponseMessage {
         peerDataOperationRequestType?: (WAE2E.PeerDataOperationRequestType|null);
-        stanzaID?: (string|null);
+        stanzaId?: (string|null);
         peerDataOperationResult?: (WAE2E.PeerDataOperationRequestResponseMessage.IPeerDataOperationResult[]|null);
     }
 
     class PeerDataOperationRequestResponseMessage implements IPeerDataOperationRequestResponseMessage {
         constructor(p?: WAE2E.IPeerDataOperationRequestResponseMessage);
         public peerDataOperationRequestType?: (WAE2E.PeerDataOperationRequestType|null);
-        public stanzaID?: (string|null);
+        public stanzaId?: (string|null);
         public peerDataOperationResult: WAE2E.PeerDataOperationRequestResponseMessage.IPeerDataOperationResult[];
         public static create(properties?: WAE2E.IPeerDataOperationRequestResponseMessage): WAE2E.PeerDataOperationRequestResponseMessage;
         public static encode(m: WAE2E.IPeerDataOperationRequestResponseMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1650,13 +1650,13 @@ export namespace WAE2E {
             }
 
             interface IFlowResponsesCsvBundle {
-                flowID?: (string|null);
-                galaxyFlowDownloadRequestID?: (string|null);
+                flowId?: (string|null);
+                galaxyFlowDownloadRequestId?: (string|null);
                 fileName?: (string|null);
                 mimetype?: (string|null);
-                fileSHA256?: (Uint8Array|null);
+                fileSha256?: (Uint8Array|null);
                 mediaKey?: (Uint8Array|null);
-                fileEncSHA256?: (Uint8Array|null);
+                fileEncSha256?: (Uint8Array|null);
                 directPath?: (string|null);
                 mediaKeyTimestamp?: (number|Long|null);
                 fileLength?: (number|Long|null);
@@ -1664,13 +1664,13 @@ export namespace WAE2E {
 
             class FlowResponsesCsvBundle implements IFlowResponsesCsvBundle {
                 constructor(p?: WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IFlowResponsesCsvBundle);
-                public flowID?: (string|null);
-                public galaxyFlowDownloadRequestID?: (string|null);
+                public flowId?: (string|null);
+                public galaxyFlowDownloadRequestId?: (string|null);
                 public fileName?: (string|null);
                 public mimetype?: (string|null);
-                public fileSHA256?: (Uint8Array|null);
+                public fileSha256?: (Uint8Array|null);
                 public mediaKey?: (Uint8Array|null);
-                public fileEncSHA256?: (Uint8Array|null);
+                public fileEncSha256?: (Uint8Array|null);
                 public directPath?: (string|null);
                 public mediaKeyTimestamp?: (number|Long|null);
                 public fileLength?: (number|Long|null);
@@ -1684,15 +1684,15 @@ export namespace WAE2E {
             }
 
             interface IBizBroadcastInsightsContactListResponse {
-                campaignID?: (string|null);
-                timestampMS?: (number|Long|null);
+                campaignId?: (string|null);
+                timestampMs?: (number|Long|null);
                 contacts?: (WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactState[]|null);
             }
 
             class BizBroadcastInsightsContactListResponse implements IBizBroadcastInsightsContactListResponse {
                 constructor(p?: WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactListResponse);
-                public campaignID?: (string|null);
-                public timestampMS?: (number|Long|null);
+                public campaignId?: (string|null);
+                public timestampMs?: (number|Long|null);
                 public contacts: WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactState[];
                 public static create(properties?: WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactListResponse): WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactListResponse;
                 public static encode(m: WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactListResponse, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1704,13 +1704,13 @@ export namespace WAE2E {
             }
 
             interface IBizBroadcastInsightsContactState {
-                contactJID?: (string|null);
+                contactJid?: (string|null);
                 state?: (WAE2E.InsightDeliveryState|null);
             }
 
             class BizBroadcastInsightsContactState implements IBizBroadcastInsightsContactState {
                 constructor(p?: WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactState);
-                public contactJID?: (string|null);
+                public contactJid?: (string|null);
                 public state?: (WAE2E.InsightDeliveryState|null);
                 public static create(properties?: WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactState): WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactState;
                 public static encode(m: WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IBizBroadcastInsightsContactState, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1724,7 +1724,7 @@ export namespace WAE2E {
             interface IHistorySyncChunkRetryResponse {
                 syncType?: (WAE2E.HistorySyncType|null);
                 chunkOrder?: (number|null);
-                requestID?: (string|null);
+                requestId?: (string|null);
                 responseCode?: (WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.HistorySyncChunkRetryResponseCode|null);
                 canRecover?: (boolean|null);
             }
@@ -1733,7 +1733,7 @@ export namespace WAE2E {
                 constructor(p?: WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IHistorySyncChunkRetryResponse);
                 public syncType?: (WAE2E.HistorySyncType|null);
                 public chunkOrder?: (number|null);
-                public requestID?: (string|null);
+                public requestId?: (string|null);
                 public responseCode?: (WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.HistorySyncChunkRetryResponseCode|null);
                 public canRecover?: (boolean|null);
                 public static create(properties?: WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.IHistorySyncChunkRetryResponse): WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.HistorySyncChunkRetryResponse;
@@ -1852,7 +1852,7 @@ export namespace WAE2E {
             }
 
             interface ILinkPreviewResponse {
-                URL?: (string|null);
+                url?: (string|null);
                 title?: (string|null);
                 description?: (string|null);
                 thumbData?: (Uint8Array|null);
@@ -1864,7 +1864,7 @@ export namespace WAE2E {
 
             class LinkPreviewResponse implements ILinkPreviewResponse {
                 constructor(p?: WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.ILinkPreviewResponse);
-                public URL?: (string|null);
+                public url?: (string|null);
                 public title?: (string|null);
                 public description?: (string|null);
                 public thumbData?: (Uint8Array|null);
@@ -1912,7 +1912,7 @@ export namespace WAE2E {
                     thumbHash?: (string|null);
                     encThumbHash?: (string|null);
                     mediaKey?: (Uint8Array|null);
-                    mediaKeyTimestampMS?: (number|Long|null);
+                    mediaKeyTimestampMs?: (number|Long|null);
                     thumbWidth?: (number|null);
                     thumbHeight?: (number|null);
                 }
@@ -1923,7 +1923,7 @@ export namespace WAE2E {
                     public thumbHash?: (string|null);
                     public encThumbHash?: (string|null);
                     public mediaKey?: (Uint8Array|null);
-                    public mediaKeyTimestampMS?: (number|Long|null);
+                    public mediaKeyTimestampMs?: (number|Long|null);
                     public thumbWidth?: (number|null);
                     public thumbHeight?: (number|null);
                     public static create(properties?: WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.LinkPreviewResponse.ILinkPreviewHighQualityThumbnail): WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.LinkPreviewResponse.LinkPreviewHighQualityThumbnail;
@@ -1941,7 +1941,7 @@ export namespace WAE2E {
     interface IPeerDataOperationRequestMessage {
         peerDataOperationRequestType?: (WAE2E.PeerDataOperationRequestType|null);
         requestStickerReupload?: (WAE2E.PeerDataOperationRequestMessage.IRequestStickerReupload[]|null);
-        requestURLPreview?: (WAE2E.PeerDataOperationRequestMessage.IRequestUrlPreview[]|null);
+        requestUrlPreview?: (WAE2E.PeerDataOperationRequestMessage.IRequestUrlPreview[]|null);
         historySyncOnDemandRequest?: (WAE2E.PeerDataOperationRequestMessage.IHistorySyncOnDemandRequest|null);
         placeholderMessageResendRequest?: (WAE2E.PeerDataOperationRequestMessage.IPlaceholderMessageResendRequest[]|null);
         fullHistorySyncOnDemandRequest?: (WAE2E.PeerDataOperationRequestMessage.IFullHistorySyncOnDemandRequest|null);
@@ -1957,7 +1957,7 @@ export namespace WAE2E {
         constructor(p?: WAE2E.IPeerDataOperationRequestMessage);
         public peerDataOperationRequestType?: (WAE2E.PeerDataOperationRequestType|null);
         public requestStickerReupload: WAE2E.PeerDataOperationRequestMessage.IRequestStickerReupload[];
-        public requestURLPreview: WAE2E.PeerDataOperationRequestMessage.IRequestUrlPreview[];
+        public requestUrlPreview: WAE2E.PeerDataOperationRequestMessage.IRequestUrlPreview[];
         public historySyncOnDemandRequest?: (WAE2E.PeerDataOperationRequestMessage.IHistorySyncOnDemandRequest|null);
         public placeholderMessageResendRequest: WAE2E.PeerDataOperationRequestMessage.IPlaceholderMessageResendRequest[];
         public fullHistorySyncOnDemandRequest?: (WAE2E.PeerDataOperationRequestMessage.IFullHistorySyncOnDemandRequest|null);
@@ -1980,19 +1980,19 @@ export namespace WAE2E {
 
         interface IGalaxyFlowAction {
             type?: (WAE2E.PeerDataOperationRequestMessage.GalaxyFlowAction.GalaxyFlowActionType|null);
-            flowID?: (string|null);
-            stanzaID?: (string|null);
-            galaxyFlowDownloadRequestID?: (string|null);
-            agmID?: (string|null);
+            flowId?: (string|null);
+            stanzaId?: (string|null);
+            galaxyFlowDownloadRequestId?: (string|null);
+            agmId?: (string|null);
         }
 
         class GalaxyFlowAction implements IGalaxyFlowAction {
             constructor(p?: WAE2E.PeerDataOperationRequestMessage.IGalaxyFlowAction);
             public type?: (WAE2E.PeerDataOperationRequestMessage.GalaxyFlowAction.GalaxyFlowActionType|null);
-            public flowID?: (string|null);
-            public stanzaID?: (string|null);
-            public galaxyFlowDownloadRequestID?: (string|null);
-            public agmID?: (string|null);
+            public flowId?: (string|null);
+            public stanzaId?: (string|null);
+            public galaxyFlowDownloadRequestId?: (string|null);
+            public agmId?: (string|null);
             public static create(properties?: WAE2E.PeerDataOperationRequestMessage.IGalaxyFlowAction): WAE2E.PeerDataOperationRequestMessage.GalaxyFlowAction;
             public static encode(m: WAE2E.PeerDataOperationRequestMessage.IGalaxyFlowAction, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.PeerDataOperationRequestMessage.GalaxyFlowAction;
@@ -2011,12 +2011,12 @@ export namespace WAE2E {
         }
 
         interface IBizBroadcastInsightsRefreshRequest {
-            campaignID?: (string|null);
+            campaignId?: (string|null);
         }
 
         class BizBroadcastInsightsRefreshRequest implements IBizBroadcastInsightsRefreshRequest {
             constructor(p?: WAE2E.PeerDataOperationRequestMessage.IBizBroadcastInsightsRefreshRequest);
-            public campaignID?: (string|null);
+            public campaignId?: (string|null);
             public static create(properties?: WAE2E.PeerDataOperationRequestMessage.IBizBroadcastInsightsRefreshRequest): WAE2E.PeerDataOperationRequestMessage.BizBroadcastInsightsRefreshRequest;
             public static encode(m: WAE2E.PeerDataOperationRequestMessage.IBizBroadcastInsightsRefreshRequest, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.PeerDataOperationRequestMessage.BizBroadcastInsightsRefreshRequest;
@@ -2027,12 +2027,12 @@ export namespace WAE2E {
         }
 
         interface IBizBroadcastInsightsContactListRequest {
-            campaignID?: (string|null);
+            campaignId?: (string|null);
         }
 
         class BizBroadcastInsightsContactListRequest implements IBizBroadcastInsightsContactListRequest {
             constructor(p?: WAE2E.PeerDataOperationRequestMessage.IBizBroadcastInsightsContactListRequest);
-            public campaignID?: (string|null);
+            public campaignId?: (string|null);
             public static create(properties?: WAE2E.PeerDataOperationRequestMessage.IBizBroadcastInsightsContactListRequest): WAE2E.PeerDataOperationRequestMessage.BizBroadcastInsightsContactListRequest;
             public static encode(m: WAE2E.PeerDataOperationRequestMessage.IBizBroadcastInsightsContactListRequest, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.PeerDataOperationRequestMessage.BizBroadcastInsightsContactListRequest;
@@ -2043,12 +2043,12 @@ export namespace WAE2E {
         }
 
         interface ICompanionCanonicalUserNonceFetchRequest {
-            registrationTraceID?: (string|null);
+            registrationTraceId?: (string|null);
         }
 
         class CompanionCanonicalUserNonceFetchRequest implements ICompanionCanonicalUserNonceFetchRequest {
             constructor(p?: WAE2E.PeerDataOperationRequestMessage.ICompanionCanonicalUserNonceFetchRequest);
-            public registrationTraceID?: (string|null);
+            public registrationTraceId?: (string|null);
             public static create(properties?: WAE2E.PeerDataOperationRequestMessage.ICompanionCanonicalUserNonceFetchRequest): WAE2E.PeerDataOperationRequestMessage.CompanionCanonicalUserNonceFetchRequest;
             public static encode(m: WAE2E.PeerDataOperationRequestMessage.ICompanionCanonicalUserNonceFetchRequest, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.PeerDataOperationRequestMessage.CompanionCanonicalUserNonceFetchRequest;
@@ -2061,7 +2061,7 @@ export namespace WAE2E {
         interface IHistorySyncChunkRetryRequest {
             syncType?: (WAE2E.HistorySyncType|null);
             chunkOrder?: (number|null);
-            chunkNotificationID?: (string|null);
+            chunkNotificationId?: (string|null);
             regenerateChunk?: (boolean|null);
         }
 
@@ -2069,7 +2069,7 @@ export namespace WAE2E {
             constructor(p?: WAE2E.PeerDataOperationRequestMessage.IHistorySyncChunkRetryRequest);
             public syncType?: (WAE2E.HistorySyncType|null);
             public chunkOrder?: (number|null);
-            public chunkNotificationID?: (string|null);
+            public chunkNotificationId?: (string|null);
             public regenerateChunk?: (boolean|null);
             public static create(properties?: WAE2E.PeerDataOperationRequestMessage.IHistorySyncChunkRetryRequest): WAE2E.PeerDataOperationRequestMessage.HistorySyncChunkRetryRequest;
             public static encode(m: WAE2E.PeerDataOperationRequestMessage.IHistorySyncChunkRetryRequest, w?: $protobuf.Writer): $protobuf.Writer;
@@ -2135,22 +2135,22 @@ export namespace WAE2E {
         }
 
         interface IHistorySyncOnDemandRequest {
-            chatJID?: (string|null);
-            oldestMsgID?: (string|null);
+            chatJid?: (string|null);
+            oldestMsgId?: (string|null);
             oldestMsgFromMe?: (boolean|null);
             onDemandMsgCount?: (number|null);
-            oldestMsgTimestampMS?: (number|Long|null);
+            oldestMsgTimestampMs?: (number|Long|null);
             accountLid?: (string|null);
             supportInlineResponse?: (boolean|null);
         }
 
         class HistorySyncOnDemandRequest implements IHistorySyncOnDemandRequest {
             constructor(p?: WAE2E.PeerDataOperationRequestMessage.IHistorySyncOnDemandRequest);
-            public chatJID?: (string|null);
-            public oldestMsgID?: (string|null);
+            public chatJid?: (string|null);
+            public oldestMsgId?: (string|null);
             public oldestMsgFromMe?: (boolean|null);
             public onDemandMsgCount?: (number|null);
-            public oldestMsgTimestampMS?: (number|Long|null);
+            public oldestMsgTimestampMs?: (number|Long|null);
             public accountLid?: (string|null);
             public supportInlineResponse?: (boolean|null);
             public static create(properties?: WAE2E.PeerDataOperationRequestMessage.IHistorySyncOnDemandRequest): WAE2E.PeerDataOperationRequestMessage.HistorySyncOnDemandRequest;
@@ -2163,13 +2163,13 @@ export namespace WAE2E {
         }
 
         interface IRequestUrlPreview {
-            URL?: (string|null);
+            url?: (string|null);
             includeHqThumbnail?: (boolean|null);
         }
 
         class RequestUrlPreview implements IRequestUrlPreview {
             constructor(p?: WAE2E.PeerDataOperationRequestMessage.IRequestUrlPreview);
-            public URL?: (string|null);
+            public url?: (string|null);
             public includeHqThumbnail?: (boolean|null);
             public static create(properties?: WAE2E.PeerDataOperationRequestMessage.IRequestUrlPreview): WAE2E.PeerDataOperationRequestMessage.RequestUrlPreview;
             public static encode(m: WAE2E.PeerDataOperationRequestMessage.IRequestUrlPreview, w?: $protobuf.Writer): $protobuf.Writer;
@@ -2181,12 +2181,12 @@ export namespace WAE2E {
         }
 
         interface IRequestStickerReupload {
-            fileSHA256?: (string|null);
+            fileSha256?: (string|null);
         }
 
         class RequestStickerReupload implements IRequestStickerReupload {
             constructor(p?: WAE2E.PeerDataOperationRequestMessage.IRequestStickerReupload);
-            public fileSHA256?: (string|null);
+            public fileSha256?: (string|null);
             public static create(properties?: WAE2E.PeerDataOperationRequestMessage.IRequestStickerReupload): WAE2E.PeerDataOperationRequestMessage.RequestStickerReupload;
             public static encode(m: WAE2E.PeerDataOperationRequestMessage.IRequestStickerReupload, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.PeerDataOperationRequestMessage.RequestStickerReupload;
@@ -2242,11 +2242,11 @@ export namespace WAE2E {
         appStateFatalExceptionNotification?: (WAE2E.IAppStateFatalExceptionNotification|null);
         disappearingMode?: (WAE2E.IDisappearingMode|null);
         editedMessage?: (WAE2E.IMessage|null);
-        timestampMS?: (number|Long|null);
+        timestampMs?: (number|Long|null);
         peerDataOperationRequestMessage?: (WAE2E.IPeerDataOperationRequestMessage|null);
         peerDataOperationRequestResponseMessage?: (WAE2E.IPeerDataOperationRequestResponseMessage|null);
         botFeedbackMessage?: (WAAICommon.IBotFeedbackMessage|null);
-        invokerJID?: (string|null);
+        invokerJid?: (string|null);
         requestWelcomeMessageMetadata?: (WAE2E.IRequestWelcomeMessageMetadata|null);
         mediaNotifyMessage?: (WAE2E.IMediaNotifyMessage|null);
         cloudApiThreadControlNotification?: (WAE2E.ICloudAPIThreadControlNotification|null);
@@ -2273,11 +2273,11 @@ export namespace WAE2E {
         public appStateFatalExceptionNotification?: (WAE2E.IAppStateFatalExceptionNotification|null);
         public disappearingMode?: (WAE2E.IDisappearingMode|null);
         public editedMessage?: (WAE2E.IMessage|null);
-        public timestampMS?: (number|Long|null);
+        public timestampMs?: (number|Long|null);
         public peerDataOperationRequestMessage?: (WAE2E.IPeerDataOperationRequestMessage|null);
         public peerDataOperationRequestResponseMessage?: (WAE2E.IPeerDataOperationRequestResponseMessage|null);
         public botFeedbackMessage?: (WAAICommon.IBotFeedbackMessage|null);
-        public invokerJID?: (string|null);
+        public invokerJid?: (string|null);
         public requestWelcomeMessageMetadata?: (WAE2E.IRequestWelcomeMessageMetadata|null);
         public mediaNotifyMessage?: (WAE2E.IMediaNotifyMessage|null);
         public cloudApiThreadControlNotification?: (WAE2E.ICloudAPIThreadControlNotification|null);
@@ -2335,7 +2335,7 @@ export namespace WAE2E {
 
     interface ICloudAPIThreadControlNotification {
         status?: (WAE2E.CloudAPIThreadControlNotification.CloudAPIThreadControl|null);
-        senderNotificationTimestampMS?: (number|Long|null);
+        senderNotificationTimestampMs?: (number|Long|null);
         consumerLid?: (string|null);
         consumerPhoneNumber?: (string|null);
         notificationContent?: (WAE2E.CloudAPIThreadControlNotification.ICloudAPIThreadControlNotificationContent|null);
@@ -2345,7 +2345,7 @@ export namespace WAE2E {
     class CloudAPIThreadControlNotification implements ICloudAPIThreadControlNotification {
         constructor(p?: WAE2E.ICloudAPIThreadControlNotification);
         public status?: (WAE2E.CloudAPIThreadControlNotification.CloudAPIThreadControl|null);
-        public senderNotificationTimestampMS?: (number|Long|null);
+        public senderNotificationTimestampMs?: (number|Long|null);
         public consumerLid?: (string|null);
         public consumerPhoneNumber?: (string|null);
         public notificationContent?: (WAE2E.CloudAPIThreadControlNotification.ICloudAPIThreadControlNotificationContent|null);
@@ -2370,13 +2370,13 @@ export namespace WAE2E {
 
         interface ICloudAPIThreadControlNotificationContent {
             handoffNotificationText?: (string|null);
-            extraJSON?: (string|null);
+            extraJson?: (string|null);
         }
 
         class CloudAPIThreadControlNotificationContent implements ICloudAPIThreadControlNotificationContent {
             constructor(p?: WAE2E.CloudAPIThreadControlNotification.ICloudAPIThreadControlNotificationContent);
             public handoffNotificationText?: (string|null);
-            public extraJSON?: (string|null);
+            public extraJson?: (string|null);
             public static create(properties?: WAE2E.CloudAPIThreadControlNotification.ICloudAPIThreadControlNotificationContent): WAE2E.CloudAPIThreadControlNotification.CloudAPIThreadControlNotificationContent;
             public static encode(m: WAE2E.CloudAPIThreadControlNotification.ICloudAPIThreadControlNotificationContent, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.CloudAPIThreadControlNotification.CloudAPIThreadControlNotificationContent;
@@ -2388,9 +2388,9 @@ export namespace WAE2E {
     }
 
     interface IVideoMessage {
-        URL?: (string|null);
+        url?: (string|null);
         mimetype?: (string|null);
-        fileSHA256?: (Uint8Array|null);
+        fileSha256?: (Uint8Array|null);
         fileLength?: (number|Long|null);
         seconds?: (number|null);
         mediaKey?: (Uint8Array|null);
@@ -2398,33 +2398,33 @@ export namespace WAE2E {
         gifPlayback?: (boolean|null);
         height?: (number|null);
         width?: (number|null);
-        fileEncSHA256?: (Uint8Array|null);
+        fileEncSha256?: (Uint8Array|null);
         interactiveAnnotations?: (WAE2E.IInteractiveAnnotation[]|null);
         directPath?: (string|null);
         mediaKeyTimestamp?: (number|Long|null);
-        JPEGThumbnail?: (Uint8Array|null);
+        jpegThumbnail?: (Uint8Array|null);
         contextInfo?: (WAE2E.IContextInfo|null);
         streamingSidecar?: (Uint8Array|null);
         gifAttribution?: (WAE2E.VideoMessage.Attribution|null);
         viewOnce?: (boolean|null);
         thumbnailDirectPath?: (string|null);
-        thumbnailSHA256?: (Uint8Array|null);
-        thumbnailEncSHA256?: (Uint8Array|null);
-        staticURL?: (string|null);
+        thumbnailSha256?: (Uint8Array|null);
+        thumbnailEncSha256?: (Uint8Array|null);
+        staticUrl?: (string|null);
         annotations?: (WAE2E.IInteractiveAnnotation[]|null);
         accessibilityLabel?: (string|null);
         processedVideos?: (WAE2E.IProcessedVideo[]|null);
         externalShareFullVideoDurationInSeconds?: (number|null);
-        motionPhotoPresentationOffsetMS?: (number|Long|null);
-        metadataURL?: (string|null);
+        motionPhotoPresentationOffsetMs?: (number|Long|null);
+        metadataUrl?: (string|null);
         videoSourceType?: (WAE2E.VideoMessage.VideoSourceType|null);
     }
 
     class VideoMessage implements IVideoMessage {
         constructor(p?: WAE2E.IVideoMessage);
-        public URL?: (string|null);
+        public url?: (string|null);
         public mimetype?: (string|null);
-        public fileSHA256?: (Uint8Array|null);
+        public fileSha256?: (Uint8Array|null);
         public fileLength?: (number|Long|null);
         public seconds?: (number|null);
         public mediaKey?: (Uint8Array|null);
@@ -2432,25 +2432,25 @@ export namespace WAE2E {
         public gifPlayback?: (boolean|null);
         public height?: (number|null);
         public width?: (number|null);
-        public fileEncSHA256?: (Uint8Array|null);
+        public fileEncSha256?: (Uint8Array|null);
         public interactiveAnnotations: WAE2E.IInteractiveAnnotation[];
         public directPath?: (string|null);
         public mediaKeyTimestamp?: (number|Long|null);
-        public JPEGThumbnail?: (Uint8Array|null);
+        public jpegThumbnail?: (Uint8Array|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
         public streamingSidecar?: (Uint8Array|null);
         public gifAttribution?: (WAE2E.VideoMessage.Attribution|null);
         public viewOnce?: (boolean|null);
         public thumbnailDirectPath?: (string|null);
-        public thumbnailSHA256?: (Uint8Array|null);
-        public thumbnailEncSHA256?: (Uint8Array|null);
-        public staticURL?: (string|null);
+        public thumbnailSha256?: (Uint8Array|null);
+        public thumbnailEncSha256?: (Uint8Array|null);
+        public staticUrl?: (string|null);
         public annotations: WAE2E.IInteractiveAnnotation[];
         public accessibilityLabel?: (string|null);
         public processedVideos: WAE2E.IProcessedVideo[];
         public externalShareFullVideoDurationInSeconds?: (number|null);
-        public motionPhotoPresentationOffsetMS?: (number|Long|null);
-        public metadataURL?: (string|null);
+        public motionPhotoPresentationOffsetMs?: (number|Long|null);
+        public metadataUrl?: (string|null);
         public videoSourceType?: (WAE2E.VideoMessage.VideoSourceType|null);
         public static create(properties?: WAE2E.IVideoMessage): WAE2E.VideoMessage;
         public static encode(m: WAE2E.IVideoMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -2485,12 +2485,12 @@ export namespace WAE2E {
         backgroundArgb?: (number|null);
         font?: (WAE2E.ExtendedTextMessage.FontType|null);
         previewType?: (WAE2E.ExtendedTextMessage.PreviewType|null);
-        JPEGThumbnail?: (Uint8Array|null);
+        jpegThumbnail?: (Uint8Array|null);
         contextInfo?: (WAE2E.IContextInfo|null);
         doNotPlayInline?: (boolean|null);
         thumbnailDirectPath?: (string|null);
-        thumbnailSHA256?: (Uint8Array|null);
-        thumbnailEncSHA256?: (Uint8Array|null);
+        thumbnailSha256?: (Uint8Array|null);
+        thumbnailEncSha256?: (Uint8Array|null);
         mediaKey?: (Uint8Array|null);
         mediaKeyTimestamp?: (number|Long|null);
         thumbnailHeight?: (number|null);
@@ -2506,7 +2506,7 @@ export namespace WAE2E {
         linkPreviewMetadata?: (WAE2E.ILinkPreviewMetadata|null);
         paymentLinkMetadata?: (WAE2E.IPaymentLinkMetadata|null);
         endCardTiles?: (WAE2E.IVideoEndCard[]|null);
-        videoContentURL?: (string|null);
+        videoContentUrl?: (string|null);
         musicMetadata?: (WAE2E.IEmbeddedMusic|null);
         paymentExtendedMetadata?: (WAE2E.IPaymentExtendedMetadata|null);
     }
@@ -2521,12 +2521,12 @@ export namespace WAE2E {
         public backgroundArgb?: (number|null);
         public font?: (WAE2E.ExtendedTextMessage.FontType|null);
         public previewType?: (WAE2E.ExtendedTextMessage.PreviewType|null);
-        public JPEGThumbnail?: (Uint8Array|null);
+        public jpegThumbnail?: (Uint8Array|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
         public doNotPlayInline?: (boolean|null);
         public thumbnailDirectPath?: (string|null);
-        public thumbnailSHA256?: (Uint8Array|null);
-        public thumbnailEncSHA256?: (Uint8Array|null);
+        public thumbnailSha256?: (Uint8Array|null);
+        public thumbnailEncSha256?: (Uint8Array|null);
         public mediaKey?: (Uint8Array|null);
         public mediaKeyTimestamp?: (number|Long|null);
         public thumbnailHeight?: (number|null);
@@ -2542,7 +2542,7 @@ export namespace WAE2E {
         public linkPreviewMetadata?: (WAE2E.ILinkPreviewMetadata|null);
         public paymentLinkMetadata?: (WAE2E.IPaymentLinkMetadata|null);
         public endCardTiles: WAE2E.IVideoEndCard[];
-        public videoContentURL?: (string|null);
+        public videoContentUrl?: (string|null);
         public musicMetadata?: (WAE2E.IEmbeddedMusic|null);
         public paymentExtendedMetadata?: (WAE2E.IPaymentExtendedMetadata|null);
         public static create(properties?: WAE2E.IExtendedTextMessage): WAE2E.ExtendedTextMessage;
@@ -2587,11 +2587,11 @@ export namespace WAE2E {
     interface ILinkPreviewMetadata {
         paymentLinkMetadata?: (WAE2E.IPaymentLinkMetadata|null);
         urlMetadata?: (WAE2E.IURLMetadata|null);
-        fbExperimentID?: (number|null);
+        fbExperimentId?: (number|null);
         linkMediaDuration?: (number|null);
         socialMediaPostType?: (WAE2E.LinkPreviewMetadata.SocialMediaPostType|null);
         linkInlineVideoMuted?: (boolean|null);
-        videoContentURL?: (string|null);
+        videoContentUrl?: (string|null);
         musicMetadata?: (WAE2E.IEmbeddedMusic|null);
         videoContentCaption?: (string|null);
     }
@@ -2600,11 +2600,11 @@ export namespace WAE2E {
         constructor(p?: WAE2E.ILinkPreviewMetadata);
         public paymentLinkMetadata?: (WAE2E.IPaymentLinkMetadata|null);
         public urlMetadata?: (WAE2E.IURLMetadata|null);
-        public fbExperimentID?: (number|null);
+        public fbExperimentId?: (number|null);
         public linkMediaDuration?: (number|null);
         public socialMediaPostType?: (WAE2E.LinkPreviewMetadata.SocialMediaPostType|null);
         public linkInlineVideoMuted?: (boolean|null);
-        public videoContentURL?: (string|null);
+        public videoContentUrl?: (string|null);
         public musicMetadata?: (WAE2E.IEmbeddedMusic|null);
         public videoContentCaption?: (string|null);
         public static create(properties?: WAE2E.ILinkPreviewMetadata): WAE2E.LinkPreviewMetadata;
@@ -2675,12 +2675,12 @@ export namespace WAE2E {
         }
 
         interface IPaymentLinkProvider {
-            paramsJSON?: (string|null);
+            paramsJson?: (string|null);
         }
 
         class PaymentLinkProvider implements IPaymentLinkProvider {
             constructor(p?: WAE2E.PaymentLinkMetadata.IPaymentLinkProvider);
-            public paramsJSON?: (string|null);
+            public paramsJson?: (string|null);
             public static create(properties?: WAE2E.PaymentLinkMetadata.IPaymentLinkProvider): WAE2E.PaymentLinkMetadata.PaymentLinkProvider;
             public static encode(m: WAE2E.PaymentLinkMetadata.IPaymentLinkProvider, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.PaymentLinkMetadata.PaymentLinkProvider;
@@ -2744,10 +2744,10 @@ export namespace WAE2E {
         attachmentMimetype?: (string|null);
         attachmentMediaKey?: (Uint8Array|null);
         attachmentMediaKeyTimestamp?: (number|Long|null);
-        attachmentFileSHA256?: (Uint8Array|null);
-        attachmentFileEncSHA256?: (Uint8Array|null);
+        attachmentFileSha256?: (Uint8Array|null);
+        attachmentFileEncSha256?: (Uint8Array|null);
         attachmentDirectPath?: (string|null);
-        attachmentJPEGThumbnail?: (Uint8Array|null);
+        attachmentJpegThumbnail?: (Uint8Array|null);
     }
 
     class InvoiceMessage implements IInvoiceMessage {
@@ -2758,10 +2758,10 @@ export namespace WAE2E {
         public attachmentMimetype?: (string|null);
         public attachmentMediaKey?: (Uint8Array|null);
         public attachmentMediaKeyTimestamp?: (number|Long|null);
-        public attachmentFileSHA256?: (Uint8Array|null);
-        public attachmentFileEncSHA256?: (Uint8Array|null);
+        public attachmentFileSha256?: (Uint8Array|null);
+        public attachmentFileEncSha256?: (Uint8Array|null);
         public attachmentDirectPath?: (string|null);
-        public attachmentJPEGThumbnail?: (Uint8Array|null);
+        public attachmentJpegThumbnail?: (Uint8Array|null);
         public static create(properties?: WAE2E.IInvoiceMessage): WAE2E.InvoiceMessage;
         public static encode(m: WAE2E.IInvoiceMessage, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.InvoiceMessage;
@@ -2780,70 +2780,70 @@ export namespace WAE2E {
     }
 
     interface IImageMessage {
-        URL?: (string|null);
+        url?: (string|null);
         mimetype?: (string|null);
         caption?: (string|null);
-        fileSHA256?: (Uint8Array|null);
+        fileSha256?: (Uint8Array|null);
         fileLength?: (number|Long|null);
         height?: (number|null);
         width?: (number|null);
         mediaKey?: (Uint8Array|null);
-        fileEncSHA256?: (Uint8Array|null);
+        fileEncSha256?: (Uint8Array|null);
         interactiveAnnotations?: (WAE2E.IInteractiveAnnotation[]|null);
         directPath?: (string|null);
         mediaKeyTimestamp?: (number|Long|null);
-        JPEGThumbnail?: (Uint8Array|null);
+        jpegThumbnail?: (Uint8Array|null);
         contextInfo?: (WAE2E.IContextInfo|null);
         firstScanSidecar?: (Uint8Array|null);
         firstScanLength?: (number|null);
-        experimentGroupID?: (number|null);
+        experimentGroupId?: (number|null);
         scansSidecar?: (Uint8Array|null);
         scanLengths?: (number[]|null);
-        midQualityFileSHA256?: (Uint8Array|null);
-        midQualityFileEncSHA256?: (Uint8Array|null);
+        midQualityFileSha256?: (Uint8Array|null);
+        midQualityFileEncSha256?: (Uint8Array|null);
         viewOnce?: (boolean|null);
         thumbnailDirectPath?: (string|null);
-        thumbnailSHA256?: (Uint8Array|null);
-        thumbnailEncSHA256?: (Uint8Array|null);
-        staticURL?: (string|null);
+        thumbnailSha256?: (Uint8Array|null);
+        thumbnailEncSha256?: (Uint8Array|null);
+        staticUrl?: (string|null);
         annotations?: (WAE2E.IInteractiveAnnotation[]|null);
         imageSourceType?: (WAE2E.ImageMessage.ImageSourceType|null);
         accessibilityLabel?: (string|null);
-        qrURL?: (string|null);
+        qrUrl?: (string|null);
     }
 
     class ImageMessage implements IImageMessage {
         constructor(p?: WAE2E.IImageMessage);
-        public URL?: (string|null);
+        public url?: (string|null);
         public mimetype?: (string|null);
         public caption?: (string|null);
-        public fileSHA256?: (Uint8Array|null);
+        public fileSha256?: (Uint8Array|null);
         public fileLength?: (number|Long|null);
         public height?: (number|null);
         public width?: (number|null);
         public mediaKey?: (Uint8Array|null);
-        public fileEncSHA256?: (Uint8Array|null);
+        public fileEncSha256?: (Uint8Array|null);
         public interactiveAnnotations: WAE2E.IInteractiveAnnotation[];
         public directPath?: (string|null);
         public mediaKeyTimestamp?: (number|Long|null);
-        public JPEGThumbnail?: (Uint8Array|null);
+        public jpegThumbnail?: (Uint8Array|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
         public firstScanSidecar?: (Uint8Array|null);
         public firstScanLength?: (number|null);
-        public experimentGroupID?: (number|null);
+        public experimentGroupId?: (number|null);
         public scansSidecar?: (Uint8Array|null);
         public scanLengths: number[];
-        public midQualityFileSHA256?: (Uint8Array|null);
-        public midQualityFileEncSHA256?: (Uint8Array|null);
+        public midQualityFileSha256?: (Uint8Array|null);
+        public midQualityFileEncSha256?: (Uint8Array|null);
         public viewOnce?: (boolean|null);
         public thumbnailDirectPath?: (string|null);
-        public thumbnailSHA256?: (Uint8Array|null);
-        public thumbnailEncSHA256?: (Uint8Array|null);
-        public staticURL?: (string|null);
+        public thumbnailSha256?: (Uint8Array|null);
+        public thumbnailEncSha256?: (Uint8Array|null);
+        public staticUrl?: (string|null);
         public annotations: WAE2E.IInteractiveAnnotation[];
         public imageSourceType?: (WAE2E.ImageMessage.ImageSourceType|null);
         public accessibilityLabel?: (string|null);
-        public qrURL?: (string|null);
+        public qrUrl?: (string|null);
         public static create(properties?: WAE2E.IImageMessage): WAE2E.ImageMessage;
         public static encode(m: WAE2E.IImageMessage, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.ImageMessage;
@@ -2864,11 +2864,11 @@ export namespace WAE2E {
     }
 
     interface IContextInfo {
-        stanzaID?: (string|null);
+        stanzaId?: (string|null);
         participant?: (string|null);
         quotedMessage?: (WAE2E.IMessage|null);
-        remoteJID?: (string|null);
-        mentionedJID?: (string[]|null);
+        remoteJid?: (string|null);
+        mentionedJid?: (string[]|null);
         conversionSource?: (string|null);
         conversionData?: (Uint8Array|null);
         conversionDelaySeconds?: (number|null);
@@ -2886,7 +2886,7 @@ export namespace WAE2E {
         disappearingMode?: (WAE2E.IDisappearingMode|null);
         actionLink?: (WAE2E.IActionLink|null);
         groupSubject?: (string|null);
-        parentGroupJID?: (string|null);
+        parentGroupJid?: (string|null);
         trustBannerType?: (string|null);
         trustBannerAction?: (number|null);
         isSampled?: (boolean|null);
@@ -2894,8 +2894,8 @@ export namespace WAE2E {
         utm?: (WAE2E.ContextInfo.IUTMInfo|null);
         forwardedNewsletterMessageInfo?: (WAE2E.ContextInfo.IForwardedNewsletterMessageInfo|null);
         businessMessageForwardInfo?: (WAE2E.ContextInfo.IBusinessMessageForwardInfo|null);
-        smbClientCampaignID?: (string|null);
-        smbServerCampaignID?: (string|null);
+        smbClientCampaignId?: (string|null);
+        smbServerCampaignId?: (string|null);
         dataSharingContext?: (WAE2E.ContextInfo.IDataSharingContext|null);
         alwaysShowAdAttribution?: (boolean|null);
         featureEligibilities?: (WAE2E.ContextInfo.IFeatureEligibilities|null);
@@ -2916,7 +2916,7 @@ export namespace WAE2E {
         forwardOrigin?: (WAE2E.ContextInfo.ForwardOrigin|null);
         questionReplyQuotedMessage?: (WAE2E.ContextInfo.IQuestionReplyQuotedMessage|null);
         statusAudienceMetadata?: (WAE2E.ContextInfo.IStatusAudienceMetadata|null);
-        nonJIDMentions?: (number|null);
+        nonJidMentions?: (number|null);
         quotedType?: (WAE2E.ContextInfo.QuotedType|null);
         botMessageSharingInfo?: (WAAICommon.IBotMessageSharingInfo|null);
         isSpoiler?: (boolean|null);
@@ -2925,16 +2925,16 @@ export namespace WAE2E {
         afterReadDuration?: (number|null);
         crossAppSource?: (WAE2E.ContextInfo.CrossAppSource|null);
         businessInteractionPills?: (WAE2E.ContextInfo.IBusinessInteractionPills|null);
-        posterStatusID?: (string|null);
+        posterStatusId?: (string|null);
     }
 
     class ContextInfo implements IContextInfo {
         constructor(p?: WAE2E.IContextInfo);
-        public stanzaID?: (string|null);
+        public stanzaId?: (string|null);
         public participant?: (string|null);
         public quotedMessage?: (WAE2E.IMessage|null);
-        public remoteJID?: (string|null);
-        public mentionedJID: string[];
+        public remoteJid?: (string|null);
+        public mentionedJid: string[];
         public conversionSource?: (string|null);
         public conversionData?: (Uint8Array|null);
         public conversionDelaySeconds?: (number|null);
@@ -2952,7 +2952,7 @@ export namespace WAE2E {
         public disappearingMode?: (WAE2E.IDisappearingMode|null);
         public actionLink?: (WAE2E.IActionLink|null);
         public groupSubject?: (string|null);
-        public parentGroupJID?: (string|null);
+        public parentGroupJid?: (string|null);
         public trustBannerType?: (string|null);
         public trustBannerAction?: (number|null);
         public isSampled?: (boolean|null);
@@ -2960,8 +2960,8 @@ export namespace WAE2E {
         public utm?: (WAE2E.ContextInfo.IUTMInfo|null);
         public forwardedNewsletterMessageInfo?: (WAE2E.ContextInfo.IForwardedNewsletterMessageInfo|null);
         public businessMessageForwardInfo?: (WAE2E.ContextInfo.IBusinessMessageForwardInfo|null);
-        public smbClientCampaignID?: (string|null);
-        public smbServerCampaignID?: (string|null);
+        public smbClientCampaignId?: (string|null);
+        public smbServerCampaignId?: (string|null);
         public dataSharingContext?: (WAE2E.ContextInfo.IDataSharingContext|null);
         public alwaysShowAdAttribution?: (boolean|null);
         public featureEligibilities?: (WAE2E.ContextInfo.IFeatureEligibilities|null);
@@ -2982,7 +2982,7 @@ export namespace WAE2E {
         public forwardOrigin?: (WAE2E.ContextInfo.ForwardOrigin|null);
         public questionReplyQuotedMessage?: (WAE2E.ContextInfo.IQuestionReplyQuotedMessage|null);
         public statusAudienceMetadata?: (WAE2E.ContextInfo.IStatusAudienceMetadata|null);
-        public nonJIDMentions?: (number|null);
+        public nonJidMentions?: (number|null);
         public quotedType?: (WAE2E.ContextInfo.QuotedType|null);
         public botMessageSharingInfo?: (WAAICommon.IBotMessageSharingInfo|null);
         public isSpoiler?: (boolean|null);
@@ -2991,7 +2991,7 @@ export namespace WAE2E {
         public afterReadDuration?: (number|null);
         public crossAppSource?: (WAE2E.ContextInfo.CrossAppSource|null);
         public businessInteractionPills?: (WAE2E.ContextInfo.IBusinessInteractionPills|null);
-        public posterStatusID?: (string|null);
+        public posterStatusId?: (string|null);
         public static create(properties?: WAE2E.IContextInfo): WAE2E.ContextInfo;
         public static encode(m: WAE2E.IContextInfo, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.ContextInfo;
@@ -3053,14 +3053,14 @@ export namespace WAE2E {
         }
 
         interface IBusinessInteractionPills {
-            businessJID?: (string|null);
+            businessJid?: (string|null);
             pills?: (WAE2E.ContextInfo.BusinessInteractionPills.IPill[]|null);
             entryPoint?: (WAE2E.ContextInfo.BusinessInteractionPills.EntryPoint|null);
         }
 
         class BusinessInteractionPills implements IBusinessInteractionPills {
             constructor(p?: WAE2E.ContextInfo.IBusinessInteractionPills);
-            public businessJID?: (string|null);
+            public businessJid?: (string|null);
             public pills: WAE2E.ContextInfo.BusinessInteractionPills.IPill[];
             public entryPoint?: (WAE2E.ContextInfo.BusinessInteractionPills.EntryPoint|null);
             public static create(properties?: WAE2E.ContextInfo.IBusinessInteractionPills): WAE2E.ContextInfo.BusinessInteractionPills;
@@ -3099,13 +3099,13 @@ export namespace WAE2E {
 
             interface IPill {
                 pillType?: (WAE2E.ContextInfo.BusinessInteractionPills.PillType|null);
-                actionURL?: (string|null);
+                actionUrl?: (string|null);
             }
 
             class Pill implements IPill {
                 constructor(p?: WAE2E.ContextInfo.BusinessInteractionPills.IPill);
                 public pillType?: (WAE2E.ContextInfo.BusinessInteractionPills.PillType|null);
-                public actionURL?: (string|null);
+                public actionUrl?: (string|null);
                 public static create(properties?: WAE2E.ContextInfo.BusinessInteractionPills.IPill): WAE2E.ContextInfo.BusinessInteractionPills.Pill;
                 public static encode(m: WAE2E.ContextInfo.BusinessInteractionPills.IPill, w?: $protobuf.Writer): $protobuf.Writer;
                 public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.ContextInfo.BusinessInteractionPills.Pill;
@@ -3199,8 +3199,8 @@ export namespace WAE2E {
         }
 
         interface IForwardedNewsletterMessageInfo {
-            newsletterJID?: (string|null);
-            serverMessageID?: (number|null);
+            newsletterJid?: (string|null);
+            serverMessageId?: (number|null);
             newsletterName?: (string|null);
             contentType?: (WAE2E.ContextInfo.ForwardedNewsletterMessageInfo.ContentType|null);
             accessibilityText?: (string|null);
@@ -3209,8 +3209,8 @@ export namespace WAE2E {
 
         class ForwardedNewsletterMessageInfo implements IForwardedNewsletterMessageInfo {
             constructor(p?: WAE2E.ContextInfo.IForwardedNewsletterMessageInfo);
-            public newsletterJID?: (string|null);
-            public serverMessageID?: (number|null);
+            public newsletterJid?: (string|null);
+            public serverMessageId?: (number|null);
             public newsletterName?: (string|null);
             public contentType?: (WAE2E.ContextInfo.ForwardedNewsletterMessageInfo.ContentType|null);
             public accessibilityText?: (string|null);
@@ -3237,12 +3237,12 @@ export namespace WAE2E {
             title?: (string|null);
             body?: (string|null);
             mediaType?: (WAE2E.ContextInfo.ExternalAdReplyInfo.MediaType|null);
-            thumbnailURL?: (string|null);
-            mediaURL?: (string|null);
+            thumbnailUrl?: (string|null);
+            mediaUrl?: (string|null);
             thumbnail?: (Uint8Array|null);
             sourceType?: (string|null);
-            sourceID?: (string|null);
-            sourceURL?: (string|null);
+            sourceId?: (string|null);
+            sourceUrl?: (string|null);
             containsAutoReply?: (boolean|null);
             renderLargerThumbnail?: (boolean|null);
             showAdAttribution?: (boolean|null);
@@ -3255,12 +3255,12 @@ export namespace WAE2E {
             greetingMessageBody?: (string|null);
             ctaPayload?: (string|null);
             disableNudge?: (boolean|null);
-            originalImageURL?: (string|null);
+            originalImageUrl?: (string|null);
             automatedGreetingMessageCtaType?: (string|null);
             wtwaAdFormat?: (boolean|null);
             adType?: (WAE2E.ContextInfo.ExternalAdReplyInfo.AdType|null);
-            wtwaWebsiteURL?: (string|null);
-            adPreviewURL?: (string|null);
+            wtwaWebsiteUrl?: (string|null);
+            adPreviewUrl?: (string|null);
             containsCtwaFlowsAutoReply?: (boolean|null);
             agmThumbnailStrategy?: (number|null);
             agmTitleStrategy?: (number|null);
@@ -3273,12 +3273,12 @@ export namespace WAE2E {
             public title?: (string|null);
             public body?: (string|null);
             public mediaType?: (WAE2E.ContextInfo.ExternalAdReplyInfo.MediaType|null);
-            public thumbnailURL?: (string|null);
-            public mediaURL?: (string|null);
+            public thumbnailUrl?: (string|null);
+            public mediaUrl?: (string|null);
             public thumbnail?: (Uint8Array|null);
             public sourceType?: (string|null);
-            public sourceID?: (string|null);
-            public sourceURL?: (string|null);
+            public sourceId?: (string|null);
+            public sourceUrl?: (string|null);
             public containsAutoReply?: (boolean|null);
             public renderLargerThumbnail?: (boolean|null);
             public showAdAttribution?: (boolean|null);
@@ -3291,12 +3291,12 @@ export namespace WAE2E {
             public greetingMessageBody?: (string|null);
             public ctaPayload?: (string|null);
             public disableNudge?: (boolean|null);
-            public originalImageURL?: (string|null);
+            public originalImageUrl?: (string|null);
             public automatedGreetingMessageCtaType?: (string|null);
             public wtwaAdFormat?: (boolean|null);
             public adType?: (WAE2E.ContextInfo.ExternalAdReplyInfo.AdType|null);
-            public wtwaWebsiteURL?: (string|null);
-            public adPreviewURL?: (string|null);
+            public wtwaWebsiteUrl?: (string|null);
+            public adPreviewUrl?: (string|null);
             public containsCtwaFlowsAutoReply?: (boolean|null);
             public agmThumbnailStrategy?: (number|null);
             public agmTitleStrategy?: (number|null);
@@ -3328,7 +3328,7 @@ export namespace WAE2E {
         interface IAdReplyInfo {
             advertiserName?: (string|null);
             mediaType?: (WAE2E.ContextInfo.AdReplyInfo.MediaType|null);
-            JPEGThumbnail?: (Uint8Array|null);
+            jpegThumbnail?: (Uint8Array|null);
             caption?: (string|null);
         }
 
@@ -3336,7 +3336,7 @@ export namespace WAE2E {
             constructor(p?: WAE2E.ContextInfo.IAdReplyInfo);
             public advertiserName?: (string|null);
             public mediaType?: (WAE2E.ContextInfo.AdReplyInfo.MediaType|null);
-            public JPEGThumbnail?: (Uint8Array|null);
+            public jpegThumbnail?: (Uint8Array|null);
             public caption?: (string|null);
             public static create(properties?: WAE2E.ContextInfo.IAdReplyInfo): WAE2E.ContextInfo.AdReplyInfo;
             public static encode(m: WAE2E.ContextInfo.IAdReplyInfo, w?: $protobuf.Writer): $protobuf.Writer;
@@ -3397,14 +3397,14 @@ export namespace WAE2E {
         }
 
         interface IQuestionReplyQuotedMessage {
-            serverQuestionID?: (number|null);
+            serverQuestionId?: (number|null);
             quotedQuestion?: (WAE2E.IMessage|null);
             quotedResponse?: (WAE2E.IMessage|null);
         }
 
         class QuestionReplyQuotedMessage implements IQuestionReplyQuotedMessage {
             constructor(p?: WAE2E.ContextInfo.IQuestionReplyQuotedMessage);
-            public serverQuestionID?: (number|null);
+            public serverQuestionId?: (number|null);
             public quotedQuestion?: (WAE2E.IMessage|null);
             public quotedResponse?: (WAE2E.IMessage|null);
             public static create(properties?: WAE2E.ContextInfo.IQuestionReplyQuotedMessage): WAE2E.ContextInfo.QuestionReplyQuotedMessage;
@@ -3435,12 +3435,12 @@ export namespace WAE2E {
         }
 
         interface IBusinessMessageForwardInfo {
-            businessOwnerJID?: (string|null);
+            businessOwnerJid?: (string|null);
         }
 
         class BusinessMessageForwardInfo implements IBusinessMessageForwardInfo {
             constructor(p?: WAE2E.ContextInfo.IBusinessMessageForwardInfo);
-            public businessOwnerJID?: (string|null);
+            public businessOwnerJid?: (string|null);
             public static create(properties?: WAE2E.ContextInfo.IBusinessMessageForwardInfo): WAE2E.ContextInfo.BusinessMessageForwardInfo;
             public static encode(m: WAE2E.ContextInfo.IBusinessMessageForwardInfo, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.ContextInfo.BusinessMessageForwardInfo;
@@ -3540,7 +3540,7 @@ export namespace WAE2E {
         supportPayload?: (string|null);
         limitSharing?: (WACommon.ILimitSharing|null);
         limitSharingV2?: (WACommon.ILimitSharing|null);
-        threadID?: (WAE2E.IThreadID[]|null);
+        threadId?: (WAE2E.IThreadID[]|null);
         weblinkRenderConfig?: (WAE2E.WebLinkRenderConfig|null);
         teeBotMetadata?: (Uint8Array|null);
     }
@@ -3561,7 +3561,7 @@ export namespace WAE2E {
         public supportPayload?: (string|null);
         public limitSharing?: (WACommon.ILimitSharing|null);
         public limitSharingV2?: (WACommon.ILimitSharing|null);
-        public threadID: WAE2E.IThreadID[];
+        public threadId: WAE2E.IThreadID[];
         public weblinkRenderConfig?: (WAE2E.WebLinkRenderConfig|null);
         public teeBotMetadata?: (Uint8Array|null);
         public static create(properties?: WAE2E.IMessageContextInfo): WAE2E.MessageContextInfo;
@@ -3648,16 +3648,16 @@ export namespace WAE2E {
 
         interface IHydratedURLButton {
             displayText?: (string|null);
-            URL?: (string|null);
-            consentedUsersURL?: (string|null);
+            url?: (string|null);
+            consentedUsersUrl?: (string|null);
             webviewPresentation?: (WAE2E.HydratedTemplateButton.HydratedURLButton.WebviewPresentationType|null);
         }
 
         class HydratedURLButton implements IHydratedURLButton {
             constructor(p?: WAE2E.HydratedTemplateButton.IHydratedURLButton);
             public displayText?: (string|null);
-            public URL?: (string|null);
-            public consentedUsersURL?: (string|null);
+            public url?: (string|null);
+            public consentedUsersUrl?: (string|null);
             public webviewPresentation?: (WAE2E.HydratedTemplateButton.HydratedURLButton.WebviewPresentationType|null);
             public static create(properties?: WAE2E.HydratedTemplateButton.IHydratedURLButton): WAE2E.HydratedTemplateButton.HydratedURLButton;
             public static encode(m: WAE2E.HydratedTemplateButton.IHydratedURLButton, w?: $protobuf.Writer): $protobuf.Writer;
@@ -3697,13 +3697,13 @@ export namespace WAE2E {
 
         interface IHydratedQuickReplyButton {
             displayText?: (string|null);
-            ID?: (string|null);
+            id?: (string|null);
         }
 
         class HydratedQuickReplyButton implements IHydratedQuickReplyButton {
             constructor(p?: WAE2E.HydratedTemplateButton.IHydratedQuickReplyButton);
             public displayText?: (string|null);
-            public ID?: (string|null);
+            public id?: (string|null);
             public static create(properties?: WAE2E.HydratedTemplateButton.IHydratedQuickReplyButton): WAE2E.HydratedTemplateButton.HydratedQuickReplyButton;
             public static encode(m: WAE2E.HydratedTemplateButton.IHydratedQuickReplyButton, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.HydratedTemplateButton.HydratedQuickReplyButton;
@@ -3715,7 +3715,7 @@ export namespace WAE2E {
     }
 
     interface IPaymentBackground {
-        ID?: (string|null);
+        id?: (string|null);
         fileLength?: (number|Long|null);
         width?: (number|null);
         height?: (number|null);
@@ -3729,7 +3729,7 @@ export namespace WAE2E {
 
     class PaymentBackground implements IPaymentBackground {
         constructor(p?: WAE2E.IPaymentBackground);
-        public ID?: (string|null);
+        public id?: (string|null);
         public fileLength?: (number|Long|null);
         public width?: (number|null);
         public height?: (number|null);
@@ -3758,8 +3758,8 @@ export namespace WAE2E {
         interface IMediaData {
             mediaKey?: (Uint8Array|null);
             mediaKeyTimestamp?: (number|Long|null);
-            fileSHA256?: (Uint8Array|null);
-            fileEncSHA256?: (Uint8Array|null);
+            fileSha256?: (Uint8Array|null);
+            fileEncSha256?: (Uint8Array|null);
             directPath?: (string|null);
         }
 
@@ -3767,8 +3767,8 @@ export namespace WAE2E {
             constructor(p?: WAE2E.PaymentBackground.IMediaData);
             public mediaKey?: (Uint8Array|null);
             public mediaKeyTimestamp?: (number|Long|null);
-            public fileSHA256?: (Uint8Array|null);
-            public fileEncSHA256?: (Uint8Array|null);
+            public fileSha256?: (Uint8Array|null);
+            public fileEncSha256?: (Uint8Array|null);
             public directPath?: (string|null);
             public static create(properties?: WAE2E.PaymentBackground.IMediaData): WAE2E.PaymentBackground.MediaData;
             public static encode(m: WAE2E.PaymentBackground.IMediaData, w?: $protobuf.Writer): $protobuf.Writer;
@@ -3783,7 +3783,7 @@ export namespace WAE2E {
     interface IDisappearingMode {
         initiator?: (WAE2E.DisappearingMode.Initiator|null);
         trigger?: (WAE2E.DisappearingMode.Trigger|null);
-        initiatorDeviceJID?: (string|null);
+        initiatorDeviceJid?: (string|null);
         initiatedByMe?: (boolean|null);
     }
 
@@ -3791,7 +3791,7 @@ export namespace WAE2E {
         constructor(p?: WAE2E.IDisappearingMode);
         public initiator?: (WAE2E.DisappearingMode.Initiator|null);
         public trigger?: (WAE2E.DisappearingMode.Trigger|null);
-        public initiatorDeviceJID?: (string|null);
+        public initiatorDeviceJid?: (string|null);
         public initiatedByMe?: (boolean|null);
         public static create(properties?: WAE2E.IDisappearingMode): WAE2E.DisappearingMode;
         public static encode(m: WAE2E.IDisappearingMode, w?: $protobuf.Writer): $protobuf.Writer;
@@ -3823,7 +3823,7 @@ export namespace WAE2E {
 
     interface IProcessedVideo {
         directPath?: (string|null);
-        fileSHA256?: (Uint8Array|null);
+        fileSha256?: (Uint8Array|null);
         height?: (number|null);
         width?: (number|null);
         fileLength?: (number|Long|null);
@@ -3835,7 +3835,7 @@ export namespace WAE2E {
     class ProcessedVideo implements IProcessedVideo {
         constructor(p?: WAE2E.IProcessedVideo);
         public directPath?: (string|null);
-        public fileSHA256?: (Uint8Array|null);
+        public fileSha256?: (Uint8Array|null);
         public height?: (number|null);
         public width?: (number|null);
         public fileLength?: (number|Long|null);
@@ -4149,9 +4149,9 @@ export namespace WAE2E {
 
     interface IMessageHistoryBundle {
         mimetype?: (string|null);
-        fileSHA256?: (Uint8Array|null);
+        fileSha256?: (Uint8Array|null);
         mediaKey?: (Uint8Array|null);
-        fileEncSHA256?: (Uint8Array|null);
+        fileEncSha256?: (Uint8Array|null);
         directPath?: (string|null);
         mediaKeyTimestamp?: (number|Long|null);
         contextInfo?: (WAE2E.IContextInfo|null);
@@ -4161,9 +4161,9 @@ export namespace WAE2E {
     class MessageHistoryBundle implements IMessageHistoryBundle {
         constructor(p?: WAE2E.IMessageHistoryBundle);
         public mimetype?: (string|null);
-        public fileSHA256?: (Uint8Array|null);
+        public fileSha256?: (Uint8Array|null);
         public mediaKey?: (Uint8Array|null);
-        public fileEncSHA256?: (Uint8Array|null);
+        public fileEncSha256?: (Uint8Array|null);
         public directPath?: (string|null);
         public mediaKeyTimestamp?: (number|Long|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
@@ -4180,14 +4180,14 @@ export namespace WAE2E {
     interface IEncEventResponseMessage {
         eventCreationMessageKey?: (WACommon.IMessageKey|null);
         encPayload?: (Uint8Array|null);
-        encIV?: (Uint8Array|null);
+        encIv?: (Uint8Array|null);
     }
 
     class EncEventResponseMessage implements IEncEventResponseMessage {
         constructor(p?: WAE2E.IEncEventResponseMessage);
         public eventCreationMessageKey?: (WACommon.IMessageKey|null);
         public encPayload?: (Uint8Array|null);
-        public encIV?: (Uint8Array|null);
+        public encIv?: (Uint8Array|null);
         public static create(properties?: WAE2E.IEncEventResponseMessage): WAE2E.EncEventResponseMessage;
         public static encode(m: WAE2E.IEncEventResponseMessage, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.EncEventResponseMessage;
@@ -4256,14 +4256,14 @@ export namespace WAE2E {
     interface IEncCommentMessage {
         targetMessageKey?: (WACommon.IMessageKey|null);
         encPayload?: (Uint8Array|null);
-        encIV?: (Uint8Array|null);
+        encIv?: (Uint8Array|null);
     }
 
     class EncCommentMessage implements IEncCommentMessage {
         constructor(p?: WAE2E.IEncCommentMessage);
         public targetMessageKey?: (WACommon.IMessageKey|null);
         public encPayload?: (Uint8Array|null);
-        public encIV?: (Uint8Array|null);
+        public encIv?: (Uint8Array|null);
         public static create(properties?: WAE2E.IEncCommentMessage): WAE2E.EncCommentMessage;
         public static encode(m: WAE2E.IEncCommentMessage, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.EncCommentMessage;
@@ -4276,14 +4276,14 @@ export namespace WAE2E {
     interface IEncReactionMessage {
         targetMessageKey?: (WACommon.IMessageKey|null);
         encPayload?: (Uint8Array|null);
-        encIV?: (Uint8Array|null);
+        encIv?: (Uint8Array|null);
     }
 
     class EncReactionMessage implements IEncReactionMessage {
         constructor(p?: WAE2E.IEncReactionMessage);
         public targetMessageKey?: (WACommon.IMessageKey|null);
         public encPayload?: (Uint8Array|null);
-        public encIV?: (Uint8Array|null);
+        public encIv?: (Uint8Array|null);
         public static create(properties?: WAE2E.IEncReactionMessage): WAE2E.EncReactionMessage;
         public static encode(m: WAE2E.IEncReactionMessage, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.EncReactionMessage;
@@ -4296,14 +4296,14 @@ export namespace WAE2E {
     interface IKeepInChatMessage {
         key?: (WACommon.IMessageKey|null);
         keepType?: (WAE2E.KeepType|null);
-        timestampMS?: (number|Long|null);
+        timestampMs?: (number|Long|null);
     }
 
     class KeepInChatMessage implements IKeepInChatMessage {
         constructor(p?: WAE2E.IKeepInChatMessage);
         public key?: (WACommon.IMessageKey|null);
         public keepType?: (WAE2E.KeepType|null);
-        public timestampMS?: (number|Long|null);
+        public timestampMs?: (number|Long|null);
         public static create(properties?: WAE2E.IKeepInChatMessage): WAE2E.KeepInChatMessage;
         public static encode(m: WAE2E.IKeepInChatMessage, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.KeepInChatMessage;
@@ -4428,13 +4428,13 @@ export namespace WAE2E {
 
     interface IPollEncValue {
         encPayload?: (Uint8Array|null);
-        encIV?: (Uint8Array|null);
+        encIv?: (Uint8Array|null);
     }
 
     class PollEncValue implements IPollEncValue {
         constructor(p?: WAE2E.IPollEncValue);
         public encPayload?: (Uint8Array|null);
-        public encIV?: (Uint8Array|null);
+        public encIv?: (Uint8Array|null);
         public static create(properties?: WAE2E.IPollEncValue): WAE2E.PollEncValue;
         public static encode(m: WAE2E.IPollEncValue, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.PollEncValue;
@@ -4462,7 +4462,7 @@ export namespace WAE2E {
         pollCreationMessageKey?: (WACommon.IMessageKey|null);
         vote?: (WAE2E.IPollEncValue|null);
         metadata?: (WAE2E.IPollUpdateMessageMetadata|null);
-        senderTimestampMS?: (number|Long|null);
+        senderTimestampMs?: (number|Long|null);
     }
 
     class PollUpdateMessage implements IPollUpdateMessage {
@@ -4470,7 +4470,7 @@ export namespace WAE2E {
         public pollCreationMessageKey?: (WACommon.IMessageKey|null);
         public vote?: (WAE2E.IPollEncValue|null);
         public metadata?: (WAE2E.IPollUpdateMessageMetadata|null);
-        public senderTimestampMS?: (number|Long|null);
+        public senderTimestampMs?: (number|Long|null);
         public static create(properties?: WAE2E.IPollUpdateMessage): WAE2E.PollUpdateMessage;
         public static encode(m: WAE2E.IPollUpdateMessage, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.PollUpdateMessage;
@@ -4561,7 +4561,7 @@ export namespace WAE2E {
         key?: (WACommon.IMessageKey|null);
         text?: (string|null);
         groupingKey?: (string|null);
-        senderTimestampMS?: (number|Long|null);
+        senderTimestampMs?: (number|Long|null);
     }
 
     class ReactionMessage implements IReactionMessage {
@@ -4569,7 +4569,7 @@ export namespace WAE2E {
         public key?: (WACommon.IMessageKey|null);
         public text?: (string|null);
         public groupingKey?: (string|null);
-        public senderTimestampMS?: (number|Long|null);
+        public senderTimestampMs?: (number|Long|null);
         public static create(properties?: WAE2E.IReactionMessage): WAE2E.ReactionMessage;
         public static encode(m: WAE2E.IReactionMessage, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.ReactionMessage;
@@ -4596,14 +4596,14 @@ export namespace WAE2E {
     }
 
     interface IDeviceSentMessage {
-        destinationJID?: (string|null);
+        destinationJid?: (string|null);
         message?: (WAE2E.IMessage|null);
         phash?: (string|null);
     }
 
     class DeviceSentMessage implements IDeviceSentMessage {
         constructor(p?: WAE2E.IDeviceSentMessage);
-        public destinationJID?: (string|null);
+        public destinationJid?: (string|null);
         public message?: (WAE2E.IMessage|null);
         public phash?: (string|null);
         public static create(properties?: WAE2E.IDeviceSentMessage): WAE2E.DeviceSentMessage;
@@ -4633,9 +4633,9 @@ export namespace WAE2E {
 
     interface IEventInviteMessage {
         contextInfo?: (WAE2E.IContextInfo|null);
-        eventID?: (string|null);
+        eventId?: (string|null);
         eventTitle?: (string|null);
-        JPEGThumbnail?: (Uint8Array|null);
+        jpegThumbnail?: (Uint8Array|null);
         startTime?: (number|Long|null);
         caption?: (string|null);
         isCanceled?: (boolean|null);
@@ -4645,9 +4645,9 @@ export namespace WAE2E {
     class EventInviteMessage implements IEventInviteMessage {
         constructor(p?: WAE2E.IEventInviteMessage);
         public contextInfo?: (WAE2E.IContextInfo|null);
-        public eventID?: (string|null);
+        public eventId?: (string|null);
         public eventTitle?: (string|null);
-        public JPEGThumbnail?: (Uint8Array|null);
+        public jpegThumbnail?: (Uint8Array|null);
         public startTime?: (number|Long|null);
         public caption?: (string|null);
         public isCanceled?: (boolean|null);
@@ -4662,18 +4662,18 @@ export namespace WAE2E {
     }
 
     interface INewsletterFollowerInviteMessage {
-        newsletterJID?: (string|null);
+        newsletterJid?: (string|null);
         newsletterName?: (string|null);
-        JPEGThumbnail?: (Uint8Array|null);
+        jpegThumbnail?: (Uint8Array|null);
         caption?: (string|null);
         contextInfo?: (WAE2E.IContextInfo|null);
     }
 
     class NewsletterFollowerInviteMessage implements INewsletterFollowerInviteMessage {
         constructor(p?: WAE2E.INewsletterFollowerInviteMessage);
-        public newsletterJID?: (string|null);
+        public newsletterJid?: (string|null);
         public newsletterName?: (string|null);
-        public JPEGThumbnail?: (Uint8Array|null);
+        public jpegThumbnail?: (Uint8Array|null);
         public caption?: (string|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
         public static create(properties?: WAE2E.INewsletterFollowerInviteMessage): WAE2E.NewsletterFollowerInviteMessage;
@@ -4686,9 +4686,9 @@ export namespace WAE2E {
     }
 
     interface INewsletterAdminInviteMessage {
-        newsletterJID?: (string|null);
+        newsletterJid?: (string|null);
         newsletterName?: (string|null);
-        JPEGThumbnail?: (Uint8Array|null);
+        jpegThumbnail?: (Uint8Array|null);
         caption?: (string|null);
         inviteExpiration?: (number|Long|null);
         contextInfo?: (WAE2E.IContextInfo|null);
@@ -4696,9 +4696,9 @@ export namespace WAE2E {
 
     class NewsletterAdminInviteMessage implements INewsletterAdminInviteMessage {
         constructor(p?: WAE2E.INewsletterAdminInviteMessage);
-        public newsletterJID?: (string|null);
+        public newsletterJid?: (string|null);
         public newsletterName?: (string|null);
-        public JPEGThumbnail?: (Uint8Array|null);
+        public jpegThumbnail?: (Uint8Array|null);
         public caption?: (string|null);
         public inviteExpiration?: (number|Long|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
@@ -4713,7 +4713,7 @@ export namespace WAE2E {
 
     interface IProductMessage {
         product?: (WAE2E.ProductMessage.IProductSnapshot|null);
-        businessOwnerJID?: (string|null);
+        businessOwnerJid?: (string|null);
         catalog?: (WAE2E.ProductMessage.ICatalogSnapshot|null);
         body?: (string|null);
         footer?: (string|null);
@@ -4723,7 +4723,7 @@ export namespace WAE2E {
     class ProductMessage implements IProductMessage {
         constructor(p?: WAE2E.IProductMessage);
         public product?: (WAE2E.ProductMessage.IProductSnapshot|null);
-        public businessOwnerJID?: (string|null);
+        public businessOwnerJid?: (string|null);
         public catalog?: (WAE2E.ProductMessage.ICatalogSnapshot|null);
         public body?: (string|null);
         public footer?: (string|null);
@@ -4741,33 +4741,33 @@ export namespace WAE2E {
 
         interface IProductSnapshot {
             productImage?: (WAE2E.IImageMessage|null);
-            productID?: (string|null);
+            productId?: (string|null);
             title?: (string|null);
             description?: (string|null);
             currencyCode?: (string|null);
             priceAmount1000?: (number|Long|null);
-            retailerID?: (string|null);
-            URL?: (string|null);
+            retailerId?: (string|null);
+            url?: (string|null);
             productImageCount?: (number|null);
-            firstImageID?: (string|null);
+            firstImageId?: (string|null);
             salePriceAmount1000?: (number|Long|null);
-            signedURL?: (string|null);
+            signedUrl?: (string|null);
         }
 
         class ProductSnapshot implements IProductSnapshot {
             constructor(p?: WAE2E.ProductMessage.IProductSnapshot);
             public productImage?: (WAE2E.IImageMessage|null);
-            public productID?: (string|null);
+            public productId?: (string|null);
             public title?: (string|null);
             public description?: (string|null);
             public currencyCode?: (string|null);
             public priceAmount1000?: (number|Long|null);
-            public retailerID?: (string|null);
-            public URL?: (string|null);
+            public retailerId?: (string|null);
+            public url?: (string|null);
             public productImageCount?: (number|null);
-            public firstImageID?: (string|null);
+            public firstImageId?: (string|null);
             public salePriceAmount1000?: (number|Long|null);
-            public signedURL?: (string|null);
+            public signedUrl?: (string|null);
             public static create(properties?: WAE2E.ProductMessage.IProductSnapshot): WAE2E.ProductMessage.ProductSnapshot;
             public static encode(m: WAE2E.ProductMessage.IProductSnapshot, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.ProductMessage.ProductSnapshot;
@@ -4799,7 +4799,7 @@ export namespace WAE2E {
     }
 
     interface ITemplateButtonReplyMessage {
-        selectedID?: (string|null);
+        selectedId?: (string|null);
         selectedDisplayText?: (string|null);
         contextInfo?: (WAE2E.IContextInfo|null);
         selectedIndex?: (number|null);
@@ -4808,7 +4808,7 @@ export namespace WAE2E {
 
     class TemplateButtonReplyMessage implements ITemplateButtonReplyMessage {
         constructor(p?: WAE2E.ITemplateButtonReplyMessage);
-        public selectedID?: (string|null);
+        public selectedId?: (string|null);
         public selectedDisplayText?: (string|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
         public selectedIndex?: (number|null);
@@ -4828,7 +4828,7 @@ export namespace WAE2E {
         interactiveMessageTemplate?: (WAE2E.IInteractiveMessage|null);
         contextInfo?: (WAE2E.IContextInfo|null);
         hydratedTemplate?: (WAE2E.TemplateMessage.IHydratedFourRowTemplate|null);
-        templateID?: (string|null);
+        templateId?: (string|null);
     }
 
     class TemplateMessage implements ITemplateMessage {
@@ -4838,7 +4838,7 @@ export namespace WAE2E {
         public interactiveMessageTemplate?: (WAE2E.IInteractiveMessage|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
         public hydratedTemplate?: (WAE2E.TemplateMessage.IHydratedFourRowTemplate|null);
-        public templateID?: (string|null);
+        public templateId?: (string|null);
         public format?: ("fourRowTemplate"|"hydratedFourRowTemplate"|"interactiveMessageTemplate");
         public static create(properties?: WAE2E.ITemplateMessage): WAE2E.TemplateMessage;
         public static encode(m: WAE2E.ITemplateMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -4860,7 +4860,7 @@ export namespace WAE2E {
             hydratedContentText?: (string|null);
             hydratedFooterText?: (string|null);
             hydratedButtons?: (WAE2E.IHydratedTemplateButton[]|null);
-            templateID?: (string|null);
+            templateId?: (string|null);
             maskLinkedDevices?: (boolean|null);
         }
 
@@ -4874,7 +4874,7 @@ export namespace WAE2E {
             public hydratedContentText?: (string|null);
             public hydratedFooterText?: (string|null);
             public hydratedButtons: WAE2E.IHydratedTemplateButton[];
-            public templateID?: (string|null);
+            public templateId?: (string|null);
             public maskLinkedDevices?: (boolean|null);
             public title?: ("documentMessage"|"hydratedTitleText"|"imageMessage"|"videoMessage"|"locationMessage");
             public static create(properties?: WAE2E.TemplateMessage.IHydratedFourRowTemplate): WAE2E.TemplateMessage.HydratedFourRowTemplate;
@@ -4919,9 +4919,9 @@ export namespace WAE2E {
     }
 
     interface IStickerMessage {
-        URL?: (string|null);
-        fileSHA256?: (Uint8Array|null);
-        fileEncSHA256?: (Uint8Array|null);
+        url?: (string|null);
+        fileSha256?: (Uint8Array|null);
+        fileEncSha256?: (Uint8Array|null);
         mediaKey?: (Uint8Array|null);
         mimetype?: (string|null);
         height?: (number|null);
@@ -4934,7 +4934,7 @@ export namespace WAE2E {
         isAnimated?: (boolean|null);
         pngThumbnail?: (Uint8Array|null);
         contextInfo?: (WAE2E.IContextInfo|null);
-        stickerSentTS?: (number|Long|null);
+        stickerSentTs?: (number|Long|null);
         isAvatar?: (boolean|null);
         isAiSticker?: (boolean|null);
         isLottie?: (boolean|null);
@@ -4945,9 +4945,9 @@ export namespace WAE2E {
 
     class StickerMessage implements IStickerMessage {
         constructor(p?: WAE2E.IStickerMessage);
-        public URL?: (string|null);
-        public fileSHA256?: (Uint8Array|null);
-        public fileEncSHA256?: (Uint8Array|null);
+        public url?: (string|null);
+        public fileSha256?: (Uint8Array|null);
+        public fileEncSha256?: (Uint8Array|null);
         public mediaKey?: (Uint8Array|null);
         public mimetype?: (string|null);
         public height?: (number|null);
@@ -4960,7 +4960,7 @@ export namespace WAE2E {
         public isAnimated?: (boolean|null);
         public pngThumbnail?: (Uint8Array|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
-        public stickerSentTS?: (number|Long|null);
+        public stickerSentTs?: (number|Long|null);
         public isAvatar?: (boolean|null);
         public isAiSticker?: (boolean|null);
         public isLottie?: (boolean|null);
@@ -4985,7 +4985,7 @@ export namespace WAE2E {
         caption?: (string|null);
         sequenceNumber?: (number|Long|null);
         timeOffset?: (number|null);
-        JPEGThumbnail?: (Uint8Array|null);
+        jpegThumbnail?: (Uint8Array|null);
         contextInfo?: (WAE2E.IContextInfo|null);
     }
 
@@ -4999,7 +4999,7 @@ export namespace WAE2E {
         public caption?: (string|null);
         public sequenceNumber?: (number|Long|null);
         public timeOffset?: (number|null);
-        public JPEGThumbnail?: (Uint8Array|null);
+        public jpegThumbnail?: (Uint8Array|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
         public static create(properties?: WAE2E.ILiveLocationMessage): WAE2E.LiveLocationMessage;
         public static encode(m: WAE2E.ILiveLocationMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -5011,23 +5011,23 @@ export namespace WAE2E {
     }
 
     interface ISplitPaymentMessage {
-        splitID?: (string|null);
+        splitId?: (string|null);
         totalAmount?: (WAE2E.IMoney|null);
         description?: (string|null);
-        requesterJID?: (string|null);
+        requesterJid?: (string|null);
         participants?: (WAE2E.ISplitPaymentParticipant[]|null);
-        createdAtMS?: (number|Long|null);
+        createdAtMs?: (number|Long|null);
         contextInfo?: (WAE2E.IContextInfo|null);
     }
 
     class SplitPaymentMessage implements ISplitPaymentMessage {
         constructor(p?: WAE2E.ISplitPaymentMessage);
-        public splitID?: (string|null);
+        public splitId?: (string|null);
         public totalAmount?: (WAE2E.IMoney|null);
         public description?: (string|null);
-        public requesterJID?: (string|null);
+        public requesterJid?: (string|null);
         public participants: WAE2E.ISplitPaymentParticipant[];
-        public createdAtMS?: (number|Long|null);
+        public createdAtMs?: (number|Long|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
         public static create(properties?: WAE2E.ISplitPaymentMessage): WAE2E.SplitPaymentMessage;
         public static encode(m: WAE2E.ISplitPaymentMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -5175,14 +5175,14 @@ export namespace WAE2E {
     }
 
     interface IFullHistorySyncOnDemandRequestMetadata {
-        requestID?: (string|null);
+        requestId?: (string|null);
         businessProduct?: (string|null);
         opaqueClientData?: (Uint8Array|null);
     }
 
     class FullHistorySyncOnDemandRequestMetadata implements IFullHistorySyncOnDemandRequestMetadata {
         constructor(p?: WAE2E.IFullHistorySyncOnDemandRequestMetadata);
-        public requestID?: (string|null);
+        public requestId?: (string|null);
         public businessProduct?: (string|null);
         public opaqueClientData?: (Uint8Array|null);
         public static create(properties?: WAE2E.IFullHistorySyncOnDemandRequestMetadata): WAE2E.FullHistorySyncOnDemandRequestMetadata;
@@ -5213,12 +5213,12 @@ export namespace WAE2E {
     }
 
     interface IAppStateSyncKeyRequest {
-        keyIDs?: (WAE2E.IAppStateSyncKeyId[]|null);
+        keyIds?: (WAE2E.IAppStateSyncKeyId[]|null);
     }
 
     class AppStateSyncKeyRequest implements IAppStateSyncKeyRequest {
         constructor(p?: WAE2E.IAppStateSyncKeyRequest);
-        public keyIDs: WAE2E.IAppStateSyncKeyId[];
+        public keyIds: WAE2E.IAppStateSyncKeyId[];
         public static create(properties?: WAE2E.IAppStateSyncKeyRequest): WAE2E.AppStateSyncKeyRequest;
         public static encode(m: WAE2E.IAppStateSyncKeyRequest, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.AppStateSyncKeyRequest;
@@ -5265,14 +5265,14 @@ export namespace WAE2E {
     }
 
     interface IAppStateSyncKeyFingerprint {
-        rawID?: (number|null);
+        rawId?: (number|null);
         currentIndex?: (number|null);
         deviceIndexes?: (number[]|null);
     }
 
     class AppStateSyncKeyFingerprint implements IAppStateSyncKeyFingerprint {
         constructor(p?: WAE2E.IAppStateSyncKeyFingerprint);
-        public rawID?: (number|null);
+        public rawId?: (number|null);
         public currentIndex?: (number|null);
         public deviceIndexes: number[];
         public static create(properties?: WAE2E.IAppStateSyncKeyFingerprint): WAE2E.AppStateSyncKeyFingerprint;
@@ -5285,12 +5285,12 @@ export namespace WAE2E {
     }
 
     interface IAppStateSyncKeyId {
-        keyID?: (Uint8Array|null);
+        keyId?: (Uint8Array|null);
     }
 
     class AppStateSyncKeyId implements IAppStateSyncKeyId {
         constructor(p?: WAE2E.IAppStateSyncKeyId);
-        public keyID?: (Uint8Array|null);
+        public keyId?: (Uint8Array|null);
         public static create(properties?: WAE2E.IAppStateSyncKeyId): WAE2E.AppStateSyncKeyId;
         public static encode(m: WAE2E.IAppStateSyncKeyId, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.AppStateSyncKeyId;
@@ -5301,13 +5301,13 @@ export namespace WAE2E {
     }
 
     interface IAppStateSyncKey {
-        keyID?: (WAE2E.IAppStateSyncKeyId|null);
+        keyId?: (WAE2E.IAppStateSyncKeyId|null);
         keyData?: (WAE2E.IAppStateSyncKeyData|null);
     }
 
     class AppStateSyncKey implements IAppStateSyncKey {
         constructor(p?: WAE2E.IAppStateSyncKey);
-        public keyID?: (WAE2E.IAppStateSyncKeyId|null);
+        public keyId?: (WAE2E.IAppStateSyncKeyId|null);
         public keyData?: (WAE2E.IAppStateSyncKeyData|null);
         public static create(properties?: WAE2E.IAppStateSyncKey): WAE2E.AppStateSyncKey;
         public static encode(m: WAE2E.IAppStateSyncKey, w?: $protobuf.Writer): $protobuf.Writer;
@@ -5319,18 +5319,18 @@ export namespace WAE2E {
     }
 
     interface IHistorySyncNotification {
-        fileSHA256?: (Uint8Array|null);
+        fileSha256?: (Uint8Array|null);
         fileLength?: (number|Long|null);
         mediaKey?: (Uint8Array|null);
-        fileEncSHA256?: (Uint8Array|null);
+        fileEncSha256?: (Uint8Array|null);
         directPath?: (string|null);
         syncType?: (WAE2E.HistorySyncType|null);
         chunkOrder?: (number|null);
-        originalMessageID?: (string|null);
+        originalMessageId?: (string|null);
         progress?: (number|null);
         oldestMsgInChunkTimestampSec?: (number|Long|null);
         initialHistBootstrapInlinePayload?: (Uint8Array|null);
-        peerDataRequestSessionID?: (string|null);
+        peerDataRequestSessionId?: (string|null);
         fullHistorySyncOnDemandRequestMetadata?: (WAE2E.IFullHistorySyncOnDemandRequestMetadata|null);
         encHandle?: (string|null);
         messageAccessStatus?: (WAE2E.IHistorySyncMessageAccessStatus|null);
@@ -5338,18 +5338,18 @@ export namespace WAE2E {
 
     class HistorySyncNotification implements IHistorySyncNotification {
         constructor(p?: WAE2E.IHistorySyncNotification);
-        public fileSHA256?: (Uint8Array|null);
+        public fileSha256?: (Uint8Array|null);
         public fileLength?: (number|Long|null);
         public mediaKey?: (Uint8Array|null);
-        public fileEncSHA256?: (Uint8Array|null);
+        public fileEncSha256?: (Uint8Array|null);
         public directPath?: (string|null);
         public syncType?: (WAE2E.HistorySyncType|null);
         public chunkOrder?: (number|null);
-        public originalMessageID?: (string|null);
+        public originalMessageId?: (string|null);
         public progress?: (number|null);
         public oldestMsgInChunkTimestampSec?: (number|Long|null);
         public initialHistBootstrapInlinePayload?: (Uint8Array|null);
-        public peerDataRequestSessionID?: (string|null);
+        public peerDataRequestSessionId?: (string|null);
         public fullHistorySyncOnDemandRequestMetadata?: (WAE2E.IFullHistorySyncOnDemandRequestMetadata|null);
         public encHandle?: (string|null);
         public messageAccessStatus?: (WAE2E.IHistorySyncMessageAccessStatus|null);
@@ -5379,13 +5379,13 @@ export namespace WAE2E {
     }
 
     interface IChatStockImageWallpaper {
-        stockImageID?: (string|null);
+        stockImageId?: (string|null);
         dimLevel?: (number|null);
     }
 
     class ChatStockImageWallpaper implements IChatStockImageWallpaper {
         constructor(p?: WAE2E.IChatStockImageWallpaper);
-        public stockImageID?: (string|null);
+        public stockImageId?: (string|null);
         public dimLevel?: (number|null);
         public static create(properties?: WAE2E.IChatStockImageWallpaper): WAE2E.ChatStockImageWallpaper;
         public static encode(m: WAE2E.IChatStockImageWallpaper, w?: $protobuf.Writer): $protobuf.Writer;
@@ -5435,8 +5435,8 @@ export namespace WAE2E {
     interface IChatCustomImageWallpaper {
         directPath?: (string|null);
         mediaKey?: (Uint8Array|null);
-        fileEncSHA256?: (Uint8Array|null);
-        fileSHA256?: (Uint8Array|null);
+        fileEncSha256?: (Uint8Array|null);
+        fileSha256?: (Uint8Array|null);
         dimLevel?: (number|null);
     }
 
@@ -5444,8 +5444,8 @@ export namespace WAE2E {
         constructor(p?: WAE2E.IChatCustomImageWallpaper);
         public directPath?: (string|null);
         public mediaKey?: (Uint8Array|null);
-        public fileEncSHA256?: (Uint8Array|null);
-        public fileSHA256?: (Uint8Array|null);
+        public fileEncSha256?: (Uint8Array|null);
+        public fileSha256?: (Uint8Array|null);
         public dimLevel?: (number|null);
         public static create(properties?: WAE2E.IChatCustomImageWallpaper): WAE2E.ChatCustomImageWallpaper;
         public static encode(m: WAE2E.IChatCustomImageWallpaper, w?: $protobuf.Writer): $protobuf.Writer;
@@ -5461,9 +5461,9 @@ export namespace WAE2E {
         solidColor?: (WAE2E.IChatSolidColorWallpaper|null);
         stockImage?: (WAE2E.IChatStockImageWallpaper|null);
         customImage?: (WAE2E.IChatCustomImageWallpaper|null);
-        settingTimestampMS?: (number|Long|null);
+        settingTimestampMs?: (number|Long|null);
         clearTheme?: (boolean|null);
-        colorSchemeID?: (string|null);
+        colorSchemeId?: (string|null);
     }
 
     class ChatThemeSetting implements IChatThemeSetting {
@@ -5472,9 +5472,9 @@ export namespace WAE2E {
         public solidColor?: (WAE2E.IChatSolidColorWallpaper|null);
         public stockImage?: (WAE2E.IChatStockImageWallpaper|null);
         public customImage?: (WAE2E.IChatCustomImageWallpaper|null);
-        public settingTimestampMS?: (number|Long|null);
+        public settingTimestampMs?: (number|Long|null);
         public clearTheme?: (boolean|null);
-        public colorSchemeID?: (string|null);
+        public colorSchemeId?: (string|null);
         public wallpaper?: ("defaultWallpaper"|"solidColor"|"stockImage"|"customImage");
         public static create(properties?: WAE2E.IChatThemeSetting): WAE2E.ChatThemeSetting;
         public static encode(m: WAE2E.IChatThemeSetting, w?: $protobuf.Writer): $protobuf.Writer;
@@ -5487,13 +5487,13 @@ export namespace WAE2E {
 
     interface IChat {
         displayName?: (string|null);
-        ID?: (string|null);
+        id?: (string|null);
     }
 
     class Chat implements IChat {
         constructor(p?: WAE2E.IChat);
         public displayName?: (string|null);
-        public ID?: (string|null);
+        public id?: (string|null);
         public static create(properties?: WAE2E.IChat): WAE2E.Chat;
         public static encode(m: WAE2E.IChat, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.Chat;
@@ -5540,14 +5540,14 @@ export namespace WAE2E {
     }
 
     interface IAudioMessage {
-        URL?: (string|null);
+        url?: (string|null);
         mimetype?: (string|null);
-        fileSHA256?: (Uint8Array|null);
+        fileSha256?: (Uint8Array|null);
         fileLength?: (number|Long|null);
         seconds?: (number|null);
-        PTT?: (boolean|null);
+        ptt?: (boolean|null);
         mediaKey?: (Uint8Array|null);
-        fileEncSHA256?: (Uint8Array|null);
+        fileEncSha256?: (Uint8Array|null);
         directPath?: (string|null);
         mediaKeyTimestamp?: (number|Long|null);
         contextInfo?: (WAE2E.IContextInfo|null);
@@ -5560,14 +5560,14 @@ export namespace WAE2E {
 
     class AudioMessage implements IAudioMessage {
         constructor(p?: WAE2E.IAudioMessage);
-        public URL?: (string|null);
+        public url?: (string|null);
         public mimetype?: (string|null);
-        public fileSHA256?: (Uint8Array|null);
+        public fileSha256?: (Uint8Array|null);
         public fileLength?: (number|Long|null);
         public seconds?: (number|null);
-        public PTT?: (boolean|null);
+        public ptt?: (boolean|null);
         public mediaKey?: (Uint8Array|null);
-        public fileEncSHA256?: (Uint8Array|null);
+        public fileEncSha256?: (Uint8Array|null);
         public directPath?: (string|null);
         public mediaKeyTimestamp?: (number|Long|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
@@ -5586,22 +5586,22 @@ export namespace WAE2E {
     }
 
     interface IDocumentMessage {
-        URL?: (string|null);
+        url?: (string|null);
         mimetype?: (string|null);
         title?: (string|null);
-        fileSHA256?: (Uint8Array|null);
+        fileSha256?: (Uint8Array|null);
         fileLength?: (number|Long|null);
         pageCount?: (number|null);
         mediaKey?: (Uint8Array|null);
         fileName?: (string|null);
-        fileEncSHA256?: (Uint8Array|null);
+        fileEncSha256?: (Uint8Array|null);
         directPath?: (string|null);
         mediaKeyTimestamp?: (number|Long|null);
         contactVcard?: (boolean|null);
         thumbnailDirectPath?: (string|null);
-        thumbnailSHA256?: (Uint8Array|null);
-        thumbnailEncSHA256?: (Uint8Array|null);
-        JPEGThumbnail?: (Uint8Array|null);
+        thumbnailSha256?: (Uint8Array|null);
+        thumbnailEncSha256?: (Uint8Array|null);
+        jpegThumbnail?: (Uint8Array|null);
         contextInfo?: (WAE2E.IContextInfo|null);
         thumbnailHeight?: (number|null);
         thumbnailWidth?: (number|null);
@@ -5611,22 +5611,22 @@ export namespace WAE2E {
 
     class DocumentMessage implements IDocumentMessage {
         constructor(p?: WAE2E.IDocumentMessage);
-        public URL?: (string|null);
+        public url?: (string|null);
         public mimetype?: (string|null);
         public title?: (string|null);
-        public fileSHA256?: (Uint8Array|null);
+        public fileSha256?: (Uint8Array|null);
         public fileLength?: (number|Long|null);
         public pageCount?: (number|null);
         public mediaKey?: (Uint8Array|null);
         public fileName?: (string|null);
-        public fileEncSHA256?: (Uint8Array|null);
+        public fileEncSha256?: (Uint8Array|null);
         public directPath?: (string|null);
         public mediaKeyTimestamp?: (number|Long|null);
         public contactVcard?: (boolean|null);
         public thumbnailDirectPath?: (string|null);
-        public thumbnailSHA256?: (Uint8Array|null);
-        public thumbnailEncSHA256?: (Uint8Array|null);
-        public JPEGThumbnail?: (Uint8Array|null);
+        public thumbnailSha256?: (Uint8Array|null);
+        public thumbnailEncSha256?: (Uint8Array|null);
+        public jpegThumbnail?: (Uint8Array|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
         public thumbnailHeight?: (number|null);
         public thumbnailWidth?: (number|null);
@@ -5642,12 +5642,12 @@ export namespace WAE2E {
     }
 
     interface IURLMetadata {
-        fbExperimentID?: (number|null);
+        fbExperimentId?: (number|null);
     }
 
     class URLMetadata implements IURLMetadata {
         constructor(p?: WAE2E.IURLMetadata);
-        public fbExperimentID?: (number|null);
+        public fbExperimentId?: (number|null);
         public static create(properties?: WAE2E.IURLMetadata): WAE2E.URLMetadata;
         public static encode(m: WAE2E.IURLMetadata, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.URLMetadata;
@@ -5677,8 +5677,8 @@ export namespace WAE2E {
 
     interface IMMSThumbnailMetadata {
         thumbnailDirectPath?: (string|null);
-        thumbnailSHA256?: (Uint8Array|null);
-        thumbnailEncSHA256?: (Uint8Array|null);
+        thumbnailSha256?: (Uint8Array|null);
+        thumbnailEncSha256?: (Uint8Array|null);
         mediaKey?: (Uint8Array|null);
         mediaKeyTimestamp?: (number|Long|null);
         thumbnailHeight?: (number|null);
@@ -5688,8 +5688,8 @@ export namespace WAE2E {
     class MMSThumbnailMetadata implements IMMSThumbnailMetadata {
         constructor(p?: WAE2E.IMMSThumbnailMetadata);
         public thumbnailDirectPath?: (string|null);
-        public thumbnailSHA256?: (Uint8Array|null);
-        public thumbnailEncSHA256?: (Uint8Array|null);
+        public thumbnailSha256?: (Uint8Array|null);
+        public thumbnailEncSha256?: (Uint8Array|null);
         public mediaKey?: (Uint8Array|null);
         public mediaKeyTimestamp?: (number|Long|null);
         public thumbnailHeight?: (number|null);
@@ -5708,13 +5708,13 @@ export namespace WAE2E {
         degreesLongitude?: (number|null);
         name?: (string|null);
         address?: (string|null);
-        URL?: (string|null);
+        url?: (string|null);
         isLive?: (boolean|null);
         accuracyInMeters?: (number|null);
         speedInMps?: (number|null);
         degreesClockwiseFromMagneticNorth?: (number|null);
         comment?: (string|null);
-        JPEGThumbnail?: (Uint8Array|null);
+        jpegThumbnail?: (Uint8Array|null);
         contextInfo?: (WAE2E.IContextInfo|null);
     }
 
@@ -5724,13 +5724,13 @@ export namespace WAE2E {
         public degreesLongitude?: (number|null);
         public name?: (string|null);
         public address?: (string|null);
-        public URL?: (string|null);
+        public url?: (string|null);
         public isLive?: (boolean|null);
         public accuracyInMeters?: (number|null);
         public speedInMps?: (number|null);
         public degreesClockwiseFromMagneticNorth?: (number|null);
         public comment?: (string|null);
-        public JPEGThumbnail?: (Uint8Array|null);
+        public jpegThumbnail?: (Uint8Array|null);
         public contextInfo?: (WAE2E.IContextInfo|null);
         public static create(properties?: WAE2E.ILocationMessage): WAE2E.LocationMessage;
         public static encode(m: WAE2E.ILocationMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -5764,13 +5764,13 @@ export namespace WAE2E {
     }
 
     interface ISenderKeyDistributionMessage {
-        groupID?: (string|null);
+        groupId?: (string|null);
         axolotlSenderKeyDistributionMessage?: (Uint8Array|null);
     }
 
     class SenderKeyDistributionMessage implements ISenderKeyDistributionMessage {
         constructor(p?: WAE2E.ISenderKeyDistributionMessage);
-        public groupID?: (string|null);
+        public groupId?: (string|null);
         public axolotlSenderKeyDistributionMessage?: (Uint8Array|null);
         public static create(properties?: WAE2E.ISenderKeyDistributionMessage): WAE2E.SenderKeyDistributionMessage;
         public static encode(m: WAE2E.ISenderKeyDistributionMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -5784,16 +5784,16 @@ export namespace WAE2E {
     interface IVideoEndCard {
         username?: (string|null);
         caption?: (string|null);
-        thumbnailImageURL?: (string|null);
-        profilePictureURL?: (string|null);
+        thumbnailImageUrl?: (string|null);
+        profilePictureUrl?: (string|null);
     }
 
     class VideoEndCard implements IVideoEndCard {
         constructor(p?: WAE2E.IVideoEndCard);
-        public username?: (string|null);
-        public caption?: (string|null);
-        public thumbnailImageURL?: (string|null);
-        public profilePictureURL?: (string|null);
+        public username: string;
+        public caption: string;
+        public thumbnailImageUrl: string;
+        public profilePictureUrl: string;
         public static create(properties?: WAE2E.IVideoEndCard): WAE2E.VideoEndCard;
         public static encode(m: WAE2E.IVideoEndCard, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.VideoEndCard;
@@ -5852,13 +5852,13 @@ export namespace WAE2E {
     }
 
     interface IEmbeddedMessage {
-        stanzaID?: (string|null);
+        stanzaId?: (string|null);
         message?: (WAE2E.IMessage|null);
     }
 
     class EmbeddedMessage implements IEmbeddedMessage {
         constructor(p?: WAE2E.IEmbeddedMessage);
-        public stanzaID?: (string|null);
+        public stanzaId?: (string|null);
         public message?: (WAE2E.IMessage|null);
         public static create(properties?: WAE2E.IEmbeddedMessage): WAE2E.EmbeddedMessage;
         public static encode(m: WAE2E.IEmbeddedMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -5870,38 +5870,38 @@ export namespace WAE2E {
     }
 
     interface IEmbeddedMusic {
-        musicContentMediaID?: (string|null);
-        songID?: (string|null);
+        musicContentMediaId?: (string|null);
+        songId?: (string|null);
         author?: (string|null);
         title?: (string|null);
         artworkDirectPath?: (string|null);
-        artworkSHA256?: (Uint8Array|null);
-        artworkEncSHA256?: (Uint8Array|null);
+        artworkSha256?: (Uint8Array|null);
+        artworkEncSha256?: (Uint8Array|null);
         artistAttribution?: (string|null);
         countryBlocklist?: (Uint8Array|null);
         isExplicit?: (boolean|null);
         artworkMediaKey?: (Uint8Array|null);
-        musicSongStartTimeInMS?: (number|Long|null);
-        derivedContentStartTimeInMS?: (number|Long|null);
-        overlapDurationInMS?: (number|Long|null);
+        musicSongStartTimeInMs?: (number|Long|null);
+        derivedContentStartTimeInMs?: (number|Long|null);
+        overlapDurationInMs?: (number|Long|null);
     }
 
     class EmbeddedMusic implements IEmbeddedMusic {
         constructor(p?: WAE2E.IEmbeddedMusic);
-        public musicContentMediaID?: (string|null);
-        public songID?: (string|null);
+        public musicContentMediaId?: (string|null);
+        public songId?: (string|null);
         public author?: (string|null);
         public title?: (string|null);
         public artworkDirectPath?: (string|null);
-        public artworkSHA256?: (Uint8Array|null);
-        public artworkEncSHA256?: (Uint8Array|null);
+        public artworkSha256?: (Uint8Array|null);
+        public artworkEncSha256?: (Uint8Array|null);
         public artistAttribution?: (string|null);
         public countryBlocklist?: (Uint8Array|null);
         public isExplicit?: (boolean|null);
         public artworkMediaKey?: (Uint8Array|null);
-        public musicSongStartTimeInMS?: (number|Long|null);
-        public derivedContentStartTimeInMS?: (number|Long|null);
-        public overlapDurationInMS?: (number|Long|null);
+        public musicSongStartTimeInMs?: (number|Long|null);
+        public derivedContentStartTimeInMs?: (number|Long|null);
+        public overlapDurationInMs?: (number|Long|null);
         public static create(properties?: WAE2E.IEmbeddedMusic): WAE2E.EmbeddedMusic;
         public static encode(m: WAE2E.IEmbeddedMusic, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.EmbeddedMusic;
@@ -5932,13 +5932,13 @@ export namespace WAE2E {
 
     interface ITapLinkAction {
         title?: (string|null);
-        tapURL?: (string|null);
+        tapUrl?: (string|null);
     }
 
     class TapLinkAction implements ITapLinkAction {
         constructor(p?: WAE2E.ITapLinkAction);
         public title?: (string|null);
-        public tapURL?: (string|null);
+        public tapUrl?: (string|null);
         public static create(properties?: WAE2E.ITapLinkAction): WAE2E.TapLinkAction;
         public static encode(m: WAE2E.ITapLinkAction, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.TapLinkAction;
@@ -6035,13 +6035,13 @@ export namespace WAE2E {
 
         interface IURLButton {
             displayText?: (WAE2E.IHighlyStructuredMessage|null);
-            URL?: (WAE2E.IHighlyStructuredMessage|null);
+            url?: (WAE2E.IHighlyStructuredMessage|null);
         }
 
         class URLButton implements IURLButton {
             constructor(p?: WAE2E.TemplateButton.IURLButton);
             public displayText?: (WAE2E.IHighlyStructuredMessage|null);
-            public URL?: (WAE2E.IHighlyStructuredMessage|null);
+            public url?: (WAE2E.IHighlyStructuredMessage|null);
             public static create(properties?: WAE2E.TemplateButton.IURLButton): WAE2E.TemplateButton.URLButton;
             public static encode(m: WAE2E.TemplateButton.IURLButton, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.TemplateButton.URLButton;
@@ -6053,13 +6053,13 @@ export namespace WAE2E {
 
         interface IQuickReplyButton {
             displayText?: (WAE2E.IHighlyStructuredMessage|null);
-            ID?: (string|null);
+            id?: (string|null);
         }
 
         class QuickReplyButton implements IQuickReplyButton {
             constructor(p?: WAE2E.TemplateButton.IQuickReplyButton);
             public displayText?: (WAE2E.IHighlyStructuredMessage|null);
-            public ID?: (string|null);
+            public id?: (string|null);
             public static create(properties?: WAE2E.TemplateButton.IQuickReplyButton): WAE2E.TemplateButton.QuickReplyButton;
             public static encode(m: WAE2E.TemplateButton.IQuickReplyButton, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.TemplateButton.QuickReplyButton;
@@ -6091,13 +6091,13 @@ export namespace WAE2E {
     }
 
     interface IActionLink {
-        URL?: (string|null);
+        url?: (string|null);
         buttonTitle?: (string|null);
     }
 
     class ActionLink implements IActionLink {
         constructor(p?: WAE2E.IActionLink);
-        public URL?: (string|null);
+        public url?: (string|null);
         public buttonTitle?: (string|null);
         public static create(properties?: WAE2E.IActionLink): WAE2E.ActionLink;
         public static encode(m: WAE2E.IActionLink, w?: $protobuf.Writer): $protobuf.Writer;
@@ -6109,13 +6109,13 @@ export namespace WAE2E {
     }
 
     interface IGroupMention {
-        groupJID?: (string|null);
+        groupJid?: (string|null);
         groupSubject?: (string|null);
     }
 
     class GroupMention implements IGroupMention {
         constructor(p?: WAE2E.IGroupMention);
-        public groupJID?: (string|null);
+        public groupJid?: (string|null);
         public groupSubject?: (string|null);
         public static create(properties?: WAE2E.IGroupMention): WAE2E.GroupMention;
         public static encode(m: WAE2E.IGroupMention, w?: $protobuf.Writer): $protobuf.Writer;
@@ -6128,14 +6128,14 @@ export namespace WAE2E {
 
     interface IMessageSecretMessage {
         version?: (number|null);
-        encIV?: (Uint8Array|null);
+        encIv?: (Uint8Array|null);
         encPayload?: (Uint8Array|null);
     }
 
     class MessageSecretMessage implements IMessageSecretMessage {
         constructor(p?: WAE2E.IMessageSecretMessage);
         public version?: (number|null);
-        public encIV?: (Uint8Array|null);
+        public encIv?: (Uint8Array|null);
         public encPayload?: (Uint8Array|null);
         public static create(properties?: WAE2E.IMessageSecretMessage): WAE2E.MessageSecretMessage;
         public static encode(m: WAE2E.IMessageSecretMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -6147,15 +6147,15 @@ export namespace WAE2E {
     }
 
     interface IMediaNotifyMessage {
-        expressPathURL?: (string|null);
-        fileEncSHA256?: (Uint8Array|null);
+        expressPathUrl?: (string|null);
+        fileEncSha256?: (Uint8Array|null);
         fileLength?: (number|Long|null);
     }
 
     class MediaNotifyMessage implements IMediaNotifyMessage {
         constructor(p?: WAE2E.IMediaNotifyMessage);
-        public expressPathURL?: (string|null);
-        public fileEncSHA256?: (Uint8Array|null);
+        public expressPathUrl?: (string|null);
+        public fileEncSha256?: (Uint8Array|null);
         public fileLength?: (number|Long|null);
         public static create(properties?: WAE2E.IMediaNotifyMessage): WAE2E.MediaNotifyMessage;
         public static encode(m: WAE2E.IMediaNotifyMessage, w?: $protobuf.Writer): $protobuf.Writer;
@@ -6201,17 +6201,17 @@ export namespace WAE2E {
     namespace UrlTrackingMap {
 
         interface IUrlTrackingMapElement {
-            originalURL?: (string|null);
-            unconsentedUsersURL?: (string|null);
-            consentedUsersURL?: (string|null);
+            originalUrl?: (string|null);
+            unconsentedUsersUrl?: (string|null);
+            consentedUsersUrl?: (string|null);
             cardIndex?: (number|null);
         }
 
         class UrlTrackingMapElement implements IUrlTrackingMapElement {
             constructor(p?: WAE2E.UrlTrackingMap.IUrlTrackingMapElement);
-            public originalURL?: (string|null);
-            public unconsentedUsersURL?: (string|null);
-            public consentedUsersURL?: (string|null);
+            public originalUrl?: (string|null);
+            public unconsentedUsersUrl?: (string|null);
+            public consentedUsersUrl?: (string|null);
             public cardIndex?: (number|null);
             public static create(properties?: WAE2E.UrlTrackingMap.IUrlTrackingMapElement): WAE2E.UrlTrackingMap.UrlTrackingMapElement;
             public static encode(m: WAE2E.UrlTrackingMap.IUrlTrackingMapElement, w?: $protobuf.Writer): $protobuf.Writer;
@@ -6301,15 +6301,15 @@ export namespace WAE2E {
 
     interface IGroupRootKeyShareEntry {
         groupRootKey?: (Uint8Array|null);
-        keyID?: (string|null);
-        expiryTimestampMS?: (number|Long|null);
+        keyId?: (string|null);
+        expiryTimestampMs?: (number|Long|null);
     }
 
     class GroupRootKeyShareEntry implements IGroupRootKeyShareEntry {
         constructor(p?: WAE2E.IGroupRootKeyShareEntry);
         public groupRootKey?: (Uint8Array|null);
-        public keyID?: (string|null);
-        public expiryTimestampMS?: (number|Long|null);
+        public keyId?: (string|null);
+        public expiryTimestampMs?: (number|Long|null);
         public static create(properties?: WAE2E.IGroupRootKeyShareEntry): WAE2E.GroupRootKeyShareEntry;
         public static encode(m: WAE2E.IGroupRootKeyShareEntry, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAE2E.GroupRootKeyShareEntry;

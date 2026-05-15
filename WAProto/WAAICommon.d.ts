@@ -87,32 +87,32 @@ export namespace WAAICommon {
     interface IBotPluginMetadata {
         provider?: (WAAICommon.BotPluginMetadata.SearchProvider|null);
         pluginType?: (WAAICommon.BotPluginMetadata.PluginType|null);
-        thumbnailCDNURL?: (string|null);
-        profilePhotoCDNURL?: (string|null);
-        searchProviderURL?: (string|null);
+        thumbnailCdnUrl?: (string|null);
+        profilePhotoCdnUrl?: (string|null);
+        searchProviderUrl?: (string|null);
         referenceIndex?: (number|null);
         expectedLinksCount?: (number|null);
         searchQuery?: (string|null);
         parentPluginMessageKey?: (WACommon.IMessageKey|null);
         deprecatedField?: (WAAICommon.BotPluginMetadata.PluginType|null);
         parentPluginType?: (WAAICommon.BotPluginMetadata.PluginType|null);
-        faviconCDNURL?: (string|null);
+        faviconCdnUrl?: (string|null);
     }
 
     class BotPluginMetadata implements IBotPluginMetadata {
         constructor(p?: WAAICommon.IBotPluginMetadata);
         public provider?: (WAAICommon.BotPluginMetadata.SearchProvider|null);
         public pluginType?: (WAAICommon.BotPluginMetadata.PluginType|null);
-        public thumbnailCDNURL?: (string|null);
-        public profilePhotoCDNURL?: (string|null);
-        public searchProviderURL?: (string|null);
+        public thumbnailCdnUrl?: (string|null);
+        public profilePhotoCdnUrl?: (string|null);
+        public searchProviderUrl?: (string|null);
         public referenceIndex?: (number|null);
         public expectedLinksCount?: (number|null);
         public searchQuery?: (string|null);
         public parentPluginMessageKey?: (WACommon.IMessageKey|null);
         public deprecatedField?: (WAAICommon.BotPluginMetadata.PluginType|null);
         public parentPluginType?: (WAAICommon.BotPluginMetadata.PluginType|null);
-        public faviconCDNURL?: (string|null);
+        public faviconCdnUrl?: (string|null);
         public static create(properties?: WAAICommon.IBotPluginMetadata): WAAICommon.BotPluginMetadata;
         public static encode(m: WAAICommon.IBotPluginMetadata, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommon.BotPluginMetadata;
@@ -220,9 +220,9 @@ export namespace WAAICommon {
     }
 
     interface IBotMediaMetadata {
-        fileSHA256?: (string|null);
+        fileSha256?: (string|null);
         mediaKey?: (string|null);
-        fileEncSHA256?: (string|null);
+        fileEncSha256?: (string|null);
         directPath?: (string|null);
         mediaKeyTimestamp?: (number|Long|null);
         mimetype?: (string|null);
@@ -231,9 +231,9 @@ export namespace WAAICommon {
 
     class BotMediaMetadata implements IBotMediaMetadata {
         constructor(p?: WAAICommon.IBotMediaMetadata);
-        public fileSHA256?: (string|null);
+        public fileSha256?: (string|null);
         public mediaKey?: (string|null);
-        public fileEncSHA256?: (string|null);
+        public fileEncSha256?: (string|null);
         public directPath?: (string|null);
         public mediaKeyTimestamp?: (number|Long|null);
         public mimetype?: (string|null);
@@ -402,14 +402,14 @@ export namespace WAAICommon {
             interface IBotPlanningSearchSourcesMetadata {
                 sourceTitle?: (string|null);
                 provider?: (WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata.BotPlanningSearchSourceProvider|null);
-                sourceURL?: (string|null);
+                sourceUrl?: (string|null);
             }
 
             class BotPlanningSearchSourcesMetadata implements IBotPlanningSearchSourcesMetadata {
                 constructor(p?: WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningSearchSourcesMetadata);
                 public sourceTitle?: (string|null);
                 public provider?: (WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata.BotPlanningSearchSourceProvider|null);
-                public sourceURL?: (string|null);
+                public sourceUrl?: (string|null);
                 public static create(properties?: WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningSearchSourcesMetadata): WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata;
                 public static encode(m: WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningSearchSourcesMetadata, w?: $protobuf.Writer): $protobuf.Writer;
                 public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourcesMetadata;
@@ -452,16 +452,16 @@ export namespace WAAICommon {
             interface IBotPlanningSearchSourceMetadata {
                 title?: (string|null);
                 provider?: (WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotSearchSourceProvider|null);
-                sourceURL?: (string|null);
-                favIconURL?: (string|null);
+                sourceUrl?: (string|null);
+                favIconUrl?: (string|null);
             }
 
             class BotPlanningSearchSourceMetadata implements IBotPlanningSearchSourceMetadata {
                 constructor(p?: WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningSearchSourceMetadata);
                 public title?: (string|null);
                 public provider?: (WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotSearchSourceProvider|null);
-                public sourceURL?: (string|null);
-                public favIconURL?: (string|null);
+                public sourceUrl?: (string|null);
+                public favIconUrl?: (string|null);
                 public static create(properties?: WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningSearchSourceMetadata): WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourceMetadata;
                 public static encode(m: WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.IBotPlanningSearchSourceMetadata, w?: $protobuf.Writer): $protobuf.Writer;
                 public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommon.BotProgressIndicatorMetadata.BotPlanningStepMetadata.BotPlanningSearchSourceMetadata;
@@ -707,10 +707,10 @@ export namespace WAAICommon {
 
         interface IBotSourceItem {
             provider?: (WAAICommon.BotSourcesMetadata.BotSourceItem.SourceProvider|null);
-            thumbnailCDNURL?: (string|null);
-            sourceProviderURL?: (string|null);
+            thumbnailCdnUrl?: (string|null);
+            sourceProviderUrl?: (string|null);
             sourceQuery?: (string|null);
-            faviconCDNURL?: (string|null);
+            faviconCdnUrl?: (string|null);
             citationNumber?: (number|null);
             sourceTitle?: (string|null);
         }
@@ -718,10 +718,10 @@ export namespace WAAICommon {
         class BotSourceItem implements IBotSourceItem {
             constructor(p?: WAAICommon.BotSourcesMetadata.IBotSourceItem);
             public provider?: (WAAICommon.BotSourcesMetadata.BotSourceItem.SourceProvider|null);
-            public thumbnailCDNURL?: (string|null);
-            public sourceProviderURL?: (string|null);
+            public thumbnailCdnUrl?: (string|null);
+            public sourceProviderUrl?: (string|null);
             public sourceQuery?: (string|null);
-            public faviconCDNURL?: (string|null);
+            public faviconCdnUrl?: (string|null);
             public citationNumber?: (number|null);
             public sourceTitle?: (string|null);
             public static create(properties?: WAAICommon.BotSourcesMetadata.IBotSourceItem): WAAICommon.BotSourcesMetadata.BotSourceItem;
@@ -790,13 +790,13 @@ export namespace WAAICommon {
 
         interface IAIThreadClientInfo {
             type?: (WAAICommon.AIThreadInfo.AIThreadClientInfo.AIThreadType|null);
-            sourceChatJID?: (string|null);
+            sourceChatJid?: (string|null);
         }
 
         class AIThreadClientInfo implements IAIThreadClientInfo {
             constructor(p?: WAAICommon.AIThreadInfo.IAIThreadClientInfo);
             public type?: (WAAICommon.AIThreadInfo.AIThreadClientInfo.AIThreadType|null);
-            public sourceChatJID?: (string|null);
+            public sourceChatJid?: (string|null);
             public static create(properties?: WAAICommon.AIThreadInfo.IAIThreadClientInfo): WAAICommon.AIThreadInfo.AIThreadClientInfo;
             public static encode(m: WAAICommon.AIThreadInfo.IAIThreadClientInfo, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommon.AIThreadInfo.AIThreadClientInfo;
@@ -903,26 +903,26 @@ export namespace WAAICommon {
         }
 
         interface ISideBySideSurveyMetadata {
-            selectedRequestID?: (string|null);
-            surveyID?: (number|null);
+            selectedRequestId?: (string|null);
+            surveyId?: (number|null);
             simonSessionFbid?: (string|null);
             responseOtid?: (string|null);
-            responseTimestampMSString?: (string|null);
+            responseTimestampMsString?: (string|null);
             isSelectedResponsePrimary?: (boolean|null);
-            messageIDToEdit?: (string|null);
+            messageIdToEdit?: (string|null);
             analyticsData?: (WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.ISideBySideSurveyAnalyticsData|null);
             metaAiAnalyticsData?: (WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.ISidebySideSurveyMetaAiAnalyticsData|null);
         }
 
         class SideBySideSurveyMetadata implements ISideBySideSurveyMetadata {
             constructor(p?: WAAICommon.BotFeedbackMessage.ISideBySideSurveyMetadata);
-            public selectedRequestID?: (string|null);
-            public surveyID?: (number|null);
+            public selectedRequestId?: (string|null);
+            public surveyId?: (number|null);
             public simonSessionFbid?: (string|null);
             public responseOtid?: (string|null);
-            public responseTimestampMSString?: (string|null);
+            public responseTimestampMsString?: (string|null);
             public isSelectedResponsePrimary?: (boolean|null);
-            public messageIDToEdit?: (string|null);
+            public messageIdToEdit?: (string|null);
             public analyticsData?: (WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.ISideBySideSurveyAnalyticsData|null);
             public metaAiAnalyticsData?: (WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.ISidebySideSurveyMetaAiAnalyticsData|null);
             public static create(properties?: WAAICommon.BotFeedbackMessage.ISideBySideSurveyMetadata): WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata;
@@ -937,10 +937,10 @@ export namespace WAAICommon {
         namespace SideBySideSurveyMetadata {
 
             interface ISidebySideSurveyMetaAiAnalyticsData {
-                surveyID?: (number|null);
-                primaryResponseID?: (string|null);
+                surveyId?: (number|null);
+                primaryResponseId?: (string|null);
                 testArmName?: (string|null);
-                timestampMSString?: (string|null);
+                timestampMsString?: (string|null);
                 ctaImpressionEvent?: (WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyCTAImpressionEventData|null);
                 ctaClickEvent?: (WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyCTAClickEventData|null);
                 cardImpressionEvent?: (WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyCardImpressionEventData|null);
@@ -950,10 +950,10 @@ export namespace WAAICommon {
 
             class SidebySideSurveyMetaAiAnalyticsData implements ISidebySideSurveyMetaAiAnalyticsData {
                 constructor(p?: WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.ISidebySideSurveyMetaAiAnalyticsData);
-                public surveyID?: (number|null);
-                public primaryResponseID?: (string|null);
+                public surveyId?: (number|null);
+                public primaryResponseId?: (string|null);
                 public testArmName?: (string|null);
-                public timestampMSString?: (string|null);
+                public timestampMsString?: (string|null);
                 public ctaImpressionEvent?: (WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyCTAImpressionEventData|null);
                 public ctaClickEvent?: (WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyCTAClickEventData|null);
                 public cardImpressionEvent?: (WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyCardImpressionEventData|null);
@@ -971,12 +971,12 @@ export namespace WAAICommon {
             namespace SidebySideSurveyMetaAiAnalyticsData {
 
                 interface ISideBySideSurveyAbandonEventData {
-                    abandonDwellTimeMSString?: (string|null);
+                    abandonDwellTimeMsString?: (string|null);
                 }
 
                 class SideBySideSurveyAbandonEventData implements ISideBySideSurveyAbandonEventData {
                     constructor(p?: WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyAbandonEventData);
-                    public abandonDwellTimeMSString?: (string|null);
+                    public abandonDwellTimeMsString?: (string|null);
                     public static create(properties?: WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyAbandonEventData): WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyAbandonEventData;
                     public static encode(m: WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyAbandonEventData, w?: $protobuf.Writer): $protobuf.Writer;
                     public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyAbandonEventData;
@@ -987,14 +987,14 @@ export namespace WAAICommon {
                 }
 
                 interface ISideBySideSurveyResponseEventData {
-                    responseDwellTimeMSString?: (string|null);
-                    selectedResponseID?: (string|null);
+                    responseDwellTimeMsString?: (string|null);
+                    selectedResponseId?: (string|null);
                 }
 
                 class SideBySideSurveyResponseEventData implements ISideBySideSurveyResponseEventData {
                     constructor(p?: WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyResponseEventData);
-                    public responseDwellTimeMSString?: (string|null);
-                    public selectedResponseID?: (string|null);
+                    public responseDwellTimeMsString?: (string|null);
+                    public selectedResponseId?: (string|null);
                     public static create(properties?: WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyResponseEventData): WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyResponseEventData;
                     public static encode(m: WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyResponseEventData, w?: $protobuf.Writer): $protobuf.Writer;
                     public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyResponseEventData;
@@ -1020,13 +1020,13 @@ export namespace WAAICommon {
 
                 interface ISideBySideSurveyCTAClickEventData {
                     isSurveyExpired?: (boolean|null);
-                    clickDwellTimeMSString?: (string|null);
+                    clickDwellTimeMsString?: (string|null);
                 }
 
                 class SideBySideSurveyCTAClickEventData implements ISideBySideSurveyCTAClickEventData {
                     constructor(p?: WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyCTAClickEventData);
                     public isSurveyExpired?: (boolean|null);
-                    public clickDwellTimeMSString?: (string|null);
+                    public clickDwellTimeMsString?: (string|null);
                     public static create(properties?: WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyCTAClickEventData): WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyCTAClickEventData;
                     public static encode(m: WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.ISideBySideSurveyCTAClickEventData, w?: $protobuf.Writer): $protobuf.Writer;
                     public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyCTAClickEventData;
@@ -1125,11 +1125,11 @@ export namespace WAAICommon {
             type?: (WAAICommon.AIHomeState.AIHomeOption.AIHomeActionType|null);
             title?: (string|null);
             promptText?: (string|null);
-            sessionID?: (string|null);
+            sessionId?: (string|null);
             imageWdsIdentifier?: (string|null);
             imageTintColor?: (string|null);
             imageBackgroundColor?: (string|null);
-            cardTypeID?: (string|null);
+            cardTypeId?: (string|null);
         }
 
         class AIHomeOption implements IAIHomeOption {
@@ -1137,11 +1137,11 @@ export namespace WAAICommon {
             public type?: (WAAICommon.AIHomeState.AIHomeOption.AIHomeActionType|null);
             public title?: (string|null);
             public promptText?: (string|null);
-            public sessionID?: (string|null);
+            public sessionId?: (string|null);
             public imageWdsIdentifier?: (string|null);
             public imageTintColor?: (string|null);
             public imageBackgroundColor?: (string|null);
-            public cardTypeID?: (string|null);
+            public cardTypeId?: (string|null);
             public static create(properties?: WAAICommon.AIHomeState.IAIHomeOption): WAAICommon.AIHomeState.AIHomeOption;
             public static encode(m: WAAICommon.AIHomeState.IAIHomeOption, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommon.AIHomeState.AIHomeOption;
@@ -1196,7 +1196,7 @@ export namespace WAAICommon {
         suggestedPrompts?: (string[]|null);
         selectedPromptIndex?: (number|null);
         promptSuggestions?: (WAAICommon.IBotPromptSuggestions|null);
-        selectedPromptID?: (string|null);
+        selectedPromptId?: (string|null);
     }
 
     class BotSuggestedPromptMetadata implements IBotSuggestedPromptMetadata {
@@ -1204,7 +1204,7 @@ export namespace WAAICommon {
         public suggestedPrompts: string[];
         public selectedPromptIndex?: (number|null);
         public promptSuggestions?: (WAAICommon.IBotPromptSuggestions|null);
-        public selectedPromptID?: (string|null);
+        public selectedPromptId?: (string|null);
         public static create(properties?: WAAICommon.IBotSuggestedPromptMetadata): WAAICommon.BotSuggestedPromptMetadata;
         public static encode(m: WAAICommon.IBotSuggestedPromptMetadata, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommon.BotSuggestedPromptMetadata;
@@ -1232,13 +1232,13 @@ export namespace WAAICommon {
 
     interface IBotPromptSuggestion {
         prompt?: (string|null);
-        promptID?: (string|null);
+        promptId?: (string|null);
     }
 
     class BotPromptSuggestion implements IBotPromptSuggestion {
         constructor(p?: WAAICommon.IBotPromptSuggestion);
         public prompt?: (string|null);
-        public promptID?: (string|null);
+        public promptId?: (string|null);
         public static create(properties?: WAAICommon.IBotPromptSuggestion): WAAICommon.BotPromptSuggestion;
         public static encode(m: WAAICommon.IBotPromptSuggestion, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommon.BotPromptSuggestion;
@@ -1290,13 +1290,13 @@ export namespace WAAICommon {
 
     interface IBotMemoryFact {
         fact?: (string|null);
-        factID?: (string|null);
+        factId?: (string|null);
     }
 
     class BotMemoryFact implements IBotMemoryFact {
         constructor(p?: WAAICommon.IBotMemoryFact);
         public fact?: (string|null);
-        public factID?: (string|null);
+        public factId?: (string|null);
         public static create(properties?: WAAICommon.IBotMemoryFact): WAAICommon.BotMemoryFact;
         public static encode(m: WAAICommon.IBotMemoryFact, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommon.BotMemoryFact;
@@ -1360,14 +1360,14 @@ export namespace WAAICommon {
     }
 
     interface IBotMetricsMetadata {
-        destinationID?: (string|null);
+        destinationId?: (string|null);
         destinationEntryPoint?: (WAAICommon.BotMetricsEntryPoint|null);
         threadOrigin?: (WAAICommon.BotMetricsThreadEntryPoint|null);
     }
 
     class BotMetricsMetadata implements IBotMetricsMetadata {
         constructor(p?: WAAICommon.IBotMetricsMetadata);
-        public destinationID?: (string|null);
+        public destinationId?: (string|null);
         public destinationEntryPoint?: (WAAICommon.BotMetricsEntryPoint|null);
         public threadOrigin?: (WAAICommon.BotMetricsThreadEntryPoint|null);
         public static create(properties?: WAAICommon.IBotMetricsMetadata): WAAICommon.BotMetricsMetadata;
@@ -1380,13 +1380,13 @@ export namespace WAAICommon {
     }
 
     interface IBotSessionMetadata {
-        sessionID?: (string|null);
+        sessionId?: (string|null);
         sessionSource?: (WAAICommon.BotSessionSource|null);
     }
 
     class BotSessionMetadata implements IBotSessionMetadata {
         constructor(p?: WAAICommon.IBotSessionMetadata);
-        public sessionID?: (string|null);
+        public sessionId?: (string|null);
         public sessionSource?: (WAAICommon.BotSessionSource|null);
         public static create(properties?: WAAICommon.IBotSessionMetadata): WAAICommon.BotSessionMetadata;
         public static encode(m: WAAICommon.IBotSessionMetadata, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1414,16 +1414,16 @@ export namespace WAAICommon {
     }
 
     interface IInThreadSurveyMetadata {
-        tessaSessionID?: (string|null);
-        simonSessionID?: (string|null);
-        simonSurveyID?: (string|null);
-        tessaRootID?: (string|null);
-        requestID?: (string|null);
+        tessaSessionId?: (string|null);
+        simonSessionId?: (string|null);
+        simonSurveyId?: (string|null);
+        tessaRootId?: (string|null);
+        requestId?: (string|null);
         tessaEvent?: (string|null);
         invitationHeaderText?: (string|null);
         invitationBodyText?: (string|null);
         invitationCtaText?: (string|null);
-        invitationCtaURL?: (string|null);
+        invitationCtaUrl?: (string|null);
         surveyTitle?: (string|null);
         questions?: (WAAICommon.InThreadSurveyMetadata.IInThreadSurveyQuestion[]|null);
         surveyContinueButtonText?: (string|null);
@@ -1436,16 +1436,16 @@ export namespace WAAICommon {
 
     class InThreadSurveyMetadata implements IInThreadSurveyMetadata {
         constructor(p?: WAAICommon.IInThreadSurveyMetadata);
-        public tessaSessionID?: (string|null);
-        public simonSessionID?: (string|null);
-        public simonSurveyID?: (string|null);
-        public tessaRootID?: (string|null);
-        public requestID?: (string|null);
+        public tessaSessionId?: (string|null);
+        public simonSessionId?: (string|null);
+        public simonSurveyId?: (string|null);
+        public tessaRootId?: (string|null);
+        public requestId?: (string|null);
         public tessaEvent?: (string|null);
         public invitationHeaderText?: (string|null);
         public invitationBodyText?: (string|null);
         public invitationCtaText?: (string|null);
-        public invitationCtaURL?: (string|null);
+        public invitationCtaUrl?: (string|null);
         public surveyTitle?: (string|null);
         public questions: WAAICommon.InThreadSurveyMetadata.IInThreadSurveyQuestion[];
         public surveyContinueButtonText?: (string|null);
@@ -1467,13 +1467,13 @@ export namespace WAAICommon {
 
         interface IInThreadSurveyPrivacyStatementPart {
             text?: (string|null);
-            URL?: (string|null);
+            url?: (string|null);
         }
 
         class InThreadSurveyPrivacyStatementPart implements IInThreadSurveyPrivacyStatementPart {
             constructor(p?: WAAICommon.InThreadSurveyMetadata.IInThreadSurveyPrivacyStatementPart);
             public text?: (string|null);
-            public URL?: (string|null);
+            public url?: (string|null);
             public static create(properties?: WAAICommon.InThreadSurveyMetadata.IInThreadSurveyPrivacyStatementPart): WAAICommon.InThreadSurveyMetadata.InThreadSurveyPrivacyStatementPart;
             public static encode(m: WAAICommon.InThreadSurveyMetadata.IInThreadSurveyPrivacyStatementPart, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommon.InThreadSurveyMetadata.InThreadSurveyPrivacyStatementPart;
@@ -1505,14 +1505,14 @@ export namespace WAAICommon {
 
         interface IInThreadSurveyQuestion {
             questionText?: (string|null);
-            questionID?: (string|null);
+            questionId?: (string|null);
             questionOptions?: (WAAICommon.InThreadSurveyMetadata.IInThreadSurveyOption[]|null);
         }
 
         class InThreadSurveyQuestion implements IInThreadSurveyQuestion {
             constructor(p?: WAAICommon.InThreadSurveyMetadata.IInThreadSurveyQuestion);
             public questionText?: (string|null);
-            public questionID?: (string|null);
+            public questionId?: (string|null);
             public questionOptions: WAAICommon.InThreadSurveyMetadata.IInThreadSurveyOption[];
             public static create(properties?: WAAICommon.InThreadSurveyMetadata.IInThreadSurveyQuestion): WAAICommon.InThreadSurveyMetadata.InThreadSurveyQuestion;
             public static encode(m: WAAICommon.InThreadSurveyMetadata.IInThreadSurveyQuestion, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1561,14 +1561,14 @@ export namespace WAAICommon {
     namespace BotUnifiedResponseMutation {
 
         interface IMediaDetailsMetadata {
-            ID?: (string|null);
+            id?: (string|null);
             highResMedia?: (WAAICommon.IBotMediaMetadata|null);
             previewMedia?: (WAAICommon.IBotMediaMetadata|null);
         }
 
         class MediaDetailsMetadata implements IMediaDetailsMetadata {
             constructor(p?: WAAICommon.BotUnifiedResponseMutation.IMediaDetailsMetadata);
-            public ID?: (string|null);
+            public id?: (string|null);
             public highResMedia?: (WAAICommon.IBotMediaMetadata|null);
             public previewMedia?: (WAAICommon.IBotMediaMetadata|null);
             public static create(properties?: WAAICommon.BotUnifiedResponseMutation.IMediaDetailsMetadata): WAAICommon.BotUnifiedResponseMutation.MediaDetailsMetadata;
@@ -1581,13 +1581,13 @@ export namespace WAAICommon {
         }
 
         interface ISideBySideMetadata {
-            primaryResponseID?: (string|null);
+            primaryResponseId?: (string|null);
             surveyCtaHasRendered?: (boolean|null);
         }
 
         class SideBySideMetadata implements ISideBySideMetadata {
             constructor(p?: WAAICommon.BotUnifiedResponseMutation.ISideBySideMetadata);
-            public primaryResponseID?: (string|null);
+            public primaryResponseId?: (string|null);
             public surveyCtaHasRendered?: (boolean|null);
             public static create(properties?: WAAICommon.BotUnifiedResponseMutation.ISideBySideMetadata): WAAICommon.BotUnifiedResponseMutation.SideBySideMetadata;
             public static encode(m: WAAICommon.BotUnifiedResponseMutation.ISideBySideMetadata, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1600,13 +1600,13 @@ export namespace WAAICommon {
     }
 
     interface IAIMediaCollectionMetadata {
-        collectionID?: (string|null);
+        collectionId?: (string|null);
         uploadOrderIndex?: (number|null);
     }
 
     class AIMediaCollectionMetadata implements IAIMediaCollectionMetadata {
         constructor(p?: WAAICommon.IAIMediaCollectionMetadata);
-        public collectionID?: (string|null);
+        public collectionId?: (string|null);
         public uploadOrderIndex?: (number|null);
         public static create(properties?: WAAICommon.IAIMediaCollectionMetadata): WAAICommon.AIMediaCollectionMetadata;
         public static encode(m: WAAICommon.IAIMediaCollectionMetadata, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1618,14 +1618,14 @@ export namespace WAAICommon {
     }
 
     interface IAIMediaCollectionMessage {
-        collectionID?: (string|null);
+        collectionId?: (string|null);
         expectedMediaCount?: (number|null);
         hasGlobalCaption?: (boolean|null);
     }
 
     class AIMediaCollectionMessage implements IAIMediaCollectionMessage {
         constructor(p?: WAAICommon.IAIMediaCollectionMessage);
-        public collectionID?: (string|null);
+        public collectionId?: (string|null);
         public expectedMediaCount?: (number|null);
         public hasGlobalCaption?: (boolean|null);
         public static create(properties?: WAAICommon.IAIMediaCollectionMessage): WAAICommon.AIMediaCollectionMessage;
@@ -1658,13 +1658,13 @@ export namespace WAAICommon {
     }
 
     interface IBotResolvedToolCallMetadata {
-        toolCallID?: (string|null);
+        toolCallId?: (string|null);
         resolutionDataSerialized?: (string|null);
     }
 
     class BotResolvedToolCallMetadata implements IBotResolvedToolCallMetadata {
         constructor(p?: WAAICommon.IBotResolvedToolCallMetadata);
-        public toolCallID?: (string|null);
+        public toolCallId?: (string|null);
         public resolutionDataSerialized?: (string|null);
         public static create(properties?: WAAICommon.IBotResolvedToolCallMetadata): WAAICommon.BotResolvedToolCallMetadata;
         public static encode(m: WAAICommon.IBotResolvedToolCallMetadata, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1676,10 +1676,10 @@ export namespace WAAICommon {
     }
 
     interface IBotMetadata {
-        personaID?: (string|null);
+        personaId?: (string|null);
         pluginMetadata?: (WAAICommon.IBotPluginMetadata|null);
         suggestedPromptMetadata?: (WAAICommon.IBotSuggestedPromptMetadata|null);
-        invokerJID?: (string|null);
+        invokerJid?: (string|null);
         sessionMetadata?: (WAAICommon.IBotSessionMetadata|null);
         memuMetadata?: (WAAICommon.IBotMemuMetadata|null);
         timezone?: (string|null);
@@ -1699,8 +1699,8 @@ export namespace WAAICommon {
         botModeSelectionMetadata?: (WAAICommon.IBotModeSelectionMetadata|null);
         botQuotaMetadata?: (WAAICommon.IBotQuotaMetadata|null);
         botAgeCollectionMetadata?: (WAAICommon.IBotAgeCollectionMetadata|null);
-        conversationStarterPromptID?: (string|null);
-        botResponseID?: (string|null);
+        conversationStarterPromptId?: (string|null);
+        botResponseId?: (string|null);
         verificationMetadata?: (WAAICommon.IBotSignatureVerificationMetadata|null);
         unifiedResponseMutation?: (WAAICommon.IBotUnifiedResponseMutation|null);
         botMessageOriginMetadata?: (WAAICommon.IBotMessageOriginMetadata|null);
@@ -1721,10 +1721,10 @@ export namespace WAAICommon {
 
     class BotMetadata implements IBotMetadata {
         constructor(p?: WAAICommon.IBotMetadata);
-        public personaID?: (string|null);
+        public personaId?: (string|null);
         public pluginMetadata?: (WAAICommon.IBotPluginMetadata|null);
         public suggestedPromptMetadata?: (WAAICommon.IBotSuggestedPromptMetadata|null);
-        public invokerJID?: (string|null);
+        public invokerJid?: (string|null);
         public sessionMetadata?: (WAAICommon.IBotSessionMetadata|null);
         public memuMetadata?: (WAAICommon.IBotMemuMetadata|null);
         public timezone?: (string|null);
@@ -1744,8 +1744,8 @@ export namespace WAAICommon {
         public botModeSelectionMetadata?: (WAAICommon.IBotModeSelectionMetadata|null);
         public botQuotaMetadata?: (WAAICommon.IBotQuotaMetadata|null);
         public botAgeCollectionMetadata?: (WAAICommon.IBotAgeCollectionMetadata|null);
-        public conversationStarterPromptID?: (string|null);
-        public botResponseID?: (string|null);
+        public conversationStarterPromptId?: (string|null);
+        public botResponseId?: (string|null);
         public verificationMetadata?: (WAAICommon.IBotSignatureVerificationMetadata|null);
         public unifiedResponseMutation?: (WAAICommon.IBotUnifiedResponseMutation|null);
         public botMessageOriginMetadata?: (WAAICommon.IBotMessageOriginMetadata|null);
@@ -1804,13 +1804,13 @@ export namespace WAAICommon {
     }
 
     interface IBotRenderingConfigMetadata {
-        bloksVersioningID?: (string|null);
+        bloksVersioningId?: (string|null);
         pixelDensity?: (number|null);
     }
 
     class BotRenderingConfigMetadata implements IBotRenderingConfigMetadata {
         constructor(p?: WAAICommon.IBotRenderingConfigMetadata);
-        public bloksVersioningID?: (string|null);
+        public bloksVersioningId?: (string|null);
         public pixelDensity?: (number|null);
         public static create(properties?: WAAICommon.IBotRenderingConfigMetadata): WAAICommon.BotRenderingConfigMetadata;
         public static encode(m: WAAICommon.IBotRenderingConfigMetadata, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1839,14 +1839,14 @@ export namespace WAAICommon {
 
     interface IForwardedAIBotMessageInfo {
         botName?: (string|null);
-        botJID?: (string|null);
+        botJid?: (string|null);
         creatorName?: (string|null);
     }
 
     class ForwardedAIBotMessageInfo implements IForwardedAIBotMessageInfo {
         constructor(p?: WAAICommon.IForwardedAIBotMessageInfo);
         public botName?: (string|null);
-        public botJID?: (string|null);
+        public botJid?: (string|null);
         public creatorName?: (string|null);
         public static create(properties?: WAAICommon.IForwardedAIBotMessageInfo): WAAICommon.ForwardedAIBotMessageInfo;
         public static encode(m: WAAICommon.IForwardedAIBotMessageInfo, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1893,13 +1893,13 @@ export namespace WAAICommon {
 
     interface IAIRegenerateMetadata {
         messageKey?: (WACommon.IMessageKey|null);
-        responseTimestampMS?: (number|Long|null);
+        responseTimestampMs?: (number|Long|null);
     }
 
     class AIRegenerateMetadata implements IAIRegenerateMetadata {
         constructor(p?: WAAICommon.IAIRegenerateMetadata);
         public messageKey?: (WACommon.IMessageKey|null);
-        public responseTimestampMS?: (number|Long|null);
+        public responseTimestampMs?: (number|Long|null);
         public static create(properties?: WAAICommon.IAIRegenerateMetadata): WAAICommon.AIRegenerateMetadata;
         public static encode(m: WAAICommon.IAIRegenerateMetadata, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommon.AIRegenerateMetadata;
@@ -1911,14 +1911,14 @@ export namespace WAAICommon {
 
     interface ISessionTransparencyMetadata {
         disclaimerText?: (string|null);
-        hcaID?: (string|null);
+        hcaId?: (string|null);
         sessionTransparencyType?: (WAAICommon.SessionTransparencyType|null);
     }
 
     class SessionTransparencyMetadata implements ISessionTransparencyMetadata {
         constructor(p?: WAAICommon.ISessionTransparencyMetadata);
         public disclaimerText?: (string|null);
-        public hcaID?: (string|null);
+        public hcaId?: (string|null);
         public sessionTransparencyType?: (WAAICommon.SessionTransparencyType|null);
         public static create(properties?: WAAICommon.ISessionTransparencyMetadata): WAAICommon.SessionTransparencyMetadata;
         public static encode(m: WAAICommon.ISessionTransparencyMetadata, w?: $protobuf.Writer): $protobuf.Writer;

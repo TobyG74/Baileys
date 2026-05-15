@@ -21,18 +21,18 @@ export namespace WAAICommonDeprecated {
     }
 
     interface IAIRichResponseInlineImageMetadata {
-        imageURL?: (WAAICommonDeprecated.IAIRichResponseImageURL|null);
+        imageUrl?: (WAAICommonDeprecated.IAIRichResponseImageURL|null);
         imageText?: (string|null);
         alignment?: (WAAICommonDeprecated.AIRichResponseInlineImageMetadata.AIRichResponseImageAlignment|null);
-        tapLinkURL?: (string|null);
+        tapLinkUrl?: (string|null);
     }
 
     class AIRichResponseInlineImageMetadata implements IAIRichResponseInlineImageMetadata {
         constructor(p?: WAAICommonDeprecated.IAIRichResponseInlineImageMetadata);
-        public imageURL?: (WAAICommonDeprecated.IAIRichResponseImageURL|null);
+        public imageUrl?: (WAAICommonDeprecated.IAIRichResponseImageURL|null);
         public imageText?: (string|null);
         public alignment?: (WAAICommonDeprecated.AIRichResponseInlineImageMetadata.AIRichResponseImageAlignment|null);
-        public tapLinkURL?: (string|null);
+        public tapLinkUrl?: (string|null);
         public static create(properties?: WAAICommonDeprecated.IAIRichResponseInlineImageMetadata): WAAICommonDeprecated.AIRichResponseInlineImageMetadata;
         public static encode(m: WAAICommonDeprecated.IAIRichResponseInlineImageMetadata, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommonDeprecated.AIRichResponseInlineImageMetadata;
@@ -102,7 +102,7 @@ export namespace WAAICommonDeprecated {
     interface IAIRichResponseDynamicMetadata {
         type?: (WAAICommonDeprecated.AIRichResponseDynamicMetadata.AIRichResponseDynamicMetadataType|null);
         version?: (number|Long|null);
-        URL?: (string|null);
+        url?: (string|null);
         loopCount?: (number|null);
     }
 
@@ -110,7 +110,7 @@ export namespace WAAICommonDeprecated {
         constructor(p?: WAAICommonDeprecated.IAIRichResponseDynamicMetadata);
         public type?: (WAAICommonDeprecated.AIRichResponseDynamicMetadata.AIRichResponseDynamicMetadataType|null);
         public version?: (number|Long|null);
-        public URL?: (string|null);
+        public url?: (string|null);
         public loopCount?: (number|null);
         public static create(properties?: WAAICommonDeprecated.IAIRichResponseDynamicMetadata): WAAICommonDeprecated.AIRichResponseDynamicMetadata;
         public static encode(m: WAAICommonDeprecated.IAIRichResponseDynamicMetadata, w?: $protobuf.Writer): $protobuf.Writer;
@@ -174,17 +174,17 @@ export namespace WAAICommonDeprecated {
 
         interface IAIRichResponseReelItem {
             title?: (string|null);
-            profileIconURL?: (string|null);
-            thumbnailURL?: (string|null);
-            videoURL?: (string|null);
+            profileIconUrl?: (string|null);
+            thumbnailUrl?: (string|null);
+            videoUrl?: (string|null);
         }
 
         class AIRichResponseReelItem implements IAIRichResponseReelItem {
             constructor(p?: WAAICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem);
             public title?: (string|null);
-            public profileIconURL?: (string|null);
-            public thumbnailURL?: (string|null);
-            public videoURL?: (string|null);
+            public profileIconUrl?: (string|null);
+            public thumbnailUrl?: (string|null);
+            public videoUrl?: (string|null);
             public static create(properties?: WAAICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem): WAAICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseReelItem;
             public static encode(m: WAAICommonDeprecated.AIRichResponseContentItemsMetadata.IAIRichResponseReelItem, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommonDeprecated.AIRichResponseContentItemsMetadata.AIRichResponseReelItem;
@@ -196,16 +196,16 @@ export namespace WAAICommonDeprecated {
     }
 
     interface IAIRichResponseImageURL {
-        imagePreviewURL?: (string|null);
-        imageHighResURL?: (string|null);
-        sourceURL?: (string|null);
+        imagePreviewUrl?: (string|null);
+        imageHighResUrl?: (string|null);
+        sourceUrl?: (string|null);
     }
 
     class AIRichResponseImageURL implements IAIRichResponseImageURL {
         constructor(p?: WAAICommonDeprecated.IAIRichResponseImageURL);
-        public imagePreviewURL?: (string|null);
-        public imageHighResURL?: (string|null);
-        public sourceURL?: (string|null);
+        public imagePreviewUrl?: (string|null);
+        public imageHighResUrl?: (string|null);
+        public sourceUrl?: (string|null);
         public static create(properties?: WAAICommonDeprecated.IAIRichResponseImageURL): WAAICommonDeprecated.AIRichResponseImageURL;
         public static encode(m: WAAICommonDeprecated.IAIRichResponseImageURL, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommonDeprecated.AIRichResponseImageURL;
@@ -216,14 +216,14 @@ export namespace WAAICommonDeprecated {
     }
 
     interface IAIRichResponseGridImageMetadata {
-        gridImageURL?: (WAAICommonDeprecated.IAIRichResponseImageURL|null);
-        imageURLs?: (WAAICommonDeprecated.IAIRichResponseImageURL[]|null);
+        gridImageUrl?: (WAAICommonDeprecated.IAIRichResponseImageURL|null);
+        imageUrls?: (WAAICommonDeprecated.IAIRichResponseImageURL[]|null);
     }
 
     class AIRichResponseGridImageMetadata implements IAIRichResponseGridImageMetadata {
         constructor(p?: WAAICommonDeprecated.IAIRichResponseGridImageMetadata);
-        public gridImageURL?: (WAAICommonDeprecated.IAIRichResponseImageURL|null);
-        public imageURLs: WAAICommonDeprecated.IAIRichResponseImageURL[];
+        public gridImageUrl?: (WAAICommonDeprecated.IAIRichResponseImageURL|null);
+        public imageUrls: WAAICommonDeprecated.IAIRichResponseImageURL[];
         public static create(properties?: WAAICommonDeprecated.IAIRichResponseGridImageMetadata): WAAICommonDeprecated.AIRichResponseGridImageMetadata;
         public static encode(m: WAAICommonDeprecated.IAIRichResponseGridImageMetadata, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WAAICommonDeprecated.AIRichResponseGridImageMetadata;
@@ -294,7 +294,7 @@ export namespace WAAICommonDeprecated {
 
         interface IAIRichResponseLatexExpression {
             latexExpression?: (string|null);
-            URL?: (string|null);
+            url?: (string|null);
             width?: (number|null);
             height?: (number|null);
             fontHeight?: (number|null);
@@ -307,7 +307,7 @@ export namespace WAAICommonDeprecated {
         class AIRichResponseLatexExpression implements IAIRichResponseLatexExpression {
             constructor(p?: WAAICommonDeprecated.AIRichResponseLatexMetadata.IAIRichResponseLatexExpression);
             public latexExpression?: (string|null);
-            public URL?: (string|null);
+            public url?: (string|null);
             public width?: (number|null);
             public height?: (number|null);
             public fontHeight?: (number|null);

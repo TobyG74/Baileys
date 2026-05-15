@@ -107,13 +107,13 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        StickerPackMessage.prototype.stickerPackID = null;
+        StickerPackMessage.prototype.stickerPackId = null;
         StickerPackMessage.prototype.name = null;
         StickerPackMessage.prototype.publisher = null;
         StickerPackMessage.prototype.stickers = $util.emptyArray;
         StickerPackMessage.prototype.fileLength = null;
-        StickerPackMessage.prototype.fileSHA256 = null;
-        StickerPackMessage.prototype.fileEncSHA256 = null;
+        StickerPackMessage.prototype.fileSha256 = null;
+        StickerPackMessage.prototype.fileEncSha256 = null;
         StickerPackMessage.prototype.mediaKey = null;
         StickerPackMessage.prototype.directPath = null;
         StickerPackMessage.prototype.caption = null;
@@ -122,8 +122,8 @@ export const WAE2E = $root.WAE2E = (() => {
         StickerPackMessage.prototype.mediaKeyTimestamp = null;
         StickerPackMessage.prototype.trayIconFileName = null;
         StickerPackMessage.prototype.thumbnailDirectPath = null;
-        StickerPackMessage.prototype.thumbnailSHA256 = null;
-        StickerPackMessage.prototype.thumbnailEncSHA256 = null;
+        StickerPackMessage.prototype.thumbnailSha256 = null;
+        StickerPackMessage.prototype.thumbnailEncSha256 = null;
         StickerPackMessage.prototype.thumbnailHeight = null;
         StickerPackMessage.prototype.thumbnailWidth = null;
         StickerPackMessage.prototype.imageDataHash = null;
@@ -133,8 +133,8 @@ export const WAE2E = $root.WAE2E = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StickerPackMessage.prototype, "_stickerPackID", {
-            get: $util.oneOfGetter($oneOfFields = ["stickerPackID"]),
+        Object.defineProperty(StickerPackMessage.prototype, "_stickerPackId", {
+            get: $util.oneOfGetter($oneOfFields = ["stickerPackId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -157,14 +157,14 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StickerPackMessage.prototype, "_fileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+        Object.defineProperty(StickerPackMessage.prototype, "_fileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StickerPackMessage.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(StickerPackMessage.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -217,14 +217,14 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StickerPackMessage.prototype, "_thumbnailSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailSHA256"]),
+        Object.defineProperty(StickerPackMessage.prototype, "_thumbnailSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StickerPackMessage.prototype, "_thumbnailEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailEncSHA256"]),
+        Object.defineProperty(StickerPackMessage.prototype, "_thumbnailEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -265,8 +265,8 @@ export const WAE2E = $root.WAE2E = (() => {
         StickerPackMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.stickerPackID != null && Object.hasOwnProperty.call(m, "stickerPackID"))
-                w.uint32(10).string(m.stickerPackID);
+            if (m.stickerPackId != null && Object.hasOwnProperty.call(m, "stickerPackId"))
+                w.uint32(10).string(m.stickerPackId);
             if (m.name != null && Object.hasOwnProperty.call(m, "name"))
                 w.uint32(18).string(m.name);
             if (m.publisher != null && Object.hasOwnProperty.call(m, "publisher"))
@@ -277,10 +277,10 @@ export const WAE2E = $root.WAE2E = (() => {
             }
             if (m.fileLength != null && Object.hasOwnProperty.call(m, "fileLength"))
                 w.uint32(40).uint64(m.fileLength);
-            if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                w.uint32(50).bytes(m.fileSHA256);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(58).bytes(m.fileEncSHA256);
+            if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                w.uint32(50).bytes(m.fileSha256);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(58).bytes(m.fileEncSha256);
             if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                 w.uint32(66).bytes(m.mediaKey);
             if (m.directPath != null && Object.hasOwnProperty.call(m, "directPath"))
@@ -297,10 +297,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(114).string(m.trayIconFileName);
             if (m.thumbnailDirectPath != null && Object.hasOwnProperty.call(m, "thumbnailDirectPath"))
                 w.uint32(122).string(m.thumbnailDirectPath);
-            if (m.thumbnailSHA256 != null && Object.hasOwnProperty.call(m, "thumbnailSHA256"))
-                w.uint32(130).bytes(m.thumbnailSHA256);
-            if (m.thumbnailEncSHA256 != null && Object.hasOwnProperty.call(m, "thumbnailEncSHA256"))
-                w.uint32(138).bytes(m.thumbnailEncSHA256);
+            if (m.thumbnailSha256 != null && Object.hasOwnProperty.call(m, "thumbnailSha256"))
+                w.uint32(130).bytes(m.thumbnailSha256);
+            if (m.thumbnailEncSha256 != null && Object.hasOwnProperty.call(m, "thumbnailEncSha256"))
+                w.uint32(138).bytes(m.thumbnailEncSha256);
             if (m.thumbnailHeight != null && Object.hasOwnProperty.call(m, "thumbnailHeight"))
                 w.uint32(144).uint32(m.thumbnailHeight);
             if (m.thumbnailWidth != null && Object.hasOwnProperty.call(m, "thumbnailWidth"))
@@ -328,7 +328,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.stickerPackID = r.string();
+                        m.stickerPackId = r.string();
                         break;
                     }
                 case 2: {
@@ -350,11 +350,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 6: {
-                        m.fileSHA256 = r.bytes();
+                        m.fileSha256 = r.bytes();
                         break;
                     }
                 case 7: {
-                        m.fileEncSHA256 = r.bytes();
+                        m.fileEncSha256 = r.bytes();
                         break;
                     }
                 case 8: {
@@ -390,11 +390,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 16: {
-                        m.thumbnailSHA256 = r.bytes();
+                        m.thumbnailSha256 = r.bytes();
                         break;
                     }
                 case 17: {
-                        m.thumbnailEncSHA256 = r.bytes();
+                        m.thumbnailEncSha256 = r.bytes();
                         break;
                     }
                 case 18: {
@@ -433,8 +433,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.StickerPackMessage();
-            if (d.stickerPackID != null) {
-                m.stickerPackID = String(d.stickerPackID);
+            if (d.stickerPackId != null) {
+                m.stickerPackId = String(d.stickerPackId);
             }
             if (d.name != null) {
                 m.name = String(d.name);
@@ -462,17 +462,17 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (typeof d.fileLength === "object")
                     m.fileLength = new $util.LongBits(d.fileLength.low >>> 0, d.fileLength.high >>> 0).toNumber(true);
             }
-            if (d.fileSHA256 != null) {
-                if (typeof d.fileSHA256 === "string")
-                    $util.base64.decode(d.fileSHA256, m.fileSHA256 = $util.newBuffer($util.base64.length(d.fileSHA256)), 0);
-                else if (d.fileSHA256.length >= 0)
-                    m.fileSHA256 = d.fileSHA256;
+            if (d.fileSha256 != null) {
+                if (typeof d.fileSha256 === "string")
+                    $util.base64.decode(d.fileSha256, m.fileSha256 = $util.newBuffer($util.base64.length(d.fileSha256)), 0);
+                else if (d.fileSha256.length >= 0)
+                    m.fileSha256 = d.fileSha256;
             }
-            if (d.fileEncSHA256 != null) {
-                if (typeof d.fileEncSHA256 === "string")
-                    $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                else if (d.fileEncSHA256.length >= 0)
-                    m.fileEncSHA256 = d.fileEncSHA256;
+            if (d.fileEncSha256 != null) {
+                if (typeof d.fileEncSha256 === "string")
+                    $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                else if (d.fileEncSha256.length >= 0)
+                    m.fileEncSha256 = d.fileEncSha256;
             }
             if (d.mediaKey != null) {
                 if (typeof d.mediaKey === "string")
@@ -510,17 +510,17 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.thumbnailDirectPath != null) {
                 m.thumbnailDirectPath = String(d.thumbnailDirectPath);
             }
-            if (d.thumbnailSHA256 != null) {
-                if (typeof d.thumbnailSHA256 === "string")
-                    $util.base64.decode(d.thumbnailSHA256, m.thumbnailSHA256 = $util.newBuffer($util.base64.length(d.thumbnailSHA256)), 0);
-                else if (d.thumbnailSHA256.length >= 0)
-                    m.thumbnailSHA256 = d.thumbnailSHA256;
+            if (d.thumbnailSha256 != null) {
+                if (typeof d.thumbnailSha256 === "string")
+                    $util.base64.decode(d.thumbnailSha256, m.thumbnailSha256 = $util.newBuffer($util.base64.length(d.thumbnailSha256)), 0);
+                else if (d.thumbnailSha256.length >= 0)
+                    m.thumbnailSha256 = d.thumbnailSha256;
             }
-            if (d.thumbnailEncSHA256 != null) {
-                if (typeof d.thumbnailEncSHA256 === "string")
-                    $util.base64.decode(d.thumbnailEncSHA256, m.thumbnailEncSHA256 = $util.newBuffer($util.base64.length(d.thumbnailEncSHA256)), 0);
-                else if (d.thumbnailEncSHA256.length >= 0)
-                    m.thumbnailEncSHA256 = d.thumbnailEncSHA256;
+            if (d.thumbnailEncSha256 != null) {
+                if (typeof d.thumbnailEncSha256 === "string")
+                    $util.base64.decode(d.thumbnailEncSha256, m.thumbnailEncSha256 = $util.newBuffer($util.base64.length(d.thumbnailEncSha256)), 0);
+                else if (d.thumbnailEncSha256.length >= 0)
+                    m.thumbnailEncSha256 = d.thumbnailEncSha256;
             }
             if (d.thumbnailHeight != null) {
                 m.thumbnailHeight = d.thumbnailHeight >>> 0;
@@ -571,10 +571,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (o.arrays || o.defaults) {
                 d.stickers = [];
             }
-            if (m.stickerPackID != null && m.hasOwnProperty("stickerPackID")) {
-                d.stickerPackID = m.stickerPackID;
+            if (m.stickerPackId != null && m.hasOwnProperty("stickerPackId")) {
+                d.stickerPackId = m.stickerPackId;
                 if (o.oneofs)
-                    d._stickerPackID = "stickerPackID";
+                    d._stickerPackId = "stickerPackId";
             }
             if (m.name != null && m.hasOwnProperty("name")) {
                 d.name = m.name;
@@ -600,15 +600,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._fileLength = "fileLength";
             }
-            if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                d.fileSHA256 = o.bytes === String ? $util.base64.encode(m.fileSHA256, 0, m.fileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSHA256) : m.fileSHA256;
+            if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                d.fileSha256 = o.bytes === String ? $util.base64.encode(m.fileSha256, 0, m.fileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSha256) : m.fileSha256;
                 if (o.oneofs)
-                    d._fileSHA256 = "fileSHA256";
+                    d._fileSha256 = "fileSha256";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
             if (m.mediaKey != null && m.hasOwnProperty("mediaKey")) {
                 d.mediaKey = o.bytes === String ? $util.base64.encode(m.mediaKey, 0, m.mediaKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.mediaKey) : m.mediaKey;
@@ -653,15 +653,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._thumbnailDirectPath = "thumbnailDirectPath";
             }
-            if (m.thumbnailSHA256 != null && m.hasOwnProperty("thumbnailSHA256")) {
-                d.thumbnailSHA256 = o.bytes === String ? $util.base64.encode(m.thumbnailSHA256, 0, m.thumbnailSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailSHA256) : m.thumbnailSHA256;
+            if (m.thumbnailSha256 != null && m.hasOwnProperty("thumbnailSha256")) {
+                d.thumbnailSha256 = o.bytes === String ? $util.base64.encode(m.thumbnailSha256, 0, m.thumbnailSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailSha256) : m.thumbnailSha256;
                 if (o.oneofs)
-                    d._thumbnailSHA256 = "thumbnailSHA256";
+                    d._thumbnailSha256 = "thumbnailSha256";
             }
-            if (m.thumbnailEncSHA256 != null && m.hasOwnProperty("thumbnailEncSHA256")) {
-                d.thumbnailEncSHA256 = o.bytes === String ? $util.base64.encode(m.thumbnailEncSHA256, 0, m.thumbnailEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailEncSHA256) : m.thumbnailEncSHA256;
+            if (m.thumbnailEncSha256 != null && m.hasOwnProperty("thumbnailEncSha256")) {
+                d.thumbnailEncSha256 = o.bytes === String ? $util.base64.encode(m.thumbnailEncSha256, 0, m.thumbnailEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailEncSha256) : m.thumbnailEncSha256;
                 if (o.oneofs)
-                    d._thumbnailEncSHA256 = "thumbnailEncSHA256";
+                    d._thumbnailEncSha256 = "thumbnailEncSha256";
             }
             if (m.thumbnailHeight != null && m.hasOwnProperty("thumbnailHeight")) {
                 d.thumbnailHeight = m.thumbnailHeight;
@@ -1066,7 +1066,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BCallMessage.prototype.sessionID = null;
+        BCallMessage.prototype.sessionId = null;
         BCallMessage.prototype.mediaType = null;
         BCallMessage.prototype.masterKey = null;
         BCallMessage.prototype.caption = null;
@@ -1074,8 +1074,8 @@ export const WAE2E = $root.WAE2E = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BCallMessage.prototype, "_sessionID", {
-            get: $util.oneOfGetter($oneOfFields = ["sessionID"]),
+        Object.defineProperty(BCallMessage.prototype, "_sessionId", {
+            get: $util.oneOfGetter($oneOfFields = ["sessionId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1104,8 +1104,8 @@ export const WAE2E = $root.WAE2E = (() => {
         BCallMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.sessionID != null && Object.hasOwnProperty.call(m, "sessionID"))
-                w.uint32(10).string(m.sessionID);
+            if (m.sessionId != null && Object.hasOwnProperty.call(m, "sessionId"))
+                w.uint32(10).string(m.sessionId);
             if (m.mediaType != null && Object.hasOwnProperty.call(m, "mediaType"))
                 w.uint32(16).int32(m.mediaType);
             if (m.masterKey != null && Object.hasOwnProperty.call(m, "masterKey"))
@@ -1129,7 +1129,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.sessionID = r.string();
+                        m.sessionId = r.string();
                         break;
                     }
                 case 2: {
@@ -1160,8 +1160,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.BCallMessage();
-            if (d.sessionID != null) {
-                m.sessionID = String(d.sessionID);
+            if (d.sessionId != null) {
+                m.sessionId = String(d.sessionId);
             }
             switch (d.mediaType) {
             default:
@@ -1199,10 +1199,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.sessionID != null && m.hasOwnProperty("sessionID")) {
-                d.sessionID = m.sessionID;
+            if (m.sessionId != null && m.hasOwnProperty("sessionId")) {
+                d.sessionId = m.sessionId;
                 if (o.oneofs)
-                    d._sessionID = "sessionID";
+                    d._sessionId = "sessionId";
             }
             if (m.mediaType != null && m.hasOwnProperty("mediaType")) {
                 d.mediaType = o.enums === String ? $root.WAE2E.BCallMessage.MediaType[m.mediaType] === undefined ? m.mediaType : $root.WAE2E.BCallMessage.MediaType[m.mediaType] : m.mediaType;
@@ -1525,14 +1525,14 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            CallParticipant.prototype.JID = null;
+            CallParticipant.prototype.jid = null;
             CallParticipant.prototype.callOutcome = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(CallParticipant.prototype, "_JID", {
-                get: $util.oneOfGetter($oneOfFields = ["JID"]),
+            Object.defineProperty(CallParticipant.prototype, "_jid", {
+                get: $util.oneOfGetter($oneOfFields = ["jid"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -1549,8 +1549,8 @@ export const WAE2E = $root.WAE2E = (() => {
             CallParticipant.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.JID != null && Object.hasOwnProperty.call(m, "JID"))
-                    w.uint32(10).string(m.JID);
+                if (m.jid != null && Object.hasOwnProperty.call(m, "jid"))
+                    w.uint32(10).string(m.jid);
                 if (m.callOutcome != null && Object.hasOwnProperty.call(m, "callOutcome"))
                     w.uint32(16).int32(m.callOutcome);
                 return w;
@@ -1570,7 +1570,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.JID = r.string();
+                            m.jid = r.string();
                             break;
                         }
                     case 2: {
@@ -1593,8 +1593,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.CallLogMessage.CallParticipant();
-                if (d.JID != null) {
-                    m.JID = String(d.JID);
+                if (d.jid != null) {
+                    m.jid = String(d.jid);
                 }
                 switch (d.callOutcome) {
                 default:
@@ -1643,10 +1643,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.JID != null && m.hasOwnProperty("JID")) {
-                    d.JID = m.JID;
+                if (m.jid != null && m.hasOwnProperty("jid")) {
+                    d.jid = m.jid;
                     if (o.oneofs)
-                        d._JID = "JID";
+                        d._jid = "jid";
                 }
                 if (m.callOutcome != null && m.hasOwnProperty("callOutcome")) {
                     d.callOutcome = o.enums === String ? $root.WAE2E.CallLogMessage.CallOutcome[m.callOutcome] === undefined ? m.callOutcome : $root.WAE2E.CallLogMessage.CallOutcome[m.callOutcome] : m.callOutcome;
@@ -1821,15 +1821,15 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        ScheduledCallCreationMessage.prototype.scheduledTimestampMS = null;
+        ScheduledCallCreationMessage.prototype.scheduledTimestampMs = null;
         ScheduledCallCreationMessage.prototype.callType = null;
         ScheduledCallCreationMessage.prototype.title = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ScheduledCallCreationMessage.prototype, "_scheduledTimestampMS", {
-            get: $util.oneOfGetter($oneOfFields = ["scheduledTimestampMS"]),
+        Object.defineProperty(ScheduledCallCreationMessage.prototype, "_scheduledTimestampMs", {
+            get: $util.oneOfGetter($oneOfFields = ["scheduledTimestampMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1852,8 +1852,8 @@ export const WAE2E = $root.WAE2E = (() => {
         ScheduledCallCreationMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.scheduledTimestampMS != null && Object.hasOwnProperty.call(m, "scheduledTimestampMS"))
-                w.uint32(8).int64(m.scheduledTimestampMS);
+            if (m.scheduledTimestampMs != null && Object.hasOwnProperty.call(m, "scheduledTimestampMs"))
+                w.uint32(8).int64(m.scheduledTimestampMs);
             if (m.callType != null && Object.hasOwnProperty.call(m, "callType"))
                 w.uint32(16).int32(m.callType);
             if (m.title != null && Object.hasOwnProperty.call(m, "title"))
@@ -1875,7 +1875,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.scheduledTimestampMS = r.int64();
+                        m.scheduledTimestampMs = r.int64();
                         break;
                     }
                 case 2: {
@@ -1902,15 +1902,15 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.ScheduledCallCreationMessage();
-            if (d.scheduledTimestampMS != null) {
+            if (d.scheduledTimestampMs != null) {
                 if ($util.Long)
-                    (m.scheduledTimestampMS = $util.Long.fromValue(d.scheduledTimestampMS)).unsigned = false;
-                else if (typeof d.scheduledTimestampMS === "string")
-                    m.scheduledTimestampMS = parseInt(d.scheduledTimestampMS, 10);
-                else if (typeof d.scheduledTimestampMS === "number")
-                    m.scheduledTimestampMS = d.scheduledTimestampMS;
-                else if (typeof d.scheduledTimestampMS === "object")
-                    m.scheduledTimestampMS = new $util.LongBits(d.scheduledTimestampMS.low >>> 0, d.scheduledTimestampMS.high >>> 0).toNumber();
+                    (m.scheduledTimestampMs = $util.Long.fromValue(d.scheduledTimestampMs)).unsigned = false;
+                else if (typeof d.scheduledTimestampMs === "string")
+                    m.scheduledTimestampMs = parseInt(d.scheduledTimestampMs, 10);
+                else if (typeof d.scheduledTimestampMs === "number")
+                    m.scheduledTimestampMs = d.scheduledTimestampMs;
+                else if (typeof d.scheduledTimestampMs === "object")
+                    m.scheduledTimestampMs = new $util.LongBits(d.scheduledTimestampMs.low >>> 0, d.scheduledTimestampMs.high >>> 0).toNumber();
             }
             switch (d.callType) {
             default:
@@ -1942,13 +1942,13 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.scheduledTimestampMS != null && m.hasOwnProperty("scheduledTimestampMS")) {
-                if (typeof m.scheduledTimestampMS === "number")
-                    d.scheduledTimestampMS = o.longs === String ? String(m.scheduledTimestampMS) : m.scheduledTimestampMS;
+            if (m.scheduledTimestampMs != null && m.hasOwnProperty("scheduledTimestampMs")) {
+                if (typeof m.scheduledTimestampMs === "number")
+                    d.scheduledTimestampMs = o.longs === String ? String(m.scheduledTimestampMs) : m.scheduledTimestampMs;
                 else
-                    d.scheduledTimestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.scheduledTimestampMS) : o.longs === Number ? new $util.LongBits(m.scheduledTimestampMS.low >>> 0, m.scheduledTimestampMS.high >>> 0).toNumber() : m.scheduledTimestampMS;
+                    d.scheduledTimestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.scheduledTimestampMs) : o.longs === Number ? new $util.LongBits(m.scheduledTimestampMs.low >>> 0, m.scheduledTimestampMs.high >>> 0).toNumber() : m.scheduledTimestampMs;
                 if (o.oneofs)
-                    d._scheduledTimestampMS = "scheduledTimestampMS";
+                    d._scheduledTimestampMs = "scheduledTimestampMs";
             }
             if (m.callType != null && m.hasOwnProperty("callType")) {
                 d.callType = o.enums === String ? $root.WAE2E.ScheduledCallCreationMessage.CallType[m.callType] === undefined ? m.callType : $root.WAE2E.ScheduledCallCreationMessage.CallType[m.callType] : m.callType;
@@ -1995,7 +1995,7 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         EventResponseMessage.prototype.response = null;
-        EventResponseMessage.prototype.timestampMS = null;
+        EventResponseMessage.prototype.timestampMs = null;
         EventResponseMessage.prototype.extraGuestCount = null;
 
         let $oneOfFields;
@@ -2007,8 +2007,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EventResponseMessage.prototype, "_timestampMS", {
-            get: $util.oneOfGetter($oneOfFields = ["timestampMS"]),
+        Object.defineProperty(EventResponseMessage.prototype, "_timestampMs", {
+            get: $util.oneOfGetter($oneOfFields = ["timestampMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -2027,8 +2027,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.response != null && Object.hasOwnProperty.call(m, "response"))
                 w.uint32(8).int32(m.response);
-            if (m.timestampMS != null && Object.hasOwnProperty.call(m, "timestampMS"))
-                w.uint32(16).int64(m.timestampMS);
+            if (m.timestampMs != null && Object.hasOwnProperty.call(m, "timestampMs"))
+                w.uint32(16).int64(m.timestampMs);
             if (m.extraGuestCount != null && Object.hasOwnProperty.call(m, "extraGuestCount"))
                 w.uint32(24).int32(m.extraGuestCount);
             return w;
@@ -2052,7 +2052,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.timestampMS = r.int64();
+                        m.timestampMs = r.int64();
                         break;
                     }
                 case 3: {
@@ -2099,15 +2099,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 m.response = 3;
                 break;
             }
-            if (d.timestampMS != null) {
+            if (d.timestampMs != null) {
                 if ($util.Long)
-                    (m.timestampMS = $util.Long.fromValue(d.timestampMS)).unsigned = false;
-                else if (typeof d.timestampMS === "string")
-                    m.timestampMS = parseInt(d.timestampMS, 10);
-                else if (typeof d.timestampMS === "number")
-                    m.timestampMS = d.timestampMS;
-                else if (typeof d.timestampMS === "object")
-                    m.timestampMS = new $util.LongBits(d.timestampMS.low >>> 0, d.timestampMS.high >>> 0).toNumber();
+                    (m.timestampMs = $util.Long.fromValue(d.timestampMs)).unsigned = false;
+                else if (typeof d.timestampMs === "string")
+                    m.timestampMs = parseInt(d.timestampMs, 10);
+                else if (typeof d.timestampMs === "number")
+                    m.timestampMs = d.timestampMs;
+                else if (typeof d.timestampMs === "object")
+                    m.timestampMs = new $util.LongBits(d.timestampMs.low >>> 0, d.timestampMs.high >>> 0).toNumber();
             }
             if (d.extraGuestCount != null) {
                 m.extraGuestCount = d.extraGuestCount | 0;
@@ -2124,13 +2124,13 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._response = "response";
             }
-            if (m.timestampMS != null && m.hasOwnProperty("timestampMS")) {
-                if (typeof m.timestampMS === "number")
-                    d.timestampMS = o.longs === String ? String(m.timestampMS) : m.timestampMS;
+            if (m.timestampMs != null && m.hasOwnProperty("timestampMs")) {
+                if (typeof m.timestampMs === "number")
+                    d.timestampMs = o.longs === String ? String(m.timestampMs) : m.timestampMs;
                 else
-                    d.timestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.timestampMS) : o.longs === Number ? new $util.LongBits(m.timestampMS.low >>> 0, m.timestampMS.high >>> 0).toNumber() : m.timestampMS;
+                    d.timestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.timestampMs) : o.longs === Number ? new $util.LongBits(m.timestampMs.low >>> 0, m.timestampMs.high >>> 0).toNumber() : m.timestampMs;
                 if (o.oneofs)
-                    d._timestampMS = "timestampMS";
+                    d._timestampMs = "timestampMs";
             }
             if (m.extraGuestCount != null && m.hasOwnProperty("extraGuestCount")) {
                 d.extraGuestCount = m.extraGuestCount;
@@ -2174,7 +2174,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
         PinInChatMessage.prototype.key = null;
         PinInChatMessage.prototype.type = null;
-        PinInChatMessage.prototype.senderTimestampMS = null;
+        PinInChatMessage.prototype.senderTimestampMs = null;
 
         let $oneOfFields;
 
@@ -2191,8 +2191,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PinInChatMessage.prototype, "_senderTimestampMS", {
-            get: $util.oneOfGetter($oneOfFields = ["senderTimestampMS"]),
+        Object.defineProperty(PinInChatMessage.prototype, "_senderTimestampMs", {
+            get: $util.oneOfGetter($oneOfFields = ["senderTimestampMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -2207,8 +2207,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 WACommon.MessageKey.encode(m.key, w.uint32(10).fork()).ldelim();
             if (m.type != null && Object.hasOwnProperty.call(m, "type"))
                 w.uint32(16).int32(m.type);
-            if (m.senderTimestampMS != null && Object.hasOwnProperty.call(m, "senderTimestampMS"))
-                w.uint32(24).int64(m.senderTimestampMS);
+            if (m.senderTimestampMs != null && Object.hasOwnProperty.call(m, "senderTimestampMs"))
+                w.uint32(24).int64(m.senderTimestampMs);
             return w;
         };
 
@@ -2234,7 +2234,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.senderTimestampMS = r.int64();
+                        m.senderTimestampMs = r.int64();
                         break;
                     }
                 default:
@@ -2278,15 +2278,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 m.type = 2;
                 break;
             }
-            if (d.senderTimestampMS != null) {
+            if (d.senderTimestampMs != null) {
                 if ($util.Long)
-                    (m.senderTimestampMS = $util.Long.fromValue(d.senderTimestampMS)).unsigned = false;
-                else if (typeof d.senderTimestampMS === "string")
-                    m.senderTimestampMS = parseInt(d.senderTimestampMS, 10);
-                else if (typeof d.senderTimestampMS === "number")
-                    m.senderTimestampMS = d.senderTimestampMS;
-                else if (typeof d.senderTimestampMS === "object")
-                    m.senderTimestampMS = new $util.LongBits(d.senderTimestampMS.low >>> 0, d.senderTimestampMS.high >>> 0).toNumber();
+                    (m.senderTimestampMs = $util.Long.fromValue(d.senderTimestampMs)).unsigned = false;
+                else if (typeof d.senderTimestampMs === "string")
+                    m.senderTimestampMs = parseInt(d.senderTimestampMs, 10);
+                else if (typeof d.senderTimestampMs === "number")
+                    m.senderTimestampMs = d.senderTimestampMs;
+                else if (typeof d.senderTimestampMs === "object")
+                    m.senderTimestampMs = new $util.LongBits(d.senderTimestampMs.low >>> 0, d.senderTimestampMs.high >>> 0).toNumber();
             }
             return m;
         };
@@ -2305,13 +2305,13 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._type = "type";
             }
-            if (m.senderTimestampMS != null && m.hasOwnProperty("senderTimestampMS")) {
-                if (typeof m.senderTimestampMS === "number")
-                    d.senderTimestampMS = o.longs === String ? String(m.senderTimestampMS) : m.senderTimestampMS;
+            if (m.senderTimestampMs != null && m.hasOwnProperty("senderTimestampMs")) {
+                if (typeof m.senderTimestampMs === "number")
+                    d.senderTimestampMs = o.longs === String ? String(m.senderTimestampMs) : m.senderTimestampMs;
                 else
-                    d.senderTimestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.senderTimestampMS) : o.longs === Number ? new $util.LongBits(m.senderTimestampMS.low >>> 0, m.senderTimestampMS.high >>> 0).toNumber() : m.senderTimestampMS;
+                    d.senderTimestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.senderTimestampMs) : o.longs === Number ? new $util.LongBits(m.senderTimestampMs.low >>> 0, m.senderTimestampMs.high >>> 0).toNumber() : m.senderTimestampMs;
                 if (o.oneofs)
-                    d._senderTimestampMS = "senderTimestampMS";
+                    d._senderTimestampMs = "senderTimestampMs";
             }
             return d;
         };
@@ -2508,7 +2508,7 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         ButtonsResponseMessage.prototype.selectedDisplayText = null;
-        ButtonsResponseMessage.prototype.selectedButtonID = null;
+        ButtonsResponseMessage.prototype.selectedButtonId = null;
         ButtonsResponseMessage.prototype.contextInfo = null;
         ButtonsResponseMessage.prototype.type = null;
 
@@ -2520,8 +2520,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ButtonsResponseMessage.prototype, "_selectedButtonID", {
-            get: $util.oneOfGetter($oneOfFields = ["selectedButtonID"]),
+        Object.defineProperty(ButtonsResponseMessage.prototype, "_selectedButtonId", {
+            get: $util.oneOfGetter($oneOfFields = ["selectedButtonId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -2544,8 +2544,8 @@ export const WAE2E = $root.WAE2E = (() => {
         ButtonsResponseMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.selectedButtonID != null && Object.hasOwnProperty.call(m, "selectedButtonID"))
-                w.uint32(10).string(m.selectedButtonID);
+            if (m.selectedButtonId != null && Object.hasOwnProperty.call(m, "selectedButtonId"))
+                w.uint32(10).string(m.selectedButtonId);
             if (m.selectedDisplayText != null && Object.hasOwnProperty.call(m, "selectedDisplayText"))
                 w.uint32(18).string(m.selectedDisplayText);
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
@@ -2573,7 +2573,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 1: {
-                        m.selectedButtonID = r.string();
+                        m.selectedButtonId = r.string();
                         break;
                     }
                 case 3: {
@@ -2603,8 +2603,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.selectedDisplayText != null) {
                 m.selectedDisplayText = String(d.selectedDisplayText);
             }
-            if (d.selectedButtonID != null) {
-                m.selectedButtonID = String(d.selectedButtonID);
+            if (d.selectedButtonId != null) {
+                m.selectedButtonId = String(d.selectedButtonId);
             }
             if (d.contextInfo != null) {
                 if (typeof d.contextInfo !== "object")
@@ -2634,10 +2634,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.selectedButtonID != null && m.hasOwnProperty("selectedButtonID")) {
-                d.selectedButtonID = m.selectedButtonID;
+            if (m.selectedButtonId != null && m.hasOwnProperty("selectedButtonId")) {
+                d.selectedButtonId = m.selectedButtonId;
                 if (o.oneofs)
-                    d._selectedButtonID = "selectedButtonID";
+                    d._selectedButtonId = "selectedButtonId";
             }
             if (m.selectedDisplayText != null && m.hasOwnProperty("selectedDisplayText")) {
                 d.selectedDisplayText = m.selectedDisplayText;
@@ -3009,7 +3009,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            Button.prototype.buttonID = null;
+            Button.prototype.buttonId = null;
             Button.prototype.buttonText = null;
             Button.prototype.type = null;
             Button.prototype.nativeFlowInfo = null;
@@ -3017,8 +3017,8 @@ export const WAE2E = $root.WAE2E = (() => {
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(Button.prototype, "_buttonID", {
-                get: $util.oneOfGetter($oneOfFields = ["buttonID"]),
+            Object.defineProperty(Button.prototype, "_buttonId", {
+                get: $util.oneOfGetter($oneOfFields = ["buttonId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -3047,8 +3047,8 @@ export const WAE2E = $root.WAE2E = (() => {
             Button.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.buttonID != null && Object.hasOwnProperty.call(m, "buttonID"))
-                    w.uint32(10).string(m.buttonID);
+                if (m.buttonId != null && Object.hasOwnProperty.call(m, "buttonId"))
+                    w.uint32(10).string(m.buttonId);
                 if (m.buttonText != null && Object.hasOwnProperty.call(m, "buttonText"))
                     $root.WAE2E.ButtonsMessage.Button.ButtonText.encode(m.buttonText, w.uint32(18).fork()).ldelim();
                 if (m.type != null && Object.hasOwnProperty.call(m, "type"))
@@ -3072,7 +3072,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.buttonID = r.string();
+                            m.buttonId = r.string();
                             break;
                         }
                     case 2: {
@@ -3103,8 +3103,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.ButtonsMessage.Button();
-                if (d.buttonID != null) {
-                    m.buttonID = String(d.buttonID);
+                if (d.buttonId != null) {
+                    m.buttonId = String(d.buttonId);
                 }
                 if (d.buttonText != null) {
                     if (typeof d.buttonText !== "object")
@@ -3143,10 +3143,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.buttonID != null && m.hasOwnProperty("buttonID")) {
-                    d.buttonID = m.buttonID;
+                if (m.buttonId != null && m.hasOwnProperty("buttonId")) {
+                    d.buttonId = m.buttonId;
                     if (o.oneofs)
-                        d._buttonID = "buttonID";
+                        d._buttonId = "buttonId";
                 }
                 if (m.buttonText != null && m.hasOwnProperty("buttonText")) {
                     d.buttonText = $root.WAE2E.ButtonsMessage.Button.ButtonText.toObject(m.buttonText, o);
@@ -3195,7 +3195,7 @@ export const WAE2E = $root.WAE2E = (() => {
                 }
 
                 NativeFlowInfo.prototype.name = null;
-                NativeFlowInfo.prototype.paramsJSON = null;
+                NativeFlowInfo.prototype.paramsJson = null;
 
                 let $oneOfFields;
 
@@ -3206,8 +3206,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(NativeFlowInfo.prototype, "_paramsJSON", {
-                    get: $util.oneOfGetter($oneOfFields = ["paramsJSON"]),
+                Object.defineProperty(NativeFlowInfo.prototype, "_paramsJson", {
+                    get: $util.oneOfGetter($oneOfFields = ["paramsJson"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -3220,8 +3220,8 @@ export const WAE2E = $root.WAE2E = (() => {
                         w = $Writer.create();
                     if (m.name != null && Object.hasOwnProperty.call(m, "name"))
                         w.uint32(10).string(m.name);
-                    if (m.paramsJSON != null && Object.hasOwnProperty.call(m, "paramsJSON"))
-                        w.uint32(18).string(m.paramsJSON);
+                    if (m.paramsJson != null && Object.hasOwnProperty.call(m, "paramsJson"))
+                        w.uint32(18).string(m.paramsJson);
                     return w;
                 };
 
@@ -3243,7 +3243,7 @@ export const WAE2E = $root.WAE2E = (() => {
                                 break;
                             }
                         case 2: {
-                                m.paramsJSON = r.string();
+                                m.paramsJson = r.string();
                                 break;
                             }
                         default:
@@ -3265,8 +3265,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (d.name != null) {
                         m.name = String(d.name);
                     }
-                    if (d.paramsJSON != null) {
-                        m.paramsJSON = String(d.paramsJSON);
+                    if (d.paramsJson != null) {
+                        m.paramsJson = String(d.paramsJson);
                     }
                     return m;
                 };
@@ -3280,10 +3280,10 @@ export const WAE2E = $root.WAE2E = (() => {
                         if (o.oneofs)
                             d._name = "name";
                     }
-                    if (m.paramsJSON != null && m.hasOwnProperty("paramsJSON")) {
-                        d.paramsJSON = m.paramsJSON;
+                    if (m.paramsJson != null && m.hasOwnProperty("paramsJson")) {
+                        d.paramsJson = m.paramsJson;
                         if (o.oneofs)
-                            d._paramsJSON = "paramsJSON";
+                            d._paramsJson = "paramsJson";
                     }
                     return d;
                 };
@@ -3414,9 +3414,9 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         ConditionalRevealMessage.prototype.encPayload = null;
-        ConditionalRevealMessage.prototype.encIV = null;
+        ConditionalRevealMessage.prototype.encIv = null;
         ConditionalRevealMessage.prototype.conditionalRevealMessageType = null;
-        ConditionalRevealMessage.prototype.revealKeyID = null;
+        ConditionalRevealMessage.prototype.revealKeyId = null;
 
         let $oneOfFields;
 
@@ -3427,8 +3427,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ConditionalRevealMessage.prototype, "_encIV", {
-            get: $util.oneOfGetter($oneOfFields = ["encIV"]),
+        Object.defineProperty(ConditionalRevealMessage.prototype, "_encIv", {
+            get: $util.oneOfGetter($oneOfFields = ["encIv"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -3439,8 +3439,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ConditionalRevealMessage.prototype, "_revealKeyID", {
-            get: $util.oneOfGetter($oneOfFields = ["revealKeyID"]),
+        Object.defineProperty(ConditionalRevealMessage.prototype, "_revealKeyId", {
+            get: $util.oneOfGetter($oneOfFields = ["revealKeyId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -3453,12 +3453,12 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.encPayload != null && Object.hasOwnProperty.call(m, "encPayload"))
                 w.uint32(10).bytes(m.encPayload);
-            if (m.encIV != null && Object.hasOwnProperty.call(m, "encIV"))
-                w.uint32(18).bytes(m.encIV);
+            if (m.encIv != null && Object.hasOwnProperty.call(m, "encIv"))
+                w.uint32(18).bytes(m.encIv);
             if (m.conditionalRevealMessageType != null && Object.hasOwnProperty.call(m, "conditionalRevealMessageType"))
                 w.uint32(24).int32(m.conditionalRevealMessageType);
-            if (m.revealKeyID != null && Object.hasOwnProperty.call(m, "revealKeyID"))
-                w.uint32(34).string(m.revealKeyID);
+            if (m.revealKeyId != null && Object.hasOwnProperty.call(m, "revealKeyId"))
+                w.uint32(34).string(m.revealKeyId);
             return w;
         };
 
@@ -3480,7 +3480,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.encIV = r.bytes();
+                        m.encIv = r.bytes();
                         break;
                     }
                 case 3: {
@@ -3488,7 +3488,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 4: {
-                        m.revealKeyID = r.string();
+                        m.revealKeyId = r.string();
                         break;
                     }
                 default:
@@ -3513,11 +3513,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.encPayload.length >= 0)
                     m.encPayload = d.encPayload;
             }
-            if (d.encIV != null) {
-                if (typeof d.encIV === "string")
-                    $util.base64.decode(d.encIV, m.encIV = $util.newBuffer($util.base64.length(d.encIV)), 0);
-                else if (d.encIV.length >= 0)
-                    m.encIV = d.encIV;
+            if (d.encIv != null) {
+                if (typeof d.encIv === "string")
+                    $util.base64.decode(d.encIv, m.encIv = $util.newBuffer($util.base64.length(d.encIv)), 0);
+                else if (d.encIv.length >= 0)
+                    m.encIv = d.encIv;
             }
             switch (d.conditionalRevealMessageType) {
             default:
@@ -3535,8 +3535,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 m.conditionalRevealMessageType = 1;
                 break;
             }
-            if (d.revealKeyID != null) {
-                m.revealKeyID = String(d.revealKeyID);
+            if (d.revealKeyId != null) {
+                m.revealKeyId = String(d.revealKeyId);
             }
             return m;
         };
@@ -3550,20 +3550,20 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._encPayload = "encPayload";
             }
-            if (m.encIV != null && m.hasOwnProperty("encIV")) {
-                d.encIV = o.bytes === String ? $util.base64.encode(m.encIV, 0, m.encIV.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIV) : m.encIV;
+            if (m.encIv != null && m.hasOwnProperty("encIv")) {
+                d.encIv = o.bytes === String ? $util.base64.encode(m.encIv, 0, m.encIv.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIv) : m.encIv;
                 if (o.oneofs)
-                    d._encIV = "encIV";
+                    d._encIv = "encIv";
             }
             if (m.conditionalRevealMessageType != null && m.hasOwnProperty("conditionalRevealMessageType")) {
                 d.conditionalRevealMessageType = o.enums === String ? $root.WAE2E.ConditionalRevealMessage.ConditionalRevealMessageType[m.conditionalRevealMessageType] === undefined ? m.conditionalRevealMessageType : $root.WAE2E.ConditionalRevealMessage.ConditionalRevealMessageType[m.conditionalRevealMessageType] : m.conditionalRevealMessageType;
                 if (o.oneofs)
                     d._conditionalRevealMessageType = "conditionalRevealMessageType";
             }
-            if (m.revealKeyID != null && m.hasOwnProperty("revealKeyID")) {
-                d.revealKeyID = m.revealKeyID;
+            if (m.revealKeyId != null && m.hasOwnProperty("revealKeyId")) {
+                d.revealKeyId = m.revealKeyId;
                 if (o.oneofs)
-                    d._revealKeyID = "revealKeyID";
+                    d._revealKeyId = "revealKeyId";
             }
             return d;
         };
@@ -3600,9 +3600,9 @@ export const WAE2E = $root.WAE2E = (() => {
 
         SecretEncryptedMessage.prototype.targetMessageKey = null;
         SecretEncryptedMessage.prototype.encPayload = null;
-        SecretEncryptedMessage.prototype.encIV = null;
+        SecretEncryptedMessage.prototype.encIv = null;
         SecretEncryptedMessage.prototype.secretEncType = null;
-        SecretEncryptedMessage.prototype.remoteKeyID = null;
+        SecretEncryptedMessage.prototype.remoteKeyId = null;
 
         let $oneOfFields;
 
@@ -3619,8 +3619,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SecretEncryptedMessage.prototype, "_encIV", {
-            get: $util.oneOfGetter($oneOfFields = ["encIV"]),
+        Object.defineProperty(SecretEncryptedMessage.prototype, "_encIv", {
+            get: $util.oneOfGetter($oneOfFields = ["encIv"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -3631,8 +3631,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SecretEncryptedMessage.prototype, "_remoteKeyID", {
-            get: $util.oneOfGetter($oneOfFields = ["remoteKeyID"]),
+        Object.defineProperty(SecretEncryptedMessage.prototype, "_remoteKeyId", {
+            get: $util.oneOfGetter($oneOfFields = ["remoteKeyId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -3647,12 +3647,12 @@ export const WAE2E = $root.WAE2E = (() => {
                 WACommon.MessageKey.encode(m.targetMessageKey, w.uint32(10).fork()).ldelim();
             if (m.encPayload != null && Object.hasOwnProperty.call(m, "encPayload"))
                 w.uint32(18).bytes(m.encPayload);
-            if (m.encIV != null && Object.hasOwnProperty.call(m, "encIV"))
-                w.uint32(26).bytes(m.encIV);
+            if (m.encIv != null && Object.hasOwnProperty.call(m, "encIv"))
+                w.uint32(26).bytes(m.encIv);
             if (m.secretEncType != null && Object.hasOwnProperty.call(m, "secretEncType"))
                 w.uint32(32).int32(m.secretEncType);
-            if (m.remoteKeyID != null && Object.hasOwnProperty.call(m, "remoteKeyID"))
-                w.uint32(42).string(m.remoteKeyID);
+            if (m.remoteKeyId != null && Object.hasOwnProperty.call(m, "remoteKeyId"))
+                w.uint32(42).string(m.remoteKeyId);
             return w;
         };
 
@@ -3678,7 +3678,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.encIV = r.bytes();
+                        m.encIv = r.bytes();
                         break;
                     }
                 case 4: {
@@ -3686,7 +3686,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 5: {
-                        m.remoteKeyID = r.string();
+                        m.remoteKeyId = r.string();
                         break;
                     }
                 default:
@@ -3716,11 +3716,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.encPayload.length >= 0)
                     m.encPayload = d.encPayload;
             }
-            if (d.encIV != null) {
-                if (typeof d.encIV === "string")
-                    $util.base64.decode(d.encIV, m.encIV = $util.newBuffer($util.base64.length(d.encIV)), 0);
-                else if (d.encIV.length >= 0)
-                    m.encIV = d.encIV;
+            if (d.encIv != null) {
+                if (typeof d.encIv === "string")
+                    $util.base64.decode(d.encIv, m.encIv = $util.newBuffer($util.base64.length(d.encIv)), 0);
+                else if (d.encIv.length >= 0)
+                    m.encIv = d.encIv;
             }
             switch (d.secretEncType) {
             default:
@@ -3754,8 +3754,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 m.secretEncType = 5;
                 break;
             }
-            if (d.remoteKeyID != null) {
-                m.remoteKeyID = String(d.remoteKeyID);
+            if (d.remoteKeyId != null) {
+                m.remoteKeyId = String(d.remoteKeyId);
             }
             return m;
         };
@@ -3774,20 +3774,20 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._encPayload = "encPayload";
             }
-            if (m.encIV != null && m.hasOwnProperty("encIV")) {
-                d.encIV = o.bytes === String ? $util.base64.encode(m.encIV, 0, m.encIV.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIV) : m.encIV;
+            if (m.encIv != null && m.hasOwnProperty("encIv")) {
+                d.encIv = o.bytes === String ? $util.base64.encode(m.encIv, 0, m.encIv.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIv) : m.encIv;
                 if (o.oneofs)
-                    d._encIV = "encIV";
+                    d._encIv = "encIv";
             }
             if (m.secretEncType != null && m.hasOwnProperty("secretEncType")) {
                 d.secretEncType = o.enums === String ? $root.WAE2E.SecretEncryptedMessage.SecretEncType[m.secretEncType] === undefined ? m.secretEncType : $root.WAE2E.SecretEncryptedMessage.SecretEncType[m.secretEncType] : m.secretEncType;
                 if (o.oneofs)
                     d._secretEncType = "secretEncType";
             }
-            if (m.remoteKeyID != null && m.hasOwnProperty("remoteKeyID")) {
-                d.remoteKeyID = m.remoteKeyID;
+            if (m.remoteKeyId != null && m.hasOwnProperty("remoteKeyId")) {
+                d.remoteKeyId = m.remoteKeyId;
                 if (o.oneofs)
-                    d._remoteKeyID = "remoteKeyID";
+                    d._remoteKeyId = "remoteKeyId";
             }
             return d;
         };
@@ -3826,11 +3826,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        GroupInviteMessage.prototype.groupJID = null;
+        GroupInviteMessage.prototype.groupJid = null;
         GroupInviteMessage.prototype.inviteCode = null;
         GroupInviteMessage.prototype.inviteExpiration = null;
         GroupInviteMessage.prototype.groupName = null;
-        GroupInviteMessage.prototype.JPEGThumbnail = null;
+        GroupInviteMessage.prototype.jpegThumbnail = null;
         GroupInviteMessage.prototype.caption = null;
         GroupInviteMessage.prototype.contextInfo = null;
         GroupInviteMessage.prototype.groupType = null;
@@ -3838,8 +3838,8 @@ export const WAE2E = $root.WAE2E = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(GroupInviteMessage.prototype, "_groupJID", {
-            get: $util.oneOfGetter($oneOfFields = ["groupJID"]),
+        Object.defineProperty(GroupInviteMessage.prototype, "_groupJid", {
+            get: $util.oneOfGetter($oneOfFields = ["groupJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -3862,8 +3862,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(GroupInviteMessage.prototype, "_JPEGThumbnail", {
-            get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+        Object.defineProperty(GroupInviteMessage.prototype, "_jpegThumbnail", {
+            get: $util.oneOfGetter($oneOfFields = ["jpegThumbnail"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -3892,16 +3892,16 @@ export const WAE2E = $root.WAE2E = (() => {
         GroupInviteMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.groupJID != null && Object.hasOwnProperty.call(m, "groupJID"))
-                w.uint32(10).string(m.groupJID);
+            if (m.groupJid != null && Object.hasOwnProperty.call(m, "groupJid"))
+                w.uint32(10).string(m.groupJid);
             if (m.inviteCode != null && Object.hasOwnProperty.call(m, "inviteCode"))
                 w.uint32(18).string(m.inviteCode);
             if (m.inviteExpiration != null && Object.hasOwnProperty.call(m, "inviteExpiration"))
                 w.uint32(24).int64(m.inviteExpiration);
             if (m.groupName != null && Object.hasOwnProperty.call(m, "groupName"))
                 w.uint32(34).string(m.groupName);
-            if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                w.uint32(42).bytes(m.JPEGThumbnail);
+            if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                w.uint32(42).bytes(m.jpegThumbnail);
             if (m.caption != null && Object.hasOwnProperty.call(m, "caption"))
                 w.uint32(50).string(m.caption);
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
@@ -3925,7 +3925,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.groupJID = r.string();
+                        m.groupJid = r.string();
                         break;
                     }
                 case 2: {
@@ -3941,7 +3941,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 5: {
-                        m.JPEGThumbnail = r.bytes();
+                        m.jpegThumbnail = r.bytes();
                         break;
                     }
                 case 6: {
@@ -3972,8 +3972,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.GroupInviteMessage();
-            if (d.groupJID != null) {
-                m.groupJID = String(d.groupJID);
+            if (d.groupJid != null) {
+                m.groupJid = String(d.groupJid);
             }
             if (d.inviteCode != null) {
                 m.inviteCode = String(d.inviteCode);
@@ -3991,11 +3991,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.groupName != null) {
                 m.groupName = String(d.groupName);
             }
-            if (d.JPEGThumbnail != null) {
-                if (typeof d.JPEGThumbnail === "string")
-                    $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                else if (d.JPEGThumbnail.length >= 0)
-                    m.JPEGThumbnail = d.JPEGThumbnail;
+            if (d.jpegThumbnail != null) {
+                if (typeof d.jpegThumbnail === "string")
+                    $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                else if (d.jpegThumbnail.length >= 0)
+                    m.jpegThumbnail = d.jpegThumbnail;
             }
             if (d.caption != null) {
                 m.caption = String(d.caption);
@@ -4028,10 +4028,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.groupJID != null && m.hasOwnProperty("groupJID")) {
-                d.groupJID = m.groupJID;
+            if (m.groupJid != null && m.hasOwnProperty("groupJid")) {
+                d.groupJid = m.groupJid;
                 if (o.oneofs)
-                    d._groupJID = "groupJID";
+                    d._groupJid = "groupJid";
             }
             if (m.inviteCode != null && m.hasOwnProperty("inviteCode")) {
                 d.inviteCode = m.inviteCode;
@@ -4051,10 +4051,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._groupName = "groupName";
             }
-            if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+            if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                 if (o.oneofs)
-                    d._JPEGThumbnail = "JPEGThumbnail";
+                    d._jpegThumbnail = "jpegThumbnail";
             }
             if (m.caption != null && m.hasOwnProperty("caption")) {
                 d.caption = m.caption;
@@ -4382,7 +4382,7 @@ export const WAE2E = $root.WAE2E = (() => {
             }
 
             NativeFlowResponseMessage.prototype.name = null;
-            NativeFlowResponseMessage.prototype.paramsJSON = null;
+            NativeFlowResponseMessage.prototype.paramsJson = null;
             NativeFlowResponseMessage.prototype.version = null;
 
             let $oneOfFields;
@@ -4394,8 +4394,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(NativeFlowResponseMessage.prototype, "_paramsJSON", {
-                get: $util.oneOfGetter($oneOfFields = ["paramsJSON"]),
+            Object.defineProperty(NativeFlowResponseMessage.prototype, "_paramsJson", {
+                get: $util.oneOfGetter($oneOfFields = ["paramsJson"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -4414,8 +4414,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     w = $Writer.create();
                 if (m.name != null && Object.hasOwnProperty.call(m, "name"))
                     w.uint32(10).string(m.name);
-                if (m.paramsJSON != null && Object.hasOwnProperty.call(m, "paramsJSON"))
-                    w.uint32(18).string(m.paramsJSON);
+                if (m.paramsJson != null && Object.hasOwnProperty.call(m, "paramsJson"))
+                    w.uint32(18).string(m.paramsJson);
                 if (m.version != null && Object.hasOwnProperty.call(m, "version"))
                     w.uint32(24).int32(m.version);
                 return w;
@@ -4439,7 +4439,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 2: {
-                            m.paramsJSON = r.string();
+                            m.paramsJson = r.string();
                             break;
                         }
                     case 3: {
@@ -4465,8 +4465,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (d.name != null) {
                     m.name = String(d.name);
                 }
-                if (d.paramsJSON != null) {
-                    m.paramsJSON = String(d.paramsJSON);
+                if (d.paramsJson != null) {
+                    m.paramsJson = String(d.paramsJson);
                 }
                 if (d.version != null) {
                     m.version = d.version | 0;
@@ -4483,10 +4483,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._name = "name";
                 }
-                if (m.paramsJSON != null && m.hasOwnProperty("paramsJSON")) {
-                    d.paramsJSON = m.paramsJSON;
+                if (m.paramsJson != null && m.hasOwnProperty("paramsJson")) {
+                    d.paramsJson = m.paramsJson;
                     if (o.oneofs)
-                        d._paramsJSON = "paramsJSON";
+                        d._paramsJson = "paramsJson";
                 }
                 if (m.version != null && m.hasOwnProperty("version")) {
                     d.version = m.version;
@@ -4978,15 +4978,15 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            ShopMessage.prototype.ID = null;
+            ShopMessage.prototype.id = null;
             ShopMessage.prototype.surface = null;
             ShopMessage.prototype.messageVersion = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ShopMessage.prototype, "_ID", {
-                get: $util.oneOfGetter($oneOfFields = ["ID"]),
+            Object.defineProperty(ShopMessage.prototype, "_id", {
+                get: $util.oneOfGetter($oneOfFields = ["id"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -5009,8 +5009,8 @@ export const WAE2E = $root.WAE2E = (() => {
             ShopMessage.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                    w.uint32(10).string(m.ID);
+                if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                    w.uint32(10).string(m.id);
                 if (m.surface != null && Object.hasOwnProperty.call(m, "surface"))
                     w.uint32(16).int32(m.surface);
                 if (m.messageVersion != null && Object.hasOwnProperty.call(m, "messageVersion"))
@@ -5032,7 +5032,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.ID = r.string();
+                            m.id = r.string();
                             break;
                         }
                     case 2: {
@@ -5059,8 +5059,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.InteractiveMessage.ShopMessage();
-                if (d.ID != null) {
-                    m.ID = String(d.ID);
+                if (d.id != null) {
+                    m.id = String(d.id);
                 }
                 switch (d.surface) {
                 default:
@@ -5096,10 +5096,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.ID != null && m.hasOwnProperty("ID")) {
-                    d.ID = m.ID;
+                if (m.id != null && m.hasOwnProperty("id")) {
+                    d.id = m.id;
                     if (o.oneofs)
-                        d._ID = "ID";
+                        d._id = "id";
                 }
                 if (m.surface != null && m.hasOwnProperty("surface")) {
                     d.surface = o.enums === String ? $root.WAE2E.InteractiveMessage.ShopMessage.Surface[m.surface] === undefined ? m.surface : $root.WAE2E.InteractiveMessage.ShopMessage.Surface[m.surface] : m.surface;
@@ -5148,14 +5148,14 @@ export const WAE2E = $root.WAE2E = (() => {
             }
 
             NativeFlowMessage.prototype.buttons = $util.emptyArray;
-            NativeFlowMessage.prototype.messageParamsJSON = null;
+            NativeFlowMessage.prototype.messageParamsJson = null;
             NativeFlowMessage.prototype.messageVersion = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(NativeFlowMessage.prototype, "_messageParamsJSON", {
-                get: $util.oneOfGetter($oneOfFields = ["messageParamsJSON"]),
+            Object.defineProperty(NativeFlowMessage.prototype, "_messageParamsJson", {
+                get: $util.oneOfGetter($oneOfFields = ["messageParamsJson"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -5176,8 +5176,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     for (var i = 0; i < m.buttons.length; ++i)
                         $root.WAE2E.InteractiveMessage.NativeFlowMessage.NativeFlowButton.encode(m.buttons[i], w.uint32(10).fork()).ldelim();
                 }
-                if (m.messageParamsJSON != null && Object.hasOwnProperty.call(m, "messageParamsJSON"))
-                    w.uint32(18).string(m.messageParamsJSON);
+                if (m.messageParamsJson != null && Object.hasOwnProperty.call(m, "messageParamsJson"))
+                    w.uint32(18).string(m.messageParamsJson);
                 if (m.messageVersion != null && Object.hasOwnProperty.call(m, "messageVersion"))
                     w.uint32(24).int32(m.messageVersion);
                 return w;
@@ -5203,7 +5203,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 2: {
-                            m.messageParamsJSON = r.string();
+                            m.messageParamsJson = r.string();
                             break;
                         }
                     case 3: {
@@ -5236,8 +5236,8 @@ export const WAE2E = $root.WAE2E = (() => {
                         m.buttons[i] = $root.WAE2E.InteractiveMessage.NativeFlowMessage.NativeFlowButton.fromObject(d.buttons[i], n + 1);
                     }
                 }
-                if (d.messageParamsJSON != null) {
-                    m.messageParamsJSON = String(d.messageParamsJSON);
+                if (d.messageParamsJson != null) {
+                    m.messageParamsJson = String(d.messageParamsJson);
                 }
                 if (d.messageVersion != null) {
                     m.messageVersion = d.messageVersion | 0;
@@ -5258,10 +5258,10 @@ export const WAE2E = $root.WAE2E = (() => {
                         d.buttons[j] = $root.WAE2E.InteractiveMessage.NativeFlowMessage.NativeFlowButton.toObject(m.buttons[j], o);
                     }
                 }
-                if (m.messageParamsJSON != null && m.hasOwnProperty("messageParamsJSON")) {
-                    d.messageParamsJSON = m.messageParamsJSON;
+                if (m.messageParamsJson != null && m.hasOwnProperty("messageParamsJson")) {
+                    d.messageParamsJson = m.messageParamsJson;
                     if (o.oneofs)
-                        d._messageParamsJSON = "messageParamsJSON";
+                        d._messageParamsJson = "messageParamsJson";
                 }
                 if (m.messageVersion != null && m.hasOwnProperty("messageVersion")) {
                     d.messageVersion = m.messageVersion;
@@ -5292,7 +5292,7 @@ export const WAE2E = $root.WAE2E = (() => {
                 }
 
                 NativeFlowButton.prototype.name = null;
-                NativeFlowButton.prototype.buttonParamsJSON = null;
+                NativeFlowButton.prototype.buttonParamsJson = null;
 
                 let $oneOfFields;
 
@@ -5303,8 +5303,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(NativeFlowButton.prototype, "_buttonParamsJSON", {
-                    get: $util.oneOfGetter($oneOfFields = ["buttonParamsJSON"]),
+                Object.defineProperty(NativeFlowButton.prototype, "_buttonParamsJson", {
+                    get: $util.oneOfGetter($oneOfFields = ["buttonParamsJson"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -5317,8 +5317,8 @@ export const WAE2E = $root.WAE2E = (() => {
                         w = $Writer.create();
                     if (m.name != null && Object.hasOwnProperty.call(m, "name"))
                         w.uint32(10).string(m.name);
-                    if (m.buttonParamsJSON != null && Object.hasOwnProperty.call(m, "buttonParamsJSON"))
-                        w.uint32(18).string(m.buttonParamsJSON);
+                    if (m.buttonParamsJson != null && Object.hasOwnProperty.call(m, "buttonParamsJson"))
+                        w.uint32(18).string(m.buttonParamsJson);
                     return w;
                 };
 
@@ -5340,7 +5340,7 @@ export const WAE2E = $root.WAE2E = (() => {
                                 break;
                             }
                         case 2: {
-                                m.buttonParamsJSON = r.string();
+                                m.buttonParamsJson = r.string();
                                 break;
                             }
                         default:
@@ -5362,8 +5362,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (d.name != null) {
                         m.name = String(d.name);
                     }
-                    if (d.buttonParamsJSON != null) {
-                        m.buttonParamsJSON = String(d.buttonParamsJSON);
+                    if (d.buttonParamsJson != null) {
+                        m.buttonParamsJson = String(d.buttonParamsJson);
                     }
                     return m;
                 };
@@ -5377,10 +5377,10 @@ export const WAE2E = $root.WAE2E = (() => {
                         if (o.oneofs)
                             d._name = "name";
                     }
-                    if (m.buttonParamsJSON != null && m.hasOwnProperty("buttonParamsJSON")) {
-                        d.buttonParamsJSON = m.buttonParamsJSON;
+                    if (m.buttonParamsJson != null && m.hasOwnProperty("buttonParamsJson")) {
+                        d.buttonParamsJson = m.buttonParamsJson;
                         if (o.oneofs)
-                            d._buttonParamsJSON = "buttonParamsJSON";
+                            d._buttonParamsJson = "buttonParamsJson";
                     }
                     return d;
                 };
@@ -5411,21 +5411,21 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            CollectionMessage.prototype.bizJID = null;
-            CollectionMessage.prototype.ID = null;
+            CollectionMessage.prototype.bizJid = null;
+            CollectionMessage.prototype.id = null;
             CollectionMessage.prototype.messageVersion = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(CollectionMessage.prototype, "_bizJID", {
-                get: $util.oneOfGetter($oneOfFields = ["bizJID"]),
+            Object.defineProperty(CollectionMessage.prototype, "_bizJid", {
+                get: $util.oneOfGetter($oneOfFields = ["bizJid"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(CollectionMessage.prototype, "_ID", {
-                get: $util.oneOfGetter($oneOfFields = ["ID"]),
+            Object.defineProperty(CollectionMessage.prototype, "_id", {
+                get: $util.oneOfGetter($oneOfFields = ["id"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -5442,10 +5442,10 @@ export const WAE2E = $root.WAE2E = (() => {
             CollectionMessage.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.bizJID != null && Object.hasOwnProperty.call(m, "bizJID"))
-                    w.uint32(10).string(m.bizJID);
-                if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                    w.uint32(18).string(m.ID);
+                if (m.bizJid != null && Object.hasOwnProperty.call(m, "bizJid"))
+                    w.uint32(10).string(m.bizJid);
+                if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                    w.uint32(18).string(m.id);
                 if (m.messageVersion != null && Object.hasOwnProperty.call(m, "messageVersion"))
                     w.uint32(24).int32(m.messageVersion);
                 return w;
@@ -5465,11 +5465,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.bizJID = r.string();
+                            m.bizJid = r.string();
                             break;
                         }
                     case 2: {
-                            m.ID = r.string();
+                            m.id = r.string();
                             break;
                         }
                     case 3: {
@@ -5492,11 +5492,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.InteractiveMessage.CollectionMessage();
-                if (d.bizJID != null) {
-                    m.bizJID = String(d.bizJID);
+                if (d.bizJid != null) {
+                    m.bizJid = String(d.bizJid);
                 }
-                if (d.ID != null) {
-                    m.ID = String(d.ID);
+                if (d.id != null) {
+                    m.id = String(d.id);
                 }
                 if (d.messageVersion != null) {
                     m.messageVersion = d.messageVersion | 0;
@@ -5508,15 +5508,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.bizJID != null && m.hasOwnProperty("bizJID")) {
-                    d.bizJID = m.bizJID;
+                if (m.bizJid != null && m.hasOwnProperty("bizJid")) {
+                    d.bizJid = m.bizJid;
                     if (o.oneofs)
-                        d._bizJID = "bizJID";
+                        d._bizJid = "bizJid";
                 }
-                if (m.ID != null && m.hasOwnProperty("ID")) {
-                    d.ID = m.ID;
+                if (m.id != null && m.hasOwnProperty("id")) {
+                    d.id = m.id;
                     if (o.oneofs)
-                        d._ID = "ID";
+                        d._id = "id";
                 }
                 if (m.messageVersion != null && m.hasOwnProperty("messageVersion")) {
                     d.messageVersion = m.messageVersion;
@@ -5924,7 +5924,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
             Header.prototype.documentMessage = null;
             Header.prototype.imageMessage = null;
-            Header.prototype.JPEGThumbnail = null;
+            Header.prototype.jpegThumbnail = null;
             Header.prototype.videoMessage = null;
             Header.prototype.locationMessage = null;
             Header.prototype.productMessage = null;
@@ -5936,7 +5936,7 @@ export const WAE2E = $root.WAE2E = (() => {
             let $oneOfFields;
 
             Object.defineProperty(Header.prototype, "media", {
-                get: $util.oneOfGetter($oneOfFields = ["documentMessage", "imageMessage", "JPEGThumbnail", "videoMessage", "locationMessage", "productMessage"]),
+                get: $util.oneOfGetter($oneOfFields = ["documentMessage", "imageMessage", "jpegThumbnail", "videoMessage", "locationMessage", "productMessage"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -5981,8 +5981,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     $root.WAE2E.ImageMessage.encode(m.imageMessage, w.uint32(34).fork()).ldelim();
                 if (m.hasMediaAttachment != null && Object.hasOwnProperty.call(m, "hasMediaAttachment"))
                     w.uint32(40).bool(m.hasMediaAttachment);
-                if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                    w.uint32(50).bytes(m.JPEGThumbnail);
+                if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                    w.uint32(50).bytes(m.jpegThumbnail);
                 if (m.videoMessage != null && Object.hasOwnProperty.call(m, "videoMessage"))
                     $root.WAE2E.VideoMessage.encode(m.videoMessage, w.uint32(58).fork()).ldelim();
                 if (m.locationMessage != null && Object.hasOwnProperty.call(m, "locationMessage"))
@@ -6016,7 +6016,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 6: {
-                            m.JPEGThumbnail = r.bytes();
+                            m.jpegThumbnail = r.bytes();
                             break;
                         }
                     case 7: {
@@ -6073,11 +6073,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         throw TypeError(".WAE2E.InteractiveMessage.Header.imageMessage: object expected");
                     m.imageMessage = $root.WAE2E.ImageMessage.fromObject(d.imageMessage, n + 1);
                 }
-                if (d.JPEGThumbnail != null) {
-                    if (typeof d.JPEGThumbnail === "string")
-                        $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                    else if (d.JPEGThumbnail.length >= 0)
-                        m.JPEGThumbnail = d.JPEGThumbnail;
+                if (d.jpegThumbnail != null) {
+                    if (typeof d.jpegThumbnail === "string")
+                        $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                    else if (d.jpegThumbnail.length >= 0)
+                        m.jpegThumbnail = d.jpegThumbnail;
                 }
                 if (d.videoMessage != null) {
                     if (typeof d.videoMessage !== "object")
@@ -6140,10 +6140,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._hasMediaAttachment = "hasMediaAttachment";
                 }
-                if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                    d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+                if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                    d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                     if (o.oneofs)
-                        d.media = "JPEGThumbnail";
+                        d.media = "jpegThumbnail";
                 }
                 if (m.videoMessage != null && m.hasOwnProperty("videoMessage")) {
                     d.videoMessage = $root.WAE2E.VideoMessage.toObject(m.videoMessage, o);
@@ -6395,13 +6395,13 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            SingleSelectReply.prototype.selectedRowID = null;
+            SingleSelectReply.prototype.selectedRowId = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(SingleSelectReply.prototype, "_selectedRowID", {
-                get: $util.oneOfGetter($oneOfFields = ["selectedRowID"]),
+            Object.defineProperty(SingleSelectReply.prototype, "_selectedRowId", {
+                get: $util.oneOfGetter($oneOfFields = ["selectedRowId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -6412,8 +6412,8 @@ export const WAE2E = $root.WAE2E = (() => {
             SingleSelectReply.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.selectedRowID != null && Object.hasOwnProperty.call(m, "selectedRowID"))
-                    w.uint32(10).string(m.selectedRowID);
+                if (m.selectedRowId != null && Object.hasOwnProperty.call(m, "selectedRowId"))
+                    w.uint32(10).string(m.selectedRowId);
                 return w;
             };
 
@@ -6431,7 +6431,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.selectedRowID = r.string();
+                            m.selectedRowId = r.string();
                             break;
                         }
                     default:
@@ -6450,8 +6450,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.ListResponseMessage.SingleSelectReply();
-                if (d.selectedRowID != null) {
-                    m.selectedRowID = String(d.selectedRowID);
+                if (d.selectedRowId != null) {
+                    m.selectedRowId = String(d.selectedRowId);
                 }
                 return m;
             };
@@ -6460,10 +6460,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.selectedRowID != null && m.hasOwnProperty("selectedRowID")) {
-                    d.selectedRowID = m.selectedRowID;
+                if (m.selectedRowId != null && m.hasOwnProperty("selectedRowId")) {
+                    d.selectedRowId = m.selectedRowId;
                     if (o.oneofs)
-                        d._selectedRowID = "selectedRowID";
+                        d._selectedRowId = "selectedRowId";
                 }
                 return d;
             };
@@ -6776,7 +6776,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
             ProductListInfo.prototype.productSections = $util.emptyArray;
             ProductListInfo.prototype.headerImage = null;
-            ProductListInfo.prototype.businessOwnerJID = null;
+            ProductListInfo.prototype.businessOwnerJid = null;
 
             let $oneOfFields;
 
@@ -6787,8 +6787,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ProductListInfo.prototype, "_businessOwnerJID", {
-                get: $util.oneOfGetter($oneOfFields = ["businessOwnerJID"]),
+            Object.defineProperty(ProductListInfo.prototype, "_businessOwnerJid", {
+                get: $util.oneOfGetter($oneOfFields = ["businessOwnerJid"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -6805,8 +6805,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 }
                 if (m.headerImage != null && Object.hasOwnProperty.call(m, "headerImage"))
                     $root.WAE2E.ListMessage.ProductListHeaderImage.encode(m.headerImage, w.uint32(18).fork()).ldelim();
-                if (m.businessOwnerJID != null && Object.hasOwnProperty.call(m, "businessOwnerJID"))
-                    w.uint32(26).string(m.businessOwnerJID);
+                if (m.businessOwnerJid != null && Object.hasOwnProperty.call(m, "businessOwnerJid"))
+                    w.uint32(26).string(m.businessOwnerJid);
                 return w;
             };
 
@@ -6834,7 +6834,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 3: {
-                            m.businessOwnerJID = r.string();
+                            m.businessOwnerJid = r.string();
                             break;
                         }
                     default:
@@ -6868,8 +6868,8 @@ export const WAE2E = $root.WAE2E = (() => {
                         throw TypeError(".WAE2E.ListMessage.ProductListInfo.headerImage: object expected");
                     m.headerImage = $root.WAE2E.ListMessage.ProductListHeaderImage.fromObject(d.headerImage, n + 1);
                 }
-                if (d.businessOwnerJID != null) {
-                    m.businessOwnerJID = String(d.businessOwnerJID);
+                if (d.businessOwnerJid != null) {
+                    m.businessOwnerJid = String(d.businessOwnerJid);
                 }
                 return m;
             };
@@ -6892,10 +6892,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._headerImage = "headerImage";
                 }
-                if (m.businessOwnerJID != null && m.hasOwnProperty("businessOwnerJID")) {
-                    d.businessOwnerJID = m.businessOwnerJID;
+                if (m.businessOwnerJid != null && m.hasOwnProperty("businessOwnerJid")) {
+                    d.businessOwnerJid = m.businessOwnerJid;
                     if (o.oneofs)
-                        d._businessOwnerJID = "businessOwnerJID";
+                        d._businessOwnerJid = "businessOwnerJid";
                 }
                 return d;
             };
@@ -6923,20 +6923,20 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            ProductListHeaderImage.prototype.productID = null;
-            ProductListHeaderImage.prototype.JPEGThumbnail = null;
+            ProductListHeaderImage.prototype.productId = null;
+            ProductListHeaderImage.prototype.jpegThumbnail = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ProductListHeaderImage.prototype, "_productID", {
-                get: $util.oneOfGetter($oneOfFields = ["productID"]),
+            Object.defineProperty(ProductListHeaderImage.prototype, "_productId", {
+                get: $util.oneOfGetter($oneOfFields = ["productId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ProductListHeaderImage.prototype, "_JPEGThumbnail", {
-                get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+            Object.defineProperty(ProductListHeaderImage.prototype, "_jpegThumbnail", {
+                get: $util.oneOfGetter($oneOfFields = ["jpegThumbnail"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -6947,10 +6947,10 @@ export const WAE2E = $root.WAE2E = (() => {
             ProductListHeaderImage.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.productID != null && Object.hasOwnProperty.call(m, "productID"))
-                    w.uint32(10).string(m.productID);
-                if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                    w.uint32(18).bytes(m.JPEGThumbnail);
+                if (m.productId != null && Object.hasOwnProperty.call(m, "productId"))
+                    w.uint32(10).string(m.productId);
+                if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                    w.uint32(18).bytes(m.jpegThumbnail);
                 return w;
             };
 
@@ -6968,11 +6968,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.productID = r.string();
+                            m.productId = r.string();
                             break;
                         }
                     case 2: {
-                            m.JPEGThumbnail = r.bytes();
+                            m.jpegThumbnail = r.bytes();
                             break;
                         }
                     default:
@@ -6991,14 +6991,14 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.ListMessage.ProductListHeaderImage();
-                if (d.productID != null) {
-                    m.productID = String(d.productID);
+                if (d.productId != null) {
+                    m.productId = String(d.productId);
                 }
-                if (d.JPEGThumbnail != null) {
-                    if (typeof d.JPEGThumbnail === "string")
-                        $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                    else if (d.JPEGThumbnail.length >= 0)
-                        m.JPEGThumbnail = d.JPEGThumbnail;
+                if (d.jpegThumbnail != null) {
+                    if (typeof d.jpegThumbnail === "string")
+                        $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                    else if (d.jpegThumbnail.length >= 0)
+                        m.jpegThumbnail = d.jpegThumbnail;
                 }
                 return m;
             };
@@ -7007,15 +7007,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.productID != null && m.hasOwnProperty("productID")) {
-                    d.productID = m.productID;
+                if (m.productId != null && m.hasOwnProperty("productId")) {
+                    d.productId = m.productId;
                     if (o.oneofs)
-                        d._productID = "productID";
+                        d._productId = "productId";
                 }
-                if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                    d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+                if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                    d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                     if (o.oneofs)
-                        d._JPEGThumbnail = "JPEGThumbnail";
+                        d._jpegThumbnail = "jpegThumbnail";
                 }
                 return d;
             };
@@ -7170,13 +7170,13 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            Product.prototype.productID = null;
+            Product.prototype.productId = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(Product.prototype, "_productID", {
-                get: $util.oneOfGetter($oneOfFields = ["productID"]),
+            Object.defineProperty(Product.prototype, "_productId", {
+                get: $util.oneOfGetter($oneOfFields = ["productId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -7187,8 +7187,8 @@ export const WAE2E = $root.WAE2E = (() => {
             Product.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.productID != null && Object.hasOwnProperty.call(m, "productID"))
-                    w.uint32(10).string(m.productID);
+                if (m.productId != null && Object.hasOwnProperty.call(m, "productId"))
+                    w.uint32(10).string(m.productId);
                 return w;
             };
 
@@ -7206,7 +7206,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.productID = r.string();
+                            m.productId = r.string();
                             break;
                         }
                     default:
@@ -7225,8 +7225,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.ListMessage.Product();
-                if (d.productID != null) {
-                    m.productID = String(d.productID);
+                if (d.productId != null) {
+                    m.productId = String(d.productId);
                 }
                 return m;
             };
@@ -7235,10 +7235,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.productID != null && m.hasOwnProperty("productID")) {
-                    d.productID = m.productID;
+                if (m.productId != null && m.hasOwnProperty("productId")) {
+                    d.productId = m.productId;
                     if (o.oneofs)
-                        d._productID = "productID";
+                        d._productId = "productId";
                 }
                 return d;
             };
@@ -7395,7 +7395,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
             Row.prototype.title = null;
             Row.prototype.description = null;
-            Row.prototype.rowID = null;
+            Row.prototype.rowId = null;
 
             let $oneOfFields;
 
@@ -7412,8 +7412,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(Row.prototype, "_rowID", {
-                get: $util.oneOfGetter($oneOfFields = ["rowID"]),
+            Object.defineProperty(Row.prototype, "_rowId", {
+                get: $util.oneOfGetter($oneOfFields = ["rowId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -7428,8 +7428,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     w.uint32(10).string(m.title);
                 if (m.description != null && Object.hasOwnProperty.call(m, "description"))
                     w.uint32(18).string(m.description);
-                if (m.rowID != null && Object.hasOwnProperty.call(m, "rowID"))
-                    w.uint32(26).string(m.rowID);
+                if (m.rowId != null && Object.hasOwnProperty.call(m, "rowId"))
+                    w.uint32(26).string(m.rowId);
                 return w;
             };
 
@@ -7455,7 +7455,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 3: {
-                            m.rowID = r.string();
+                            m.rowId = r.string();
                             break;
                         }
                     default:
@@ -7480,8 +7480,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (d.description != null) {
                     m.description = String(d.description);
                 }
-                if (d.rowID != null) {
-                    m.rowID = String(d.rowID);
+                if (d.rowId != null) {
+                    m.rowId = String(d.rowId);
                 }
                 return m;
             };
@@ -7500,10 +7500,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._description = "description";
                 }
-                if (m.rowID != null && m.hasOwnProperty("rowID")) {
-                    d.rowID = m.rowID;
+                if (m.rowId != null && m.hasOwnProperty("rowId")) {
+                    d.rowId = m.rowId;
                     if (o.oneofs)
-                        d._rowID = "rowID";
+                        d._rowId = "rowId";
                 }
                 return d;
             };
@@ -7534,27 +7534,27 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        OrderMessage.prototype.orderID = null;
+        OrderMessage.prototype.orderId = null;
         OrderMessage.prototype.thumbnail = null;
         OrderMessage.prototype.itemCount = null;
         OrderMessage.prototype.status = null;
         OrderMessage.prototype.surface = null;
         OrderMessage.prototype.message = null;
         OrderMessage.prototype.orderTitle = null;
-        OrderMessage.prototype.sellerJID = null;
+        OrderMessage.prototype.sellerJid = null;
         OrderMessage.prototype.token = null;
         OrderMessage.prototype.totalAmount1000 = null;
         OrderMessage.prototype.totalCurrencyCode = null;
         OrderMessage.prototype.contextInfo = null;
         OrderMessage.prototype.messageVersion = null;
-        OrderMessage.prototype.orderRequestMessageID = null;
+        OrderMessage.prototype.orderRequestMessageId = null;
         OrderMessage.prototype.catalogType = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(OrderMessage.prototype, "_orderID", {
-            get: $util.oneOfGetter($oneOfFields = ["orderID"]),
+        Object.defineProperty(OrderMessage.prototype, "_orderId", {
+            get: $util.oneOfGetter($oneOfFields = ["orderId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -7595,8 +7595,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(OrderMessage.prototype, "_sellerJID", {
-            get: $util.oneOfGetter($oneOfFields = ["sellerJID"]),
+        Object.defineProperty(OrderMessage.prototype, "_sellerJid", {
+            get: $util.oneOfGetter($oneOfFields = ["sellerJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -7631,8 +7631,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(OrderMessage.prototype, "_orderRequestMessageID", {
-            get: $util.oneOfGetter($oneOfFields = ["orderRequestMessageID"]),
+        Object.defineProperty(OrderMessage.prototype, "_orderRequestMessageId", {
+            get: $util.oneOfGetter($oneOfFields = ["orderRequestMessageId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -7649,8 +7649,8 @@ export const WAE2E = $root.WAE2E = (() => {
         OrderMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.orderID != null && Object.hasOwnProperty.call(m, "orderID"))
-                w.uint32(10).string(m.orderID);
+            if (m.orderId != null && Object.hasOwnProperty.call(m, "orderId"))
+                w.uint32(10).string(m.orderId);
             if (m.thumbnail != null && Object.hasOwnProperty.call(m, "thumbnail"))
                 w.uint32(18).bytes(m.thumbnail);
             if (m.itemCount != null && Object.hasOwnProperty.call(m, "itemCount"))
@@ -7663,8 +7663,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(50).string(m.message);
             if (m.orderTitle != null && Object.hasOwnProperty.call(m, "orderTitle"))
                 w.uint32(58).string(m.orderTitle);
-            if (m.sellerJID != null && Object.hasOwnProperty.call(m, "sellerJID"))
-                w.uint32(66).string(m.sellerJID);
+            if (m.sellerJid != null && Object.hasOwnProperty.call(m, "sellerJid"))
+                w.uint32(66).string(m.sellerJid);
             if (m.token != null && Object.hasOwnProperty.call(m, "token"))
                 w.uint32(74).string(m.token);
             if (m.totalAmount1000 != null && Object.hasOwnProperty.call(m, "totalAmount1000"))
@@ -7673,8 +7673,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(90).string(m.totalCurrencyCode);
             if (m.messageVersion != null && Object.hasOwnProperty.call(m, "messageVersion"))
                 w.uint32(96).int32(m.messageVersion);
-            if (m.orderRequestMessageID != null && Object.hasOwnProperty.call(m, "orderRequestMessageID"))
-                WACommon.MessageKey.encode(m.orderRequestMessageID, w.uint32(106).fork()).ldelim();
+            if (m.orderRequestMessageId != null && Object.hasOwnProperty.call(m, "orderRequestMessageId"))
+                WACommon.MessageKey.encode(m.orderRequestMessageId, w.uint32(106).fork()).ldelim();
             if (m.catalogType != null && Object.hasOwnProperty.call(m, "catalogType"))
                 w.uint32(122).string(m.catalogType);
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
@@ -7696,7 +7696,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.orderID = r.string();
+                        m.orderId = r.string();
                         break;
                     }
                 case 2: {
@@ -7724,7 +7724,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 8: {
-                        m.sellerJID = r.string();
+                        m.sellerJid = r.string();
                         break;
                     }
                 case 9: {
@@ -7748,7 +7748,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 13: {
-                        m.orderRequestMessageID = WACommon.MessageKey.decode(r, r.uint32(), undefined, n + 1);
+                        m.orderRequestMessageId = WACommon.MessageKey.decode(r, r.uint32(), undefined, n + 1);
                         break;
                     }
                 case 15: {
@@ -7771,8 +7771,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.OrderMessage();
-            if (d.orderID != null) {
-                m.orderID = String(d.orderID);
+            if (d.orderId != null) {
+                m.orderId = String(d.orderId);
             }
             if (d.thumbnail != null) {
                 if (typeof d.thumbnail === "string")
@@ -7821,8 +7821,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.orderTitle != null) {
                 m.orderTitle = String(d.orderTitle);
             }
-            if (d.sellerJID != null) {
-                m.sellerJID = String(d.sellerJID);
+            if (d.sellerJid != null) {
+                m.sellerJid = String(d.sellerJid);
             }
             if (d.token != null) {
                 m.token = String(d.token);
@@ -7848,10 +7848,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.messageVersion != null) {
                 m.messageVersion = d.messageVersion | 0;
             }
-            if (d.orderRequestMessageID != null) {
-                if (typeof d.orderRequestMessageID !== "object")
-                    throw TypeError(".WAE2E.OrderMessage.orderRequestMessageID: object expected");
-                m.orderRequestMessageID = WACommon.MessageKey.fromObject(d.orderRequestMessageID, n + 1);
+            if (d.orderRequestMessageId != null) {
+                if (typeof d.orderRequestMessageId !== "object")
+                    throw TypeError(".WAE2E.OrderMessage.orderRequestMessageId: object expected");
+                m.orderRequestMessageId = WACommon.MessageKey.fromObject(d.orderRequestMessageId, n + 1);
             }
             if (d.catalogType != null) {
                 m.catalogType = String(d.catalogType);
@@ -7863,10 +7863,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.orderID != null && m.hasOwnProperty("orderID")) {
-                d.orderID = m.orderID;
+            if (m.orderId != null && m.hasOwnProperty("orderId")) {
+                d.orderId = m.orderId;
                 if (o.oneofs)
-                    d._orderID = "orderID";
+                    d._orderId = "orderId";
             }
             if (m.thumbnail != null && m.hasOwnProperty("thumbnail")) {
                 d.thumbnail = o.bytes === String ? $util.base64.encode(m.thumbnail, 0, m.thumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnail) : m.thumbnail;
@@ -7898,10 +7898,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._orderTitle = "orderTitle";
             }
-            if (m.sellerJID != null && m.hasOwnProperty("sellerJID")) {
-                d.sellerJID = m.sellerJID;
+            if (m.sellerJid != null && m.hasOwnProperty("sellerJid")) {
+                d.sellerJid = m.sellerJid;
                 if (o.oneofs)
-                    d._sellerJID = "sellerJID";
+                    d._sellerJid = "sellerJid";
             }
             if (m.token != null && m.hasOwnProperty("token")) {
                 d.token = m.token;
@@ -7926,10 +7926,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._messageVersion = "messageVersion";
             }
-            if (m.orderRequestMessageID != null && m.hasOwnProperty("orderRequestMessageID")) {
-                d.orderRequestMessageID = WACommon.MessageKey.toObject(m.orderRequestMessageID, o);
+            if (m.orderRequestMessageId != null && m.hasOwnProperty("orderRequestMessageId")) {
+                d.orderRequestMessageId = WACommon.MessageKey.toObject(m.orderRequestMessageId, o);
                 if (o.oneofs)
-                    d._orderRequestMessageID = "orderRequestMessageID";
+                    d._orderRequestMessageId = "orderRequestMessageId";
             }
             if (m.catalogType != null && m.hasOwnProperty("catalogType")) {
                 d.catalogType = m.catalogType;
@@ -7984,7 +7984,7 @@ export const WAE2E = $root.WAE2E = (() => {
         StatusQuotedMessage.prototype.type = null;
         StatusQuotedMessage.prototype.text = null;
         StatusQuotedMessage.prototype.thumbnail = null;
-        StatusQuotedMessage.prototype.originalStatusID = null;
+        StatusQuotedMessage.prototype.originalStatusId = null;
 
         let $oneOfFields;
 
@@ -8007,8 +8007,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StatusQuotedMessage.prototype, "_originalStatusID", {
-            get: $util.oneOfGetter($oneOfFields = ["originalStatusID"]),
+        Object.defineProperty(StatusQuotedMessage.prototype, "_originalStatusId", {
+            get: $util.oneOfGetter($oneOfFields = ["originalStatusId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -8025,8 +8025,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(18).string(m.text);
             if (m.thumbnail != null && Object.hasOwnProperty.call(m, "thumbnail"))
                 w.uint32(26).bytes(m.thumbnail);
-            if (m.originalStatusID != null && Object.hasOwnProperty.call(m, "originalStatusID"))
-                WACommon.MessageKey.encode(m.originalStatusID, w.uint32(34).fork()).ldelim();
+            if (m.originalStatusId != null && Object.hasOwnProperty.call(m, "originalStatusId"))
+                WACommon.MessageKey.encode(m.originalStatusId, w.uint32(34).fork()).ldelim();
             return w;
         };
 
@@ -8056,7 +8056,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 4: {
-                        m.originalStatusID = WACommon.MessageKey.decode(r, r.uint32(), undefined, n + 1);
+                        m.originalStatusId = WACommon.MessageKey.decode(r, r.uint32(), undefined, n + 1);
                         break;
                     }
                 default:
@@ -8096,10 +8096,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.thumbnail.length >= 0)
                     m.thumbnail = d.thumbnail;
             }
-            if (d.originalStatusID != null) {
-                if (typeof d.originalStatusID !== "object")
-                    throw TypeError(".WAE2E.StatusQuotedMessage.originalStatusID: object expected");
-                m.originalStatusID = WACommon.MessageKey.fromObject(d.originalStatusID, n + 1);
+            if (d.originalStatusId != null) {
+                if (typeof d.originalStatusId !== "object")
+                    throw TypeError(".WAE2E.StatusQuotedMessage.originalStatusId: object expected");
+                m.originalStatusId = WACommon.MessageKey.fromObject(d.originalStatusId, n + 1);
             }
             return m;
         };
@@ -8123,10 +8123,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._thumbnail = "thumbnail";
             }
-            if (m.originalStatusID != null && m.hasOwnProperty("originalStatusID")) {
-                d.originalStatusID = WACommon.MessageKey.toObject(m.originalStatusID, o);
+            if (m.originalStatusId != null && m.hasOwnProperty("originalStatusId")) {
+                d.originalStatusId = WACommon.MessageKey.toObject(m.originalStatusId, o);
                 if (o.oneofs)
-                    d._originalStatusID = "originalStatusID";
+                    d._originalStatusId = "originalStatusId";
             }
             return d;
         };
@@ -8160,15 +8160,15 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        SplitPaymentParticipant.prototype.JID = null;
+        SplitPaymentParticipant.prototype.jid = null;
         SplitPaymentParticipant.prototype.amount = null;
         SplitPaymentParticipant.prototype.status = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SplitPaymentParticipant.prototype, "_JID", {
-            get: $util.oneOfGetter($oneOfFields = ["JID"]),
+        Object.defineProperty(SplitPaymentParticipant.prototype, "_jid", {
+            get: $util.oneOfGetter($oneOfFields = ["jid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -8191,8 +8191,8 @@ export const WAE2E = $root.WAE2E = (() => {
         SplitPaymentParticipant.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.JID != null && Object.hasOwnProperty.call(m, "JID"))
-                w.uint32(10).string(m.JID);
+            if (m.jid != null && Object.hasOwnProperty.call(m, "jid"))
+                w.uint32(10).string(m.jid);
             if (m.amount != null && Object.hasOwnProperty.call(m, "amount"))
                 $root.WAE2E.Money.encode(m.amount, w.uint32(18).fork()).ldelim();
             if (m.status != null && Object.hasOwnProperty.call(m, "status"))
@@ -8214,7 +8214,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.JID = r.string();
+                        m.jid = r.string();
                         break;
                     }
                 case 2: {
@@ -8241,8 +8241,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.SplitPaymentParticipant();
-            if (d.JID != null) {
-                m.JID = String(d.JID);
+            if (d.jid != null) {
+                m.jid = String(d.jid);
             }
             if (d.amount != null) {
                 if (typeof d.amount !== "object")
@@ -8272,10 +8272,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.JID != null && m.hasOwnProperty("JID")) {
-                d.JID = m.JID;
+            if (m.jid != null && m.hasOwnProperty("jid")) {
+                d.jid = m.jid;
                 if (o.oneofs)
-                    d._JID = "JID";
+                    d._jid = "jid";
             }
             if (m.amount != null && m.hasOwnProperty("amount")) {
                 d.amount = $root.WAE2E.Money.toObject(m.amount, o);
@@ -8320,23 +8320,23 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        P2PPaymentReminderNotification.prototype.reminderID = null;
+        P2PPaymentReminderNotification.prototype.reminderId = null;
         P2PPaymentReminderNotification.prototype.amount = null;
         P2PPaymentReminderNotification.prototype.frequency = null;
         P2PPaymentReminderNotification.prototype.nextReminderTimestamp = null;
         P2PPaymentReminderNotification.prototype.expiryTimestamp = null;
         P2PPaymentReminderNotification.prototype.state = null;
         P2PPaymentReminderNotification.prototype.description = null;
-        P2PPaymentReminderNotification.prototype.creatorJID = null;
-        P2PPaymentReminderNotification.prototype.receiverJID = null;
-        P2PPaymentReminderNotification.prototype.upiID = null;
+        P2PPaymentReminderNotification.prototype.creatorJid = null;
+        P2PPaymentReminderNotification.prototype.receiverJid = null;
+        P2PPaymentReminderNotification.prototype.upiId = null;
         P2PPaymentReminderNotification.prototype.createdTimestamp = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(P2PPaymentReminderNotification.prototype, "_reminderID", {
-            get: $util.oneOfGetter($oneOfFields = ["reminderID"]),
+        Object.defineProperty(P2PPaymentReminderNotification.prototype, "_reminderId", {
+            get: $util.oneOfGetter($oneOfFields = ["reminderId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -8377,20 +8377,20 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(P2PPaymentReminderNotification.prototype, "_creatorJID", {
-            get: $util.oneOfGetter($oneOfFields = ["creatorJID"]),
+        Object.defineProperty(P2PPaymentReminderNotification.prototype, "_creatorJid", {
+            get: $util.oneOfGetter($oneOfFields = ["creatorJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(P2PPaymentReminderNotification.prototype, "_receiverJID", {
-            get: $util.oneOfGetter($oneOfFields = ["receiverJID"]),
+        Object.defineProperty(P2PPaymentReminderNotification.prototype, "_receiverJid", {
+            get: $util.oneOfGetter($oneOfFields = ["receiverJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(P2PPaymentReminderNotification.prototype, "_upiID", {
-            get: $util.oneOfGetter($oneOfFields = ["upiID"]),
+        Object.defineProperty(P2PPaymentReminderNotification.prototype, "_upiId", {
+            get: $util.oneOfGetter($oneOfFields = ["upiId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -8407,8 +8407,8 @@ export const WAE2E = $root.WAE2E = (() => {
         P2PPaymentReminderNotification.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.reminderID != null && Object.hasOwnProperty.call(m, "reminderID"))
-                w.uint32(10).string(m.reminderID);
+            if (m.reminderId != null && Object.hasOwnProperty.call(m, "reminderId"))
+                w.uint32(10).string(m.reminderId);
             if (m.amount != null && Object.hasOwnProperty.call(m, "amount"))
                 $root.WAE2E.Money.encode(m.amount, w.uint32(18).fork()).ldelim();
             if (m.frequency != null && Object.hasOwnProperty.call(m, "frequency"))
@@ -8421,12 +8421,12 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(48).int32(m.state);
             if (m.description != null && Object.hasOwnProperty.call(m, "description"))
                 w.uint32(58).string(m.description);
-            if (m.creatorJID != null && Object.hasOwnProperty.call(m, "creatorJID"))
-                w.uint32(66).string(m.creatorJID);
-            if (m.receiverJID != null && Object.hasOwnProperty.call(m, "receiverJID"))
-                w.uint32(74).string(m.receiverJID);
-            if (m.upiID != null && Object.hasOwnProperty.call(m, "upiID"))
-                w.uint32(82).string(m.upiID);
+            if (m.creatorJid != null && Object.hasOwnProperty.call(m, "creatorJid"))
+                w.uint32(66).string(m.creatorJid);
+            if (m.receiverJid != null && Object.hasOwnProperty.call(m, "receiverJid"))
+                w.uint32(74).string(m.receiverJid);
+            if (m.upiId != null && Object.hasOwnProperty.call(m, "upiId"))
+                w.uint32(82).string(m.upiId);
             if (m.createdTimestamp != null && Object.hasOwnProperty.call(m, "createdTimestamp"))
                 w.uint32(88).int64(m.createdTimestamp);
             return w;
@@ -8446,7 +8446,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.reminderID = r.string();
+                        m.reminderId = r.string();
                         break;
                     }
                 case 2: {
@@ -8474,15 +8474,15 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 8: {
-                        m.creatorJID = r.string();
+                        m.creatorJid = r.string();
                         break;
                     }
                 case 9: {
-                        m.receiverJID = r.string();
+                        m.receiverJid = r.string();
                         break;
                     }
                 case 10: {
-                        m.upiID = r.string();
+                        m.upiId = r.string();
                         break;
                     }
                 case 11: {
@@ -8505,8 +8505,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.P2PPaymentReminderNotification();
-            if (d.reminderID != null) {
-                m.reminderID = String(d.reminderID);
+            if (d.reminderId != null) {
+                m.reminderId = String(d.reminderId);
             }
             if (d.amount != null) {
                 if (typeof d.amount !== "object")
@@ -8596,14 +8596,14 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.description != null) {
                 m.description = String(d.description);
             }
-            if (d.creatorJID != null) {
-                m.creatorJID = String(d.creatorJID);
+            if (d.creatorJid != null) {
+                m.creatorJid = String(d.creatorJid);
             }
-            if (d.receiverJID != null) {
-                m.receiverJID = String(d.receiverJID);
+            if (d.receiverJid != null) {
+                m.receiverJid = String(d.receiverJid);
             }
-            if (d.upiID != null) {
-                m.upiID = String(d.upiID);
+            if (d.upiId != null) {
+                m.upiId = String(d.upiId);
             }
             if (d.createdTimestamp != null) {
                 if ($util.Long)
@@ -8622,10 +8622,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.reminderID != null && m.hasOwnProperty("reminderID")) {
-                d.reminderID = m.reminderID;
+            if (m.reminderId != null && m.hasOwnProperty("reminderId")) {
+                d.reminderId = m.reminderId;
                 if (o.oneofs)
-                    d._reminderID = "reminderID";
+                    d._reminderId = "reminderId";
             }
             if (m.amount != null && m.hasOwnProperty("amount")) {
                 d.amount = $root.WAE2E.Money.toObject(m.amount, o);
@@ -8663,20 +8663,20 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._description = "description";
             }
-            if (m.creatorJID != null && m.hasOwnProperty("creatorJID")) {
-                d.creatorJID = m.creatorJID;
+            if (m.creatorJid != null && m.hasOwnProperty("creatorJid")) {
+                d.creatorJid = m.creatorJid;
                 if (o.oneofs)
-                    d._creatorJID = "creatorJID";
+                    d._creatorJid = "creatorJid";
             }
-            if (m.receiverJID != null && m.hasOwnProperty("receiverJID")) {
-                d.receiverJID = m.receiverJID;
+            if (m.receiverJid != null && m.hasOwnProperty("receiverJid")) {
+                d.receiverJid = m.receiverJid;
                 if (o.oneofs)
-                    d._receiverJID = "receiverJID";
+                    d._receiverJid = "receiverJid";
             }
-            if (m.upiID != null && m.hasOwnProperty("upiID")) {
-                d.upiID = m.upiID;
+            if (m.upiId != null && m.hasOwnProperty("upiId")) {
+                d.upiId = m.upiId;
                 if (o.oneofs)
-                    d._upiID = "upiID";
+                    d._upiId = "upiId";
             }
             if (m.createdTimestamp != null && m.hasOwnProperty("createdTimestamp")) {
                 if (typeof m.createdTimestamp === "number")
@@ -8736,7 +8736,7 @@ export const WAE2E = $root.WAE2E = (() => {
         PaymentInviteMessage.prototype.serviceType = null;
         PaymentInviteMessage.prototype.expiryTimestamp = null;
         PaymentInviteMessage.prototype.incentiveEligible = null;
-        PaymentInviteMessage.prototype.referralID = null;
+        PaymentInviteMessage.prototype.referralId = null;
         PaymentInviteMessage.prototype.inviteType = null;
 
         let $oneOfFields;
@@ -8760,8 +8760,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PaymentInviteMessage.prototype, "_referralID", {
-            get: $util.oneOfGetter($oneOfFields = ["referralID"]),
+        Object.defineProperty(PaymentInviteMessage.prototype, "_referralId", {
+            get: $util.oneOfGetter($oneOfFields = ["referralId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -8784,8 +8784,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(16).int64(m.expiryTimestamp);
             if (m.incentiveEligible != null && Object.hasOwnProperty.call(m, "incentiveEligible"))
                 w.uint32(24).bool(m.incentiveEligible);
-            if (m.referralID != null && Object.hasOwnProperty.call(m, "referralID"))
-                w.uint32(34).string(m.referralID);
+            if (m.referralId != null && Object.hasOwnProperty.call(m, "referralId"))
+                w.uint32(34).string(m.referralId);
             if (m.inviteType != null && Object.hasOwnProperty.call(m, "inviteType"))
                 w.uint32(40).int32(m.inviteType);
             return w;
@@ -8817,7 +8817,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 4: {
-                        m.referralID = r.string();
+                        m.referralId = r.string();
                         break;
                     }
                 case 5: {
@@ -8877,8 +8877,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.incentiveEligible != null) {
                 m.incentiveEligible = Boolean(d.incentiveEligible);
             }
-            if (d.referralID != null) {
-                m.referralID = String(d.referralID);
+            if (d.referralId != null) {
+                m.referralId = String(d.referralId);
             }
             switch (d.inviteType) {
             default:
@@ -8921,10 +8921,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._incentiveEligible = "incentiveEligible";
             }
-            if (m.referralID != null && m.hasOwnProperty("referralID")) {
-                d.referralID = m.referralID;
+            if (m.referralId != null && m.hasOwnProperty("referralId")) {
+                d.referralId = m.referralId;
                 if (o.oneofs)
-                    d._referralID = "referralID";
+                    d._referralId = "referralId";
             }
             if (m.inviteType != null && m.hasOwnProperty("inviteType")) {
                 d.inviteType = o.enums === String ? $root.WAE2E.PaymentInviteMessage.InviteType[m.inviteType] === undefined ? m.inviteType : $root.WAE2E.PaymentInviteMessage.InviteType[m.inviteType] : m.inviteType;
@@ -10026,7 +10026,7 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         PeerDataOperationRequestResponseMessage.prototype.peerDataOperationRequestType = null;
-        PeerDataOperationRequestResponseMessage.prototype.stanzaID = null;
+        PeerDataOperationRequestResponseMessage.prototype.stanzaId = null;
         PeerDataOperationRequestResponseMessage.prototype.peerDataOperationResult = $util.emptyArray;
 
         let $oneOfFields;
@@ -10038,8 +10038,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PeerDataOperationRequestResponseMessage.prototype, "_stanzaID", {
-            get: $util.oneOfGetter($oneOfFields = ["stanzaID"]),
+        Object.defineProperty(PeerDataOperationRequestResponseMessage.prototype, "_stanzaId", {
+            get: $util.oneOfGetter($oneOfFields = ["stanzaId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -10052,8 +10052,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.peerDataOperationRequestType != null && Object.hasOwnProperty.call(m, "peerDataOperationRequestType"))
                 w.uint32(8).int32(m.peerDataOperationRequestType);
-            if (m.stanzaID != null && Object.hasOwnProperty.call(m, "stanzaID"))
-                w.uint32(18).string(m.stanzaID);
+            if (m.stanzaId != null && Object.hasOwnProperty.call(m, "stanzaId"))
+                w.uint32(18).string(m.stanzaId);
             if (m.peerDataOperationResult != null && m.peerDataOperationResult.length) {
                 for (var i = 0; i < m.peerDataOperationResult.length; ++i)
                     $root.WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.encode(m.peerDataOperationResult[i], w.uint32(26).fork()).ldelim();
@@ -10079,7 +10079,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.stanzaID = r.string();
+                        m.stanzaId = r.string();
                         break;
                     }
                 case 3: {
@@ -10168,8 +10168,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 m.peerDataOperationRequestType = 13;
                 break;
             }
-            if (d.stanzaID != null) {
-                m.stanzaID = String(d.stanzaID);
+            if (d.stanzaId != null) {
+                m.stanzaId = String(d.stanzaId);
             }
             if (d.peerDataOperationResult) {
                 if (!Array.isArray(d.peerDataOperationResult))
@@ -10196,10 +10196,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._peerDataOperationRequestType = "peerDataOperationRequestType";
             }
-            if (m.stanzaID != null && m.hasOwnProperty("stanzaID")) {
-                d.stanzaID = m.stanzaID;
+            if (m.stanzaId != null && m.hasOwnProperty("stanzaId")) {
+                d.stanzaId = m.stanzaId;
                 if (o.oneofs)
-                    d._stanzaID = "stanzaID";
+                    d._stanzaId = "stanzaId";
             }
             if (m.peerDataOperationResult && m.peerDataOperationResult.length) {
                 d.peerDataOperationResult = [];
@@ -10621,13 +10621,13 @@ export const WAE2E = $root.WAE2E = (() => {
                                 this[ks[i]] = p[ks[i]];
                 }
 
-                FlowResponsesCsvBundle.prototype.flowID = null;
-                FlowResponsesCsvBundle.prototype.galaxyFlowDownloadRequestID = null;
+                FlowResponsesCsvBundle.prototype.flowId = null;
+                FlowResponsesCsvBundle.prototype.galaxyFlowDownloadRequestId = null;
                 FlowResponsesCsvBundle.prototype.fileName = null;
                 FlowResponsesCsvBundle.prototype.mimetype = null;
-                FlowResponsesCsvBundle.prototype.fileSHA256 = null;
+                FlowResponsesCsvBundle.prototype.fileSha256 = null;
                 FlowResponsesCsvBundle.prototype.mediaKey = null;
-                FlowResponsesCsvBundle.prototype.fileEncSHA256 = null;
+                FlowResponsesCsvBundle.prototype.fileEncSha256 = null;
                 FlowResponsesCsvBundle.prototype.directPath = null;
                 FlowResponsesCsvBundle.prototype.mediaKeyTimestamp = null;
                 FlowResponsesCsvBundle.prototype.fileLength = null;
@@ -10635,14 +10635,14 @@ export const WAE2E = $root.WAE2E = (() => {
                 let $oneOfFields;
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(FlowResponsesCsvBundle.prototype, "_flowID", {
-                    get: $util.oneOfGetter($oneOfFields = ["flowID"]),
+                Object.defineProperty(FlowResponsesCsvBundle.prototype, "_flowId", {
+                    get: $util.oneOfGetter($oneOfFields = ["flowId"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(FlowResponsesCsvBundle.prototype, "_galaxyFlowDownloadRequestID", {
-                    get: $util.oneOfGetter($oneOfFields = ["galaxyFlowDownloadRequestID"]),
+                Object.defineProperty(FlowResponsesCsvBundle.prototype, "_galaxyFlowDownloadRequestId", {
+                    get: $util.oneOfGetter($oneOfFields = ["galaxyFlowDownloadRequestId"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -10659,8 +10659,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(FlowResponsesCsvBundle.prototype, "_fileSHA256", {
-                    get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+                Object.defineProperty(FlowResponsesCsvBundle.prototype, "_fileSha256", {
+                    get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -10671,8 +10671,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(FlowResponsesCsvBundle.prototype, "_fileEncSHA256", {
-                    get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+                Object.defineProperty(FlowResponsesCsvBundle.prototype, "_fileEncSha256", {
+                    get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -10701,20 +10701,20 @@ export const WAE2E = $root.WAE2E = (() => {
                 FlowResponsesCsvBundle.encode = function encode(m, w) {
                     if (!w)
                         w = $Writer.create();
-                    if (m.flowID != null && Object.hasOwnProperty.call(m, "flowID"))
-                        w.uint32(10).string(m.flowID);
-                    if (m.galaxyFlowDownloadRequestID != null && Object.hasOwnProperty.call(m, "galaxyFlowDownloadRequestID"))
-                        w.uint32(18).string(m.galaxyFlowDownloadRequestID);
+                    if (m.flowId != null && Object.hasOwnProperty.call(m, "flowId"))
+                        w.uint32(10).string(m.flowId);
+                    if (m.galaxyFlowDownloadRequestId != null && Object.hasOwnProperty.call(m, "galaxyFlowDownloadRequestId"))
+                        w.uint32(18).string(m.galaxyFlowDownloadRequestId);
                     if (m.fileName != null && Object.hasOwnProperty.call(m, "fileName"))
                         w.uint32(26).string(m.fileName);
                     if (m.mimetype != null && Object.hasOwnProperty.call(m, "mimetype"))
                         w.uint32(34).string(m.mimetype);
-                    if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                        w.uint32(42).bytes(m.fileSHA256);
+                    if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                        w.uint32(42).bytes(m.fileSha256);
                     if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                         w.uint32(50).bytes(m.mediaKey);
-                    if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                        w.uint32(58).bytes(m.fileEncSHA256);
+                    if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                        w.uint32(58).bytes(m.fileEncSha256);
                     if (m.directPath != null && Object.hasOwnProperty.call(m, "directPath"))
                         w.uint32(66).string(m.directPath);
                     if (m.mediaKeyTimestamp != null && Object.hasOwnProperty.call(m, "mediaKeyTimestamp"))
@@ -10738,11 +10738,11 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         switch (t >>> 3) {
                         case 1: {
-                                m.flowID = r.string();
+                                m.flowId = r.string();
                                 break;
                             }
                         case 2: {
-                                m.galaxyFlowDownloadRequestID = r.string();
+                                m.galaxyFlowDownloadRequestId = r.string();
                                 break;
                             }
                         case 3: {
@@ -10754,7 +10754,7 @@ export const WAE2E = $root.WAE2E = (() => {
                                 break;
                             }
                         case 5: {
-                                m.fileSHA256 = r.bytes();
+                                m.fileSha256 = r.bytes();
                                 break;
                             }
                         case 6: {
@@ -10762,7 +10762,7 @@ export const WAE2E = $root.WAE2E = (() => {
                                 break;
                             }
                         case 7: {
-                                m.fileEncSHA256 = r.bytes();
+                                m.fileEncSha256 = r.bytes();
                                 break;
                             }
                         case 8: {
@@ -10793,11 +10793,11 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (n > $util.recursionLimit)
                         throw Error("maximum nesting depth exceeded");
                     var m = new $root.WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.FlowResponsesCsvBundle();
-                    if (d.flowID != null) {
-                        m.flowID = String(d.flowID);
+                    if (d.flowId != null) {
+                        m.flowId = String(d.flowId);
                     }
-                    if (d.galaxyFlowDownloadRequestID != null) {
-                        m.galaxyFlowDownloadRequestID = String(d.galaxyFlowDownloadRequestID);
+                    if (d.galaxyFlowDownloadRequestId != null) {
+                        m.galaxyFlowDownloadRequestId = String(d.galaxyFlowDownloadRequestId);
                     }
                     if (d.fileName != null) {
                         m.fileName = String(d.fileName);
@@ -10805,11 +10805,11 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (d.mimetype != null) {
                         m.mimetype = String(d.mimetype);
                     }
-                    if (d.fileSHA256 != null) {
-                        if (typeof d.fileSHA256 === "string")
-                            $util.base64.decode(d.fileSHA256, m.fileSHA256 = $util.newBuffer($util.base64.length(d.fileSHA256)), 0);
-                        else if (d.fileSHA256.length >= 0)
-                            m.fileSHA256 = d.fileSHA256;
+                    if (d.fileSha256 != null) {
+                        if (typeof d.fileSha256 === "string")
+                            $util.base64.decode(d.fileSha256, m.fileSha256 = $util.newBuffer($util.base64.length(d.fileSha256)), 0);
+                        else if (d.fileSha256.length >= 0)
+                            m.fileSha256 = d.fileSha256;
                     }
                     if (d.mediaKey != null) {
                         if (typeof d.mediaKey === "string")
@@ -10817,11 +10817,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         else if (d.mediaKey.length >= 0)
                             m.mediaKey = d.mediaKey;
                     }
-                    if (d.fileEncSHA256 != null) {
-                        if (typeof d.fileEncSHA256 === "string")
-                            $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                        else if (d.fileEncSHA256.length >= 0)
-                            m.fileEncSHA256 = d.fileEncSHA256;
+                    if (d.fileEncSha256 != null) {
+                        if (typeof d.fileEncSha256 === "string")
+                            $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                        else if (d.fileEncSha256.length >= 0)
+                            m.fileEncSha256 = d.fileEncSha256;
                     }
                     if (d.directPath != null) {
                         m.directPath = String(d.directPath);
@@ -10853,15 +10853,15 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (!o)
                         o = {};
                     var d = {};
-                    if (m.flowID != null && m.hasOwnProperty("flowID")) {
-                        d.flowID = m.flowID;
+                    if (m.flowId != null && m.hasOwnProperty("flowId")) {
+                        d.flowId = m.flowId;
                         if (o.oneofs)
-                            d._flowID = "flowID";
+                            d._flowId = "flowId";
                     }
-                    if (m.galaxyFlowDownloadRequestID != null && m.hasOwnProperty("galaxyFlowDownloadRequestID")) {
-                        d.galaxyFlowDownloadRequestID = m.galaxyFlowDownloadRequestID;
+                    if (m.galaxyFlowDownloadRequestId != null && m.hasOwnProperty("galaxyFlowDownloadRequestId")) {
+                        d.galaxyFlowDownloadRequestId = m.galaxyFlowDownloadRequestId;
                         if (o.oneofs)
-                            d._galaxyFlowDownloadRequestID = "galaxyFlowDownloadRequestID";
+                            d._galaxyFlowDownloadRequestId = "galaxyFlowDownloadRequestId";
                     }
                     if (m.fileName != null && m.hasOwnProperty("fileName")) {
                         d.fileName = m.fileName;
@@ -10873,20 +10873,20 @@ export const WAE2E = $root.WAE2E = (() => {
                         if (o.oneofs)
                             d._mimetype = "mimetype";
                     }
-                    if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                        d.fileSHA256 = o.bytes === String ? $util.base64.encode(m.fileSHA256, 0, m.fileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSHA256) : m.fileSHA256;
+                    if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                        d.fileSha256 = o.bytes === String ? $util.base64.encode(m.fileSha256, 0, m.fileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSha256) : m.fileSha256;
                         if (o.oneofs)
-                            d._fileSHA256 = "fileSHA256";
+                            d._fileSha256 = "fileSha256";
                     }
                     if (m.mediaKey != null && m.hasOwnProperty("mediaKey")) {
                         d.mediaKey = o.bytes === String ? $util.base64.encode(m.mediaKey, 0, m.mediaKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.mediaKey) : m.mediaKey;
                         if (o.oneofs)
                             d._mediaKey = "mediaKey";
                     }
-                    if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                        d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+                    if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                        d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                         if (o.oneofs)
-                            d._fileEncSHA256 = "fileEncSHA256";
+                            d._fileEncSha256 = "fileEncSha256";
                     }
                     if (m.directPath != null && m.hasOwnProperty("directPath")) {
                         d.directPath = m.directPath;
@@ -10936,21 +10936,21 @@ export const WAE2E = $root.WAE2E = (() => {
                                 this[ks[i]] = p[ks[i]];
                 }
 
-                BizBroadcastInsightsContactListResponse.prototype.campaignID = null;
-                BizBroadcastInsightsContactListResponse.prototype.timestampMS = null;
+                BizBroadcastInsightsContactListResponse.prototype.campaignId = null;
+                BizBroadcastInsightsContactListResponse.prototype.timestampMs = null;
                 BizBroadcastInsightsContactListResponse.prototype.contacts = $util.emptyArray;
 
                 let $oneOfFields;
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(BizBroadcastInsightsContactListResponse.prototype, "_campaignID", {
-                    get: $util.oneOfGetter($oneOfFields = ["campaignID"]),
+                Object.defineProperty(BizBroadcastInsightsContactListResponse.prototype, "_campaignId", {
+                    get: $util.oneOfGetter($oneOfFields = ["campaignId"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(BizBroadcastInsightsContactListResponse.prototype, "_timestampMS", {
-                    get: $util.oneOfGetter($oneOfFields = ["timestampMS"]),
+                Object.defineProperty(BizBroadcastInsightsContactListResponse.prototype, "_timestampMs", {
+                    get: $util.oneOfGetter($oneOfFields = ["timestampMs"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -10961,10 +10961,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 BizBroadcastInsightsContactListResponse.encode = function encode(m, w) {
                     if (!w)
                         w = $Writer.create();
-                    if (m.campaignID != null && Object.hasOwnProperty.call(m, "campaignID"))
-                        w.uint32(10).string(m.campaignID);
-                    if (m.timestampMS != null && Object.hasOwnProperty.call(m, "timestampMS"))
-                        w.uint32(16).int64(m.timestampMS);
+                    if (m.campaignId != null && Object.hasOwnProperty.call(m, "campaignId"))
+                        w.uint32(10).string(m.campaignId);
+                    if (m.timestampMs != null && Object.hasOwnProperty.call(m, "timestampMs"))
+                        w.uint32(16).int64(m.timestampMs);
                     if (m.contacts != null && m.contacts.length) {
                         for (var i = 0; i < m.contacts.length; ++i)
                             $root.WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactState.encode(m.contacts[i], w.uint32(26).fork()).ldelim();
@@ -10986,11 +10986,11 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         switch (t >>> 3) {
                         case 1: {
-                                m.campaignID = r.string();
+                                m.campaignId = r.string();
                                 break;
                             }
                         case 2: {
-                                m.timestampMS = r.int64();
+                                m.timestampMs = r.int64();
                                 break;
                             }
                         case 3: {
@@ -11015,18 +11015,18 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (n > $util.recursionLimit)
                         throw Error("maximum nesting depth exceeded");
                     var m = new $root.WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactListResponse();
-                    if (d.campaignID != null) {
-                        m.campaignID = String(d.campaignID);
+                    if (d.campaignId != null) {
+                        m.campaignId = String(d.campaignId);
                     }
-                    if (d.timestampMS != null) {
+                    if (d.timestampMs != null) {
                         if ($util.Long)
-                            (m.timestampMS = $util.Long.fromValue(d.timestampMS)).unsigned = false;
-                        else if (typeof d.timestampMS === "string")
-                            m.timestampMS = parseInt(d.timestampMS, 10);
-                        else if (typeof d.timestampMS === "number")
-                            m.timestampMS = d.timestampMS;
-                        else if (typeof d.timestampMS === "object")
-                            m.timestampMS = new $util.LongBits(d.timestampMS.low >>> 0, d.timestampMS.high >>> 0).toNumber();
+                            (m.timestampMs = $util.Long.fromValue(d.timestampMs)).unsigned = false;
+                        else if (typeof d.timestampMs === "string")
+                            m.timestampMs = parseInt(d.timestampMs, 10);
+                        else if (typeof d.timestampMs === "number")
+                            m.timestampMs = d.timestampMs;
+                        else if (typeof d.timestampMs === "object")
+                            m.timestampMs = new $util.LongBits(d.timestampMs.low >>> 0, d.timestampMs.high >>> 0).toNumber();
                     }
                     if (d.contacts) {
                         if (!Array.isArray(d.contacts))
@@ -11048,18 +11048,18 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.arrays || o.defaults) {
                         d.contacts = [];
                     }
-                    if (m.campaignID != null && m.hasOwnProperty("campaignID")) {
-                        d.campaignID = m.campaignID;
+                    if (m.campaignId != null && m.hasOwnProperty("campaignId")) {
+                        d.campaignId = m.campaignId;
                         if (o.oneofs)
-                            d._campaignID = "campaignID";
+                            d._campaignId = "campaignId";
                     }
-                    if (m.timestampMS != null && m.hasOwnProperty("timestampMS")) {
-                        if (typeof m.timestampMS === "number")
-                            d.timestampMS = o.longs === String ? String(m.timestampMS) : m.timestampMS;
+                    if (m.timestampMs != null && m.hasOwnProperty("timestampMs")) {
+                        if (typeof m.timestampMs === "number")
+                            d.timestampMs = o.longs === String ? String(m.timestampMs) : m.timestampMs;
                         else
-                            d.timestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.timestampMS) : o.longs === Number ? new $util.LongBits(m.timestampMS.low >>> 0, m.timestampMS.high >>> 0).toNumber() : m.timestampMS;
+                            d.timestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.timestampMs) : o.longs === Number ? new $util.LongBits(m.timestampMs.low >>> 0, m.timestampMs.high >>> 0).toNumber() : m.timestampMs;
                         if (o.oneofs)
-                            d._timestampMS = "timestampMS";
+                            d._timestampMs = "timestampMs";
                     }
                     if (m.contacts && m.contacts.length) {
                         d.contacts = [];
@@ -11093,14 +11093,14 @@ export const WAE2E = $root.WAE2E = (() => {
                                 this[ks[i]] = p[ks[i]];
                 }
 
-                BizBroadcastInsightsContactState.prototype.contactJID = null;
+                BizBroadcastInsightsContactState.prototype.contactJid = null;
                 BizBroadcastInsightsContactState.prototype.state = null;
 
                 let $oneOfFields;
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(BizBroadcastInsightsContactState.prototype, "_contactJID", {
-                    get: $util.oneOfGetter($oneOfFields = ["contactJID"]),
+                Object.defineProperty(BizBroadcastInsightsContactState.prototype, "_contactJid", {
+                    get: $util.oneOfGetter($oneOfFields = ["contactJid"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -11117,8 +11117,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 BizBroadcastInsightsContactState.encode = function encode(m, w) {
                     if (!w)
                         w = $Writer.create();
-                    if (m.contactJID != null && Object.hasOwnProperty.call(m, "contactJID"))
-                        w.uint32(10).string(m.contactJID);
+                    if (m.contactJid != null && Object.hasOwnProperty.call(m, "contactJid"))
+                        w.uint32(10).string(m.contactJid);
                     if (m.state != null && Object.hasOwnProperty.call(m, "state"))
                         w.uint32(16).int32(m.state);
                     return w;
@@ -11138,7 +11138,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         switch (t >>> 3) {
                         case 1: {
-                                m.contactJID = r.string();
+                                m.contactJid = r.string();
                                 break;
                             }
                         case 2: {
@@ -11161,8 +11161,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (n > $util.recursionLimit)
                         throw Error("maximum nesting depth exceeded");
                     var m = new $root.WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.BizBroadcastInsightsContactState();
-                    if (d.contactJID != null) {
-                        m.contactJID = String(d.contactJID);
+                    if (d.contactJid != null) {
+                        m.contactJid = String(d.contactJid);
                     }
                     switch (d.state) {
                     default:
@@ -11199,10 +11199,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (!o)
                         o = {};
                     var d = {};
-                    if (m.contactJID != null && m.hasOwnProperty("contactJID")) {
-                        d.contactJID = m.contactJID;
+                    if (m.contactJid != null && m.hasOwnProperty("contactJid")) {
+                        d.contactJid = m.contactJid;
                         if (o.oneofs)
-                            d._contactJID = "contactJID";
+                            d._contactJid = "contactJid";
                     }
                     if (m.state != null && m.hasOwnProperty("state")) {
                         d.state = o.enums === String ? $root.WAE2E.InsightDeliveryState[m.state] === undefined ? m.state : $root.WAE2E.InsightDeliveryState[m.state] : m.state;
@@ -11237,7 +11237,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
                 HistorySyncChunkRetryResponse.prototype.syncType = null;
                 HistorySyncChunkRetryResponse.prototype.chunkOrder = null;
-                HistorySyncChunkRetryResponse.prototype.requestID = null;
+                HistorySyncChunkRetryResponse.prototype.requestId = null;
                 HistorySyncChunkRetryResponse.prototype.responseCode = null;
                 HistorySyncChunkRetryResponse.prototype.canRecover = null;
 
@@ -11256,8 +11256,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(HistorySyncChunkRetryResponse.prototype, "_requestID", {
-                    get: $util.oneOfGetter($oneOfFields = ["requestID"]),
+                Object.defineProperty(HistorySyncChunkRetryResponse.prototype, "_requestId", {
+                    get: $util.oneOfGetter($oneOfFields = ["requestId"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -11284,8 +11284,8 @@ export const WAE2E = $root.WAE2E = (() => {
                         w.uint32(8).int32(m.syncType);
                     if (m.chunkOrder != null && Object.hasOwnProperty.call(m, "chunkOrder"))
                         w.uint32(16).uint32(m.chunkOrder);
-                    if (m.requestID != null && Object.hasOwnProperty.call(m, "requestID"))
-                        w.uint32(26).string(m.requestID);
+                    if (m.requestId != null && Object.hasOwnProperty.call(m, "requestId"))
+                        w.uint32(26).string(m.requestId);
                     if (m.responseCode != null && Object.hasOwnProperty.call(m, "responseCode"))
                         w.uint32(32).int32(m.responseCode);
                     if (m.canRecover != null && Object.hasOwnProperty.call(m, "canRecover"))
@@ -11315,7 +11315,7 @@ export const WAE2E = $root.WAE2E = (() => {
                                 break;
                             }
                         case 3: {
-                                m.requestID = r.string();
+                                m.requestId = r.string();
                                 break;
                             }
                         case 4: {
@@ -11389,8 +11389,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (d.chunkOrder != null) {
                         m.chunkOrder = d.chunkOrder >>> 0;
                     }
-                    if (d.requestID != null) {
-                        m.requestID = String(d.requestID);
+                    if (d.requestId != null) {
+                        m.requestId = String(d.requestId);
                     }
                     switch (d.responseCode) {
                     default:
@@ -11444,10 +11444,10 @@ export const WAE2E = $root.WAE2E = (() => {
                         if (o.oneofs)
                             d._chunkOrder = "chunkOrder";
                     }
-                    if (m.requestID != null && m.hasOwnProperty("requestID")) {
-                        d.requestID = m.requestID;
+                    if (m.requestId != null && m.hasOwnProperty("requestId")) {
+                        d.requestId = m.requestId;
                         if (o.oneofs)
-                            d._requestID = "requestID";
+                            d._requestId = "requestId";
                     }
                     if (m.responseCode != null && m.hasOwnProperty("responseCode")) {
                         d.responseCode = o.enums === String ? $root.WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.HistorySyncChunkRetryResponseCode[m.responseCode] === undefined ? m.responseCode : $root.WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.HistorySyncChunkRetryResponseCode[m.responseCode] : m.responseCode;
@@ -12211,7 +12211,7 @@ export const WAE2E = $root.WAE2E = (() => {
                                 this[ks[i]] = p[ks[i]];
                 }
 
-                LinkPreviewResponse.prototype.URL = null;
+                LinkPreviewResponse.prototype.url = null;
                 LinkPreviewResponse.prototype.title = null;
                 LinkPreviewResponse.prototype.description = null;
                 LinkPreviewResponse.prototype.thumbData = null;
@@ -12223,8 +12223,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 let $oneOfFields;
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(LinkPreviewResponse.prototype, "_URL", {
-                    get: $util.oneOfGetter($oneOfFields = ["URL"]),
+                Object.defineProperty(LinkPreviewResponse.prototype, "_url", {
+                    get: $util.oneOfGetter($oneOfFields = ["url"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -12277,8 +12277,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 LinkPreviewResponse.encode = function encode(m, w) {
                     if (!w)
                         w = $Writer.create();
-                    if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                        w.uint32(10).string(m.URL);
+                    if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                        w.uint32(10).string(m.url);
                     if (m.title != null && Object.hasOwnProperty.call(m, "title"))
                         w.uint32(18).string(m.title);
                     if (m.description != null && Object.hasOwnProperty.call(m, "description"))
@@ -12310,7 +12310,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         switch (t >>> 3) {
                         case 1: {
-                                m.URL = r.string();
+                                m.url = r.string();
                                 break;
                             }
                         case 2: {
@@ -12357,8 +12357,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (n > $util.recursionLimit)
                         throw Error("maximum nesting depth exceeded");
                     var m = new $root.WAE2E.PeerDataOperationRequestResponseMessage.PeerDataOperationResult.LinkPreviewResponse();
-                    if (d.URL != null) {
-                        m.URL = String(d.URL);
+                    if (d.url != null) {
+                        m.url = String(d.url);
                     }
                     if (d.title != null) {
                         m.title = String(d.title);
@@ -12395,10 +12395,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (!o)
                         o = {};
                     var d = {};
-                    if (m.URL != null && m.hasOwnProperty("URL")) {
-                        d.URL = m.URL;
+                    if (m.url != null && m.hasOwnProperty("url")) {
+                        d.url = m.url;
                         if (o.oneofs)
-                            d._URL = "URL";
+                            d._url = "url";
                     }
                     if (m.title != null && m.hasOwnProperty("title")) {
                         d.title = m.title;
@@ -12642,7 +12642,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     LinkPreviewHighQualityThumbnail.prototype.thumbHash = null;
                     LinkPreviewHighQualityThumbnail.prototype.encThumbHash = null;
                     LinkPreviewHighQualityThumbnail.prototype.mediaKey = null;
-                    LinkPreviewHighQualityThumbnail.prototype.mediaKeyTimestampMS = null;
+                    LinkPreviewHighQualityThumbnail.prototype.mediaKeyTimestampMs = null;
                     LinkPreviewHighQualityThumbnail.prototype.thumbWidth = null;
                     LinkPreviewHighQualityThumbnail.prototype.thumbHeight = null;
 
@@ -12673,8 +12673,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     });
 
                     // Virtual OneOf for proto3 optional field
-                    Object.defineProperty(LinkPreviewHighQualityThumbnail.prototype, "_mediaKeyTimestampMS", {
-                        get: $util.oneOfGetter($oneOfFields = ["mediaKeyTimestampMS"]),
+                    Object.defineProperty(LinkPreviewHighQualityThumbnail.prototype, "_mediaKeyTimestampMs", {
+                        get: $util.oneOfGetter($oneOfFields = ["mediaKeyTimestampMs"]),
                         set: $util.oneOfSetter($oneOfFields)
                     });
 
@@ -12705,8 +12705,8 @@ export const WAE2E = $root.WAE2E = (() => {
                             w.uint32(26).string(m.encThumbHash);
                         if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                             w.uint32(34).bytes(m.mediaKey);
-                        if (m.mediaKeyTimestampMS != null && Object.hasOwnProperty.call(m, "mediaKeyTimestampMS"))
-                            w.uint32(40).int64(m.mediaKeyTimestampMS);
+                        if (m.mediaKeyTimestampMs != null && Object.hasOwnProperty.call(m, "mediaKeyTimestampMs"))
+                            w.uint32(40).int64(m.mediaKeyTimestampMs);
                         if (m.thumbWidth != null && Object.hasOwnProperty.call(m, "thumbWidth"))
                             w.uint32(48).int32(m.thumbWidth);
                         if (m.thumbHeight != null && Object.hasOwnProperty.call(m, "thumbHeight"))
@@ -12744,7 +12744,7 @@ export const WAE2E = $root.WAE2E = (() => {
                                     break;
                                 }
                             case 5: {
-                                    m.mediaKeyTimestampMS = r.int64();
+                                    m.mediaKeyTimestampMs = r.int64();
                                     break;
                                 }
                             case 6: {
@@ -12786,15 +12786,15 @@ export const WAE2E = $root.WAE2E = (() => {
                             else if (d.mediaKey.length >= 0)
                                 m.mediaKey = d.mediaKey;
                         }
-                        if (d.mediaKeyTimestampMS != null) {
+                        if (d.mediaKeyTimestampMs != null) {
                             if ($util.Long)
-                                (m.mediaKeyTimestampMS = $util.Long.fromValue(d.mediaKeyTimestampMS)).unsigned = false;
-                            else if (typeof d.mediaKeyTimestampMS === "string")
-                                m.mediaKeyTimestampMS = parseInt(d.mediaKeyTimestampMS, 10);
-                            else if (typeof d.mediaKeyTimestampMS === "number")
-                                m.mediaKeyTimestampMS = d.mediaKeyTimestampMS;
-                            else if (typeof d.mediaKeyTimestampMS === "object")
-                                m.mediaKeyTimestampMS = new $util.LongBits(d.mediaKeyTimestampMS.low >>> 0, d.mediaKeyTimestampMS.high >>> 0).toNumber();
+                                (m.mediaKeyTimestampMs = $util.Long.fromValue(d.mediaKeyTimestampMs)).unsigned = false;
+                            else if (typeof d.mediaKeyTimestampMs === "string")
+                                m.mediaKeyTimestampMs = parseInt(d.mediaKeyTimestampMs, 10);
+                            else if (typeof d.mediaKeyTimestampMs === "number")
+                                m.mediaKeyTimestampMs = d.mediaKeyTimestampMs;
+                            else if (typeof d.mediaKeyTimestampMs === "object")
+                                m.mediaKeyTimestampMs = new $util.LongBits(d.mediaKeyTimestampMs.low >>> 0, d.mediaKeyTimestampMs.high >>> 0).toNumber();
                         }
                         if (d.thumbWidth != null) {
                             m.thumbWidth = d.thumbWidth | 0;
@@ -12829,13 +12829,13 @@ export const WAE2E = $root.WAE2E = (() => {
                             if (o.oneofs)
                                 d._mediaKey = "mediaKey";
                         }
-                        if (m.mediaKeyTimestampMS != null && m.hasOwnProperty("mediaKeyTimestampMS")) {
-                            if (typeof m.mediaKeyTimestampMS === "number")
-                                d.mediaKeyTimestampMS = o.longs === String ? String(m.mediaKeyTimestampMS) : m.mediaKeyTimestampMS;
+                        if (m.mediaKeyTimestampMs != null && m.hasOwnProperty("mediaKeyTimestampMs")) {
+                            if (typeof m.mediaKeyTimestampMs === "number")
+                                d.mediaKeyTimestampMs = o.longs === String ? String(m.mediaKeyTimestampMs) : m.mediaKeyTimestampMs;
                             else
-                                d.mediaKeyTimestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.mediaKeyTimestampMS) : o.longs === Number ? new $util.LongBits(m.mediaKeyTimestampMS.low >>> 0, m.mediaKeyTimestampMS.high >>> 0).toNumber() : m.mediaKeyTimestampMS;
+                                d.mediaKeyTimestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.mediaKeyTimestampMs) : o.longs === Number ? new $util.LongBits(m.mediaKeyTimestampMs.low >>> 0, m.mediaKeyTimestampMs.high >>> 0).toNumber() : m.mediaKeyTimestampMs;
                             if (o.oneofs)
-                                d._mediaKeyTimestampMS = "mediaKeyTimestampMS";
+                                d._mediaKeyTimestampMs = "mediaKeyTimestampMs";
                         }
                         if (m.thumbWidth != null && m.hasOwnProperty("thumbWidth")) {
                             d.thumbWidth = m.thumbWidth;
@@ -12877,7 +12877,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
         function PeerDataOperationRequestMessage(p) {
             this.requestStickerReupload = [];
-            this.requestURLPreview = [];
+            this.requestUrlPreview = [];
             this.placeholderMessageResendRequest = [];
             if (p)
                 for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
@@ -12887,7 +12887,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
         PeerDataOperationRequestMessage.prototype.peerDataOperationRequestType = null;
         PeerDataOperationRequestMessage.prototype.requestStickerReupload = $util.emptyArray;
-        PeerDataOperationRequestMessage.prototype.requestURLPreview = $util.emptyArray;
+        PeerDataOperationRequestMessage.prototype.requestUrlPreview = $util.emptyArray;
         PeerDataOperationRequestMessage.prototype.historySyncOnDemandRequest = null;
         PeerDataOperationRequestMessage.prototype.placeholderMessageResendRequest = $util.emptyArray;
         PeerDataOperationRequestMessage.prototype.fullHistorySyncOnDemandRequest = null;
@@ -12967,9 +12967,9 @@ export const WAE2E = $root.WAE2E = (() => {
                 for (var i = 0; i < m.requestStickerReupload.length; ++i)
                     $root.WAE2E.PeerDataOperationRequestMessage.RequestStickerReupload.encode(m.requestStickerReupload[i], w.uint32(18).fork()).ldelim();
             }
-            if (m.requestURLPreview != null && m.requestURLPreview.length) {
-                for (var i = 0; i < m.requestURLPreview.length; ++i)
-                    $root.WAE2E.PeerDataOperationRequestMessage.RequestUrlPreview.encode(m.requestURLPreview[i], w.uint32(26).fork()).ldelim();
+            if (m.requestUrlPreview != null && m.requestUrlPreview.length) {
+                for (var i = 0; i < m.requestUrlPreview.length; ++i)
+                    $root.WAE2E.PeerDataOperationRequestMessage.RequestUrlPreview.encode(m.requestUrlPreview[i], w.uint32(26).fork()).ldelim();
             }
             if (m.historySyncOnDemandRequest != null && Object.hasOwnProperty.call(m, "historySyncOnDemandRequest"))
                 $root.WAE2E.PeerDataOperationRequestMessage.HistorySyncOnDemandRequest.encode(m.historySyncOnDemandRequest, w.uint32(34).fork()).ldelim();
@@ -13018,9 +13018,9 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        if (!(m.requestURLPreview && m.requestURLPreview.length))
-                            m.requestURLPreview = [];
-                        m.requestURLPreview.push($root.WAE2E.PeerDataOperationRequestMessage.RequestUrlPreview.decode(r, r.uint32(), undefined, n + 1));
+                        if (!(m.requestUrlPreview && m.requestUrlPreview.length))
+                            m.requestUrlPreview = [];
+                        m.requestUrlPreview.push($root.WAE2E.PeerDataOperationRequestMessage.RequestUrlPreview.decode(r, r.uint32(), undefined, n + 1));
                         break;
                     }
                 case 4: {
@@ -13151,14 +13151,14 @@ export const WAE2E = $root.WAE2E = (() => {
                     m.requestStickerReupload[i] = $root.WAE2E.PeerDataOperationRequestMessage.RequestStickerReupload.fromObject(d.requestStickerReupload[i], n + 1);
                 }
             }
-            if (d.requestURLPreview) {
-                if (!Array.isArray(d.requestURLPreview))
-                    throw TypeError(".WAE2E.PeerDataOperationRequestMessage.requestURLPreview: array expected");
-                m.requestURLPreview = [];
-                for (var i = 0; i < d.requestURLPreview.length; ++i) {
-                    if (typeof d.requestURLPreview[i] !== "object")
-                        throw TypeError(".WAE2E.PeerDataOperationRequestMessage.requestURLPreview: object expected");
-                    m.requestURLPreview[i] = $root.WAE2E.PeerDataOperationRequestMessage.RequestUrlPreview.fromObject(d.requestURLPreview[i], n + 1);
+            if (d.requestUrlPreview) {
+                if (!Array.isArray(d.requestUrlPreview))
+                    throw TypeError(".WAE2E.PeerDataOperationRequestMessage.requestUrlPreview: array expected");
+                m.requestUrlPreview = [];
+                for (var i = 0; i < d.requestUrlPreview.length; ++i) {
+                    if (typeof d.requestUrlPreview[i] !== "object")
+                        throw TypeError(".WAE2E.PeerDataOperationRequestMessage.requestUrlPreview: object expected");
+                    m.requestUrlPreview[i] = $root.WAE2E.PeerDataOperationRequestMessage.RequestUrlPreview.fromObject(d.requestUrlPreview[i], n + 1);
                 }
             }
             if (d.historySyncOnDemandRequest != null) {
@@ -13220,7 +13220,7 @@ export const WAE2E = $root.WAE2E = (() => {
             var d = {};
             if (o.arrays || o.defaults) {
                 d.requestStickerReupload = [];
-                d.requestURLPreview = [];
+                d.requestUrlPreview = [];
                 d.placeholderMessageResendRequest = [];
             }
             if (m.peerDataOperationRequestType != null && m.hasOwnProperty("peerDataOperationRequestType")) {
@@ -13234,10 +13234,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     d.requestStickerReupload[j] = $root.WAE2E.PeerDataOperationRequestMessage.RequestStickerReupload.toObject(m.requestStickerReupload[j], o);
                 }
             }
-            if (m.requestURLPreview && m.requestURLPreview.length) {
-                d.requestURLPreview = [];
-                for (var j = 0; j < m.requestURLPreview.length; ++j) {
-                    d.requestURLPreview[j] = $root.WAE2E.PeerDataOperationRequestMessage.RequestUrlPreview.toObject(m.requestURLPreview[j], o);
+            if (m.requestUrlPreview && m.requestUrlPreview.length) {
+                d.requestUrlPreview = [];
+                for (var j = 0; j < m.requestUrlPreview.length; ++j) {
+                    d.requestUrlPreview[j] = $root.WAE2E.PeerDataOperationRequestMessage.RequestUrlPreview.toObject(m.requestUrlPreview[j], o);
                 }
             }
             if (m.historySyncOnDemandRequest != null && m.hasOwnProperty("historySyncOnDemandRequest")) {
@@ -13310,10 +13310,10 @@ export const WAE2E = $root.WAE2E = (() => {
             }
 
             GalaxyFlowAction.prototype.type = null;
-            GalaxyFlowAction.prototype.flowID = null;
-            GalaxyFlowAction.prototype.stanzaID = null;
-            GalaxyFlowAction.prototype.galaxyFlowDownloadRequestID = null;
-            GalaxyFlowAction.prototype.agmID = null;
+            GalaxyFlowAction.prototype.flowId = null;
+            GalaxyFlowAction.prototype.stanzaId = null;
+            GalaxyFlowAction.prototype.galaxyFlowDownloadRequestId = null;
+            GalaxyFlowAction.prototype.agmId = null;
 
             let $oneOfFields;
 
@@ -13324,26 +13324,26 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(GalaxyFlowAction.prototype, "_flowID", {
-                get: $util.oneOfGetter($oneOfFields = ["flowID"]),
+            Object.defineProperty(GalaxyFlowAction.prototype, "_flowId", {
+                get: $util.oneOfGetter($oneOfFields = ["flowId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(GalaxyFlowAction.prototype, "_stanzaID", {
-                get: $util.oneOfGetter($oneOfFields = ["stanzaID"]),
+            Object.defineProperty(GalaxyFlowAction.prototype, "_stanzaId", {
+                get: $util.oneOfGetter($oneOfFields = ["stanzaId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(GalaxyFlowAction.prototype, "_galaxyFlowDownloadRequestID", {
-                get: $util.oneOfGetter($oneOfFields = ["galaxyFlowDownloadRequestID"]),
+            Object.defineProperty(GalaxyFlowAction.prototype, "_galaxyFlowDownloadRequestId", {
+                get: $util.oneOfGetter($oneOfFields = ["galaxyFlowDownloadRequestId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(GalaxyFlowAction.prototype, "_agmID", {
-                get: $util.oneOfGetter($oneOfFields = ["agmID"]),
+            Object.defineProperty(GalaxyFlowAction.prototype, "_agmId", {
+                get: $util.oneOfGetter($oneOfFields = ["agmId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -13356,14 +13356,14 @@ export const WAE2E = $root.WAE2E = (() => {
                     w = $Writer.create();
                 if (m.type != null && Object.hasOwnProperty.call(m, "type"))
                     w.uint32(8).int32(m.type);
-                if (m.flowID != null && Object.hasOwnProperty.call(m, "flowID"))
-                    w.uint32(18).string(m.flowID);
-                if (m.stanzaID != null && Object.hasOwnProperty.call(m, "stanzaID"))
-                    w.uint32(26).string(m.stanzaID);
-                if (m.galaxyFlowDownloadRequestID != null && Object.hasOwnProperty.call(m, "galaxyFlowDownloadRequestID"))
-                    w.uint32(34).string(m.galaxyFlowDownloadRequestID);
-                if (m.agmID != null && Object.hasOwnProperty.call(m, "agmID"))
-                    w.uint32(42).string(m.agmID);
+                if (m.flowId != null && Object.hasOwnProperty.call(m, "flowId"))
+                    w.uint32(18).string(m.flowId);
+                if (m.stanzaId != null && Object.hasOwnProperty.call(m, "stanzaId"))
+                    w.uint32(26).string(m.stanzaId);
+                if (m.galaxyFlowDownloadRequestId != null && Object.hasOwnProperty.call(m, "galaxyFlowDownloadRequestId"))
+                    w.uint32(34).string(m.galaxyFlowDownloadRequestId);
+                if (m.agmId != null && Object.hasOwnProperty.call(m, "agmId"))
+                    w.uint32(42).string(m.agmId);
                 return w;
             };
 
@@ -13385,19 +13385,19 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 2: {
-                            m.flowID = r.string();
+                            m.flowId = r.string();
                             break;
                         }
                     case 3: {
-                            m.stanzaID = r.string();
+                            m.stanzaId = r.string();
                             break;
                         }
                     case 4: {
-                            m.galaxyFlowDownloadRequestID = r.string();
+                            m.galaxyFlowDownloadRequestId = r.string();
                             break;
                         }
                     case 5: {
-                            m.agmID = r.string();
+                            m.agmId = r.string();
                             break;
                         }
                     default:
@@ -13432,17 +13432,17 @@ export const WAE2E = $root.WAE2E = (() => {
                     m.type = 2;
                     break;
                 }
-                if (d.flowID != null) {
-                    m.flowID = String(d.flowID);
+                if (d.flowId != null) {
+                    m.flowId = String(d.flowId);
                 }
-                if (d.stanzaID != null) {
-                    m.stanzaID = String(d.stanzaID);
+                if (d.stanzaId != null) {
+                    m.stanzaId = String(d.stanzaId);
                 }
-                if (d.galaxyFlowDownloadRequestID != null) {
-                    m.galaxyFlowDownloadRequestID = String(d.galaxyFlowDownloadRequestID);
+                if (d.galaxyFlowDownloadRequestId != null) {
+                    m.galaxyFlowDownloadRequestId = String(d.galaxyFlowDownloadRequestId);
                 }
-                if (d.agmID != null) {
-                    m.agmID = String(d.agmID);
+                if (d.agmId != null) {
+                    m.agmId = String(d.agmId);
                 }
                 return m;
             };
@@ -13456,25 +13456,25 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._type = "type";
                 }
-                if (m.flowID != null && m.hasOwnProperty("flowID")) {
-                    d.flowID = m.flowID;
+                if (m.flowId != null && m.hasOwnProperty("flowId")) {
+                    d.flowId = m.flowId;
                     if (o.oneofs)
-                        d._flowID = "flowID";
+                        d._flowId = "flowId";
                 }
-                if (m.stanzaID != null && m.hasOwnProperty("stanzaID")) {
-                    d.stanzaID = m.stanzaID;
+                if (m.stanzaId != null && m.hasOwnProperty("stanzaId")) {
+                    d.stanzaId = m.stanzaId;
                     if (o.oneofs)
-                        d._stanzaID = "stanzaID";
+                        d._stanzaId = "stanzaId";
                 }
-                if (m.galaxyFlowDownloadRequestID != null && m.hasOwnProperty("galaxyFlowDownloadRequestID")) {
-                    d.galaxyFlowDownloadRequestID = m.galaxyFlowDownloadRequestID;
+                if (m.galaxyFlowDownloadRequestId != null && m.hasOwnProperty("galaxyFlowDownloadRequestId")) {
+                    d.galaxyFlowDownloadRequestId = m.galaxyFlowDownloadRequestId;
                     if (o.oneofs)
-                        d._galaxyFlowDownloadRequestID = "galaxyFlowDownloadRequestID";
+                        d._galaxyFlowDownloadRequestId = "galaxyFlowDownloadRequestId";
                 }
-                if (m.agmID != null && m.hasOwnProperty("agmID")) {
-                    d.agmID = m.agmID;
+                if (m.agmId != null && m.hasOwnProperty("agmId")) {
+                    d.agmId = m.agmId;
                     if (o.oneofs)
-                        d._agmID = "agmID";
+                        d._agmId = "agmId";
                 }
                 return d;
             };
@@ -13509,13 +13509,13 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            BizBroadcastInsightsRefreshRequest.prototype.campaignID = null;
+            BizBroadcastInsightsRefreshRequest.prototype.campaignId = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(BizBroadcastInsightsRefreshRequest.prototype, "_campaignID", {
-                get: $util.oneOfGetter($oneOfFields = ["campaignID"]),
+            Object.defineProperty(BizBroadcastInsightsRefreshRequest.prototype, "_campaignId", {
+                get: $util.oneOfGetter($oneOfFields = ["campaignId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -13526,8 +13526,8 @@ export const WAE2E = $root.WAE2E = (() => {
             BizBroadcastInsightsRefreshRequest.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.campaignID != null && Object.hasOwnProperty.call(m, "campaignID"))
-                    w.uint32(10).string(m.campaignID);
+                if (m.campaignId != null && Object.hasOwnProperty.call(m, "campaignId"))
+                    w.uint32(10).string(m.campaignId);
                 return w;
             };
 
@@ -13545,7 +13545,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.campaignID = r.string();
+                            m.campaignId = r.string();
                             break;
                         }
                     default:
@@ -13564,8 +13564,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.PeerDataOperationRequestMessage.BizBroadcastInsightsRefreshRequest();
-                if (d.campaignID != null) {
-                    m.campaignID = String(d.campaignID);
+                if (d.campaignId != null) {
+                    m.campaignId = String(d.campaignId);
                 }
                 return m;
             };
@@ -13574,10 +13574,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.campaignID != null && m.hasOwnProperty("campaignID")) {
-                    d.campaignID = m.campaignID;
+                if (m.campaignId != null && m.hasOwnProperty("campaignId")) {
+                    d.campaignId = m.campaignId;
                     if (o.oneofs)
-                        d._campaignID = "campaignID";
+                        d._campaignId = "campaignId";
                 }
                 return d;
             };
@@ -13605,13 +13605,13 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            BizBroadcastInsightsContactListRequest.prototype.campaignID = null;
+            BizBroadcastInsightsContactListRequest.prototype.campaignId = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(BizBroadcastInsightsContactListRequest.prototype, "_campaignID", {
-                get: $util.oneOfGetter($oneOfFields = ["campaignID"]),
+            Object.defineProperty(BizBroadcastInsightsContactListRequest.prototype, "_campaignId", {
+                get: $util.oneOfGetter($oneOfFields = ["campaignId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -13622,8 +13622,8 @@ export const WAE2E = $root.WAE2E = (() => {
             BizBroadcastInsightsContactListRequest.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.campaignID != null && Object.hasOwnProperty.call(m, "campaignID"))
-                    w.uint32(10).string(m.campaignID);
+                if (m.campaignId != null && Object.hasOwnProperty.call(m, "campaignId"))
+                    w.uint32(10).string(m.campaignId);
                 return w;
             };
 
@@ -13641,7 +13641,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.campaignID = r.string();
+                            m.campaignId = r.string();
                             break;
                         }
                     default:
@@ -13660,8 +13660,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.PeerDataOperationRequestMessage.BizBroadcastInsightsContactListRequest();
-                if (d.campaignID != null) {
-                    m.campaignID = String(d.campaignID);
+                if (d.campaignId != null) {
+                    m.campaignId = String(d.campaignId);
                 }
                 return m;
             };
@@ -13670,10 +13670,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.campaignID != null && m.hasOwnProperty("campaignID")) {
-                    d.campaignID = m.campaignID;
+                if (m.campaignId != null && m.hasOwnProperty("campaignId")) {
+                    d.campaignId = m.campaignId;
                     if (o.oneofs)
-                        d._campaignID = "campaignID";
+                        d._campaignId = "campaignId";
                 }
                 return d;
             };
@@ -13701,13 +13701,13 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            CompanionCanonicalUserNonceFetchRequest.prototype.registrationTraceID = null;
+            CompanionCanonicalUserNonceFetchRequest.prototype.registrationTraceId = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(CompanionCanonicalUserNonceFetchRequest.prototype, "_registrationTraceID", {
-                get: $util.oneOfGetter($oneOfFields = ["registrationTraceID"]),
+            Object.defineProperty(CompanionCanonicalUserNonceFetchRequest.prototype, "_registrationTraceId", {
+                get: $util.oneOfGetter($oneOfFields = ["registrationTraceId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -13718,8 +13718,8 @@ export const WAE2E = $root.WAE2E = (() => {
             CompanionCanonicalUserNonceFetchRequest.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.registrationTraceID != null && Object.hasOwnProperty.call(m, "registrationTraceID"))
-                    w.uint32(10).string(m.registrationTraceID);
+                if (m.registrationTraceId != null && Object.hasOwnProperty.call(m, "registrationTraceId"))
+                    w.uint32(10).string(m.registrationTraceId);
                 return w;
             };
 
@@ -13737,7 +13737,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.registrationTraceID = r.string();
+                            m.registrationTraceId = r.string();
                             break;
                         }
                     default:
@@ -13756,8 +13756,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.PeerDataOperationRequestMessage.CompanionCanonicalUserNonceFetchRequest();
-                if (d.registrationTraceID != null) {
-                    m.registrationTraceID = String(d.registrationTraceID);
+                if (d.registrationTraceId != null) {
+                    m.registrationTraceId = String(d.registrationTraceId);
                 }
                 return m;
             };
@@ -13766,10 +13766,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.registrationTraceID != null && m.hasOwnProperty("registrationTraceID")) {
-                    d.registrationTraceID = m.registrationTraceID;
+                if (m.registrationTraceId != null && m.hasOwnProperty("registrationTraceId")) {
+                    d.registrationTraceId = m.registrationTraceId;
                     if (o.oneofs)
-                        d._registrationTraceID = "registrationTraceID";
+                        d._registrationTraceId = "registrationTraceId";
                 }
                 return d;
             };
@@ -13799,7 +13799,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
             HistorySyncChunkRetryRequest.prototype.syncType = null;
             HistorySyncChunkRetryRequest.prototype.chunkOrder = null;
-            HistorySyncChunkRetryRequest.prototype.chunkNotificationID = null;
+            HistorySyncChunkRetryRequest.prototype.chunkNotificationId = null;
             HistorySyncChunkRetryRequest.prototype.regenerateChunk = null;
 
             let $oneOfFields;
@@ -13817,8 +13817,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(HistorySyncChunkRetryRequest.prototype, "_chunkNotificationID", {
-                get: $util.oneOfGetter($oneOfFields = ["chunkNotificationID"]),
+            Object.defineProperty(HistorySyncChunkRetryRequest.prototype, "_chunkNotificationId", {
+                get: $util.oneOfGetter($oneOfFields = ["chunkNotificationId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -13839,8 +13839,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     w.uint32(8).int32(m.syncType);
                 if (m.chunkOrder != null && Object.hasOwnProperty.call(m, "chunkOrder"))
                     w.uint32(16).uint32(m.chunkOrder);
-                if (m.chunkNotificationID != null && Object.hasOwnProperty.call(m, "chunkNotificationID"))
-                    w.uint32(26).string(m.chunkNotificationID);
+                if (m.chunkNotificationId != null && Object.hasOwnProperty.call(m, "chunkNotificationId"))
+                    w.uint32(26).string(m.chunkNotificationId);
                 if (m.regenerateChunk != null && Object.hasOwnProperty.call(m, "regenerateChunk"))
                     w.uint32(32).bool(m.regenerateChunk);
                 return w;
@@ -13868,7 +13868,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 3: {
-                            m.chunkNotificationID = r.string();
+                            m.chunkNotificationId = r.string();
                             break;
                         }
                     case 4: {
@@ -13938,8 +13938,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (d.chunkOrder != null) {
                     m.chunkOrder = d.chunkOrder >>> 0;
                 }
-                if (d.chunkNotificationID != null) {
-                    m.chunkNotificationID = String(d.chunkNotificationID);
+                if (d.chunkNotificationId != null) {
+                    m.chunkNotificationId = String(d.chunkNotificationId);
                 }
                 if (d.regenerateChunk != null) {
                     m.regenerateChunk = Boolean(d.regenerateChunk);
@@ -13961,10 +13961,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._chunkOrder = "chunkOrder";
                 }
-                if (m.chunkNotificationID != null && m.hasOwnProperty("chunkNotificationID")) {
-                    d.chunkNotificationID = m.chunkNotificationID;
+                if (m.chunkNotificationId != null && m.hasOwnProperty("chunkNotificationId")) {
+                    d.chunkNotificationId = m.chunkNotificationId;
                     if (o.oneofs)
-                        d._chunkNotificationID = "chunkNotificationID";
+                        d._chunkNotificationId = "chunkNotificationId";
                 }
                 if (m.regenerateChunk != null && m.hasOwnProperty("regenerateChunk")) {
                     d.regenerateChunk = m.regenerateChunk;
@@ -14366,25 +14366,25 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            HistorySyncOnDemandRequest.prototype.chatJID = null;
-            HistorySyncOnDemandRequest.prototype.oldestMsgID = null;
+            HistorySyncOnDemandRequest.prototype.chatJid = null;
+            HistorySyncOnDemandRequest.prototype.oldestMsgId = null;
             HistorySyncOnDemandRequest.prototype.oldestMsgFromMe = null;
             HistorySyncOnDemandRequest.prototype.onDemandMsgCount = null;
-            HistorySyncOnDemandRequest.prototype.oldestMsgTimestampMS = null;
+            HistorySyncOnDemandRequest.prototype.oldestMsgTimestampMs = null;
             HistorySyncOnDemandRequest.prototype.accountLid = null;
             HistorySyncOnDemandRequest.prototype.supportInlineResponse = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(HistorySyncOnDemandRequest.prototype, "_chatJID", {
-                get: $util.oneOfGetter($oneOfFields = ["chatJID"]),
+            Object.defineProperty(HistorySyncOnDemandRequest.prototype, "_chatJid", {
+                get: $util.oneOfGetter($oneOfFields = ["chatJid"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(HistorySyncOnDemandRequest.prototype, "_oldestMsgID", {
-                get: $util.oneOfGetter($oneOfFields = ["oldestMsgID"]),
+            Object.defineProperty(HistorySyncOnDemandRequest.prototype, "_oldestMsgId", {
+                get: $util.oneOfGetter($oneOfFields = ["oldestMsgId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -14401,8 +14401,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(HistorySyncOnDemandRequest.prototype, "_oldestMsgTimestampMS", {
-                get: $util.oneOfGetter($oneOfFields = ["oldestMsgTimestampMS"]),
+            Object.defineProperty(HistorySyncOnDemandRequest.prototype, "_oldestMsgTimestampMs", {
+                get: $util.oneOfGetter($oneOfFields = ["oldestMsgTimestampMs"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -14425,16 +14425,16 @@ export const WAE2E = $root.WAE2E = (() => {
             HistorySyncOnDemandRequest.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.chatJID != null && Object.hasOwnProperty.call(m, "chatJID"))
-                    w.uint32(10).string(m.chatJID);
-                if (m.oldestMsgID != null && Object.hasOwnProperty.call(m, "oldestMsgID"))
-                    w.uint32(18).string(m.oldestMsgID);
+                if (m.chatJid != null && Object.hasOwnProperty.call(m, "chatJid"))
+                    w.uint32(10).string(m.chatJid);
+                if (m.oldestMsgId != null && Object.hasOwnProperty.call(m, "oldestMsgId"))
+                    w.uint32(18).string(m.oldestMsgId);
                 if (m.oldestMsgFromMe != null && Object.hasOwnProperty.call(m, "oldestMsgFromMe"))
                     w.uint32(24).bool(m.oldestMsgFromMe);
                 if (m.onDemandMsgCount != null && Object.hasOwnProperty.call(m, "onDemandMsgCount"))
                     w.uint32(32).int32(m.onDemandMsgCount);
-                if (m.oldestMsgTimestampMS != null && Object.hasOwnProperty.call(m, "oldestMsgTimestampMS"))
-                    w.uint32(40).int64(m.oldestMsgTimestampMS);
+                if (m.oldestMsgTimestampMs != null && Object.hasOwnProperty.call(m, "oldestMsgTimestampMs"))
+                    w.uint32(40).int64(m.oldestMsgTimestampMs);
                 if (m.accountLid != null && Object.hasOwnProperty.call(m, "accountLid"))
                     w.uint32(50).string(m.accountLid);
                 if (m.supportInlineResponse != null && Object.hasOwnProperty.call(m, "supportInlineResponse"))
@@ -14456,11 +14456,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.chatJID = r.string();
+                            m.chatJid = r.string();
                             break;
                         }
                     case 2: {
-                            m.oldestMsgID = r.string();
+                            m.oldestMsgId = r.string();
                             break;
                         }
                     case 3: {
@@ -14472,7 +14472,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 5: {
-                            m.oldestMsgTimestampMS = r.int64();
+                            m.oldestMsgTimestampMs = r.int64();
                             break;
                         }
                     case 6: {
@@ -14499,11 +14499,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.PeerDataOperationRequestMessage.HistorySyncOnDemandRequest();
-                if (d.chatJID != null) {
-                    m.chatJID = String(d.chatJID);
+                if (d.chatJid != null) {
+                    m.chatJid = String(d.chatJid);
                 }
-                if (d.oldestMsgID != null) {
-                    m.oldestMsgID = String(d.oldestMsgID);
+                if (d.oldestMsgId != null) {
+                    m.oldestMsgId = String(d.oldestMsgId);
                 }
                 if (d.oldestMsgFromMe != null) {
                     m.oldestMsgFromMe = Boolean(d.oldestMsgFromMe);
@@ -14511,15 +14511,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (d.onDemandMsgCount != null) {
                     m.onDemandMsgCount = d.onDemandMsgCount | 0;
                 }
-                if (d.oldestMsgTimestampMS != null) {
+                if (d.oldestMsgTimestampMs != null) {
                     if ($util.Long)
-                        (m.oldestMsgTimestampMS = $util.Long.fromValue(d.oldestMsgTimestampMS)).unsigned = false;
-                    else if (typeof d.oldestMsgTimestampMS === "string")
-                        m.oldestMsgTimestampMS = parseInt(d.oldestMsgTimestampMS, 10);
-                    else if (typeof d.oldestMsgTimestampMS === "number")
-                        m.oldestMsgTimestampMS = d.oldestMsgTimestampMS;
-                    else if (typeof d.oldestMsgTimestampMS === "object")
-                        m.oldestMsgTimestampMS = new $util.LongBits(d.oldestMsgTimestampMS.low >>> 0, d.oldestMsgTimestampMS.high >>> 0).toNumber();
+                        (m.oldestMsgTimestampMs = $util.Long.fromValue(d.oldestMsgTimestampMs)).unsigned = false;
+                    else if (typeof d.oldestMsgTimestampMs === "string")
+                        m.oldestMsgTimestampMs = parseInt(d.oldestMsgTimestampMs, 10);
+                    else if (typeof d.oldestMsgTimestampMs === "number")
+                        m.oldestMsgTimestampMs = d.oldestMsgTimestampMs;
+                    else if (typeof d.oldestMsgTimestampMs === "object")
+                        m.oldestMsgTimestampMs = new $util.LongBits(d.oldestMsgTimestampMs.low >>> 0, d.oldestMsgTimestampMs.high >>> 0).toNumber();
                 }
                 if (d.accountLid != null) {
                     m.accountLid = String(d.accountLid);
@@ -14534,15 +14534,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.chatJID != null && m.hasOwnProperty("chatJID")) {
-                    d.chatJID = m.chatJID;
+                if (m.chatJid != null && m.hasOwnProperty("chatJid")) {
+                    d.chatJid = m.chatJid;
                     if (o.oneofs)
-                        d._chatJID = "chatJID";
+                        d._chatJid = "chatJid";
                 }
-                if (m.oldestMsgID != null && m.hasOwnProperty("oldestMsgID")) {
-                    d.oldestMsgID = m.oldestMsgID;
+                if (m.oldestMsgId != null && m.hasOwnProperty("oldestMsgId")) {
+                    d.oldestMsgId = m.oldestMsgId;
                     if (o.oneofs)
-                        d._oldestMsgID = "oldestMsgID";
+                        d._oldestMsgId = "oldestMsgId";
                 }
                 if (m.oldestMsgFromMe != null && m.hasOwnProperty("oldestMsgFromMe")) {
                     d.oldestMsgFromMe = m.oldestMsgFromMe;
@@ -14554,13 +14554,13 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._onDemandMsgCount = "onDemandMsgCount";
                 }
-                if (m.oldestMsgTimestampMS != null && m.hasOwnProperty("oldestMsgTimestampMS")) {
-                    if (typeof m.oldestMsgTimestampMS === "number")
-                        d.oldestMsgTimestampMS = o.longs === String ? String(m.oldestMsgTimestampMS) : m.oldestMsgTimestampMS;
+                if (m.oldestMsgTimestampMs != null && m.hasOwnProperty("oldestMsgTimestampMs")) {
+                    if (typeof m.oldestMsgTimestampMs === "number")
+                        d.oldestMsgTimestampMs = o.longs === String ? String(m.oldestMsgTimestampMs) : m.oldestMsgTimestampMs;
                     else
-                        d.oldestMsgTimestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.oldestMsgTimestampMS) : o.longs === Number ? new $util.LongBits(m.oldestMsgTimestampMS.low >>> 0, m.oldestMsgTimestampMS.high >>> 0).toNumber() : m.oldestMsgTimestampMS;
+                        d.oldestMsgTimestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.oldestMsgTimestampMs) : o.longs === Number ? new $util.LongBits(m.oldestMsgTimestampMs.low >>> 0, m.oldestMsgTimestampMs.high >>> 0).toNumber() : m.oldestMsgTimestampMs;
                     if (o.oneofs)
-                        d._oldestMsgTimestampMS = "oldestMsgTimestampMS";
+                        d._oldestMsgTimestampMs = "oldestMsgTimestampMs";
                 }
                 if (m.accountLid != null && m.hasOwnProperty("accountLid")) {
                     d.accountLid = m.accountLid;
@@ -14598,14 +14598,14 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            RequestUrlPreview.prototype.URL = null;
+            RequestUrlPreview.prototype.url = null;
             RequestUrlPreview.prototype.includeHqThumbnail = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(RequestUrlPreview.prototype, "_URL", {
-                get: $util.oneOfGetter($oneOfFields = ["URL"]),
+            Object.defineProperty(RequestUrlPreview.prototype, "_url", {
+                get: $util.oneOfGetter($oneOfFields = ["url"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -14622,8 +14622,8 @@ export const WAE2E = $root.WAE2E = (() => {
             RequestUrlPreview.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                    w.uint32(10).string(m.URL);
+                if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                    w.uint32(10).string(m.url);
                 if (m.includeHqThumbnail != null && Object.hasOwnProperty.call(m, "includeHqThumbnail"))
                     w.uint32(16).bool(m.includeHqThumbnail);
                 return w;
@@ -14643,7 +14643,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.URL = r.string();
+                            m.url = r.string();
                             break;
                         }
                     case 2: {
@@ -14666,8 +14666,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.PeerDataOperationRequestMessage.RequestUrlPreview();
-                if (d.URL != null) {
-                    m.URL = String(d.URL);
+                if (d.url != null) {
+                    m.url = String(d.url);
                 }
                 if (d.includeHqThumbnail != null) {
                     m.includeHqThumbnail = Boolean(d.includeHqThumbnail);
@@ -14679,10 +14679,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.URL != null && m.hasOwnProperty("URL")) {
-                    d.URL = m.URL;
+                if (m.url != null && m.hasOwnProperty("url")) {
+                    d.url = m.url;
                     if (o.oneofs)
-                        d._URL = "URL";
+                        d._url = "url";
                 }
                 if (m.includeHqThumbnail != null && m.hasOwnProperty("includeHqThumbnail")) {
                     d.includeHqThumbnail = m.includeHqThumbnail;
@@ -14715,13 +14715,13 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            RequestStickerReupload.prototype.fileSHA256 = null;
+            RequestStickerReupload.prototype.fileSha256 = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(RequestStickerReupload.prototype, "_fileSHA256", {
-                get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+            Object.defineProperty(RequestStickerReupload.prototype, "_fileSha256", {
+                get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -14732,8 +14732,8 @@ export const WAE2E = $root.WAE2E = (() => {
             RequestStickerReupload.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                    w.uint32(10).string(m.fileSHA256);
+                if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                    w.uint32(10).string(m.fileSha256);
                 return w;
             };
 
@@ -14751,7 +14751,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.fileSHA256 = r.string();
+                            m.fileSha256 = r.string();
                             break;
                         }
                     default:
@@ -14770,8 +14770,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.PeerDataOperationRequestMessage.RequestStickerReupload();
-                if (d.fileSHA256 != null) {
-                    m.fileSHA256 = String(d.fileSHA256);
+                if (d.fileSha256 != null) {
+                    m.fileSha256 = String(d.fileSha256);
                 }
                 return m;
             };
@@ -14780,10 +14780,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                    d.fileSHA256 = m.fileSHA256;
+                if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                    d.fileSha256 = m.fileSha256;
                     if (o.oneofs)
-                        d._fileSHA256 = "fileSHA256";
+                        d._fileSha256 = "fileSha256";
                 }
                 return d;
             };
@@ -15005,11 +15005,11 @@ export const WAE2E = $root.WAE2E = (() => {
         ProtocolMessage.prototype.appStateFatalExceptionNotification = null;
         ProtocolMessage.prototype.disappearingMode = null;
         ProtocolMessage.prototype.editedMessage = null;
-        ProtocolMessage.prototype.timestampMS = null;
+        ProtocolMessage.prototype.timestampMs = null;
         ProtocolMessage.prototype.peerDataOperationRequestMessage = null;
         ProtocolMessage.prototype.peerDataOperationRequestResponseMessage = null;
         ProtocolMessage.prototype.botFeedbackMessage = null;
-        ProtocolMessage.prototype.invokerJID = null;
+        ProtocolMessage.prototype.invokerJid = null;
         ProtocolMessage.prototype.requestWelcomeMessageMetadata = null;
         ProtocolMessage.prototype.mediaNotifyMessage = null;
         ProtocolMessage.prototype.cloudApiThreadControlNotification = null;
@@ -15091,8 +15091,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ProtocolMessage.prototype, "_timestampMS", {
-            get: $util.oneOfGetter($oneOfFields = ["timestampMS"]),
+        Object.defineProperty(ProtocolMessage.prototype, "_timestampMs", {
+            get: $util.oneOfGetter($oneOfFields = ["timestampMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -15115,8 +15115,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ProtocolMessage.prototype, "_invokerJID", {
-            get: $util.oneOfGetter($oneOfFields = ["invokerJID"]),
+        Object.defineProperty(ProtocolMessage.prototype, "_invokerJid", {
+            get: $util.oneOfGetter($oneOfFields = ["invokerJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -15215,16 +15215,16 @@ export const WAE2E = $root.WAE2E = (() => {
                 $root.WAE2E.DisappearingMode.encode(m.disappearingMode, w.uint32(90).fork()).ldelim();
             if (m.editedMessage != null && Object.hasOwnProperty.call(m, "editedMessage"))
                 $root.WAE2E.Message.encode(m.editedMessage, w.uint32(114).fork()).ldelim();
-            if (m.timestampMS != null && Object.hasOwnProperty.call(m, "timestampMS"))
-                w.uint32(120).int64(m.timestampMS);
+            if (m.timestampMs != null && Object.hasOwnProperty.call(m, "timestampMs"))
+                w.uint32(120).int64(m.timestampMs);
             if (m.peerDataOperationRequestMessage != null && Object.hasOwnProperty.call(m, "peerDataOperationRequestMessage"))
                 $root.WAE2E.PeerDataOperationRequestMessage.encode(m.peerDataOperationRequestMessage, w.uint32(130).fork()).ldelim();
             if (m.peerDataOperationRequestResponseMessage != null && Object.hasOwnProperty.call(m, "peerDataOperationRequestResponseMessage"))
                 $root.WAE2E.PeerDataOperationRequestResponseMessage.encode(m.peerDataOperationRequestResponseMessage, w.uint32(138).fork()).ldelim();
             if (m.botFeedbackMessage != null && Object.hasOwnProperty.call(m, "botFeedbackMessage"))
                 WAAICommon.BotFeedbackMessage.encode(m.botFeedbackMessage, w.uint32(146).fork()).ldelim();
-            if (m.invokerJID != null && Object.hasOwnProperty.call(m, "invokerJID"))
-                w.uint32(154).string(m.invokerJID);
+            if (m.invokerJid != null && Object.hasOwnProperty.call(m, "invokerJid"))
+                w.uint32(154).string(m.invokerJid);
             if (m.requestWelcomeMessageMetadata != null && Object.hasOwnProperty.call(m, "requestWelcomeMessageMetadata"))
                 $root.WAE2E.RequestWelcomeMessageMetadata.encode(m.requestWelcomeMessageMetadata, w.uint32(162).fork()).ldelim();
             if (m.mediaNotifyMessage != null && Object.hasOwnProperty.call(m, "mediaNotifyMessage"))
@@ -15308,7 +15308,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 15: {
-                        m.timestampMS = r.int64();
+                        m.timestampMs = r.int64();
                         break;
                     }
                 case 16: {
@@ -15324,7 +15324,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 19: {
-                        m.invokerJID = r.string();
+                        m.invokerJid = r.string();
                         break;
                     }
                 case 20: {
@@ -15564,15 +15564,15 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.ProtocolMessage.editedMessage: object expected");
                 m.editedMessage = $root.WAE2E.Message.fromObject(d.editedMessage, n + 1);
             }
-            if (d.timestampMS != null) {
+            if (d.timestampMs != null) {
                 if ($util.Long)
-                    (m.timestampMS = $util.Long.fromValue(d.timestampMS)).unsigned = false;
-                else if (typeof d.timestampMS === "string")
-                    m.timestampMS = parseInt(d.timestampMS, 10);
-                else if (typeof d.timestampMS === "number")
-                    m.timestampMS = d.timestampMS;
-                else if (typeof d.timestampMS === "object")
-                    m.timestampMS = new $util.LongBits(d.timestampMS.low >>> 0, d.timestampMS.high >>> 0).toNumber();
+                    (m.timestampMs = $util.Long.fromValue(d.timestampMs)).unsigned = false;
+                else if (typeof d.timestampMs === "string")
+                    m.timestampMs = parseInt(d.timestampMs, 10);
+                else if (typeof d.timestampMs === "number")
+                    m.timestampMs = d.timestampMs;
+                else if (typeof d.timestampMs === "object")
+                    m.timestampMs = new $util.LongBits(d.timestampMs.low >>> 0, d.timestampMs.high >>> 0).toNumber();
             }
             if (d.peerDataOperationRequestMessage != null) {
                 if (typeof d.peerDataOperationRequestMessage !== "object")
@@ -15589,8 +15589,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.ProtocolMessage.botFeedbackMessage: object expected");
                 m.botFeedbackMessage = WAAICommon.BotFeedbackMessage.fromObject(d.botFeedbackMessage, n + 1);
             }
-            if (d.invokerJID != null) {
-                m.invokerJID = String(d.invokerJID);
+            if (d.invokerJid != null) {
+                m.invokerJid = String(d.invokerJid);
             }
             if (d.requestWelcomeMessageMetadata != null) {
                 if (typeof d.requestWelcomeMessageMetadata !== "object")
@@ -15711,13 +15711,13 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._editedMessage = "editedMessage";
             }
-            if (m.timestampMS != null && m.hasOwnProperty("timestampMS")) {
-                if (typeof m.timestampMS === "number")
-                    d.timestampMS = o.longs === String ? String(m.timestampMS) : m.timestampMS;
+            if (m.timestampMs != null && m.hasOwnProperty("timestampMs")) {
+                if (typeof m.timestampMs === "number")
+                    d.timestampMs = o.longs === String ? String(m.timestampMs) : m.timestampMs;
                 else
-                    d.timestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.timestampMS) : o.longs === Number ? new $util.LongBits(m.timestampMS.low >>> 0, m.timestampMS.high >>> 0).toNumber() : m.timestampMS;
+                    d.timestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.timestampMs) : o.longs === Number ? new $util.LongBits(m.timestampMs.low >>> 0, m.timestampMs.high >>> 0).toNumber() : m.timestampMs;
                 if (o.oneofs)
-                    d._timestampMS = "timestampMS";
+                    d._timestampMs = "timestampMs";
             }
             if (m.peerDataOperationRequestMessage != null && m.hasOwnProperty("peerDataOperationRequestMessage")) {
                 d.peerDataOperationRequestMessage = $root.WAE2E.PeerDataOperationRequestMessage.toObject(m.peerDataOperationRequestMessage, o);
@@ -15734,10 +15734,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._botFeedbackMessage = "botFeedbackMessage";
             }
-            if (m.invokerJID != null && m.hasOwnProperty("invokerJID")) {
-                d.invokerJID = m.invokerJID;
+            if (m.invokerJid != null && m.hasOwnProperty("invokerJid")) {
+                d.invokerJid = m.invokerJid;
                 if (o.oneofs)
-                    d._invokerJID = "invokerJID";
+                    d._invokerJid = "invokerJid";
             }
             if (m.requestWelcomeMessageMetadata != null && m.hasOwnProperty("requestWelcomeMessageMetadata")) {
                 d.requestWelcomeMessageMetadata = $root.WAE2E.RequestWelcomeMessageMetadata.toObject(m.requestWelcomeMessageMetadata, o);
@@ -15855,7 +15855,7 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         CloudAPIThreadControlNotification.prototype.status = null;
-        CloudAPIThreadControlNotification.prototype.senderNotificationTimestampMS = null;
+        CloudAPIThreadControlNotification.prototype.senderNotificationTimestampMs = null;
         CloudAPIThreadControlNotification.prototype.consumerLid = null;
         CloudAPIThreadControlNotification.prototype.consumerPhoneNumber = null;
         CloudAPIThreadControlNotification.prototype.notificationContent = null;
@@ -15870,8 +15870,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(CloudAPIThreadControlNotification.prototype, "_senderNotificationTimestampMS", {
-            get: $util.oneOfGetter($oneOfFields = ["senderNotificationTimestampMS"]),
+        Object.defineProperty(CloudAPIThreadControlNotification.prototype, "_senderNotificationTimestampMs", {
+            get: $util.oneOfGetter($oneOfFields = ["senderNotificationTimestampMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -15908,8 +15908,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.status != null && Object.hasOwnProperty.call(m, "status"))
                 w.uint32(8).int32(m.status);
-            if (m.senderNotificationTimestampMS != null && Object.hasOwnProperty.call(m, "senderNotificationTimestampMS"))
-                w.uint32(16).int64(m.senderNotificationTimestampMS);
+            if (m.senderNotificationTimestampMs != null && Object.hasOwnProperty.call(m, "senderNotificationTimestampMs"))
+                w.uint32(16).int64(m.senderNotificationTimestampMs);
             if (m.consumerLid != null && Object.hasOwnProperty.call(m, "consumerLid"))
                 w.uint32(26).string(m.consumerLid);
             if (m.consumerPhoneNumber != null && Object.hasOwnProperty.call(m, "consumerPhoneNumber"))
@@ -15939,7 +15939,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.senderNotificationTimestampMS = r.int64();
+                        m.senderNotificationTimestampMs = r.int64();
                         break;
                     }
                 case 3: {
@@ -15998,15 +15998,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 m.status = 3;
                 break;
             }
-            if (d.senderNotificationTimestampMS != null) {
+            if (d.senderNotificationTimestampMs != null) {
                 if ($util.Long)
-                    (m.senderNotificationTimestampMS = $util.Long.fromValue(d.senderNotificationTimestampMS)).unsigned = false;
-                else if (typeof d.senderNotificationTimestampMS === "string")
-                    m.senderNotificationTimestampMS = parseInt(d.senderNotificationTimestampMS, 10);
-                else if (typeof d.senderNotificationTimestampMS === "number")
-                    m.senderNotificationTimestampMS = d.senderNotificationTimestampMS;
-                else if (typeof d.senderNotificationTimestampMS === "object")
-                    m.senderNotificationTimestampMS = new $util.LongBits(d.senderNotificationTimestampMS.low >>> 0, d.senderNotificationTimestampMS.high >>> 0).toNumber();
+                    (m.senderNotificationTimestampMs = $util.Long.fromValue(d.senderNotificationTimestampMs)).unsigned = false;
+                else if (typeof d.senderNotificationTimestampMs === "string")
+                    m.senderNotificationTimestampMs = parseInt(d.senderNotificationTimestampMs, 10);
+                else if (typeof d.senderNotificationTimestampMs === "number")
+                    m.senderNotificationTimestampMs = d.senderNotificationTimestampMs;
+                else if (typeof d.senderNotificationTimestampMs === "object")
+                    m.senderNotificationTimestampMs = new $util.LongBits(d.senderNotificationTimestampMs.low >>> 0, d.senderNotificationTimestampMs.high >>> 0).toNumber();
             }
             if (d.consumerLid != null) {
                 m.consumerLid = String(d.consumerLid);
@@ -16034,13 +16034,13 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._status = "status";
             }
-            if (m.senderNotificationTimestampMS != null && m.hasOwnProperty("senderNotificationTimestampMS")) {
-                if (typeof m.senderNotificationTimestampMS === "number")
-                    d.senderNotificationTimestampMS = o.longs === String ? String(m.senderNotificationTimestampMS) : m.senderNotificationTimestampMS;
+            if (m.senderNotificationTimestampMs != null && m.hasOwnProperty("senderNotificationTimestampMs")) {
+                if (typeof m.senderNotificationTimestampMs === "number")
+                    d.senderNotificationTimestampMs = o.longs === String ? String(m.senderNotificationTimestampMs) : m.senderNotificationTimestampMs;
                 else
-                    d.senderNotificationTimestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.senderNotificationTimestampMS) : o.longs === Number ? new $util.LongBits(m.senderNotificationTimestampMS.low >>> 0, m.senderNotificationTimestampMS.high >>> 0).toNumber() : m.senderNotificationTimestampMS;
+                    d.senderNotificationTimestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.senderNotificationTimestampMs) : o.longs === Number ? new $util.LongBits(m.senderNotificationTimestampMs.low >>> 0, m.senderNotificationTimestampMs.high >>> 0).toNumber() : m.senderNotificationTimestampMs;
                 if (o.oneofs)
-                    d._senderNotificationTimestampMS = "senderNotificationTimestampMS";
+                    d._senderNotificationTimestampMs = "senderNotificationTimestampMs";
             }
             if (m.consumerLid != null && m.hasOwnProperty("consumerLid")) {
                 d.consumerLid = m.consumerLid;
@@ -16095,7 +16095,7 @@ export const WAE2E = $root.WAE2E = (() => {
             }
 
             CloudAPIThreadControlNotificationContent.prototype.handoffNotificationText = null;
-            CloudAPIThreadControlNotificationContent.prototype.extraJSON = null;
+            CloudAPIThreadControlNotificationContent.prototype.extraJson = null;
 
             let $oneOfFields;
 
@@ -16106,8 +16106,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(CloudAPIThreadControlNotificationContent.prototype, "_extraJSON", {
-                get: $util.oneOfGetter($oneOfFields = ["extraJSON"]),
+            Object.defineProperty(CloudAPIThreadControlNotificationContent.prototype, "_extraJson", {
+                get: $util.oneOfGetter($oneOfFields = ["extraJson"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -16120,8 +16120,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     w = $Writer.create();
                 if (m.handoffNotificationText != null && Object.hasOwnProperty.call(m, "handoffNotificationText"))
                     w.uint32(10).string(m.handoffNotificationText);
-                if (m.extraJSON != null && Object.hasOwnProperty.call(m, "extraJSON"))
-                    w.uint32(18).string(m.extraJSON);
+                if (m.extraJson != null && Object.hasOwnProperty.call(m, "extraJson"))
+                    w.uint32(18).string(m.extraJson);
                 return w;
             };
 
@@ -16143,7 +16143,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 2: {
-                            m.extraJSON = r.string();
+                            m.extraJson = r.string();
                             break;
                         }
                     default:
@@ -16165,8 +16165,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (d.handoffNotificationText != null) {
                     m.handoffNotificationText = String(d.handoffNotificationText);
                 }
-                if (d.extraJSON != null) {
-                    m.extraJSON = String(d.extraJSON);
+                if (d.extraJson != null) {
+                    m.extraJson = String(d.extraJson);
                 }
                 return m;
             };
@@ -16180,10 +16180,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._handoffNotificationText = "handoffNotificationText";
                 }
-                if (m.extraJSON != null && m.hasOwnProperty("extraJSON")) {
-                    d.extraJSON = m.extraJSON;
+                if (m.extraJson != null && m.hasOwnProperty("extraJson")) {
+                    d.extraJson = m.extraJson;
                     if (o.oneofs)
-                        d._extraJSON = "extraJSON";
+                        d._extraJson = "extraJson";
                 }
                 return d;
             };
@@ -16217,9 +16217,9 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        VideoMessage.prototype.URL = null;
+        VideoMessage.prototype.url = null;
         VideoMessage.prototype.mimetype = null;
-        VideoMessage.prototype.fileSHA256 = null;
+        VideoMessage.prototype.fileSha256 = null;
         VideoMessage.prototype.fileLength = null;
         VideoMessage.prototype.seconds = null;
         VideoMessage.prototype.mediaKey = null;
@@ -16227,32 +16227,32 @@ export const WAE2E = $root.WAE2E = (() => {
         VideoMessage.prototype.gifPlayback = null;
         VideoMessage.prototype.height = null;
         VideoMessage.prototype.width = null;
-        VideoMessage.prototype.fileEncSHA256 = null;
+        VideoMessage.prototype.fileEncSha256 = null;
         VideoMessage.prototype.interactiveAnnotations = $util.emptyArray;
         VideoMessage.prototype.directPath = null;
         VideoMessage.prototype.mediaKeyTimestamp = null;
-        VideoMessage.prototype.JPEGThumbnail = null;
+        VideoMessage.prototype.jpegThumbnail = null;
         VideoMessage.prototype.contextInfo = null;
         VideoMessage.prototype.streamingSidecar = null;
         VideoMessage.prototype.gifAttribution = null;
         VideoMessage.prototype.viewOnce = null;
         VideoMessage.prototype.thumbnailDirectPath = null;
-        VideoMessage.prototype.thumbnailSHA256 = null;
-        VideoMessage.prototype.thumbnailEncSHA256 = null;
-        VideoMessage.prototype.staticURL = null;
+        VideoMessage.prototype.thumbnailSha256 = null;
+        VideoMessage.prototype.thumbnailEncSha256 = null;
+        VideoMessage.prototype.staticUrl = null;
         VideoMessage.prototype.annotations = $util.emptyArray;
         VideoMessage.prototype.accessibilityLabel = null;
         VideoMessage.prototype.processedVideos = $util.emptyArray;
         VideoMessage.prototype.externalShareFullVideoDurationInSeconds = null;
-        VideoMessage.prototype.motionPhotoPresentationOffsetMS = null;
-        VideoMessage.prototype.metadataURL = null;
+        VideoMessage.prototype.motionPhotoPresentationOffsetMs = null;
+        VideoMessage.prototype.metadataUrl = null;
         VideoMessage.prototype.videoSourceType = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(VideoMessage.prototype, "_URL", {
-            get: $util.oneOfGetter($oneOfFields = ["URL"]),
+        Object.defineProperty(VideoMessage.prototype, "_url", {
+            get: $util.oneOfGetter($oneOfFields = ["url"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -16263,8 +16263,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(VideoMessage.prototype, "_fileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+        Object.defineProperty(VideoMessage.prototype, "_fileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -16311,8 +16311,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(VideoMessage.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(VideoMessage.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -16329,8 +16329,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(VideoMessage.prototype, "_JPEGThumbnail", {
-            get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+        Object.defineProperty(VideoMessage.prototype, "_jpegThumbnail", {
+            get: $util.oneOfGetter($oneOfFields = ["jpegThumbnail"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -16365,20 +16365,20 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(VideoMessage.prototype, "_thumbnailSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailSHA256"]),
+        Object.defineProperty(VideoMessage.prototype, "_thumbnailSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(VideoMessage.prototype, "_thumbnailEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailEncSHA256"]),
+        Object.defineProperty(VideoMessage.prototype, "_thumbnailEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(VideoMessage.prototype, "_staticURL", {
-            get: $util.oneOfGetter($oneOfFields = ["staticURL"]),
+        Object.defineProperty(VideoMessage.prototype, "_staticUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["staticUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -16395,14 +16395,14 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(VideoMessage.prototype, "_motionPhotoPresentationOffsetMS", {
-            get: $util.oneOfGetter($oneOfFields = ["motionPhotoPresentationOffsetMS"]),
+        Object.defineProperty(VideoMessage.prototype, "_motionPhotoPresentationOffsetMs", {
+            get: $util.oneOfGetter($oneOfFields = ["motionPhotoPresentationOffsetMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(VideoMessage.prototype, "_metadataURL", {
-            get: $util.oneOfGetter($oneOfFields = ["metadataURL"]),
+        Object.defineProperty(VideoMessage.prototype, "_metadataUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["metadataUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -16419,12 +16419,12 @@ export const WAE2E = $root.WAE2E = (() => {
         VideoMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                w.uint32(10).string(m.URL);
+            if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                w.uint32(10).string(m.url);
             if (m.mimetype != null && Object.hasOwnProperty.call(m, "mimetype"))
                 w.uint32(18).string(m.mimetype);
-            if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                w.uint32(26).bytes(m.fileSHA256);
+            if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                w.uint32(26).bytes(m.fileSha256);
             if (m.fileLength != null && Object.hasOwnProperty.call(m, "fileLength"))
                 w.uint32(32).uint64(m.fileLength);
             if (m.seconds != null && Object.hasOwnProperty.call(m, "seconds"))
@@ -16439,8 +16439,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(72).uint32(m.height);
             if (m.width != null && Object.hasOwnProperty.call(m, "width"))
                 w.uint32(80).uint32(m.width);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(90).bytes(m.fileEncSHA256);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(90).bytes(m.fileEncSha256);
             if (m.interactiveAnnotations != null && m.interactiveAnnotations.length) {
                 for (var i = 0; i < m.interactiveAnnotations.length; ++i)
                     $root.WAE2E.InteractiveAnnotation.encode(m.interactiveAnnotations[i], w.uint32(98).fork()).ldelim();
@@ -16449,8 +16449,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(106).string(m.directPath);
             if (m.mediaKeyTimestamp != null && Object.hasOwnProperty.call(m, "mediaKeyTimestamp"))
                 w.uint32(112).int64(m.mediaKeyTimestamp);
-            if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                w.uint32(130).bytes(m.JPEGThumbnail);
+            if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                w.uint32(130).bytes(m.jpegThumbnail);
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
                 $root.WAE2E.ContextInfo.encode(m.contextInfo, w.uint32(138).fork()).ldelim();
             if (m.streamingSidecar != null && Object.hasOwnProperty.call(m, "streamingSidecar"))
@@ -16461,12 +16461,12 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(160).bool(m.viewOnce);
             if (m.thumbnailDirectPath != null && Object.hasOwnProperty.call(m, "thumbnailDirectPath"))
                 w.uint32(170).string(m.thumbnailDirectPath);
-            if (m.thumbnailSHA256 != null && Object.hasOwnProperty.call(m, "thumbnailSHA256"))
-                w.uint32(178).bytes(m.thumbnailSHA256);
-            if (m.thumbnailEncSHA256 != null && Object.hasOwnProperty.call(m, "thumbnailEncSHA256"))
-                w.uint32(186).bytes(m.thumbnailEncSHA256);
-            if (m.staticURL != null && Object.hasOwnProperty.call(m, "staticURL"))
-                w.uint32(194).string(m.staticURL);
+            if (m.thumbnailSha256 != null && Object.hasOwnProperty.call(m, "thumbnailSha256"))
+                w.uint32(178).bytes(m.thumbnailSha256);
+            if (m.thumbnailEncSha256 != null && Object.hasOwnProperty.call(m, "thumbnailEncSha256"))
+                w.uint32(186).bytes(m.thumbnailEncSha256);
+            if (m.staticUrl != null && Object.hasOwnProperty.call(m, "staticUrl"))
+                w.uint32(194).string(m.staticUrl);
             if (m.annotations != null && m.annotations.length) {
                 for (var i = 0; i < m.annotations.length; ++i)
                     $root.WAE2E.InteractiveAnnotation.encode(m.annotations[i], w.uint32(202).fork()).ldelim();
@@ -16479,10 +16479,10 @@ export const WAE2E = $root.WAE2E = (() => {
             }
             if (m.externalShareFullVideoDurationInSeconds != null && Object.hasOwnProperty.call(m, "externalShareFullVideoDurationInSeconds"))
                 w.uint32(224).uint32(m.externalShareFullVideoDurationInSeconds);
-            if (m.motionPhotoPresentationOffsetMS != null && Object.hasOwnProperty.call(m, "motionPhotoPresentationOffsetMS"))
-                w.uint32(232).uint64(m.motionPhotoPresentationOffsetMS);
-            if (m.metadataURL != null && Object.hasOwnProperty.call(m, "metadataURL"))
-                w.uint32(242).string(m.metadataURL);
+            if (m.motionPhotoPresentationOffsetMs != null && Object.hasOwnProperty.call(m, "motionPhotoPresentationOffsetMs"))
+                w.uint32(232).uint64(m.motionPhotoPresentationOffsetMs);
+            if (m.metadataUrl != null && Object.hasOwnProperty.call(m, "metadataUrl"))
+                w.uint32(242).string(m.metadataUrl);
             if (m.videoSourceType != null && Object.hasOwnProperty.call(m, "videoSourceType"))
                 w.uint32(248).int32(m.videoSourceType);
             return w;
@@ -16502,7 +16502,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.URL = r.string();
+                        m.url = r.string();
                         break;
                     }
                 case 2: {
@@ -16510,7 +16510,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.fileSHA256 = r.bytes();
+                        m.fileSha256 = r.bytes();
                         break;
                     }
                 case 4: {
@@ -16542,7 +16542,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 11: {
-                        m.fileEncSHA256 = r.bytes();
+                        m.fileEncSha256 = r.bytes();
                         break;
                     }
                 case 12: {
@@ -16560,7 +16560,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 16: {
-                        m.JPEGThumbnail = r.bytes();
+                        m.jpegThumbnail = r.bytes();
                         break;
                     }
                 case 17: {
@@ -16584,15 +16584,15 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 22: {
-                        m.thumbnailSHA256 = r.bytes();
+                        m.thumbnailSha256 = r.bytes();
                         break;
                     }
                 case 23: {
-                        m.thumbnailEncSHA256 = r.bytes();
+                        m.thumbnailEncSha256 = r.bytes();
                         break;
                     }
                 case 24: {
-                        m.staticURL = r.string();
+                        m.staticUrl = r.string();
                         break;
                     }
                 case 25: {
@@ -16616,11 +16616,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 29: {
-                        m.motionPhotoPresentationOffsetMS = r.uint64();
+                        m.motionPhotoPresentationOffsetMs = r.uint64();
                         break;
                     }
                 case 30: {
-                        m.metadataURL = r.string();
+                        m.metadataUrl = r.string();
                         break;
                     }
                 case 31: {
@@ -16643,17 +16643,17 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.VideoMessage();
-            if (d.URL != null) {
-                m.URL = String(d.URL);
+            if (d.url != null) {
+                m.url = String(d.url);
             }
             if (d.mimetype != null) {
                 m.mimetype = String(d.mimetype);
             }
-            if (d.fileSHA256 != null) {
-                if (typeof d.fileSHA256 === "string")
-                    $util.base64.decode(d.fileSHA256, m.fileSHA256 = $util.newBuffer($util.base64.length(d.fileSHA256)), 0);
-                else if (d.fileSHA256.length >= 0)
-                    m.fileSHA256 = d.fileSHA256;
+            if (d.fileSha256 != null) {
+                if (typeof d.fileSha256 === "string")
+                    $util.base64.decode(d.fileSha256, m.fileSha256 = $util.newBuffer($util.base64.length(d.fileSha256)), 0);
+                else if (d.fileSha256.length >= 0)
+                    m.fileSha256 = d.fileSha256;
             }
             if (d.fileLength != null) {
                 if ($util.Long)
@@ -16686,11 +16686,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.width != null) {
                 m.width = d.width >>> 0;
             }
-            if (d.fileEncSHA256 != null) {
-                if (typeof d.fileEncSHA256 === "string")
-                    $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                else if (d.fileEncSHA256.length >= 0)
-                    m.fileEncSHA256 = d.fileEncSHA256;
+            if (d.fileEncSha256 != null) {
+                if (typeof d.fileEncSha256 === "string")
+                    $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                else if (d.fileEncSha256.length >= 0)
+                    m.fileEncSha256 = d.fileEncSha256;
             }
             if (d.interactiveAnnotations) {
                 if (!Array.isArray(d.interactiveAnnotations))
@@ -16715,11 +16715,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (typeof d.mediaKeyTimestamp === "object")
                     m.mediaKeyTimestamp = new $util.LongBits(d.mediaKeyTimestamp.low >>> 0, d.mediaKeyTimestamp.high >>> 0).toNumber();
             }
-            if (d.JPEGThumbnail != null) {
-                if (typeof d.JPEGThumbnail === "string")
-                    $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                else if (d.JPEGThumbnail.length >= 0)
-                    m.JPEGThumbnail = d.JPEGThumbnail;
+            if (d.jpegThumbnail != null) {
+                if (typeof d.jpegThumbnail === "string")
+                    $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                else if (d.jpegThumbnail.length >= 0)
+                    m.jpegThumbnail = d.jpegThumbnail;
             }
             if (d.contextInfo != null) {
                 if (typeof d.contextInfo !== "object")
@@ -16762,20 +16762,20 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.thumbnailDirectPath != null) {
                 m.thumbnailDirectPath = String(d.thumbnailDirectPath);
             }
-            if (d.thumbnailSHA256 != null) {
-                if (typeof d.thumbnailSHA256 === "string")
-                    $util.base64.decode(d.thumbnailSHA256, m.thumbnailSHA256 = $util.newBuffer($util.base64.length(d.thumbnailSHA256)), 0);
-                else if (d.thumbnailSHA256.length >= 0)
-                    m.thumbnailSHA256 = d.thumbnailSHA256;
+            if (d.thumbnailSha256 != null) {
+                if (typeof d.thumbnailSha256 === "string")
+                    $util.base64.decode(d.thumbnailSha256, m.thumbnailSha256 = $util.newBuffer($util.base64.length(d.thumbnailSha256)), 0);
+                else if (d.thumbnailSha256.length >= 0)
+                    m.thumbnailSha256 = d.thumbnailSha256;
             }
-            if (d.thumbnailEncSHA256 != null) {
-                if (typeof d.thumbnailEncSHA256 === "string")
-                    $util.base64.decode(d.thumbnailEncSHA256, m.thumbnailEncSHA256 = $util.newBuffer($util.base64.length(d.thumbnailEncSHA256)), 0);
-                else if (d.thumbnailEncSHA256.length >= 0)
-                    m.thumbnailEncSHA256 = d.thumbnailEncSHA256;
+            if (d.thumbnailEncSha256 != null) {
+                if (typeof d.thumbnailEncSha256 === "string")
+                    $util.base64.decode(d.thumbnailEncSha256, m.thumbnailEncSha256 = $util.newBuffer($util.base64.length(d.thumbnailEncSha256)), 0);
+                else if (d.thumbnailEncSha256.length >= 0)
+                    m.thumbnailEncSha256 = d.thumbnailEncSha256;
             }
-            if (d.staticURL != null) {
-                m.staticURL = String(d.staticURL);
+            if (d.staticUrl != null) {
+                m.staticUrl = String(d.staticUrl);
             }
             if (d.annotations) {
                 if (!Array.isArray(d.annotations))
@@ -16803,18 +16803,18 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.externalShareFullVideoDurationInSeconds != null) {
                 m.externalShareFullVideoDurationInSeconds = d.externalShareFullVideoDurationInSeconds >>> 0;
             }
-            if (d.motionPhotoPresentationOffsetMS != null) {
+            if (d.motionPhotoPresentationOffsetMs != null) {
                 if ($util.Long)
-                    (m.motionPhotoPresentationOffsetMS = $util.Long.fromValue(d.motionPhotoPresentationOffsetMS)).unsigned = true;
-                else if (typeof d.motionPhotoPresentationOffsetMS === "string")
-                    m.motionPhotoPresentationOffsetMS = parseInt(d.motionPhotoPresentationOffsetMS, 10);
-                else if (typeof d.motionPhotoPresentationOffsetMS === "number")
-                    m.motionPhotoPresentationOffsetMS = d.motionPhotoPresentationOffsetMS;
-                else if (typeof d.motionPhotoPresentationOffsetMS === "object")
-                    m.motionPhotoPresentationOffsetMS = new $util.LongBits(d.motionPhotoPresentationOffsetMS.low >>> 0, d.motionPhotoPresentationOffsetMS.high >>> 0).toNumber(true);
+                    (m.motionPhotoPresentationOffsetMs = $util.Long.fromValue(d.motionPhotoPresentationOffsetMs)).unsigned = true;
+                else if (typeof d.motionPhotoPresentationOffsetMs === "string")
+                    m.motionPhotoPresentationOffsetMs = parseInt(d.motionPhotoPresentationOffsetMs, 10);
+                else if (typeof d.motionPhotoPresentationOffsetMs === "number")
+                    m.motionPhotoPresentationOffsetMs = d.motionPhotoPresentationOffsetMs;
+                else if (typeof d.motionPhotoPresentationOffsetMs === "object")
+                    m.motionPhotoPresentationOffsetMs = new $util.LongBits(d.motionPhotoPresentationOffsetMs.low >>> 0, d.motionPhotoPresentationOffsetMs.high >>> 0).toNumber(true);
             }
-            if (d.metadataURL != null) {
-                m.metadataURL = String(d.metadataURL);
+            if (d.metadataUrl != null) {
+                m.metadataUrl = String(d.metadataUrl);
             }
             switch (d.videoSourceType) {
             default:
@@ -16844,20 +16844,20 @@ export const WAE2E = $root.WAE2E = (() => {
                 d.annotations = [];
                 d.processedVideos = [];
             }
-            if (m.URL != null && m.hasOwnProperty("URL")) {
-                d.URL = m.URL;
+            if (m.url != null && m.hasOwnProperty("url")) {
+                d.url = m.url;
                 if (o.oneofs)
-                    d._URL = "URL";
+                    d._url = "url";
             }
             if (m.mimetype != null && m.hasOwnProperty("mimetype")) {
                 d.mimetype = m.mimetype;
                 if (o.oneofs)
                     d._mimetype = "mimetype";
             }
-            if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                d.fileSHA256 = o.bytes === String ? $util.base64.encode(m.fileSHA256, 0, m.fileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSHA256) : m.fileSHA256;
+            if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                d.fileSha256 = o.bytes === String ? $util.base64.encode(m.fileSha256, 0, m.fileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSha256) : m.fileSha256;
                 if (o.oneofs)
-                    d._fileSHA256 = "fileSHA256";
+                    d._fileSha256 = "fileSha256";
             }
             if (m.fileLength != null && m.hasOwnProperty("fileLength")) {
                 if (typeof m.fileLength === "number")
@@ -16897,10 +16897,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._width = "width";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
             if (m.interactiveAnnotations && m.interactiveAnnotations.length) {
                 d.interactiveAnnotations = [];
@@ -16921,10 +16921,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._mediaKeyTimestamp = "mediaKeyTimestamp";
             }
-            if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+            if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                 if (o.oneofs)
-                    d._JPEGThumbnail = "JPEGThumbnail";
+                    d._jpegThumbnail = "jpegThumbnail";
             }
             if (m.contextInfo != null && m.hasOwnProperty("contextInfo")) {
                 d.contextInfo = $root.WAE2E.ContextInfo.toObject(m.contextInfo, o);
@@ -16951,20 +16951,20 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._thumbnailDirectPath = "thumbnailDirectPath";
             }
-            if (m.thumbnailSHA256 != null && m.hasOwnProperty("thumbnailSHA256")) {
-                d.thumbnailSHA256 = o.bytes === String ? $util.base64.encode(m.thumbnailSHA256, 0, m.thumbnailSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailSHA256) : m.thumbnailSHA256;
+            if (m.thumbnailSha256 != null && m.hasOwnProperty("thumbnailSha256")) {
+                d.thumbnailSha256 = o.bytes === String ? $util.base64.encode(m.thumbnailSha256, 0, m.thumbnailSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailSha256) : m.thumbnailSha256;
                 if (o.oneofs)
-                    d._thumbnailSHA256 = "thumbnailSHA256";
+                    d._thumbnailSha256 = "thumbnailSha256";
             }
-            if (m.thumbnailEncSHA256 != null && m.hasOwnProperty("thumbnailEncSHA256")) {
-                d.thumbnailEncSHA256 = o.bytes === String ? $util.base64.encode(m.thumbnailEncSHA256, 0, m.thumbnailEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailEncSHA256) : m.thumbnailEncSHA256;
+            if (m.thumbnailEncSha256 != null && m.hasOwnProperty("thumbnailEncSha256")) {
+                d.thumbnailEncSha256 = o.bytes === String ? $util.base64.encode(m.thumbnailEncSha256, 0, m.thumbnailEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailEncSha256) : m.thumbnailEncSha256;
                 if (o.oneofs)
-                    d._thumbnailEncSHA256 = "thumbnailEncSHA256";
+                    d._thumbnailEncSha256 = "thumbnailEncSha256";
             }
-            if (m.staticURL != null && m.hasOwnProperty("staticURL")) {
-                d.staticURL = m.staticURL;
+            if (m.staticUrl != null && m.hasOwnProperty("staticUrl")) {
+                d.staticUrl = m.staticUrl;
                 if (o.oneofs)
-                    d._staticURL = "staticURL";
+                    d._staticUrl = "staticUrl";
             }
             if (m.annotations && m.annotations.length) {
                 d.annotations = [];
@@ -16988,18 +16988,18 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._externalShareFullVideoDurationInSeconds = "externalShareFullVideoDurationInSeconds";
             }
-            if (m.motionPhotoPresentationOffsetMS != null && m.hasOwnProperty("motionPhotoPresentationOffsetMS")) {
-                if (typeof m.motionPhotoPresentationOffsetMS === "number")
-                    d.motionPhotoPresentationOffsetMS = o.longs === String ? String(m.motionPhotoPresentationOffsetMS) : m.motionPhotoPresentationOffsetMS;
+            if (m.motionPhotoPresentationOffsetMs != null && m.hasOwnProperty("motionPhotoPresentationOffsetMs")) {
+                if (typeof m.motionPhotoPresentationOffsetMs === "number")
+                    d.motionPhotoPresentationOffsetMs = o.longs === String ? String(m.motionPhotoPresentationOffsetMs) : m.motionPhotoPresentationOffsetMs;
                 else
-                    d.motionPhotoPresentationOffsetMS = o.longs === String ? $util.Long.prototype.toString.call(m.motionPhotoPresentationOffsetMS) : o.longs === Number ? new $util.LongBits(m.motionPhotoPresentationOffsetMS.low >>> 0, m.motionPhotoPresentationOffsetMS.high >>> 0).toNumber(true) : m.motionPhotoPresentationOffsetMS;
+                    d.motionPhotoPresentationOffsetMs = o.longs === String ? $util.Long.prototype.toString.call(m.motionPhotoPresentationOffsetMs) : o.longs === Number ? new $util.LongBits(m.motionPhotoPresentationOffsetMs.low >>> 0, m.motionPhotoPresentationOffsetMs.high >>> 0).toNumber(true) : m.motionPhotoPresentationOffsetMs;
                 if (o.oneofs)
-                    d._motionPhotoPresentationOffsetMS = "motionPhotoPresentationOffsetMS";
+                    d._motionPhotoPresentationOffsetMs = "motionPhotoPresentationOffsetMs";
             }
-            if (m.metadataURL != null && m.hasOwnProperty("metadataURL")) {
-                d.metadataURL = m.metadataURL;
+            if (m.metadataUrl != null && m.hasOwnProperty("metadataUrl")) {
+                d.metadataUrl = m.metadataUrl;
                 if (o.oneofs)
-                    d._metadataURL = "metadataURL";
+                    d._metadataUrl = "metadataUrl";
             }
             if (m.videoSourceType != null && m.hasOwnProperty("videoSourceType")) {
                 d.videoSourceType = o.enums === String ? $root.WAE2E.VideoMessage.VideoSourceType[m.videoSourceType] === undefined ? m.videoSourceType : $root.WAE2E.VideoMessage.VideoSourceType[m.videoSourceType] : m.videoSourceType;
@@ -17057,12 +17057,12 @@ export const WAE2E = $root.WAE2E = (() => {
         ExtendedTextMessage.prototype.backgroundArgb = null;
         ExtendedTextMessage.prototype.font = null;
         ExtendedTextMessage.prototype.previewType = null;
-        ExtendedTextMessage.prototype.JPEGThumbnail = null;
+        ExtendedTextMessage.prototype.jpegThumbnail = null;
         ExtendedTextMessage.prototype.contextInfo = null;
         ExtendedTextMessage.prototype.doNotPlayInline = null;
         ExtendedTextMessage.prototype.thumbnailDirectPath = null;
-        ExtendedTextMessage.prototype.thumbnailSHA256 = null;
-        ExtendedTextMessage.prototype.thumbnailEncSHA256 = null;
+        ExtendedTextMessage.prototype.thumbnailSha256 = null;
+        ExtendedTextMessage.prototype.thumbnailEncSha256 = null;
         ExtendedTextMessage.prototype.mediaKey = null;
         ExtendedTextMessage.prototype.mediaKeyTimestamp = null;
         ExtendedTextMessage.prototype.thumbnailHeight = null;
@@ -17078,7 +17078,7 @@ export const WAE2E = $root.WAE2E = (() => {
         ExtendedTextMessage.prototype.linkPreviewMetadata = null;
         ExtendedTextMessage.prototype.paymentLinkMetadata = null;
         ExtendedTextMessage.prototype.endCardTiles = $util.emptyArray;
-        ExtendedTextMessage.prototype.videoContentURL = null;
+        ExtendedTextMessage.prototype.videoContentUrl = null;
         ExtendedTextMessage.prototype.musicMetadata = null;
         ExtendedTextMessage.prototype.paymentExtendedMetadata = null;
 
@@ -17133,8 +17133,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ExtendedTextMessage.prototype, "_JPEGThumbnail", {
-            get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+        Object.defineProperty(ExtendedTextMessage.prototype, "_jpegThumbnail", {
+            get: $util.oneOfGetter($oneOfFields = ["jpegThumbnail"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -17157,14 +17157,14 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ExtendedTextMessage.prototype, "_thumbnailSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailSHA256"]),
+        Object.defineProperty(ExtendedTextMessage.prototype, "_thumbnailSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ExtendedTextMessage.prototype, "_thumbnailEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailEncSHA256"]),
+        Object.defineProperty(ExtendedTextMessage.prototype, "_thumbnailEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -17253,8 +17253,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ExtendedTextMessage.prototype, "_videoContentURL", {
-            get: $util.oneOfGetter($oneOfFields = ["videoContentURL"]),
+        Object.defineProperty(ExtendedTextMessage.prototype, "_videoContentUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["videoContentUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -17293,18 +17293,18 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(72).int32(m.font);
             if (m.previewType != null && Object.hasOwnProperty.call(m, "previewType"))
                 w.uint32(80).int32(m.previewType);
-            if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                w.uint32(130).bytes(m.JPEGThumbnail);
+            if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                w.uint32(130).bytes(m.jpegThumbnail);
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
                 $root.WAE2E.ContextInfo.encode(m.contextInfo, w.uint32(138).fork()).ldelim();
             if (m.doNotPlayInline != null && Object.hasOwnProperty.call(m, "doNotPlayInline"))
                 w.uint32(144).bool(m.doNotPlayInline);
             if (m.thumbnailDirectPath != null && Object.hasOwnProperty.call(m, "thumbnailDirectPath"))
                 w.uint32(154).string(m.thumbnailDirectPath);
-            if (m.thumbnailSHA256 != null && Object.hasOwnProperty.call(m, "thumbnailSHA256"))
-                w.uint32(162).bytes(m.thumbnailSHA256);
-            if (m.thumbnailEncSHA256 != null && Object.hasOwnProperty.call(m, "thumbnailEncSHA256"))
-                w.uint32(170).bytes(m.thumbnailEncSHA256);
+            if (m.thumbnailSha256 != null && Object.hasOwnProperty.call(m, "thumbnailSha256"))
+                w.uint32(162).bytes(m.thumbnailSha256);
+            if (m.thumbnailEncSha256 != null && Object.hasOwnProperty.call(m, "thumbnailEncSha256"))
+                w.uint32(170).bytes(m.thumbnailEncSha256);
             if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                 w.uint32(178).bytes(m.mediaKey);
             if (m.mediaKeyTimestamp != null && Object.hasOwnProperty.call(m, "mediaKeyTimestamp"))
@@ -17337,8 +17337,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 for (var i = 0; i < m.endCardTiles.length; ++i)
                     $root.WAE2E.VideoEndCard.encode(m.endCardTiles[i], w.uint32(290).fork()).ldelim();
             }
-            if (m.videoContentURL != null && Object.hasOwnProperty.call(m, "videoContentURL"))
-                w.uint32(298).string(m.videoContentURL);
+            if (m.videoContentUrl != null && Object.hasOwnProperty.call(m, "videoContentUrl"))
+                w.uint32(298).string(m.videoContentUrl);
             if (m.musicMetadata != null && Object.hasOwnProperty.call(m, "musicMetadata"))
                 $root.WAE2E.EmbeddedMusic.encode(m.musicMetadata, w.uint32(306).fork()).ldelim();
             if (m.paymentExtendedMetadata != null && Object.hasOwnProperty.call(m, "paymentExtendedMetadata"))
@@ -17392,7 +17392,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 16: {
-                        m.JPEGThumbnail = r.bytes();
+                        m.jpegThumbnail = r.bytes();
                         break;
                     }
                 case 17: {
@@ -17408,11 +17408,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 20: {
-                        m.thumbnailSHA256 = r.bytes();
+                        m.thumbnailSha256 = r.bytes();
                         break;
                     }
                 case 21: {
-                        m.thumbnailEncSHA256 = r.bytes();
+                        m.thumbnailEncSha256 = r.bytes();
                         break;
                     }
                 case 22: {
@@ -17478,7 +17478,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 37: {
-                        m.videoContentURL = r.string();
+                        m.videoContentUrl = r.string();
                         break;
                     }
                 case 38: {
@@ -17595,11 +17595,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 m.previewType = 7;
                 break;
             }
-            if (d.JPEGThumbnail != null) {
-                if (typeof d.JPEGThumbnail === "string")
-                    $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                else if (d.JPEGThumbnail.length >= 0)
-                    m.JPEGThumbnail = d.JPEGThumbnail;
+            if (d.jpegThumbnail != null) {
+                if (typeof d.jpegThumbnail === "string")
+                    $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                else if (d.jpegThumbnail.length >= 0)
+                    m.jpegThumbnail = d.jpegThumbnail;
             }
             if (d.contextInfo != null) {
                 if (typeof d.contextInfo !== "object")
@@ -17612,17 +17612,17 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.thumbnailDirectPath != null) {
                 m.thumbnailDirectPath = String(d.thumbnailDirectPath);
             }
-            if (d.thumbnailSHA256 != null) {
-                if (typeof d.thumbnailSHA256 === "string")
-                    $util.base64.decode(d.thumbnailSHA256, m.thumbnailSHA256 = $util.newBuffer($util.base64.length(d.thumbnailSHA256)), 0);
-                else if (d.thumbnailSHA256.length >= 0)
-                    m.thumbnailSHA256 = d.thumbnailSHA256;
+            if (d.thumbnailSha256 != null) {
+                if (typeof d.thumbnailSha256 === "string")
+                    $util.base64.decode(d.thumbnailSha256, m.thumbnailSha256 = $util.newBuffer($util.base64.length(d.thumbnailSha256)), 0);
+                else if (d.thumbnailSha256.length >= 0)
+                    m.thumbnailSha256 = d.thumbnailSha256;
             }
-            if (d.thumbnailEncSHA256 != null) {
-                if (typeof d.thumbnailEncSHA256 === "string")
-                    $util.base64.decode(d.thumbnailEncSHA256, m.thumbnailEncSHA256 = $util.newBuffer($util.base64.length(d.thumbnailEncSHA256)), 0);
-                else if (d.thumbnailEncSHA256.length >= 0)
-                    m.thumbnailEncSHA256 = d.thumbnailEncSHA256;
+            if (d.thumbnailEncSha256 != null) {
+                if (typeof d.thumbnailEncSha256 === "string")
+                    $util.base64.decode(d.thumbnailEncSha256, m.thumbnailEncSha256 = $util.newBuffer($util.base64.length(d.thumbnailEncSha256)), 0);
+                else if (d.thumbnailEncSha256.length >= 0)
+                    m.thumbnailEncSha256 = d.thumbnailEncSha256;
             }
             if (d.mediaKey != null) {
                 if (typeof d.mediaKey === "string")
@@ -17737,8 +17737,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     m.endCardTiles[i] = $root.WAE2E.VideoEndCard.fromObject(d.endCardTiles[i], n + 1);
                 }
             }
-            if (d.videoContentURL != null) {
-                m.videoContentURL = String(d.videoContentURL);
+            if (d.videoContentUrl != null) {
+                m.videoContentUrl = String(d.videoContentUrl);
             }
             if (d.musicMetadata != null) {
                 if (typeof d.musicMetadata !== "object")
@@ -17800,10 +17800,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._previewType = "previewType";
             }
-            if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+            if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                 if (o.oneofs)
-                    d._JPEGThumbnail = "JPEGThumbnail";
+                    d._jpegThumbnail = "jpegThumbnail";
             }
             if (m.contextInfo != null && m.hasOwnProperty("contextInfo")) {
                 d.contextInfo = $root.WAE2E.ContextInfo.toObject(m.contextInfo, o);
@@ -17820,15 +17820,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._thumbnailDirectPath = "thumbnailDirectPath";
             }
-            if (m.thumbnailSHA256 != null && m.hasOwnProperty("thumbnailSHA256")) {
-                d.thumbnailSHA256 = o.bytes === String ? $util.base64.encode(m.thumbnailSHA256, 0, m.thumbnailSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailSHA256) : m.thumbnailSHA256;
+            if (m.thumbnailSha256 != null && m.hasOwnProperty("thumbnailSha256")) {
+                d.thumbnailSha256 = o.bytes === String ? $util.base64.encode(m.thumbnailSha256, 0, m.thumbnailSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailSha256) : m.thumbnailSha256;
                 if (o.oneofs)
-                    d._thumbnailSHA256 = "thumbnailSHA256";
+                    d._thumbnailSha256 = "thumbnailSha256";
             }
-            if (m.thumbnailEncSHA256 != null && m.hasOwnProperty("thumbnailEncSHA256")) {
-                d.thumbnailEncSHA256 = o.bytes === String ? $util.base64.encode(m.thumbnailEncSHA256, 0, m.thumbnailEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailEncSHA256) : m.thumbnailEncSHA256;
+            if (m.thumbnailEncSha256 != null && m.hasOwnProperty("thumbnailEncSha256")) {
+                d.thumbnailEncSha256 = o.bytes === String ? $util.base64.encode(m.thumbnailEncSha256, 0, m.thumbnailEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailEncSha256) : m.thumbnailEncSha256;
                 if (o.oneofs)
-                    d._thumbnailEncSHA256 = "thumbnailEncSHA256";
+                    d._thumbnailEncSha256 = "thumbnailEncSha256";
             }
             if (m.mediaKey != null && m.hasOwnProperty("mediaKey")) {
                 d.mediaKey = o.bytes === String ? $util.base64.encode(m.mediaKey, 0, m.mediaKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.mediaKey) : m.mediaKey;
@@ -17909,10 +17909,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     d.endCardTiles[j] = $root.WAE2E.VideoEndCard.toObject(m.endCardTiles[j], o);
                 }
             }
-            if (m.videoContentURL != null && m.hasOwnProperty("videoContentURL")) {
-                d.videoContentURL = m.videoContentURL;
+            if (m.videoContentUrl != null && m.hasOwnProperty("videoContentUrl")) {
+                d.videoContentUrl = m.videoContentUrl;
                 if (o.oneofs)
-                    d._videoContentURL = "videoContentURL";
+                    d._videoContentUrl = "videoContentUrl";
             }
             if (m.musicMetadata != null && m.hasOwnProperty("musicMetadata")) {
                 d.musicMetadata = $root.WAE2E.EmbeddedMusic.toObject(m.musicMetadata, o);
@@ -17985,11 +17985,11 @@ export const WAE2E = $root.WAE2E = (() => {
 
         LinkPreviewMetadata.prototype.paymentLinkMetadata = null;
         LinkPreviewMetadata.prototype.urlMetadata = null;
-        LinkPreviewMetadata.prototype.fbExperimentID = null;
+        LinkPreviewMetadata.prototype.fbExperimentId = null;
         LinkPreviewMetadata.prototype.linkMediaDuration = null;
         LinkPreviewMetadata.prototype.socialMediaPostType = null;
         LinkPreviewMetadata.prototype.linkInlineVideoMuted = null;
-        LinkPreviewMetadata.prototype.videoContentURL = null;
+        LinkPreviewMetadata.prototype.videoContentUrl = null;
         LinkPreviewMetadata.prototype.musicMetadata = null;
         LinkPreviewMetadata.prototype.videoContentCaption = null;
 
@@ -18008,8 +18008,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(LinkPreviewMetadata.prototype, "_fbExperimentID", {
-            get: $util.oneOfGetter($oneOfFields = ["fbExperimentID"]),
+        Object.defineProperty(LinkPreviewMetadata.prototype, "_fbExperimentId", {
+            get: $util.oneOfGetter($oneOfFields = ["fbExperimentId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -18032,8 +18032,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(LinkPreviewMetadata.prototype, "_videoContentURL", {
-            get: $util.oneOfGetter($oneOfFields = ["videoContentURL"]),
+        Object.defineProperty(LinkPreviewMetadata.prototype, "_videoContentUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["videoContentUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -18060,16 +18060,16 @@ export const WAE2E = $root.WAE2E = (() => {
                 $root.WAE2E.PaymentLinkMetadata.encode(m.paymentLinkMetadata, w.uint32(10).fork()).ldelim();
             if (m.urlMetadata != null && Object.hasOwnProperty.call(m, "urlMetadata"))
                 $root.WAE2E.URLMetadata.encode(m.urlMetadata, w.uint32(18).fork()).ldelim();
-            if (m.fbExperimentID != null && Object.hasOwnProperty.call(m, "fbExperimentID"))
-                w.uint32(24).uint32(m.fbExperimentID);
+            if (m.fbExperimentId != null && Object.hasOwnProperty.call(m, "fbExperimentId"))
+                w.uint32(24).uint32(m.fbExperimentId);
             if (m.linkMediaDuration != null && Object.hasOwnProperty.call(m, "linkMediaDuration"))
                 w.uint32(32).uint32(m.linkMediaDuration);
             if (m.socialMediaPostType != null && Object.hasOwnProperty.call(m, "socialMediaPostType"))
                 w.uint32(40).int32(m.socialMediaPostType);
             if (m.linkInlineVideoMuted != null && Object.hasOwnProperty.call(m, "linkInlineVideoMuted"))
                 w.uint32(48).bool(m.linkInlineVideoMuted);
-            if (m.videoContentURL != null && Object.hasOwnProperty.call(m, "videoContentURL"))
-                w.uint32(58).string(m.videoContentURL);
+            if (m.videoContentUrl != null && Object.hasOwnProperty.call(m, "videoContentUrl"))
+                w.uint32(58).string(m.videoContentUrl);
             if (m.musicMetadata != null && Object.hasOwnProperty.call(m, "musicMetadata"))
                 $root.WAE2E.EmbeddedMusic.encode(m.musicMetadata, w.uint32(66).fork()).ldelim();
             if (m.videoContentCaption != null && Object.hasOwnProperty.call(m, "videoContentCaption"))
@@ -18099,7 +18099,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.fbExperimentID = r.uint32();
+                        m.fbExperimentId = r.uint32();
                         break;
                     }
                 case 4: {
@@ -18115,7 +18115,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 7: {
-                        m.videoContentURL = r.string();
+                        m.videoContentUrl = r.string();
                         break;
                     }
                 case 8: {
@@ -18152,8 +18152,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.LinkPreviewMetadata.urlMetadata: object expected");
                 m.urlMetadata = $root.WAE2E.URLMetadata.fromObject(d.urlMetadata, n + 1);
             }
-            if (d.fbExperimentID != null) {
-                m.fbExperimentID = d.fbExperimentID >>> 0;
+            if (d.fbExperimentId != null) {
+                m.fbExperimentId = d.fbExperimentId >>> 0;
             }
             if (d.linkMediaDuration != null) {
                 m.linkMediaDuration = d.linkMediaDuration >>> 0;
@@ -18193,8 +18193,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.linkInlineVideoMuted != null) {
                 m.linkInlineVideoMuted = Boolean(d.linkInlineVideoMuted);
             }
-            if (d.videoContentURL != null) {
-                m.videoContentURL = String(d.videoContentURL);
+            if (d.videoContentUrl != null) {
+                m.videoContentUrl = String(d.videoContentUrl);
             }
             if (d.musicMetadata != null) {
                 if (typeof d.musicMetadata !== "object")
@@ -18221,10 +18221,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._urlMetadata = "urlMetadata";
             }
-            if (m.fbExperimentID != null && m.hasOwnProperty("fbExperimentID")) {
-                d.fbExperimentID = m.fbExperimentID;
+            if (m.fbExperimentId != null && m.hasOwnProperty("fbExperimentId")) {
+                d.fbExperimentId = m.fbExperimentId;
                 if (o.oneofs)
-                    d._fbExperimentID = "fbExperimentID";
+                    d._fbExperimentId = "fbExperimentId";
             }
             if (m.linkMediaDuration != null && m.hasOwnProperty("linkMediaDuration")) {
                 d.linkMediaDuration = m.linkMediaDuration;
@@ -18241,10 +18241,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._linkInlineVideoMuted = "linkInlineVideoMuted";
             }
-            if (m.videoContentURL != null && m.hasOwnProperty("videoContentURL")) {
-                d.videoContentURL = m.videoContentURL;
+            if (m.videoContentUrl != null && m.hasOwnProperty("videoContentUrl")) {
+                d.videoContentUrl = m.videoContentUrl;
                 if (o.oneofs)
-                    d._videoContentURL = "videoContentURL";
+                    d._videoContentUrl = "videoContentUrl";
             }
             if (m.musicMetadata != null && m.hasOwnProperty("musicMetadata")) {
                 d.musicMetadata = $root.WAE2E.EmbeddedMusic.toObject(m.musicMetadata, o);
@@ -18550,13 +18550,13 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            PaymentLinkProvider.prototype.paramsJSON = null;
+            PaymentLinkProvider.prototype.paramsJson = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(PaymentLinkProvider.prototype, "_paramsJSON", {
-                get: $util.oneOfGetter($oneOfFields = ["paramsJSON"]),
+            Object.defineProperty(PaymentLinkProvider.prototype, "_paramsJson", {
+                get: $util.oneOfGetter($oneOfFields = ["paramsJson"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -18567,8 +18567,8 @@ export const WAE2E = $root.WAE2E = (() => {
             PaymentLinkProvider.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.paramsJSON != null && Object.hasOwnProperty.call(m, "paramsJSON"))
-                    w.uint32(10).string(m.paramsJSON);
+                if (m.paramsJson != null && Object.hasOwnProperty.call(m, "paramsJson"))
+                    w.uint32(10).string(m.paramsJson);
                 return w;
             };
 
@@ -18586,7 +18586,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.paramsJSON = r.string();
+                            m.paramsJson = r.string();
                             break;
                         }
                     default:
@@ -18605,8 +18605,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.PaymentLinkMetadata.PaymentLinkProvider();
-                if (d.paramsJSON != null) {
-                    m.paramsJSON = String(d.paramsJSON);
+                if (d.paramsJson != null) {
+                    m.paramsJson = String(d.paramsJson);
                 }
                 return m;
             };
@@ -18615,10 +18615,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.paramsJSON != null && m.hasOwnProperty("paramsJSON")) {
-                    d.paramsJSON = m.paramsJSON;
+                if (m.paramsJson != null && m.hasOwnProperty("paramsJson")) {
+                    d.paramsJson = m.paramsJson;
                     if (o.oneofs)
-                        d._paramsJSON = "paramsJSON";
+                        d._paramsJson = "paramsJson";
                 }
                 return d;
             };
@@ -18923,10 +18923,10 @@ export const WAE2E = $root.WAE2E = (() => {
         InvoiceMessage.prototype.attachmentMimetype = null;
         InvoiceMessage.prototype.attachmentMediaKey = null;
         InvoiceMessage.prototype.attachmentMediaKeyTimestamp = null;
-        InvoiceMessage.prototype.attachmentFileSHA256 = null;
-        InvoiceMessage.prototype.attachmentFileEncSHA256 = null;
+        InvoiceMessage.prototype.attachmentFileSha256 = null;
+        InvoiceMessage.prototype.attachmentFileEncSha256 = null;
         InvoiceMessage.prototype.attachmentDirectPath = null;
-        InvoiceMessage.prototype.attachmentJPEGThumbnail = null;
+        InvoiceMessage.prototype.attachmentJpegThumbnail = null;
 
         let $oneOfFields;
 
@@ -18967,14 +18967,14 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InvoiceMessage.prototype, "_attachmentFileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["attachmentFileSHA256"]),
+        Object.defineProperty(InvoiceMessage.prototype, "_attachmentFileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["attachmentFileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InvoiceMessage.prototype, "_attachmentFileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["attachmentFileEncSHA256"]),
+        Object.defineProperty(InvoiceMessage.prototype, "_attachmentFileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["attachmentFileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -18985,8 +18985,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InvoiceMessage.prototype, "_attachmentJPEGThumbnail", {
-            get: $util.oneOfGetter($oneOfFields = ["attachmentJPEGThumbnail"]),
+        Object.defineProperty(InvoiceMessage.prototype, "_attachmentJpegThumbnail", {
+            get: $util.oneOfGetter($oneOfFields = ["attachmentJpegThumbnail"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -19009,14 +19009,14 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(42).bytes(m.attachmentMediaKey);
             if (m.attachmentMediaKeyTimestamp != null && Object.hasOwnProperty.call(m, "attachmentMediaKeyTimestamp"))
                 w.uint32(48).int64(m.attachmentMediaKeyTimestamp);
-            if (m.attachmentFileSHA256 != null && Object.hasOwnProperty.call(m, "attachmentFileSHA256"))
-                w.uint32(58).bytes(m.attachmentFileSHA256);
-            if (m.attachmentFileEncSHA256 != null && Object.hasOwnProperty.call(m, "attachmentFileEncSHA256"))
-                w.uint32(66).bytes(m.attachmentFileEncSHA256);
+            if (m.attachmentFileSha256 != null && Object.hasOwnProperty.call(m, "attachmentFileSha256"))
+                w.uint32(58).bytes(m.attachmentFileSha256);
+            if (m.attachmentFileEncSha256 != null && Object.hasOwnProperty.call(m, "attachmentFileEncSha256"))
+                w.uint32(66).bytes(m.attachmentFileEncSha256);
             if (m.attachmentDirectPath != null && Object.hasOwnProperty.call(m, "attachmentDirectPath"))
                 w.uint32(74).string(m.attachmentDirectPath);
-            if (m.attachmentJPEGThumbnail != null && Object.hasOwnProperty.call(m, "attachmentJPEGThumbnail"))
-                w.uint32(82).bytes(m.attachmentJPEGThumbnail);
+            if (m.attachmentJpegThumbnail != null && Object.hasOwnProperty.call(m, "attachmentJpegThumbnail"))
+                w.uint32(82).bytes(m.attachmentJpegThumbnail);
             return w;
         };
 
@@ -19058,11 +19058,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 7: {
-                        m.attachmentFileSHA256 = r.bytes();
+                        m.attachmentFileSha256 = r.bytes();
                         break;
                     }
                 case 8: {
-                        m.attachmentFileEncSHA256 = r.bytes();
+                        m.attachmentFileEncSha256 = r.bytes();
                         break;
                     }
                 case 9: {
@@ -19070,7 +19070,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 10: {
-                        m.attachmentJPEGThumbnail = r.bytes();
+                        m.attachmentJpegThumbnail = r.bytes();
                         break;
                     }
                 default:
@@ -19130,26 +19130,26 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (typeof d.attachmentMediaKeyTimestamp === "object")
                     m.attachmentMediaKeyTimestamp = new $util.LongBits(d.attachmentMediaKeyTimestamp.low >>> 0, d.attachmentMediaKeyTimestamp.high >>> 0).toNumber();
             }
-            if (d.attachmentFileSHA256 != null) {
-                if (typeof d.attachmentFileSHA256 === "string")
-                    $util.base64.decode(d.attachmentFileSHA256, m.attachmentFileSHA256 = $util.newBuffer($util.base64.length(d.attachmentFileSHA256)), 0);
-                else if (d.attachmentFileSHA256.length >= 0)
-                    m.attachmentFileSHA256 = d.attachmentFileSHA256;
+            if (d.attachmentFileSha256 != null) {
+                if (typeof d.attachmentFileSha256 === "string")
+                    $util.base64.decode(d.attachmentFileSha256, m.attachmentFileSha256 = $util.newBuffer($util.base64.length(d.attachmentFileSha256)), 0);
+                else if (d.attachmentFileSha256.length >= 0)
+                    m.attachmentFileSha256 = d.attachmentFileSha256;
             }
-            if (d.attachmentFileEncSHA256 != null) {
-                if (typeof d.attachmentFileEncSHA256 === "string")
-                    $util.base64.decode(d.attachmentFileEncSHA256, m.attachmentFileEncSHA256 = $util.newBuffer($util.base64.length(d.attachmentFileEncSHA256)), 0);
-                else if (d.attachmentFileEncSHA256.length >= 0)
-                    m.attachmentFileEncSHA256 = d.attachmentFileEncSHA256;
+            if (d.attachmentFileEncSha256 != null) {
+                if (typeof d.attachmentFileEncSha256 === "string")
+                    $util.base64.decode(d.attachmentFileEncSha256, m.attachmentFileEncSha256 = $util.newBuffer($util.base64.length(d.attachmentFileEncSha256)), 0);
+                else if (d.attachmentFileEncSha256.length >= 0)
+                    m.attachmentFileEncSha256 = d.attachmentFileEncSha256;
             }
             if (d.attachmentDirectPath != null) {
                 m.attachmentDirectPath = String(d.attachmentDirectPath);
             }
-            if (d.attachmentJPEGThumbnail != null) {
-                if (typeof d.attachmentJPEGThumbnail === "string")
-                    $util.base64.decode(d.attachmentJPEGThumbnail, m.attachmentJPEGThumbnail = $util.newBuffer($util.base64.length(d.attachmentJPEGThumbnail)), 0);
-                else if (d.attachmentJPEGThumbnail.length >= 0)
-                    m.attachmentJPEGThumbnail = d.attachmentJPEGThumbnail;
+            if (d.attachmentJpegThumbnail != null) {
+                if (typeof d.attachmentJpegThumbnail === "string")
+                    $util.base64.decode(d.attachmentJpegThumbnail, m.attachmentJpegThumbnail = $util.newBuffer($util.base64.length(d.attachmentJpegThumbnail)), 0);
+                else if (d.attachmentJpegThumbnail.length >= 0)
+                    m.attachmentJpegThumbnail = d.attachmentJpegThumbnail;
             }
             return m;
         };
@@ -19191,25 +19191,25 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._attachmentMediaKeyTimestamp = "attachmentMediaKeyTimestamp";
             }
-            if (m.attachmentFileSHA256 != null && m.hasOwnProperty("attachmentFileSHA256")) {
-                d.attachmentFileSHA256 = o.bytes === String ? $util.base64.encode(m.attachmentFileSHA256, 0, m.attachmentFileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.attachmentFileSHA256) : m.attachmentFileSHA256;
+            if (m.attachmentFileSha256 != null && m.hasOwnProperty("attachmentFileSha256")) {
+                d.attachmentFileSha256 = o.bytes === String ? $util.base64.encode(m.attachmentFileSha256, 0, m.attachmentFileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.attachmentFileSha256) : m.attachmentFileSha256;
                 if (o.oneofs)
-                    d._attachmentFileSHA256 = "attachmentFileSHA256";
+                    d._attachmentFileSha256 = "attachmentFileSha256";
             }
-            if (m.attachmentFileEncSHA256 != null && m.hasOwnProperty("attachmentFileEncSHA256")) {
-                d.attachmentFileEncSHA256 = o.bytes === String ? $util.base64.encode(m.attachmentFileEncSHA256, 0, m.attachmentFileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.attachmentFileEncSHA256) : m.attachmentFileEncSHA256;
+            if (m.attachmentFileEncSha256 != null && m.hasOwnProperty("attachmentFileEncSha256")) {
+                d.attachmentFileEncSha256 = o.bytes === String ? $util.base64.encode(m.attachmentFileEncSha256, 0, m.attachmentFileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.attachmentFileEncSha256) : m.attachmentFileEncSha256;
                 if (o.oneofs)
-                    d._attachmentFileEncSHA256 = "attachmentFileEncSHA256";
+                    d._attachmentFileEncSha256 = "attachmentFileEncSha256";
             }
             if (m.attachmentDirectPath != null && m.hasOwnProperty("attachmentDirectPath")) {
                 d.attachmentDirectPath = m.attachmentDirectPath;
                 if (o.oneofs)
                     d._attachmentDirectPath = "attachmentDirectPath";
             }
-            if (m.attachmentJPEGThumbnail != null && m.hasOwnProperty("attachmentJPEGThumbnail")) {
-                d.attachmentJPEGThumbnail = o.bytes === String ? $util.base64.encode(m.attachmentJPEGThumbnail, 0, m.attachmentJPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.attachmentJPEGThumbnail) : m.attachmentJPEGThumbnail;
+            if (m.attachmentJpegThumbnail != null && m.hasOwnProperty("attachmentJpegThumbnail")) {
+                d.attachmentJpegThumbnail = o.bytes === String ? $util.base64.encode(m.attachmentJpegThumbnail, 0, m.attachmentJpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.attachmentJpegThumbnail) : m.attachmentJpegThumbnail;
                 if (o.oneofs)
-                    d._attachmentJPEGThumbnail = "attachmentJPEGThumbnail";
+                    d._attachmentJpegThumbnail = "attachmentJpegThumbnail";
             }
             return d;
         };
@@ -19247,42 +19247,42 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        ImageMessage.prototype.URL = null;
+        ImageMessage.prototype.url = null;
         ImageMessage.prototype.mimetype = null;
         ImageMessage.prototype.caption = null;
-        ImageMessage.prototype.fileSHA256 = null;
+        ImageMessage.prototype.fileSha256 = null;
         ImageMessage.prototype.fileLength = null;
         ImageMessage.prototype.height = null;
         ImageMessage.prototype.width = null;
         ImageMessage.prototype.mediaKey = null;
-        ImageMessage.prototype.fileEncSHA256 = null;
+        ImageMessage.prototype.fileEncSha256 = null;
         ImageMessage.prototype.interactiveAnnotations = $util.emptyArray;
         ImageMessage.prototype.directPath = null;
         ImageMessage.prototype.mediaKeyTimestamp = null;
-        ImageMessage.prototype.JPEGThumbnail = null;
+        ImageMessage.prototype.jpegThumbnail = null;
         ImageMessage.prototype.contextInfo = null;
         ImageMessage.prototype.firstScanSidecar = null;
         ImageMessage.prototype.firstScanLength = null;
-        ImageMessage.prototype.experimentGroupID = null;
+        ImageMessage.prototype.experimentGroupId = null;
         ImageMessage.prototype.scansSidecar = null;
         ImageMessage.prototype.scanLengths = $util.emptyArray;
-        ImageMessage.prototype.midQualityFileSHA256 = null;
-        ImageMessage.prototype.midQualityFileEncSHA256 = null;
+        ImageMessage.prototype.midQualityFileSha256 = null;
+        ImageMessage.prototype.midQualityFileEncSha256 = null;
         ImageMessage.prototype.viewOnce = null;
         ImageMessage.prototype.thumbnailDirectPath = null;
-        ImageMessage.prototype.thumbnailSHA256 = null;
-        ImageMessage.prototype.thumbnailEncSHA256 = null;
-        ImageMessage.prototype.staticURL = null;
+        ImageMessage.prototype.thumbnailSha256 = null;
+        ImageMessage.prototype.thumbnailEncSha256 = null;
+        ImageMessage.prototype.staticUrl = null;
         ImageMessage.prototype.annotations = $util.emptyArray;
         ImageMessage.prototype.imageSourceType = null;
         ImageMessage.prototype.accessibilityLabel = null;
-        ImageMessage.prototype.qrURL = null;
+        ImageMessage.prototype.qrUrl = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ImageMessage.prototype, "_URL", {
-            get: $util.oneOfGetter($oneOfFields = ["URL"]),
+        Object.defineProperty(ImageMessage.prototype, "_url", {
+            get: $util.oneOfGetter($oneOfFields = ["url"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -19299,8 +19299,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ImageMessage.prototype, "_fileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+        Object.defineProperty(ImageMessage.prototype, "_fileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -19329,8 +19329,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ImageMessage.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(ImageMessage.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -19347,8 +19347,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ImageMessage.prototype, "_JPEGThumbnail", {
-            get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+        Object.defineProperty(ImageMessage.prototype, "_jpegThumbnail", {
+            get: $util.oneOfGetter($oneOfFields = ["jpegThumbnail"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -19371,8 +19371,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ImageMessage.prototype, "_experimentGroupID", {
-            get: $util.oneOfGetter($oneOfFields = ["experimentGroupID"]),
+        Object.defineProperty(ImageMessage.prototype, "_experimentGroupId", {
+            get: $util.oneOfGetter($oneOfFields = ["experimentGroupId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -19383,14 +19383,14 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ImageMessage.prototype, "_midQualityFileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["midQualityFileSHA256"]),
+        Object.defineProperty(ImageMessage.prototype, "_midQualityFileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["midQualityFileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ImageMessage.prototype, "_midQualityFileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["midQualityFileEncSHA256"]),
+        Object.defineProperty(ImageMessage.prototype, "_midQualityFileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["midQualityFileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -19407,20 +19407,20 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ImageMessage.prototype, "_thumbnailSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailSHA256"]),
+        Object.defineProperty(ImageMessage.prototype, "_thumbnailSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ImageMessage.prototype, "_thumbnailEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailEncSHA256"]),
+        Object.defineProperty(ImageMessage.prototype, "_thumbnailEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ImageMessage.prototype, "_staticURL", {
-            get: $util.oneOfGetter($oneOfFields = ["staticURL"]),
+        Object.defineProperty(ImageMessage.prototype, "_staticUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["staticUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -19437,8 +19437,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ImageMessage.prototype, "_qrURL", {
-            get: $util.oneOfGetter($oneOfFields = ["qrURL"]),
+        Object.defineProperty(ImageMessage.prototype, "_qrUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["qrUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -19449,14 +19449,14 @@ export const WAE2E = $root.WAE2E = (() => {
         ImageMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                w.uint32(10).string(m.URL);
+            if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                w.uint32(10).string(m.url);
             if (m.mimetype != null && Object.hasOwnProperty.call(m, "mimetype"))
                 w.uint32(18).string(m.mimetype);
             if (m.caption != null && Object.hasOwnProperty.call(m, "caption"))
                 w.uint32(26).string(m.caption);
-            if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                w.uint32(34).bytes(m.fileSHA256);
+            if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                w.uint32(34).bytes(m.fileSha256);
             if (m.fileLength != null && Object.hasOwnProperty.call(m, "fileLength"))
                 w.uint32(40).uint64(m.fileLength);
             if (m.height != null && Object.hasOwnProperty.call(m, "height"))
@@ -19465,8 +19465,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(56).uint32(m.width);
             if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                 w.uint32(66).bytes(m.mediaKey);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(74).bytes(m.fileEncSHA256);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(74).bytes(m.fileEncSha256);
             if (m.interactiveAnnotations != null && m.interactiveAnnotations.length) {
                 for (var i = 0; i < m.interactiveAnnotations.length; ++i)
                     $root.WAE2E.InteractiveAnnotation.encode(m.interactiveAnnotations[i], w.uint32(82).fork()).ldelim();
@@ -19475,16 +19475,16 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(90).string(m.directPath);
             if (m.mediaKeyTimestamp != null && Object.hasOwnProperty.call(m, "mediaKeyTimestamp"))
                 w.uint32(96).int64(m.mediaKeyTimestamp);
-            if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                w.uint32(130).bytes(m.JPEGThumbnail);
+            if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                w.uint32(130).bytes(m.jpegThumbnail);
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
                 $root.WAE2E.ContextInfo.encode(m.contextInfo, w.uint32(138).fork()).ldelim();
             if (m.firstScanSidecar != null && Object.hasOwnProperty.call(m, "firstScanSidecar"))
                 w.uint32(146).bytes(m.firstScanSidecar);
             if (m.firstScanLength != null && Object.hasOwnProperty.call(m, "firstScanLength"))
                 w.uint32(152).uint32(m.firstScanLength);
-            if (m.experimentGroupID != null && Object.hasOwnProperty.call(m, "experimentGroupID"))
-                w.uint32(160).uint32(m.experimentGroupID);
+            if (m.experimentGroupId != null && Object.hasOwnProperty.call(m, "experimentGroupId"))
+                w.uint32(160).uint32(m.experimentGroupId);
             if (m.scansSidecar != null && Object.hasOwnProperty.call(m, "scansSidecar"))
                 w.uint32(170).bytes(m.scansSidecar);
             if (m.scanLengths != null && m.scanLengths.length) {
@@ -19493,20 +19493,20 @@ export const WAE2E = $root.WAE2E = (() => {
                     w.uint32(m.scanLengths[i]);
                 w.ldelim();
             }
-            if (m.midQualityFileSHA256 != null && Object.hasOwnProperty.call(m, "midQualityFileSHA256"))
-                w.uint32(186).bytes(m.midQualityFileSHA256);
-            if (m.midQualityFileEncSHA256 != null && Object.hasOwnProperty.call(m, "midQualityFileEncSHA256"))
-                w.uint32(194).bytes(m.midQualityFileEncSHA256);
+            if (m.midQualityFileSha256 != null && Object.hasOwnProperty.call(m, "midQualityFileSha256"))
+                w.uint32(186).bytes(m.midQualityFileSha256);
+            if (m.midQualityFileEncSha256 != null && Object.hasOwnProperty.call(m, "midQualityFileEncSha256"))
+                w.uint32(194).bytes(m.midQualityFileEncSha256);
             if (m.viewOnce != null && Object.hasOwnProperty.call(m, "viewOnce"))
                 w.uint32(200).bool(m.viewOnce);
             if (m.thumbnailDirectPath != null && Object.hasOwnProperty.call(m, "thumbnailDirectPath"))
                 w.uint32(210).string(m.thumbnailDirectPath);
-            if (m.thumbnailSHA256 != null && Object.hasOwnProperty.call(m, "thumbnailSHA256"))
-                w.uint32(218).bytes(m.thumbnailSHA256);
-            if (m.thumbnailEncSHA256 != null && Object.hasOwnProperty.call(m, "thumbnailEncSHA256"))
-                w.uint32(226).bytes(m.thumbnailEncSHA256);
-            if (m.staticURL != null && Object.hasOwnProperty.call(m, "staticURL"))
-                w.uint32(234).string(m.staticURL);
+            if (m.thumbnailSha256 != null && Object.hasOwnProperty.call(m, "thumbnailSha256"))
+                w.uint32(218).bytes(m.thumbnailSha256);
+            if (m.thumbnailEncSha256 != null && Object.hasOwnProperty.call(m, "thumbnailEncSha256"))
+                w.uint32(226).bytes(m.thumbnailEncSha256);
+            if (m.staticUrl != null && Object.hasOwnProperty.call(m, "staticUrl"))
+                w.uint32(234).string(m.staticUrl);
             if (m.annotations != null && m.annotations.length) {
                 for (var i = 0; i < m.annotations.length; ++i)
                     $root.WAE2E.InteractiveAnnotation.encode(m.annotations[i], w.uint32(242).fork()).ldelim();
@@ -19515,8 +19515,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(248).int32(m.imageSourceType);
             if (m.accessibilityLabel != null && Object.hasOwnProperty.call(m, "accessibilityLabel"))
                 w.uint32(258).string(m.accessibilityLabel);
-            if (m.qrURL != null && Object.hasOwnProperty.call(m, "qrURL"))
-                w.uint32(274).string(m.qrURL);
+            if (m.qrUrl != null && Object.hasOwnProperty.call(m, "qrUrl"))
+                w.uint32(274).string(m.qrUrl);
             return w;
         };
 
@@ -19534,7 +19534,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.URL = r.string();
+                        m.url = r.string();
                         break;
                     }
                 case 2: {
@@ -19546,7 +19546,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 4: {
-                        m.fileSHA256 = r.bytes();
+                        m.fileSha256 = r.bytes();
                         break;
                     }
                 case 5: {
@@ -19566,7 +19566,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 9: {
-                        m.fileEncSHA256 = r.bytes();
+                        m.fileEncSha256 = r.bytes();
                         break;
                     }
                 case 10: {
@@ -19584,7 +19584,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 16: {
-                        m.JPEGThumbnail = r.bytes();
+                        m.jpegThumbnail = r.bytes();
                         break;
                     }
                 case 17: {
@@ -19600,7 +19600,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 20: {
-                        m.experimentGroupID = r.uint32();
+                        m.experimentGroupId = r.uint32();
                         break;
                     }
                 case 21: {
@@ -19619,11 +19619,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 23: {
-                        m.midQualityFileSHA256 = r.bytes();
+                        m.midQualityFileSha256 = r.bytes();
                         break;
                     }
                 case 24: {
-                        m.midQualityFileEncSHA256 = r.bytes();
+                        m.midQualityFileEncSha256 = r.bytes();
                         break;
                     }
                 case 25: {
@@ -19635,15 +19635,15 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 27: {
-                        m.thumbnailSHA256 = r.bytes();
+                        m.thumbnailSha256 = r.bytes();
                         break;
                     }
                 case 28: {
-                        m.thumbnailEncSHA256 = r.bytes();
+                        m.thumbnailEncSha256 = r.bytes();
                         break;
                     }
                 case 29: {
-                        m.staticURL = r.string();
+                        m.staticUrl = r.string();
                         break;
                     }
                 case 30: {
@@ -19661,7 +19661,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 34: {
-                        m.qrURL = r.string();
+                        m.qrUrl = r.string();
                         break;
                     }
                 default:
@@ -19680,8 +19680,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.ImageMessage();
-            if (d.URL != null) {
-                m.URL = String(d.URL);
+            if (d.url != null) {
+                m.url = String(d.url);
             }
             if (d.mimetype != null) {
                 m.mimetype = String(d.mimetype);
@@ -19689,11 +19689,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.caption != null) {
                 m.caption = String(d.caption);
             }
-            if (d.fileSHA256 != null) {
-                if (typeof d.fileSHA256 === "string")
-                    $util.base64.decode(d.fileSHA256, m.fileSHA256 = $util.newBuffer($util.base64.length(d.fileSHA256)), 0);
-                else if (d.fileSHA256.length >= 0)
-                    m.fileSHA256 = d.fileSHA256;
+            if (d.fileSha256 != null) {
+                if (typeof d.fileSha256 === "string")
+                    $util.base64.decode(d.fileSha256, m.fileSha256 = $util.newBuffer($util.base64.length(d.fileSha256)), 0);
+                else if (d.fileSha256.length >= 0)
+                    m.fileSha256 = d.fileSha256;
             }
             if (d.fileLength != null) {
                 if ($util.Long)
@@ -19717,11 +19717,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.mediaKey.length >= 0)
                     m.mediaKey = d.mediaKey;
             }
-            if (d.fileEncSHA256 != null) {
-                if (typeof d.fileEncSHA256 === "string")
-                    $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                else if (d.fileEncSHA256.length >= 0)
-                    m.fileEncSHA256 = d.fileEncSHA256;
+            if (d.fileEncSha256 != null) {
+                if (typeof d.fileEncSha256 === "string")
+                    $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                else if (d.fileEncSha256.length >= 0)
+                    m.fileEncSha256 = d.fileEncSha256;
             }
             if (d.interactiveAnnotations) {
                 if (!Array.isArray(d.interactiveAnnotations))
@@ -19746,11 +19746,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (typeof d.mediaKeyTimestamp === "object")
                     m.mediaKeyTimestamp = new $util.LongBits(d.mediaKeyTimestamp.low >>> 0, d.mediaKeyTimestamp.high >>> 0).toNumber();
             }
-            if (d.JPEGThumbnail != null) {
-                if (typeof d.JPEGThumbnail === "string")
-                    $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                else if (d.JPEGThumbnail.length >= 0)
-                    m.JPEGThumbnail = d.JPEGThumbnail;
+            if (d.jpegThumbnail != null) {
+                if (typeof d.jpegThumbnail === "string")
+                    $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                else if (d.jpegThumbnail.length >= 0)
+                    m.jpegThumbnail = d.jpegThumbnail;
             }
             if (d.contextInfo != null) {
                 if (typeof d.contextInfo !== "object")
@@ -19766,8 +19766,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.firstScanLength != null) {
                 m.firstScanLength = d.firstScanLength >>> 0;
             }
-            if (d.experimentGroupID != null) {
-                m.experimentGroupID = d.experimentGroupID >>> 0;
+            if (d.experimentGroupId != null) {
+                m.experimentGroupId = d.experimentGroupId >>> 0;
             }
             if (d.scansSidecar != null) {
                 if (typeof d.scansSidecar === "string")
@@ -19783,17 +19783,17 @@ export const WAE2E = $root.WAE2E = (() => {
                     m.scanLengths[i] = d.scanLengths[i] >>> 0;
                 }
             }
-            if (d.midQualityFileSHA256 != null) {
-                if (typeof d.midQualityFileSHA256 === "string")
-                    $util.base64.decode(d.midQualityFileSHA256, m.midQualityFileSHA256 = $util.newBuffer($util.base64.length(d.midQualityFileSHA256)), 0);
-                else if (d.midQualityFileSHA256.length >= 0)
-                    m.midQualityFileSHA256 = d.midQualityFileSHA256;
+            if (d.midQualityFileSha256 != null) {
+                if (typeof d.midQualityFileSha256 === "string")
+                    $util.base64.decode(d.midQualityFileSha256, m.midQualityFileSha256 = $util.newBuffer($util.base64.length(d.midQualityFileSha256)), 0);
+                else if (d.midQualityFileSha256.length >= 0)
+                    m.midQualityFileSha256 = d.midQualityFileSha256;
             }
-            if (d.midQualityFileEncSHA256 != null) {
-                if (typeof d.midQualityFileEncSHA256 === "string")
-                    $util.base64.decode(d.midQualityFileEncSHA256, m.midQualityFileEncSHA256 = $util.newBuffer($util.base64.length(d.midQualityFileEncSHA256)), 0);
-                else if (d.midQualityFileEncSHA256.length >= 0)
-                    m.midQualityFileEncSHA256 = d.midQualityFileEncSHA256;
+            if (d.midQualityFileEncSha256 != null) {
+                if (typeof d.midQualityFileEncSha256 === "string")
+                    $util.base64.decode(d.midQualityFileEncSha256, m.midQualityFileEncSha256 = $util.newBuffer($util.base64.length(d.midQualityFileEncSha256)), 0);
+                else if (d.midQualityFileEncSha256.length >= 0)
+                    m.midQualityFileEncSha256 = d.midQualityFileEncSha256;
             }
             if (d.viewOnce != null) {
                 m.viewOnce = Boolean(d.viewOnce);
@@ -19801,20 +19801,20 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.thumbnailDirectPath != null) {
                 m.thumbnailDirectPath = String(d.thumbnailDirectPath);
             }
-            if (d.thumbnailSHA256 != null) {
-                if (typeof d.thumbnailSHA256 === "string")
-                    $util.base64.decode(d.thumbnailSHA256, m.thumbnailSHA256 = $util.newBuffer($util.base64.length(d.thumbnailSHA256)), 0);
-                else if (d.thumbnailSHA256.length >= 0)
-                    m.thumbnailSHA256 = d.thumbnailSHA256;
+            if (d.thumbnailSha256 != null) {
+                if (typeof d.thumbnailSha256 === "string")
+                    $util.base64.decode(d.thumbnailSha256, m.thumbnailSha256 = $util.newBuffer($util.base64.length(d.thumbnailSha256)), 0);
+                else if (d.thumbnailSha256.length >= 0)
+                    m.thumbnailSha256 = d.thumbnailSha256;
             }
-            if (d.thumbnailEncSHA256 != null) {
-                if (typeof d.thumbnailEncSHA256 === "string")
-                    $util.base64.decode(d.thumbnailEncSHA256, m.thumbnailEncSHA256 = $util.newBuffer($util.base64.length(d.thumbnailEncSHA256)), 0);
-                else if (d.thumbnailEncSHA256.length >= 0)
-                    m.thumbnailEncSHA256 = d.thumbnailEncSHA256;
+            if (d.thumbnailEncSha256 != null) {
+                if (typeof d.thumbnailEncSha256 === "string")
+                    $util.base64.decode(d.thumbnailEncSha256, m.thumbnailEncSha256 = $util.newBuffer($util.base64.length(d.thumbnailEncSha256)), 0);
+                else if (d.thumbnailEncSha256.length >= 0)
+                    m.thumbnailEncSha256 = d.thumbnailEncSha256;
             }
-            if (d.staticURL != null) {
-                m.staticURL = String(d.staticURL);
+            if (d.staticUrl != null) {
+                m.staticUrl = String(d.staticUrl);
             }
             if (d.annotations) {
                 if (!Array.isArray(d.annotations))
@@ -19853,8 +19853,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.accessibilityLabel != null) {
                 m.accessibilityLabel = String(d.accessibilityLabel);
             }
-            if (d.qrURL != null) {
-                m.qrURL = String(d.qrURL);
+            if (d.qrUrl != null) {
+                m.qrUrl = String(d.qrUrl);
             }
             return m;
         };
@@ -19868,10 +19868,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 d.scanLengths = [];
                 d.annotations = [];
             }
-            if (m.URL != null && m.hasOwnProperty("URL")) {
-                d.URL = m.URL;
+            if (m.url != null && m.hasOwnProperty("url")) {
+                d.url = m.url;
                 if (o.oneofs)
-                    d._URL = "URL";
+                    d._url = "url";
             }
             if (m.mimetype != null && m.hasOwnProperty("mimetype")) {
                 d.mimetype = m.mimetype;
@@ -19883,10 +19883,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._caption = "caption";
             }
-            if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                d.fileSHA256 = o.bytes === String ? $util.base64.encode(m.fileSHA256, 0, m.fileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSHA256) : m.fileSHA256;
+            if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                d.fileSha256 = o.bytes === String ? $util.base64.encode(m.fileSha256, 0, m.fileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSha256) : m.fileSha256;
                 if (o.oneofs)
-                    d._fileSHA256 = "fileSHA256";
+                    d._fileSha256 = "fileSha256";
             }
             if (m.fileLength != null && m.hasOwnProperty("fileLength")) {
                 if (typeof m.fileLength === "number")
@@ -19911,10 +19911,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._mediaKey = "mediaKey";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
             if (m.interactiveAnnotations && m.interactiveAnnotations.length) {
                 d.interactiveAnnotations = [];
@@ -19935,10 +19935,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._mediaKeyTimestamp = "mediaKeyTimestamp";
             }
-            if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+            if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                 if (o.oneofs)
-                    d._JPEGThumbnail = "JPEGThumbnail";
+                    d._jpegThumbnail = "jpegThumbnail";
             }
             if (m.contextInfo != null && m.hasOwnProperty("contextInfo")) {
                 d.contextInfo = $root.WAE2E.ContextInfo.toObject(m.contextInfo, o);
@@ -19955,10 +19955,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._firstScanLength = "firstScanLength";
             }
-            if (m.experimentGroupID != null && m.hasOwnProperty("experimentGroupID")) {
-                d.experimentGroupID = m.experimentGroupID;
+            if (m.experimentGroupId != null && m.hasOwnProperty("experimentGroupId")) {
+                d.experimentGroupId = m.experimentGroupId;
                 if (o.oneofs)
-                    d._experimentGroupID = "experimentGroupID";
+                    d._experimentGroupId = "experimentGroupId";
             }
             if (m.scansSidecar != null && m.hasOwnProperty("scansSidecar")) {
                 d.scansSidecar = o.bytes === String ? $util.base64.encode(m.scansSidecar, 0, m.scansSidecar.length) : o.bytes === Array ? Array.prototype.slice.call(m.scansSidecar) : m.scansSidecar;
@@ -19971,15 +19971,15 @@ export const WAE2E = $root.WAE2E = (() => {
                     d.scanLengths[j] = m.scanLengths[j];
                 }
             }
-            if (m.midQualityFileSHA256 != null && m.hasOwnProperty("midQualityFileSHA256")) {
-                d.midQualityFileSHA256 = o.bytes === String ? $util.base64.encode(m.midQualityFileSHA256, 0, m.midQualityFileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.midQualityFileSHA256) : m.midQualityFileSHA256;
+            if (m.midQualityFileSha256 != null && m.hasOwnProperty("midQualityFileSha256")) {
+                d.midQualityFileSha256 = o.bytes === String ? $util.base64.encode(m.midQualityFileSha256, 0, m.midQualityFileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.midQualityFileSha256) : m.midQualityFileSha256;
                 if (o.oneofs)
-                    d._midQualityFileSHA256 = "midQualityFileSHA256";
+                    d._midQualityFileSha256 = "midQualityFileSha256";
             }
-            if (m.midQualityFileEncSHA256 != null && m.hasOwnProperty("midQualityFileEncSHA256")) {
-                d.midQualityFileEncSHA256 = o.bytes === String ? $util.base64.encode(m.midQualityFileEncSHA256, 0, m.midQualityFileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.midQualityFileEncSHA256) : m.midQualityFileEncSHA256;
+            if (m.midQualityFileEncSha256 != null && m.hasOwnProperty("midQualityFileEncSha256")) {
+                d.midQualityFileEncSha256 = o.bytes === String ? $util.base64.encode(m.midQualityFileEncSha256, 0, m.midQualityFileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.midQualityFileEncSha256) : m.midQualityFileEncSha256;
                 if (o.oneofs)
-                    d._midQualityFileEncSHA256 = "midQualityFileEncSHA256";
+                    d._midQualityFileEncSha256 = "midQualityFileEncSha256";
             }
             if (m.viewOnce != null && m.hasOwnProperty("viewOnce")) {
                 d.viewOnce = m.viewOnce;
@@ -19991,20 +19991,20 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._thumbnailDirectPath = "thumbnailDirectPath";
             }
-            if (m.thumbnailSHA256 != null && m.hasOwnProperty("thumbnailSHA256")) {
-                d.thumbnailSHA256 = o.bytes === String ? $util.base64.encode(m.thumbnailSHA256, 0, m.thumbnailSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailSHA256) : m.thumbnailSHA256;
+            if (m.thumbnailSha256 != null && m.hasOwnProperty("thumbnailSha256")) {
+                d.thumbnailSha256 = o.bytes === String ? $util.base64.encode(m.thumbnailSha256, 0, m.thumbnailSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailSha256) : m.thumbnailSha256;
                 if (o.oneofs)
-                    d._thumbnailSHA256 = "thumbnailSHA256";
+                    d._thumbnailSha256 = "thumbnailSha256";
             }
-            if (m.thumbnailEncSHA256 != null && m.hasOwnProperty("thumbnailEncSHA256")) {
-                d.thumbnailEncSHA256 = o.bytes === String ? $util.base64.encode(m.thumbnailEncSHA256, 0, m.thumbnailEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailEncSHA256) : m.thumbnailEncSHA256;
+            if (m.thumbnailEncSha256 != null && m.hasOwnProperty("thumbnailEncSha256")) {
+                d.thumbnailEncSha256 = o.bytes === String ? $util.base64.encode(m.thumbnailEncSha256, 0, m.thumbnailEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailEncSha256) : m.thumbnailEncSha256;
                 if (o.oneofs)
-                    d._thumbnailEncSHA256 = "thumbnailEncSHA256";
+                    d._thumbnailEncSha256 = "thumbnailEncSha256";
             }
-            if (m.staticURL != null && m.hasOwnProperty("staticURL")) {
-                d.staticURL = m.staticURL;
+            if (m.staticUrl != null && m.hasOwnProperty("staticUrl")) {
+                d.staticUrl = m.staticUrl;
                 if (o.oneofs)
-                    d._staticURL = "staticURL";
+                    d._staticUrl = "staticUrl";
             }
             if (m.annotations && m.annotations.length) {
                 d.annotations = [];
@@ -20022,10 +20022,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._accessibilityLabel = "accessibilityLabel";
             }
-            if (m.qrURL != null && m.hasOwnProperty("qrURL")) {
-                d.qrURL = m.qrURL;
+            if (m.qrUrl != null && m.hasOwnProperty("qrUrl")) {
+                d.qrUrl = m.qrUrl;
                 if (o.oneofs)
-                    d._qrURL = "qrURL";
+                    d._qrUrl = "qrUrl";
             }
             return d;
         };
@@ -20056,7 +20056,7 @@ export const WAE2E = $root.WAE2E = (() => {
     WAE2E.ContextInfo = (function() {
 
         function ContextInfo(p) {
-            this.mentionedJID = [];
+            this.mentionedJid = [];
             this.groupMentions = [];
             this.statusAttributions = [];
             if (p)
@@ -20065,11 +20065,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        ContextInfo.prototype.stanzaID = null;
+        ContextInfo.prototype.stanzaId = null;
         ContextInfo.prototype.participant = null;
         ContextInfo.prototype.quotedMessage = null;
-        ContextInfo.prototype.remoteJID = null;
-        ContextInfo.prototype.mentionedJID = $util.emptyArray;
+        ContextInfo.prototype.remoteJid = null;
+        ContextInfo.prototype.mentionedJid = $util.emptyArray;
         ContextInfo.prototype.conversionSource = null;
         ContextInfo.prototype.conversionData = null;
         ContextInfo.prototype.conversionDelaySeconds = null;
@@ -20087,7 +20087,7 @@ export const WAE2E = $root.WAE2E = (() => {
         ContextInfo.prototype.disappearingMode = null;
         ContextInfo.prototype.actionLink = null;
         ContextInfo.prototype.groupSubject = null;
-        ContextInfo.prototype.parentGroupJID = null;
+        ContextInfo.prototype.parentGroupJid = null;
         ContextInfo.prototype.trustBannerType = null;
         ContextInfo.prototype.trustBannerAction = null;
         ContextInfo.prototype.isSampled = null;
@@ -20095,8 +20095,8 @@ export const WAE2E = $root.WAE2E = (() => {
         ContextInfo.prototype.utm = null;
         ContextInfo.prototype.forwardedNewsletterMessageInfo = null;
         ContextInfo.prototype.businessMessageForwardInfo = null;
-        ContextInfo.prototype.smbClientCampaignID = null;
-        ContextInfo.prototype.smbServerCampaignID = null;
+        ContextInfo.prototype.smbClientCampaignId = null;
+        ContextInfo.prototype.smbServerCampaignId = null;
         ContextInfo.prototype.dataSharingContext = null;
         ContextInfo.prototype.alwaysShowAdAttribution = null;
         ContextInfo.prototype.featureEligibilities = null;
@@ -20117,7 +20117,7 @@ export const WAE2E = $root.WAE2E = (() => {
         ContextInfo.prototype.forwardOrigin = null;
         ContextInfo.prototype.questionReplyQuotedMessage = null;
         ContextInfo.prototype.statusAudienceMetadata = null;
-        ContextInfo.prototype.nonJIDMentions = null;
+        ContextInfo.prototype.nonJidMentions = null;
         ContextInfo.prototype.quotedType = null;
         ContextInfo.prototype.botMessageSharingInfo = null;
         ContextInfo.prototype.isSpoiler = null;
@@ -20126,13 +20126,13 @@ export const WAE2E = $root.WAE2E = (() => {
         ContextInfo.prototype.afterReadDuration = null;
         ContextInfo.prototype.crossAppSource = null;
         ContextInfo.prototype.businessInteractionPills = null;
-        ContextInfo.prototype.posterStatusID = null;
+        ContextInfo.prototype.posterStatusId = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ContextInfo.prototype, "_stanzaID", {
-            get: $util.oneOfGetter($oneOfFields = ["stanzaID"]),
+        Object.defineProperty(ContextInfo.prototype, "_stanzaId", {
+            get: $util.oneOfGetter($oneOfFields = ["stanzaId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -20149,8 +20149,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ContextInfo.prototype, "_remoteJID", {
-            get: $util.oneOfGetter($oneOfFields = ["remoteJID"]),
+        Object.defineProperty(ContextInfo.prototype, "_remoteJid", {
+            get: $util.oneOfGetter($oneOfFields = ["remoteJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -20257,8 +20257,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ContextInfo.prototype, "_parentGroupJID", {
-            get: $util.oneOfGetter($oneOfFields = ["parentGroupJID"]),
+        Object.defineProperty(ContextInfo.prototype, "_parentGroupJid", {
+            get: $util.oneOfGetter($oneOfFields = ["parentGroupJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -20299,14 +20299,14 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ContextInfo.prototype, "_smbClientCampaignID", {
-            get: $util.oneOfGetter($oneOfFields = ["smbClientCampaignID"]),
+        Object.defineProperty(ContextInfo.prototype, "_smbClientCampaignId", {
+            get: $util.oneOfGetter($oneOfFields = ["smbClientCampaignId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ContextInfo.prototype, "_smbServerCampaignID", {
-            get: $util.oneOfGetter($oneOfFields = ["smbServerCampaignID"]),
+        Object.defineProperty(ContextInfo.prototype, "_smbServerCampaignId", {
+            get: $util.oneOfGetter($oneOfFields = ["smbServerCampaignId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -20425,8 +20425,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ContextInfo.prototype, "_nonJIDMentions", {
-            get: $util.oneOfGetter($oneOfFields = ["nonJIDMentions"]),
+        Object.defineProperty(ContextInfo.prototype, "_nonJidMentions", {
+            get: $util.oneOfGetter($oneOfFields = ["nonJidMentions"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -20479,8 +20479,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ContextInfo.prototype, "_posterStatusID", {
-            get: $util.oneOfGetter($oneOfFields = ["posterStatusID"]),
+        Object.defineProperty(ContextInfo.prototype, "_posterStatusId", {
+            get: $util.oneOfGetter($oneOfFields = ["posterStatusId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -20491,17 +20491,17 @@ export const WAE2E = $root.WAE2E = (() => {
         ContextInfo.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.stanzaID != null && Object.hasOwnProperty.call(m, "stanzaID"))
-                w.uint32(10).string(m.stanzaID);
+            if (m.stanzaId != null && Object.hasOwnProperty.call(m, "stanzaId"))
+                w.uint32(10).string(m.stanzaId);
             if (m.participant != null && Object.hasOwnProperty.call(m, "participant"))
                 w.uint32(18).string(m.participant);
             if (m.quotedMessage != null && Object.hasOwnProperty.call(m, "quotedMessage"))
                 $root.WAE2E.Message.encode(m.quotedMessage, w.uint32(26).fork()).ldelim();
-            if (m.remoteJID != null && Object.hasOwnProperty.call(m, "remoteJID"))
-                w.uint32(34).string(m.remoteJID);
-            if (m.mentionedJID != null && m.mentionedJID.length) {
-                for (var i = 0; i < m.mentionedJID.length; ++i)
-                    w.uint32(122).string(m.mentionedJID[i]);
+            if (m.remoteJid != null && Object.hasOwnProperty.call(m, "remoteJid"))
+                w.uint32(34).string(m.remoteJid);
+            if (m.mentionedJid != null && m.mentionedJid.length) {
+                for (var i = 0; i < m.mentionedJid.length; ++i)
+                    w.uint32(122).string(m.mentionedJid[i]);
             }
             if (m.conversionSource != null && Object.hasOwnProperty.call(m, "conversionSource"))
                 w.uint32(146).string(m.conversionSource);
@@ -20537,8 +20537,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 $root.WAE2E.ActionLink.encode(m.actionLink, w.uint32(266).fork()).ldelim();
             if (m.groupSubject != null && Object.hasOwnProperty.call(m, "groupSubject"))
                 w.uint32(274).string(m.groupSubject);
-            if (m.parentGroupJID != null && Object.hasOwnProperty.call(m, "parentGroupJID"))
-                w.uint32(282).string(m.parentGroupJID);
+            if (m.parentGroupJid != null && Object.hasOwnProperty.call(m, "parentGroupJid"))
+                w.uint32(282).string(m.parentGroupJid);
             if (m.trustBannerType != null && Object.hasOwnProperty.call(m, "trustBannerType"))
                 w.uint32(298).string(m.trustBannerType);
             if (m.trustBannerAction != null && Object.hasOwnProperty.call(m, "trustBannerAction"))
@@ -20555,10 +20555,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 $root.WAE2E.ContextInfo.ForwardedNewsletterMessageInfo.encode(m.forwardedNewsletterMessageInfo, w.uint32(346).fork()).ldelim();
             if (m.businessMessageForwardInfo != null && Object.hasOwnProperty.call(m, "businessMessageForwardInfo"))
                 $root.WAE2E.ContextInfo.BusinessMessageForwardInfo.encode(m.businessMessageForwardInfo, w.uint32(354).fork()).ldelim();
-            if (m.smbClientCampaignID != null && Object.hasOwnProperty.call(m, "smbClientCampaignID"))
-                w.uint32(362).string(m.smbClientCampaignID);
-            if (m.smbServerCampaignID != null && Object.hasOwnProperty.call(m, "smbServerCampaignID"))
-                w.uint32(370).string(m.smbServerCampaignID);
+            if (m.smbClientCampaignId != null && Object.hasOwnProperty.call(m, "smbClientCampaignId"))
+                w.uint32(362).string(m.smbClientCampaignId);
+            if (m.smbServerCampaignId != null && Object.hasOwnProperty.call(m, "smbServerCampaignId"))
+                w.uint32(370).string(m.smbServerCampaignId);
             if (m.dataSharingContext != null && Object.hasOwnProperty.call(m, "dataSharingContext"))
                 $root.WAE2E.ContextInfo.DataSharingContext.encode(m.dataSharingContext, w.uint32(378).fork()).ldelim();
             if (m.alwaysShowAdAttribution != null && Object.hasOwnProperty.call(m, "alwaysShowAdAttribution"))
@@ -20601,8 +20601,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 $root.WAE2E.ContextInfo.QuestionReplyQuotedMessage.encode(m.questionReplyQuotedMessage, w.uint32(546).fork()).ldelim();
             if (m.statusAudienceMetadata != null && Object.hasOwnProperty.call(m, "statusAudienceMetadata"))
                 $root.WAE2E.ContextInfo.StatusAudienceMetadata.encode(m.statusAudienceMetadata, w.uint32(554).fork()).ldelim();
-            if (m.nonJIDMentions != null && Object.hasOwnProperty.call(m, "nonJIDMentions"))
-                w.uint32(560).uint32(m.nonJIDMentions);
+            if (m.nonJidMentions != null && Object.hasOwnProperty.call(m, "nonJidMentions"))
+                w.uint32(560).uint32(m.nonJidMentions);
             if (m.quotedType != null && Object.hasOwnProperty.call(m, "quotedType"))
                 w.uint32(568).int32(m.quotedType);
             if (m.botMessageSharingInfo != null && Object.hasOwnProperty.call(m, "botMessageSharingInfo"))
@@ -20619,8 +20619,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(616).int32(m.crossAppSource);
             if (m.businessInteractionPills != null && Object.hasOwnProperty.call(m, "businessInteractionPills"))
                 $root.WAE2E.ContextInfo.BusinessInteractionPills.encode(m.businessInteractionPills, w.uint32(626).fork()).ldelim();
-            if (m.posterStatusID != null && Object.hasOwnProperty.call(m, "posterStatusID"))
-                w.uint32(634).string(m.posterStatusID);
+            if (m.posterStatusId != null && Object.hasOwnProperty.call(m, "posterStatusId"))
+                w.uint32(634).string(m.posterStatusId);
             return w;
         };
 
@@ -20638,7 +20638,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.stanzaID = r.string();
+                        m.stanzaId = r.string();
                         break;
                     }
                 case 2: {
@@ -20650,13 +20650,13 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 4: {
-                        m.remoteJID = r.string();
+                        m.remoteJid = r.string();
                         break;
                     }
                 case 15: {
-                        if (!(m.mentionedJID && m.mentionedJID.length))
-                            m.mentionedJID = [];
-                        m.mentionedJID.push(r.string());
+                        if (!(m.mentionedJid && m.mentionedJid.length))
+                            m.mentionedJid = [];
+                        m.mentionedJid.push(r.string());
                         break;
                     }
                 case 18: {
@@ -20728,7 +20728,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 35: {
-                        m.parentGroupJID = r.string();
+                        m.parentGroupJid = r.string();
                         break;
                     }
                 case 37: {
@@ -20762,11 +20762,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 45: {
-                        m.smbClientCampaignID = r.string();
+                        m.smbClientCampaignId = r.string();
                         break;
                     }
                 case 46: {
-                        m.smbServerCampaignID = r.string();
+                        m.smbServerCampaignId = r.string();
                         break;
                     }
                 case 47: {
@@ -20852,7 +20852,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 70: {
-                        m.nonJIDMentions = r.uint32();
+                        m.nonJidMentions = r.uint32();
                         break;
                     }
                 case 71: {
@@ -20888,7 +20888,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 79: {
-                        m.posterStatusID = r.string();
+                        m.posterStatusId = r.string();
                         break;
                     }
                 default:
@@ -20907,8 +20907,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.ContextInfo();
-            if (d.stanzaID != null) {
-                m.stanzaID = String(d.stanzaID);
+            if (d.stanzaId != null) {
+                m.stanzaId = String(d.stanzaId);
             }
             if (d.participant != null) {
                 m.participant = String(d.participant);
@@ -20918,15 +20918,15 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.ContextInfo.quotedMessage: object expected");
                 m.quotedMessage = $root.WAE2E.Message.fromObject(d.quotedMessage, n + 1);
             }
-            if (d.remoteJID != null) {
-                m.remoteJID = String(d.remoteJID);
+            if (d.remoteJid != null) {
+                m.remoteJid = String(d.remoteJid);
             }
-            if (d.mentionedJID) {
-                if (!Array.isArray(d.mentionedJID))
-                    throw TypeError(".WAE2E.ContextInfo.mentionedJID: array expected");
-                m.mentionedJID = [];
-                for (var i = 0; i < d.mentionedJID.length; ++i) {
-                    m.mentionedJID[i] = String(d.mentionedJID[i]);
+            if (d.mentionedJid) {
+                if (!Array.isArray(d.mentionedJid))
+                    throw TypeError(".WAE2E.ContextInfo.mentionedJid: array expected");
+                m.mentionedJid = [];
+                for (var i = 0; i < d.mentionedJid.length; ++i) {
+                    m.mentionedJid[i] = String(d.mentionedJid[i]);
                 }
             }
             if (d.conversionSource != null) {
@@ -21003,8 +21003,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.groupSubject != null) {
                 m.groupSubject = String(d.groupSubject);
             }
-            if (d.parentGroupJID != null) {
-                m.parentGroupJID = String(d.parentGroupJID);
+            if (d.parentGroupJid != null) {
+                m.parentGroupJid = String(d.parentGroupJid);
             }
             if (d.trustBannerType != null) {
                 m.trustBannerType = String(d.trustBannerType);
@@ -21040,11 +21040,11 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.ContextInfo.businessMessageForwardInfo: object expected");
                 m.businessMessageForwardInfo = $root.WAE2E.ContextInfo.BusinessMessageForwardInfo.fromObject(d.businessMessageForwardInfo, n + 1);
             }
-            if (d.smbClientCampaignID != null) {
-                m.smbClientCampaignID = String(d.smbClientCampaignID);
+            if (d.smbClientCampaignId != null) {
+                m.smbClientCampaignId = String(d.smbClientCampaignId);
             }
-            if (d.smbServerCampaignID != null) {
-                m.smbServerCampaignID = String(d.smbServerCampaignID);
+            if (d.smbServerCampaignId != null) {
+                m.smbServerCampaignId = String(d.smbServerCampaignId);
             }
             if (d.dataSharingContext != null) {
                 if (typeof d.dataSharingContext !== "object")
@@ -21254,8 +21254,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.ContextInfo.statusAudienceMetadata: object expected");
                 m.statusAudienceMetadata = $root.WAE2E.ContextInfo.StatusAudienceMetadata.fromObject(d.statusAudienceMetadata, n + 1);
             }
-            if (d.nonJIDMentions != null) {
-                m.nonJIDMentions = d.nonJIDMentions >>> 0;
+            if (d.nonJidMentions != null) {
+                m.nonJidMentions = d.nonJidMentions >>> 0;
             }
             switch (d.quotedType) {
             default:
@@ -21319,8 +21319,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.ContextInfo.businessInteractionPills: object expected");
                 m.businessInteractionPills = $root.WAE2E.ContextInfo.BusinessInteractionPills.fromObject(d.businessInteractionPills, n + 1);
             }
-            if (d.posterStatusID != null) {
-                m.posterStatusID = String(d.posterStatusID);
+            if (d.posterStatusId != null) {
+                m.posterStatusId = String(d.posterStatusId);
             }
             return m;
         };
@@ -21330,14 +21330,14 @@ export const WAE2E = $root.WAE2E = (() => {
                 o = {};
             var d = {};
             if (o.arrays || o.defaults) {
-                d.mentionedJID = [];
+                d.mentionedJid = [];
                 d.groupMentions = [];
                 d.statusAttributions = [];
             }
-            if (m.stanzaID != null && m.hasOwnProperty("stanzaID")) {
-                d.stanzaID = m.stanzaID;
+            if (m.stanzaId != null && m.hasOwnProperty("stanzaId")) {
+                d.stanzaId = m.stanzaId;
                 if (o.oneofs)
-                    d._stanzaID = "stanzaID";
+                    d._stanzaId = "stanzaId";
             }
             if (m.participant != null && m.hasOwnProperty("participant")) {
                 d.participant = m.participant;
@@ -21349,15 +21349,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._quotedMessage = "quotedMessage";
             }
-            if (m.remoteJID != null && m.hasOwnProperty("remoteJID")) {
-                d.remoteJID = m.remoteJID;
+            if (m.remoteJid != null && m.hasOwnProperty("remoteJid")) {
+                d.remoteJid = m.remoteJid;
                 if (o.oneofs)
-                    d._remoteJID = "remoteJID";
+                    d._remoteJid = "remoteJid";
             }
-            if (m.mentionedJID && m.mentionedJID.length) {
-                d.mentionedJID = [];
-                for (var j = 0; j < m.mentionedJID.length; ++j) {
-                    d.mentionedJID[j] = m.mentionedJID[j];
+            if (m.mentionedJid && m.mentionedJid.length) {
+                d.mentionedJid = [];
+                for (var j = 0; j < m.mentionedJid.length; ++j) {
+                    d.mentionedJid[j] = m.mentionedJid[j];
                 }
             }
             if (m.conversionSource != null && m.hasOwnProperty("conversionSource")) {
@@ -21448,10 +21448,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._groupSubject = "groupSubject";
             }
-            if (m.parentGroupJID != null && m.hasOwnProperty("parentGroupJID")) {
-                d.parentGroupJID = m.parentGroupJID;
+            if (m.parentGroupJid != null && m.hasOwnProperty("parentGroupJid")) {
+                d.parentGroupJid = m.parentGroupJid;
                 if (o.oneofs)
-                    d._parentGroupJID = "parentGroupJID";
+                    d._parentGroupJid = "parentGroupJid";
             }
             if (m.trustBannerType != null && m.hasOwnProperty("trustBannerType")) {
                 d.trustBannerType = m.trustBannerType;
@@ -21489,15 +21489,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._businessMessageForwardInfo = "businessMessageForwardInfo";
             }
-            if (m.smbClientCampaignID != null && m.hasOwnProperty("smbClientCampaignID")) {
-                d.smbClientCampaignID = m.smbClientCampaignID;
+            if (m.smbClientCampaignId != null && m.hasOwnProperty("smbClientCampaignId")) {
+                d.smbClientCampaignId = m.smbClientCampaignId;
                 if (o.oneofs)
-                    d._smbClientCampaignID = "smbClientCampaignID";
+                    d._smbClientCampaignId = "smbClientCampaignId";
             }
-            if (m.smbServerCampaignID != null && m.hasOwnProperty("smbServerCampaignID")) {
-                d.smbServerCampaignID = m.smbServerCampaignID;
+            if (m.smbServerCampaignId != null && m.hasOwnProperty("smbServerCampaignId")) {
+                d.smbServerCampaignId = m.smbServerCampaignId;
                 if (o.oneofs)
-                    d._smbServerCampaignID = "smbServerCampaignID";
+                    d._smbServerCampaignId = "smbServerCampaignId";
             }
             if (m.dataSharingContext != null && m.hasOwnProperty("dataSharingContext")) {
                 d.dataSharingContext = $root.WAE2E.ContextInfo.DataSharingContext.toObject(m.dataSharingContext, o);
@@ -21600,10 +21600,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._statusAudienceMetadata = "statusAudienceMetadata";
             }
-            if (m.nonJIDMentions != null && m.hasOwnProperty("nonJIDMentions")) {
-                d.nonJIDMentions = m.nonJIDMentions;
+            if (m.nonJidMentions != null && m.hasOwnProperty("nonJidMentions")) {
+                d.nonJidMentions = m.nonJidMentions;
                 if (o.oneofs)
-                    d._nonJIDMentions = "nonJIDMentions";
+                    d._nonJidMentions = "nonJidMentions";
             }
             if (m.quotedType != null && m.hasOwnProperty("quotedType")) {
                 d.quotedType = o.enums === String ? $root.WAE2E.ContextInfo.QuotedType[m.quotedType] === undefined ? m.quotedType : $root.WAE2E.ContextInfo.QuotedType[m.quotedType] : m.quotedType;
@@ -21645,10 +21645,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._businessInteractionPills = "businessInteractionPills";
             }
-            if (m.posterStatusID != null && m.hasOwnProperty("posterStatusID")) {
-                d.posterStatusID = m.posterStatusID;
+            if (m.posterStatusId != null && m.hasOwnProperty("posterStatusId")) {
+                d.posterStatusId = m.posterStatusId;
                 if (o.oneofs)
-                    d._posterStatusID = "posterStatusID";
+                    d._posterStatusId = "posterStatusId";
             }
             return d;
         };
@@ -21735,15 +21735,15 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            BusinessInteractionPills.prototype.businessJID = null;
+            BusinessInteractionPills.prototype.businessJid = null;
             BusinessInteractionPills.prototype.pills = $util.emptyArray;
             BusinessInteractionPills.prototype.entryPoint = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(BusinessInteractionPills.prototype, "_businessJID", {
-                get: $util.oneOfGetter($oneOfFields = ["businessJID"]),
+            Object.defineProperty(BusinessInteractionPills.prototype, "_businessJid", {
+                get: $util.oneOfGetter($oneOfFields = ["businessJid"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -21760,8 +21760,8 @@ export const WAE2E = $root.WAE2E = (() => {
             BusinessInteractionPills.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.businessJID != null && Object.hasOwnProperty.call(m, "businessJID"))
-                    w.uint32(10).string(m.businessJID);
+                if (m.businessJid != null && Object.hasOwnProperty.call(m, "businessJid"))
+                    w.uint32(10).string(m.businessJid);
                 if (m.pills != null && m.pills.length) {
                     for (var i = 0; i < m.pills.length; ++i)
                         $root.WAE2E.ContextInfo.BusinessInteractionPills.Pill.encode(m.pills[i], w.uint32(18).fork()).ldelim();
@@ -21785,7 +21785,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.businessJID = r.string();
+                            m.businessJid = r.string();
                             break;
                         }
                     case 2: {
@@ -21814,8 +21814,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.ContextInfo.BusinessInteractionPills();
-                if (d.businessJID != null) {
-                    m.businessJID = String(d.businessJID);
+                if (d.businessJid != null) {
+                    m.businessJid = String(d.businessJid);
                 }
                 if (d.pills) {
                     if (!Array.isArray(d.pills))
@@ -21869,10 +21869,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.arrays || o.defaults) {
                     d.pills = [];
                 }
-                if (m.businessJID != null && m.hasOwnProperty("businessJID")) {
-                    d.businessJID = m.businessJID;
+                if (m.businessJid != null && m.hasOwnProperty("businessJid")) {
+                    d.businessJid = m.businessJid;
                     if (o.oneofs)
-                        d._businessJID = "businessJID";
+                        d._businessJid = "businessJid";
                 }
                 if (m.pills && m.pills.length) {
                     d.pills = [];
@@ -21936,7 +21936,7 @@ export const WAE2E = $root.WAE2E = (() => {
                 }
 
                 Pill.prototype.pillType = null;
-                Pill.prototype.actionURL = null;
+                Pill.prototype.actionUrl = null;
 
                 let $oneOfFields;
 
@@ -21947,8 +21947,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(Pill.prototype, "_actionURL", {
-                    get: $util.oneOfGetter($oneOfFields = ["actionURL"]),
+                Object.defineProperty(Pill.prototype, "_actionUrl", {
+                    get: $util.oneOfGetter($oneOfFields = ["actionUrl"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -21961,8 +21961,8 @@ export const WAE2E = $root.WAE2E = (() => {
                         w = $Writer.create();
                     if (m.pillType != null && Object.hasOwnProperty.call(m, "pillType"))
                         w.uint32(8).int32(m.pillType);
-                    if (m.actionURL != null && Object.hasOwnProperty.call(m, "actionURL"))
-                        w.uint32(18).string(m.actionURL);
+                    if (m.actionUrl != null && Object.hasOwnProperty.call(m, "actionUrl"))
+                        w.uint32(18).string(m.actionUrl);
                     return w;
                 };
 
@@ -21984,7 +21984,7 @@ export const WAE2E = $root.WAE2E = (() => {
                                 break;
                             }
                         case 2: {
-                                m.actionURL = r.string();
+                                m.actionUrl = r.string();
                                 break;
                             }
                         default:
@@ -22055,8 +22055,8 @@ export const WAE2E = $root.WAE2E = (() => {
                         m.pillType = 10;
                         break;
                     }
-                    if (d.actionURL != null) {
-                        m.actionURL = String(d.actionURL);
+                    if (d.actionUrl != null) {
+                        m.actionUrl = String(d.actionUrl);
                     }
                     return m;
                 };
@@ -22070,10 +22070,10 @@ export const WAE2E = $root.WAE2E = (() => {
                         if (o.oneofs)
                             d._pillType = "pillType";
                     }
-                    if (m.actionURL != null && m.hasOwnProperty("actionURL")) {
-                        d.actionURL = m.actionURL;
+                    if (m.actionUrl != null && m.hasOwnProperty("actionUrl")) {
+                        d.actionUrl = m.actionUrl;
                         if (o.oneofs)
-                            d._actionURL = "actionURL";
+                            d._actionUrl = "actionUrl";
                     }
                     return d;
                 };
@@ -22630,8 +22630,8 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            ForwardedNewsletterMessageInfo.prototype.newsletterJID = null;
-            ForwardedNewsletterMessageInfo.prototype.serverMessageID = null;
+            ForwardedNewsletterMessageInfo.prototype.newsletterJid = null;
+            ForwardedNewsletterMessageInfo.prototype.serverMessageId = null;
             ForwardedNewsletterMessageInfo.prototype.newsletterName = null;
             ForwardedNewsletterMessageInfo.prototype.contentType = null;
             ForwardedNewsletterMessageInfo.prototype.accessibilityText = null;
@@ -22640,14 +22640,14 @@ export const WAE2E = $root.WAE2E = (() => {
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ForwardedNewsletterMessageInfo.prototype, "_newsletterJID", {
-                get: $util.oneOfGetter($oneOfFields = ["newsletterJID"]),
+            Object.defineProperty(ForwardedNewsletterMessageInfo.prototype, "_newsletterJid", {
+                get: $util.oneOfGetter($oneOfFields = ["newsletterJid"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ForwardedNewsletterMessageInfo.prototype, "_serverMessageID", {
-                get: $util.oneOfGetter($oneOfFields = ["serverMessageID"]),
+            Object.defineProperty(ForwardedNewsletterMessageInfo.prototype, "_serverMessageId", {
+                get: $util.oneOfGetter($oneOfFields = ["serverMessageId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -22682,10 +22682,10 @@ export const WAE2E = $root.WAE2E = (() => {
             ForwardedNewsletterMessageInfo.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.newsletterJID != null && Object.hasOwnProperty.call(m, "newsletterJID"))
-                    w.uint32(10).string(m.newsletterJID);
-                if (m.serverMessageID != null && Object.hasOwnProperty.call(m, "serverMessageID"))
-                    w.uint32(16).int32(m.serverMessageID);
+                if (m.newsletterJid != null && Object.hasOwnProperty.call(m, "newsletterJid"))
+                    w.uint32(10).string(m.newsletterJid);
+                if (m.serverMessageId != null && Object.hasOwnProperty.call(m, "serverMessageId"))
+                    w.uint32(16).int32(m.serverMessageId);
                 if (m.newsletterName != null && Object.hasOwnProperty.call(m, "newsletterName"))
                     w.uint32(26).string(m.newsletterName);
                 if (m.contentType != null && Object.hasOwnProperty.call(m, "contentType"))
@@ -22711,11 +22711,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.newsletterJID = r.string();
+                            m.newsletterJid = r.string();
                             break;
                         }
                     case 2: {
-                            m.serverMessageID = r.int32();
+                            m.serverMessageId = r.int32();
                             break;
                         }
                     case 3: {
@@ -22750,11 +22750,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.ContextInfo.ForwardedNewsletterMessageInfo();
-                if (d.newsletterJID != null) {
-                    m.newsletterJID = String(d.newsletterJID);
+                if (d.newsletterJid != null) {
+                    m.newsletterJid = String(d.newsletterJid);
                 }
-                if (d.serverMessageID != null) {
-                    m.serverMessageID = d.serverMessageID | 0;
+                if (d.serverMessageId != null) {
+                    m.serverMessageId = d.serverMessageId | 0;
                 }
                 if (d.newsletterName != null) {
                     m.newsletterName = String(d.newsletterName);
@@ -22792,15 +22792,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.newsletterJID != null && m.hasOwnProperty("newsletterJID")) {
-                    d.newsletterJID = m.newsletterJID;
+                if (m.newsletterJid != null && m.hasOwnProperty("newsletterJid")) {
+                    d.newsletterJid = m.newsletterJid;
                     if (o.oneofs)
-                        d._newsletterJID = "newsletterJID";
+                        d._newsletterJid = "newsletterJid";
                 }
-                if (m.serverMessageID != null && m.hasOwnProperty("serverMessageID")) {
-                    d.serverMessageID = m.serverMessageID;
+                if (m.serverMessageId != null && m.hasOwnProperty("serverMessageId")) {
+                    d.serverMessageId = m.serverMessageId;
                     if (o.oneofs)
-                        d._serverMessageID = "serverMessageID";
+                        d._serverMessageId = "serverMessageId";
                 }
                 if (m.newsletterName != null && m.hasOwnProperty("newsletterName")) {
                     d.newsletterName = m.newsletterName;
@@ -22859,12 +22859,12 @@ export const WAE2E = $root.WAE2E = (() => {
             ExternalAdReplyInfo.prototype.title = null;
             ExternalAdReplyInfo.prototype.body = null;
             ExternalAdReplyInfo.prototype.mediaType = null;
-            ExternalAdReplyInfo.prototype.thumbnailURL = null;
-            ExternalAdReplyInfo.prototype.mediaURL = null;
+            ExternalAdReplyInfo.prototype.thumbnailUrl = null;
+            ExternalAdReplyInfo.prototype.mediaUrl = null;
             ExternalAdReplyInfo.prototype.thumbnail = null;
             ExternalAdReplyInfo.prototype.sourceType = null;
-            ExternalAdReplyInfo.prototype.sourceID = null;
-            ExternalAdReplyInfo.prototype.sourceURL = null;
+            ExternalAdReplyInfo.prototype.sourceId = null;
+            ExternalAdReplyInfo.prototype.sourceUrl = null;
             ExternalAdReplyInfo.prototype.containsAutoReply = null;
             ExternalAdReplyInfo.prototype.renderLargerThumbnail = null;
             ExternalAdReplyInfo.prototype.showAdAttribution = null;
@@ -22877,12 +22877,12 @@ export const WAE2E = $root.WAE2E = (() => {
             ExternalAdReplyInfo.prototype.greetingMessageBody = null;
             ExternalAdReplyInfo.prototype.ctaPayload = null;
             ExternalAdReplyInfo.prototype.disableNudge = null;
-            ExternalAdReplyInfo.prototype.originalImageURL = null;
+            ExternalAdReplyInfo.prototype.originalImageUrl = null;
             ExternalAdReplyInfo.prototype.automatedGreetingMessageCtaType = null;
             ExternalAdReplyInfo.prototype.wtwaAdFormat = null;
             ExternalAdReplyInfo.prototype.adType = null;
-            ExternalAdReplyInfo.prototype.wtwaWebsiteURL = null;
-            ExternalAdReplyInfo.prototype.adPreviewURL = null;
+            ExternalAdReplyInfo.prototype.wtwaWebsiteUrl = null;
+            ExternalAdReplyInfo.prototype.adPreviewUrl = null;
             ExternalAdReplyInfo.prototype.containsCtwaFlowsAutoReply = null;
             ExternalAdReplyInfo.prototype.agmThumbnailStrategy = null;
             ExternalAdReplyInfo.prototype.agmTitleStrategy = null;
@@ -22910,14 +22910,14 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ExternalAdReplyInfo.prototype, "_thumbnailURL", {
-                get: $util.oneOfGetter($oneOfFields = ["thumbnailURL"]),
+            Object.defineProperty(ExternalAdReplyInfo.prototype, "_thumbnailUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["thumbnailUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ExternalAdReplyInfo.prototype, "_mediaURL", {
-                get: $util.oneOfGetter($oneOfFields = ["mediaURL"]),
+            Object.defineProperty(ExternalAdReplyInfo.prototype, "_mediaUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["mediaUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -22934,14 +22934,14 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ExternalAdReplyInfo.prototype, "_sourceID", {
-                get: $util.oneOfGetter($oneOfFields = ["sourceID"]),
+            Object.defineProperty(ExternalAdReplyInfo.prototype, "_sourceId", {
+                get: $util.oneOfGetter($oneOfFields = ["sourceId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ExternalAdReplyInfo.prototype, "_sourceURL", {
-                get: $util.oneOfGetter($oneOfFields = ["sourceURL"]),
+            Object.defineProperty(ExternalAdReplyInfo.prototype, "_sourceUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["sourceUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -23018,8 +23018,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ExternalAdReplyInfo.prototype, "_originalImageURL", {
-                get: $util.oneOfGetter($oneOfFields = ["originalImageURL"]),
+            Object.defineProperty(ExternalAdReplyInfo.prototype, "_originalImageUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["originalImageUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -23042,14 +23042,14 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ExternalAdReplyInfo.prototype, "_wtwaWebsiteURL", {
-                get: $util.oneOfGetter($oneOfFields = ["wtwaWebsiteURL"]),
+            Object.defineProperty(ExternalAdReplyInfo.prototype, "_wtwaWebsiteUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["wtwaWebsiteUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ExternalAdReplyInfo.prototype, "_adPreviewURL", {
-                get: $util.oneOfGetter($oneOfFields = ["adPreviewURL"]),
+            Object.defineProperty(ExternalAdReplyInfo.prototype, "_adPreviewUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["adPreviewUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -23096,18 +23096,18 @@ export const WAE2E = $root.WAE2E = (() => {
                     w.uint32(18).string(m.body);
                 if (m.mediaType != null && Object.hasOwnProperty.call(m, "mediaType"))
                     w.uint32(24).int32(m.mediaType);
-                if (m.thumbnailURL != null && Object.hasOwnProperty.call(m, "thumbnailURL"))
-                    w.uint32(34).string(m.thumbnailURL);
-                if (m.mediaURL != null && Object.hasOwnProperty.call(m, "mediaURL"))
-                    w.uint32(42).string(m.mediaURL);
+                if (m.thumbnailUrl != null && Object.hasOwnProperty.call(m, "thumbnailUrl"))
+                    w.uint32(34).string(m.thumbnailUrl);
+                if (m.mediaUrl != null && Object.hasOwnProperty.call(m, "mediaUrl"))
+                    w.uint32(42).string(m.mediaUrl);
                 if (m.thumbnail != null && Object.hasOwnProperty.call(m, "thumbnail"))
                     w.uint32(50).bytes(m.thumbnail);
                 if (m.sourceType != null && Object.hasOwnProperty.call(m, "sourceType"))
                     w.uint32(58).string(m.sourceType);
-                if (m.sourceID != null && Object.hasOwnProperty.call(m, "sourceID"))
-                    w.uint32(66).string(m.sourceID);
-                if (m.sourceURL != null && Object.hasOwnProperty.call(m, "sourceURL"))
-                    w.uint32(74).string(m.sourceURL);
+                if (m.sourceId != null && Object.hasOwnProperty.call(m, "sourceId"))
+                    w.uint32(66).string(m.sourceId);
+                if (m.sourceUrl != null && Object.hasOwnProperty.call(m, "sourceUrl"))
+                    w.uint32(74).string(m.sourceUrl);
                 if (m.containsAutoReply != null && Object.hasOwnProperty.call(m, "containsAutoReply"))
                     w.uint32(80).bool(m.containsAutoReply);
                 if (m.renderLargerThumbnail != null && Object.hasOwnProperty.call(m, "renderLargerThumbnail"))
@@ -23132,18 +23132,18 @@ export const WAE2E = $root.WAE2E = (() => {
                     w.uint32(162).string(m.ctaPayload);
                 if (m.disableNudge != null && Object.hasOwnProperty.call(m, "disableNudge"))
                     w.uint32(168).bool(m.disableNudge);
-                if (m.originalImageURL != null && Object.hasOwnProperty.call(m, "originalImageURL"))
-                    w.uint32(178).string(m.originalImageURL);
+                if (m.originalImageUrl != null && Object.hasOwnProperty.call(m, "originalImageUrl"))
+                    w.uint32(178).string(m.originalImageUrl);
                 if (m.automatedGreetingMessageCtaType != null && Object.hasOwnProperty.call(m, "automatedGreetingMessageCtaType"))
                     w.uint32(186).string(m.automatedGreetingMessageCtaType);
                 if (m.wtwaAdFormat != null && Object.hasOwnProperty.call(m, "wtwaAdFormat"))
                     w.uint32(192).bool(m.wtwaAdFormat);
                 if (m.adType != null && Object.hasOwnProperty.call(m, "adType"))
                     w.uint32(200).int32(m.adType);
-                if (m.wtwaWebsiteURL != null && Object.hasOwnProperty.call(m, "wtwaWebsiteURL"))
-                    w.uint32(210).string(m.wtwaWebsiteURL);
-                if (m.adPreviewURL != null && Object.hasOwnProperty.call(m, "adPreviewURL"))
-                    w.uint32(218).string(m.adPreviewURL);
+                if (m.wtwaWebsiteUrl != null && Object.hasOwnProperty.call(m, "wtwaWebsiteUrl"))
+                    w.uint32(210).string(m.wtwaWebsiteUrl);
+                if (m.adPreviewUrl != null && Object.hasOwnProperty.call(m, "adPreviewUrl"))
+                    w.uint32(218).string(m.adPreviewUrl);
                 if (m.containsCtwaFlowsAutoReply != null && Object.hasOwnProperty.call(m, "containsCtwaFlowsAutoReply"))
                     w.uint32(224).bool(m.containsCtwaFlowsAutoReply);
                 if (m.agmThumbnailStrategy != null && Object.hasOwnProperty.call(m, "agmThumbnailStrategy"))
@@ -23183,11 +23183,11 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 4: {
-                            m.thumbnailURL = r.string();
+                            m.thumbnailUrl = r.string();
                             break;
                         }
                     case 5: {
-                            m.mediaURL = r.string();
+                            m.mediaUrl = r.string();
                             break;
                         }
                     case 6: {
@@ -23199,11 +23199,11 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 8: {
-                            m.sourceID = r.string();
+                            m.sourceId = r.string();
                             break;
                         }
                     case 9: {
-                            m.sourceURL = r.string();
+                            m.sourceUrl = r.string();
                             break;
                         }
                     case 10: {
@@ -23255,7 +23255,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 22: {
-                            m.originalImageURL = r.string();
+                            m.originalImageUrl = r.string();
                             break;
                         }
                     case 23: {
@@ -23271,11 +23271,11 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 26: {
-                            m.wtwaWebsiteURL = r.string();
+                            m.wtwaWebsiteUrl = r.string();
                             break;
                         }
                     case 27: {
-                            m.adPreviewURL = r.string();
+                            m.adPreviewUrl = r.string();
                             break;
                         }
                     case 28: {
@@ -23340,11 +23340,11 @@ export const WAE2E = $root.WAE2E = (() => {
                     m.mediaType = 2;
                     break;
                 }
-                if (d.thumbnailURL != null) {
-                    m.thumbnailURL = String(d.thumbnailURL);
+                if (d.thumbnailUrl != null) {
+                    m.thumbnailUrl = String(d.thumbnailUrl);
                 }
-                if (d.mediaURL != null) {
-                    m.mediaURL = String(d.mediaURL);
+                if (d.mediaUrl != null) {
+                    m.mediaUrl = String(d.mediaUrl);
                 }
                 if (d.thumbnail != null) {
                     if (typeof d.thumbnail === "string")
@@ -23355,11 +23355,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (d.sourceType != null) {
                     m.sourceType = String(d.sourceType);
                 }
-                if (d.sourceID != null) {
-                    m.sourceID = String(d.sourceID);
+                if (d.sourceId != null) {
+                    m.sourceId = String(d.sourceId);
                 }
-                if (d.sourceURL != null) {
-                    m.sourceURL = String(d.sourceURL);
+                if (d.sourceUrl != null) {
+                    m.sourceUrl = String(d.sourceUrl);
                 }
                 if (d.containsAutoReply != null) {
                     m.containsAutoReply = Boolean(d.containsAutoReply);
@@ -23397,8 +23397,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (d.disableNudge != null) {
                     m.disableNudge = Boolean(d.disableNudge);
                 }
-                if (d.originalImageURL != null) {
-                    m.originalImageURL = String(d.originalImageURL);
+                if (d.originalImageUrl != null) {
+                    m.originalImageUrl = String(d.originalImageUrl);
                 }
                 if (d.automatedGreetingMessageCtaType != null) {
                     m.automatedGreetingMessageCtaType = String(d.automatedGreetingMessageCtaType);
@@ -23422,11 +23422,11 @@ export const WAE2E = $root.WAE2E = (() => {
                     m.adType = 1;
                     break;
                 }
-                if (d.wtwaWebsiteURL != null) {
-                    m.wtwaWebsiteURL = String(d.wtwaWebsiteURL);
+                if (d.wtwaWebsiteUrl != null) {
+                    m.wtwaWebsiteUrl = String(d.wtwaWebsiteUrl);
                 }
-                if (d.adPreviewURL != null) {
-                    m.adPreviewURL = String(d.adPreviewURL);
+                if (d.adPreviewUrl != null) {
+                    m.adPreviewUrl = String(d.adPreviewUrl);
                 }
                 if (d.containsCtwaFlowsAutoReply != null) {
                     m.containsCtwaFlowsAutoReply = Boolean(d.containsCtwaFlowsAutoReply);
@@ -23465,15 +23465,15 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._mediaType = "mediaType";
                 }
-                if (m.thumbnailURL != null && m.hasOwnProperty("thumbnailURL")) {
-                    d.thumbnailURL = m.thumbnailURL;
+                if (m.thumbnailUrl != null && m.hasOwnProperty("thumbnailUrl")) {
+                    d.thumbnailUrl = m.thumbnailUrl;
                     if (o.oneofs)
-                        d._thumbnailURL = "thumbnailURL";
+                        d._thumbnailUrl = "thumbnailUrl";
                 }
-                if (m.mediaURL != null && m.hasOwnProperty("mediaURL")) {
-                    d.mediaURL = m.mediaURL;
+                if (m.mediaUrl != null && m.hasOwnProperty("mediaUrl")) {
+                    d.mediaUrl = m.mediaUrl;
                     if (o.oneofs)
-                        d._mediaURL = "mediaURL";
+                        d._mediaUrl = "mediaUrl";
                 }
                 if (m.thumbnail != null && m.hasOwnProperty("thumbnail")) {
                     d.thumbnail = o.bytes === String ? $util.base64.encode(m.thumbnail, 0, m.thumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnail) : m.thumbnail;
@@ -23485,15 +23485,15 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._sourceType = "sourceType";
                 }
-                if (m.sourceID != null && m.hasOwnProperty("sourceID")) {
-                    d.sourceID = m.sourceID;
+                if (m.sourceId != null && m.hasOwnProperty("sourceId")) {
+                    d.sourceId = m.sourceId;
                     if (o.oneofs)
-                        d._sourceID = "sourceID";
+                        d._sourceId = "sourceId";
                 }
-                if (m.sourceURL != null && m.hasOwnProperty("sourceURL")) {
-                    d.sourceURL = m.sourceURL;
+                if (m.sourceUrl != null && m.hasOwnProperty("sourceUrl")) {
+                    d.sourceUrl = m.sourceUrl;
                     if (o.oneofs)
-                        d._sourceURL = "sourceURL";
+                        d._sourceUrl = "sourceUrl";
                 }
                 if (m.containsAutoReply != null && m.hasOwnProperty("containsAutoReply")) {
                     d.containsAutoReply = m.containsAutoReply;
@@ -23555,10 +23555,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._disableNudge = "disableNudge";
                 }
-                if (m.originalImageURL != null && m.hasOwnProperty("originalImageURL")) {
-                    d.originalImageURL = m.originalImageURL;
+                if (m.originalImageUrl != null && m.hasOwnProperty("originalImageUrl")) {
+                    d.originalImageUrl = m.originalImageUrl;
                     if (o.oneofs)
-                        d._originalImageURL = "originalImageURL";
+                        d._originalImageUrl = "originalImageUrl";
                 }
                 if (m.automatedGreetingMessageCtaType != null && m.hasOwnProperty("automatedGreetingMessageCtaType")) {
                     d.automatedGreetingMessageCtaType = m.automatedGreetingMessageCtaType;
@@ -23575,15 +23575,15 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._adType = "adType";
                 }
-                if (m.wtwaWebsiteURL != null && m.hasOwnProperty("wtwaWebsiteURL")) {
-                    d.wtwaWebsiteURL = m.wtwaWebsiteURL;
+                if (m.wtwaWebsiteUrl != null && m.hasOwnProperty("wtwaWebsiteUrl")) {
+                    d.wtwaWebsiteUrl = m.wtwaWebsiteUrl;
                     if (o.oneofs)
-                        d._wtwaWebsiteURL = "wtwaWebsiteURL";
+                        d._wtwaWebsiteUrl = "wtwaWebsiteUrl";
                 }
-                if (m.adPreviewURL != null && m.hasOwnProperty("adPreviewURL")) {
-                    d.adPreviewURL = m.adPreviewURL;
+                if (m.adPreviewUrl != null && m.hasOwnProperty("adPreviewUrl")) {
+                    d.adPreviewUrl = m.adPreviewUrl;
                     if (o.oneofs)
-                        d._adPreviewURL = "adPreviewURL";
+                        d._adPreviewUrl = "adPreviewUrl";
                 }
                 if (m.containsCtwaFlowsAutoReply != null && m.hasOwnProperty("containsCtwaFlowsAutoReply")) {
                     d.containsCtwaFlowsAutoReply = m.containsCtwaFlowsAutoReply;
@@ -23653,7 +23653,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
             AdReplyInfo.prototype.advertiserName = null;
             AdReplyInfo.prototype.mediaType = null;
-            AdReplyInfo.prototype.JPEGThumbnail = null;
+            AdReplyInfo.prototype.jpegThumbnail = null;
             AdReplyInfo.prototype.caption = null;
 
             let $oneOfFields;
@@ -23671,8 +23671,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AdReplyInfo.prototype, "_JPEGThumbnail", {
-                get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+            Object.defineProperty(AdReplyInfo.prototype, "_jpegThumbnail", {
+                get: $util.oneOfGetter($oneOfFields = ["jpegThumbnail"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -23693,8 +23693,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     w.uint32(10).string(m.advertiserName);
                 if (m.mediaType != null && Object.hasOwnProperty.call(m, "mediaType"))
                     w.uint32(16).int32(m.mediaType);
-                if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                    w.uint32(130).bytes(m.JPEGThumbnail);
+                if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                    w.uint32(130).bytes(m.jpegThumbnail);
                 if (m.caption != null && Object.hasOwnProperty.call(m, "caption"))
                     w.uint32(138).string(m.caption);
                 return w;
@@ -23722,7 +23722,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 16: {
-                            m.JPEGThumbnail = r.bytes();
+                            m.jpegThumbnail = r.bytes();
                             break;
                         }
                     case 17: {
@@ -23768,11 +23768,11 @@ export const WAE2E = $root.WAE2E = (() => {
                     m.mediaType = 2;
                     break;
                 }
-                if (d.JPEGThumbnail != null) {
-                    if (typeof d.JPEGThumbnail === "string")
-                        $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                    else if (d.JPEGThumbnail.length >= 0)
-                        m.JPEGThumbnail = d.JPEGThumbnail;
+                if (d.jpegThumbnail != null) {
+                    if (typeof d.jpegThumbnail === "string")
+                        $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                    else if (d.jpegThumbnail.length >= 0)
+                        m.jpegThumbnail = d.jpegThumbnail;
                 }
                 if (d.caption != null) {
                     m.caption = String(d.caption);
@@ -23794,10 +23794,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._mediaType = "mediaType";
                 }
-                if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                    d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+                if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                    d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                     if (o.oneofs)
-                        d._JPEGThumbnail = "JPEGThumbnail";
+                        d._jpegThumbnail = "jpegThumbnail";
                 }
                 if (m.caption != null && m.hasOwnProperty("caption")) {
                     d.caption = m.caption;
@@ -24114,15 +24114,15 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            QuestionReplyQuotedMessage.prototype.serverQuestionID = null;
+            QuestionReplyQuotedMessage.prototype.serverQuestionId = null;
             QuestionReplyQuotedMessage.prototype.quotedQuestion = null;
             QuestionReplyQuotedMessage.prototype.quotedResponse = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(QuestionReplyQuotedMessage.prototype, "_serverQuestionID", {
-                get: $util.oneOfGetter($oneOfFields = ["serverQuestionID"]),
+            Object.defineProperty(QuestionReplyQuotedMessage.prototype, "_serverQuestionId", {
+                get: $util.oneOfGetter($oneOfFields = ["serverQuestionId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -24145,8 +24145,8 @@ export const WAE2E = $root.WAE2E = (() => {
             QuestionReplyQuotedMessage.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.serverQuestionID != null && Object.hasOwnProperty.call(m, "serverQuestionID"))
-                    w.uint32(8).int32(m.serverQuestionID);
+                if (m.serverQuestionId != null && Object.hasOwnProperty.call(m, "serverQuestionId"))
+                    w.uint32(8).int32(m.serverQuestionId);
                 if (m.quotedQuestion != null && Object.hasOwnProperty.call(m, "quotedQuestion"))
                     $root.WAE2E.Message.encode(m.quotedQuestion, w.uint32(18).fork()).ldelim();
                 if (m.quotedResponse != null && Object.hasOwnProperty.call(m, "quotedResponse"))
@@ -24168,7 +24168,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.serverQuestionID = r.int32();
+                            m.serverQuestionId = r.int32();
                             break;
                         }
                     case 2: {
@@ -24195,8 +24195,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.ContextInfo.QuestionReplyQuotedMessage();
-                if (d.serverQuestionID != null) {
-                    m.serverQuestionID = d.serverQuestionID | 0;
+                if (d.serverQuestionId != null) {
+                    m.serverQuestionId = d.serverQuestionId | 0;
                 }
                 if (d.quotedQuestion != null) {
                     if (typeof d.quotedQuestion !== "object")
@@ -24215,10 +24215,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.serverQuestionID != null && m.hasOwnProperty("serverQuestionID")) {
-                    d.serverQuestionID = m.serverQuestionID;
+                if (m.serverQuestionId != null && m.hasOwnProperty("serverQuestionId")) {
+                    d.serverQuestionId = m.serverQuestionId;
                     if (o.oneofs)
-                        d._serverQuestionID = "serverQuestionID";
+                        d._serverQuestionId = "serverQuestionId";
                 }
                 if (m.quotedQuestion != null && m.hasOwnProperty("quotedQuestion")) {
                     d.quotedQuestion = $root.WAE2E.Message.toObject(m.quotedQuestion, o);
@@ -24373,13 +24373,13 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            BusinessMessageForwardInfo.prototype.businessOwnerJID = null;
+            BusinessMessageForwardInfo.prototype.businessOwnerJid = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(BusinessMessageForwardInfo.prototype, "_businessOwnerJID", {
-                get: $util.oneOfGetter($oneOfFields = ["businessOwnerJID"]),
+            Object.defineProperty(BusinessMessageForwardInfo.prototype, "_businessOwnerJid", {
+                get: $util.oneOfGetter($oneOfFields = ["businessOwnerJid"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -24390,8 +24390,8 @@ export const WAE2E = $root.WAE2E = (() => {
             BusinessMessageForwardInfo.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.businessOwnerJID != null && Object.hasOwnProperty.call(m, "businessOwnerJID"))
-                    w.uint32(10).string(m.businessOwnerJID);
+                if (m.businessOwnerJid != null && Object.hasOwnProperty.call(m, "businessOwnerJid"))
+                    w.uint32(10).string(m.businessOwnerJid);
                 return w;
             };
 
@@ -24409,7 +24409,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.businessOwnerJID = r.string();
+                            m.businessOwnerJid = r.string();
                             break;
                         }
                     default:
@@ -24428,8 +24428,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.ContextInfo.BusinessMessageForwardInfo();
-                if (d.businessOwnerJID != null) {
-                    m.businessOwnerJID = String(d.businessOwnerJID);
+                if (d.businessOwnerJid != null) {
+                    m.businessOwnerJid = String(d.businessOwnerJid);
                 }
                 return m;
             };
@@ -24438,10 +24438,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.businessOwnerJID != null && m.hasOwnProperty("businessOwnerJID")) {
-                    d.businessOwnerJID = m.businessOwnerJID;
+                if (m.businessOwnerJid != null && m.hasOwnProperty("businessOwnerJid")) {
+                    d.businessOwnerJid = m.businessOwnerJid;
                     if (o.oneofs)
-                        d._businessOwnerJID = "businessOwnerJID";
+                        d._businessOwnerJid = "businessOwnerJid";
                 }
                 return d;
             };
@@ -24865,7 +24865,7 @@ export const WAE2E = $root.WAE2E = (() => {
     WAE2E.MessageContextInfo = (function() {
 
         function MessageContextInfo(p) {
-            this.threadID = [];
+            this.threadId = [];
             if (p)
                 for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
                     if (p[ks[i]] != null && ks[i] !== "__proto__")
@@ -24886,7 +24886,7 @@ export const WAE2E = $root.WAE2E = (() => {
         MessageContextInfo.prototype.supportPayload = null;
         MessageContextInfo.prototype.limitSharing = null;
         MessageContextInfo.prototype.limitSharingV2 = null;
-        MessageContextInfo.prototype.threadID = $util.emptyArray;
+        MessageContextInfo.prototype.threadId = $util.emptyArray;
         MessageContextInfo.prototype.weblinkRenderConfig = null;
         MessageContextInfo.prototype.teeBotMetadata = null;
 
@@ -25023,9 +25023,9 @@ export const WAE2E = $root.WAE2E = (() => {
                 WACommon.LimitSharing.encode(m.limitSharing, w.uint32(106).fork()).ldelim();
             if (m.limitSharingV2 != null && Object.hasOwnProperty.call(m, "limitSharingV2"))
                 WACommon.LimitSharing.encode(m.limitSharingV2, w.uint32(114).fork()).ldelim();
-            if (m.threadID != null && m.threadID.length) {
-                for (var i = 0; i < m.threadID.length; ++i)
-                    $root.WAE2E.ThreadID.encode(m.threadID[i], w.uint32(122).fork()).ldelim();
+            if (m.threadId != null && m.threadId.length) {
+                for (var i = 0; i < m.threadId.length; ++i)
+                    $root.WAE2E.ThreadID.encode(m.threadId[i], w.uint32(122).fork()).ldelim();
             }
             if (m.weblinkRenderConfig != null && Object.hasOwnProperty.call(m, "weblinkRenderConfig"))
                 w.uint32(128).int32(m.weblinkRenderConfig);
@@ -25104,9 +25104,9 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 15: {
-                        if (!(m.threadID && m.threadID.length))
-                            m.threadID = [];
-                        m.threadID.push($root.WAE2E.ThreadID.decode(r, r.uint32(), undefined, n + 1));
+                        if (!(m.threadId && m.threadId.length))
+                            m.threadId = [];
+                        m.threadId.push($root.WAE2E.ThreadID.decode(r, r.uint32(), undefined, n + 1));
                         break;
                     }
                 case 16: {
@@ -25207,14 +25207,14 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.MessageContextInfo.limitSharingV2: object expected");
                 m.limitSharingV2 = WACommon.LimitSharing.fromObject(d.limitSharingV2, n + 1);
             }
-            if (d.threadID) {
-                if (!Array.isArray(d.threadID))
-                    throw TypeError(".WAE2E.MessageContextInfo.threadID: array expected");
-                m.threadID = [];
-                for (var i = 0; i < d.threadID.length; ++i) {
-                    if (typeof d.threadID[i] !== "object")
-                        throw TypeError(".WAE2E.MessageContextInfo.threadID: object expected");
-                    m.threadID[i] = $root.WAE2E.ThreadID.fromObject(d.threadID[i], n + 1);
+            if (d.threadId) {
+                if (!Array.isArray(d.threadId))
+                    throw TypeError(".WAE2E.MessageContextInfo.threadId: array expected");
+                m.threadId = [];
+                for (var i = 0; i < d.threadId.length; ++i) {
+                    if (typeof d.threadId[i] !== "object")
+                        throw TypeError(".WAE2E.MessageContextInfo.threadId: object expected");
+                    m.threadId[i] = $root.WAE2E.ThreadID.fromObject(d.threadId[i], n + 1);
                 }
             }
             switch (d.weblinkRenderConfig) {
@@ -25247,7 +25247,7 @@ export const WAE2E = $root.WAE2E = (() => {
                 o = {};
             var d = {};
             if (o.arrays || o.defaults) {
-                d.threadID = [];
+                d.threadId = [];
             }
             if (m.deviceListMetadata != null && m.hasOwnProperty("deviceListMetadata")) {
                 d.deviceListMetadata = $root.WAE2E.DeviceListMetadata.toObject(m.deviceListMetadata, o);
@@ -25319,10 +25319,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._limitSharingV2 = "limitSharingV2";
             }
-            if (m.threadID && m.threadID.length) {
-                d.threadID = [];
-                for (var j = 0; j < m.threadID.length; ++j) {
-                    d.threadID[j] = $root.WAE2E.ThreadID.toObject(m.threadID[j], o);
+            if (m.threadId && m.threadId.length) {
+                d.threadId = [];
+                for (var j = 0; j < m.threadId.length; ++j) {
+                    d.threadId[j] = $root.WAE2E.ThreadID.toObject(m.threadId[j], o);
                 }
             }
             if (m.weblinkRenderConfig != null && m.hasOwnProperty("weblinkRenderConfig")) {
@@ -25785,8 +25785,8 @@ export const WAE2E = $root.WAE2E = (() => {
             }
 
             HydratedURLButton.prototype.displayText = null;
-            HydratedURLButton.prototype.URL = null;
-            HydratedURLButton.prototype.consentedUsersURL = null;
+            HydratedURLButton.prototype.url = null;
+            HydratedURLButton.prototype.consentedUsersUrl = null;
             HydratedURLButton.prototype.webviewPresentation = null;
 
             let $oneOfFields;
@@ -25798,14 +25798,14 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(HydratedURLButton.prototype, "_URL", {
-                get: $util.oneOfGetter($oneOfFields = ["URL"]),
+            Object.defineProperty(HydratedURLButton.prototype, "_url", {
+                get: $util.oneOfGetter($oneOfFields = ["url"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(HydratedURLButton.prototype, "_consentedUsersURL", {
-                get: $util.oneOfGetter($oneOfFields = ["consentedUsersURL"]),
+            Object.defineProperty(HydratedURLButton.prototype, "_consentedUsersUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["consentedUsersUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -25824,10 +25824,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     w = $Writer.create();
                 if (m.displayText != null && Object.hasOwnProperty.call(m, "displayText"))
                     w.uint32(10).string(m.displayText);
-                if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                    w.uint32(18).string(m.URL);
-                if (m.consentedUsersURL != null && Object.hasOwnProperty.call(m, "consentedUsersURL"))
-                    w.uint32(26).string(m.consentedUsersURL);
+                if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                    w.uint32(18).string(m.url);
+                if (m.consentedUsersUrl != null && Object.hasOwnProperty.call(m, "consentedUsersUrl"))
+                    w.uint32(26).string(m.consentedUsersUrl);
                 if (m.webviewPresentation != null && Object.hasOwnProperty.call(m, "webviewPresentation"))
                     w.uint32(32).int32(m.webviewPresentation);
                 return w;
@@ -25851,11 +25851,11 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 2: {
-                            m.URL = r.string();
+                            m.url = r.string();
                             break;
                         }
                     case 3: {
-                            m.consentedUsersURL = r.string();
+                            m.consentedUsersUrl = r.string();
                             break;
                         }
                     case 4: {
@@ -25881,11 +25881,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (d.displayText != null) {
                     m.displayText = String(d.displayText);
                 }
-                if (d.URL != null) {
-                    m.URL = String(d.URL);
+                if (d.url != null) {
+                    m.url = String(d.url);
                 }
-                if (d.consentedUsersURL != null) {
-                    m.consentedUsersURL = String(d.consentedUsersURL);
+                if (d.consentedUsersUrl != null) {
+                    m.consentedUsersUrl = String(d.consentedUsersUrl);
                 }
                 switch (d.webviewPresentation) {
                 default:
@@ -25919,15 +25919,15 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._displayText = "displayText";
                 }
-                if (m.URL != null && m.hasOwnProperty("URL")) {
-                    d.URL = m.URL;
+                if (m.url != null && m.hasOwnProperty("url")) {
+                    d.url = m.url;
                     if (o.oneofs)
-                        d._URL = "URL";
+                        d._url = "url";
                 }
-                if (m.consentedUsersURL != null && m.hasOwnProperty("consentedUsersURL")) {
-                    d.consentedUsersURL = m.consentedUsersURL;
+                if (m.consentedUsersUrl != null && m.hasOwnProperty("consentedUsersUrl")) {
+                    d.consentedUsersUrl = m.consentedUsersUrl;
                     if (o.oneofs)
-                        d._consentedUsersURL = "consentedUsersURL";
+                        d._consentedUsersUrl = "consentedUsersUrl";
                 }
                 if (m.webviewPresentation != null && m.hasOwnProperty("webviewPresentation")) {
                     d.webviewPresentation = o.enums === String ? $root.WAE2E.HydratedTemplateButton.HydratedURLButton.WebviewPresentationType[m.webviewPresentation] === undefined ? m.webviewPresentation : $root.WAE2E.HydratedTemplateButton.HydratedURLButton.WebviewPresentationType[m.webviewPresentation] : m.webviewPresentation;
@@ -26086,7 +26086,7 @@ export const WAE2E = $root.WAE2E = (() => {
             }
 
             HydratedQuickReplyButton.prototype.displayText = null;
-            HydratedQuickReplyButton.prototype.ID = null;
+            HydratedQuickReplyButton.prototype.id = null;
 
             let $oneOfFields;
 
@@ -26097,8 +26097,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(HydratedQuickReplyButton.prototype, "_ID", {
-                get: $util.oneOfGetter($oneOfFields = ["ID"]),
+            Object.defineProperty(HydratedQuickReplyButton.prototype, "_id", {
+                get: $util.oneOfGetter($oneOfFields = ["id"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -26111,8 +26111,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     w = $Writer.create();
                 if (m.displayText != null && Object.hasOwnProperty.call(m, "displayText"))
                     w.uint32(10).string(m.displayText);
-                if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                    w.uint32(18).string(m.ID);
+                if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                    w.uint32(18).string(m.id);
                 return w;
             };
 
@@ -26134,7 +26134,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 2: {
-                            m.ID = r.string();
+                            m.id = r.string();
                             break;
                         }
                     default:
@@ -26156,8 +26156,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (d.displayText != null) {
                     m.displayText = String(d.displayText);
                 }
-                if (d.ID != null) {
-                    m.ID = String(d.ID);
+                if (d.id != null) {
+                    m.id = String(d.id);
                 }
                 return m;
             };
@@ -26171,10 +26171,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._displayText = "displayText";
                 }
-                if (m.ID != null && m.hasOwnProperty("ID")) {
-                    d.ID = m.ID;
+                if (m.id != null && m.hasOwnProperty("id")) {
+                    d.id = m.id;
                     if (o.oneofs)
-                        d._ID = "ID";
+                        d._id = "id";
                 }
                 return d;
             };
@@ -26205,7 +26205,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        PaymentBackground.prototype.ID = null;
+        PaymentBackground.prototype.id = null;
         PaymentBackground.prototype.fileLength = null;
         PaymentBackground.prototype.width = null;
         PaymentBackground.prototype.height = null;
@@ -26219,8 +26219,8 @@ export const WAE2E = $root.WAE2E = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PaymentBackground.prototype, "_ID", {
-            get: $util.oneOfGetter($oneOfFields = ["ID"]),
+        Object.defineProperty(PaymentBackground.prototype, "_id", {
+            get: $util.oneOfGetter($oneOfFields = ["id"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -26285,8 +26285,8 @@ export const WAE2E = $root.WAE2E = (() => {
         PaymentBackground.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                w.uint32(10).string(m.ID);
+            if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                w.uint32(10).string(m.id);
             if (m.fileLength != null && Object.hasOwnProperty.call(m, "fileLength"))
                 w.uint32(16).uint64(m.fileLength);
             if (m.width != null && Object.hasOwnProperty.call(m, "width"))
@@ -26322,7 +26322,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.ID = r.string();
+                        m.id = r.string();
                         break;
                     }
                 case 2: {
@@ -26377,8 +26377,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.PaymentBackground();
-            if (d.ID != null) {
-                m.ID = String(d.ID);
+            if (d.id != null) {
+                m.id = String(d.id);
             }
             if (d.fileLength != null) {
                 if ($util.Long)
@@ -26436,10 +26436,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.ID != null && m.hasOwnProperty("ID")) {
-                d.ID = m.ID;
+            if (m.id != null && m.hasOwnProperty("id")) {
+                d.id = m.id;
                 if (o.oneofs)
-                    d._ID = "ID";
+                    d._id = "id";
             }
             if (m.fileLength != null && m.hasOwnProperty("fileLength")) {
                 if (typeof m.fileLength === "number")
@@ -26521,8 +26521,8 @@ export const WAE2E = $root.WAE2E = (() => {
 
             MediaData.prototype.mediaKey = null;
             MediaData.prototype.mediaKeyTimestamp = null;
-            MediaData.prototype.fileSHA256 = null;
-            MediaData.prototype.fileEncSHA256 = null;
+            MediaData.prototype.fileSha256 = null;
+            MediaData.prototype.fileEncSha256 = null;
             MediaData.prototype.directPath = null;
 
             let $oneOfFields;
@@ -26540,14 +26540,14 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(MediaData.prototype, "_fileSHA256", {
-                get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+            Object.defineProperty(MediaData.prototype, "_fileSha256", {
+                get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(MediaData.prototype, "_fileEncSHA256", {
-                get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+            Object.defineProperty(MediaData.prototype, "_fileEncSha256", {
+                get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -26568,10 +26568,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     w.uint32(10).bytes(m.mediaKey);
                 if (m.mediaKeyTimestamp != null && Object.hasOwnProperty.call(m, "mediaKeyTimestamp"))
                     w.uint32(16).int64(m.mediaKeyTimestamp);
-                if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                    w.uint32(26).bytes(m.fileSHA256);
-                if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                    w.uint32(34).bytes(m.fileEncSHA256);
+                if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                    w.uint32(26).bytes(m.fileSha256);
+                if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                    w.uint32(34).bytes(m.fileEncSha256);
                 if (m.directPath != null && Object.hasOwnProperty.call(m, "directPath"))
                     w.uint32(42).string(m.directPath);
                 return w;
@@ -26599,11 +26599,11 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 3: {
-                            m.fileSHA256 = r.bytes();
+                            m.fileSha256 = r.bytes();
                             break;
                         }
                     case 4: {
-                            m.fileEncSHA256 = r.bytes();
+                            m.fileEncSha256 = r.bytes();
                             break;
                         }
                     case 5: {
@@ -26642,17 +26642,17 @@ export const WAE2E = $root.WAE2E = (() => {
                     else if (typeof d.mediaKeyTimestamp === "object")
                         m.mediaKeyTimestamp = new $util.LongBits(d.mediaKeyTimestamp.low >>> 0, d.mediaKeyTimestamp.high >>> 0).toNumber();
                 }
-                if (d.fileSHA256 != null) {
-                    if (typeof d.fileSHA256 === "string")
-                        $util.base64.decode(d.fileSHA256, m.fileSHA256 = $util.newBuffer($util.base64.length(d.fileSHA256)), 0);
-                    else if (d.fileSHA256.length >= 0)
-                        m.fileSHA256 = d.fileSHA256;
+                if (d.fileSha256 != null) {
+                    if (typeof d.fileSha256 === "string")
+                        $util.base64.decode(d.fileSha256, m.fileSha256 = $util.newBuffer($util.base64.length(d.fileSha256)), 0);
+                    else if (d.fileSha256.length >= 0)
+                        m.fileSha256 = d.fileSha256;
                 }
-                if (d.fileEncSHA256 != null) {
-                    if (typeof d.fileEncSHA256 === "string")
-                        $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                    else if (d.fileEncSHA256.length >= 0)
-                        m.fileEncSHA256 = d.fileEncSHA256;
+                if (d.fileEncSha256 != null) {
+                    if (typeof d.fileEncSha256 === "string")
+                        $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                    else if (d.fileEncSha256.length >= 0)
+                        m.fileEncSha256 = d.fileEncSha256;
                 }
                 if (d.directPath != null) {
                     m.directPath = String(d.directPath);
@@ -26677,15 +26677,15 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._mediaKeyTimestamp = "mediaKeyTimestamp";
                 }
-                if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                    d.fileSHA256 = o.bytes === String ? $util.base64.encode(m.fileSHA256, 0, m.fileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSHA256) : m.fileSHA256;
+                if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                    d.fileSha256 = o.bytes === String ? $util.base64.encode(m.fileSha256, 0, m.fileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSha256) : m.fileSha256;
                     if (o.oneofs)
-                        d._fileSHA256 = "fileSHA256";
+                        d._fileSha256 = "fileSha256";
                 }
-                if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                    d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+                if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                    d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                     if (o.oneofs)
-                        d._fileEncSHA256 = "fileEncSHA256";
+                        d._fileEncSha256 = "fileEncSha256";
                 }
                 if (m.directPath != null && m.hasOwnProperty("directPath")) {
                     d.directPath = m.directPath;
@@ -26723,7 +26723,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
         DisappearingMode.prototype.initiator = null;
         DisappearingMode.prototype.trigger = null;
-        DisappearingMode.prototype.initiatorDeviceJID = null;
+        DisappearingMode.prototype.initiatorDeviceJid = null;
         DisappearingMode.prototype.initiatedByMe = null;
 
         let $oneOfFields;
@@ -26741,8 +26741,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(DisappearingMode.prototype, "_initiatorDeviceJID", {
-            get: $util.oneOfGetter($oneOfFields = ["initiatorDeviceJID"]),
+        Object.defineProperty(DisappearingMode.prototype, "_initiatorDeviceJid", {
+            get: $util.oneOfGetter($oneOfFields = ["initiatorDeviceJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -26763,8 +26763,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(8).int32(m.initiator);
             if (m.trigger != null && Object.hasOwnProperty.call(m, "trigger"))
                 w.uint32(16).int32(m.trigger);
-            if (m.initiatorDeviceJID != null && Object.hasOwnProperty.call(m, "initiatorDeviceJID"))
-                w.uint32(26).string(m.initiatorDeviceJID);
+            if (m.initiatorDeviceJid != null && Object.hasOwnProperty.call(m, "initiatorDeviceJid"))
+                w.uint32(26).string(m.initiatorDeviceJid);
             if (m.initiatedByMe != null && Object.hasOwnProperty.call(m, "initiatedByMe"))
                 w.uint32(32).bool(m.initiatedByMe);
             return w;
@@ -26792,7 +26792,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.initiatorDeviceJID = r.string();
+                        m.initiatorDeviceJid = r.string();
                         break;
                     }
                 case 4: {
@@ -26871,8 +26871,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 m.trigger = 5;
                 break;
             }
-            if (d.initiatorDeviceJID != null) {
-                m.initiatorDeviceJID = String(d.initiatorDeviceJID);
+            if (d.initiatorDeviceJid != null) {
+                m.initiatorDeviceJid = String(d.initiatorDeviceJid);
             }
             if (d.initiatedByMe != null) {
                 m.initiatedByMe = Boolean(d.initiatedByMe);
@@ -26894,10 +26894,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._trigger = "trigger";
             }
-            if (m.initiatorDeviceJID != null && m.hasOwnProperty("initiatorDeviceJID")) {
-                d.initiatorDeviceJID = m.initiatorDeviceJID;
+            if (m.initiatorDeviceJid != null && m.hasOwnProperty("initiatorDeviceJid")) {
+                d.initiatorDeviceJid = m.initiatorDeviceJid;
                 if (o.oneofs)
-                    d._initiatorDeviceJID = "initiatorDeviceJID";
+                    d._initiatorDeviceJid = "initiatorDeviceJid";
             }
             if (m.initiatedByMe != null && m.hasOwnProperty("initiatedByMe")) {
                 d.initiatedByMe = m.initiatedByMe;
@@ -26952,7 +26952,7 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         ProcessedVideo.prototype.directPath = null;
-        ProcessedVideo.prototype.fileSHA256 = null;
+        ProcessedVideo.prototype.fileSha256 = null;
         ProcessedVideo.prototype.height = null;
         ProcessedVideo.prototype.width = null;
         ProcessedVideo.prototype.fileLength = null;
@@ -26969,8 +26969,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ProcessedVideo.prototype, "_fileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+        Object.defineProperty(ProcessedVideo.prototype, "_fileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -27013,8 +27013,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.directPath != null && Object.hasOwnProperty.call(m, "directPath"))
                 w.uint32(10).string(m.directPath);
-            if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                w.uint32(18).bytes(m.fileSHA256);
+            if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                w.uint32(18).bytes(m.fileSha256);
             if (m.height != null && Object.hasOwnProperty.call(m, "height"))
                 w.uint32(24).uint32(m.height);
             if (m.width != null && Object.hasOwnProperty.call(m, "width"))
@@ -27050,7 +27050,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.fileSHA256 = r.bytes();
+                        m.fileSha256 = r.bytes();
                         break;
                     }
                 case 3: {
@@ -27098,11 +27098,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.directPath != null) {
                 m.directPath = String(d.directPath);
             }
-            if (d.fileSHA256 != null) {
-                if (typeof d.fileSHA256 === "string")
-                    $util.base64.decode(d.fileSHA256, m.fileSHA256 = $util.newBuffer($util.base64.length(d.fileSHA256)), 0);
-                else if (d.fileSHA256.length >= 0)
-                    m.fileSHA256 = d.fileSHA256;
+            if (d.fileSha256 != null) {
+                if (typeof d.fileSha256 === "string")
+                    $util.base64.decode(d.fileSha256, m.fileSha256 = $util.newBuffer($util.base64.length(d.fileSha256)), 0);
+                else if (d.fileSha256.length >= 0)
+                    m.fileSha256 = d.fileSha256;
             }
             if (d.height != null) {
                 m.height = d.height >>> 0;
@@ -27170,10 +27170,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._directPath = "directPath";
             }
-            if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                d.fileSHA256 = o.bytes === String ? $util.base64.encode(m.fileSHA256, 0, m.fileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSHA256) : m.fileSHA256;
+            if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                d.fileSha256 = o.bytes === String ? $util.base64.encode(m.fileSha256, 0, m.fileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSha256) : m.fileSha256;
                 if (o.oneofs)
-                    d._fileSHA256 = "fileSHA256";
+                    d._fileSha256 = "fileSha256";
             }
             if (m.height != null && m.hasOwnProperty("height")) {
                 d.height = m.height;
@@ -30218,9 +30218,9 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         MessageHistoryBundle.prototype.mimetype = null;
-        MessageHistoryBundle.prototype.fileSHA256 = null;
+        MessageHistoryBundle.prototype.fileSha256 = null;
         MessageHistoryBundle.prototype.mediaKey = null;
-        MessageHistoryBundle.prototype.fileEncSHA256 = null;
+        MessageHistoryBundle.prototype.fileEncSha256 = null;
         MessageHistoryBundle.prototype.directPath = null;
         MessageHistoryBundle.prototype.mediaKeyTimestamp = null;
         MessageHistoryBundle.prototype.contextInfo = null;
@@ -30235,8 +30235,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MessageHistoryBundle.prototype, "_fileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+        Object.defineProperty(MessageHistoryBundle.prototype, "_fileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -30247,8 +30247,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MessageHistoryBundle.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(MessageHistoryBundle.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -30285,12 +30285,12 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.mimetype != null && Object.hasOwnProperty.call(m, "mimetype"))
                 w.uint32(10).string(m.mimetype);
-            if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                w.uint32(18).bytes(m.fileSHA256);
+            if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                w.uint32(18).bytes(m.fileSha256);
             if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                 w.uint32(26).bytes(m.mediaKey);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(34).bytes(m.fileEncSHA256);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(34).bytes(m.fileEncSha256);
             if (m.directPath != null && Object.hasOwnProperty.call(m, "directPath"))
                 w.uint32(42).string(m.directPath);
             if (m.mediaKeyTimestamp != null && Object.hasOwnProperty.call(m, "mediaKeyTimestamp"))
@@ -30320,7 +30320,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.fileSHA256 = r.bytes();
+                        m.fileSha256 = r.bytes();
                         break;
                     }
                 case 3: {
@@ -30328,7 +30328,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 4: {
-                        m.fileEncSHA256 = r.bytes();
+                        m.fileEncSha256 = r.bytes();
                         break;
                     }
                 case 5: {
@@ -30366,11 +30366,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.mimetype != null) {
                 m.mimetype = String(d.mimetype);
             }
-            if (d.fileSHA256 != null) {
-                if (typeof d.fileSHA256 === "string")
-                    $util.base64.decode(d.fileSHA256, m.fileSHA256 = $util.newBuffer($util.base64.length(d.fileSHA256)), 0);
-                else if (d.fileSHA256.length >= 0)
-                    m.fileSHA256 = d.fileSHA256;
+            if (d.fileSha256 != null) {
+                if (typeof d.fileSha256 === "string")
+                    $util.base64.decode(d.fileSha256, m.fileSha256 = $util.newBuffer($util.base64.length(d.fileSha256)), 0);
+                else if (d.fileSha256.length >= 0)
+                    m.fileSha256 = d.fileSha256;
             }
             if (d.mediaKey != null) {
                 if (typeof d.mediaKey === "string")
@@ -30378,11 +30378,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.mediaKey.length >= 0)
                     m.mediaKey = d.mediaKey;
             }
-            if (d.fileEncSHA256 != null) {
-                if (typeof d.fileEncSHA256 === "string")
-                    $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                else if (d.fileEncSHA256.length >= 0)
-                    m.fileEncSHA256 = d.fileEncSHA256;
+            if (d.fileEncSha256 != null) {
+                if (typeof d.fileEncSha256 === "string")
+                    $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                else if (d.fileEncSha256.length >= 0)
+                    m.fileEncSha256 = d.fileEncSha256;
             }
             if (d.directPath != null) {
                 m.directPath = String(d.directPath);
@@ -30419,20 +30419,20 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._mimetype = "mimetype";
             }
-            if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                d.fileSHA256 = o.bytes === String ? $util.base64.encode(m.fileSHA256, 0, m.fileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSHA256) : m.fileSHA256;
+            if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                d.fileSha256 = o.bytes === String ? $util.base64.encode(m.fileSha256, 0, m.fileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSha256) : m.fileSha256;
                 if (o.oneofs)
-                    d._fileSHA256 = "fileSHA256";
+                    d._fileSha256 = "fileSha256";
             }
             if (m.mediaKey != null && m.hasOwnProperty("mediaKey")) {
                 d.mediaKey = o.bytes === String ? $util.base64.encode(m.mediaKey, 0, m.mediaKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.mediaKey) : m.mediaKey;
                 if (o.oneofs)
                     d._mediaKey = "mediaKey";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
             if (m.directPath != null && m.hasOwnProperty("directPath")) {
                 d.directPath = m.directPath;
@@ -30485,7 +30485,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
         EncEventResponseMessage.prototype.eventCreationMessageKey = null;
         EncEventResponseMessage.prototype.encPayload = null;
-        EncEventResponseMessage.prototype.encIV = null;
+        EncEventResponseMessage.prototype.encIv = null;
 
         let $oneOfFields;
 
@@ -30502,8 +30502,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EncEventResponseMessage.prototype, "_encIV", {
-            get: $util.oneOfGetter($oneOfFields = ["encIV"]),
+        Object.defineProperty(EncEventResponseMessage.prototype, "_encIv", {
+            get: $util.oneOfGetter($oneOfFields = ["encIv"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -30518,8 +30518,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 WACommon.MessageKey.encode(m.eventCreationMessageKey, w.uint32(10).fork()).ldelim();
             if (m.encPayload != null && Object.hasOwnProperty.call(m, "encPayload"))
                 w.uint32(18).bytes(m.encPayload);
-            if (m.encIV != null && Object.hasOwnProperty.call(m, "encIV"))
-                w.uint32(26).bytes(m.encIV);
+            if (m.encIv != null && Object.hasOwnProperty.call(m, "encIv"))
+                w.uint32(26).bytes(m.encIv);
             return w;
         };
 
@@ -30545,7 +30545,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.encIV = r.bytes();
+                        m.encIv = r.bytes();
                         break;
                     }
                 default:
@@ -30575,11 +30575,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.encPayload.length >= 0)
                     m.encPayload = d.encPayload;
             }
-            if (d.encIV != null) {
-                if (typeof d.encIV === "string")
-                    $util.base64.decode(d.encIV, m.encIV = $util.newBuffer($util.base64.length(d.encIV)), 0);
-                else if (d.encIV.length >= 0)
-                    m.encIV = d.encIV;
+            if (d.encIv != null) {
+                if (typeof d.encIv === "string")
+                    $util.base64.decode(d.encIv, m.encIv = $util.newBuffer($util.base64.length(d.encIv)), 0);
+                else if (d.encIv.length >= 0)
+                    m.encIv = d.encIv;
             }
             return m;
         };
@@ -30598,10 +30598,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._encPayload = "encPayload";
             }
-            if (m.encIV != null && m.hasOwnProperty("encIV")) {
-                d.encIV = o.bytes === String ? $util.base64.encode(m.encIV, 0, m.encIV.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIV) : m.encIV;
+            if (m.encIv != null && m.hasOwnProperty("encIv")) {
+                d.encIv = o.bytes === String ? $util.base64.encode(m.encIv, 0, m.encIv.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIv) : m.encIv;
                 if (o.oneofs)
-                    d._encIV = "encIV";
+                    d._encIv = "encIv";
             }
             return d;
         };
@@ -31113,7 +31113,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
         EncCommentMessage.prototype.targetMessageKey = null;
         EncCommentMessage.prototype.encPayload = null;
-        EncCommentMessage.prototype.encIV = null;
+        EncCommentMessage.prototype.encIv = null;
 
         let $oneOfFields;
 
@@ -31130,8 +31130,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EncCommentMessage.prototype, "_encIV", {
-            get: $util.oneOfGetter($oneOfFields = ["encIV"]),
+        Object.defineProperty(EncCommentMessage.prototype, "_encIv", {
+            get: $util.oneOfGetter($oneOfFields = ["encIv"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -31146,8 +31146,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 WACommon.MessageKey.encode(m.targetMessageKey, w.uint32(10).fork()).ldelim();
             if (m.encPayload != null && Object.hasOwnProperty.call(m, "encPayload"))
                 w.uint32(18).bytes(m.encPayload);
-            if (m.encIV != null && Object.hasOwnProperty.call(m, "encIV"))
-                w.uint32(26).bytes(m.encIV);
+            if (m.encIv != null && Object.hasOwnProperty.call(m, "encIv"))
+                w.uint32(26).bytes(m.encIv);
             return w;
         };
 
@@ -31173,7 +31173,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.encIV = r.bytes();
+                        m.encIv = r.bytes();
                         break;
                     }
                 default:
@@ -31203,11 +31203,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.encPayload.length >= 0)
                     m.encPayload = d.encPayload;
             }
-            if (d.encIV != null) {
-                if (typeof d.encIV === "string")
-                    $util.base64.decode(d.encIV, m.encIV = $util.newBuffer($util.base64.length(d.encIV)), 0);
-                else if (d.encIV.length >= 0)
-                    m.encIV = d.encIV;
+            if (d.encIv != null) {
+                if (typeof d.encIv === "string")
+                    $util.base64.decode(d.encIv, m.encIv = $util.newBuffer($util.base64.length(d.encIv)), 0);
+                else if (d.encIv.length >= 0)
+                    m.encIv = d.encIv;
             }
             return m;
         };
@@ -31226,10 +31226,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._encPayload = "encPayload";
             }
-            if (m.encIV != null && m.hasOwnProperty("encIV")) {
-                d.encIV = o.bytes === String ? $util.base64.encode(m.encIV, 0, m.encIV.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIV) : m.encIV;
+            if (m.encIv != null && m.hasOwnProperty("encIv")) {
+                d.encIv = o.bytes === String ? $util.base64.encode(m.encIv, 0, m.encIv.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIv) : m.encIv;
                 if (o.oneofs)
-                    d._encIV = "encIV";
+                    d._encIv = "encIv";
             }
             return d;
         };
@@ -31259,7 +31259,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
         EncReactionMessage.prototype.targetMessageKey = null;
         EncReactionMessage.prototype.encPayload = null;
-        EncReactionMessage.prototype.encIV = null;
+        EncReactionMessage.prototype.encIv = null;
 
         let $oneOfFields;
 
@@ -31276,8 +31276,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EncReactionMessage.prototype, "_encIV", {
-            get: $util.oneOfGetter($oneOfFields = ["encIV"]),
+        Object.defineProperty(EncReactionMessage.prototype, "_encIv", {
+            get: $util.oneOfGetter($oneOfFields = ["encIv"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -31292,8 +31292,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 WACommon.MessageKey.encode(m.targetMessageKey, w.uint32(10).fork()).ldelim();
             if (m.encPayload != null && Object.hasOwnProperty.call(m, "encPayload"))
                 w.uint32(18).bytes(m.encPayload);
-            if (m.encIV != null && Object.hasOwnProperty.call(m, "encIV"))
-                w.uint32(26).bytes(m.encIV);
+            if (m.encIv != null && Object.hasOwnProperty.call(m, "encIv"))
+                w.uint32(26).bytes(m.encIv);
             return w;
         };
 
@@ -31319,7 +31319,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.encIV = r.bytes();
+                        m.encIv = r.bytes();
                         break;
                     }
                 default:
@@ -31349,11 +31349,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.encPayload.length >= 0)
                     m.encPayload = d.encPayload;
             }
-            if (d.encIV != null) {
-                if (typeof d.encIV === "string")
-                    $util.base64.decode(d.encIV, m.encIV = $util.newBuffer($util.base64.length(d.encIV)), 0);
-                else if (d.encIV.length >= 0)
-                    m.encIV = d.encIV;
+            if (d.encIv != null) {
+                if (typeof d.encIv === "string")
+                    $util.base64.decode(d.encIv, m.encIv = $util.newBuffer($util.base64.length(d.encIv)), 0);
+                else if (d.encIv.length >= 0)
+                    m.encIv = d.encIv;
             }
             return m;
         };
@@ -31372,10 +31372,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._encPayload = "encPayload";
             }
-            if (m.encIV != null && m.hasOwnProperty("encIV")) {
-                d.encIV = o.bytes === String ? $util.base64.encode(m.encIV, 0, m.encIV.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIV) : m.encIV;
+            if (m.encIv != null && m.hasOwnProperty("encIv")) {
+                d.encIv = o.bytes === String ? $util.base64.encode(m.encIv, 0, m.encIv.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIv) : m.encIv;
                 if (o.oneofs)
-                    d._encIV = "encIV";
+                    d._encIv = "encIv";
             }
             return d;
         };
@@ -31405,7 +31405,7 @@ export const WAE2E = $root.WAE2E = (() => {
 
         KeepInChatMessage.prototype.key = null;
         KeepInChatMessage.prototype.keepType = null;
-        KeepInChatMessage.prototype.timestampMS = null;
+        KeepInChatMessage.prototype.timestampMs = null;
 
         let $oneOfFields;
 
@@ -31422,8 +31422,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(KeepInChatMessage.prototype, "_timestampMS", {
-            get: $util.oneOfGetter($oneOfFields = ["timestampMS"]),
+        Object.defineProperty(KeepInChatMessage.prototype, "_timestampMs", {
+            get: $util.oneOfGetter($oneOfFields = ["timestampMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -31438,8 +31438,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 WACommon.MessageKey.encode(m.key, w.uint32(10).fork()).ldelim();
             if (m.keepType != null && Object.hasOwnProperty.call(m, "keepType"))
                 w.uint32(16).int32(m.keepType);
-            if (m.timestampMS != null && Object.hasOwnProperty.call(m, "timestampMS"))
-                w.uint32(24).int64(m.timestampMS);
+            if (m.timestampMs != null && Object.hasOwnProperty.call(m, "timestampMs"))
+                w.uint32(24).int64(m.timestampMs);
             return w;
         };
 
@@ -31465,7 +31465,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.timestampMS = r.int64();
+                        m.timestampMs = r.int64();
                         break;
                     }
                 default:
@@ -31509,15 +31509,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 m.keepType = 2;
                 break;
             }
-            if (d.timestampMS != null) {
+            if (d.timestampMs != null) {
                 if ($util.Long)
-                    (m.timestampMS = $util.Long.fromValue(d.timestampMS)).unsigned = false;
-                else if (typeof d.timestampMS === "string")
-                    m.timestampMS = parseInt(d.timestampMS, 10);
-                else if (typeof d.timestampMS === "number")
-                    m.timestampMS = d.timestampMS;
-                else if (typeof d.timestampMS === "object")
-                    m.timestampMS = new $util.LongBits(d.timestampMS.low >>> 0, d.timestampMS.high >>> 0).toNumber();
+                    (m.timestampMs = $util.Long.fromValue(d.timestampMs)).unsigned = false;
+                else if (typeof d.timestampMs === "string")
+                    m.timestampMs = parseInt(d.timestampMs, 10);
+                else if (typeof d.timestampMs === "number")
+                    m.timestampMs = d.timestampMs;
+                else if (typeof d.timestampMs === "object")
+                    m.timestampMs = new $util.LongBits(d.timestampMs.low >>> 0, d.timestampMs.high >>> 0).toNumber();
             }
             return m;
         };
@@ -31536,13 +31536,13 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._keepType = "keepType";
             }
-            if (m.timestampMS != null && m.hasOwnProperty("timestampMS")) {
-                if (typeof m.timestampMS === "number")
-                    d.timestampMS = o.longs === String ? String(m.timestampMS) : m.timestampMS;
+            if (m.timestampMs != null && m.hasOwnProperty("timestampMs")) {
+                if (typeof m.timestampMs === "number")
+                    d.timestampMs = o.longs === String ? String(m.timestampMs) : m.timestampMs;
                 else
-                    d.timestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.timestampMS) : o.longs === Number ? new $util.LongBits(m.timestampMS.low >>> 0, m.timestampMS.high >>> 0).toNumber() : m.timestampMS;
+                    d.timestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.timestampMs) : o.longs === Number ? new $util.LongBits(m.timestampMs.low >>> 0, m.timestampMs.high >>> 0).toNumber() : m.timestampMs;
                 if (o.oneofs)
-                    d._timestampMS = "timestampMS";
+                    d._timestampMs = "timestampMs";
             }
             return d;
         };
@@ -32346,7 +32346,7 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         PollEncValue.prototype.encPayload = null;
-        PollEncValue.prototype.encIV = null;
+        PollEncValue.prototype.encIv = null;
 
         let $oneOfFields;
 
@@ -32357,8 +32357,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PollEncValue.prototype, "_encIV", {
-            get: $util.oneOfGetter($oneOfFields = ["encIV"]),
+        Object.defineProperty(PollEncValue.prototype, "_encIv", {
+            get: $util.oneOfGetter($oneOfFields = ["encIv"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -32371,8 +32371,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.encPayload != null && Object.hasOwnProperty.call(m, "encPayload"))
                 w.uint32(10).bytes(m.encPayload);
-            if (m.encIV != null && Object.hasOwnProperty.call(m, "encIV"))
-                w.uint32(18).bytes(m.encIV);
+            if (m.encIv != null && Object.hasOwnProperty.call(m, "encIv"))
+                w.uint32(18).bytes(m.encIv);
             return w;
         };
 
@@ -32394,7 +32394,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.encIV = r.bytes();
+                        m.encIv = r.bytes();
                         break;
                     }
                 default:
@@ -32419,11 +32419,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.encPayload.length >= 0)
                     m.encPayload = d.encPayload;
             }
-            if (d.encIV != null) {
-                if (typeof d.encIV === "string")
-                    $util.base64.decode(d.encIV, m.encIV = $util.newBuffer($util.base64.length(d.encIV)), 0);
-                else if (d.encIV.length >= 0)
-                    m.encIV = d.encIV;
+            if (d.encIv != null) {
+                if (typeof d.encIv === "string")
+                    $util.base64.decode(d.encIv, m.encIv = $util.newBuffer($util.base64.length(d.encIv)), 0);
+                else if (d.encIv.length >= 0)
+                    m.encIv = d.encIv;
             }
             return m;
         };
@@ -32437,10 +32437,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._encPayload = "encPayload";
             }
-            if (m.encIV != null && m.hasOwnProperty("encIV")) {
-                d.encIV = o.bytes === String ? $util.base64.encode(m.encIV, 0, m.encIV.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIV) : m.encIV;
+            if (m.encIv != null && m.hasOwnProperty("encIv")) {
+                d.encIv = o.bytes === String ? $util.base64.encode(m.encIv, 0, m.encIv.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIv) : m.encIv;
                 if (o.oneofs)
-                    d._encIV = "encIV";
+                    d._encIv = "encIv";
             }
             return d;
         };
@@ -32539,7 +32539,7 @@ export const WAE2E = $root.WAE2E = (() => {
         PollUpdateMessage.prototype.pollCreationMessageKey = null;
         PollUpdateMessage.prototype.vote = null;
         PollUpdateMessage.prototype.metadata = null;
-        PollUpdateMessage.prototype.senderTimestampMS = null;
+        PollUpdateMessage.prototype.senderTimestampMs = null;
 
         let $oneOfFields;
 
@@ -32562,8 +32562,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(PollUpdateMessage.prototype, "_senderTimestampMS", {
-            get: $util.oneOfGetter($oneOfFields = ["senderTimestampMS"]),
+        Object.defineProperty(PollUpdateMessage.prototype, "_senderTimestampMs", {
+            get: $util.oneOfGetter($oneOfFields = ["senderTimestampMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -32580,8 +32580,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 $root.WAE2E.PollEncValue.encode(m.vote, w.uint32(18).fork()).ldelim();
             if (m.metadata != null && Object.hasOwnProperty.call(m, "metadata"))
                 $root.WAE2E.PollUpdateMessageMetadata.encode(m.metadata, w.uint32(26).fork()).ldelim();
-            if (m.senderTimestampMS != null && Object.hasOwnProperty.call(m, "senderTimestampMS"))
-                w.uint32(32).int64(m.senderTimestampMS);
+            if (m.senderTimestampMs != null && Object.hasOwnProperty.call(m, "senderTimestampMs"))
+                w.uint32(32).int64(m.senderTimestampMs);
             return w;
         };
 
@@ -32611,7 +32611,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 4: {
-                        m.senderTimestampMS = r.int64();
+                        m.senderTimestampMs = r.int64();
                         break;
                     }
                 default:
@@ -32645,15 +32645,15 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.PollUpdateMessage.metadata: object expected");
                 m.metadata = $root.WAE2E.PollUpdateMessageMetadata.fromObject(d.metadata, n + 1);
             }
-            if (d.senderTimestampMS != null) {
+            if (d.senderTimestampMs != null) {
                 if ($util.Long)
-                    (m.senderTimestampMS = $util.Long.fromValue(d.senderTimestampMS)).unsigned = false;
-                else if (typeof d.senderTimestampMS === "string")
-                    m.senderTimestampMS = parseInt(d.senderTimestampMS, 10);
-                else if (typeof d.senderTimestampMS === "number")
-                    m.senderTimestampMS = d.senderTimestampMS;
-                else if (typeof d.senderTimestampMS === "object")
-                    m.senderTimestampMS = new $util.LongBits(d.senderTimestampMS.low >>> 0, d.senderTimestampMS.high >>> 0).toNumber();
+                    (m.senderTimestampMs = $util.Long.fromValue(d.senderTimestampMs)).unsigned = false;
+                else if (typeof d.senderTimestampMs === "string")
+                    m.senderTimestampMs = parseInt(d.senderTimestampMs, 10);
+                else if (typeof d.senderTimestampMs === "number")
+                    m.senderTimestampMs = d.senderTimestampMs;
+                else if (typeof d.senderTimestampMs === "object")
+                    m.senderTimestampMs = new $util.LongBits(d.senderTimestampMs.low >>> 0, d.senderTimestampMs.high >>> 0).toNumber();
             }
             return m;
         };
@@ -32677,13 +32677,13 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._metadata = "metadata";
             }
-            if (m.senderTimestampMS != null && m.hasOwnProperty("senderTimestampMS")) {
-                if (typeof m.senderTimestampMS === "number")
-                    d.senderTimestampMS = o.longs === String ? String(m.senderTimestampMS) : m.senderTimestampMS;
+            if (m.senderTimestampMs != null && m.hasOwnProperty("senderTimestampMs")) {
+                if (typeof m.senderTimestampMs === "number")
+                    d.senderTimestampMs = o.longs === String ? String(m.senderTimestampMs) : m.senderTimestampMs;
                 else
-                    d.senderTimestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.senderTimestampMS) : o.longs === Number ? new $util.LongBits(m.senderTimestampMS.low >>> 0, m.senderTimestampMS.high >>> 0).toNumber() : m.senderTimestampMS;
+                    d.senderTimestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.senderTimestampMs) : o.longs === Number ? new $util.LongBits(m.senderTimestampMs.low >>> 0, m.senderTimestampMs.high >>> 0).toNumber() : m.senderTimestampMs;
                 if (o.oneofs)
-                    d._senderTimestampMS = "senderTimestampMS";
+                    d._senderTimestampMs = "senderTimestampMs";
             }
             return d;
         };
@@ -33350,7 +33350,7 @@ export const WAE2E = $root.WAE2E = (() => {
         ReactionMessage.prototype.key = null;
         ReactionMessage.prototype.text = null;
         ReactionMessage.prototype.groupingKey = null;
-        ReactionMessage.prototype.senderTimestampMS = null;
+        ReactionMessage.prototype.senderTimestampMs = null;
 
         let $oneOfFields;
 
@@ -33373,8 +33373,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ReactionMessage.prototype, "_senderTimestampMS", {
-            get: $util.oneOfGetter($oneOfFields = ["senderTimestampMS"]),
+        Object.defineProperty(ReactionMessage.prototype, "_senderTimestampMs", {
+            get: $util.oneOfGetter($oneOfFields = ["senderTimestampMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -33391,8 +33391,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(18).string(m.text);
             if (m.groupingKey != null && Object.hasOwnProperty.call(m, "groupingKey"))
                 w.uint32(26).string(m.groupingKey);
-            if (m.senderTimestampMS != null && Object.hasOwnProperty.call(m, "senderTimestampMS"))
-                w.uint32(32).int64(m.senderTimestampMS);
+            if (m.senderTimestampMs != null && Object.hasOwnProperty.call(m, "senderTimestampMs"))
+                w.uint32(32).int64(m.senderTimestampMs);
             return w;
         };
 
@@ -33422,7 +33422,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 4: {
-                        m.senderTimestampMS = r.int64();
+                        m.senderTimestampMs = r.int64();
                         break;
                     }
                 default:
@@ -33452,15 +33452,15 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.groupingKey != null) {
                 m.groupingKey = String(d.groupingKey);
             }
-            if (d.senderTimestampMS != null) {
+            if (d.senderTimestampMs != null) {
                 if ($util.Long)
-                    (m.senderTimestampMS = $util.Long.fromValue(d.senderTimestampMS)).unsigned = false;
-                else if (typeof d.senderTimestampMS === "string")
-                    m.senderTimestampMS = parseInt(d.senderTimestampMS, 10);
-                else if (typeof d.senderTimestampMS === "number")
-                    m.senderTimestampMS = d.senderTimestampMS;
-                else if (typeof d.senderTimestampMS === "object")
-                    m.senderTimestampMS = new $util.LongBits(d.senderTimestampMS.low >>> 0, d.senderTimestampMS.high >>> 0).toNumber();
+                    (m.senderTimestampMs = $util.Long.fromValue(d.senderTimestampMs)).unsigned = false;
+                else if (typeof d.senderTimestampMs === "string")
+                    m.senderTimestampMs = parseInt(d.senderTimestampMs, 10);
+                else if (typeof d.senderTimestampMs === "number")
+                    m.senderTimestampMs = d.senderTimestampMs;
+                else if (typeof d.senderTimestampMs === "object")
+                    m.senderTimestampMs = new $util.LongBits(d.senderTimestampMs.low >>> 0, d.senderTimestampMs.high >>> 0).toNumber();
             }
             return m;
         };
@@ -33484,13 +33484,13 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._groupingKey = "groupingKey";
             }
-            if (m.senderTimestampMS != null && m.hasOwnProperty("senderTimestampMS")) {
-                if (typeof m.senderTimestampMS === "number")
-                    d.senderTimestampMS = o.longs === String ? String(m.senderTimestampMS) : m.senderTimestampMS;
+            if (m.senderTimestampMs != null && m.hasOwnProperty("senderTimestampMs")) {
+                if (typeof m.senderTimestampMs === "number")
+                    d.senderTimestampMs = o.longs === String ? String(m.senderTimestampMs) : m.senderTimestampMs;
                 else
-                    d.senderTimestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.senderTimestampMS) : o.longs === Number ? new $util.LongBits(m.senderTimestampMS.low >>> 0, m.senderTimestampMS.high >>> 0).toNumber() : m.senderTimestampMS;
+                    d.senderTimestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.senderTimestampMs) : o.longs === Number ? new $util.LongBits(m.senderTimestampMs.low >>> 0, m.senderTimestampMs.high >>> 0).toNumber() : m.senderTimestampMs;
                 if (o.oneofs)
-                    d._senderTimestampMS = "senderTimestampMS";
+                    d._senderTimestampMs = "senderTimestampMs";
             }
             return d;
         };
@@ -33616,15 +33616,15 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        DeviceSentMessage.prototype.destinationJID = null;
+        DeviceSentMessage.prototype.destinationJid = null;
         DeviceSentMessage.prototype.message = null;
         DeviceSentMessage.prototype.phash = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(DeviceSentMessage.prototype, "_destinationJID", {
-            get: $util.oneOfGetter($oneOfFields = ["destinationJID"]),
+        Object.defineProperty(DeviceSentMessage.prototype, "_destinationJid", {
+            get: $util.oneOfGetter($oneOfFields = ["destinationJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -33647,8 +33647,8 @@ export const WAE2E = $root.WAE2E = (() => {
         DeviceSentMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.destinationJID != null && Object.hasOwnProperty.call(m, "destinationJID"))
-                w.uint32(10).string(m.destinationJID);
+            if (m.destinationJid != null && Object.hasOwnProperty.call(m, "destinationJid"))
+                w.uint32(10).string(m.destinationJid);
             if (m.message != null && Object.hasOwnProperty.call(m, "message"))
                 $root.WAE2E.Message.encode(m.message, w.uint32(18).fork()).ldelim();
             if (m.phash != null && Object.hasOwnProperty.call(m, "phash"))
@@ -33670,7 +33670,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.destinationJID = r.string();
+                        m.destinationJid = r.string();
                         break;
                     }
                 case 2: {
@@ -33697,8 +33697,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.DeviceSentMessage();
-            if (d.destinationJID != null) {
-                m.destinationJID = String(d.destinationJID);
+            if (d.destinationJid != null) {
+                m.destinationJid = String(d.destinationJid);
             }
             if (d.message != null) {
                 if (typeof d.message !== "object")
@@ -33715,10 +33715,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.destinationJID != null && m.hasOwnProperty("destinationJID")) {
-                d.destinationJID = m.destinationJID;
+            if (m.destinationJid != null && m.hasOwnProperty("destinationJid")) {
+                d.destinationJid = m.destinationJid;
                 if (o.oneofs)
-                    d._destinationJID = "destinationJID";
+                    d._destinationJid = "destinationJid";
             }
             if (m.message != null && m.hasOwnProperty("message")) {
                 d.message = $root.WAE2E.Message.toObject(m.message, o);
@@ -33855,9 +33855,9 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         EventInviteMessage.prototype.contextInfo = null;
-        EventInviteMessage.prototype.eventID = null;
+        EventInviteMessage.prototype.eventId = null;
         EventInviteMessage.prototype.eventTitle = null;
-        EventInviteMessage.prototype.JPEGThumbnail = null;
+        EventInviteMessage.prototype.jpegThumbnail = null;
         EventInviteMessage.prototype.startTime = null;
         EventInviteMessage.prototype.caption = null;
         EventInviteMessage.prototype.isCanceled = null;
@@ -33872,8 +33872,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EventInviteMessage.prototype, "_eventID", {
-            get: $util.oneOfGetter($oneOfFields = ["eventID"]),
+        Object.defineProperty(EventInviteMessage.prototype, "_eventId", {
+            get: $util.oneOfGetter($oneOfFields = ["eventId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -33884,8 +33884,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EventInviteMessage.prototype, "_JPEGThumbnail", {
-            get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+        Object.defineProperty(EventInviteMessage.prototype, "_jpegThumbnail", {
+            get: $util.oneOfGetter($oneOfFields = ["jpegThumbnail"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -33922,12 +33922,12 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
                 $root.WAE2E.ContextInfo.encode(m.contextInfo, w.uint32(10).fork()).ldelim();
-            if (m.eventID != null && Object.hasOwnProperty.call(m, "eventID"))
-                w.uint32(18).string(m.eventID);
+            if (m.eventId != null && Object.hasOwnProperty.call(m, "eventId"))
+                w.uint32(18).string(m.eventId);
             if (m.eventTitle != null && Object.hasOwnProperty.call(m, "eventTitle"))
                 w.uint32(26).string(m.eventTitle);
-            if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                w.uint32(34).bytes(m.JPEGThumbnail);
+            if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                w.uint32(34).bytes(m.jpegThumbnail);
             if (m.startTime != null && Object.hasOwnProperty.call(m, "startTime"))
                 w.uint32(40).int64(m.startTime);
             if (m.caption != null && Object.hasOwnProperty.call(m, "caption"))
@@ -33957,7 +33957,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.eventID = r.string();
+                        m.eventId = r.string();
                         break;
                     }
                 case 3: {
@@ -33965,7 +33965,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 4: {
-                        m.JPEGThumbnail = r.bytes();
+                        m.jpegThumbnail = r.bytes();
                         break;
                     }
                 case 5: {
@@ -34005,17 +34005,17 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.EventInviteMessage.contextInfo: object expected");
                 m.contextInfo = $root.WAE2E.ContextInfo.fromObject(d.contextInfo, n + 1);
             }
-            if (d.eventID != null) {
-                m.eventID = String(d.eventID);
+            if (d.eventId != null) {
+                m.eventId = String(d.eventId);
             }
             if (d.eventTitle != null) {
                 m.eventTitle = String(d.eventTitle);
             }
-            if (d.JPEGThumbnail != null) {
-                if (typeof d.JPEGThumbnail === "string")
-                    $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                else if (d.JPEGThumbnail.length >= 0)
-                    m.JPEGThumbnail = d.JPEGThumbnail;
+            if (d.jpegThumbnail != null) {
+                if (typeof d.jpegThumbnail === "string")
+                    $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                else if (d.jpegThumbnail.length >= 0)
+                    m.jpegThumbnail = d.jpegThumbnail;
             }
             if (d.startTime != null) {
                 if ($util.Long)
@@ -34055,20 +34055,20 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._contextInfo = "contextInfo";
             }
-            if (m.eventID != null && m.hasOwnProperty("eventID")) {
-                d.eventID = m.eventID;
+            if (m.eventId != null && m.hasOwnProperty("eventId")) {
+                d.eventId = m.eventId;
                 if (o.oneofs)
-                    d._eventID = "eventID";
+                    d._eventId = "eventId";
             }
             if (m.eventTitle != null && m.hasOwnProperty("eventTitle")) {
                 d.eventTitle = m.eventTitle;
                 if (o.oneofs)
                     d._eventTitle = "eventTitle";
             }
-            if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+            if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                 if (o.oneofs)
-                    d._JPEGThumbnail = "JPEGThumbnail";
+                    d._jpegThumbnail = "jpegThumbnail";
             }
             if (m.startTime != null && m.hasOwnProperty("startTime")) {
                 if (typeof m.startTime === "number")
@@ -34122,17 +34122,17 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        NewsletterFollowerInviteMessage.prototype.newsletterJID = null;
+        NewsletterFollowerInviteMessage.prototype.newsletterJid = null;
         NewsletterFollowerInviteMessage.prototype.newsletterName = null;
-        NewsletterFollowerInviteMessage.prototype.JPEGThumbnail = null;
+        NewsletterFollowerInviteMessage.prototype.jpegThumbnail = null;
         NewsletterFollowerInviteMessage.prototype.caption = null;
         NewsletterFollowerInviteMessage.prototype.contextInfo = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(NewsletterFollowerInviteMessage.prototype, "_newsletterJID", {
-            get: $util.oneOfGetter($oneOfFields = ["newsletterJID"]),
+        Object.defineProperty(NewsletterFollowerInviteMessage.prototype, "_newsletterJid", {
+            get: $util.oneOfGetter($oneOfFields = ["newsletterJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -34143,8 +34143,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(NewsletterFollowerInviteMessage.prototype, "_JPEGThumbnail", {
-            get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+        Object.defineProperty(NewsletterFollowerInviteMessage.prototype, "_jpegThumbnail", {
+            get: $util.oneOfGetter($oneOfFields = ["jpegThumbnail"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -34167,12 +34167,12 @@ export const WAE2E = $root.WAE2E = (() => {
         NewsletterFollowerInviteMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.newsletterJID != null && Object.hasOwnProperty.call(m, "newsletterJID"))
-                w.uint32(10).string(m.newsletterJID);
+            if (m.newsletterJid != null && Object.hasOwnProperty.call(m, "newsletterJid"))
+                w.uint32(10).string(m.newsletterJid);
             if (m.newsletterName != null && Object.hasOwnProperty.call(m, "newsletterName"))
                 w.uint32(18).string(m.newsletterName);
-            if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                w.uint32(26).bytes(m.JPEGThumbnail);
+            if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                w.uint32(26).bytes(m.jpegThumbnail);
             if (m.caption != null && Object.hasOwnProperty.call(m, "caption"))
                 w.uint32(34).string(m.caption);
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
@@ -34194,7 +34194,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.newsletterJID = r.string();
+                        m.newsletterJid = r.string();
                         break;
                     }
                 case 2: {
@@ -34202,7 +34202,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.JPEGThumbnail = r.bytes();
+                        m.jpegThumbnail = r.bytes();
                         break;
                     }
                 case 4: {
@@ -34229,17 +34229,17 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.NewsletterFollowerInviteMessage();
-            if (d.newsletterJID != null) {
-                m.newsletterJID = String(d.newsletterJID);
+            if (d.newsletterJid != null) {
+                m.newsletterJid = String(d.newsletterJid);
             }
             if (d.newsletterName != null) {
                 m.newsletterName = String(d.newsletterName);
             }
-            if (d.JPEGThumbnail != null) {
-                if (typeof d.JPEGThumbnail === "string")
-                    $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                else if (d.JPEGThumbnail.length >= 0)
-                    m.JPEGThumbnail = d.JPEGThumbnail;
+            if (d.jpegThumbnail != null) {
+                if (typeof d.jpegThumbnail === "string")
+                    $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                else if (d.jpegThumbnail.length >= 0)
+                    m.jpegThumbnail = d.jpegThumbnail;
             }
             if (d.caption != null) {
                 m.caption = String(d.caption);
@@ -34256,20 +34256,20 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.newsletterJID != null && m.hasOwnProperty("newsletterJID")) {
-                d.newsletterJID = m.newsletterJID;
+            if (m.newsletterJid != null && m.hasOwnProperty("newsletterJid")) {
+                d.newsletterJid = m.newsletterJid;
                 if (o.oneofs)
-                    d._newsletterJID = "newsletterJID";
+                    d._newsletterJid = "newsletterJid";
             }
             if (m.newsletterName != null && m.hasOwnProperty("newsletterName")) {
                 d.newsletterName = m.newsletterName;
                 if (o.oneofs)
                     d._newsletterName = "newsletterName";
             }
-            if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+            if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                 if (o.oneofs)
-                    d._JPEGThumbnail = "JPEGThumbnail";
+                    d._jpegThumbnail = "jpegThumbnail";
             }
             if (m.caption != null && m.hasOwnProperty("caption")) {
                 d.caption = m.caption;
@@ -34307,9 +34307,9 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        NewsletterAdminInviteMessage.prototype.newsletterJID = null;
+        NewsletterAdminInviteMessage.prototype.newsletterJid = null;
         NewsletterAdminInviteMessage.prototype.newsletterName = null;
-        NewsletterAdminInviteMessage.prototype.JPEGThumbnail = null;
+        NewsletterAdminInviteMessage.prototype.jpegThumbnail = null;
         NewsletterAdminInviteMessage.prototype.caption = null;
         NewsletterAdminInviteMessage.prototype.inviteExpiration = null;
         NewsletterAdminInviteMessage.prototype.contextInfo = null;
@@ -34317,8 +34317,8 @@ export const WAE2E = $root.WAE2E = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(NewsletterAdminInviteMessage.prototype, "_newsletterJID", {
-            get: $util.oneOfGetter($oneOfFields = ["newsletterJID"]),
+        Object.defineProperty(NewsletterAdminInviteMessage.prototype, "_newsletterJid", {
+            get: $util.oneOfGetter($oneOfFields = ["newsletterJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -34329,8 +34329,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(NewsletterAdminInviteMessage.prototype, "_JPEGThumbnail", {
-            get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+        Object.defineProperty(NewsletterAdminInviteMessage.prototype, "_jpegThumbnail", {
+            get: $util.oneOfGetter($oneOfFields = ["jpegThumbnail"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -34359,12 +34359,12 @@ export const WAE2E = $root.WAE2E = (() => {
         NewsletterAdminInviteMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.newsletterJID != null && Object.hasOwnProperty.call(m, "newsletterJID"))
-                w.uint32(10).string(m.newsletterJID);
+            if (m.newsletterJid != null && Object.hasOwnProperty.call(m, "newsletterJid"))
+                w.uint32(10).string(m.newsletterJid);
             if (m.newsletterName != null && Object.hasOwnProperty.call(m, "newsletterName"))
                 w.uint32(18).string(m.newsletterName);
-            if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                w.uint32(26).bytes(m.JPEGThumbnail);
+            if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                w.uint32(26).bytes(m.jpegThumbnail);
             if (m.caption != null && Object.hasOwnProperty.call(m, "caption"))
                 w.uint32(34).string(m.caption);
             if (m.inviteExpiration != null && Object.hasOwnProperty.call(m, "inviteExpiration"))
@@ -34388,7 +34388,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.newsletterJID = r.string();
+                        m.newsletterJid = r.string();
                         break;
                     }
                 case 2: {
@@ -34396,7 +34396,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.JPEGThumbnail = r.bytes();
+                        m.jpegThumbnail = r.bytes();
                         break;
                     }
                 case 4: {
@@ -34427,17 +34427,17 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.NewsletterAdminInviteMessage();
-            if (d.newsletterJID != null) {
-                m.newsletterJID = String(d.newsletterJID);
+            if (d.newsletterJid != null) {
+                m.newsletterJid = String(d.newsletterJid);
             }
             if (d.newsletterName != null) {
                 m.newsletterName = String(d.newsletterName);
             }
-            if (d.JPEGThumbnail != null) {
-                if (typeof d.JPEGThumbnail === "string")
-                    $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                else if (d.JPEGThumbnail.length >= 0)
-                    m.JPEGThumbnail = d.JPEGThumbnail;
+            if (d.jpegThumbnail != null) {
+                if (typeof d.jpegThumbnail === "string")
+                    $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                else if (d.jpegThumbnail.length >= 0)
+                    m.jpegThumbnail = d.jpegThumbnail;
             }
             if (d.caption != null) {
                 m.caption = String(d.caption);
@@ -34464,20 +34464,20 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.newsletterJID != null && m.hasOwnProperty("newsletterJID")) {
-                d.newsletterJID = m.newsletterJID;
+            if (m.newsletterJid != null && m.hasOwnProperty("newsletterJid")) {
+                d.newsletterJid = m.newsletterJid;
                 if (o.oneofs)
-                    d._newsletterJID = "newsletterJID";
+                    d._newsletterJid = "newsletterJid";
             }
             if (m.newsletterName != null && m.hasOwnProperty("newsletterName")) {
                 d.newsletterName = m.newsletterName;
                 if (o.oneofs)
                     d._newsletterName = "newsletterName";
             }
-            if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+            if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                 if (o.oneofs)
-                    d._JPEGThumbnail = "JPEGThumbnail";
+                    d._jpegThumbnail = "jpegThumbnail";
             }
             if (m.caption != null && m.hasOwnProperty("caption")) {
                 d.caption = m.caption;
@@ -34524,7 +34524,7 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         ProductMessage.prototype.product = null;
-        ProductMessage.prototype.businessOwnerJID = null;
+        ProductMessage.prototype.businessOwnerJid = null;
         ProductMessage.prototype.catalog = null;
         ProductMessage.prototype.body = null;
         ProductMessage.prototype.footer = null;
@@ -34539,8 +34539,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ProductMessage.prototype, "_businessOwnerJID", {
-            get: $util.oneOfGetter($oneOfFields = ["businessOwnerJID"]),
+        Object.defineProperty(ProductMessage.prototype, "_businessOwnerJid", {
+            get: $util.oneOfGetter($oneOfFields = ["businessOwnerJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -34577,8 +34577,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.product != null && Object.hasOwnProperty.call(m, "product"))
                 $root.WAE2E.ProductMessage.ProductSnapshot.encode(m.product, w.uint32(10).fork()).ldelim();
-            if (m.businessOwnerJID != null && Object.hasOwnProperty.call(m, "businessOwnerJID"))
-                w.uint32(18).string(m.businessOwnerJID);
+            if (m.businessOwnerJid != null && Object.hasOwnProperty.call(m, "businessOwnerJid"))
+                w.uint32(18).string(m.businessOwnerJid);
             if (m.catalog != null && Object.hasOwnProperty.call(m, "catalog"))
                 $root.WAE2E.ProductMessage.CatalogSnapshot.encode(m.catalog, w.uint32(34).fork()).ldelim();
             if (m.body != null && Object.hasOwnProperty.call(m, "body"))
@@ -34608,7 +34608,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.businessOwnerJID = r.string();
+                        m.businessOwnerJid = r.string();
                         break;
                     }
                 case 4: {
@@ -34648,8 +34648,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.ProductMessage.product: object expected");
                 m.product = $root.WAE2E.ProductMessage.ProductSnapshot.fromObject(d.product, n + 1);
             }
-            if (d.businessOwnerJID != null) {
-                m.businessOwnerJID = String(d.businessOwnerJID);
+            if (d.businessOwnerJid != null) {
+                m.businessOwnerJid = String(d.businessOwnerJid);
             }
             if (d.catalog != null) {
                 if (typeof d.catalog !== "object")
@@ -34679,10 +34679,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._product = "product";
             }
-            if (m.businessOwnerJID != null && m.hasOwnProperty("businessOwnerJID")) {
-                d.businessOwnerJID = m.businessOwnerJID;
+            if (m.businessOwnerJid != null && m.hasOwnProperty("businessOwnerJid")) {
+                d.businessOwnerJid = m.businessOwnerJid;
                 if (o.oneofs)
-                    d._businessOwnerJID = "businessOwnerJID";
+                    d._businessOwnerJid = "businessOwnerJid";
             }
             if (m.catalog != null && m.hasOwnProperty("catalog")) {
                 d.catalog = $root.WAE2E.ProductMessage.CatalogSnapshot.toObject(m.catalog, o);
@@ -34728,17 +34728,17 @@ export const WAE2E = $root.WAE2E = (() => {
             }
 
             ProductSnapshot.prototype.productImage = null;
-            ProductSnapshot.prototype.productID = null;
+            ProductSnapshot.prototype.productId = null;
             ProductSnapshot.prototype.title = null;
             ProductSnapshot.prototype.description = null;
             ProductSnapshot.prototype.currencyCode = null;
             ProductSnapshot.prototype.priceAmount1000 = null;
-            ProductSnapshot.prototype.retailerID = null;
-            ProductSnapshot.prototype.URL = null;
+            ProductSnapshot.prototype.retailerId = null;
+            ProductSnapshot.prototype.url = null;
             ProductSnapshot.prototype.productImageCount = null;
-            ProductSnapshot.prototype.firstImageID = null;
+            ProductSnapshot.prototype.firstImageId = null;
             ProductSnapshot.prototype.salePriceAmount1000 = null;
-            ProductSnapshot.prototype.signedURL = null;
+            ProductSnapshot.prototype.signedUrl = null;
 
             let $oneOfFields;
 
@@ -34749,8 +34749,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ProductSnapshot.prototype, "_productID", {
-                get: $util.oneOfGetter($oneOfFields = ["productID"]),
+            Object.defineProperty(ProductSnapshot.prototype, "_productId", {
+                get: $util.oneOfGetter($oneOfFields = ["productId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -34779,14 +34779,14 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ProductSnapshot.prototype, "_retailerID", {
-                get: $util.oneOfGetter($oneOfFields = ["retailerID"]),
+            Object.defineProperty(ProductSnapshot.prototype, "_retailerId", {
+                get: $util.oneOfGetter($oneOfFields = ["retailerId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ProductSnapshot.prototype, "_URL", {
-                get: $util.oneOfGetter($oneOfFields = ["URL"]),
+            Object.defineProperty(ProductSnapshot.prototype, "_url", {
+                get: $util.oneOfGetter($oneOfFields = ["url"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -34797,8 +34797,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ProductSnapshot.prototype, "_firstImageID", {
-                get: $util.oneOfGetter($oneOfFields = ["firstImageID"]),
+            Object.defineProperty(ProductSnapshot.prototype, "_firstImageId", {
+                get: $util.oneOfGetter($oneOfFields = ["firstImageId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -34809,8 +34809,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ProductSnapshot.prototype, "_signedURL", {
-                get: $util.oneOfGetter($oneOfFields = ["signedURL"]),
+            Object.defineProperty(ProductSnapshot.prototype, "_signedUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["signedUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -34823,8 +34823,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     w = $Writer.create();
                 if (m.productImage != null && Object.hasOwnProperty.call(m, "productImage"))
                     $root.WAE2E.ImageMessage.encode(m.productImage, w.uint32(10).fork()).ldelim();
-                if (m.productID != null && Object.hasOwnProperty.call(m, "productID"))
-                    w.uint32(18).string(m.productID);
+                if (m.productId != null && Object.hasOwnProperty.call(m, "productId"))
+                    w.uint32(18).string(m.productId);
                 if (m.title != null && Object.hasOwnProperty.call(m, "title"))
                     w.uint32(26).string(m.title);
                 if (m.description != null && Object.hasOwnProperty.call(m, "description"))
@@ -34833,18 +34833,18 @@ export const WAE2E = $root.WAE2E = (() => {
                     w.uint32(42).string(m.currencyCode);
                 if (m.priceAmount1000 != null && Object.hasOwnProperty.call(m, "priceAmount1000"))
                     w.uint32(48).int64(m.priceAmount1000);
-                if (m.retailerID != null && Object.hasOwnProperty.call(m, "retailerID"))
-                    w.uint32(58).string(m.retailerID);
-                if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                    w.uint32(66).string(m.URL);
+                if (m.retailerId != null && Object.hasOwnProperty.call(m, "retailerId"))
+                    w.uint32(58).string(m.retailerId);
+                if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                    w.uint32(66).string(m.url);
                 if (m.productImageCount != null && Object.hasOwnProperty.call(m, "productImageCount"))
                     w.uint32(72).uint32(m.productImageCount);
-                if (m.firstImageID != null && Object.hasOwnProperty.call(m, "firstImageID"))
-                    w.uint32(90).string(m.firstImageID);
+                if (m.firstImageId != null && Object.hasOwnProperty.call(m, "firstImageId"))
+                    w.uint32(90).string(m.firstImageId);
                 if (m.salePriceAmount1000 != null && Object.hasOwnProperty.call(m, "salePriceAmount1000"))
                     w.uint32(96).int64(m.salePriceAmount1000);
-                if (m.signedURL != null && Object.hasOwnProperty.call(m, "signedURL"))
-                    w.uint32(106).string(m.signedURL);
+                if (m.signedUrl != null && Object.hasOwnProperty.call(m, "signedUrl"))
+                    w.uint32(106).string(m.signedUrl);
                 return w;
             };
 
@@ -34866,7 +34866,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 2: {
-                            m.productID = r.string();
+                            m.productId = r.string();
                             break;
                         }
                     case 3: {
@@ -34886,11 +34886,11 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 7: {
-                            m.retailerID = r.string();
+                            m.retailerId = r.string();
                             break;
                         }
                     case 8: {
-                            m.URL = r.string();
+                            m.url = r.string();
                             break;
                         }
                     case 9: {
@@ -34898,7 +34898,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 11: {
-                            m.firstImageID = r.string();
+                            m.firstImageId = r.string();
                             break;
                         }
                     case 12: {
@@ -34906,7 +34906,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 13: {
-                            m.signedURL = r.string();
+                            m.signedUrl = r.string();
                             break;
                         }
                     default:
@@ -34930,8 +34930,8 @@ export const WAE2E = $root.WAE2E = (() => {
                         throw TypeError(".WAE2E.ProductMessage.ProductSnapshot.productImage: object expected");
                     m.productImage = $root.WAE2E.ImageMessage.fromObject(d.productImage, n + 1);
                 }
-                if (d.productID != null) {
-                    m.productID = String(d.productID);
+                if (d.productId != null) {
+                    m.productId = String(d.productId);
                 }
                 if (d.title != null) {
                     m.title = String(d.title);
@@ -34952,17 +34952,17 @@ export const WAE2E = $root.WAE2E = (() => {
                     else if (typeof d.priceAmount1000 === "object")
                         m.priceAmount1000 = new $util.LongBits(d.priceAmount1000.low >>> 0, d.priceAmount1000.high >>> 0).toNumber();
                 }
-                if (d.retailerID != null) {
-                    m.retailerID = String(d.retailerID);
+                if (d.retailerId != null) {
+                    m.retailerId = String(d.retailerId);
                 }
-                if (d.URL != null) {
-                    m.URL = String(d.URL);
+                if (d.url != null) {
+                    m.url = String(d.url);
                 }
                 if (d.productImageCount != null) {
                     m.productImageCount = d.productImageCount >>> 0;
                 }
-                if (d.firstImageID != null) {
-                    m.firstImageID = String(d.firstImageID);
+                if (d.firstImageId != null) {
+                    m.firstImageId = String(d.firstImageId);
                 }
                 if (d.salePriceAmount1000 != null) {
                     if ($util.Long)
@@ -34974,8 +34974,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     else if (typeof d.salePriceAmount1000 === "object")
                         m.salePriceAmount1000 = new $util.LongBits(d.salePriceAmount1000.low >>> 0, d.salePriceAmount1000.high >>> 0).toNumber();
                 }
-                if (d.signedURL != null) {
-                    m.signedURL = String(d.signedURL);
+                if (d.signedUrl != null) {
+                    m.signedUrl = String(d.signedUrl);
                 }
                 return m;
             };
@@ -34989,10 +34989,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._productImage = "productImage";
                 }
-                if (m.productID != null && m.hasOwnProperty("productID")) {
-                    d.productID = m.productID;
+                if (m.productId != null && m.hasOwnProperty("productId")) {
+                    d.productId = m.productId;
                     if (o.oneofs)
-                        d._productID = "productID";
+                        d._productId = "productId";
                 }
                 if (m.title != null && m.hasOwnProperty("title")) {
                     d.title = m.title;
@@ -35017,25 +35017,25 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._priceAmount1000 = "priceAmount1000";
                 }
-                if (m.retailerID != null && m.hasOwnProperty("retailerID")) {
-                    d.retailerID = m.retailerID;
+                if (m.retailerId != null && m.hasOwnProperty("retailerId")) {
+                    d.retailerId = m.retailerId;
                     if (o.oneofs)
-                        d._retailerID = "retailerID";
+                        d._retailerId = "retailerId";
                 }
-                if (m.URL != null && m.hasOwnProperty("URL")) {
-                    d.URL = m.URL;
+                if (m.url != null && m.hasOwnProperty("url")) {
+                    d.url = m.url;
                     if (o.oneofs)
-                        d._URL = "URL";
+                        d._url = "url";
                 }
                 if (m.productImageCount != null && m.hasOwnProperty("productImageCount")) {
                     d.productImageCount = m.productImageCount;
                     if (o.oneofs)
                         d._productImageCount = "productImageCount";
                 }
-                if (m.firstImageID != null && m.hasOwnProperty("firstImageID")) {
-                    d.firstImageID = m.firstImageID;
+                if (m.firstImageId != null && m.hasOwnProperty("firstImageId")) {
+                    d.firstImageId = m.firstImageId;
                     if (o.oneofs)
-                        d._firstImageID = "firstImageID";
+                        d._firstImageId = "firstImageId";
                 }
                 if (m.salePriceAmount1000 != null && m.hasOwnProperty("salePriceAmount1000")) {
                     if (typeof m.salePriceAmount1000 === "number")
@@ -35045,10 +35045,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._salePriceAmount1000 = "salePriceAmount1000";
                 }
-                if (m.signedURL != null && m.hasOwnProperty("signedURL")) {
-                    d.signedURL = m.signedURL;
+                if (m.signedUrl != null && m.hasOwnProperty("signedUrl")) {
+                    d.signedUrl = m.signedUrl;
                     if (o.oneofs)
-                        d._signedURL = "signedURL";
+                        d._signedUrl = "signedUrl";
                 }
                 return d;
             };
@@ -35219,7 +35219,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        TemplateButtonReplyMessage.prototype.selectedID = null;
+        TemplateButtonReplyMessage.prototype.selectedId = null;
         TemplateButtonReplyMessage.prototype.selectedDisplayText = null;
         TemplateButtonReplyMessage.prototype.contextInfo = null;
         TemplateButtonReplyMessage.prototype.selectedIndex = null;
@@ -35228,8 +35228,8 @@ export const WAE2E = $root.WAE2E = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(TemplateButtonReplyMessage.prototype, "_selectedID", {
-            get: $util.oneOfGetter($oneOfFields = ["selectedID"]),
+        Object.defineProperty(TemplateButtonReplyMessage.prototype, "_selectedId", {
+            get: $util.oneOfGetter($oneOfFields = ["selectedId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -35264,8 +35264,8 @@ export const WAE2E = $root.WAE2E = (() => {
         TemplateButtonReplyMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.selectedID != null && Object.hasOwnProperty.call(m, "selectedID"))
-                w.uint32(10).string(m.selectedID);
+            if (m.selectedId != null && Object.hasOwnProperty.call(m, "selectedId"))
+                w.uint32(10).string(m.selectedId);
             if (m.selectedDisplayText != null && Object.hasOwnProperty.call(m, "selectedDisplayText"))
                 w.uint32(18).string(m.selectedDisplayText);
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
@@ -35291,7 +35291,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.selectedID = r.string();
+                        m.selectedId = r.string();
                         break;
                     }
                 case 2: {
@@ -35326,8 +35326,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.TemplateButtonReplyMessage();
-            if (d.selectedID != null) {
-                m.selectedID = String(d.selectedID);
+            if (d.selectedId != null) {
+                m.selectedId = String(d.selectedId);
             }
             if (d.selectedDisplayText != null) {
                 m.selectedDisplayText = String(d.selectedDisplayText);
@@ -35350,10 +35350,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.selectedID != null && m.hasOwnProperty("selectedID")) {
-                d.selectedID = m.selectedID;
+            if (m.selectedId != null && m.hasOwnProperty("selectedId")) {
+                d.selectedId = m.selectedId;
                 if (o.oneofs)
-                    d._selectedID = "selectedID";
+                    d._selectedId = "selectedId";
             }
             if (m.selectedDisplayText != null && m.hasOwnProperty("selectedDisplayText")) {
                 d.selectedDisplayText = m.selectedDisplayText;
@@ -35406,7 +35406,7 @@ export const WAE2E = $root.WAE2E = (() => {
         TemplateMessage.prototype.interactiveMessageTemplate = null;
         TemplateMessage.prototype.contextInfo = null;
         TemplateMessage.prototype.hydratedTemplate = null;
-        TemplateMessage.prototype.templateID = null;
+        TemplateMessage.prototype.templateId = null;
 
         let $oneOfFields;
 
@@ -35428,8 +35428,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(TemplateMessage.prototype, "_templateID", {
-            get: $util.oneOfGetter($oneOfFields = ["templateID"]),
+        Object.defineProperty(TemplateMessage.prototype, "_templateId", {
+            get: $util.oneOfGetter($oneOfFields = ["templateId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -35450,8 +35450,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 $root.WAE2E.TemplateMessage.HydratedFourRowTemplate.encode(m.hydratedTemplate, w.uint32(34).fork()).ldelim();
             if (m.interactiveMessageTemplate != null && Object.hasOwnProperty.call(m, "interactiveMessageTemplate"))
                 $root.WAE2E.InteractiveMessage.encode(m.interactiveMessageTemplate, w.uint32(42).fork()).ldelim();
-            if (m.templateID != null && Object.hasOwnProperty.call(m, "templateID"))
-                w.uint32(74).string(m.templateID);
+            if (m.templateId != null && Object.hasOwnProperty.call(m, "templateId"))
+                w.uint32(74).string(m.templateId);
             return w;
         };
 
@@ -35489,7 +35489,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 9: {
-                        m.templateID = r.string();
+                        m.templateId = r.string();
                         break;
                     }
                 default:
@@ -35533,8 +35533,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.TemplateMessage.hydratedTemplate: object expected");
                 m.hydratedTemplate = $root.WAE2E.TemplateMessage.HydratedFourRowTemplate.fromObject(d.hydratedTemplate, n + 1);
             }
-            if (d.templateID != null) {
-                m.templateID = String(d.templateID);
+            if (d.templateId != null) {
+                m.templateId = String(d.templateId);
             }
             return m;
         };
@@ -35568,10 +35568,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d.format = "interactiveMessageTemplate";
             }
-            if (m.templateID != null && m.hasOwnProperty("templateID")) {
-                d.templateID = m.templateID;
+            if (m.templateId != null && m.hasOwnProperty("templateId")) {
+                d.templateId = m.templateId;
                 if (o.oneofs)
-                    d._templateID = "templateID";
+                    d._templateId = "templateId";
             }
             return d;
         };
@@ -35605,7 +35605,7 @@ export const WAE2E = $root.WAE2E = (() => {
             HydratedFourRowTemplate.prototype.hydratedContentText = null;
             HydratedFourRowTemplate.prototype.hydratedFooterText = null;
             HydratedFourRowTemplate.prototype.hydratedButtons = $util.emptyArray;
-            HydratedFourRowTemplate.prototype.templateID = null;
+            HydratedFourRowTemplate.prototype.templateId = null;
             HydratedFourRowTemplate.prototype.maskLinkedDevices = null;
 
             let $oneOfFields;
@@ -35628,8 +35628,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(HydratedFourRowTemplate.prototype, "_templateID", {
-                get: $util.oneOfGetter($oneOfFields = ["templateID"]),
+            Object.defineProperty(HydratedFourRowTemplate.prototype, "_templateId", {
+                get: $util.oneOfGetter($oneOfFields = ["templateId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -35664,8 +35664,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     for (var i = 0; i < m.hydratedButtons.length; ++i)
                         $root.WAE2E.HydratedTemplateButton.encode(m.hydratedButtons[i], w.uint32(66).fork()).ldelim();
                 }
-                if (m.templateID != null && Object.hasOwnProperty.call(m, "templateID"))
-                    w.uint32(74).string(m.templateID);
+                if (m.templateId != null && Object.hasOwnProperty.call(m, "templateId"))
+                    w.uint32(74).string(m.templateId);
                 if (m.maskLinkedDevices != null && Object.hasOwnProperty.call(m, "maskLinkedDevices"))
                     w.uint32(80).bool(m.maskLinkedDevices);
                 return w;
@@ -35719,7 +35719,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 9: {
-                            m.templateID = r.string();
+                            m.templateId = r.string();
                             break;
                         }
                     case 10: {
@@ -35781,8 +35781,8 @@ export const WAE2E = $root.WAE2E = (() => {
                         m.hydratedButtons[i] = $root.WAE2E.HydratedTemplateButton.fromObject(d.hydratedButtons[i], n + 1);
                     }
                 }
-                if (d.templateID != null) {
-                    m.templateID = String(d.templateID);
+                if (d.templateId != null) {
+                    m.templateId = String(d.templateId);
                 }
                 if (d.maskLinkedDevices != null) {
                     m.maskLinkedDevices = Boolean(d.maskLinkedDevices);
@@ -35838,10 +35838,10 @@ export const WAE2E = $root.WAE2E = (() => {
                         d.hydratedButtons[j] = $root.WAE2E.HydratedTemplateButton.toObject(m.hydratedButtons[j], o);
                     }
                 }
-                if (m.templateID != null && m.hasOwnProperty("templateID")) {
-                    d.templateID = m.templateID;
+                if (m.templateId != null && m.hasOwnProperty("templateId")) {
+                    d.templateId = m.templateId;
                     if (o.oneofs)
-                        d._templateID = "templateID";
+                        d._templateId = "templateId";
                 }
                 if (m.maskLinkedDevices != null && m.hasOwnProperty("maskLinkedDevices")) {
                     d.maskLinkedDevices = m.maskLinkedDevices;
@@ -36119,9 +36119,9 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        StickerMessage.prototype.URL = null;
-        StickerMessage.prototype.fileSHA256 = null;
-        StickerMessage.prototype.fileEncSHA256 = null;
+        StickerMessage.prototype.url = null;
+        StickerMessage.prototype.fileSha256 = null;
+        StickerMessage.prototype.fileEncSha256 = null;
         StickerMessage.prototype.mediaKey = null;
         StickerMessage.prototype.mimetype = null;
         StickerMessage.prototype.height = null;
@@ -36134,7 +36134,7 @@ export const WAE2E = $root.WAE2E = (() => {
         StickerMessage.prototype.isAnimated = null;
         StickerMessage.prototype.pngThumbnail = null;
         StickerMessage.prototype.contextInfo = null;
-        StickerMessage.prototype.stickerSentTS = null;
+        StickerMessage.prototype.stickerSentTs = null;
         StickerMessage.prototype.isAvatar = null;
         StickerMessage.prototype.isAiSticker = null;
         StickerMessage.prototype.isLottie = null;
@@ -36145,20 +36145,20 @@ export const WAE2E = $root.WAE2E = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StickerMessage.prototype, "_URL", {
-            get: $util.oneOfGetter($oneOfFields = ["URL"]),
+        Object.defineProperty(StickerMessage.prototype, "_url", {
+            get: $util.oneOfGetter($oneOfFields = ["url"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StickerMessage.prototype, "_fileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+        Object.defineProperty(StickerMessage.prototype, "_fileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StickerMessage.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(StickerMessage.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -36235,8 +36235,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StickerMessage.prototype, "_stickerSentTS", {
-            get: $util.oneOfGetter($oneOfFields = ["stickerSentTS"]),
+        Object.defineProperty(StickerMessage.prototype, "_stickerSentTs", {
+            get: $util.oneOfGetter($oneOfFields = ["stickerSentTs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -36283,12 +36283,12 @@ export const WAE2E = $root.WAE2E = (() => {
         StickerMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                w.uint32(10).string(m.URL);
-            if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                w.uint32(18).bytes(m.fileSHA256);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(26).bytes(m.fileEncSHA256);
+            if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                w.uint32(10).string(m.url);
+            if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                w.uint32(18).bytes(m.fileSha256);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(26).bytes(m.fileEncSha256);
             if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                 w.uint32(34).bytes(m.mediaKey);
             if (m.mimetype != null && Object.hasOwnProperty.call(m, "mimetype"))
@@ -36313,8 +36313,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(130).bytes(m.pngThumbnail);
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
                 $root.WAE2E.ContextInfo.encode(m.contextInfo, w.uint32(138).fork()).ldelim();
-            if (m.stickerSentTS != null && Object.hasOwnProperty.call(m, "stickerSentTS"))
-                w.uint32(144).int64(m.stickerSentTS);
+            if (m.stickerSentTs != null && Object.hasOwnProperty.call(m, "stickerSentTs"))
+                w.uint32(144).int64(m.stickerSentTs);
             if (m.isAvatar != null && Object.hasOwnProperty.call(m, "isAvatar"))
                 w.uint32(152).bool(m.isAvatar);
             if (m.isAiSticker != null && Object.hasOwnProperty.call(m, "isAiSticker"))
@@ -36344,15 +36344,15 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.URL = r.string();
+                        m.url = r.string();
                         break;
                     }
                 case 2: {
-                        m.fileSHA256 = r.bytes();
+                        m.fileSha256 = r.bytes();
                         break;
                     }
                 case 3: {
-                        m.fileEncSHA256 = r.bytes();
+                        m.fileEncSha256 = r.bytes();
                         break;
                     }
                 case 4: {
@@ -36404,7 +36404,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 18: {
-                        m.stickerSentTS = r.int64();
+                        m.stickerSentTs = r.int64();
                         break;
                     }
                 case 19: {
@@ -36447,20 +36447,20 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.StickerMessage();
-            if (d.URL != null) {
-                m.URL = String(d.URL);
+            if (d.url != null) {
+                m.url = String(d.url);
             }
-            if (d.fileSHA256 != null) {
-                if (typeof d.fileSHA256 === "string")
-                    $util.base64.decode(d.fileSHA256, m.fileSHA256 = $util.newBuffer($util.base64.length(d.fileSHA256)), 0);
-                else if (d.fileSHA256.length >= 0)
-                    m.fileSHA256 = d.fileSHA256;
+            if (d.fileSha256 != null) {
+                if (typeof d.fileSha256 === "string")
+                    $util.base64.decode(d.fileSha256, m.fileSha256 = $util.newBuffer($util.base64.length(d.fileSha256)), 0);
+                else if (d.fileSha256.length >= 0)
+                    m.fileSha256 = d.fileSha256;
             }
-            if (d.fileEncSHA256 != null) {
-                if (typeof d.fileEncSHA256 === "string")
-                    $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                else if (d.fileEncSHA256.length >= 0)
-                    m.fileEncSHA256 = d.fileEncSHA256;
+            if (d.fileEncSha256 != null) {
+                if (typeof d.fileEncSha256 === "string")
+                    $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                else if (d.fileEncSha256.length >= 0)
+                    m.fileEncSha256 = d.fileEncSha256;
             }
             if (d.mediaKey != null) {
                 if (typeof d.mediaKey === "string")
@@ -36523,15 +36523,15 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.StickerMessage.contextInfo: object expected");
                 m.contextInfo = $root.WAE2E.ContextInfo.fromObject(d.contextInfo, n + 1);
             }
-            if (d.stickerSentTS != null) {
+            if (d.stickerSentTs != null) {
                 if ($util.Long)
-                    (m.stickerSentTS = $util.Long.fromValue(d.stickerSentTS)).unsigned = false;
-                else if (typeof d.stickerSentTS === "string")
-                    m.stickerSentTS = parseInt(d.stickerSentTS, 10);
-                else if (typeof d.stickerSentTS === "number")
-                    m.stickerSentTS = d.stickerSentTS;
-                else if (typeof d.stickerSentTS === "object")
-                    m.stickerSentTS = new $util.LongBits(d.stickerSentTS.low >>> 0, d.stickerSentTS.high >>> 0).toNumber();
+                    (m.stickerSentTs = $util.Long.fromValue(d.stickerSentTs)).unsigned = false;
+                else if (typeof d.stickerSentTs === "string")
+                    m.stickerSentTs = parseInt(d.stickerSentTs, 10);
+                else if (typeof d.stickerSentTs === "number")
+                    m.stickerSentTs = d.stickerSentTs;
+                else if (typeof d.stickerSentTs === "object")
+                    m.stickerSentTs = new $util.LongBits(d.stickerSentTs.low >>> 0, d.stickerSentTs.high >>> 0).toNumber();
             }
             if (d.isAvatar != null) {
                 m.isAvatar = Boolean(d.isAvatar);
@@ -36558,20 +36558,20 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.URL != null && m.hasOwnProperty("URL")) {
-                d.URL = m.URL;
+            if (m.url != null && m.hasOwnProperty("url")) {
+                d.url = m.url;
                 if (o.oneofs)
-                    d._URL = "URL";
+                    d._url = "url";
             }
-            if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                d.fileSHA256 = o.bytes === String ? $util.base64.encode(m.fileSHA256, 0, m.fileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSHA256) : m.fileSHA256;
+            if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                d.fileSha256 = o.bytes === String ? $util.base64.encode(m.fileSha256, 0, m.fileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSha256) : m.fileSha256;
                 if (o.oneofs)
-                    d._fileSHA256 = "fileSHA256";
+                    d._fileSha256 = "fileSha256";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
             if (m.mediaKey != null && m.hasOwnProperty("mediaKey")) {
                 d.mediaKey = o.bytes === String ? $util.base64.encode(m.mediaKey, 0, m.mediaKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.mediaKey) : m.mediaKey;
@@ -36639,13 +36639,13 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._contextInfo = "contextInfo";
             }
-            if (m.stickerSentTS != null && m.hasOwnProperty("stickerSentTS")) {
-                if (typeof m.stickerSentTS === "number")
-                    d.stickerSentTS = o.longs === String ? String(m.stickerSentTS) : m.stickerSentTS;
+            if (m.stickerSentTs != null && m.hasOwnProperty("stickerSentTs")) {
+                if (typeof m.stickerSentTs === "number")
+                    d.stickerSentTs = o.longs === String ? String(m.stickerSentTs) : m.stickerSentTs;
                 else
-                    d.stickerSentTS = o.longs === String ? $util.Long.prototype.toString.call(m.stickerSentTS) : o.longs === Number ? new $util.LongBits(m.stickerSentTS.low >>> 0, m.stickerSentTS.high >>> 0).toNumber() : m.stickerSentTS;
+                    d.stickerSentTs = o.longs === String ? $util.Long.prototype.toString.call(m.stickerSentTs) : o.longs === Number ? new $util.LongBits(m.stickerSentTs.low >>> 0, m.stickerSentTs.high >>> 0).toNumber() : m.stickerSentTs;
                 if (o.oneofs)
-                    d._stickerSentTS = "stickerSentTS";
+                    d._stickerSentTs = "stickerSentTs";
             }
             if (m.isAvatar != null && m.hasOwnProperty("isAvatar")) {
                 d.isAvatar = m.isAvatar;
@@ -36711,7 +36711,7 @@ export const WAE2E = $root.WAE2E = (() => {
         LiveLocationMessage.prototype.caption = null;
         LiveLocationMessage.prototype.sequenceNumber = null;
         LiveLocationMessage.prototype.timeOffset = null;
-        LiveLocationMessage.prototype.JPEGThumbnail = null;
+        LiveLocationMessage.prototype.jpegThumbnail = null;
         LiveLocationMessage.prototype.contextInfo = null;
 
         let $oneOfFields;
@@ -36765,8 +36765,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(LiveLocationMessage.prototype, "_JPEGThumbnail", {
-            get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+        Object.defineProperty(LiveLocationMessage.prototype, "_jpegThumbnail", {
+            get: $util.oneOfGetter($oneOfFields = ["jpegThumbnail"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -36799,8 +36799,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(56).int64(m.sequenceNumber);
             if (m.timeOffset != null && Object.hasOwnProperty.call(m, "timeOffset"))
                 w.uint32(64).uint32(m.timeOffset);
-            if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                w.uint32(130).bytes(m.JPEGThumbnail);
+            if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                w.uint32(130).bytes(m.jpegThumbnail);
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
                 $root.WAE2E.ContextInfo.encode(m.contextInfo, w.uint32(138).fork()).ldelim();
             return w;
@@ -36852,7 +36852,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 16: {
-                        m.JPEGThumbnail = r.bytes();
+                        m.jpegThumbnail = r.bytes();
                         break;
                     }
                 case 17: {
@@ -36906,11 +36906,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.timeOffset != null) {
                 m.timeOffset = d.timeOffset >>> 0;
             }
-            if (d.JPEGThumbnail != null) {
-                if (typeof d.JPEGThumbnail === "string")
-                    $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                else if (d.JPEGThumbnail.length >= 0)
-                    m.JPEGThumbnail = d.JPEGThumbnail;
+            if (d.jpegThumbnail != null) {
+                if (typeof d.jpegThumbnail === "string")
+                    $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                else if (d.jpegThumbnail.length >= 0)
+                    m.jpegThumbnail = d.jpegThumbnail;
             }
             if (d.contextInfo != null) {
                 if (typeof d.contextInfo !== "object")
@@ -36967,10 +36967,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._timeOffset = "timeOffset";
             }
-            if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+            if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                 if (o.oneofs)
-                    d._JPEGThumbnail = "JPEGThumbnail";
+                    d._jpegThumbnail = "jpegThumbnail";
             }
             if (m.contextInfo != null && m.hasOwnProperty("contextInfo")) {
                 d.contextInfo = $root.WAE2E.ContextInfo.toObject(m.contextInfo, o);
@@ -37004,19 +37004,19 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        SplitPaymentMessage.prototype.splitID = null;
+        SplitPaymentMessage.prototype.splitId = null;
         SplitPaymentMessage.prototype.totalAmount = null;
         SplitPaymentMessage.prototype.description = null;
-        SplitPaymentMessage.prototype.requesterJID = null;
+        SplitPaymentMessage.prototype.requesterJid = null;
         SplitPaymentMessage.prototype.participants = $util.emptyArray;
-        SplitPaymentMessage.prototype.createdAtMS = null;
+        SplitPaymentMessage.prototype.createdAtMs = null;
         SplitPaymentMessage.prototype.contextInfo = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SplitPaymentMessage.prototype, "_splitID", {
-            get: $util.oneOfGetter($oneOfFields = ["splitID"]),
+        Object.defineProperty(SplitPaymentMessage.prototype, "_splitId", {
+            get: $util.oneOfGetter($oneOfFields = ["splitId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -37033,14 +37033,14 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SplitPaymentMessage.prototype, "_requesterJID", {
-            get: $util.oneOfGetter($oneOfFields = ["requesterJID"]),
+        Object.defineProperty(SplitPaymentMessage.prototype, "_requesterJid", {
+            get: $util.oneOfGetter($oneOfFields = ["requesterJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SplitPaymentMessage.prototype, "_createdAtMS", {
-            get: $util.oneOfGetter($oneOfFields = ["createdAtMS"]),
+        Object.defineProperty(SplitPaymentMessage.prototype, "_createdAtMs", {
+            get: $util.oneOfGetter($oneOfFields = ["createdAtMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -37057,20 +37057,20 @@ export const WAE2E = $root.WAE2E = (() => {
         SplitPaymentMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.splitID != null && Object.hasOwnProperty.call(m, "splitID"))
-                w.uint32(10).string(m.splitID);
+            if (m.splitId != null && Object.hasOwnProperty.call(m, "splitId"))
+                w.uint32(10).string(m.splitId);
             if (m.totalAmount != null && Object.hasOwnProperty.call(m, "totalAmount"))
                 $root.WAE2E.Money.encode(m.totalAmount, w.uint32(18).fork()).ldelim();
             if (m.description != null && Object.hasOwnProperty.call(m, "description"))
                 w.uint32(26).string(m.description);
-            if (m.requesterJID != null && Object.hasOwnProperty.call(m, "requesterJID"))
-                w.uint32(34).string(m.requesterJID);
+            if (m.requesterJid != null && Object.hasOwnProperty.call(m, "requesterJid"))
+                w.uint32(34).string(m.requesterJid);
             if (m.participants != null && m.participants.length) {
                 for (var i = 0; i < m.participants.length; ++i)
                     $root.WAE2E.SplitPaymentParticipant.encode(m.participants[i], w.uint32(42).fork()).ldelim();
             }
-            if (m.createdAtMS != null && Object.hasOwnProperty.call(m, "createdAtMS"))
-                w.uint32(48).int64(m.createdAtMS);
+            if (m.createdAtMs != null && Object.hasOwnProperty.call(m, "createdAtMs"))
+                w.uint32(48).int64(m.createdAtMs);
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
                 $root.WAE2E.ContextInfo.encode(m.contextInfo, w.uint32(138).fork()).ldelim();
             return w;
@@ -37090,7 +37090,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.splitID = r.string();
+                        m.splitId = r.string();
                         break;
                     }
                 case 2: {
@@ -37102,7 +37102,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 4: {
-                        m.requesterJID = r.string();
+                        m.requesterJid = r.string();
                         break;
                     }
                 case 5: {
@@ -37112,7 +37112,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 6: {
-                        m.createdAtMS = r.int64();
+                        m.createdAtMs = r.int64();
                         break;
                     }
                 case 17: {
@@ -37135,8 +37135,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.SplitPaymentMessage();
-            if (d.splitID != null) {
-                m.splitID = String(d.splitID);
+            if (d.splitId != null) {
+                m.splitId = String(d.splitId);
             }
             if (d.totalAmount != null) {
                 if (typeof d.totalAmount !== "object")
@@ -37146,8 +37146,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.description != null) {
                 m.description = String(d.description);
             }
-            if (d.requesterJID != null) {
-                m.requesterJID = String(d.requesterJID);
+            if (d.requesterJid != null) {
+                m.requesterJid = String(d.requesterJid);
             }
             if (d.participants) {
                 if (!Array.isArray(d.participants))
@@ -37159,15 +37159,15 @@ export const WAE2E = $root.WAE2E = (() => {
                     m.participants[i] = $root.WAE2E.SplitPaymentParticipant.fromObject(d.participants[i], n + 1);
                 }
             }
-            if (d.createdAtMS != null) {
+            if (d.createdAtMs != null) {
                 if ($util.Long)
-                    (m.createdAtMS = $util.Long.fromValue(d.createdAtMS)).unsigned = false;
-                else if (typeof d.createdAtMS === "string")
-                    m.createdAtMS = parseInt(d.createdAtMS, 10);
-                else if (typeof d.createdAtMS === "number")
-                    m.createdAtMS = d.createdAtMS;
-                else if (typeof d.createdAtMS === "object")
-                    m.createdAtMS = new $util.LongBits(d.createdAtMS.low >>> 0, d.createdAtMS.high >>> 0).toNumber();
+                    (m.createdAtMs = $util.Long.fromValue(d.createdAtMs)).unsigned = false;
+                else if (typeof d.createdAtMs === "string")
+                    m.createdAtMs = parseInt(d.createdAtMs, 10);
+                else if (typeof d.createdAtMs === "number")
+                    m.createdAtMs = d.createdAtMs;
+                else if (typeof d.createdAtMs === "object")
+                    m.createdAtMs = new $util.LongBits(d.createdAtMs.low >>> 0, d.createdAtMs.high >>> 0).toNumber();
             }
             if (d.contextInfo != null) {
                 if (typeof d.contextInfo !== "object")
@@ -37184,10 +37184,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (o.arrays || o.defaults) {
                 d.participants = [];
             }
-            if (m.splitID != null && m.hasOwnProperty("splitID")) {
-                d.splitID = m.splitID;
+            if (m.splitId != null && m.hasOwnProperty("splitId")) {
+                d.splitId = m.splitId;
                 if (o.oneofs)
-                    d._splitID = "splitID";
+                    d._splitId = "splitId";
             }
             if (m.totalAmount != null && m.hasOwnProperty("totalAmount")) {
                 d.totalAmount = $root.WAE2E.Money.toObject(m.totalAmount, o);
@@ -37199,10 +37199,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._description = "description";
             }
-            if (m.requesterJID != null && m.hasOwnProperty("requesterJID")) {
-                d.requesterJID = m.requesterJID;
+            if (m.requesterJid != null && m.hasOwnProperty("requesterJid")) {
+                d.requesterJid = m.requesterJid;
                 if (o.oneofs)
-                    d._requesterJID = "requesterJID";
+                    d._requesterJid = "requesterJid";
             }
             if (m.participants && m.participants.length) {
                 d.participants = [];
@@ -37210,13 +37210,13 @@ export const WAE2E = $root.WAE2E = (() => {
                     d.participants[j] = $root.WAE2E.SplitPaymentParticipant.toObject(m.participants[j], o);
                 }
             }
-            if (m.createdAtMS != null && m.hasOwnProperty("createdAtMS")) {
-                if (typeof m.createdAtMS === "number")
-                    d.createdAtMS = o.longs === String ? String(m.createdAtMS) : m.createdAtMS;
+            if (m.createdAtMs != null && m.hasOwnProperty("createdAtMs")) {
+                if (typeof m.createdAtMs === "number")
+                    d.createdAtMs = o.longs === String ? String(m.createdAtMs) : m.createdAtMs;
                 else
-                    d.createdAtMS = o.longs === String ? $util.Long.prototype.toString.call(m.createdAtMS) : o.longs === Number ? new $util.LongBits(m.createdAtMS.low >>> 0, m.createdAtMS.high >>> 0).toNumber() : m.createdAtMS;
+                    d.createdAtMs = o.longs === String ? $util.Long.prototype.toString.call(m.createdAtMs) : o.longs === Number ? new $util.LongBits(m.createdAtMs.low >>> 0, m.createdAtMs.high >>> 0).toNumber() : m.createdAtMs;
                 if (o.oneofs)
-                    d._createdAtMS = "createdAtMS";
+                    d._createdAtMs = "createdAtMs";
             }
             if (m.contextInfo != null && m.hasOwnProperty("contextInfo")) {
                 d.contextInfo = $root.WAE2E.ContextInfo.toObject(m.contextInfo, o);
@@ -38231,15 +38231,15 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        FullHistorySyncOnDemandRequestMetadata.prototype.requestID = null;
+        FullHistorySyncOnDemandRequestMetadata.prototype.requestId = null;
         FullHistorySyncOnDemandRequestMetadata.prototype.businessProduct = null;
         FullHistorySyncOnDemandRequestMetadata.prototype.opaqueClientData = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(FullHistorySyncOnDemandRequestMetadata.prototype, "_requestID", {
-            get: $util.oneOfGetter($oneOfFields = ["requestID"]),
+        Object.defineProperty(FullHistorySyncOnDemandRequestMetadata.prototype, "_requestId", {
+            get: $util.oneOfGetter($oneOfFields = ["requestId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -38262,8 +38262,8 @@ export const WAE2E = $root.WAE2E = (() => {
         FullHistorySyncOnDemandRequestMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.requestID != null && Object.hasOwnProperty.call(m, "requestID"))
-                w.uint32(10).string(m.requestID);
+            if (m.requestId != null && Object.hasOwnProperty.call(m, "requestId"))
+                w.uint32(10).string(m.requestId);
             if (m.businessProduct != null && Object.hasOwnProperty.call(m, "businessProduct"))
                 w.uint32(18).string(m.businessProduct);
             if (m.opaqueClientData != null && Object.hasOwnProperty.call(m, "opaqueClientData"))
@@ -38285,7 +38285,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.requestID = r.string();
+                        m.requestId = r.string();
                         break;
                     }
                 case 2: {
@@ -38312,8 +38312,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.FullHistorySyncOnDemandRequestMetadata();
-            if (d.requestID != null) {
-                m.requestID = String(d.requestID);
+            if (d.requestId != null) {
+                m.requestId = String(d.requestId);
             }
             if (d.businessProduct != null) {
                 m.businessProduct = String(d.businessProduct);
@@ -38331,10 +38331,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.requestID != null && m.hasOwnProperty("requestID")) {
-                d.requestID = m.requestID;
+            if (m.requestId != null && m.hasOwnProperty("requestId")) {
+                d.requestId = m.requestId;
                 if (o.oneofs)
-                    d._requestID = "requestID";
+                    d._requestId = "requestId";
             }
             if (m.businessProduct != null && m.hasOwnProperty("businessProduct")) {
                 d.businessProduct = m.businessProduct;
@@ -38501,14 +38501,14 @@ export const WAE2E = $root.WAE2E = (() => {
     WAE2E.AppStateSyncKeyRequest = (function() {
 
         function AppStateSyncKeyRequest(p) {
-            this.keyIDs = [];
+            this.keyIds = [];
             if (p)
                 for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
                     if (p[ks[i]] != null && ks[i] !== "__proto__")
                         this[ks[i]] = p[ks[i]];
         }
 
-        AppStateSyncKeyRequest.prototype.keyIDs = $util.emptyArray;
+        AppStateSyncKeyRequest.prototype.keyIds = $util.emptyArray;
 
         AppStateSyncKeyRequest.create = function create(properties) {
             return new AppStateSyncKeyRequest(properties);
@@ -38517,9 +38517,9 @@ export const WAE2E = $root.WAE2E = (() => {
         AppStateSyncKeyRequest.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.keyIDs != null && m.keyIDs.length) {
-                for (var i = 0; i < m.keyIDs.length; ++i)
-                    $root.WAE2E.AppStateSyncKeyId.encode(m.keyIDs[i], w.uint32(10).fork()).ldelim();
+            if (m.keyIds != null && m.keyIds.length) {
+                for (var i = 0; i < m.keyIds.length; ++i)
+                    $root.WAE2E.AppStateSyncKeyId.encode(m.keyIds[i], w.uint32(10).fork()).ldelim();
             }
             return w;
         };
@@ -38538,9 +38538,9 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        if (!(m.keyIDs && m.keyIDs.length))
-                            m.keyIDs = [];
-                        m.keyIDs.push($root.WAE2E.AppStateSyncKeyId.decode(r, r.uint32(), undefined, n + 1));
+                        if (!(m.keyIds && m.keyIds.length))
+                            m.keyIds = [];
+                        m.keyIds.push($root.WAE2E.AppStateSyncKeyId.decode(r, r.uint32(), undefined, n + 1));
                         break;
                     }
                 default:
@@ -38559,14 +38559,14 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.AppStateSyncKeyRequest();
-            if (d.keyIDs) {
-                if (!Array.isArray(d.keyIDs))
-                    throw TypeError(".WAE2E.AppStateSyncKeyRequest.keyIDs: array expected");
-                m.keyIDs = [];
-                for (var i = 0; i < d.keyIDs.length; ++i) {
-                    if (typeof d.keyIDs[i] !== "object")
-                        throw TypeError(".WAE2E.AppStateSyncKeyRequest.keyIDs: object expected");
-                    m.keyIDs[i] = $root.WAE2E.AppStateSyncKeyId.fromObject(d.keyIDs[i], n + 1);
+            if (d.keyIds) {
+                if (!Array.isArray(d.keyIds))
+                    throw TypeError(".WAE2E.AppStateSyncKeyRequest.keyIds: array expected");
+                m.keyIds = [];
+                for (var i = 0; i < d.keyIds.length; ++i) {
+                    if (typeof d.keyIds[i] !== "object")
+                        throw TypeError(".WAE2E.AppStateSyncKeyRequest.keyIds: object expected");
+                    m.keyIds[i] = $root.WAE2E.AppStateSyncKeyId.fromObject(d.keyIds[i], n + 1);
                 }
             }
             return m;
@@ -38577,12 +38577,12 @@ export const WAE2E = $root.WAE2E = (() => {
                 o = {};
             var d = {};
             if (o.arrays || o.defaults) {
-                d.keyIDs = [];
+                d.keyIds = [];
             }
-            if (m.keyIDs && m.keyIDs.length) {
-                d.keyIDs = [];
-                for (var j = 0; j < m.keyIDs.length; ++j) {
-                    d.keyIDs[j] = $root.WAE2E.AppStateSyncKeyId.toObject(m.keyIDs[j], o);
+            if (m.keyIds && m.keyIds.length) {
+                d.keyIds = [];
+                for (var j = 0; j < m.keyIds.length; ++j) {
+                    d.keyIds[j] = $root.WAE2E.AppStateSyncKeyId.toObject(m.keyIds[j], o);
                 }
             }
             return d;
@@ -38869,15 +38869,15 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        AppStateSyncKeyFingerprint.prototype.rawID = null;
+        AppStateSyncKeyFingerprint.prototype.rawId = null;
         AppStateSyncKeyFingerprint.prototype.currentIndex = null;
         AppStateSyncKeyFingerprint.prototype.deviceIndexes = $util.emptyArray;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AppStateSyncKeyFingerprint.prototype, "_rawID", {
-            get: $util.oneOfGetter($oneOfFields = ["rawID"]),
+        Object.defineProperty(AppStateSyncKeyFingerprint.prototype, "_rawId", {
+            get: $util.oneOfGetter($oneOfFields = ["rawId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -38894,8 +38894,8 @@ export const WAE2E = $root.WAE2E = (() => {
         AppStateSyncKeyFingerprint.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.rawID != null && Object.hasOwnProperty.call(m, "rawID"))
-                w.uint32(8).uint32(m.rawID);
+            if (m.rawId != null && Object.hasOwnProperty.call(m, "rawId"))
+                w.uint32(8).uint32(m.rawId);
             if (m.currentIndex != null && Object.hasOwnProperty.call(m, "currentIndex"))
                 w.uint32(16).uint32(m.currentIndex);
             if (m.deviceIndexes != null && m.deviceIndexes.length) {
@@ -38921,7 +38921,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.rawID = r.uint32();
+                        m.rawId = r.uint32();
                         break;
                     }
                 case 2: {
@@ -38955,8 +38955,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.AppStateSyncKeyFingerprint();
-            if (d.rawID != null) {
-                m.rawID = d.rawID >>> 0;
+            if (d.rawId != null) {
+                m.rawId = d.rawId >>> 0;
             }
             if (d.currentIndex != null) {
                 m.currentIndex = d.currentIndex >>> 0;
@@ -38979,10 +38979,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (o.arrays || o.defaults) {
                 d.deviceIndexes = [];
             }
-            if (m.rawID != null && m.hasOwnProperty("rawID")) {
-                d.rawID = m.rawID;
+            if (m.rawId != null && m.hasOwnProperty("rawId")) {
+                d.rawId = m.rawId;
                 if (o.oneofs)
-                    d._rawID = "rawID";
+                    d._rawId = "rawId";
             }
             if (m.currentIndex != null && m.hasOwnProperty("currentIndex")) {
                 d.currentIndex = m.currentIndex;
@@ -39021,13 +39021,13 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        AppStateSyncKeyId.prototype.keyID = null;
+        AppStateSyncKeyId.prototype.keyId = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AppStateSyncKeyId.prototype, "_keyID", {
-            get: $util.oneOfGetter($oneOfFields = ["keyID"]),
+        Object.defineProperty(AppStateSyncKeyId.prototype, "_keyId", {
+            get: $util.oneOfGetter($oneOfFields = ["keyId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -39038,8 +39038,8 @@ export const WAE2E = $root.WAE2E = (() => {
         AppStateSyncKeyId.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.keyID != null && Object.hasOwnProperty.call(m, "keyID"))
-                w.uint32(10).bytes(m.keyID);
+            if (m.keyId != null && Object.hasOwnProperty.call(m, "keyId"))
+                w.uint32(10).bytes(m.keyId);
             return w;
         };
 
@@ -39057,7 +39057,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.keyID = r.bytes();
+                        m.keyId = r.bytes();
                         break;
                     }
                 default:
@@ -39076,11 +39076,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.AppStateSyncKeyId();
-            if (d.keyID != null) {
-                if (typeof d.keyID === "string")
-                    $util.base64.decode(d.keyID, m.keyID = $util.newBuffer($util.base64.length(d.keyID)), 0);
-                else if (d.keyID.length >= 0)
-                    m.keyID = d.keyID;
+            if (d.keyId != null) {
+                if (typeof d.keyId === "string")
+                    $util.base64.decode(d.keyId, m.keyId = $util.newBuffer($util.base64.length(d.keyId)), 0);
+                else if (d.keyId.length >= 0)
+                    m.keyId = d.keyId;
             }
             return m;
         };
@@ -39089,10 +39089,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.keyID != null && m.hasOwnProperty("keyID")) {
-                d.keyID = o.bytes === String ? $util.base64.encode(m.keyID, 0, m.keyID.length) : o.bytes === Array ? Array.prototype.slice.call(m.keyID) : m.keyID;
+            if (m.keyId != null && m.hasOwnProperty("keyId")) {
+                d.keyId = o.bytes === String ? $util.base64.encode(m.keyId, 0, m.keyId.length) : o.bytes === Array ? Array.prototype.slice.call(m.keyId) : m.keyId;
                 if (o.oneofs)
-                    d._keyID = "keyID";
+                    d._keyId = "keyId";
             }
             return d;
         };
@@ -39120,14 +39120,14 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        AppStateSyncKey.prototype.keyID = null;
+        AppStateSyncKey.prototype.keyId = null;
         AppStateSyncKey.prototype.keyData = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AppStateSyncKey.prototype, "_keyID", {
-            get: $util.oneOfGetter($oneOfFields = ["keyID"]),
+        Object.defineProperty(AppStateSyncKey.prototype, "_keyId", {
+            get: $util.oneOfGetter($oneOfFields = ["keyId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -39144,8 +39144,8 @@ export const WAE2E = $root.WAE2E = (() => {
         AppStateSyncKey.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.keyID != null && Object.hasOwnProperty.call(m, "keyID"))
-                $root.WAE2E.AppStateSyncKeyId.encode(m.keyID, w.uint32(10).fork()).ldelim();
+            if (m.keyId != null && Object.hasOwnProperty.call(m, "keyId"))
+                $root.WAE2E.AppStateSyncKeyId.encode(m.keyId, w.uint32(10).fork()).ldelim();
             if (m.keyData != null && Object.hasOwnProperty.call(m, "keyData"))
                 $root.WAE2E.AppStateSyncKeyData.encode(m.keyData, w.uint32(18).fork()).ldelim();
             return w;
@@ -39165,7 +39165,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.keyID = $root.WAE2E.AppStateSyncKeyId.decode(r, r.uint32(), undefined, n + 1);
+                        m.keyId = $root.WAE2E.AppStateSyncKeyId.decode(r, r.uint32(), undefined, n + 1);
                         break;
                     }
                 case 2: {
@@ -39188,10 +39188,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.AppStateSyncKey();
-            if (d.keyID != null) {
-                if (typeof d.keyID !== "object")
-                    throw TypeError(".WAE2E.AppStateSyncKey.keyID: object expected");
-                m.keyID = $root.WAE2E.AppStateSyncKeyId.fromObject(d.keyID, n + 1);
+            if (d.keyId != null) {
+                if (typeof d.keyId !== "object")
+                    throw TypeError(".WAE2E.AppStateSyncKey.keyId: object expected");
+                m.keyId = $root.WAE2E.AppStateSyncKeyId.fromObject(d.keyId, n + 1);
             }
             if (d.keyData != null) {
                 if (typeof d.keyData !== "object")
@@ -39205,10 +39205,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.keyID != null && m.hasOwnProperty("keyID")) {
-                d.keyID = $root.WAE2E.AppStateSyncKeyId.toObject(m.keyID, o);
+            if (m.keyId != null && m.hasOwnProperty("keyId")) {
+                d.keyId = $root.WAE2E.AppStateSyncKeyId.toObject(m.keyId, o);
                 if (o.oneofs)
-                    d._keyID = "keyID";
+                    d._keyId = "keyId";
             }
             if (m.keyData != null && m.hasOwnProperty("keyData")) {
                 d.keyData = $root.WAE2E.AppStateSyncKeyData.toObject(m.keyData, o);
@@ -39241,18 +39241,18 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        HistorySyncNotification.prototype.fileSHA256 = null;
+        HistorySyncNotification.prototype.fileSha256 = null;
         HistorySyncNotification.prototype.fileLength = null;
         HistorySyncNotification.prototype.mediaKey = null;
-        HistorySyncNotification.prototype.fileEncSHA256 = null;
+        HistorySyncNotification.prototype.fileEncSha256 = null;
         HistorySyncNotification.prototype.directPath = null;
         HistorySyncNotification.prototype.syncType = null;
         HistorySyncNotification.prototype.chunkOrder = null;
-        HistorySyncNotification.prototype.originalMessageID = null;
+        HistorySyncNotification.prototype.originalMessageId = null;
         HistorySyncNotification.prototype.progress = null;
         HistorySyncNotification.prototype.oldestMsgInChunkTimestampSec = null;
         HistorySyncNotification.prototype.initialHistBootstrapInlinePayload = null;
-        HistorySyncNotification.prototype.peerDataRequestSessionID = null;
+        HistorySyncNotification.prototype.peerDataRequestSessionId = null;
         HistorySyncNotification.prototype.fullHistorySyncOnDemandRequestMetadata = null;
         HistorySyncNotification.prototype.encHandle = null;
         HistorySyncNotification.prototype.messageAccessStatus = null;
@@ -39260,8 +39260,8 @@ export const WAE2E = $root.WAE2E = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(HistorySyncNotification.prototype, "_fileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+        Object.defineProperty(HistorySyncNotification.prototype, "_fileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -39278,8 +39278,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(HistorySyncNotification.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(HistorySyncNotification.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -39302,8 +39302,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(HistorySyncNotification.prototype, "_originalMessageID", {
-            get: $util.oneOfGetter($oneOfFields = ["originalMessageID"]),
+        Object.defineProperty(HistorySyncNotification.prototype, "_originalMessageId", {
+            get: $util.oneOfGetter($oneOfFields = ["originalMessageId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -39326,8 +39326,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(HistorySyncNotification.prototype, "_peerDataRequestSessionID", {
-            get: $util.oneOfGetter($oneOfFields = ["peerDataRequestSessionID"]),
+        Object.defineProperty(HistorySyncNotification.prototype, "_peerDataRequestSessionId", {
+            get: $util.oneOfGetter($oneOfFields = ["peerDataRequestSessionId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -39356,30 +39356,30 @@ export const WAE2E = $root.WAE2E = (() => {
         HistorySyncNotification.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                w.uint32(10).bytes(m.fileSHA256);
+            if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                w.uint32(10).bytes(m.fileSha256);
             if (m.fileLength != null && Object.hasOwnProperty.call(m, "fileLength"))
                 w.uint32(16).uint64(m.fileLength);
             if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                 w.uint32(26).bytes(m.mediaKey);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(34).bytes(m.fileEncSHA256);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(34).bytes(m.fileEncSha256);
             if (m.directPath != null && Object.hasOwnProperty.call(m, "directPath"))
                 w.uint32(42).string(m.directPath);
             if (m.syncType != null && Object.hasOwnProperty.call(m, "syncType"))
                 w.uint32(48).int32(m.syncType);
             if (m.chunkOrder != null && Object.hasOwnProperty.call(m, "chunkOrder"))
                 w.uint32(56).uint32(m.chunkOrder);
-            if (m.originalMessageID != null && Object.hasOwnProperty.call(m, "originalMessageID"))
-                w.uint32(66).string(m.originalMessageID);
+            if (m.originalMessageId != null && Object.hasOwnProperty.call(m, "originalMessageId"))
+                w.uint32(66).string(m.originalMessageId);
             if (m.progress != null && Object.hasOwnProperty.call(m, "progress"))
                 w.uint32(72).uint32(m.progress);
             if (m.oldestMsgInChunkTimestampSec != null && Object.hasOwnProperty.call(m, "oldestMsgInChunkTimestampSec"))
                 w.uint32(80).int64(m.oldestMsgInChunkTimestampSec);
             if (m.initialHistBootstrapInlinePayload != null && Object.hasOwnProperty.call(m, "initialHistBootstrapInlinePayload"))
                 w.uint32(90).bytes(m.initialHistBootstrapInlinePayload);
-            if (m.peerDataRequestSessionID != null && Object.hasOwnProperty.call(m, "peerDataRequestSessionID"))
-                w.uint32(98).string(m.peerDataRequestSessionID);
+            if (m.peerDataRequestSessionId != null && Object.hasOwnProperty.call(m, "peerDataRequestSessionId"))
+                w.uint32(98).string(m.peerDataRequestSessionId);
             if (m.fullHistorySyncOnDemandRequestMetadata != null && Object.hasOwnProperty.call(m, "fullHistorySyncOnDemandRequestMetadata"))
                 $root.WAE2E.FullHistorySyncOnDemandRequestMetadata.encode(m.fullHistorySyncOnDemandRequestMetadata, w.uint32(106).fork()).ldelim();
             if (m.encHandle != null && Object.hasOwnProperty.call(m, "encHandle"))
@@ -39403,7 +39403,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.fileSHA256 = r.bytes();
+                        m.fileSha256 = r.bytes();
                         break;
                     }
                 case 2: {
@@ -39415,7 +39415,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 4: {
-                        m.fileEncSHA256 = r.bytes();
+                        m.fileEncSha256 = r.bytes();
                         break;
                     }
                 case 5: {
@@ -39431,7 +39431,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 8: {
-                        m.originalMessageID = r.string();
+                        m.originalMessageId = r.string();
                         break;
                     }
                 case 9: {
@@ -39447,7 +39447,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 12: {
-                        m.peerDataRequestSessionID = r.string();
+                        m.peerDataRequestSessionId = r.string();
                         break;
                     }
                 case 13: {
@@ -39478,11 +39478,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.HistorySyncNotification();
-            if (d.fileSHA256 != null) {
-                if (typeof d.fileSHA256 === "string")
-                    $util.base64.decode(d.fileSHA256, m.fileSHA256 = $util.newBuffer($util.base64.length(d.fileSHA256)), 0);
-                else if (d.fileSHA256.length >= 0)
-                    m.fileSHA256 = d.fileSHA256;
+            if (d.fileSha256 != null) {
+                if (typeof d.fileSha256 === "string")
+                    $util.base64.decode(d.fileSha256, m.fileSha256 = $util.newBuffer($util.base64.length(d.fileSha256)), 0);
+                else if (d.fileSha256.length >= 0)
+                    m.fileSha256 = d.fileSha256;
             }
             if (d.fileLength != null) {
                 if ($util.Long)
@@ -39500,11 +39500,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.mediaKey.length >= 0)
                     m.mediaKey = d.mediaKey;
             }
-            if (d.fileEncSHA256 != null) {
-                if (typeof d.fileEncSHA256 === "string")
-                    $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                else if (d.fileEncSHA256.length >= 0)
-                    m.fileEncSHA256 = d.fileEncSHA256;
+            if (d.fileEncSha256 != null) {
+                if (typeof d.fileEncSha256 === "string")
+                    $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                else if (d.fileEncSha256.length >= 0)
+                    m.fileEncSha256 = d.fileEncSha256;
             }
             if (d.directPath != null) {
                 m.directPath = String(d.directPath);
@@ -39556,8 +39556,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.chunkOrder != null) {
                 m.chunkOrder = d.chunkOrder >>> 0;
             }
-            if (d.originalMessageID != null) {
-                m.originalMessageID = String(d.originalMessageID);
+            if (d.originalMessageId != null) {
+                m.originalMessageId = String(d.originalMessageId);
             }
             if (d.progress != null) {
                 m.progress = d.progress >>> 0;
@@ -39578,8 +39578,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.initialHistBootstrapInlinePayload.length >= 0)
                     m.initialHistBootstrapInlinePayload = d.initialHistBootstrapInlinePayload;
             }
-            if (d.peerDataRequestSessionID != null) {
-                m.peerDataRequestSessionID = String(d.peerDataRequestSessionID);
+            if (d.peerDataRequestSessionId != null) {
+                m.peerDataRequestSessionId = String(d.peerDataRequestSessionId);
             }
             if (d.fullHistorySyncOnDemandRequestMetadata != null) {
                 if (typeof d.fullHistorySyncOnDemandRequestMetadata !== "object")
@@ -39601,10 +39601,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                d.fileSHA256 = o.bytes === String ? $util.base64.encode(m.fileSHA256, 0, m.fileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSHA256) : m.fileSHA256;
+            if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                d.fileSha256 = o.bytes === String ? $util.base64.encode(m.fileSha256, 0, m.fileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSha256) : m.fileSha256;
                 if (o.oneofs)
-                    d._fileSHA256 = "fileSHA256";
+                    d._fileSha256 = "fileSha256";
             }
             if (m.fileLength != null && m.hasOwnProperty("fileLength")) {
                 if (typeof m.fileLength === "number")
@@ -39619,10 +39619,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._mediaKey = "mediaKey";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
             if (m.directPath != null && m.hasOwnProperty("directPath")) {
                 d.directPath = m.directPath;
@@ -39639,10 +39639,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._chunkOrder = "chunkOrder";
             }
-            if (m.originalMessageID != null && m.hasOwnProperty("originalMessageID")) {
-                d.originalMessageID = m.originalMessageID;
+            if (m.originalMessageId != null && m.hasOwnProperty("originalMessageId")) {
+                d.originalMessageId = m.originalMessageId;
                 if (o.oneofs)
-                    d._originalMessageID = "originalMessageID";
+                    d._originalMessageId = "originalMessageId";
             }
             if (m.progress != null && m.hasOwnProperty("progress")) {
                 d.progress = m.progress;
@@ -39662,10 +39662,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._initialHistBootstrapInlinePayload = "initialHistBootstrapInlinePayload";
             }
-            if (m.peerDataRequestSessionID != null && m.hasOwnProperty("peerDataRequestSessionID")) {
-                d.peerDataRequestSessionID = m.peerDataRequestSessionID;
+            if (m.peerDataRequestSessionId != null && m.hasOwnProperty("peerDataRequestSessionId")) {
+                d.peerDataRequestSessionId = m.peerDataRequestSessionId;
                 if (o.oneofs)
-                    d._peerDataRequestSessionID = "peerDataRequestSessionID";
+                    d._peerDataRequestSessionId = "peerDataRequestSessionId";
             }
             if (m.fullHistorySyncOnDemandRequestMetadata != null && m.hasOwnProperty("fullHistorySyncOnDemandRequestMetadata")) {
                 d.fullHistorySyncOnDemandRequestMetadata = $root.WAE2E.FullHistorySyncOnDemandRequestMetadata.toObject(m.fullHistorySyncOnDemandRequestMetadata, o);
@@ -39804,14 +39804,14 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        ChatStockImageWallpaper.prototype.stockImageID = null;
+        ChatStockImageWallpaper.prototype.stockImageId = null;
         ChatStockImageWallpaper.prototype.dimLevel = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ChatStockImageWallpaper.prototype, "_stockImageID", {
-            get: $util.oneOfGetter($oneOfFields = ["stockImageID"]),
+        Object.defineProperty(ChatStockImageWallpaper.prototype, "_stockImageId", {
+            get: $util.oneOfGetter($oneOfFields = ["stockImageId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -39828,8 +39828,8 @@ export const WAE2E = $root.WAE2E = (() => {
         ChatStockImageWallpaper.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.stockImageID != null && Object.hasOwnProperty.call(m, "stockImageID"))
-                w.uint32(10).string(m.stockImageID);
+            if (m.stockImageId != null && Object.hasOwnProperty.call(m, "stockImageId"))
+                w.uint32(10).string(m.stockImageId);
             if (m.dimLevel != null && Object.hasOwnProperty.call(m, "dimLevel"))
                 w.uint32(21).float(m.dimLevel);
             return w;
@@ -39849,7 +39849,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.stockImageID = r.string();
+                        m.stockImageId = r.string();
                         break;
                     }
                 case 2: {
@@ -39872,8 +39872,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.ChatStockImageWallpaper();
-            if (d.stockImageID != null) {
-                m.stockImageID = String(d.stockImageID);
+            if (d.stockImageId != null) {
+                m.stockImageId = String(d.stockImageId);
             }
             if (d.dimLevel != null) {
                 m.dimLevel = Number(d.dimLevel);
@@ -39885,10 +39885,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.stockImageID != null && m.hasOwnProperty("stockImageID")) {
-                d.stockImageID = m.stockImageID;
+            if (m.stockImageId != null && m.hasOwnProperty("stockImageId")) {
+                d.stockImageId = m.stockImageId;
                 if (o.oneofs)
-                    d._stockImageID = "stockImageID";
+                    d._stockImageId = "stockImageId";
             }
             if (m.dimLevel != null && m.hasOwnProperty("dimLevel")) {
                 d.dimLevel = o.json && !isFinite(m.dimLevel) ? String(m.dimLevel) : m.dimLevel;
@@ -40157,8 +40157,8 @@ export const WAE2E = $root.WAE2E = (() => {
 
         ChatCustomImageWallpaper.prototype.directPath = null;
         ChatCustomImageWallpaper.prototype.mediaKey = null;
-        ChatCustomImageWallpaper.prototype.fileEncSHA256 = null;
-        ChatCustomImageWallpaper.prototype.fileSHA256 = null;
+        ChatCustomImageWallpaper.prototype.fileEncSha256 = null;
+        ChatCustomImageWallpaper.prototype.fileSha256 = null;
         ChatCustomImageWallpaper.prototype.dimLevel = null;
 
         let $oneOfFields;
@@ -40176,14 +40176,14 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ChatCustomImageWallpaper.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(ChatCustomImageWallpaper.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ChatCustomImageWallpaper.prototype, "_fileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+        Object.defineProperty(ChatCustomImageWallpaper.prototype, "_fileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -40204,10 +40204,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(10).string(m.directPath);
             if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                 w.uint32(18).bytes(m.mediaKey);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(26).bytes(m.fileEncSHA256);
-            if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                w.uint32(34).bytes(m.fileSHA256);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(26).bytes(m.fileEncSha256);
+            if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                w.uint32(34).bytes(m.fileSha256);
             if (m.dimLevel != null && Object.hasOwnProperty.call(m, "dimLevel"))
                 w.uint32(45).float(m.dimLevel);
             return w;
@@ -40235,11 +40235,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.fileEncSHA256 = r.bytes();
+                        m.fileEncSha256 = r.bytes();
                         break;
                     }
                 case 4: {
-                        m.fileSHA256 = r.bytes();
+                        m.fileSha256 = r.bytes();
                         break;
                     }
                 case 5: {
@@ -40271,17 +40271,17 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.mediaKey.length >= 0)
                     m.mediaKey = d.mediaKey;
             }
-            if (d.fileEncSHA256 != null) {
-                if (typeof d.fileEncSHA256 === "string")
-                    $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                else if (d.fileEncSHA256.length >= 0)
-                    m.fileEncSHA256 = d.fileEncSHA256;
+            if (d.fileEncSha256 != null) {
+                if (typeof d.fileEncSha256 === "string")
+                    $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                else if (d.fileEncSha256.length >= 0)
+                    m.fileEncSha256 = d.fileEncSha256;
             }
-            if (d.fileSHA256 != null) {
-                if (typeof d.fileSHA256 === "string")
-                    $util.base64.decode(d.fileSHA256, m.fileSHA256 = $util.newBuffer($util.base64.length(d.fileSHA256)), 0);
-                else if (d.fileSHA256.length >= 0)
-                    m.fileSHA256 = d.fileSHA256;
+            if (d.fileSha256 != null) {
+                if (typeof d.fileSha256 === "string")
+                    $util.base64.decode(d.fileSha256, m.fileSha256 = $util.newBuffer($util.base64.length(d.fileSha256)), 0);
+                else if (d.fileSha256.length >= 0)
+                    m.fileSha256 = d.fileSha256;
             }
             if (d.dimLevel != null) {
                 m.dimLevel = Number(d.dimLevel);
@@ -40303,15 +40303,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._mediaKey = "mediaKey";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
-            if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                d.fileSHA256 = o.bytes === String ? $util.base64.encode(m.fileSHA256, 0, m.fileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSHA256) : m.fileSHA256;
+            if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                d.fileSha256 = o.bytes === String ? $util.base64.encode(m.fileSha256, 0, m.fileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSha256) : m.fileSha256;
                 if (o.oneofs)
-                    d._fileSHA256 = "fileSHA256";
+                    d._fileSha256 = "fileSha256";
             }
             if (m.dimLevel != null && m.hasOwnProperty("dimLevel")) {
                 d.dimLevel = o.json && !isFinite(m.dimLevel) ? String(m.dimLevel) : m.dimLevel;
@@ -40348,9 +40348,9 @@ export const WAE2E = $root.WAE2E = (() => {
         ChatThemeSetting.prototype.solidColor = null;
         ChatThemeSetting.prototype.stockImage = null;
         ChatThemeSetting.prototype.customImage = null;
-        ChatThemeSetting.prototype.settingTimestampMS = null;
+        ChatThemeSetting.prototype.settingTimestampMs = null;
         ChatThemeSetting.prototype.clearTheme = null;
-        ChatThemeSetting.prototype.colorSchemeID = null;
+        ChatThemeSetting.prototype.colorSchemeId = null;
 
         let $oneOfFields;
 
@@ -40360,8 +40360,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ChatThemeSetting.prototype, "_settingTimestampMS", {
-            get: $util.oneOfGetter($oneOfFields = ["settingTimestampMS"]),
+        Object.defineProperty(ChatThemeSetting.prototype, "_settingTimestampMs", {
+            get: $util.oneOfGetter($oneOfFields = ["settingTimestampMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -40372,8 +40372,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ChatThemeSetting.prototype, "_colorSchemeID", {
-            get: $util.oneOfGetter($oneOfFields = ["colorSchemeID"]),
+        Object.defineProperty(ChatThemeSetting.prototype, "_colorSchemeId", {
+            get: $util.oneOfGetter($oneOfFields = ["colorSchemeId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -40384,12 +40384,12 @@ export const WAE2E = $root.WAE2E = (() => {
         ChatThemeSetting.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.settingTimestampMS != null && Object.hasOwnProperty.call(m, "settingTimestampMS"))
-                w.uint32(8).int64(m.settingTimestampMS);
+            if (m.settingTimestampMs != null && Object.hasOwnProperty.call(m, "settingTimestampMs"))
+                w.uint32(8).int64(m.settingTimestampMs);
             if (m.clearTheme != null && Object.hasOwnProperty.call(m, "clearTheme"))
                 w.uint32(16).bool(m.clearTheme);
-            if (m.colorSchemeID != null && Object.hasOwnProperty.call(m, "colorSchemeID"))
-                w.uint32(26).string(m.colorSchemeID);
+            if (m.colorSchemeId != null && Object.hasOwnProperty.call(m, "colorSchemeId"))
+                w.uint32(26).string(m.colorSchemeId);
             if (m.defaultWallpaper != null && Object.hasOwnProperty.call(m, "defaultWallpaper"))
                 $root.WAE2E.ChatDefaultWallpaper.encode(m.defaultWallpaper, w.uint32(82).fork()).ldelim();
             if (m.solidColor != null && Object.hasOwnProperty.call(m, "solidColor"))
@@ -40431,7 +40431,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 1: {
-                        m.settingTimestampMS = r.int64();
+                        m.settingTimestampMs = r.int64();
                         break;
                     }
                 case 2: {
@@ -40439,7 +40439,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.colorSchemeID = r.string();
+                        m.colorSchemeId = r.string();
                         break;
                     }
                 default:
@@ -40478,21 +40478,21 @@ export const WAE2E = $root.WAE2E = (() => {
                     throw TypeError(".WAE2E.ChatThemeSetting.customImage: object expected");
                 m.customImage = $root.WAE2E.ChatCustomImageWallpaper.fromObject(d.customImage, n + 1);
             }
-            if (d.settingTimestampMS != null) {
+            if (d.settingTimestampMs != null) {
                 if ($util.Long)
-                    (m.settingTimestampMS = $util.Long.fromValue(d.settingTimestampMS)).unsigned = false;
-                else if (typeof d.settingTimestampMS === "string")
-                    m.settingTimestampMS = parseInt(d.settingTimestampMS, 10);
-                else if (typeof d.settingTimestampMS === "number")
-                    m.settingTimestampMS = d.settingTimestampMS;
-                else if (typeof d.settingTimestampMS === "object")
-                    m.settingTimestampMS = new $util.LongBits(d.settingTimestampMS.low >>> 0, d.settingTimestampMS.high >>> 0).toNumber();
+                    (m.settingTimestampMs = $util.Long.fromValue(d.settingTimestampMs)).unsigned = false;
+                else if (typeof d.settingTimestampMs === "string")
+                    m.settingTimestampMs = parseInt(d.settingTimestampMs, 10);
+                else if (typeof d.settingTimestampMs === "number")
+                    m.settingTimestampMs = d.settingTimestampMs;
+                else if (typeof d.settingTimestampMs === "object")
+                    m.settingTimestampMs = new $util.LongBits(d.settingTimestampMs.low >>> 0, d.settingTimestampMs.high >>> 0).toNumber();
             }
             if (d.clearTheme != null) {
                 m.clearTheme = Boolean(d.clearTheme);
             }
-            if (d.colorSchemeID != null) {
-                m.colorSchemeID = String(d.colorSchemeID);
+            if (d.colorSchemeId != null) {
+                m.colorSchemeId = String(d.colorSchemeId);
             }
             return m;
         };
@@ -40501,23 +40501,23 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.settingTimestampMS != null && m.hasOwnProperty("settingTimestampMS")) {
-                if (typeof m.settingTimestampMS === "number")
-                    d.settingTimestampMS = o.longs === String ? String(m.settingTimestampMS) : m.settingTimestampMS;
+            if (m.settingTimestampMs != null && m.hasOwnProperty("settingTimestampMs")) {
+                if (typeof m.settingTimestampMs === "number")
+                    d.settingTimestampMs = o.longs === String ? String(m.settingTimestampMs) : m.settingTimestampMs;
                 else
-                    d.settingTimestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.settingTimestampMS) : o.longs === Number ? new $util.LongBits(m.settingTimestampMS.low >>> 0, m.settingTimestampMS.high >>> 0).toNumber() : m.settingTimestampMS;
+                    d.settingTimestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.settingTimestampMs) : o.longs === Number ? new $util.LongBits(m.settingTimestampMs.low >>> 0, m.settingTimestampMs.high >>> 0).toNumber() : m.settingTimestampMs;
                 if (o.oneofs)
-                    d._settingTimestampMS = "settingTimestampMS";
+                    d._settingTimestampMs = "settingTimestampMs";
             }
             if (m.clearTheme != null && m.hasOwnProperty("clearTheme")) {
                 d.clearTheme = m.clearTheme;
                 if (o.oneofs)
                     d._clearTheme = "clearTheme";
             }
-            if (m.colorSchemeID != null && m.hasOwnProperty("colorSchemeID")) {
-                d.colorSchemeID = m.colorSchemeID;
+            if (m.colorSchemeId != null && m.hasOwnProperty("colorSchemeId")) {
+                d.colorSchemeId = m.colorSchemeId;
                 if (o.oneofs)
-                    d._colorSchemeID = "colorSchemeID";
+                    d._colorSchemeId = "colorSchemeId";
             }
             if (m.defaultWallpaper != null && m.hasOwnProperty("defaultWallpaper")) {
                 d.defaultWallpaper = $root.WAE2E.ChatDefaultWallpaper.toObject(m.defaultWallpaper, o);
@@ -40566,7 +40566,7 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         Chat.prototype.displayName = null;
-        Chat.prototype.ID = null;
+        Chat.prototype.id = null;
 
         let $oneOfFields;
 
@@ -40577,8 +40577,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(Chat.prototype, "_ID", {
-            get: $util.oneOfGetter($oneOfFields = ["ID"]),
+        Object.defineProperty(Chat.prototype, "_id", {
+            get: $util.oneOfGetter($oneOfFields = ["id"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -40591,8 +40591,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.displayName != null && Object.hasOwnProperty.call(m, "displayName"))
                 w.uint32(10).string(m.displayName);
-            if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                w.uint32(18).string(m.ID);
+            if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                w.uint32(18).string(m.id);
             return w;
         };
 
@@ -40614,7 +40614,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.ID = r.string();
+                        m.id = r.string();
                         break;
                     }
                 default:
@@ -40636,8 +40636,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.displayName != null) {
                 m.displayName = String(d.displayName);
             }
-            if (d.ID != null) {
-                m.ID = String(d.ID);
+            if (d.id != null) {
+                m.id = String(d.id);
             }
             return m;
         };
@@ -40651,10 +40651,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._displayName = "displayName";
             }
-            if (m.ID != null && m.hasOwnProperty("ID")) {
-                d.ID = m.ID;
+            if (m.id != null && m.hasOwnProperty("id")) {
+                d.id = m.id;
                 if (o.oneofs)
-                    d._ID = "ID";
+                    d._id = "id";
             }
             return d;
         };
@@ -41001,14 +41001,14 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        AudioMessage.prototype.URL = null;
+        AudioMessage.prototype.url = null;
         AudioMessage.prototype.mimetype = null;
-        AudioMessage.prototype.fileSHA256 = null;
+        AudioMessage.prototype.fileSha256 = null;
         AudioMessage.prototype.fileLength = null;
         AudioMessage.prototype.seconds = null;
-        AudioMessage.prototype.PTT = null;
+        AudioMessage.prototype.ptt = null;
         AudioMessage.prototype.mediaKey = null;
-        AudioMessage.prototype.fileEncSHA256 = null;
+        AudioMessage.prototype.fileEncSha256 = null;
         AudioMessage.prototype.directPath = null;
         AudioMessage.prototype.mediaKeyTimestamp = null;
         AudioMessage.prototype.contextInfo = null;
@@ -41021,8 +41021,8 @@ export const WAE2E = $root.WAE2E = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AudioMessage.prototype, "_URL", {
-            get: $util.oneOfGetter($oneOfFields = ["URL"]),
+        Object.defineProperty(AudioMessage.prototype, "_url", {
+            get: $util.oneOfGetter($oneOfFields = ["url"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -41033,8 +41033,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AudioMessage.prototype, "_fileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+        Object.defineProperty(AudioMessage.prototype, "_fileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -41051,8 +41051,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AudioMessage.prototype, "_PTT", {
-            get: $util.oneOfGetter($oneOfFields = ["PTT"]),
+        Object.defineProperty(AudioMessage.prototype, "_ptt", {
+            get: $util.oneOfGetter($oneOfFields = ["ptt"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -41063,8 +41063,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AudioMessage.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(AudioMessage.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -41123,22 +41123,22 @@ export const WAE2E = $root.WAE2E = (() => {
         AudioMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                w.uint32(10).string(m.URL);
+            if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                w.uint32(10).string(m.url);
             if (m.mimetype != null && Object.hasOwnProperty.call(m, "mimetype"))
                 w.uint32(18).string(m.mimetype);
-            if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                w.uint32(26).bytes(m.fileSHA256);
+            if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                w.uint32(26).bytes(m.fileSha256);
             if (m.fileLength != null && Object.hasOwnProperty.call(m, "fileLength"))
                 w.uint32(32).uint64(m.fileLength);
             if (m.seconds != null && Object.hasOwnProperty.call(m, "seconds"))
                 w.uint32(40).uint32(m.seconds);
-            if (m.PTT != null && Object.hasOwnProperty.call(m, "PTT"))
-                w.uint32(48).bool(m.PTT);
+            if (m.ptt != null && Object.hasOwnProperty.call(m, "ptt"))
+                w.uint32(48).bool(m.ptt);
             if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                 w.uint32(58).bytes(m.mediaKey);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(66).bytes(m.fileEncSHA256);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(66).bytes(m.fileEncSha256);
             if (m.directPath != null && Object.hasOwnProperty.call(m, "directPath"))
                 w.uint32(74).string(m.directPath);
             if (m.mediaKeyTimestamp != null && Object.hasOwnProperty.call(m, "mediaKeyTimestamp"))
@@ -41172,7 +41172,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.URL = r.string();
+                        m.url = r.string();
                         break;
                     }
                 case 2: {
@@ -41180,7 +41180,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.fileSHA256 = r.bytes();
+                        m.fileSha256 = r.bytes();
                         break;
                     }
                 case 4: {
@@ -41192,7 +41192,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 6: {
-                        m.PTT = r.bool();
+                        m.ptt = r.bool();
                         break;
                     }
                 case 7: {
@@ -41200,7 +41200,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 8: {
-                        m.fileEncSHA256 = r.bytes();
+                        m.fileEncSha256 = r.bytes();
                         break;
                     }
                 case 9: {
@@ -41251,17 +41251,17 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.AudioMessage();
-            if (d.URL != null) {
-                m.URL = String(d.URL);
+            if (d.url != null) {
+                m.url = String(d.url);
             }
             if (d.mimetype != null) {
                 m.mimetype = String(d.mimetype);
             }
-            if (d.fileSHA256 != null) {
-                if (typeof d.fileSHA256 === "string")
-                    $util.base64.decode(d.fileSHA256, m.fileSHA256 = $util.newBuffer($util.base64.length(d.fileSHA256)), 0);
-                else if (d.fileSHA256.length >= 0)
-                    m.fileSHA256 = d.fileSHA256;
+            if (d.fileSha256 != null) {
+                if (typeof d.fileSha256 === "string")
+                    $util.base64.decode(d.fileSha256, m.fileSha256 = $util.newBuffer($util.base64.length(d.fileSha256)), 0);
+                else if (d.fileSha256.length >= 0)
+                    m.fileSha256 = d.fileSha256;
             }
             if (d.fileLength != null) {
                 if ($util.Long)
@@ -41276,8 +41276,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.seconds != null) {
                 m.seconds = d.seconds >>> 0;
             }
-            if (d.PTT != null) {
-                m.PTT = Boolean(d.PTT);
+            if (d.ptt != null) {
+                m.ptt = Boolean(d.ptt);
             }
             if (d.mediaKey != null) {
                 if (typeof d.mediaKey === "string")
@@ -41285,11 +41285,11 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.mediaKey.length >= 0)
                     m.mediaKey = d.mediaKey;
             }
-            if (d.fileEncSHA256 != null) {
-                if (typeof d.fileEncSHA256 === "string")
-                    $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                else if (d.fileEncSHA256.length >= 0)
-                    m.fileEncSHA256 = d.fileEncSHA256;
+            if (d.fileEncSha256 != null) {
+                if (typeof d.fileEncSha256 === "string")
+                    $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                else if (d.fileEncSha256.length >= 0)
+                    m.fileEncSha256 = d.fileEncSha256;
             }
             if (d.directPath != null) {
                 m.directPath = String(d.directPath);
@@ -41337,20 +41337,20 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.URL != null && m.hasOwnProperty("URL")) {
-                d.URL = m.URL;
+            if (m.url != null && m.hasOwnProperty("url")) {
+                d.url = m.url;
                 if (o.oneofs)
-                    d._URL = "URL";
+                    d._url = "url";
             }
             if (m.mimetype != null && m.hasOwnProperty("mimetype")) {
                 d.mimetype = m.mimetype;
                 if (o.oneofs)
                     d._mimetype = "mimetype";
             }
-            if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                d.fileSHA256 = o.bytes === String ? $util.base64.encode(m.fileSHA256, 0, m.fileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSHA256) : m.fileSHA256;
+            if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                d.fileSha256 = o.bytes === String ? $util.base64.encode(m.fileSha256, 0, m.fileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSha256) : m.fileSha256;
                 if (o.oneofs)
-                    d._fileSHA256 = "fileSHA256";
+                    d._fileSha256 = "fileSha256";
             }
             if (m.fileLength != null && m.hasOwnProperty("fileLength")) {
                 if (typeof m.fileLength === "number")
@@ -41365,20 +41365,20 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._seconds = "seconds";
             }
-            if (m.PTT != null && m.hasOwnProperty("PTT")) {
-                d.PTT = m.PTT;
+            if (m.ptt != null && m.hasOwnProperty("ptt")) {
+                d.ptt = m.ptt;
                 if (o.oneofs)
-                    d._PTT = "PTT";
+                    d._ptt = "ptt";
             }
             if (m.mediaKey != null && m.hasOwnProperty("mediaKey")) {
                 d.mediaKey = o.bytes === String ? $util.base64.encode(m.mediaKey, 0, m.mediaKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.mediaKey) : m.mediaKey;
                 if (o.oneofs)
                     d._mediaKey = "mediaKey";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
             if (m.directPath != null && m.hasOwnProperty("directPath")) {
                 d.directPath = m.directPath;
@@ -41449,22 +41449,22 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        DocumentMessage.prototype.URL = null;
+        DocumentMessage.prototype.url = null;
         DocumentMessage.prototype.mimetype = null;
         DocumentMessage.prototype.title = null;
-        DocumentMessage.prototype.fileSHA256 = null;
+        DocumentMessage.prototype.fileSha256 = null;
         DocumentMessage.prototype.fileLength = null;
         DocumentMessage.prototype.pageCount = null;
         DocumentMessage.prototype.mediaKey = null;
         DocumentMessage.prototype.fileName = null;
-        DocumentMessage.prototype.fileEncSHA256 = null;
+        DocumentMessage.prototype.fileEncSha256 = null;
         DocumentMessage.prototype.directPath = null;
         DocumentMessage.prototype.mediaKeyTimestamp = null;
         DocumentMessage.prototype.contactVcard = null;
         DocumentMessage.prototype.thumbnailDirectPath = null;
-        DocumentMessage.prototype.thumbnailSHA256 = null;
-        DocumentMessage.prototype.thumbnailEncSHA256 = null;
-        DocumentMessage.prototype.JPEGThumbnail = null;
+        DocumentMessage.prototype.thumbnailSha256 = null;
+        DocumentMessage.prototype.thumbnailEncSha256 = null;
+        DocumentMessage.prototype.jpegThumbnail = null;
         DocumentMessage.prototype.contextInfo = null;
         DocumentMessage.prototype.thumbnailHeight = null;
         DocumentMessage.prototype.thumbnailWidth = null;
@@ -41474,8 +41474,8 @@ export const WAE2E = $root.WAE2E = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(DocumentMessage.prototype, "_URL", {
-            get: $util.oneOfGetter($oneOfFields = ["URL"]),
+        Object.defineProperty(DocumentMessage.prototype, "_url", {
+            get: $util.oneOfGetter($oneOfFields = ["url"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -41492,8 +41492,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(DocumentMessage.prototype, "_fileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+        Object.defineProperty(DocumentMessage.prototype, "_fileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -41522,8 +41522,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(DocumentMessage.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(DocumentMessage.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -41552,20 +41552,20 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(DocumentMessage.prototype, "_thumbnailSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailSHA256"]),
+        Object.defineProperty(DocumentMessage.prototype, "_thumbnailSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(DocumentMessage.prototype, "_thumbnailEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailEncSHA256"]),
+        Object.defineProperty(DocumentMessage.prototype, "_thumbnailEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(DocumentMessage.prototype, "_JPEGThumbnail", {
-            get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+        Object.defineProperty(DocumentMessage.prototype, "_jpegThumbnail", {
+            get: $util.oneOfGetter($oneOfFields = ["jpegThumbnail"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -41606,14 +41606,14 @@ export const WAE2E = $root.WAE2E = (() => {
         DocumentMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                w.uint32(10).string(m.URL);
+            if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                w.uint32(10).string(m.url);
             if (m.mimetype != null && Object.hasOwnProperty.call(m, "mimetype"))
                 w.uint32(18).string(m.mimetype);
             if (m.title != null && Object.hasOwnProperty.call(m, "title"))
                 w.uint32(26).string(m.title);
-            if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                w.uint32(34).bytes(m.fileSHA256);
+            if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                w.uint32(34).bytes(m.fileSha256);
             if (m.fileLength != null && Object.hasOwnProperty.call(m, "fileLength"))
                 w.uint32(40).uint64(m.fileLength);
             if (m.pageCount != null && Object.hasOwnProperty.call(m, "pageCount"))
@@ -41622,8 +41622,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(58).bytes(m.mediaKey);
             if (m.fileName != null && Object.hasOwnProperty.call(m, "fileName"))
                 w.uint32(66).string(m.fileName);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(74).bytes(m.fileEncSHA256);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(74).bytes(m.fileEncSha256);
             if (m.directPath != null && Object.hasOwnProperty.call(m, "directPath"))
                 w.uint32(82).string(m.directPath);
             if (m.mediaKeyTimestamp != null && Object.hasOwnProperty.call(m, "mediaKeyTimestamp"))
@@ -41632,12 +41632,12 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(96).bool(m.contactVcard);
             if (m.thumbnailDirectPath != null && Object.hasOwnProperty.call(m, "thumbnailDirectPath"))
                 w.uint32(106).string(m.thumbnailDirectPath);
-            if (m.thumbnailSHA256 != null && Object.hasOwnProperty.call(m, "thumbnailSHA256"))
-                w.uint32(114).bytes(m.thumbnailSHA256);
-            if (m.thumbnailEncSHA256 != null && Object.hasOwnProperty.call(m, "thumbnailEncSHA256"))
-                w.uint32(122).bytes(m.thumbnailEncSHA256);
-            if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                w.uint32(130).bytes(m.JPEGThumbnail);
+            if (m.thumbnailSha256 != null && Object.hasOwnProperty.call(m, "thumbnailSha256"))
+                w.uint32(114).bytes(m.thumbnailSha256);
+            if (m.thumbnailEncSha256 != null && Object.hasOwnProperty.call(m, "thumbnailEncSha256"))
+                w.uint32(122).bytes(m.thumbnailEncSha256);
+            if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                w.uint32(130).bytes(m.jpegThumbnail);
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
                 $root.WAE2E.ContextInfo.encode(m.contextInfo, w.uint32(138).fork()).ldelim();
             if (m.thumbnailHeight != null && Object.hasOwnProperty.call(m, "thumbnailHeight"))
@@ -41665,7 +41665,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.URL = r.string();
+                        m.url = r.string();
                         break;
                     }
                 case 2: {
@@ -41677,7 +41677,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 4: {
-                        m.fileSHA256 = r.bytes();
+                        m.fileSha256 = r.bytes();
                         break;
                     }
                 case 5: {
@@ -41697,7 +41697,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 9: {
-                        m.fileEncSHA256 = r.bytes();
+                        m.fileEncSha256 = r.bytes();
                         break;
                     }
                 case 10: {
@@ -41717,15 +41717,15 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 14: {
-                        m.thumbnailSHA256 = r.bytes();
+                        m.thumbnailSha256 = r.bytes();
                         break;
                     }
                 case 15: {
-                        m.thumbnailEncSHA256 = r.bytes();
+                        m.thumbnailEncSha256 = r.bytes();
                         break;
                     }
                 case 16: {
-                        m.JPEGThumbnail = r.bytes();
+                        m.jpegThumbnail = r.bytes();
                         break;
                     }
                 case 17: {
@@ -41764,8 +41764,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.DocumentMessage();
-            if (d.URL != null) {
-                m.URL = String(d.URL);
+            if (d.url != null) {
+                m.url = String(d.url);
             }
             if (d.mimetype != null) {
                 m.mimetype = String(d.mimetype);
@@ -41773,11 +41773,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.title != null) {
                 m.title = String(d.title);
             }
-            if (d.fileSHA256 != null) {
-                if (typeof d.fileSHA256 === "string")
-                    $util.base64.decode(d.fileSHA256, m.fileSHA256 = $util.newBuffer($util.base64.length(d.fileSHA256)), 0);
-                else if (d.fileSHA256.length >= 0)
-                    m.fileSHA256 = d.fileSHA256;
+            if (d.fileSha256 != null) {
+                if (typeof d.fileSha256 === "string")
+                    $util.base64.decode(d.fileSha256, m.fileSha256 = $util.newBuffer($util.base64.length(d.fileSha256)), 0);
+                else if (d.fileSha256.length >= 0)
+                    m.fileSha256 = d.fileSha256;
             }
             if (d.fileLength != null) {
                 if ($util.Long)
@@ -41801,11 +41801,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.fileName != null) {
                 m.fileName = String(d.fileName);
             }
-            if (d.fileEncSHA256 != null) {
-                if (typeof d.fileEncSHA256 === "string")
-                    $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                else if (d.fileEncSHA256.length >= 0)
-                    m.fileEncSHA256 = d.fileEncSHA256;
+            if (d.fileEncSha256 != null) {
+                if (typeof d.fileEncSha256 === "string")
+                    $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                else if (d.fileEncSha256.length >= 0)
+                    m.fileEncSha256 = d.fileEncSha256;
             }
             if (d.directPath != null) {
                 m.directPath = String(d.directPath);
@@ -41826,23 +41826,23 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.thumbnailDirectPath != null) {
                 m.thumbnailDirectPath = String(d.thumbnailDirectPath);
             }
-            if (d.thumbnailSHA256 != null) {
-                if (typeof d.thumbnailSHA256 === "string")
-                    $util.base64.decode(d.thumbnailSHA256, m.thumbnailSHA256 = $util.newBuffer($util.base64.length(d.thumbnailSHA256)), 0);
-                else if (d.thumbnailSHA256.length >= 0)
-                    m.thumbnailSHA256 = d.thumbnailSHA256;
+            if (d.thumbnailSha256 != null) {
+                if (typeof d.thumbnailSha256 === "string")
+                    $util.base64.decode(d.thumbnailSha256, m.thumbnailSha256 = $util.newBuffer($util.base64.length(d.thumbnailSha256)), 0);
+                else if (d.thumbnailSha256.length >= 0)
+                    m.thumbnailSha256 = d.thumbnailSha256;
             }
-            if (d.thumbnailEncSHA256 != null) {
-                if (typeof d.thumbnailEncSHA256 === "string")
-                    $util.base64.decode(d.thumbnailEncSHA256, m.thumbnailEncSHA256 = $util.newBuffer($util.base64.length(d.thumbnailEncSHA256)), 0);
-                else if (d.thumbnailEncSHA256.length >= 0)
-                    m.thumbnailEncSHA256 = d.thumbnailEncSHA256;
+            if (d.thumbnailEncSha256 != null) {
+                if (typeof d.thumbnailEncSha256 === "string")
+                    $util.base64.decode(d.thumbnailEncSha256, m.thumbnailEncSha256 = $util.newBuffer($util.base64.length(d.thumbnailEncSha256)), 0);
+                else if (d.thumbnailEncSha256.length >= 0)
+                    m.thumbnailEncSha256 = d.thumbnailEncSha256;
             }
-            if (d.JPEGThumbnail != null) {
-                if (typeof d.JPEGThumbnail === "string")
-                    $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                else if (d.JPEGThumbnail.length >= 0)
-                    m.JPEGThumbnail = d.JPEGThumbnail;
+            if (d.jpegThumbnail != null) {
+                if (typeof d.jpegThumbnail === "string")
+                    $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                else if (d.jpegThumbnail.length >= 0)
+                    m.jpegThumbnail = d.jpegThumbnail;
             }
             if (d.contextInfo != null) {
                 if (typeof d.contextInfo !== "object")
@@ -41868,10 +41868,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.URL != null && m.hasOwnProperty("URL")) {
-                d.URL = m.URL;
+            if (m.url != null && m.hasOwnProperty("url")) {
+                d.url = m.url;
                 if (o.oneofs)
-                    d._URL = "URL";
+                    d._url = "url";
             }
             if (m.mimetype != null && m.hasOwnProperty("mimetype")) {
                 d.mimetype = m.mimetype;
@@ -41883,10 +41883,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._title = "title";
             }
-            if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                d.fileSHA256 = o.bytes === String ? $util.base64.encode(m.fileSHA256, 0, m.fileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSHA256) : m.fileSHA256;
+            if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                d.fileSha256 = o.bytes === String ? $util.base64.encode(m.fileSha256, 0, m.fileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSha256) : m.fileSha256;
                 if (o.oneofs)
-                    d._fileSHA256 = "fileSHA256";
+                    d._fileSha256 = "fileSha256";
             }
             if (m.fileLength != null && m.hasOwnProperty("fileLength")) {
                 if (typeof m.fileLength === "number")
@@ -41911,10 +41911,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._fileName = "fileName";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
             if (m.directPath != null && m.hasOwnProperty("directPath")) {
                 d.directPath = m.directPath;
@@ -41939,20 +41939,20 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._thumbnailDirectPath = "thumbnailDirectPath";
             }
-            if (m.thumbnailSHA256 != null && m.hasOwnProperty("thumbnailSHA256")) {
-                d.thumbnailSHA256 = o.bytes === String ? $util.base64.encode(m.thumbnailSHA256, 0, m.thumbnailSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailSHA256) : m.thumbnailSHA256;
+            if (m.thumbnailSha256 != null && m.hasOwnProperty("thumbnailSha256")) {
+                d.thumbnailSha256 = o.bytes === String ? $util.base64.encode(m.thumbnailSha256, 0, m.thumbnailSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailSha256) : m.thumbnailSha256;
                 if (o.oneofs)
-                    d._thumbnailSHA256 = "thumbnailSHA256";
+                    d._thumbnailSha256 = "thumbnailSha256";
             }
-            if (m.thumbnailEncSHA256 != null && m.hasOwnProperty("thumbnailEncSHA256")) {
-                d.thumbnailEncSHA256 = o.bytes === String ? $util.base64.encode(m.thumbnailEncSHA256, 0, m.thumbnailEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailEncSHA256) : m.thumbnailEncSHA256;
+            if (m.thumbnailEncSha256 != null && m.hasOwnProperty("thumbnailEncSha256")) {
+                d.thumbnailEncSha256 = o.bytes === String ? $util.base64.encode(m.thumbnailEncSha256, 0, m.thumbnailEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailEncSha256) : m.thumbnailEncSha256;
                 if (o.oneofs)
-                    d._thumbnailEncSHA256 = "thumbnailEncSHA256";
+                    d._thumbnailEncSha256 = "thumbnailEncSha256";
             }
-            if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+            if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                 if (o.oneofs)
-                    d._JPEGThumbnail = "JPEGThumbnail";
+                    d._jpegThumbnail = "jpegThumbnail";
             }
             if (m.contextInfo != null && m.hasOwnProperty("contextInfo")) {
                 d.contextInfo = $root.WAE2E.ContextInfo.toObject(m.contextInfo, o);
@@ -42005,13 +42005,13 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        URLMetadata.prototype.fbExperimentID = null;
+        URLMetadata.prototype.fbExperimentId = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(URLMetadata.prototype, "_fbExperimentID", {
-            get: $util.oneOfGetter($oneOfFields = ["fbExperimentID"]),
+        Object.defineProperty(URLMetadata.prototype, "_fbExperimentId", {
+            get: $util.oneOfGetter($oneOfFields = ["fbExperimentId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -42022,8 +42022,8 @@ export const WAE2E = $root.WAE2E = (() => {
         URLMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.fbExperimentID != null && Object.hasOwnProperty.call(m, "fbExperimentID"))
-                w.uint32(8).uint32(m.fbExperimentID);
+            if (m.fbExperimentId != null && Object.hasOwnProperty.call(m, "fbExperimentId"))
+                w.uint32(8).uint32(m.fbExperimentId);
             return w;
         };
 
@@ -42041,7 +42041,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.fbExperimentID = r.uint32();
+                        m.fbExperimentId = r.uint32();
                         break;
                     }
                 default:
@@ -42060,8 +42060,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.URLMetadata();
-            if (d.fbExperimentID != null) {
-                m.fbExperimentID = d.fbExperimentID >>> 0;
+            if (d.fbExperimentId != null) {
+                m.fbExperimentId = d.fbExperimentId >>> 0;
             }
             return m;
         };
@@ -42070,10 +42070,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.fbExperimentID != null && m.hasOwnProperty("fbExperimentID")) {
-                d.fbExperimentID = m.fbExperimentID;
+            if (m.fbExperimentId != null && m.hasOwnProperty("fbExperimentId")) {
+                d.fbExperimentId = m.fbExperimentId;
                 if (o.oneofs)
-                    d._fbExperimentID = "fbExperimentID";
+                    d._fbExperimentId = "fbExperimentId";
             }
             return d;
         };
@@ -42219,8 +42219,8 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         MMSThumbnailMetadata.prototype.thumbnailDirectPath = null;
-        MMSThumbnailMetadata.prototype.thumbnailSHA256 = null;
-        MMSThumbnailMetadata.prototype.thumbnailEncSHA256 = null;
+        MMSThumbnailMetadata.prototype.thumbnailSha256 = null;
+        MMSThumbnailMetadata.prototype.thumbnailEncSha256 = null;
         MMSThumbnailMetadata.prototype.mediaKey = null;
         MMSThumbnailMetadata.prototype.mediaKeyTimestamp = null;
         MMSThumbnailMetadata.prototype.thumbnailHeight = null;
@@ -42235,14 +42235,14 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MMSThumbnailMetadata.prototype, "_thumbnailSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailSHA256"]),
+        Object.defineProperty(MMSThumbnailMetadata.prototype, "_thumbnailSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MMSThumbnailMetadata.prototype, "_thumbnailEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailEncSHA256"]),
+        Object.defineProperty(MMSThumbnailMetadata.prototype, "_thumbnailEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -42279,10 +42279,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.thumbnailDirectPath != null && Object.hasOwnProperty.call(m, "thumbnailDirectPath"))
                 w.uint32(10).string(m.thumbnailDirectPath);
-            if (m.thumbnailSHA256 != null && Object.hasOwnProperty.call(m, "thumbnailSHA256"))
-                w.uint32(18).bytes(m.thumbnailSHA256);
-            if (m.thumbnailEncSHA256 != null && Object.hasOwnProperty.call(m, "thumbnailEncSHA256"))
-                w.uint32(26).bytes(m.thumbnailEncSHA256);
+            if (m.thumbnailSha256 != null && Object.hasOwnProperty.call(m, "thumbnailSha256"))
+                w.uint32(18).bytes(m.thumbnailSha256);
+            if (m.thumbnailEncSha256 != null && Object.hasOwnProperty.call(m, "thumbnailEncSha256"))
+                w.uint32(26).bytes(m.thumbnailEncSha256);
             if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                 w.uint32(34).bytes(m.mediaKey);
             if (m.mediaKeyTimestamp != null && Object.hasOwnProperty.call(m, "mediaKeyTimestamp"))
@@ -42312,11 +42312,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.thumbnailSHA256 = r.bytes();
+                        m.thumbnailSha256 = r.bytes();
                         break;
                     }
                 case 3: {
-                        m.thumbnailEncSHA256 = r.bytes();
+                        m.thumbnailEncSha256 = r.bytes();
                         break;
                     }
                 case 4: {
@@ -42354,17 +42354,17 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.thumbnailDirectPath != null) {
                 m.thumbnailDirectPath = String(d.thumbnailDirectPath);
             }
-            if (d.thumbnailSHA256 != null) {
-                if (typeof d.thumbnailSHA256 === "string")
-                    $util.base64.decode(d.thumbnailSHA256, m.thumbnailSHA256 = $util.newBuffer($util.base64.length(d.thumbnailSHA256)), 0);
-                else if (d.thumbnailSHA256.length >= 0)
-                    m.thumbnailSHA256 = d.thumbnailSHA256;
+            if (d.thumbnailSha256 != null) {
+                if (typeof d.thumbnailSha256 === "string")
+                    $util.base64.decode(d.thumbnailSha256, m.thumbnailSha256 = $util.newBuffer($util.base64.length(d.thumbnailSha256)), 0);
+                else if (d.thumbnailSha256.length >= 0)
+                    m.thumbnailSha256 = d.thumbnailSha256;
             }
-            if (d.thumbnailEncSHA256 != null) {
-                if (typeof d.thumbnailEncSHA256 === "string")
-                    $util.base64.decode(d.thumbnailEncSHA256, m.thumbnailEncSHA256 = $util.newBuffer($util.base64.length(d.thumbnailEncSHA256)), 0);
-                else if (d.thumbnailEncSHA256.length >= 0)
-                    m.thumbnailEncSHA256 = d.thumbnailEncSHA256;
+            if (d.thumbnailEncSha256 != null) {
+                if (typeof d.thumbnailEncSha256 === "string")
+                    $util.base64.decode(d.thumbnailEncSha256, m.thumbnailEncSha256 = $util.newBuffer($util.base64.length(d.thumbnailEncSha256)), 0);
+                else if (d.thumbnailEncSha256.length >= 0)
+                    m.thumbnailEncSha256 = d.thumbnailEncSha256;
             }
             if (d.mediaKey != null) {
                 if (typeof d.mediaKey === "string")
@@ -42400,15 +42400,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._thumbnailDirectPath = "thumbnailDirectPath";
             }
-            if (m.thumbnailSHA256 != null && m.hasOwnProperty("thumbnailSHA256")) {
-                d.thumbnailSHA256 = o.bytes === String ? $util.base64.encode(m.thumbnailSHA256, 0, m.thumbnailSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailSHA256) : m.thumbnailSHA256;
+            if (m.thumbnailSha256 != null && m.hasOwnProperty("thumbnailSha256")) {
+                d.thumbnailSha256 = o.bytes === String ? $util.base64.encode(m.thumbnailSha256, 0, m.thumbnailSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailSha256) : m.thumbnailSha256;
                 if (o.oneofs)
-                    d._thumbnailSHA256 = "thumbnailSHA256";
+                    d._thumbnailSha256 = "thumbnailSha256";
             }
-            if (m.thumbnailEncSHA256 != null && m.hasOwnProperty("thumbnailEncSHA256")) {
-                d.thumbnailEncSHA256 = o.bytes === String ? $util.base64.encode(m.thumbnailEncSHA256, 0, m.thumbnailEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailEncSHA256) : m.thumbnailEncSHA256;
+            if (m.thumbnailEncSha256 != null && m.hasOwnProperty("thumbnailEncSha256")) {
+                d.thumbnailEncSha256 = o.bytes === String ? $util.base64.encode(m.thumbnailEncSha256, 0, m.thumbnailEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.thumbnailEncSha256) : m.thumbnailEncSha256;
                 if (o.oneofs)
-                    d._thumbnailEncSHA256 = "thumbnailEncSHA256";
+                    d._thumbnailEncSha256 = "thumbnailEncSha256";
             }
             if (m.mediaKey != null && m.hasOwnProperty("mediaKey")) {
                 d.mediaKey = o.bytes === String ? $util.base64.encode(m.mediaKey, 0, m.mediaKey.length) : o.bytes === Array ? Array.prototype.slice.call(m.mediaKey) : m.mediaKey;
@@ -42463,13 +42463,13 @@ export const WAE2E = $root.WAE2E = (() => {
         LocationMessage.prototype.degreesLongitude = null;
         LocationMessage.prototype.name = null;
         LocationMessage.prototype.address = null;
-        LocationMessage.prototype.URL = null;
+        LocationMessage.prototype.url = null;
         LocationMessage.prototype.isLive = null;
         LocationMessage.prototype.accuracyInMeters = null;
         LocationMessage.prototype.speedInMps = null;
         LocationMessage.prototype.degreesClockwiseFromMagneticNorth = null;
         LocationMessage.prototype.comment = null;
-        LocationMessage.prototype.JPEGThumbnail = null;
+        LocationMessage.prototype.jpegThumbnail = null;
         LocationMessage.prototype.contextInfo = null;
 
         let $oneOfFields;
@@ -42499,8 +42499,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(LocationMessage.prototype, "_URL", {
-            get: $util.oneOfGetter($oneOfFields = ["URL"]),
+        Object.defineProperty(LocationMessage.prototype, "_url", {
+            get: $util.oneOfGetter($oneOfFields = ["url"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -42535,8 +42535,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(LocationMessage.prototype, "_JPEGThumbnail", {
-            get: $util.oneOfGetter($oneOfFields = ["JPEGThumbnail"]),
+        Object.defineProperty(LocationMessage.prototype, "_jpegThumbnail", {
+            get: $util.oneOfGetter($oneOfFields = ["jpegThumbnail"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -42561,8 +42561,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(26).string(m.name);
             if (m.address != null && Object.hasOwnProperty.call(m, "address"))
                 w.uint32(34).string(m.address);
-            if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                w.uint32(42).string(m.URL);
+            if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                w.uint32(42).string(m.url);
             if (m.isLive != null && Object.hasOwnProperty.call(m, "isLive"))
                 w.uint32(48).bool(m.isLive);
             if (m.accuracyInMeters != null && Object.hasOwnProperty.call(m, "accuracyInMeters"))
@@ -42573,8 +42573,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(72).uint32(m.degreesClockwiseFromMagneticNorth);
             if (m.comment != null && Object.hasOwnProperty.call(m, "comment"))
                 w.uint32(90).string(m.comment);
-            if (m.JPEGThumbnail != null && Object.hasOwnProperty.call(m, "JPEGThumbnail"))
-                w.uint32(130).bytes(m.JPEGThumbnail);
+            if (m.jpegThumbnail != null && Object.hasOwnProperty.call(m, "jpegThumbnail"))
+                w.uint32(130).bytes(m.jpegThumbnail);
             if (m.contextInfo != null && Object.hasOwnProperty.call(m, "contextInfo"))
                 $root.WAE2E.ContextInfo.encode(m.contextInfo, w.uint32(138).fork()).ldelim();
             return w;
@@ -42610,7 +42610,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 5: {
-                        m.URL = r.string();
+                        m.url = r.string();
                         break;
                     }
                 case 6: {
@@ -42634,7 +42634,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 16: {
-                        m.JPEGThumbnail = r.bytes();
+                        m.jpegThumbnail = r.bytes();
                         break;
                     }
                 case 17: {
@@ -42669,8 +42669,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.address != null) {
                 m.address = String(d.address);
             }
-            if (d.URL != null) {
-                m.URL = String(d.URL);
+            if (d.url != null) {
+                m.url = String(d.url);
             }
             if (d.isLive != null) {
                 m.isLive = Boolean(d.isLive);
@@ -42687,11 +42687,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.comment != null) {
                 m.comment = String(d.comment);
             }
-            if (d.JPEGThumbnail != null) {
-                if (typeof d.JPEGThumbnail === "string")
-                    $util.base64.decode(d.JPEGThumbnail, m.JPEGThumbnail = $util.newBuffer($util.base64.length(d.JPEGThumbnail)), 0);
-                else if (d.JPEGThumbnail.length >= 0)
-                    m.JPEGThumbnail = d.JPEGThumbnail;
+            if (d.jpegThumbnail != null) {
+                if (typeof d.jpegThumbnail === "string")
+                    $util.base64.decode(d.jpegThumbnail, m.jpegThumbnail = $util.newBuffer($util.base64.length(d.jpegThumbnail)), 0);
+                else if (d.jpegThumbnail.length >= 0)
+                    m.jpegThumbnail = d.jpegThumbnail;
             }
             if (d.contextInfo != null) {
                 if (typeof d.contextInfo !== "object")
@@ -42725,10 +42725,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._address = "address";
             }
-            if (m.URL != null && m.hasOwnProperty("URL")) {
-                d.URL = m.URL;
+            if (m.url != null && m.hasOwnProperty("url")) {
+                d.url = m.url;
                 if (o.oneofs)
-                    d._URL = "URL";
+                    d._url = "url";
             }
             if (m.isLive != null && m.hasOwnProperty("isLive")) {
                 d.isLive = m.isLive;
@@ -42755,10 +42755,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._comment = "comment";
             }
-            if (m.JPEGThumbnail != null && m.hasOwnProperty("JPEGThumbnail")) {
-                d.JPEGThumbnail = o.bytes === String ? $util.base64.encode(m.JPEGThumbnail, 0, m.JPEGThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.JPEGThumbnail) : m.JPEGThumbnail;
+            if (m.jpegThumbnail != null && m.hasOwnProperty("jpegThumbnail")) {
+                d.jpegThumbnail = o.bytes === String ? $util.base64.encode(m.jpegThumbnail, 0, m.jpegThumbnail.length) : o.bytes === Array ? Array.prototype.slice.call(m.jpegThumbnail) : m.jpegThumbnail;
                 if (o.oneofs)
-                    d._JPEGThumbnail = "JPEGThumbnail";
+                    d._jpegThumbnail = "jpegThumbnail";
             }
             if (m.contextInfo != null && m.hasOwnProperty("contextInfo")) {
                 d.contextInfo = $root.WAE2E.ContextInfo.toObject(m.contextInfo, o);
@@ -42952,14 +42952,14 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        SenderKeyDistributionMessage.prototype.groupID = null;
+        SenderKeyDistributionMessage.prototype.groupId = null;
         SenderKeyDistributionMessage.prototype.axolotlSenderKeyDistributionMessage = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SenderKeyDistributionMessage.prototype, "_groupID", {
-            get: $util.oneOfGetter($oneOfFields = ["groupID"]),
+        Object.defineProperty(SenderKeyDistributionMessage.prototype, "_groupId", {
+            get: $util.oneOfGetter($oneOfFields = ["groupId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -42976,8 +42976,8 @@ export const WAE2E = $root.WAE2E = (() => {
         SenderKeyDistributionMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.groupID != null && Object.hasOwnProperty.call(m, "groupID"))
-                w.uint32(10).string(m.groupID);
+            if (m.groupId != null && Object.hasOwnProperty.call(m, "groupId"))
+                w.uint32(10).string(m.groupId);
             if (m.axolotlSenderKeyDistributionMessage != null && Object.hasOwnProperty.call(m, "axolotlSenderKeyDistributionMessage"))
                 w.uint32(18).bytes(m.axolotlSenderKeyDistributionMessage);
             return w;
@@ -42997,7 +42997,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.groupID = r.string();
+                        m.groupId = r.string();
                         break;
                     }
                 case 2: {
@@ -43020,8 +43020,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.SenderKeyDistributionMessage();
-            if (d.groupID != null) {
-                m.groupID = String(d.groupID);
+            if (d.groupId != null) {
+                m.groupId = String(d.groupId);
             }
             if (d.axolotlSenderKeyDistributionMessage != null) {
                 if (typeof d.axolotlSenderKeyDistributionMessage === "string")
@@ -43036,10 +43036,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.groupID != null && m.hasOwnProperty("groupID")) {
-                d.groupID = m.groupID;
+            if (m.groupId != null && m.hasOwnProperty("groupId")) {
+                d.groupId = m.groupId;
                 if (o.oneofs)
-                    d._groupID = "groupID";
+                    d._groupId = "groupId";
             }
             if (m.axolotlSenderKeyDistributionMessage != null && m.hasOwnProperty("axolotlSenderKeyDistributionMessage")) {
                 d.axolotlSenderKeyDistributionMessage = o.bytes === String ? $util.base64.encode(m.axolotlSenderKeyDistributionMessage, 0, m.axolotlSenderKeyDistributionMessage.length) : o.bytes === Array ? Array.prototype.slice.call(m.axolotlSenderKeyDistributionMessage) : m.axolotlSenderKeyDistributionMessage;
@@ -43072,36 +43072,10 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        VideoEndCard.prototype.username = null;
-        VideoEndCard.prototype.caption = null;
-        VideoEndCard.prototype.thumbnailImageURL = null;
-        VideoEndCard.prototype.profilePictureURL = null;
-
-        let $oneOfFields;
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(VideoEndCard.prototype, "_username", {
-            get: $util.oneOfGetter($oneOfFields = ["username"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(VideoEndCard.prototype, "_caption", {
-            get: $util.oneOfGetter($oneOfFields = ["caption"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(VideoEndCard.prototype, "_thumbnailImageURL", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailImageURL"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
-
-        // Virtual OneOf for proto3 optional field
-        Object.defineProperty(VideoEndCard.prototype, "_profilePictureURL", {
-            get: $util.oneOfGetter($oneOfFields = ["profilePictureURL"]),
-            set: $util.oneOfSetter($oneOfFields)
-        });
+        VideoEndCard.prototype.username = "";
+        VideoEndCard.prototype.caption = "";
+        VideoEndCard.prototype.thumbnailImageUrl = "";
+        VideoEndCard.prototype.profilePictureUrl = "";
 
         VideoEndCard.create = function create(properties) {
             return new VideoEndCard(properties);
@@ -43114,10 +43088,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(10).string(m.username);
             if (m.caption != null && Object.hasOwnProperty.call(m, "caption"))
                 w.uint32(18).string(m.caption);
-            if (m.thumbnailImageURL != null && Object.hasOwnProperty.call(m, "thumbnailImageURL"))
-                w.uint32(26).string(m.thumbnailImageURL);
-            if (m.profilePictureURL != null && Object.hasOwnProperty.call(m, "profilePictureURL"))
-                w.uint32(34).string(m.profilePictureURL);
+            if (m.thumbnailImageUrl != null && Object.hasOwnProperty.call(m, "thumbnailImageUrl"))
+                w.uint32(26).string(m.thumbnailImageUrl);
+            if (m.profilePictureUrl != null && Object.hasOwnProperty.call(m, "profilePictureUrl"))
+                w.uint32(34).string(m.profilePictureUrl);
             return w;
         };
 
@@ -43143,11 +43117,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 3: {
-                        m.thumbnailImageURL = r.string();
+                        m.thumbnailImageUrl = r.string();
                         break;
                     }
                 case 4: {
-                        m.profilePictureURL = r.string();
+                        m.profilePictureUrl = r.string();
                         break;
                     }
                 default:
@@ -43172,11 +43146,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.caption != null) {
                 m.caption = String(d.caption);
             }
-            if (d.thumbnailImageURL != null) {
-                m.thumbnailImageURL = String(d.thumbnailImageURL);
+            if (d.thumbnailImageUrl != null) {
+                m.thumbnailImageUrl = String(d.thumbnailImageUrl);
             }
-            if (d.profilePictureURL != null) {
-                m.profilePictureURL = String(d.profilePictureURL);
+            if (d.profilePictureUrl != null) {
+                m.profilePictureUrl = String(d.profilePictureUrl);
             }
             return m;
         };
@@ -43185,25 +43159,23 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
+            if (o.defaults) {
+                d.username = "";
+                d.caption = "";
+                d.thumbnailImageUrl = "";
+                d.profilePictureUrl = "";
+            }
             if (m.username != null && m.hasOwnProperty("username")) {
                 d.username = m.username;
-                if (o.oneofs)
-                    d._username = "username";
             }
             if (m.caption != null && m.hasOwnProperty("caption")) {
                 d.caption = m.caption;
-                if (o.oneofs)
-                    d._caption = "caption";
             }
-            if (m.thumbnailImageURL != null && m.hasOwnProperty("thumbnailImageURL")) {
-                d.thumbnailImageURL = m.thumbnailImageURL;
-                if (o.oneofs)
-                    d._thumbnailImageURL = "thumbnailImageURL";
+            if (m.thumbnailImageUrl != null && m.hasOwnProperty("thumbnailImageUrl")) {
+                d.thumbnailImageUrl = m.thumbnailImageUrl;
             }
-            if (m.profilePictureURL != null && m.hasOwnProperty("profilePictureURL")) {
-                d.profilePictureURL = m.profilePictureURL;
-                if (o.oneofs)
-                    d._profilePictureURL = "profilePictureURL";
+            if (m.profilePictureUrl != null && m.hasOwnProperty("profilePictureUrl")) {
+                d.profilePictureUrl = m.profilePictureUrl;
             }
             return d;
         };
@@ -43699,14 +43671,14 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        EmbeddedMessage.prototype.stanzaID = null;
+        EmbeddedMessage.prototype.stanzaId = null;
         EmbeddedMessage.prototype.message = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EmbeddedMessage.prototype, "_stanzaID", {
-            get: $util.oneOfGetter($oneOfFields = ["stanzaID"]),
+        Object.defineProperty(EmbeddedMessage.prototype, "_stanzaId", {
+            get: $util.oneOfGetter($oneOfFields = ["stanzaId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -43723,8 +43695,8 @@ export const WAE2E = $root.WAE2E = (() => {
         EmbeddedMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.stanzaID != null && Object.hasOwnProperty.call(m, "stanzaID"))
-                w.uint32(10).string(m.stanzaID);
+            if (m.stanzaId != null && Object.hasOwnProperty.call(m, "stanzaId"))
+                w.uint32(10).string(m.stanzaId);
             if (m.message != null && Object.hasOwnProperty.call(m, "message"))
                 $root.WAE2E.Message.encode(m.message, w.uint32(18).fork()).ldelim();
             return w;
@@ -43744,7 +43716,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.stanzaID = r.string();
+                        m.stanzaId = r.string();
                         break;
                     }
                 case 2: {
@@ -43767,8 +43739,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.EmbeddedMessage();
-            if (d.stanzaID != null) {
-                m.stanzaID = String(d.stanzaID);
+            if (d.stanzaId != null) {
+                m.stanzaId = String(d.stanzaId);
             }
             if (d.message != null) {
                 if (typeof d.message !== "object")
@@ -43782,10 +43754,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.stanzaID != null && m.hasOwnProperty("stanzaID")) {
-                d.stanzaID = m.stanzaID;
+            if (m.stanzaId != null && m.hasOwnProperty("stanzaId")) {
+                d.stanzaId = m.stanzaId;
                 if (o.oneofs)
-                    d._stanzaID = "stanzaID";
+                    d._stanzaId = "stanzaId";
             }
             if (m.message != null && m.hasOwnProperty("message")) {
                 d.message = $root.WAE2E.Message.toObject(m.message, o);
@@ -43818,32 +43790,32 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        EmbeddedMusic.prototype.musicContentMediaID = null;
-        EmbeddedMusic.prototype.songID = null;
+        EmbeddedMusic.prototype.musicContentMediaId = null;
+        EmbeddedMusic.prototype.songId = null;
         EmbeddedMusic.prototype.author = null;
         EmbeddedMusic.prototype.title = null;
         EmbeddedMusic.prototype.artworkDirectPath = null;
-        EmbeddedMusic.prototype.artworkSHA256 = null;
-        EmbeddedMusic.prototype.artworkEncSHA256 = null;
+        EmbeddedMusic.prototype.artworkSha256 = null;
+        EmbeddedMusic.prototype.artworkEncSha256 = null;
         EmbeddedMusic.prototype.artistAttribution = null;
         EmbeddedMusic.prototype.countryBlocklist = null;
         EmbeddedMusic.prototype.isExplicit = null;
         EmbeddedMusic.prototype.artworkMediaKey = null;
-        EmbeddedMusic.prototype.musicSongStartTimeInMS = null;
-        EmbeddedMusic.prototype.derivedContentStartTimeInMS = null;
-        EmbeddedMusic.prototype.overlapDurationInMS = null;
+        EmbeddedMusic.prototype.musicSongStartTimeInMs = null;
+        EmbeddedMusic.prototype.derivedContentStartTimeInMs = null;
+        EmbeddedMusic.prototype.overlapDurationInMs = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EmbeddedMusic.prototype, "_musicContentMediaID", {
-            get: $util.oneOfGetter($oneOfFields = ["musicContentMediaID"]),
+        Object.defineProperty(EmbeddedMusic.prototype, "_musicContentMediaId", {
+            get: $util.oneOfGetter($oneOfFields = ["musicContentMediaId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EmbeddedMusic.prototype, "_songID", {
-            get: $util.oneOfGetter($oneOfFields = ["songID"]),
+        Object.defineProperty(EmbeddedMusic.prototype, "_songId", {
+            get: $util.oneOfGetter($oneOfFields = ["songId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -43866,14 +43838,14 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EmbeddedMusic.prototype, "_artworkSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["artworkSHA256"]),
+        Object.defineProperty(EmbeddedMusic.prototype, "_artworkSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["artworkSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EmbeddedMusic.prototype, "_artworkEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["artworkEncSHA256"]),
+        Object.defineProperty(EmbeddedMusic.prototype, "_artworkEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["artworkEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -43902,20 +43874,20 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EmbeddedMusic.prototype, "_musicSongStartTimeInMS", {
-            get: $util.oneOfGetter($oneOfFields = ["musicSongStartTimeInMS"]),
+        Object.defineProperty(EmbeddedMusic.prototype, "_musicSongStartTimeInMs", {
+            get: $util.oneOfGetter($oneOfFields = ["musicSongStartTimeInMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EmbeddedMusic.prototype, "_derivedContentStartTimeInMS", {
-            get: $util.oneOfGetter($oneOfFields = ["derivedContentStartTimeInMS"]),
+        Object.defineProperty(EmbeddedMusic.prototype, "_derivedContentStartTimeInMs", {
+            get: $util.oneOfGetter($oneOfFields = ["derivedContentStartTimeInMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EmbeddedMusic.prototype, "_overlapDurationInMS", {
-            get: $util.oneOfGetter($oneOfFields = ["overlapDurationInMS"]),
+        Object.defineProperty(EmbeddedMusic.prototype, "_overlapDurationInMs", {
+            get: $util.oneOfGetter($oneOfFields = ["overlapDurationInMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -43926,20 +43898,20 @@ export const WAE2E = $root.WAE2E = (() => {
         EmbeddedMusic.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.musicContentMediaID != null && Object.hasOwnProperty.call(m, "musicContentMediaID"))
-                w.uint32(10).string(m.musicContentMediaID);
-            if (m.songID != null && Object.hasOwnProperty.call(m, "songID"))
-                w.uint32(18).string(m.songID);
+            if (m.musicContentMediaId != null && Object.hasOwnProperty.call(m, "musicContentMediaId"))
+                w.uint32(10).string(m.musicContentMediaId);
+            if (m.songId != null && Object.hasOwnProperty.call(m, "songId"))
+                w.uint32(18).string(m.songId);
             if (m.author != null && Object.hasOwnProperty.call(m, "author"))
                 w.uint32(26).string(m.author);
             if (m.title != null && Object.hasOwnProperty.call(m, "title"))
                 w.uint32(34).string(m.title);
             if (m.artworkDirectPath != null && Object.hasOwnProperty.call(m, "artworkDirectPath"))
                 w.uint32(42).string(m.artworkDirectPath);
-            if (m.artworkSHA256 != null && Object.hasOwnProperty.call(m, "artworkSHA256"))
-                w.uint32(50).bytes(m.artworkSHA256);
-            if (m.artworkEncSHA256 != null && Object.hasOwnProperty.call(m, "artworkEncSHA256"))
-                w.uint32(58).bytes(m.artworkEncSHA256);
+            if (m.artworkSha256 != null && Object.hasOwnProperty.call(m, "artworkSha256"))
+                w.uint32(50).bytes(m.artworkSha256);
+            if (m.artworkEncSha256 != null && Object.hasOwnProperty.call(m, "artworkEncSha256"))
+                w.uint32(58).bytes(m.artworkEncSha256);
             if (m.artistAttribution != null && Object.hasOwnProperty.call(m, "artistAttribution"))
                 w.uint32(66).string(m.artistAttribution);
             if (m.countryBlocklist != null && Object.hasOwnProperty.call(m, "countryBlocklist"))
@@ -43948,12 +43920,12 @@ export const WAE2E = $root.WAE2E = (() => {
                 w.uint32(80).bool(m.isExplicit);
             if (m.artworkMediaKey != null && Object.hasOwnProperty.call(m, "artworkMediaKey"))
                 w.uint32(90).bytes(m.artworkMediaKey);
-            if (m.musicSongStartTimeInMS != null && Object.hasOwnProperty.call(m, "musicSongStartTimeInMS"))
-                w.uint32(96).int64(m.musicSongStartTimeInMS);
-            if (m.derivedContentStartTimeInMS != null && Object.hasOwnProperty.call(m, "derivedContentStartTimeInMS"))
-                w.uint32(104).int64(m.derivedContentStartTimeInMS);
-            if (m.overlapDurationInMS != null && Object.hasOwnProperty.call(m, "overlapDurationInMS"))
-                w.uint32(112).int64(m.overlapDurationInMS);
+            if (m.musicSongStartTimeInMs != null && Object.hasOwnProperty.call(m, "musicSongStartTimeInMs"))
+                w.uint32(96).int64(m.musicSongStartTimeInMs);
+            if (m.derivedContentStartTimeInMs != null && Object.hasOwnProperty.call(m, "derivedContentStartTimeInMs"))
+                w.uint32(104).int64(m.derivedContentStartTimeInMs);
+            if (m.overlapDurationInMs != null && Object.hasOwnProperty.call(m, "overlapDurationInMs"))
+                w.uint32(112).int64(m.overlapDurationInMs);
             return w;
         };
 
@@ -43971,11 +43943,11 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.musicContentMediaID = r.string();
+                        m.musicContentMediaId = r.string();
                         break;
                     }
                 case 2: {
-                        m.songID = r.string();
+                        m.songId = r.string();
                         break;
                     }
                 case 3: {
@@ -43991,11 +43963,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 6: {
-                        m.artworkSHA256 = r.bytes();
+                        m.artworkSha256 = r.bytes();
                         break;
                     }
                 case 7: {
-                        m.artworkEncSHA256 = r.bytes();
+                        m.artworkEncSha256 = r.bytes();
                         break;
                     }
                 case 8: {
@@ -44015,15 +43987,15 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 12: {
-                        m.musicSongStartTimeInMS = r.int64();
+                        m.musicSongStartTimeInMs = r.int64();
                         break;
                     }
                 case 13: {
-                        m.derivedContentStartTimeInMS = r.int64();
+                        m.derivedContentStartTimeInMs = r.int64();
                         break;
                     }
                 case 14: {
-                        m.overlapDurationInMS = r.int64();
+                        m.overlapDurationInMs = r.int64();
                         break;
                     }
                 default:
@@ -44042,11 +44014,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.EmbeddedMusic();
-            if (d.musicContentMediaID != null) {
-                m.musicContentMediaID = String(d.musicContentMediaID);
+            if (d.musicContentMediaId != null) {
+                m.musicContentMediaId = String(d.musicContentMediaId);
             }
-            if (d.songID != null) {
-                m.songID = String(d.songID);
+            if (d.songId != null) {
+                m.songId = String(d.songId);
             }
             if (d.author != null) {
                 m.author = String(d.author);
@@ -44057,17 +44029,17 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.artworkDirectPath != null) {
                 m.artworkDirectPath = String(d.artworkDirectPath);
             }
-            if (d.artworkSHA256 != null) {
-                if (typeof d.artworkSHA256 === "string")
-                    $util.base64.decode(d.artworkSHA256, m.artworkSHA256 = $util.newBuffer($util.base64.length(d.artworkSHA256)), 0);
-                else if (d.artworkSHA256.length >= 0)
-                    m.artworkSHA256 = d.artworkSHA256;
+            if (d.artworkSha256 != null) {
+                if (typeof d.artworkSha256 === "string")
+                    $util.base64.decode(d.artworkSha256, m.artworkSha256 = $util.newBuffer($util.base64.length(d.artworkSha256)), 0);
+                else if (d.artworkSha256.length >= 0)
+                    m.artworkSha256 = d.artworkSha256;
             }
-            if (d.artworkEncSHA256 != null) {
-                if (typeof d.artworkEncSHA256 === "string")
-                    $util.base64.decode(d.artworkEncSHA256, m.artworkEncSHA256 = $util.newBuffer($util.base64.length(d.artworkEncSHA256)), 0);
-                else if (d.artworkEncSHA256.length >= 0)
-                    m.artworkEncSHA256 = d.artworkEncSHA256;
+            if (d.artworkEncSha256 != null) {
+                if (typeof d.artworkEncSha256 === "string")
+                    $util.base64.decode(d.artworkEncSha256, m.artworkEncSha256 = $util.newBuffer($util.base64.length(d.artworkEncSha256)), 0);
+                else if (d.artworkEncSha256.length >= 0)
+                    m.artworkEncSha256 = d.artworkEncSha256;
             }
             if (d.artistAttribution != null) {
                 m.artistAttribution = String(d.artistAttribution);
@@ -44087,35 +44059,35 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.artworkMediaKey.length >= 0)
                     m.artworkMediaKey = d.artworkMediaKey;
             }
-            if (d.musicSongStartTimeInMS != null) {
+            if (d.musicSongStartTimeInMs != null) {
                 if ($util.Long)
-                    (m.musicSongStartTimeInMS = $util.Long.fromValue(d.musicSongStartTimeInMS)).unsigned = false;
-                else if (typeof d.musicSongStartTimeInMS === "string")
-                    m.musicSongStartTimeInMS = parseInt(d.musicSongStartTimeInMS, 10);
-                else if (typeof d.musicSongStartTimeInMS === "number")
-                    m.musicSongStartTimeInMS = d.musicSongStartTimeInMS;
-                else if (typeof d.musicSongStartTimeInMS === "object")
-                    m.musicSongStartTimeInMS = new $util.LongBits(d.musicSongStartTimeInMS.low >>> 0, d.musicSongStartTimeInMS.high >>> 0).toNumber();
+                    (m.musicSongStartTimeInMs = $util.Long.fromValue(d.musicSongStartTimeInMs)).unsigned = false;
+                else if (typeof d.musicSongStartTimeInMs === "string")
+                    m.musicSongStartTimeInMs = parseInt(d.musicSongStartTimeInMs, 10);
+                else if (typeof d.musicSongStartTimeInMs === "number")
+                    m.musicSongStartTimeInMs = d.musicSongStartTimeInMs;
+                else if (typeof d.musicSongStartTimeInMs === "object")
+                    m.musicSongStartTimeInMs = new $util.LongBits(d.musicSongStartTimeInMs.low >>> 0, d.musicSongStartTimeInMs.high >>> 0).toNumber();
             }
-            if (d.derivedContentStartTimeInMS != null) {
+            if (d.derivedContentStartTimeInMs != null) {
                 if ($util.Long)
-                    (m.derivedContentStartTimeInMS = $util.Long.fromValue(d.derivedContentStartTimeInMS)).unsigned = false;
-                else if (typeof d.derivedContentStartTimeInMS === "string")
-                    m.derivedContentStartTimeInMS = parseInt(d.derivedContentStartTimeInMS, 10);
-                else if (typeof d.derivedContentStartTimeInMS === "number")
-                    m.derivedContentStartTimeInMS = d.derivedContentStartTimeInMS;
-                else if (typeof d.derivedContentStartTimeInMS === "object")
-                    m.derivedContentStartTimeInMS = new $util.LongBits(d.derivedContentStartTimeInMS.low >>> 0, d.derivedContentStartTimeInMS.high >>> 0).toNumber();
+                    (m.derivedContentStartTimeInMs = $util.Long.fromValue(d.derivedContentStartTimeInMs)).unsigned = false;
+                else if (typeof d.derivedContentStartTimeInMs === "string")
+                    m.derivedContentStartTimeInMs = parseInt(d.derivedContentStartTimeInMs, 10);
+                else if (typeof d.derivedContentStartTimeInMs === "number")
+                    m.derivedContentStartTimeInMs = d.derivedContentStartTimeInMs;
+                else if (typeof d.derivedContentStartTimeInMs === "object")
+                    m.derivedContentStartTimeInMs = new $util.LongBits(d.derivedContentStartTimeInMs.low >>> 0, d.derivedContentStartTimeInMs.high >>> 0).toNumber();
             }
-            if (d.overlapDurationInMS != null) {
+            if (d.overlapDurationInMs != null) {
                 if ($util.Long)
-                    (m.overlapDurationInMS = $util.Long.fromValue(d.overlapDurationInMS)).unsigned = false;
-                else if (typeof d.overlapDurationInMS === "string")
-                    m.overlapDurationInMS = parseInt(d.overlapDurationInMS, 10);
-                else if (typeof d.overlapDurationInMS === "number")
-                    m.overlapDurationInMS = d.overlapDurationInMS;
-                else if (typeof d.overlapDurationInMS === "object")
-                    m.overlapDurationInMS = new $util.LongBits(d.overlapDurationInMS.low >>> 0, d.overlapDurationInMS.high >>> 0).toNumber();
+                    (m.overlapDurationInMs = $util.Long.fromValue(d.overlapDurationInMs)).unsigned = false;
+                else if (typeof d.overlapDurationInMs === "string")
+                    m.overlapDurationInMs = parseInt(d.overlapDurationInMs, 10);
+                else if (typeof d.overlapDurationInMs === "number")
+                    m.overlapDurationInMs = d.overlapDurationInMs;
+                else if (typeof d.overlapDurationInMs === "object")
+                    m.overlapDurationInMs = new $util.LongBits(d.overlapDurationInMs.low >>> 0, d.overlapDurationInMs.high >>> 0).toNumber();
             }
             return m;
         };
@@ -44124,15 +44096,15 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.musicContentMediaID != null && m.hasOwnProperty("musicContentMediaID")) {
-                d.musicContentMediaID = m.musicContentMediaID;
+            if (m.musicContentMediaId != null && m.hasOwnProperty("musicContentMediaId")) {
+                d.musicContentMediaId = m.musicContentMediaId;
                 if (o.oneofs)
-                    d._musicContentMediaID = "musicContentMediaID";
+                    d._musicContentMediaId = "musicContentMediaId";
             }
-            if (m.songID != null && m.hasOwnProperty("songID")) {
-                d.songID = m.songID;
+            if (m.songId != null && m.hasOwnProperty("songId")) {
+                d.songId = m.songId;
                 if (o.oneofs)
-                    d._songID = "songID";
+                    d._songId = "songId";
             }
             if (m.author != null && m.hasOwnProperty("author")) {
                 d.author = m.author;
@@ -44149,15 +44121,15 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._artworkDirectPath = "artworkDirectPath";
             }
-            if (m.artworkSHA256 != null && m.hasOwnProperty("artworkSHA256")) {
-                d.artworkSHA256 = o.bytes === String ? $util.base64.encode(m.artworkSHA256, 0, m.artworkSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.artworkSHA256) : m.artworkSHA256;
+            if (m.artworkSha256 != null && m.hasOwnProperty("artworkSha256")) {
+                d.artworkSha256 = o.bytes === String ? $util.base64.encode(m.artworkSha256, 0, m.artworkSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.artworkSha256) : m.artworkSha256;
                 if (o.oneofs)
-                    d._artworkSHA256 = "artworkSHA256";
+                    d._artworkSha256 = "artworkSha256";
             }
-            if (m.artworkEncSHA256 != null && m.hasOwnProperty("artworkEncSHA256")) {
-                d.artworkEncSHA256 = o.bytes === String ? $util.base64.encode(m.artworkEncSHA256, 0, m.artworkEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.artworkEncSHA256) : m.artworkEncSHA256;
+            if (m.artworkEncSha256 != null && m.hasOwnProperty("artworkEncSha256")) {
+                d.artworkEncSha256 = o.bytes === String ? $util.base64.encode(m.artworkEncSha256, 0, m.artworkEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.artworkEncSha256) : m.artworkEncSha256;
                 if (o.oneofs)
-                    d._artworkEncSHA256 = "artworkEncSHA256";
+                    d._artworkEncSha256 = "artworkEncSha256";
             }
             if (m.artistAttribution != null && m.hasOwnProperty("artistAttribution")) {
                 d.artistAttribution = m.artistAttribution;
@@ -44179,29 +44151,29 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._artworkMediaKey = "artworkMediaKey";
             }
-            if (m.musicSongStartTimeInMS != null && m.hasOwnProperty("musicSongStartTimeInMS")) {
-                if (typeof m.musicSongStartTimeInMS === "number")
-                    d.musicSongStartTimeInMS = o.longs === String ? String(m.musicSongStartTimeInMS) : m.musicSongStartTimeInMS;
+            if (m.musicSongStartTimeInMs != null && m.hasOwnProperty("musicSongStartTimeInMs")) {
+                if (typeof m.musicSongStartTimeInMs === "number")
+                    d.musicSongStartTimeInMs = o.longs === String ? String(m.musicSongStartTimeInMs) : m.musicSongStartTimeInMs;
                 else
-                    d.musicSongStartTimeInMS = o.longs === String ? $util.Long.prototype.toString.call(m.musicSongStartTimeInMS) : o.longs === Number ? new $util.LongBits(m.musicSongStartTimeInMS.low >>> 0, m.musicSongStartTimeInMS.high >>> 0).toNumber() : m.musicSongStartTimeInMS;
+                    d.musicSongStartTimeInMs = o.longs === String ? $util.Long.prototype.toString.call(m.musicSongStartTimeInMs) : o.longs === Number ? new $util.LongBits(m.musicSongStartTimeInMs.low >>> 0, m.musicSongStartTimeInMs.high >>> 0).toNumber() : m.musicSongStartTimeInMs;
                 if (o.oneofs)
-                    d._musicSongStartTimeInMS = "musicSongStartTimeInMS";
+                    d._musicSongStartTimeInMs = "musicSongStartTimeInMs";
             }
-            if (m.derivedContentStartTimeInMS != null && m.hasOwnProperty("derivedContentStartTimeInMS")) {
-                if (typeof m.derivedContentStartTimeInMS === "number")
-                    d.derivedContentStartTimeInMS = o.longs === String ? String(m.derivedContentStartTimeInMS) : m.derivedContentStartTimeInMS;
+            if (m.derivedContentStartTimeInMs != null && m.hasOwnProperty("derivedContentStartTimeInMs")) {
+                if (typeof m.derivedContentStartTimeInMs === "number")
+                    d.derivedContentStartTimeInMs = o.longs === String ? String(m.derivedContentStartTimeInMs) : m.derivedContentStartTimeInMs;
                 else
-                    d.derivedContentStartTimeInMS = o.longs === String ? $util.Long.prototype.toString.call(m.derivedContentStartTimeInMS) : o.longs === Number ? new $util.LongBits(m.derivedContentStartTimeInMS.low >>> 0, m.derivedContentStartTimeInMS.high >>> 0).toNumber() : m.derivedContentStartTimeInMS;
+                    d.derivedContentStartTimeInMs = o.longs === String ? $util.Long.prototype.toString.call(m.derivedContentStartTimeInMs) : o.longs === Number ? new $util.LongBits(m.derivedContentStartTimeInMs.low >>> 0, m.derivedContentStartTimeInMs.high >>> 0).toNumber() : m.derivedContentStartTimeInMs;
                 if (o.oneofs)
-                    d._derivedContentStartTimeInMS = "derivedContentStartTimeInMS";
+                    d._derivedContentStartTimeInMs = "derivedContentStartTimeInMs";
             }
-            if (m.overlapDurationInMS != null && m.hasOwnProperty("overlapDurationInMS")) {
-                if (typeof m.overlapDurationInMS === "number")
-                    d.overlapDurationInMS = o.longs === String ? String(m.overlapDurationInMS) : m.overlapDurationInMS;
+            if (m.overlapDurationInMs != null && m.hasOwnProperty("overlapDurationInMs")) {
+                if (typeof m.overlapDurationInMs === "number")
+                    d.overlapDurationInMs = o.longs === String ? String(m.overlapDurationInMs) : m.overlapDurationInMs;
                 else
-                    d.overlapDurationInMS = o.longs === String ? $util.Long.prototype.toString.call(m.overlapDurationInMS) : o.longs === Number ? new $util.LongBits(m.overlapDurationInMS.low >>> 0, m.overlapDurationInMS.high >>> 0).toNumber() : m.overlapDurationInMS;
+                    d.overlapDurationInMs = o.longs === String ? $util.Long.prototype.toString.call(m.overlapDurationInMs) : o.longs === Number ? new $util.LongBits(m.overlapDurationInMs.low >>> 0, m.overlapDurationInMs.high >>> 0).toNumber() : m.overlapDurationInMs;
                 if (o.oneofs)
-                    d._overlapDurationInMS = "overlapDurationInMS";
+                    d._overlapDurationInMs = "overlapDurationInMs";
             }
             return d;
         };
@@ -44344,7 +44316,7 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         TapLinkAction.prototype.title = null;
-        TapLinkAction.prototype.tapURL = null;
+        TapLinkAction.prototype.tapUrl = null;
 
         let $oneOfFields;
 
@@ -44355,8 +44327,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(TapLinkAction.prototype, "_tapURL", {
-            get: $util.oneOfGetter($oneOfFields = ["tapURL"]),
+        Object.defineProperty(TapLinkAction.prototype, "_tapUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["tapUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -44369,8 +44341,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.title != null && Object.hasOwnProperty.call(m, "title"))
                 w.uint32(10).string(m.title);
-            if (m.tapURL != null && Object.hasOwnProperty.call(m, "tapURL"))
-                w.uint32(18).string(m.tapURL);
+            if (m.tapUrl != null && Object.hasOwnProperty.call(m, "tapUrl"))
+                w.uint32(18).string(m.tapUrl);
             return w;
         };
 
@@ -44392,7 +44364,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.tapURL = r.string();
+                        m.tapUrl = r.string();
                         break;
                     }
                 default:
@@ -44414,8 +44386,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.title != null) {
                 m.title = String(d.title);
             }
-            if (d.tapURL != null) {
-                m.tapURL = String(d.tapURL);
+            if (d.tapUrl != null) {
+                m.tapUrl = String(d.tapUrl);
             }
             return m;
         };
@@ -44429,10 +44401,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._title = "title";
             }
-            if (m.tapURL != null && m.hasOwnProperty("tapURL")) {
-                d.tapURL = m.tapURL;
+            if (m.tapUrl != null && m.hasOwnProperty("tapUrl")) {
+                d.tapUrl = m.tapUrl;
                 if (o.oneofs)
-                    d._tapURL = "tapURL";
+                    d._tapUrl = "tapUrl";
             }
             return d;
         };
@@ -45028,7 +45000,7 @@ export const WAE2E = $root.WAE2E = (() => {
             }
 
             URLButton.prototype.displayText = null;
-            URLButton.prototype.URL = null;
+            URLButton.prototype.url = null;
 
             let $oneOfFields;
 
@@ -45039,8 +45011,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(URLButton.prototype, "_URL", {
-                get: $util.oneOfGetter($oneOfFields = ["URL"]),
+            Object.defineProperty(URLButton.prototype, "_url", {
+                get: $util.oneOfGetter($oneOfFields = ["url"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -45053,8 +45025,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     w = $Writer.create();
                 if (m.displayText != null && Object.hasOwnProperty.call(m, "displayText"))
                     $root.WAE2E.HighlyStructuredMessage.encode(m.displayText, w.uint32(10).fork()).ldelim();
-                if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                    $root.WAE2E.HighlyStructuredMessage.encode(m.URL, w.uint32(18).fork()).ldelim();
+                if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                    $root.WAE2E.HighlyStructuredMessage.encode(m.url, w.uint32(18).fork()).ldelim();
                 return w;
             };
 
@@ -45076,7 +45048,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 2: {
-                            m.URL = $root.WAE2E.HighlyStructuredMessage.decode(r, r.uint32(), undefined, n + 1);
+                            m.url = $root.WAE2E.HighlyStructuredMessage.decode(r, r.uint32(), undefined, n + 1);
                             break;
                         }
                     default:
@@ -45100,10 +45072,10 @@ export const WAE2E = $root.WAE2E = (() => {
                         throw TypeError(".WAE2E.TemplateButton.URLButton.displayText: object expected");
                     m.displayText = $root.WAE2E.HighlyStructuredMessage.fromObject(d.displayText, n + 1);
                 }
-                if (d.URL != null) {
-                    if (typeof d.URL !== "object")
-                        throw TypeError(".WAE2E.TemplateButton.URLButton.URL: object expected");
-                    m.URL = $root.WAE2E.HighlyStructuredMessage.fromObject(d.URL, n + 1);
+                if (d.url != null) {
+                    if (typeof d.url !== "object")
+                        throw TypeError(".WAE2E.TemplateButton.URLButton.url: object expected");
+                    m.url = $root.WAE2E.HighlyStructuredMessage.fromObject(d.url, n + 1);
                 }
                 return m;
             };
@@ -45117,10 +45089,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._displayText = "displayText";
                 }
-                if (m.URL != null && m.hasOwnProperty("URL")) {
-                    d.URL = $root.WAE2E.HighlyStructuredMessage.toObject(m.URL, o);
+                if (m.url != null && m.hasOwnProperty("url")) {
+                    d.url = $root.WAE2E.HighlyStructuredMessage.toObject(m.url, o);
                     if (o.oneofs)
-                        d._URL = "URL";
+                        d._url = "url";
                 }
                 return d;
             };
@@ -45149,7 +45121,7 @@ export const WAE2E = $root.WAE2E = (() => {
             }
 
             QuickReplyButton.prototype.displayText = null;
-            QuickReplyButton.prototype.ID = null;
+            QuickReplyButton.prototype.id = null;
 
             let $oneOfFields;
 
@@ -45160,8 +45132,8 @@ export const WAE2E = $root.WAE2E = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(QuickReplyButton.prototype, "_ID", {
-                get: $util.oneOfGetter($oneOfFields = ["ID"]),
+            Object.defineProperty(QuickReplyButton.prototype, "_id", {
+                get: $util.oneOfGetter($oneOfFields = ["id"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -45174,8 +45146,8 @@ export const WAE2E = $root.WAE2E = (() => {
                     w = $Writer.create();
                 if (m.displayText != null && Object.hasOwnProperty.call(m, "displayText"))
                     $root.WAE2E.HighlyStructuredMessage.encode(m.displayText, w.uint32(10).fork()).ldelim();
-                if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                    w.uint32(18).string(m.ID);
+                if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                    w.uint32(18).string(m.id);
                 return w;
             };
 
@@ -45197,7 +45169,7 @@ export const WAE2E = $root.WAE2E = (() => {
                             break;
                         }
                     case 2: {
-                            m.ID = r.string();
+                            m.id = r.string();
                             break;
                         }
                     default:
@@ -45221,8 +45193,8 @@ export const WAE2E = $root.WAE2E = (() => {
                         throw TypeError(".WAE2E.TemplateButton.QuickReplyButton.displayText: object expected");
                     m.displayText = $root.WAE2E.HighlyStructuredMessage.fromObject(d.displayText, n + 1);
                 }
-                if (d.ID != null) {
-                    m.ID = String(d.ID);
+                if (d.id != null) {
+                    m.id = String(d.id);
                 }
                 return m;
             };
@@ -45236,10 +45208,10 @@ export const WAE2E = $root.WAE2E = (() => {
                     if (o.oneofs)
                         d._displayText = "displayText";
                 }
-                if (m.ID != null && m.hasOwnProperty("ID")) {
-                    d.ID = m.ID;
+                if (m.id != null && m.hasOwnProperty("id")) {
+                    d.id = m.id;
                     if (o.oneofs)
-                        d._ID = "ID";
+                        d._id = "id";
                 }
                 return d;
             };
@@ -45418,14 +45390,14 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        ActionLink.prototype.URL = null;
+        ActionLink.prototype.url = null;
         ActionLink.prototype.buttonTitle = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ActionLink.prototype, "_URL", {
-            get: $util.oneOfGetter($oneOfFields = ["URL"]),
+        Object.defineProperty(ActionLink.prototype, "_url", {
+            get: $util.oneOfGetter($oneOfFields = ["url"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -45442,8 +45414,8 @@ export const WAE2E = $root.WAE2E = (() => {
         ActionLink.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                w.uint32(10).string(m.URL);
+            if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                w.uint32(10).string(m.url);
             if (m.buttonTitle != null && Object.hasOwnProperty.call(m, "buttonTitle"))
                 w.uint32(18).string(m.buttonTitle);
             return w;
@@ -45463,7 +45435,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.URL = r.string();
+                        m.url = r.string();
                         break;
                     }
                 case 2: {
@@ -45486,8 +45458,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.ActionLink();
-            if (d.URL != null) {
-                m.URL = String(d.URL);
+            if (d.url != null) {
+                m.url = String(d.url);
             }
             if (d.buttonTitle != null) {
                 m.buttonTitle = String(d.buttonTitle);
@@ -45499,10 +45471,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.URL != null && m.hasOwnProperty("URL")) {
-                d.URL = m.URL;
+            if (m.url != null && m.hasOwnProperty("url")) {
+                d.url = m.url;
                 if (o.oneofs)
-                    d._URL = "URL";
+                    d._url = "url";
             }
             if (m.buttonTitle != null && m.hasOwnProperty("buttonTitle")) {
                 d.buttonTitle = m.buttonTitle;
@@ -45535,14 +45507,14 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        GroupMention.prototype.groupJID = null;
+        GroupMention.prototype.groupJid = null;
         GroupMention.prototype.groupSubject = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(GroupMention.prototype, "_groupJID", {
-            get: $util.oneOfGetter($oneOfFields = ["groupJID"]),
+        Object.defineProperty(GroupMention.prototype, "_groupJid", {
+            get: $util.oneOfGetter($oneOfFields = ["groupJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -45559,8 +45531,8 @@ export const WAE2E = $root.WAE2E = (() => {
         GroupMention.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.groupJID != null && Object.hasOwnProperty.call(m, "groupJID"))
-                w.uint32(10).string(m.groupJID);
+            if (m.groupJid != null && Object.hasOwnProperty.call(m, "groupJid"))
+                w.uint32(10).string(m.groupJid);
             if (m.groupSubject != null && Object.hasOwnProperty.call(m, "groupSubject"))
                 w.uint32(18).string(m.groupSubject);
             return w;
@@ -45580,7 +45552,7 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.groupJID = r.string();
+                        m.groupJid = r.string();
                         break;
                     }
                 case 2: {
@@ -45603,8 +45575,8 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.GroupMention();
-            if (d.groupJID != null) {
-                m.groupJID = String(d.groupJID);
+            if (d.groupJid != null) {
+                m.groupJid = String(d.groupJid);
             }
             if (d.groupSubject != null) {
                 m.groupSubject = String(d.groupSubject);
@@ -45616,10 +45588,10 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.groupJID != null && m.hasOwnProperty("groupJID")) {
-                d.groupJID = m.groupJID;
+            if (m.groupJid != null && m.hasOwnProperty("groupJid")) {
+                d.groupJid = m.groupJid;
                 if (o.oneofs)
-                    d._groupJID = "groupJID";
+                    d._groupJid = "groupJid";
             }
             if (m.groupSubject != null && m.hasOwnProperty("groupSubject")) {
                 d.groupSubject = m.groupSubject;
@@ -45653,7 +45625,7 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         MessageSecretMessage.prototype.version = null;
-        MessageSecretMessage.prototype.encIV = null;
+        MessageSecretMessage.prototype.encIv = null;
         MessageSecretMessage.prototype.encPayload = null;
 
         let $oneOfFields;
@@ -45665,8 +45637,8 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MessageSecretMessage.prototype, "_encIV", {
-            get: $util.oneOfGetter($oneOfFields = ["encIV"]),
+        Object.defineProperty(MessageSecretMessage.prototype, "_encIv", {
+            get: $util.oneOfGetter($oneOfFields = ["encIv"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -45685,8 +45657,8 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.version != null && Object.hasOwnProperty.call(m, "version"))
                 w.uint32(13).sfixed32(m.version);
-            if (m.encIV != null && Object.hasOwnProperty.call(m, "encIV"))
-                w.uint32(18).bytes(m.encIV);
+            if (m.encIv != null && Object.hasOwnProperty.call(m, "encIv"))
+                w.uint32(18).bytes(m.encIv);
             if (m.encPayload != null && Object.hasOwnProperty.call(m, "encPayload"))
                 w.uint32(26).bytes(m.encPayload);
             return w;
@@ -45710,7 +45682,7 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.encIV = r.bytes();
+                        m.encIv = r.bytes();
                         break;
                     }
                 case 3: {
@@ -45736,11 +45708,11 @@ export const WAE2E = $root.WAE2E = (() => {
             if (d.version != null) {
                 m.version = d.version | 0;
             }
-            if (d.encIV != null) {
-                if (typeof d.encIV === "string")
-                    $util.base64.decode(d.encIV, m.encIV = $util.newBuffer($util.base64.length(d.encIV)), 0);
-                else if (d.encIV.length >= 0)
-                    m.encIV = d.encIV;
+            if (d.encIv != null) {
+                if (typeof d.encIv === "string")
+                    $util.base64.decode(d.encIv, m.encIv = $util.newBuffer($util.base64.length(d.encIv)), 0);
+                else if (d.encIv.length >= 0)
+                    m.encIv = d.encIv;
             }
             if (d.encPayload != null) {
                 if (typeof d.encPayload === "string")
@@ -45760,10 +45732,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._version = "version";
             }
-            if (m.encIV != null && m.hasOwnProperty("encIV")) {
-                d.encIV = o.bytes === String ? $util.base64.encode(m.encIV, 0, m.encIV.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIV) : m.encIV;
+            if (m.encIv != null && m.hasOwnProperty("encIv")) {
+                d.encIv = o.bytes === String ? $util.base64.encode(m.encIv, 0, m.encIv.length) : o.bytes === Array ? Array.prototype.slice.call(m.encIv) : m.encIv;
                 if (o.oneofs)
-                    d._encIV = "encIV";
+                    d._encIv = "encIv";
             }
             if (m.encPayload != null && m.hasOwnProperty("encPayload")) {
                 d.encPayload = o.bytes === String ? $util.base64.encode(m.encPayload, 0, m.encPayload.length) : o.bytes === Array ? Array.prototype.slice.call(m.encPayload) : m.encPayload;
@@ -45796,21 +45768,21 @@ export const WAE2E = $root.WAE2E = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        MediaNotifyMessage.prototype.expressPathURL = null;
-        MediaNotifyMessage.prototype.fileEncSHA256 = null;
+        MediaNotifyMessage.prototype.expressPathUrl = null;
+        MediaNotifyMessage.prototype.fileEncSha256 = null;
         MediaNotifyMessage.prototype.fileLength = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MediaNotifyMessage.prototype, "_expressPathURL", {
-            get: $util.oneOfGetter($oneOfFields = ["expressPathURL"]),
+        Object.defineProperty(MediaNotifyMessage.prototype, "_expressPathUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["expressPathUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MediaNotifyMessage.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(MediaNotifyMessage.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -45827,10 +45799,10 @@ export const WAE2E = $root.WAE2E = (() => {
         MediaNotifyMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.expressPathURL != null && Object.hasOwnProperty.call(m, "expressPathURL"))
-                w.uint32(10).string(m.expressPathURL);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(18).bytes(m.fileEncSHA256);
+            if (m.expressPathUrl != null && Object.hasOwnProperty.call(m, "expressPathUrl"))
+                w.uint32(10).string(m.expressPathUrl);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(18).bytes(m.fileEncSha256);
             if (m.fileLength != null && Object.hasOwnProperty.call(m, "fileLength"))
                 w.uint32(24).uint64(m.fileLength);
             return w;
@@ -45850,11 +45822,11 @@ export const WAE2E = $root.WAE2E = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.expressPathURL = r.string();
+                        m.expressPathUrl = r.string();
                         break;
                     }
                 case 2: {
-                        m.fileEncSHA256 = r.bytes();
+                        m.fileEncSha256 = r.bytes();
                         break;
                     }
                 case 3: {
@@ -45877,14 +45849,14 @@ export const WAE2E = $root.WAE2E = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAE2E.MediaNotifyMessage();
-            if (d.expressPathURL != null) {
-                m.expressPathURL = String(d.expressPathURL);
+            if (d.expressPathUrl != null) {
+                m.expressPathUrl = String(d.expressPathUrl);
             }
-            if (d.fileEncSHA256 != null) {
-                if (typeof d.fileEncSHA256 === "string")
-                    $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                else if (d.fileEncSHA256.length >= 0)
-                    m.fileEncSHA256 = d.fileEncSHA256;
+            if (d.fileEncSha256 != null) {
+                if (typeof d.fileEncSha256 === "string")
+                    $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                else if (d.fileEncSha256.length >= 0)
+                    m.fileEncSha256 = d.fileEncSha256;
             }
             if (d.fileLength != null) {
                 if ($util.Long)
@@ -45903,15 +45875,15 @@ export const WAE2E = $root.WAE2E = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.expressPathURL != null && m.hasOwnProperty("expressPathURL")) {
-                d.expressPathURL = m.expressPathURL;
+            if (m.expressPathUrl != null && m.hasOwnProperty("expressPathUrl")) {
+                d.expressPathUrl = m.expressPathUrl;
                 if (o.oneofs)
-                    d._expressPathURL = "expressPathURL";
+                    d._expressPathUrl = "expressPathUrl";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
             if (m.fileLength != null && m.hasOwnProperty("fileLength")) {
                 if (typeof m.fileLength === "number")
@@ -46147,28 +46119,28 @@ export const WAE2E = $root.WAE2E = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            UrlTrackingMapElement.prototype.originalURL = null;
-            UrlTrackingMapElement.prototype.unconsentedUsersURL = null;
-            UrlTrackingMapElement.prototype.consentedUsersURL = null;
+            UrlTrackingMapElement.prototype.originalUrl = null;
+            UrlTrackingMapElement.prototype.unconsentedUsersUrl = null;
+            UrlTrackingMapElement.prototype.consentedUsersUrl = null;
             UrlTrackingMapElement.prototype.cardIndex = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(UrlTrackingMapElement.prototype, "_originalURL", {
-                get: $util.oneOfGetter($oneOfFields = ["originalURL"]),
+            Object.defineProperty(UrlTrackingMapElement.prototype, "_originalUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["originalUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(UrlTrackingMapElement.prototype, "_unconsentedUsersURL", {
-                get: $util.oneOfGetter($oneOfFields = ["unconsentedUsersURL"]),
+            Object.defineProperty(UrlTrackingMapElement.prototype, "_unconsentedUsersUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["unconsentedUsersUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(UrlTrackingMapElement.prototype, "_consentedUsersURL", {
-                get: $util.oneOfGetter($oneOfFields = ["consentedUsersURL"]),
+            Object.defineProperty(UrlTrackingMapElement.prototype, "_consentedUsersUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["consentedUsersUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -46185,12 +46157,12 @@ export const WAE2E = $root.WAE2E = (() => {
             UrlTrackingMapElement.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.originalURL != null && Object.hasOwnProperty.call(m, "originalURL"))
-                    w.uint32(10).string(m.originalURL);
-                if (m.unconsentedUsersURL != null && Object.hasOwnProperty.call(m, "unconsentedUsersURL"))
-                    w.uint32(18).string(m.unconsentedUsersURL);
-                if (m.consentedUsersURL != null && Object.hasOwnProperty.call(m, "consentedUsersURL"))
-                    w.uint32(26).string(m.consentedUsersURL);
+                if (m.originalUrl != null && Object.hasOwnProperty.call(m, "originalUrl"))
+                    w.uint32(10).string(m.originalUrl);
+                if (m.unconsentedUsersUrl != null && Object.hasOwnProperty.call(m, "unconsentedUsersUrl"))
+                    w.uint32(18).string(m.unconsentedUsersUrl);
+                if (m.consentedUsersUrl != null && Object.hasOwnProperty.call(m, "consentedUsersUrl"))
+                    w.uint32(26).string(m.consentedUsersUrl);
                 if (m.cardIndex != null && Object.hasOwnProperty.call(m, "cardIndex"))
                     w.uint32(32).uint32(m.cardIndex);
                 return w;
@@ -46210,15 +46182,15 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.originalURL = r.string();
+                            m.originalUrl = r.string();
                             break;
                         }
                     case 2: {
-                            m.unconsentedUsersURL = r.string();
+                            m.unconsentedUsersUrl = r.string();
                             break;
                         }
                     case 3: {
-                            m.consentedUsersURL = r.string();
+                            m.consentedUsersUrl = r.string();
                             break;
                         }
                     case 4: {
@@ -46241,14 +46213,14 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new $root.WAE2E.UrlTrackingMap.UrlTrackingMapElement();
-                if (d.originalURL != null) {
-                    m.originalURL = String(d.originalURL);
+                if (d.originalUrl != null) {
+                    m.originalUrl = String(d.originalUrl);
                 }
-                if (d.unconsentedUsersURL != null) {
-                    m.unconsentedUsersURL = String(d.unconsentedUsersURL);
+                if (d.unconsentedUsersUrl != null) {
+                    m.unconsentedUsersUrl = String(d.unconsentedUsersUrl);
                 }
-                if (d.consentedUsersURL != null) {
-                    m.consentedUsersURL = String(d.consentedUsersURL);
+                if (d.consentedUsersUrl != null) {
+                    m.consentedUsersUrl = String(d.consentedUsersUrl);
                 }
                 if (d.cardIndex != null) {
                     m.cardIndex = d.cardIndex >>> 0;
@@ -46260,20 +46232,20 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.originalURL != null && m.hasOwnProperty("originalURL")) {
-                    d.originalURL = m.originalURL;
+                if (m.originalUrl != null && m.hasOwnProperty("originalUrl")) {
+                    d.originalUrl = m.originalUrl;
                     if (o.oneofs)
-                        d._originalURL = "originalURL";
+                        d._originalUrl = "originalUrl";
                 }
-                if (m.unconsentedUsersURL != null && m.hasOwnProperty("unconsentedUsersURL")) {
-                    d.unconsentedUsersURL = m.unconsentedUsersURL;
+                if (m.unconsentedUsersUrl != null && m.hasOwnProperty("unconsentedUsersUrl")) {
+                    d.unconsentedUsersUrl = m.unconsentedUsersUrl;
                     if (o.oneofs)
-                        d._unconsentedUsersURL = "unconsentedUsersURL";
+                        d._unconsentedUsersUrl = "unconsentedUsersUrl";
                 }
-                if (m.consentedUsersURL != null && m.hasOwnProperty("consentedUsersURL")) {
-                    d.consentedUsersURL = m.consentedUsersURL;
+                if (m.consentedUsersUrl != null && m.hasOwnProperty("consentedUsersUrl")) {
+                    d.consentedUsersUrl = m.consentedUsersUrl;
                     if (o.oneofs)
-                        d._consentedUsersURL = "consentedUsersURL";
+                        d._consentedUsersUrl = "consentedUsersUrl";
                 }
                 if (m.cardIndex != null && m.hasOwnProperty("cardIndex")) {
                     d.cardIndex = m.cardIndex;
@@ -46879,8 +46851,8 @@ export const WAE2E = $root.WAE2E = (() => {
         }
 
         GroupRootKeyShareEntry.prototype.groupRootKey = null;
-        GroupRootKeyShareEntry.prototype.keyID = null;
-        GroupRootKeyShareEntry.prototype.expiryTimestampMS = null;
+        GroupRootKeyShareEntry.prototype.keyId = null;
+        GroupRootKeyShareEntry.prototype.expiryTimestampMs = null;
 
         let $oneOfFields;
 
@@ -46891,14 +46863,14 @@ export const WAE2E = $root.WAE2E = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(GroupRootKeyShareEntry.prototype, "_keyID", {
-            get: $util.oneOfGetter($oneOfFields = ["keyID"]),
+        Object.defineProperty(GroupRootKeyShareEntry.prototype, "_keyId", {
+            get: $util.oneOfGetter($oneOfFields = ["keyId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(GroupRootKeyShareEntry.prototype, "_expiryTimestampMS", {
-            get: $util.oneOfGetter($oneOfFields = ["expiryTimestampMS"]),
+        Object.defineProperty(GroupRootKeyShareEntry.prototype, "_expiryTimestampMs", {
+            get: $util.oneOfGetter($oneOfFields = ["expiryTimestampMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -46911,10 +46883,10 @@ export const WAE2E = $root.WAE2E = (() => {
                 w = $Writer.create();
             if (m.groupRootKey != null && Object.hasOwnProperty.call(m, "groupRootKey"))
                 w.uint32(10).bytes(m.groupRootKey);
-            if (m.keyID != null && Object.hasOwnProperty.call(m, "keyID"))
-                w.uint32(18).string(m.keyID);
-            if (m.expiryTimestampMS != null && Object.hasOwnProperty.call(m, "expiryTimestampMS"))
-                w.uint32(24).int64(m.expiryTimestampMS);
+            if (m.keyId != null && Object.hasOwnProperty.call(m, "keyId"))
+                w.uint32(18).string(m.keyId);
+            if (m.expiryTimestampMs != null && Object.hasOwnProperty.call(m, "expiryTimestampMs"))
+                w.uint32(24).int64(m.expiryTimestampMs);
             return w;
         };
 
@@ -46936,11 +46908,11 @@ export const WAE2E = $root.WAE2E = (() => {
                         break;
                     }
                 case 2: {
-                        m.keyID = r.string();
+                        m.keyId = r.string();
                         break;
                     }
                 case 3: {
-                        m.expiryTimestampMS = r.int64();
+                        m.expiryTimestampMs = r.int64();
                         break;
                     }
                 default:
@@ -46965,18 +46937,18 @@ export const WAE2E = $root.WAE2E = (() => {
                 else if (d.groupRootKey.length >= 0)
                     m.groupRootKey = d.groupRootKey;
             }
-            if (d.keyID != null) {
-                m.keyID = String(d.keyID);
+            if (d.keyId != null) {
+                m.keyId = String(d.keyId);
             }
-            if (d.expiryTimestampMS != null) {
+            if (d.expiryTimestampMs != null) {
                 if ($util.Long)
-                    (m.expiryTimestampMS = $util.Long.fromValue(d.expiryTimestampMS)).unsigned = false;
-                else if (typeof d.expiryTimestampMS === "string")
-                    m.expiryTimestampMS = parseInt(d.expiryTimestampMS, 10);
-                else if (typeof d.expiryTimestampMS === "number")
-                    m.expiryTimestampMS = d.expiryTimestampMS;
-                else if (typeof d.expiryTimestampMS === "object")
-                    m.expiryTimestampMS = new $util.LongBits(d.expiryTimestampMS.low >>> 0, d.expiryTimestampMS.high >>> 0).toNumber();
+                    (m.expiryTimestampMs = $util.Long.fromValue(d.expiryTimestampMs)).unsigned = false;
+                else if (typeof d.expiryTimestampMs === "string")
+                    m.expiryTimestampMs = parseInt(d.expiryTimestampMs, 10);
+                else if (typeof d.expiryTimestampMs === "number")
+                    m.expiryTimestampMs = d.expiryTimestampMs;
+                else if (typeof d.expiryTimestampMs === "object")
+                    m.expiryTimestampMs = new $util.LongBits(d.expiryTimestampMs.low >>> 0, d.expiryTimestampMs.high >>> 0).toNumber();
             }
             return m;
         };
@@ -46990,18 +46962,18 @@ export const WAE2E = $root.WAE2E = (() => {
                 if (o.oneofs)
                     d._groupRootKey = "groupRootKey";
             }
-            if (m.keyID != null && m.hasOwnProperty("keyID")) {
-                d.keyID = m.keyID;
+            if (m.keyId != null && m.hasOwnProperty("keyId")) {
+                d.keyId = m.keyId;
                 if (o.oneofs)
-                    d._keyID = "keyID";
+                    d._keyId = "keyId";
             }
-            if (m.expiryTimestampMS != null && m.hasOwnProperty("expiryTimestampMS")) {
-                if (typeof m.expiryTimestampMS === "number")
-                    d.expiryTimestampMS = o.longs === String ? String(m.expiryTimestampMS) : m.expiryTimestampMS;
+            if (m.expiryTimestampMs != null && m.hasOwnProperty("expiryTimestampMs")) {
+                if (typeof m.expiryTimestampMs === "number")
+                    d.expiryTimestampMs = o.longs === String ? String(m.expiryTimestampMs) : m.expiryTimestampMs;
                 else
-                    d.expiryTimestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.expiryTimestampMS) : o.longs === Number ? new $util.LongBits(m.expiryTimestampMS.low >>> 0, m.expiryTimestampMS.high >>> 0).toNumber() : m.expiryTimestampMS;
+                    d.expiryTimestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.expiryTimestampMs) : o.longs === Number ? new $util.LongBits(m.expiryTimestampMs.low >>> 0, m.expiryTimestampMs.high >>> 0).toNumber() : m.expiryTimestampMs;
                 if (o.oneofs)
-                    d._expiryTimestampMS = "expiryTimestampMS";
+                    d._expiryTimestampMs = "expiryTimestampMs";
             }
             return d;
         };
@@ -47130,16 +47102,16 @@ export const WAAICommon = WAAICommon = (() => {
 
         BotPluginMetadata.prototype.provider = null;
         BotPluginMetadata.prototype.pluginType = null;
-        BotPluginMetadata.prototype.thumbnailCDNURL = null;
-        BotPluginMetadata.prototype.profilePhotoCDNURL = null;
-        BotPluginMetadata.prototype.searchProviderURL = null;
+        BotPluginMetadata.prototype.thumbnailCdnUrl = null;
+        BotPluginMetadata.prototype.profilePhotoCdnUrl = null;
+        BotPluginMetadata.prototype.searchProviderUrl = null;
         BotPluginMetadata.prototype.referenceIndex = null;
         BotPluginMetadata.prototype.expectedLinksCount = null;
         BotPluginMetadata.prototype.searchQuery = null;
         BotPluginMetadata.prototype.parentPluginMessageKey = null;
         BotPluginMetadata.prototype.deprecatedField = null;
         BotPluginMetadata.prototype.parentPluginType = null;
-        BotPluginMetadata.prototype.faviconCDNURL = null;
+        BotPluginMetadata.prototype.faviconCdnUrl = null;
 
         let $oneOfFields;
 
@@ -47156,20 +47128,20 @@ export const WAAICommon = WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotPluginMetadata.prototype, "_thumbnailCDNURL", {
-            get: $util.oneOfGetter($oneOfFields = ["thumbnailCDNURL"]),
+        Object.defineProperty(BotPluginMetadata.prototype, "_thumbnailCdnUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["thumbnailCdnUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotPluginMetadata.prototype, "_profilePhotoCDNURL", {
-            get: $util.oneOfGetter($oneOfFields = ["profilePhotoCDNURL"]),
+        Object.defineProperty(BotPluginMetadata.prototype, "_profilePhotoCdnUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["profilePhotoCdnUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotPluginMetadata.prototype, "_searchProviderURL", {
-            get: $util.oneOfGetter($oneOfFields = ["searchProviderURL"]),
+        Object.defineProperty(BotPluginMetadata.prototype, "_searchProviderUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["searchProviderUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -47210,8 +47182,8 @@ export const WAAICommon = WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotPluginMetadata.prototype, "_faviconCDNURL", {
-            get: $util.oneOfGetter($oneOfFields = ["faviconCDNURL"]),
+        Object.defineProperty(BotPluginMetadata.prototype, "_faviconCdnUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["faviconCdnUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -47226,12 +47198,12 @@ export const WAAICommon = WAAICommon = (() => {
                 w.uint32(8).int32(m.provider);
             if (m.pluginType != null && Object.hasOwnProperty.call(m, "pluginType"))
                 w.uint32(16).int32(m.pluginType);
-            if (m.thumbnailCDNURL != null && Object.hasOwnProperty.call(m, "thumbnailCDNURL"))
-                w.uint32(26).string(m.thumbnailCDNURL);
-            if (m.profilePhotoCDNURL != null && Object.hasOwnProperty.call(m, "profilePhotoCDNURL"))
-                w.uint32(34).string(m.profilePhotoCDNURL);
-            if (m.searchProviderURL != null && Object.hasOwnProperty.call(m, "searchProviderURL"))
-                w.uint32(42).string(m.searchProviderURL);
+            if (m.thumbnailCdnUrl != null && Object.hasOwnProperty.call(m, "thumbnailCdnUrl"))
+                w.uint32(26).string(m.thumbnailCdnUrl);
+            if (m.profilePhotoCdnUrl != null && Object.hasOwnProperty.call(m, "profilePhotoCdnUrl"))
+                w.uint32(34).string(m.profilePhotoCdnUrl);
+            if (m.searchProviderUrl != null && Object.hasOwnProperty.call(m, "searchProviderUrl"))
+                w.uint32(42).string(m.searchProviderUrl);
             if (m.referenceIndex != null && Object.hasOwnProperty.call(m, "referenceIndex"))
                 w.uint32(48).uint32(m.referenceIndex);
             if (m.expectedLinksCount != null && Object.hasOwnProperty.call(m, "expectedLinksCount"))
@@ -47244,8 +47216,8 @@ export const WAAICommon = WAAICommon = (() => {
                 w.uint32(88).int32(m.deprecatedField);
             if (m.parentPluginType != null && Object.hasOwnProperty.call(m, "parentPluginType"))
                 w.uint32(96).int32(m.parentPluginType);
-            if (m.faviconCDNURL != null && Object.hasOwnProperty.call(m, "faviconCDNURL"))
-                w.uint32(106).string(m.faviconCDNURL);
+            if (m.faviconCdnUrl != null && Object.hasOwnProperty.call(m, "faviconCdnUrl"))
+                w.uint32(106).string(m.faviconCdnUrl);
             return w;
         };
 
@@ -47271,15 +47243,15 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     }
                 case 3: {
-                        m.thumbnailCDNURL = r.string();
+                        m.thumbnailCdnUrl = r.string();
                         break;
                     }
                 case 4: {
-                        m.profilePhotoCDNURL = r.string();
+                        m.profilePhotoCdnUrl = r.string();
                         break;
                     }
                 case 5: {
-                        m.searchProviderURL = r.string();
+                        m.searchProviderUrl = r.string();
                         break;
                     }
                 case 6: {
@@ -47307,7 +47279,7 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     }
                 case 13: {
-                        m.faviconCDNURL = r.string();
+                        m.faviconCdnUrl = r.string();
                         break;
                     }
                 default:
@@ -47370,14 +47342,14 @@ export const WAAICommon = WAAICommon = (() => {
                 m.pluginType = 2;
                 break;
             }
-            if (d.thumbnailCDNURL != null) {
-                m.thumbnailCDNURL = String(d.thumbnailCDNURL);
+            if (d.thumbnailCdnUrl != null) {
+                m.thumbnailCdnUrl = String(d.thumbnailCdnUrl);
             }
-            if (d.profilePhotoCDNURL != null) {
-                m.profilePhotoCDNURL = String(d.profilePhotoCDNURL);
+            if (d.profilePhotoCdnUrl != null) {
+                m.profilePhotoCdnUrl = String(d.profilePhotoCdnUrl);
             }
-            if (d.searchProviderURL != null) {
-                m.searchProviderURL = String(d.searchProviderURL);
+            if (d.searchProviderUrl != null) {
+                m.searchProviderUrl = String(d.searchProviderUrl);
             }
             if (d.referenceIndex != null) {
                 m.referenceIndex = d.referenceIndex >>> 0;
@@ -47433,8 +47405,8 @@ export const WAAICommon = WAAICommon = (() => {
                 m.parentPluginType = 2;
                 break;
             }
-            if (d.faviconCDNURL != null) {
-                m.faviconCDNURL = String(d.faviconCDNURL);
+            if (d.faviconCdnUrl != null) {
+                m.faviconCdnUrl = String(d.faviconCdnUrl);
             }
             return m;
         };
@@ -47453,20 +47425,20 @@ export const WAAICommon = WAAICommon = (() => {
                 if (o.oneofs)
                     d._pluginType = "pluginType";
             }
-            if (m.thumbnailCDNURL != null && m.hasOwnProperty("thumbnailCDNURL")) {
-                d.thumbnailCDNURL = m.thumbnailCDNURL;
+            if (m.thumbnailCdnUrl != null && m.hasOwnProperty("thumbnailCdnUrl")) {
+                d.thumbnailCdnUrl = m.thumbnailCdnUrl;
                 if (o.oneofs)
-                    d._thumbnailCDNURL = "thumbnailCDNURL";
+                    d._thumbnailCdnUrl = "thumbnailCdnUrl";
             }
-            if (m.profilePhotoCDNURL != null && m.hasOwnProperty("profilePhotoCDNURL")) {
-                d.profilePhotoCDNURL = m.profilePhotoCDNURL;
+            if (m.profilePhotoCdnUrl != null && m.hasOwnProperty("profilePhotoCdnUrl")) {
+                d.profilePhotoCdnUrl = m.profilePhotoCdnUrl;
                 if (o.oneofs)
-                    d._profilePhotoCDNURL = "profilePhotoCDNURL";
+                    d._profilePhotoCdnUrl = "profilePhotoCdnUrl";
             }
-            if (m.searchProviderURL != null && m.hasOwnProperty("searchProviderURL")) {
-                d.searchProviderURL = m.searchProviderURL;
+            if (m.searchProviderUrl != null && m.hasOwnProperty("searchProviderUrl")) {
+                d.searchProviderUrl = m.searchProviderUrl;
                 if (o.oneofs)
-                    d._searchProviderURL = "searchProviderURL";
+                    d._searchProviderUrl = "searchProviderUrl";
             }
             if (m.referenceIndex != null && m.hasOwnProperty("referenceIndex")) {
                 d.referenceIndex = m.referenceIndex;
@@ -47498,10 +47470,10 @@ export const WAAICommon = WAAICommon = (() => {
                 if (o.oneofs)
                     d._parentPluginType = "parentPluginType";
             }
-            if (m.faviconCDNURL != null && m.hasOwnProperty("faviconCDNURL")) {
-                d.faviconCDNURL = m.faviconCDNURL;
+            if (m.faviconCdnUrl != null && m.hasOwnProperty("faviconCdnUrl")) {
+                d.faviconCdnUrl = m.faviconCdnUrl;
                 if (o.oneofs)
-                    d._faviconCDNURL = "faviconCDNURL";
+                    d._faviconCdnUrl = "faviconCdnUrl";
             }
             return d;
         };
@@ -47997,9 +47969,9 @@ export const WAAICommon = WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BotMediaMetadata.prototype.fileSHA256 = null;
+        BotMediaMetadata.prototype.fileSha256 = null;
         BotMediaMetadata.prototype.mediaKey = null;
-        BotMediaMetadata.prototype.fileEncSHA256 = null;
+        BotMediaMetadata.prototype.fileEncSha256 = null;
         BotMediaMetadata.prototype.directPath = null;
         BotMediaMetadata.prototype.mediaKeyTimestamp = null;
         BotMediaMetadata.prototype.mimetype = null;
@@ -48008,8 +47980,8 @@ export const WAAICommon = WAAICommon = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMediaMetadata.prototype, "_fileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+        Object.defineProperty(BotMediaMetadata.prototype, "_fileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -48020,8 +47992,8 @@ export const WAAICommon = WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMediaMetadata.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(BotMediaMetadata.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -48056,12 +48028,12 @@ export const WAAICommon = WAAICommon = (() => {
         BotMediaMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                w.uint32(10).string(m.fileSHA256);
+            if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                w.uint32(10).string(m.fileSha256);
             if (m.mediaKey != null && Object.hasOwnProperty.call(m, "mediaKey"))
                 w.uint32(18).string(m.mediaKey);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(26).string(m.fileEncSHA256);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(26).string(m.fileEncSha256);
             if (m.directPath != null && Object.hasOwnProperty.call(m, "directPath"))
                 w.uint32(34).string(m.directPath);
             if (m.mediaKeyTimestamp != null && Object.hasOwnProperty.call(m, "mediaKeyTimestamp"))
@@ -48087,7 +48059,7 @@ export const WAAICommon = WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.fileSHA256 = r.string();
+                        m.fileSha256 = r.string();
                         break;
                     }
                 case 2: {
@@ -48095,7 +48067,7 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     }
                 case 3: {
-                        m.fileEncSHA256 = r.string();
+                        m.fileEncSha256 = r.string();
                         break;
                     }
                 case 4: {
@@ -48130,14 +48102,14 @@ export const WAAICommon = WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAICommon.BotMediaMetadata();
-            if (d.fileSHA256 != null) {
-                m.fileSHA256 = String(d.fileSHA256);
+            if (d.fileSha256 != null) {
+                m.fileSha256 = String(d.fileSha256);
             }
             if (d.mediaKey != null) {
                 m.mediaKey = String(d.mediaKey);
             }
-            if (d.fileEncSHA256 != null) {
-                m.fileEncSHA256 = String(d.fileEncSHA256);
+            if (d.fileEncSha256 != null) {
+                m.fileEncSha256 = String(d.fileEncSha256);
             }
             if (d.directPath != null) {
                 m.directPath = String(d.directPath);
@@ -48182,20 +48154,20 @@ export const WAAICommon = WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                d.fileSHA256 = m.fileSHA256;
+            if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                d.fileSha256 = m.fileSha256;
                 if (o.oneofs)
-                    d._fileSHA256 = "fileSHA256";
+                    d._fileSha256 = "fileSha256";
             }
             if (m.mediaKey != null && m.hasOwnProperty("mediaKey")) {
                 d.mediaKey = m.mediaKey;
                 if (o.oneofs)
                     d._mediaKey = "mediaKey";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
             if (m.directPath != null && m.hasOwnProperty("directPath")) {
                 d.directPath = m.directPath;
@@ -49132,7 +49104,7 @@ export const WAAICommon = WAAICommon = (() => {
 
                 BotPlanningSearchSourcesMetadata.prototype.sourceTitle = null;
                 BotPlanningSearchSourcesMetadata.prototype.provider = null;
-                BotPlanningSearchSourcesMetadata.prototype.sourceURL = null;
+                BotPlanningSearchSourcesMetadata.prototype.sourceUrl = null;
 
                 let $oneOfFields;
 
@@ -49149,8 +49121,8 @@ export const WAAICommon = WAAICommon = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(BotPlanningSearchSourcesMetadata.prototype, "_sourceURL", {
-                    get: $util.oneOfGetter($oneOfFields = ["sourceURL"]),
+                Object.defineProperty(BotPlanningSearchSourcesMetadata.prototype, "_sourceUrl", {
+                    get: $util.oneOfGetter($oneOfFields = ["sourceUrl"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -49165,8 +49137,8 @@ export const WAAICommon = WAAICommon = (() => {
                         w.uint32(10).string(m.sourceTitle);
                     if (m.provider != null && Object.hasOwnProperty.call(m, "provider"))
                         w.uint32(16).int32(m.provider);
-                    if (m.sourceURL != null && Object.hasOwnProperty.call(m, "sourceURL"))
-                        w.uint32(26).string(m.sourceURL);
+                    if (m.sourceUrl != null && Object.hasOwnProperty.call(m, "sourceUrl"))
+                        w.uint32(26).string(m.sourceUrl);
                     return w;
                 };
 
@@ -49192,7 +49164,7 @@ export const WAAICommon = WAAICommon = (() => {
                                 break;
                             }
                         case 3: {
-                                m.sourceURL = r.string();
+                                m.sourceUrl = r.string();
                                 break;
                             }
                         default:
@@ -49238,8 +49210,8 @@ export const WAAICommon = WAAICommon = (() => {
                         m.provider = 3;
                         break;
                     }
-                    if (d.sourceURL != null) {
-                        m.sourceURL = String(d.sourceURL);
+                    if (d.sourceUrl != null) {
+                        m.sourceUrl = String(d.sourceUrl);
                     }
                     return m;
                 };
@@ -49258,10 +49230,10 @@ export const WAAICommon = WAAICommon = (() => {
                         if (o.oneofs)
                             d._provider = "provider";
                     }
-                    if (m.sourceURL != null && m.hasOwnProperty("sourceURL")) {
-                        d.sourceURL = m.sourceURL;
+                    if (m.sourceUrl != null && m.hasOwnProperty("sourceUrl")) {
+                        d.sourceUrl = m.sourceUrl;
                         if (o.oneofs)
-                            d._sourceURL = "sourceURL";
+                            d._sourceUrl = "sourceUrl";
                     }
                     return d;
                 };
@@ -49448,8 +49420,8 @@ export const WAAICommon = WAAICommon = (() => {
 
                 BotPlanningSearchSourceMetadata.prototype.title = null;
                 BotPlanningSearchSourceMetadata.prototype.provider = null;
-                BotPlanningSearchSourceMetadata.prototype.sourceURL = null;
-                BotPlanningSearchSourceMetadata.prototype.favIconURL = null;
+                BotPlanningSearchSourceMetadata.prototype.sourceUrl = null;
+                BotPlanningSearchSourceMetadata.prototype.favIconUrl = null;
 
                 let $oneOfFields;
 
@@ -49466,14 +49438,14 @@ export const WAAICommon = WAAICommon = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(BotPlanningSearchSourceMetadata.prototype, "_sourceURL", {
-                    get: $util.oneOfGetter($oneOfFields = ["sourceURL"]),
+                Object.defineProperty(BotPlanningSearchSourceMetadata.prototype, "_sourceUrl", {
+                    get: $util.oneOfGetter($oneOfFields = ["sourceUrl"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(BotPlanningSearchSourceMetadata.prototype, "_favIconURL", {
-                    get: $util.oneOfGetter($oneOfFields = ["favIconURL"]),
+                Object.defineProperty(BotPlanningSearchSourceMetadata.prototype, "_favIconUrl", {
+                    get: $util.oneOfGetter($oneOfFields = ["favIconUrl"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -49488,10 +49460,10 @@ export const WAAICommon = WAAICommon = (() => {
                         w.uint32(10).string(m.title);
                     if (m.provider != null && Object.hasOwnProperty.call(m, "provider"))
                         w.uint32(16).int32(m.provider);
-                    if (m.sourceURL != null && Object.hasOwnProperty.call(m, "sourceURL"))
-                        w.uint32(26).string(m.sourceURL);
-                    if (m.favIconURL != null && Object.hasOwnProperty.call(m, "favIconURL"))
-                        w.uint32(34).string(m.favIconURL);
+                    if (m.sourceUrl != null && Object.hasOwnProperty.call(m, "sourceUrl"))
+                        w.uint32(26).string(m.sourceUrl);
+                    if (m.favIconUrl != null && Object.hasOwnProperty.call(m, "favIconUrl"))
+                        w.uint32(34).string(m.favIconUrl);
                     return w;
                 };
 
@@ -49517,11 +49489,11 @@ export const WAAICommon = WAAICommon = (() => {
                                 break;
                             }
                         case 3: {
-                                m.sourceURL = r.string();
+                                m.sourceUrl = r.string();
                                 break;
                             }
                         case 4: {
-                                m.favIconURL = r.string();
+                                m.favIconUrl = r.string();
                                 break;
                             }
                         default:
@@ -49567,11 +49539,11 @@ export const WAAICommon = WAAICommon = (() => {
                         m.provider = 3;
                         break;
                     }
-                    if (d.sourceURL != null) {
-                        m.sourceURL = String(d.sourceURL);
+                    if (d.sourceUrl != null) {
+                        m.sourceUrl = String(d.sourceUrl);
                     }
-                    if (d.favIconURL != null) {
-                        m.favIconURL = String(d.favIconURL);
+                    if (d.favIconUrl != null) {
+                        m.favIconUrl = String(d.favIconUrl);
                     }
                     return m;
                 };
@@ -49590,15 +49562,15 @@ export const WAAICommon = WAAICommon = (() => {
                         if (o.oneofs)
                             d._provider = "provider";
                     }
-                    if (m.sourceURL != null && m.hasOwnProperty("sourceURL")) {
-                        d.sourceURL = m.sourceURL;
+                    if (m.sourceUrl != null && m.hasOwnProperty("sourceUrl")) {
+                        d.sourceUrl = m.sourceUrl;
                         if (o.oneofs)
-                            d._sourceURL = "sourceURL";
+                            d._sourceUrl = "sourceUrl";
                     }
-                    if (m.favIconURL != null && m.hasOwnProperty("favIconURL")) {
-                        d.favIconURL = m.favIconURL;
+                    if (m.favIconUrl != null && m.hasOwnProperty("favIconUrl")) {
+                        d.favIconUrl = m.favIconUrl;
                         if (o.oneofs)
-                            d._favIconURL = "favIconURL";
+                            d._favIconUrl = "favIconUrl";
                     }
                     return d;
                 };
@@ -50910,10 +50882,10 @@ export const WAAICommon = WAAICommon = (() => {
             }
 
             BotSourceItem.prototype.provider = null;
-            BotSourceItem.prototype.thumbnailCDNURL = null;
-            BotSourceItem.prototype.sourceProviderURL = null;
+            BotSourceItem.prototype.thumbnailCdnUrl = null;
+            BotSourceItem.prototype.sourceProviderUrl = null;
             BotSourceItem.prototype.sourceQuery = null;
-            BotSourceItem.prototype.faviconCDNURL = null;
+            BotSourceItem.prototype.faviconCdnUrl = null;
             BotSourceItem.prototype.citationNumber = null;
             BotSourceItem.prototype.sourceTitle = null;
 
@@ -50926,14 +50898,14 @@ export const WAAICommon = WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(BotSourceItem.prototype, "_thumbnailCDNURL", {
-                get: $util.oneOfGetter($oneOfFields = ["thumbnailCDNURL"]),
+            Object.defineProperty(BotSourceItem.prototype, "_thumbnailCdnUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["thumbnailCdnUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(BotSourceItem.prototype, "_sourceProviderURL", {
-                get: $util.oneOfGetter($oneOfFields = ["sourceProviderURL"]),
+            Object.defineProperty(BotSourceItem.prototype, "_sourceProviderUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["sourceProviderUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -50944,8 +50916,8 @@ export const WAAICommon = WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(BotSourceItem.prototype, "_faviconCDNURL", {
-                get: $util.oneOfGetter($oneOfFields = ["faviconCDNURL"]),
+            Object.defineProperty(BotSourceItem.prototype, "_faviconCdnUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["faviconCdnUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -50970,14 +50942,14 @@ export const WAAICommon = WAAICommon = (() => {
                     w = $Writer.create();
                 if (m.provider != null && Object.hasOwnProperty.call(m, "provider"))
                     w.uint32(8).int32(m.provider);
-                if (m.thumbnailCDNURL != null && Object.hasOwnProperty.call(m, "thumbnailCDNURL"))
-                    w.uint32(18).string(m.thumbnailCDNURL);
-                if (m.sourceProviderURL != null && Object.hasOwnProperty.call(m, "sourceProviderURL"))
-                    w.uint32(26).string(m.sourceProviderURL);
+                if (m.thumbnailCdnUrl != null && Object.hasOwnProperty.call(m, "thumbnailCdnUrl"))
+                    w.uint32(18).string(m.thumbnailCdnUrl);
+                if (m.sourceProviderUrl != null && Object.hasOwnProperty.call(m, "sourceProviderUrl"))
+                    w.uint32(26).string(m.sourceProviderUrl);
                 if (m.sourceQuery != null && Object.hasOwnProperty.call(m, "sourceQuery"))
                     w.uint32(34).string(m.sourceQuery);
-                if (m.faviconCDNURL != null && Object.hasOwnProperty.call(m, "faviconCDNURL"))
-                    w.uint32(42).string(m.faviconCDNURL);
+                if (m.faviconCdnUrl != null && Object.hasOwnProperty.call(m, "faviconCdnUrl"))
+                    w.uint32(42).string(m.faviconCdnUrl);
                 if (m.citationNumber != null && Object.hasOwnProperty.call(m, "citationNumber"))
                     w.uint32(48).uint32(m.citationNumber);
                 if (m.sourceTitle != null && Object.hasOwnProperty.call(m, "sourceTitle"))
@@ -51003,11 +50975,11 @@ export const WAAICommon = WAAICommon = (() => {
                             break;
                         }
                     case 2: {
-                            m.thumbnailCDNURL = r.string();
+                            m.thumbnailCdnUrl = r.string();
                             break;
                         }
                     case 3: {
-                            m.sourceProviderURL = r.string();
+                            m.sourceProviderUrl = r.string();
                             break;
                         }
                     case 4: {
@@ -51015,7 +50987,7 @@ export const WAAICommon = WAAICommon = (() => {
                             break;
                         }
                     case 5: {
-                            m.faviconCDNURL = r.string();
+                            m.faviconCdnUrl = r.string();
                             break;
                         }
                     case 6: {
@@ -51070,17 +51042,17 @@ export const WAAICommon = WAAICommon = (() => {
                     m.provider = 4;
                     break;
                 }
-                if (d.thumbnailCDNURL != null) {
-                    m.thumbnailCDNURL = String(d.thumbnailCDNURL);
+                if (d.thumbnailCdnUrl != null) {
+                    m.thumbnailCdnUrl = String(d.thumbnailCdnUrl);
                 }
-                if (d.sourceProviderURL != null) {
-                    m.sourceProviderURL = String(d.sourceProviderURL);
+                if (d.sourceProviderUrl != null) {
+                    m.sourceProviderUrl = String(d.sourceProviderUrl);
                 }
                 if (d.sourceQuery != null) {
                     m.sourceQuery = String(d.sourceQuery);
                 }
-                if (d.faviconCDNURL != null) {
-                    m.faviconCDNURL = String(d.faviconCDNURL);
+                if (d.faviconCdnUrl != null) {
+                    m.faviconCdnUrl = String(d.faviconCdnUrl);
                 }
                 if (d.citationNumber != null) {
                     m.citationNumber = d.citationNumber >>> 0;
@@ -51100,25 +51072,25 @@ export const WAAICommon = WAAICommon = (() => {
                     if (o.oneofs)
                         d._provider = "provider";
                 }
-                if (m.thumbnailCDNURL != null && m.hasOwnProperty("thumbnailCDNURL")) {
-                    d.thumbnailCDNURL = m.thumbnailCDNURL;
+                if (m.thumbnailCdnUrl != null && m.hasOwnProperty("thumbnailCdnUrl")) {
+                    d.thumbnailCdnUrl = m.thumbnailCdnUrl;
                     if (o.oneofs)
-                        d._thumbnailCDNURL = "thumbnailCDNURL";
+                        d._thumbnailCdnUrl = "thumbnailCdnUrl";
                 }
-                if (m.sourceProviderURL != null && m.hasOwnProperty("sourceProviderURL")) {
-                    d.sourceProviderURL = m.sourceProviderURL;
+                if (m.sourceProviderUrl != null && m.hasOwnProperty("sourceProviderUrl")) {
+                    d.sourceProviderUrl = m.sourceProviderUrl;
                     if (o.oneofs)
-                        d._sourceProviderURL = "sourceProviderURL";
+                        d._sourceProviderUrl = "sourceProviderUrl";
                 }
                 if (m.sourceQuery != null && m.hasOwnProperty("sourceQuery")) {
                     d.sourceQuery = m.sourceQuery;
                     if (o.oneofs)
                         d._sourceQuery = "sourceQuery";
                 }
-                if (m.faviconCDNURL != null && m.hasOwnProperty("faviconCDNURL")) {
-                    d.faviconCDNURL = m.faviconCDNURL;
+                if (m.faviconCdnUrl != null && m.hasOwnProperty("faviconCdnUrl")) {
+                    d.faviconCdnUrl = m.faviconCdnUrl;
                     if (o.oneofs)
-                        d._faviconCDNURL = "faviconCDNURL";
+                        d._faviconCdnUrl = "faviconCdnUrl";
                 }
                 if (m.citationNumber != null && m.hasOwnProperty("citationNumber")) {
                     d.citationNumber = m.citationNumber;
@@ -51399,7 +51371,7 @@ export const WAAICommon = WAAICommon = (() => {
             }
 
             AIThreadClientInfo.prototype.type = null;
-            AIThreadClientInfo.prototype.sourceChatJID = null;
+            AIThreadClientInfo.prototype.sourceChatJid = null;
 
             let $oneOfFields;
 
@@ -51410,8 +51382,8 @@ export const WAAICommon = WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIThreadClientInfo.prototype, "_sourceChatJID", {
-                get: $util.oneOfGetter($oneOfFields = ["sourceChatJID"]),
+            Object.defineProperty(AIThreadClientInfo.prototype, "_sourceChatJid", {
+                get: $util.oneOfGetter($oneOfFields = ["sourceChatJid"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -51424,8 +51396,8 @@ export const WAAICommon = WAAICommon = (() => {
                     w = $Writer.create();
                 if (m.type != null && Object.hasOwnProperty.call(m, "type"))
                     w.uint32(8).int32(m.type);
-                if (m.sourceChatJID != null && Object.hasOwnProperty.call(m, "sourceChatJID"))
-                    w.uint32(18).string(m.sourceChatJID);
+                if (m.sourceChatJid != null && Object.hasOwnProperty.call(m, "sourceChatJid"))
+                    w.uint32(18).string(m.sourceChatJid);
                 return w;
             };
 
@@ -51447,7 +51419,7 @@ export const WAAICommon = WAAICommon = (() => {
                             break;
                         }
                     case 2: {
-                            m.sourceChatJID = r.string();
+                            m.sourceChatJid = r.string();
                             break;
                         }
                     default:
@@ -51490,8 +51462,8 @@ export const WAAICommon = WAAICommon = (() => {
                     m.type = 3;
                     break;
                 }
-                if (d.sourceChatJID != null) {
-                    m.sourceChatJID = String(d.sourceChatJID);
+                if (d.sourceChatJid != null) {
+                    m.sourceChatJid = String(d.sourceChatJid);
                 }
                 return m;
             };
@@ -51505,10 +51477,10 @@ export const WAAICommon = WAAICommon = (() => {
                     if (o.oneofs)
                         d._type = "type";
                 }
-                if (m.sourceChatJID != null && m.hasOwnProperty("sourceChatJID")) {
-                    d.sourceChatJID = m.sourceChatJID;
+                if (m.sourceChatJid != null && m.hasOwnProperty("sourceChatJid")) {
+                    d.sourceChatJid = m.sourceChatJid;
                     if (o.oneofs)
-                        d._sourceChatJID = "sourceChatJID";
+                        d._sourceChatJid = "sourceChatJid";
                 }
                 return d;
             };
@@ -52012,27 +51984,27 @@ export const WAAICommon = WAAICommon = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            SideBySideSurveyMetadata.prototype.selectedRequestID = null;
-            SideBySideSurveyMetadata.prototype.surveyID = null;
+            SideBySideSurveyMetadata.prototype.selectedRequestId = null;
+            SideBySideSurveyMetadata.prototype.surveyId = null;
             SideBySideSurveyMetadata.prototype.simonSessionFbid = null;
             SideBySideSurveyMetadata.prototype.responseOtid = null;
-            SideBySideSurveyMetadata.prototype.responseTimestampMSString = null;
+            SideBySideSurveyMetadata.prototype.responseTimestampMsString = null;
             SideBySideSurveyMetadata.prototype.isSelectedResponsePrimary = null;
-            SideBySideSurveyMetadata.prototype.messageIDToEdit = null;
+            SideBySideSurveyMetadata.prototype.messageIdToEdit = null;
             SideBySideSurveyMetadata.prototype.analyticsData = null;
             SideBySideSurveyMetadata.prototype.metaAiAnalyticsData = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_selectedRequestID", {
-                get: $util.oneOfGetter($oneOfFields = ["selectedRequestID"]),
+            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_selectedRequestId", {
+                get: $util.oneOfGetter($oneOfFields = ["selectedRequestId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_surveyID", {
-                get: $util.oneOfGetter($oneOfFields = ["surveyID"]),
+            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_surveyId", {
+                get: $util.oneOfGetter($oneOfFields = ["surveyId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -52049,8 +52021,8 @@ export const WAAICommon = WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_responseTimestampMSString", {
-                get: $util.oneOfGetter($oneOfFields = ["responseTimestampMSString"]),
+            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_responseTimestampMsString", {
+                get: $util.oneOfGetter($oneOfFields = ["responseTimestampMsString"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -52061,8 +52033,8 @@ export const WAAICommon = WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_messageIDToEdit", {
-                get: $util.oneOfGetter($oneOfFields = ["messageIDToEdit"]),
+            Object.defineProperty(SideBySideSurveyMetadata.prototype, "_messageIdToEdit", {
+                get: $util.oneOfGetter($oneOfFields = ["messageIdToEdit"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -52085,20 +52057,20 @@ export const WAAICommon = WAAICommon = (() => {
             SideBySideSurveyMetadata.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.selectedRequestID != null && Object.hasOwnProperty.call(m, "selectedRequestID"))
-                    w.uint32(10).string(m.selectedRequestID);
-                if (m.surveyID != null && Object.hasOwnProperty.call(m, "surveyID"))
-                    w.uint32(16).uint32(m.surveyID);
+                if (m.selectedRequestId != null && Object.hasOwnProperty.call(m, "selectedRequestId"))
+                    w.uint32(10).string(m.selectedRequestId);
+                if (m.surveyId != null && Object.hasOwnProperty.call(m, "surveyId"))
+                    w.uint32(16).uint32(m.surveyId);
                 if (m.simonSessionFbid != null && Object.hasOwnProperty.call(m, "simonSessionFbid"))
                     w.uint32(26).string(m.simonSessionFbid);
                 if (m.responseOtid != null && Object.hasOwnProperty.call(m, "responseOtid"))
                     w.uint32(34).string(m.responseOtid);
-                if (m.responseTimestampMSString != null && Object.hasOwnProperty.call(m, "responseTimestampMSString"))
-                    w.uint32(42).string(m.responseTimestampMSString);
+                if (m.responseTimestampMsString != null && Object.hasOwnProperty.call(m, "responseTimestampMsString"))
+                    w.uint32(42).string(m.responseTimestampMsString);
                 if (m.isSelectedResponsePrimary != null && Object.hasOwnProperty.call(m, "isSelectedResponsePrimary"))
                     w.uint32(48).bool(m.isSelectedResponsePrimary);
-                if (m.messageIDToEdit != null && Object.hasOwnProperty.call(m, "messageIDToEdit"))
-                    w.uint32(58).string(m.messageIDToEdit);
+                if (m.messageIdToEdit != null && Object.hasOwnProperty.call(m, "messageIdToEdit"))
+                    w.uint32(58).string(m.messageIdToEdit);
                 if (m.analyticsData != null && Object.hasOwnProperty.call(m, "analyticsData"))
                     WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SideBySideSurveyAnalyticsData.encode(m.analyticsData, w.uint32(66).fork()).ldelim();
                 if (m.metaAiAnalyticsData != null && Object.hasOwnProperty.call(m, "metaAiAnalyticsData"))
@@ -52120,11 +52092,11 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.selectedRequestID = r.string();
+                            m.selectedRequestId = r.string();
                             break;
                         }
                     case 2: {
-                            m.surveyID = r.uint32();
+                            m.surveyId = r.uint32();
                             break;
                         }
                     case 3: {
@@ -52136,7 +52108,7 @@ export const WAAICommon = WAAICommon = (() => {
                             break;
                         }
                     case 5: {
-                            m.responseTimestampMSString = r.string();
+                            m.responseTimestampMsString = r.string();
                             break;
                         }
                     case 6: {
@@ -52144,7 +52116,7 @@ export const WAAICommon = WAAICommon = (() => {
                             break;
                         }
                     case 7: {
-                            m.messageIDToEdit = r.string();
+                            m.messageIdToEdit = r.string();
                             break;
                         }
                     case 8: {
@@ -52171,11 +52143,11 @@ export const WAAICommon = WAAICommon = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata();
-                if (d.selectedRequestID != null) {
-                    m.selectedRequestID = String(d.selectedRequestID);
+                if (d.selectedRequestId != null) {
+                    m.selectedRequestId = String(d.selectedRequestId);
                 }
-                if (d.surveyID != null) {
-                    m.surveyID = d.surveyID >>> 0;
+                if (d.surveyId != null) {
+                    m.surveyId = d.surveyId >>> 0;
                 }
                 if (d.simonSessionFbid != null) {
                     m.simonSessionFbid = String(d.simonSessionFbid);
@@ -52183,14 +52155,14 @@ export const WAAICommon = WAAICommon = (() => {
                 if (d.responseOtid != null) {
                     m.responseOtid = String(d.responseOtid);
                 }
-                if (d.responseTimestampMSString != null) {
-                    m.responseTimestampMSString = String(d.responseTimestampMSString);
+                if (d.responseTimestampMsString != null) {
+                    m.responseTimestampMsString = String(d.responseTimestampMsString);
                 }
                 if (d.isSelectedResponsePrimary != null) {
                     m.isSelectedResponsePrimary = Boolean(d.isSelectedResponsePrimary);
                 }
-                if (d.messageIDToEdit != null) {
-                    m.messageIDToEdit = String(d.messageIDToEdit);
+                if (d.messageIdToEdit != null) {
+                    m.messageIdToEdit = String(d.messageIdToEdit);
                 }
                 if (d.analyticsData != null) {
                     if (typeof d.analyticsData !== "object")
@@ -52209,15 +52181,15 @@ export const WAAICommon = WAAICommon = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.selectedRequestID != null && m.hasOwnProperty("selectedRequestID")) {
-                    d.selectedRequestID = m.selectedRequestID;
+                if (m.selectedRequestId != null && m.hasOwnProperty("selectedRequestId")) {
+                    d.selectedRequestId = m.selectedRequestId;
                     if (o.oneofs)
-                        d._selectedRequestID = "selectedRequestID";
+                        d._selectedRequestId = "selectedRequestId";
                 }
-                if (m.surveyID != null && m.hasOwnProperty("surveyID")) {
-                    d.surveyID = m.surveyID;
+                if (m.surveyId != null && m.hasOwnProperty("surveyId")) {
+                    d.surveyId = m.surveyId;
                     if (o.oneofs)
-                        d._surveyID = "surveyID";
+                        d._surveyId = "surveyId";
                 }
                 if (m.simonSessionFbid != null && m.hasOwnProperty("simonSessionFbid")) {
                     d.simonSessionFbid = m.simonSessionFbid;
@@ -52229,20 +52201,20 @@ export const WAAICommon = WAAICommon = (() => {
                     if (o.oneofs)
                         d._responseOtid = "responseOtid";
                 }
-                if (m.responseTimestampMSString != null && m.hasOwnProperty("responseTimestampMSString")) {
-                    d.responseTimestampMSString = m.responseTimestampMSString;
+                if (m.responseTimestampMsString != null && m.hasOwnProperty("responseTimestampMsString")) {
+                    d.responseTimestampMsString = m.responseTimestampMsString;
                     if (o.oneofs)
-                        d._responseTimestampMSString = "responseTimestampMSString";
+                        d._responseTimestampMsString = "responseTimestampMsString";
                 }
                 if (m.isSelectedResponsePrimary != null && m.hasOwnProperty("isSelectedResponsePrimary")) {
                     d.isSelectedResponsePrimary = m.isSelectedResponsePrimary;
                     if (o.oneofs)
                         d._isSelectedResponsePrimary = "isSelectedResponsePrimary";
                 }
-                if (m.messageIDToEdit != null && m.hasOwnProperty("messageIDToEdit")) {
-                    d.messageIDToEdit = m.messageIDToEdit;
+                if (m.messageIdToEdit != null && m.hasOwnProperty("messageIdToEdit")) {
+                    d.messageIdToEdit = m.messageIdToEdit;
                     if (o.oneofs)
-                        d._messageIDToEdit = "messageIDToEdit";
+                        d._messageIdToEdit = "messageIdToEdit";
                 }
                 if (m.analyticsData != null && m.hasOwnProperty("analyticsData")) {
                     d.analyticsData = WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SideBySideSurveyAnalyticsData.toObject(m.analyticsData, o);
@@ -52277,10 +52249,10 @@ export const WAAICommon = WAAICommon = (() => {
                                 this[ks[i]] = p[ks[i]];
                 }
 
-                SidebySideSurveyMetaAiAnalyticsData.prototype.surveyID = null;
-                SidebySideSurveyMetaAiAnalyticsData.prototype.primaryResponseID = null;
+                SidebySideSurveyMetaAiAnalyticsData.prototype.surveyId = null;
+                SidebySideSurveyMetaAiAnalyticsData.prototype.primaryResponseId = null;
                 SidebySideSurveyMetaAiAnalyticsData.prototype.testArmName = null;
-                SidebySideSurveyMetaAiAnalyticsData.prototype.timestampMSString = null;
+                SidebySideSurveyMetaAiAnalyticsData.prototype.timestampMsString = null;
                 SidebySideSurveyMetaAiAnalyticsData.prototype.ctaImpressionEvent = null;
                 SidebySideSurveyMetaAiAnalyticsData.prototype.ctaClickEvent = null;
                 SidebySideSurveyMetaAiAnalyticsData.prototype.cardImpressionEvent = null;
@@ -52290,14 +52262,14 @@ export const WAAICommon = WAAICommon = (() => {
                 let $oneOfFields;
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(SidebySideSurveyMetaAiAnalyticsData.prototype, "_surveyID", {
-                    get: $util.oneOfGetter($oneOfFields = ["surveyID"]),
+                Object.defineProperty(SidebySideSurveyMetaAiAnalyticsData.prototype, "_surveyId", {
+                    get: $util.oneOfGetter($oneOfFields = ["surveyId"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(SidebySideSurveyMetaAiAnalyticsData.prototype, "_primaryResponseID", {
-                    get: $util.oneOfGetter($oneOfFields = ["primaryResponseID"]),
+                Object.defineProperty(SidebySideSurveyMetaAiAnalyticsData.prototype, "_primaryResponseId", {
+                    get: $util.oneOfGetter($oneOfFields = ["primaryResponseId"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -52308,8 +52280,8 @@ export const WAAICommon = WAAICommon = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(SidebySideSurveyMetaAiAnalyticsData.prototype, "_timestampMSString", {
-                    get: $util.oneOfGetter($oneOfFields = ["timestampMSString"]),
+                Object.defineProperty(SidebySideSurveyMetaAiAnalyticsData.prototype, "_timestampMsString", {
+                    get: $util.oneOfGetter($oneOfFields = ["timestampMsString"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -52350,14 +52322,14 @@ export const WAAICommon = WAAICommon = (() => {
                 SidebySideSurveyMetaAiAnalyticsData.encode = function encode(m, w) {
                     if (!w)
                         w = $Writer.create();
-                    if (m.surveyID != null && Object.hasOwnProperty.call(m, "surveyID"))
-                        w.uint32(8).uint32(m.surveyID);
-                    if (m.primaryResponseID != null && Object.hasOwnProperty.call(m, "primaryResponseID"))
-                        w.uint32(18).string(m.primaryResponseID);
+                    if (m.surveyId != null && Object.hasOwnProperty.call(m, "surveyId"))
+                        w.uint32(8).uint32(m.surveyId);
+                    if (m.primaryResponseId != null && Object.hasOwnProperty.call(m, "primaryResponseId"))
+                        w.uint32(18).string(m.primaryResponseId);
                     if (m.testArmName != null && Object.hasOwnProperty.call(m, "testArmName"))
                         w.uint32(26).string(m.testArmName);
-                    if (m.timestampMSString != null && Object.hasOwnProperty.call(m, "timestampMSString"))
-                        w.uint32(34).string(m.timestampMSString);
+                    if (m.timestampMsString != null && Object.hasOwnProperty.call(m, "timestampMsString"))
+                        w.uint32(34).string(m.timestampMsString);
                     if (m.ctaImpressionEvent != null && Object.hasOwnProperty.call(m, "ctaImpressionEvent"))
                         WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyCTAImpressionEventData.encode(m.ctaImpressionEvent, w.uint32(42).fork()).ldelim();
                     if (m.ctaClickEvent != null && Object.hasOwnProperty.call(m, "ctaClickEvent"))
@@ -52385,11 +52357,11 @@ export const WAAICommon = WAAICommon = (() => {
                             break;
                         switch (t >>> 3) {
                         case 1: {
-                                m.surveyID = r.uint32();
+                                m.surveyId = r.uint32();
                                 break;
                             }
                         case 2: {
-                                m.primaryResponseID = r.string();
+                                m.primaryResponseId = r.string();
                                 break;
                             }
                         case 3: {
@@ -52397,7 +52369,7 @@ export const WAAICommon = WAAICommon = (() => {
                                 break;
                             }
                         case 4: {
-                                m.timestampMSString = r.string();
+                                m.timestampMsString = r.string();
                                 break;
                             }
                         case 5: {
@@ -52436,17 +52408,17 @@ export const WAAICommon = WAAICommon = (() => {
                     if (n > $util.recursionLimit)
                         throw Error("maximum nesting depth exceeded");
                     var m = new WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData();
-                    if (d.surveyID != null) {
-                        m.surveyID = d.surveyID >>> 0;
+                    if (d.surveyId != null) {
+                        m.surveyId = d.surveyId >>> 0;
                     }
-                    if (d.primaryResponseID != null) {
-                        m.primaryResponseID = String(d.primaryResponseID);
+                    if (d.primaryResponseId != null) {
+                        m.primaryResponseId = String(d.primaryResponseId);
                     }
                     if (d.testArmName != null) {
                         m.testArmName = String(d.testArmName);
                     }
-                    if (d.timestampMSString != null) {
-                        m.timestampMSString = String(d.timestampMSString);
+                    if (d.timestampMsString != null) {
+                        m.timestampMsString = String(d.timestampMsString);
                     }
                     if (d.ctaImpressionEvent != null) {
                         if (typeof d.ctaImpressionEvent !== "object")
@@ -52480,25 +52452,25 @@ export const WAAICommon = WAAICommon = (() => {
                     if (!o)
                         o = {};
                     var d = {};
-                    if (m.surveyID != null && m.hasOwnProperty("surveyID")) {
-                        d.surveyID = m.surveyID;
+                    if (m.surveyId != null && m.hasOwnProperty("surveyId")) {
+                        d.surveyId = m.surveyId;
                         if (o.oneofs)
-                            d._surveyID = "surveyID";
+                            d._surveyId = "surveyId";
                     }
-                    if (m.primaryResponseID != null && m.hasOwnProperty("primaryResponseID")) {
-                        d.primaryResponseID = m.primaryResponseID;
+                    if (m.primaryResponseId != null && m.hasOwnProperty("primaryResponseId")) {
+                        d.primaryResponseId = m.primaryResponseId;
                         if (o.oneofs)
-                            d._primaryResponseID = "primaryResponseID";
+                            d._primaryResponseId = "primaryResponseId";
                     }
                     if (m.testArmName != null && m.hasOwnProperty("testArmName")) {
                         d.testArmName = m.testArmName;
                         if (o.oneofs)
                             d._testArmName = "testArmName";
                     }
-                    if (m.timestampMSString != null && m.hasOwnProperty("timestampMSString")) {
-                        d.timestampMSString = m.timestampMSString;
+                    if (m.timestampMsString != null && m.hasOwnProperty("timestampMsString")) {
+                        d.timestampMsString = m.timestampMsString;
                         if (o.oneofs)
-                            d._timestampMSString = "timestampMSString";
+                            d._timestampMsString = "timestampMsString";
                     }
                     if (m.ctaImpressionEvent != null && m.hasOwnProperty("ctaImpressionEvent")) {
                         d.ctaImpressionEvent = WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyCTAImpressionEventData.toObject(m.ctaImpressionEvent, o);
@@ -52548,13 +52520,13 @@ export const WAAICommon = WAAICommon = (() => {
                                     this[ks[i]] = p[ks[i]];
                     }
 
-                    SideBySideSurveyAbandonEventData.prototype.abandonDwellTimeMSString = null;
+                    SideBySideSurveyAbandonEventData.prototype.abandonDwellTimeMsString = null;
 
                     let $oneOfFields;
 
                     // Virtual OneOf for proto3 optional field
-                    Object.defineProperty(SideBySideSurveyAbandonEventData.prototype, "_abandonDwellTimeMSString", {
-                        get: $util.oneOfGetter($oneOfFields = ["abandonDwellTimeMSString"]),
+                    Object.defineProperty(SideBySideSurveyAbandonEventData.prototype, "_abandonDwellTimeMsString", {
+                        get: $util.oneOfGetter($oneOfFields = ["abandonDwellTimeMsString"]),
                         set: $util.oneOfSetter($oneOfFields)
                     });
 
@@ -52565,8 +52537,8 @@ export const WAAICommon = WAAICommon = (() => {
                     SideBySideSurveyAbandonEventData.encode = function encode(m, w) {
                         if (!w)
                             w = $Writer.create();
-                        if (m.abandonDwellTimeMSString != null && Object.hasOwnProperty.call(m, "abandonDwellTimeMSString"))
-                            w.uint32(10).string(m.abandonDwellTimeMSString);
+                        if (m.abandonDwellTimeMsString != null && Object.hasOwnProperty.call(m, "abandonDwellTimeMsString"))
+                            w.uint32(10).string(m.abandonDwellTimeMsString);
                         return w;
                     };
 
@@ -52584,7 +52556,7 @@ export const WAAICommon = WAAICommon = (() => {
                                 break;
                             switch (t >>> 3) {
                             case 1: {
-                                    m.abandonDwellTimeMSString = r.string();
+                                    m.abandonDwellTimeMsString = r.string();
                                     break;
                                 }
                             default:
@@ -52603,8 +52575,8 @@ export const WAAICommon = WAAICommon = (() => {
                         if (n > $util.recursionLimit)
                             throw Error("maximum nesting depth exceeded");
                         var m = new WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyAbandonEventData();
-                        if (d.abandonDwellTimeMSString != null) {
-                            m.abandonDwellTimeMSString = String(d.abandonDwellTimeMSString);
+                        if (d.abandonDwellTimeMsString != null) {
+                            m.abandonDwellTimeMsString = String(d.abandonDwellTimeMsString);
                         }
                         return m;
                     };
@@ -52613,10 +52585,10 @@ export const WAAICommon = WAAICommon = (() => {
                         if (!o)
                             o = {};
                         var d = {};
-                        if (m.abandonDwellTimeMSString != null && m.hasOwnProperty("abandonDwellTimeMSString")) {
-                            d.abandonDwellTimeMSString = m.abandonDwellTimeMSString;
+                        if (m.abandonDwellTimeMsString != null && m.hasOwnProperty("abandonDwellTimeMsString")) {
+                            d.abandonDwellTimeMsString = m.abandonDwellTimeMsString;
                             if (o.oneofs)
-                                d._abandonDwellTimeMSString = "abandonDwellTimeMSString";
+                                d._abandonDwellTimeMsString = "abandonDwellTimeMsString";
                         }
                         return d;
                     };
@@ -52644,20 +52616,20 @@ export const WAAICommon = WAAICommon = (() => {
                                     this[ks[i]] = p[ks[i]];
                     }
 
-                    SideBySideSurveyResponseEventData.prototype.responseDwellTimeMSString = null;
-                    SideBySideSurveyResponseEventData.prototype.selectedResponseID = null;
+                    SideBySideSurveyResponseEventData.prototype.responseDwellTimeMsString = null;
+                    SideBySideSurveyResponseEventData.prototype.selectedResponseId = null;
 
                     let $oneOfFields;
 
                     // Virtual OneOf for proto3 optional field
-                    Object.defineProperty(SideBySideSurveyResponseEventData.prototype, "_responseDwellTimeMSString", {
-                        get: $util.oneOfGetter($oneOfFields = ["responseDwellTimeMSString"]),
+                    Object.defineProperty(SideBySideSurveyResponseEventData.prototype, "_responseDwellTimeMsString", {
+                        get: $util.oneOfGetter($oneOfFields = ["responseDwellTimeMsString"]),
                         set: $util.oneOfSetter($oneOfFields)
                     });
 
                     // Virtual OneOf for proto3 optional field
-                    Object.defineProperty(SideBySideSurveyResponseEventData.prototype, "_selectedResponseID", {
-                        get: $util.oneOfGetter($oneOfFields = ["selectedResponseID"]),
+                    Object.defineProperty(SideBySideSurveyResponseEventData.prototype, "_selectedResponseId", {
+                        get: $util.oneOfGetter($oneOfFields = ["selectedResponseId"]),
                         set: $util.oneOfSetter($oneOfFields)
                     });
 
@@ -52668,10 +52640,10 @@ export const WAAICommon = WAAICommon = (() => {
                     SideBySideSurveyResponseEventData.encode = function encode(m, w) {
                         if (!w)
                             w = $Writer.create();
-                        if (m.responseDwellTimeMSString != null && Object.hasOwnProperty.call(m, "responseDwellTimeMSString"))
-                            w.uint32(10).string(m.responseDwellTimeMSString);
-                        if (m.selectedResponseID != null && Object.hasOwnProperty.call(m, "selectedResponseID"))
-                            w.uint32(18).string(m.selectedResponseID);
+                        if (m.responseDwellTimeMsString != null && Object.hasOwnProperty.call(m, "responseDwellTimeMsString"))
+                            w.uint32(10).string(m.responseDwellTimeMsString);
+                        if (m.selectedResponseId != null && Object.hasOwnProperty.call(m, "selectedResponseId"))
+                            w.uint32(18).string(m.selectedResponseId);
                         return w;
                     };
 
@@ -52689,11 +52661,11 @@ export const WAAICommon = WAAICommon = (() => {
                                 break;
                             switch (t >>> 3) {
                             case 1: {
-                                    m.responseDwellTimeMSString = r.string();
+                                    m.responseDwellTimeMsString = r.string();
                                     break;
                                 }
                             case 2: {
-                                    m.selectedResponseID = r.string();
+                                    m.selectedResponseId = r.string();
                                     break;
                                 }
                             default:
@@ -52712,11 +52684,11 @@ export const WAAICommon = WAAICommon = (() => {
                         if (n > $util.recursionLimit)
                             throw Error("maximum nesting depth exceeded");
                         var m = new WAAICommon.BotFeedbackMessage.SideBySideSurveyMetadata.SidebySideSurveyMetaAiAnalyticsData.SideBySideSurveyResponseEventData();
-                        if (d.responseDwellTimeMSString != null) {
-                            m.responseDwellTimeMSString = String(d.responseDwellTimeMSString);
+                        if (d.responseDwellTimeMsString != null) {
+                            m.responseDwellTimeMsString = String(d.responseDwellTimeMsString);
                         }
-                        if (d.selectedResponseID != null) {
-                            m.selectedResponseID = String(d.selectedResponseID);
+                        if (d.selectedResponseId != null) {
+                            m.selectedResponseId = String(d.selectedResponseId);
                         }
                         return m;
                     };
@@ -52725,15 +52697,15 @@ export const WAAICommon = WAAICommon = (() => {
                         if (!o)
                             o = {};
                         var d = {};
-                        if (m.responseDwellTimeMSString != null && m.hasOwnProperty("responseDwellTimeMSString")) {
-                            d.responseDwellTimeMSString = m.responseDwellTimeMSString;
+                        if (m.responseDwellTimeMsString != null && m.hasOwnProperty("responseDwellTimeMsString")) {
+                            d.responseDwellTimeMsString = m.responseDwellTimeMsString;
                             if (o.oneofs)
-                                d._responseDwellTimeMSString = "responseDwellTimeMSString";
+                                d._responseDwellTimeMsString = "responseDwellTimeMsString";
                         }
-                        if (m.selectedResponseID != null && m.hasOwnProperty("selectedResponseID")) {
-                            d.selectedResponseID = m.selectedResponseID;
+                        if (m.selectedResponseId != null && m.hasOwnProperty("selectedResponseId")) {
+                            d.selectedResponseId = m.selectedResponseId;
                             if (o.oneofs)
-                                d._selectedResponseID = "selectedResponseID";
+                                d._selectedResponseId = "selectedResponseId";
                         }
                         return d;
                     };
@@ -52830,7 +52802,7 @@ export const WAAICommon = WAAICommon = (() => {
                     }
 
                     SideBySideSurveyCTAClickEventData.prototype.isSurveyExpired = null;
-                    SideBySideSurveyCTAClickEventData.prototype.clickDwellTimeMSString = null;
+                    SideBySideSurveyCTAClickEventData.prototype.clickDwellTimeMsString = null;
 
                     let $oneOfFields;
 
@@ -52841,8 +52813,8 @@ export const WAAICommon = WAAICommon = (() => {
                     });
 
                     // Virtual OneOf for proto3 optional field
-                    Object.defineProperty(SideBySideSurveyCTAClickEventData.prototype, "_clickDwellTimeMSString", {
-                        get: $util.oneOfGetter($oneOfFields = ["clickDwellTimeMSString"]),
+                    Object.defineProperty(SideBySideSurveyCTAClickEventData.prototype, "_clickDwellTimeMsString", {
+                        get: $util.oneOfGetter($oneOfFields = ["clickDwellTimeMsString"]),
                         set: $util.oneOfSetter($oneOfFields)
                     });
 
@@ -52855,8 +52827,8 @@ export const WAAICommon = WAAICommon = (() => {
                             w = $Writer.create();
                         if (m.isSurveyExpired != null && Object.hasOwnProperty.call(m, "isSurveyExpired"))
                             w.uint32(8).bool(m.isSurveyExpired);
-                        if (m.clickDwellTimeMSString != null && Object.hasOwnProperty.call(m, "clickDwellTimeMSString"))
-                            w.uint32(18).string(m.clickDwellTimeMSString);
+                        if (m.clickDwellTimeMsString != null && Object.hasOwnProperty.call(m, "clickDwellTimeMsString"))
+                            w.uint32(18).string(m.clickDwellTimeMsString);
                         return w;
                     };
 
@@ -52878,7 +52850,7 @@ export const WAAICommon = WAAICommon = (() => {
                                     break;
                                 }
                             case 2: {
-                                    m.clickDwellTimeMSString = r.string();
+                                    m.clickDwellTimeMsString = r.string();
                                     break;
                                 }
                             default:
@@ -52900,8 +52872,8 @@ export const WAAICommon = WAAICommon = (() => {
                         if (d.isSurveyExpired != null) {
                             m.isSurveyExpired = Boolean(d.isSurveyExpired);
                         }
-                        if (d.clickDwellTimeMSString != null) {
-                            m.clickDwellTimeMSString = String(d.clickDwellTimeMSString);
+                        if (d.clickDwellTimeMsString != null) {
+                            m.clickDwellTimeMsString = String(d.clickDwellTimeMsString);
                         }
                         return m;
                     };
@@ -52915,10 +52887,10 @@ export const WAAICommon = WAAICommon = (() => {
                             if (o.oneofs)
                                 d._isSurveyExpired = "isSurveyExpired";
                         }
-                        if (m.clickDwellTimeMSString != null && m.hasOwnProperty("clickDwellTimeMSString")) {
-                            d.clickDwellTimeMSString = m.clickDwellTimeMSString;
+                        if (m.clickDwellTimeMsString != null && m.hasOwnProperty("clickDwellTimeMsString")) {
+                            d.clickDwellTimeMsString = m.clickDwellTimeMsString;
                             if (o.oneofs)
-                                d._clickDwellTimeMSString = "clickDwellTimeMSString";
+                                d._clickDwellTimeMsString = "clickDwellTimeMsString";
                         }
                         return d;
                     };
@@ -53471,11 +53443,11 @@ export const WAAICommon = WAAICommon = (() => {
             AIHomeOption.prototype.type = null;
             AIHomeOption.prototype.title = null;
             AIHomeOption.prototype.promptText = null;
-            AIHomeOption.prototype.sessionID = null;
+            AIHomeOption.prototype.sessionId = null;
             AIHomeOption.prototype.imageWdsIdentifier = null;
             AIHomeOption.prototype.imageTintColor = null;
             AIHomeOption.prototype.imageBackgroundColor = null;
-            AIHomeOption.prototype.cardTypeID = null;
+            AIHomeOption.prototype.cardTypeId = null;
 
             let $oneOfFields;
 
@@ -53498,8 +53470,8 @@ export const WAAICommon = WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIHomeOption.prototype, "_sessionID", {
-                get: $util.oneOfGetter($oneOfFields = ["sessionID"]),
+            Object.defineProperty(AIHomeOption.prototype, "_sessionId", {
+                get: $util.oneOfGetter($oneOfFields = ["sessionId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -53522,8 +53494,8 @@ export const WAAICommon = WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIHomeOption.prototype, "_cardTypeID", {
-                get: $util.oneOfGetter($oneOfFields = ["cardTypeID"]),
+            Object.defineProperty(AIHomeOption.prototype, "_cardTypeId", {
+                get: $util.oneOfGetter($oneOfFields = ["cardTypeId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -53540,16 +53512,16 @@ export const WAAICommon = WAAICommon = (() => {
                     w.uint32(18).string(m.title);
                 if (m.promptText != null && Object.hasOwnProperty.call(m, "promptText"))
                     w.uint32(26).string(m.promptText);
-                if (m.sessionID != null && Object.hasOwnProperty.call(m, "sessionID"))
-                    w.uint32(34).string(m.sessionID);
+                if (m.sessionId != null && Object.hasOwnProperty.call(m, "sessionId"))
+                    w.uint32(34).string(m.sessionId);
                 if (m.imageWdsIdentifier != null && Object.hasOwnProperty.call(m, "imageWdsIdentifier"))
                     w.uint32(42).string(m.imageWdsIdentifier);
                 if (m.imageTintColor != null && Object.hasOwnProperty.call(m, "imageTintColor"))
                     w.uint32(50).string(m.imageTintColor);
                 if (m.imageBackgroundColor != null && Object.hasOwnProperty.call(m, "imageBackgroundColor"))
                     w.uint32(58).string(m.imageBackgroundColor);
-                if (m.cardTypeID != null && Object.hasOwnProperty.call(m, "cardTypeID"))
-                    w.uint32(66).string(m.cardTypeID);
+                if (m.cardTypeId != null && Object.hasOwnProperty.call(m, "cardTypeId"))
+                    w.uint32(66).string(m.cardTypeId);
                 return w;
             };
 
@@ -53579,7 +53551,7 @@ export const WAAICommon = WAAICommon = (() => {
                             break;
                         }
                     case 4: {
-                            m.sessionID = r.string();
+                            m.sessionId = r.string();
                             break;
                         }
                     case 5: {
@@ -53595,7 +53567,7 @@ export const WAAICommon = WAAICommon = (() => {
                             break;
                         }
                     case 8: {
-                            m.cardTypeID = r.string();
+                            m.cardTypeId = r.string();
                             break;
                         }
                     default:
@@ -53652,8 +53624,8 @@ export const WAAICommon = WAAICommon = (() => {
                 if (d.promptText != null) {
                     m.promptText = String(d.promptText);
                 }
-                if (d.sessionID != null) {
-                    m.sessionID = String(d.sessionID);
+                if (d.sessionId != null) {
+                    m.sessionId = String(d.sessionId);
                 }
                 if (d.imageWdsIdentifier != null) {
                     m.imageWdsIdentifier = String(d.imageWdsIdentifier);
@@ -53664,8 +53636,8 @@ export const WAAICommon = WAAICommon = (() => {
                 if (d.imageBackgroundColor != null) {
                     m.imageBackgroundColor = String(d.imageBackgroundColor);
                 }
-                if (d.cardTypeID != null) {
-                    m.cardTypeID = String(d.cardTypeID);
+                if (d.cardTypeId != null) {
+                    m.cardTypeId = String(d.cardTypeId);
                 }
                 return m;
             };
@@ -53689,10 +53661,10 @@ export const WAAICommon = WAAICommon = (() => {
                     if (o.oneofs)
                         d._promptText = "promptText";
                 }
-                if (m.sessionID != null && m.hasOwnProperty("sessionID")) {
-                    d.sessionID = m.sessionID;
+                if (m.sessionId != null && m.hasOwnProperty("sessionId")) {
+                    d.sessionId = m.sessionId;
                     if (o.oneofs)
-                        d._sessionID = "sessionID";
+                        d._sessionId = "sessionId";
                 }
                 if (m.imageWdsIdentifier != null && m.hasOwnProperty("imageWdsIdentifier")) {
                     d.imageWdsIdentifier = m.imageWdsIdentifier;
@@ -53709,10 +53681,10 @@ export const WAAICommon = WAAICommon = (() => {
                     if (o.oneofs)
                         d._imageBackgroundColor = "imageBackgroundColor";
                 }
-                if (m.cardTypeID != null && m.hasOwnProperty("cardTypeID")) {
-                    d.cardTypeID = m.cardTypeID;
+                if (m.cardTypeId != null && m.hasOwnProperty("cardTypeId")) {
+                    d.cardTypeId = m.cardTypeId;
                     if (o.oneofs)
-                        d._cardTypeID = "cardTypeID";
+                        d._cardTypeId = "cardTypeId";
                 }
                 return d;
             };
@@ -53924,7 +53896,7 @@ export const WAAICommon = WAAICommon = (() => {
         BotSuggestedPromptMetadata.prototype.suggestedPrompts = $util.emptyArray;
         BotSuggestedPromptMetadata.prototype.selectedPromptIndex = null;
         BotSuggestedPromptMetadata.prototype.promptSuggestions = null;
-        BotSuggestedPromptMetadata.prototype.selectedPromptID = null;
+        BotSuggestedPromptMetadata.prototype.selectedPromptId = null;
 
         let $oneOfFields;
 
@@ -53941,8 +53913,8 @@ export const WAAICommon = WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotSuggestedPromptMetadata.prototype, "_selectedPromptID", {
-            get: $util.oneOfGetter($oneOfFields = ["selectedPromptID"]),
+        Object.defineProperty(BotSuggestedPromptMetadata.prototype, "_selectedPromptId", {
+            get: $util.oneOfGetter($oneOfFields = ["selectedPromptId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -53961,8 +53933,8 @@ export const WAAICommon = WAAICommon = (() => {
                 w.uint32(16).uint32(m.selectedPromptIndex);
             if (m.promptSuggestions != null && Object.hasOwnProperty.call(m, "promptSuggestions"))
                 WAAICommon.BotPromptSuggestions.encode(m.promptSuggestions, w.uint32(26).fork()).ldelim();
-            if (m.selectedPromptID != null && Object.hasOwnProperty.call(m, "selectedPromptID"))
-                w.uint32(34).string(m.selectedPromptID);
+            if (m.selectedPromptId != null && Object.hasOwnProperty.call(m, "selectedPromptId"))
+                w.uint32(34).string(m.selectedPromptId);
             return w;
         };
 
@@ -53994,7 +53966,7 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     }
                 case 4: {
-                        m.selectedPromptID = r.string();
+                        m.selectedPromptId = r.string();
                         break;
                     }
                 default:
@@ -54029,8 +54001,8 @@ export const WAAICommon = WAAICommon = (() => {
                     throw TypeError(".WAAICommon.BotSuggestedPromptMetadata.promptSuggestions: object expected");
                 m.promptSuggestions = WAAICommon.BotPromptSuggestions.fromObject(d.promptSuggestions, n + 1);
             }
-            if (d.selectedPromptID != null) {
-                m.selectedPromptID = String(d.selectedPromptID);
+            if (d.selectedPromptId != null) {
+                m.selectedPromptId = String(d.selectedPromptId);
             }
             return m;
         };
@@ -54058,10 +54030,10 @@ export const WAAICommon = WAAICommon = (() => {
                 if (o.oneofs)
                     d._promptSuggestions = "promptSuggestions";
             }
-            if (m.selectedPromptID != null && m.hasOwnProperty("selectedPromptID")) {
-                d.selectedPromptID = m.selectedPromptID;
+            if (m.selectedPromptId != null && m.hasOwnProperty("selectedPromptId")) {
+                d.selectedPromptId = m.selectedPromptId;
                 if (o.oneofs)
-                    d._selectedPromptID = "selectedPromptID";
+                    d._selectedPromptId = "selectedPromptId";
             }
             return d;
         };
@@ -54194,7 +54166,7 @@ export const WAAICommon = WAAICommon = (() => {
         }
 
         BotPromptSuggestion.prototype.prompt = null;
-        BotPromptSuggestion.prototype.promptID = null;
+        BotPromptSuggestion.prototype.promptId = null;
 
         let $oneOfFields;
 
@@ -54205,8 +54177,8 @@ export const WAAICommon = WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotPromptSuggestion.prototype, "_promptID", {
-            get: $util.oneOfGetter($oneOfFields = ["promptID"]),
+        Object.defineProperty(BotPromptSuggestion.prototype, "_promptId", {
+            get: $util.oneOfGetter($oneOfFields = ["promptId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -54219,8 +54191,8 @@ export const WAAICommon = WAAICommon = (() => {
                 w = $Writer.create();
             if (m.prompt != null && Object.hasOwnProperty.call(m, "prompt"))
                 w.uint32(10).string(m.prompt);
-            if (m.promptID != null && Object.hasOwnProperty.call(m, "promptID"))
-                w.uint32(18).string(m.promptID);
+            if (m.promptId != null && Object.hasOwnProperty.call(m, "promptId"))
+                w.uint32(18).string(m.promptId);
             return w;
         };
 
@@ -54242,7 +54214,7 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     }
                 case 2: {
-                        m.promptID = r.string();
+                        m.promptId = r.string();
                         break;
                     }
                 default:
@@ -54264,8 +54236,8 @@ export const WAAICommon = WAAICommon = (() => {
             if (d.prompt != null) {
                 m.prompt = String(d.prompt);
             }
-            if (d.promptID != null) {
-                m.promptID = String(d.promptID);
+            if (d.promptId != null) {
+                m.promptId = String(d.promptId);
             }
             return m;
         };
@@ -54279,10 +54251,10 @@ export const WAAICommon = WAAICommon = (() => {
                 if (o.oneofs)
                     d._prompt = "prompt";
             }
-            if (m.promptID != null && m.hasOwnProperty("promptID")) {
-                d.promptID = m.promptID;
+            if (m.promptId != null && m.hasOwnProperty("promptId")) {
+                d.promptId = m.promptId;
                 if (o.oneofs)
-                    d._promptID = "promptID";
+                    d._promptId = "promptId";
             }
             return d;
         };
@@ -54618,7 +54590,7 @@ export const WAAICommon = WAAICommon = (() => {
         }
 
         BotMemoryFact.prototype.fact = null;
-        BotMemoryFact.prototype.factID = null;
+        BotMemoryFact.prototype.factId = null;
 
         let $oneOfFields;
 
@@ -54629,8 +54601,8 @@ export const WAAICommon = WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMemoryFact.prototype, "_factID", {
-            get: $util.oneOfGetter($oneOfFields = ["factID"]),
+        Object.defineProperty(BotMemoryFact.prototype, "_factId", {
+            get: $util.oneOfGetter($oneOfFields = ["factId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -54643,8 +54615,8 @@ export const WAAICommon = WAAICommon = (() => {
                 w = $Writer.create();
             if (m.fact != null && Object.hasOwnProperty.call(m, "fact"))
                 w.uint32(10).string(m.fact);
-            if (m.factID != null && Object.hasOwnProperty.call(m, "factID"))
-                w.uint32(18).string(m.factID);
+            if (m.factId != null && Object.hasOwnProperty.call(m, "factId"))
+                w.uint32(18).string(m.factId);
             return w;
         };
 
@@ -54666,7 +54638,7 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     }
                 case 2: {
-                        m.factID = r.string();
+                        m.factId = r.string();
                         break;
                     }
                 default:
@@ -54688,8 +54660,8 @@ export const WAAICommon = WAAICommon = (() => {
             if (d.fact != null) {
                 m.fact = String(d.fact);
             }
-            if (d.factID != null) {
-                m.factID = String(d.factID);
+            if (d.factId != null) {
+                m.factId = String(d.factId);
             }
             return m;
         };
@@ -54703,10 +54675,10 @@ export const WAAICommon = WAAICommon = (() => {
                 if (o.oneofs)
                     d._fact = "fact";
             }
-            if (m.factID != null && m.hasOwnProperty("factID")) {
-                d.factID = m.factID;
+            if (m.factId != null && m.hasOwnProperty("factId")) {
+                d.factId = m.factId;
                 if (o.oneofs)
-                    d._factID = "factID";
+                    d._factId = "factId";
             }
             return d;
         };
@@ -55067,15 +55039,15 @@ export const WAAICommon = WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BotMetricsMetadata.prototype.destinationID = null;
+        BotMetricsMetadata.prototype.destinationId = null;
         BotMetricsMetadata.prototype.destinationEntryPoint = null;
         BotMetricsMetadata.prototype.threadOrigin = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMetricsMetadata.prototype, "_destinationID", {
-            get: $util.oneOfGetter($oneOfFields = ["destinationID"]),
+        Object.defineProperty(BotMetricsMetadata.prototype, "_destinationId", {
+            get: $util.oneOfGetter($oneOfFields = ["destinationId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -55098,8 +55070,8 @@ export const WAAICommon = WAAICommon = (() => {
         BotMetricsMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.destinationID != null && Object.hasOwnProperty.call(m, "destinationID"))
-                w.uint32(10).string(m.destinationID);
+            if (m.destinationId != null && Object.hasOwnProperty.call(m, "destinationId"))
+                w.uint32(10).string(m.destinationId);
             if (m.destinationEntryPoint != null && Object.hasOwnProperty.call(m, "destinationEntryPoint"))
                 w.uint32(16).int32(m.destinationEntryPoint);
             if (m.threadOrigin != null && Object.hasOwnProperty.call(m, "threadOrigin"))
@@ -55121,7 +55093,7 @@ export const WAAICommon = WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.destinationID = r.string();
+                        m.destinationId = r.string();
                         break;
                     }
                 case 2: {
@@ -55148,8 +55120,8 @@ export const WAAICommon = WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAICommon.BotMetricsMetadata();
-            if (d.destinationID != null) {
-                m.destinationID = String(d.destinationID);
+            if (d.destinationId != null) {
+                m.destinationId = String(d.destinationId);
             }
             switch (d.destinationEntryPoint) {
             default:
@@ -55386,10 +55358,10 @@ export const WAAICommon = WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.destinationID != null && m.hasOwnProperty("destinationID")) {
-                d.destinationID = m.destinationID;
+            if (m.destinationId != null && m.hasOwnProperty("destinationId")) {
+                d.destinationId = m.destinationId;
                 if (o.oneofs)
-                    d._destinationID = "destinationID";
+                    d._destinationId = "destinationId";
             }
             if (m.destinationEntryPoint != null && m.hasOwnProperty("destinationEntryPoint")) {
                 d.destinationEntryPoint = o.enums === String ? WAAICommon.BotMetricsEntryPoint[m.destinationEntryPoint] === undefined ? m.destinationEntryPoint : WAAICommon.BotMetricsEntryPoint[m.destinationEntryPoint] : m.destinationEntryPoint;
@@ -55427,14 +55399,14 @@ export const WAAICommon = WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BotSessionMetadata.prototype.sessionID = null;
+        BotSessionMetadata.prototype.sessionId = null;
         BotSessionMetadata.prototype.sessionSource = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotSessionMetadata.prototype, "_sessionID", {
-            get: $util.oneOfGetter($oneOfFields = ["sessionID"]),
+        Object.defineProperty(BotSessionMetadata.prototype, "_sessionId", {
+            get: $util.oneOfGetter($oneOfFields = ["sessionId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -55451,8 +55423,8 @@ export const WAAICommon = WAAICommon = (() => {
         BotSessionMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.sessionID != null && Object.hasOwnProperty.call(m, "sessionID"))
-                w.uint32(10).string(m.sessionID);
+            if (m.sessionId != null && Object.hasOwnProperty.call(m, "sessionId"))
+                w.uint32(10).string(m.sessionId);
             if (m.sessionSource != null && Object.hasOwnProperty.call(m, "sessionSource"))
                 w.uint32(16).int32(m.sessionSource);
             return w;
@@ -55472,7 +55444,7 @@ export const WAAICommon = WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.sessionID = r.string();
+                        m.sessionId = r.string();
                         break;
                     }
                 case 2: {
@@ -55495,8 +55467,8 @@ export const WAAICommon = WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAICommon.BotSessionMetadata();
-            if (d.sessionID != null) {
-                m.sessionID = String(d.sessionID);
+            if (d.sessionId != null) {
+                m.sessionId = String(d.sessionId);
             }
             switch (d.sessionSource) {
             default:
@@ -55545,10 +55517,10 @@ export const WAAICommon = WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.sessionID != null && m.hasOwnProperty("sessionID")) {
-                d.sessionID = m.sessionID;
+            if (m.sessionId != null && m.hasOwnProperty("sessionId")) {
+                d.sessionId = m.sessionId;
                 if (o.oneofs)
-                    d._sessionID = "sessionID";
+                    d._sessionId = "sessionId";
             }
             if (m.sessionSource != null && m.hasOwnProperty("sessionSource")) {
                 d.sessionSource = o.enums === String ? WAAICommon.BotSessionSource[m.sessionSource] === undefined ? m.sessionSource : WAAICommon.BotSessionSource[m.sessionSource] : m.sessionSource;
@@ -55687,16 +55659,16 @@ export const WAAICommon = WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        InThreadSurveyMetadata.prototype.tessaSessionID = null;
-        InThreadSurveyMetadata.prototype.simonSessionID = null;
-        InThreadSurveyMetadata.prototype.simonSurveyID = null;
-        InThreadSurveyMetadata.prototype.tessaRootID = null;
-        InThreadSurveyMetadata.prototype.requestID = null;
+        InThreadSurveyMetadata.prototype.tessaSessionId = null;
+        InThreadSurveyMetadata.prototype.simonSessionId = null;
+        InThreadSurveyMetadata.prototype.simonSurveyId = null;
+        InThreadSurveyMetadata.prototype.tessaRootId = null;
+        InThreadSurveyMetadata.prototype.requestId = null;
         InThreadSurveyMetadata.prototype.tessaEvent = null;
         InThreadSurveyMetadata.prototype.invitationHeaderText = null;
         InThreadSurveyMetadata.prototype.invitationBodyText = null;
         InThreadSurveyMetadata.prototype.invitationCtaText = null;
-        InThreadSurveyMetadata.prototype.invitationCtaURL = null;
+        InThreadSurveyMetadata.prototype.invitationCtaUrl = null;
         InThreadSurveyMetadata.prototype.surveyTitle = null;
         InThreadSurveyMetadata.prototype.questions = $util.emptyArray;
         InThreadSurveyMetadata.prototype.surveyContinueButtonText = null;
@@ -55709,32 +55681,32 @@ export const WAAICommon = WAAICommon = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_tessaSessionID", {
-            get: $util.oneOfGetter($oneOfFields = ["tessaSessionID"]),
+        Object.defineProperty(InThreadSurveyMetadata.prototype, "_tessaSessionId", {
+            get: $util.oneOfGetter($oneOfFields = ["tessaSessionId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_simonSessionID", {
-            get: $util.oneOfGetter($oneOfFields = ["simonSessionID"]),
+        Object.defineProperty(InThreadSurveyMetadata.prototype, "_simonSessionId", {
+            get: $util.oneOfGetter($oneOfFields = ["simonSessionId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_simonSurveyID", {
-            get: $util.oneOfGetter($oneOfFields = ["simonSurveyID"]),
+        Object.defineProperty(InThreadSurveyMetadata.prototype, "_simonSurveyId", {
+            get: $util.oneOfGetter($oneOfFields = ["simonSurveyId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_tessaRootID", {
-            get: $util.oneOfGetter($oneOfFields = ["tessaRootID"]),
+        Object.defineProperty(InThreadSurveyMetadata.prototype, "_tessaRootId", {
+            get: $util.oneOfGetter($oneOfFields = ["tessaRootId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_requestID", {
-            get: $util.oneOfGetter($oneOfFields = ["requestID"]),
+        Object.defineProperty(InThreadSurveyMetadata.prototype, "_requestId", {
+            get: $util.oneOfGetter($oneOfFields = ["requestId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -55763,8 +55735,8 @@ export const WAAICommon = WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(InThreadSurveyMetadata.prototype, "_invitationCtaURL", {
-            get: $util.oneOfGetter($oneOfFields = ["invitationCtaURL"]),
+        Object.defineProperty(InThreadSurveyMetadata.prototype, "_invitationCtaUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["invitationCtaUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -55811,16 +55783,16 @@ export const WAAICommon = WAAICommon = (() => {
         InThreadSurveyMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.tessaSessionID != null && Object.hasOwnProperty.call(m, "tessaSessionID"))
-                w.uint32(10).string(m.tessaSessionID);
-            if (m.simonSessionID != null && Object.hasOwnProperty.call(m, "simonSessionID"))
-                w.uint32(18).string(m.simonSessionID);
-            if (m.simonSurveyID != null && Object.hasOwnProperty.call(m, "simonSurveyID"))
-                w.uint32(26).string(m.simonSurveyID);
-            if (m.tessaRootID != null && Object.hasOwnProperty.call(m, "tessaRootID"))
-                w.uint32(34).string(m.tessaRootID);
-            if (m.requestID != null && Object.hasOwnProperty.call(m, "requestID"))
-                w.uint32(42).string(m.requestID);
+            if (m.tessaSessionId != null && Object.hasOwnProperty.call(m, "tessaSessionId"))
+                w.uint32(10).string(m.tessaSessionId);
+            if (m.simonSessionId != null && Object.hasOwnProperty.call(m, "simonSessionId"))
+                w.uint32(18).string(m.simonSessionId);
+            if (m.simonSurveyId != null && Object.hasOwnProperty.call(m, "simonSurveyId"))
+                w.uint32(26).string(m.simonSurveyId);
+            if (m.tessaRootId != null && Object.hasOwnProperty.call(m, "tessaRootId"))
+                w.uint32(34).string(m.tessaRootId);
+            if (m.requestId != null && Object.hasOwnProperty.call(m, "requestId"))
+                w.uint32(42).string(m.requestId);
             if (m.tessaEvent != null && Object.hasOwnProperty.call(m, "tessaEvent"))
                 w.uint32(50).string(m.tessaEvent);
             if (m.invitationHeaderText != null && Object.hasOwnProperty.call(m, "invitationHeaderText"))
@@ -55829,8 +55801,8 @@ export const WAAICommon = WAAICommon = (() => {
                 w.uint32(66).string(m.invitationBodyText);
             if (m.invitationCtaText != null && Object.hasOwnProperty.call(m, "invitationCtaText"))
                 w.uint32(74).string(m.invitationCtaText);
-            if (m.invitationCtaURL != null && Object.hasOwnProperty.call(m, "invitationCtaURL"))
-                w.uint32(82).string(m.invitationCtaURL);
+            if (m.invitationCtaUrl != null && Object.hasOwnProperty.call(m, "invitationCtaUrl"))
+                w.uint32(82).string(m.invitationCtaUrl);
             if (m.surveyTitle != null && Object.hasOwnProperty.call(m, "surveyTitle"))
                 w.uint32(90).string(m.surveyTitle);
             if (m.questions != null && m.questions.length) {
@@ -55868,23 +55840,23 @@ export const WAAICommon = WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.tessaSessionID = r.string();
+                        m.tessaSessionId = r.string();
                         break;
                     }
                 case 2: {
-                        m.simonSessionID = r.string();
+                        m.simonSessionId = r.string();
                         break;
                     }
                 case 3: {
-                        m.simonSurveyID = r.string();
+                        m.simonSurveyId = r.string();
                         break;
                     }
                 case 4: {
-                        m.tessaRootID = r.string();
+                        m.tessaRootId = r.string();
                         break;
                     }
                 case 5: {
-                        m.requestID = r.string();
+                        m.requestId = r.string();
                         break;
                     }
                 case 6: {
@@ -55904,7 +55876,7 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     }
                 case 10: {
-                        m.invitationCtaURL = r.string();
+                        m.invitationCtaUrl = r.string();
                         break;
                     }
                 case 11: {
@@ -55959,20 +55931,20 @@ export const WAAICommon = WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAICommon.InThreadSurveyMetadata();
-            if (d.tessaSessionID != null) {
-                m.tessaSessionID = String(d.tessaSessionID);
+            if (d.tessaSessionId != null) {
+                m.tessaSessionId = String(d.tessaSessionId);
             }
-            if (d.simonSessionID != null) {
-                m.simonSessionID = String(d.simonSessionID);
+            if (d.simonSessionId != null) {
+                m.simonSessionId = String(d.simonSessionId);
             }
-            if (d.simonSurveyID != null) {
-                m.simonSurveyID = String(d.simonSurveyID);
+            if (d.simonSurveyId != null) {
+                m.simonSurveyId = String(d.simonSurveyId);
             }
-            if (d.tessaRootID != null) {
-                m.tessaRootID = String(d.tessaRootID);
+            if (d.tessaRootId != null) {
+                m.tessaRootId = String(d.tessaRootId);
             }
-            if (d.requestID != null) {
-                m.requestID = String(d.requestID);
+            if (d.requestId != null) {
+                m.requestId = String(d.requestId);
             }
             if (d.tessaEvent != null) {
                 m.tessaEvent = String(d.tessaEvent);
@@ -55986,8 +55958,8 @@ export const WAAICommon = WAAICommon = (() => {
             if (d.invitationCtaText != null) {
                 m.invitationCtaText = String(d.invitationCtaText);
             }
-            if (d.invitationCtaURL != null) {
-                m.invitationCtaURL = String(d.invitationCtaURL);
+            if (d.invitationCtaUrl != null) {
+                m.invitationCtaUrl = String(d.invitationCtaUrl);
             }
             if (d.surveyTitle != null) {
                 m.surveyTitle = String(d.surveyTitle);
@@ -56038,30 +56010,30 @@ export const WAAICommon = WAAICommon = (() => {
                 d.questions = [];
                 d.privacyStatementParts = [];
             }
-            if (m.tessaSessionID != null && m.hasOwnProperty("tessaSessionID")) {
-                d.tessaSessionID = m.tessaSessionID;
+            if (m.tessaSessionId != null && m.hasOwnProperty("tessaSessionId")) {
+                d.tessaSessionId = m.tessaSessionId;
                 if (o.oneofs)
-                    d._tessaSessionID = "tessaSessionID";
+                    d._tessaSessionId = "tessaSessionId";
             }
-            if (m.simonSessionID != null && m.hasOwnProperty("simonSessionID")) {
-                d.simonSessionID = m.simonSessionID;
+            if (m.simonSessionId != null && m.hasOwnProperty("simonSessionId")) {
+                d.simonSessionId = m.simonSessionId;
                 if (o.oneofs)
-                    d._simonSessionID = "simonSessionID";
+                    d._simonSessionId = "simonSessionId";
             }
-            if (m.simonSurveyID != null && m.hasOwnProperty("simonSurveyID")) {
-                d.simonSurveyID = m.simonSurveyID;
+            if (m.simonSurveyId != null && m.hasOwnProperty("simonSurveyId")) {
+                d.simonSurveyId = m.simonSurveyId;
                 if (o.oneofs)
-                    d._simonSurveyID = "simonSurveyID";
+                    d._simonSurveyId = "simonSurveyId";
             }
-            if (m.tessaRootID != null && m.hasOwnProperty("tessaRootID")) {
-                d.tessaRootID = m.tessaRootID;
+            if (m.tessaRootId != null && m.hasOwnProperty("tessaRootId")) {
+                d.tessaRootId = m.tessaRootId;
                 if (o.oneofs)
-                    d._tessaRootID = "tessaRootID";
+                    d._tessaRootId = "tessaRootId";
             }
-            if (m.requestID != null && m.hasOwnProperty("requestID")) {
-                d.requestID = m.requestID;
+            if (m.requestId != null && m.hasOwnProperty("requestId")) {
+                d.requestId = m.requestId;
                 if (o.oneofs)
-                    d._requestID = "requestID";
+                    d._requestId = "requestId";
             }
             if (m.tessaEvent != null && m.hasOwnProperty("tessaEvent")) {
                 d.tessaEvent = m.tessaEvent;
@@ -56083,10 +56055,10 @@ export const WAAICommon = WAAICommon = (() => {
                 if (o.oneofs)
                     d._invitationCtaText = "invitationCtaText";
             }
-            if (m.invitationCtaURL != null && m.hasOwnProperty("invitationCtaURL")) {
-                d.invitationCtaURL = m.invitationCtaURL;
+            if (m.invitationCtaUrl != null && m.hasOwnProperty("invitationCtaUrl")) {
+                d.invitationCtaUrl = m.invitationCtaUrl;
                 if (o.oneofs)
-                    d._invitationCtaURL = "invitationCtaURL";
+                    d._invitationCtaUrl = "invitationCtaUrl";
             }
             if (m.surveyTitle != null && m.hasOwnProperty("surveyTitle")) {
                 d.surveyTitle = m.surveyTitle;
@@ -56154,7 +56126,7 @@ export const WAAICommon = WAAICommon = (() => {
             }
 
             InThreadSurveyPrivacyStatementPart.prototype.text = null;
-            InThreadSurveyPrivacyStatementPart.prototype.URL = null;
+            InThreadSurveyPrivacyStatementPart.prototype.url = null;
 
             let $oneOfFields;
 
@@ -56165,8 +56137,8 @@ export const WAAICommon = WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(InThreadSurveyPrivacyStatementPart.prototype, "_URL", {
-                get: $util.oneOfGetter($oneOfFields = ["URL"]),
+            Object.defineProperty(InThreadSurveyPrivacyStatementPart.prototype, "_url", {
+                get: $util.oneOfGetter($oneOfFields = ["url"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -56179,8 +56151,8 @@ export const WAAICommon = WAAICommon = (() => {
                     w = $Writer.create();
                 if (m.text != null && Object.hasOwnProperty.call(m, "text"))
                     w.uint32(10).string(m.text);
-                if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                    w.uint32(18).string(m.URL);
+                if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                    w.uint32(18).string(m.url);
                 return w;
             };
 
@@ -56202,7 +56174,7 @@ export const WAAICommon = WAAICommon = (() => {
                             break;
                         }
                     case 2: {
-                            m.URL = r.string();
+                            m.url = r.string();
                             break;
                         }
                     default:
@@ -56224,8 +56196,8 @@ export const WAAICommon = WAAICommon = (() => {
                 if (d.text != null) {
                     m.text = String(d.text);
                 }
-                if (d.URL != null) {
-                    m.URL = String(d.URL);
+                if (d.url != null) {
+                    m.url = String(d.url);
                 }
                 return m;
             };
@@ -56239,10 +56211,10 @@ export const WAAICommon = WAAICommon = (() => {
                     if (o.oneofs)
                         d._text = "text";
                 }
-                if (m.URL != null && m.hasOwnProperty("URL")) {
-                    d.URL = m.URL;
+                if (m.url != null && m.hasOwnProperty("url")) {
+                    d.url = m.url;
                     if (o.oneofs)
-                        d._URL = "URL";
+                        d._url = "url";
                 }
                 return d;
             };
@@ -56410,7 +56382,7 @@ export const WAAICommon = WAAICommon = (() => {
             }
 
             InThreadSurveyQuestion.prototype.questionText = null;
-            InThreadSurveyQuestion.prototype.questionID = null;
+            InThreadSurveyQuestion.prototype.questionId = null;
             InThreadSurveyQuestion.prototype.questionOptions = $util.emptyArray;
 
             let $oneOfFields;
@@ -56422,8 +56394,8 @@ export const WAAICommon = WAAICommon = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(InThreadSurveyQuestion.prototype, "_questionID", {
-                get: $util.oneOfGetter($oneOfFields = ["questionID"]),
+            Object.defineProperty(InThreadSurveyQuestion.prototype, "_questionId", {
+                get: $util.oneOfGetter($oneOfFields = ["questionId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -56436,8 +56408,8 @@ export const WAAICommon = WAAICommon = (() => {
                     w = $Writer.create();
                 if (m.questionText != null && Object.hasOwnProperty.call(m, "questionText"))
                     w.uint32(10).string(m.questionText);
-                if (m.questionID != null && Object.hasOwnProperty.call(m, "questionID"))
-                    w.uint32(18).string(m.questionID);
+                if (m.questionId != null && Object.hasOwnProperty.call(m, "questionId"))
+                    w.uint32(18).string(m.questionId);
                 if (m.questionOptions != null && m.questionOptions.length) {
                     for (var i = 0; i < m.questionOptions.length; ++i)
                         WAAICommon.InThreadSurveyMetadata.InThreadSurveyOption.encode(m.questionOptions[i], w.uint32(26).fork()).ldelim();
@@ -56463,7 +56435,7 @@ export const WAAICommon = WAAICommon = (() => {
                             break;
                         }
                     case 2: {
-                            m.questionID = r.string();
+                            m.questionId = r.string();
                             break;
                         }
                     case 3: {
@@ -56491,8 +56463,8 @@ export const WAAICommon = WAAICommon = (() => {
                 if (d.questionText != null) {
                     m.questionText = String(d.questionText);
                 }
-                if (d.questionID != null) {
-                    m.questionID = String(d.questionID);
+                if (d.questionId != null) {
+                    m.questionId = String(d.questionId);
                 }
                 if (d.questionOptions) {
                     if (!Array.isArray(d.questionOptions))
@@ -56519,10 +56491,10 @@ export const WAAICommon = WAAICommon = (() => {
                     if (o.oneofs)
                         d._questionText = "questionText";
                 }
-                if (m.questionID != null && m.hasOwnProperty("questionID")) {
-                    d.questionID = m.questionID;
+                if (m.questionId != null && m.hasOwnProperty("questionId")) {
+                    d.questionId = m.questionId;
                     if (o.oneofs)
-                        d._questionID = "questionID";
+                        d._questionId = "questionId";
                 }
                 if (m.questionOptions && m.questionOptions.length) {
                     d.questionOptions = [];
@@ -56789,15 +56761,15 @@ export const WAAICommon = WAAICommon = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            MediaDetailsMetadata.prototype.ID = null;
+            MediaDetailsMetadata.prototype.id = null;
             MediaDetailsMetadata.prototype.highResMedia = null;
             MediaDetailsMetadata.prototype.previewMedia = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(MediaDetailsMetadata.prototype, "_ID", {
-                get: $util.oneOfGetter($oneOfFields = ["ID"]),
+            Object.defineProperty(MediaDetailsMetadata.prototype, "_id", {
+                get: $util.oneOfGetter($oneOfFields = ["id"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -56820,8 +56792,8 @@ export const WAAICommon = WAAICommon = (() => {
             MediaDetailsMetadata.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                    w.uint32(10).string(m.ID);
+                if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                    w.uint32(10).string(m.id);
                 if (m.highResMedia != null && Object.hasOwnProperty.call(m, "highResMedia"))
                     WAAICommon.BotMediaMetadata.encode(m.highResMedia, w.uint32(18).fork()).ldelim();
                 if (m.previewMedia != null && Object.hasOwnProperty.call(m, "previewMedia"))
@@ -56843,7 +56815,7 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.ID = r.string();
+                            m.id = r.string();
                             break;
                         }
                     case 2: {
@@ -56870,8 +56842,8 @@ export const WAAICommon = WAAICommon = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new WAAICommon.BotUnifiedResponseMutation.MediaDetailsMetadata();
-                if (d.ID != null) {
-                    m.ID = String(d.ID);
+                if (d.id != null) {
+                    m.id = String(d.id);
                 }
                 if (d.highResMedia != null) {
                     if (typeof d.highResMedia !== "object")
@@ -56890,10 +56862,10 @@ export const WAAICommon = WAAICommon = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.ID != null && m.hasOwnProperty("ID")) {
-                    d.ID = m.ID;
+                if (m.id != null && m.hasOwnProperty("id")) {
+                    d.id = m.id;
                     if (o.oneofs)
-                        d._ID = "ID";
+                        d._id = "id";
                 }
                 if (m.highResMedia != null && m.hasOwnProperty("highResMedia")) {
                     d.highResMedia = WAAICommon.BotMediaMetadata.toObject(m.highResMedia, o);
@@ -56931,14 +56903,14 @@ export const WAAICommon = WAAICommon = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            SideBySideMetadata.prototype.primaryResponseID = null;
+            SideBySideMetadata.prototype.primaryResponseId = null;
             SideBySideMetadata.prototype.surveyCtaHasRendered = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(SideBySideMetadata.prototype, "_primaryResponseID", {
-                get: $util.oneOfGetter($oneOfFields = ["primaryResponseID"]),
+            Object.defineProperty(SideBySideMetadata.prototype, "_primaryResponseId", {
+                get: $util.oneOfGetter($oneOfFields = ["primaryResponseId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -56955,8 +56927,8 @@ export const WAAICommon = WAAICommon = (() => {
             SideBySideMetadata.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.primaryResponseID != null && Object.hasOwnProperty.call(m, "primaryResponseID"))
-                    w.uint32(10).string(m.primaryResponseID);
+                if (m.primaryResponseId != null && Object.hasOwnProperty.call(m, "primaryResponseId"))
+                    w.uint32(10).string(m.primaryResponseId);
                 if (m.surveyCtaHasRendered != null && Object.hasOwnProperty.call(m, "surveyCtaHasRendered"))
                     w.uint32(16).bool(m.surveyCtaHasRendered);
                 return w;
@@ -56976,7 +56948,7 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.primaryResponseID = r.string();
+                            m.primaryResponseId = r.string();
                             break;
                         }
                     case 2: {
@@ -56999,8 +56971,8 @@ export const WAAICommon = WAAICommon = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new WAAICommon.BotUnifiedResponseMutation.SideBySideMetadata();
-                if (d.primaryResponseID != null) {
-                    m.primaryResponseID = String(d.primaryResponseID);
+                if (d.primaryResponseId != null) {
+                    m.primaryResponseId = String(d.primaryResponseId);
                 }
                 if (d.surveyCtaHasRendered != null) {
                     m.surveyCtaHasRendered = Boolean(d.surveyCtaHasRendered);
@@ -57012,10 +56984,10 @@ export const WAAICommon = WAAICommon = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.primaryResponseID != null && m.hasOwnProperty("primaryResponseID")) {
-                    d.primaryResponseID = m.primaryResponseID;
+                if (m.primaryResponseId != null && m.hasOwnProperty("primaryResponseId")) {
+                    d.primaryResponseId = m.primaryResponseId;
                     if (o.oneofs)
-                        d._primaryResponseID = "primaryResponseID";
+                        d._primaryResponseId = "primaryResponseId";
                 }
                 if (m.surveyCtaHasRendered != null && m.hasOwnProperty("surveyCtaHasRendered")) {
                     d.surveyCtaHasRendered = m.surveyCtaHasRendered;
@@ -57051,14 +57023,14 @@ export const WAAICommon = WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        AIMediaCollectionMetadata.prototype.collectionID = null;
+        AIMediaCollectionMetadata.prototype.collectionId = null;
         AIMediaCollectionMetadata.prototype.uploadOrderIndex = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIMediaCollectionMetadata.prototype, "_collectionID", {
-            get: $util.oneOfGetter($oneOfFields = ["collectionID"]),
+        Object.defineProperty(AIMediaCollectionMetadata.prototype, "_collectionId", {
+            get: $util.oneOfGetter($oneOfFields = ["collectionId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -57075,8 +57047,8 @@ export const WAAICommon = WAAICommon = (() => {
         AIMediaCollectionMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.collectionID != null && Object.hasOwnProperty.call(m, "collectionID"))
-                w.uint32(10).string(m.collectionID);
+            if (m.collectionId != null && Object.hasOwnProperty.call(m, "collectionId"))
+                w.uint32(10).string(m.collectionId);
             if (m.uploadOrderIndex != null && Object.hasOwnProperty.call(m, "uploadOrderIndex"))
                 w.uint32(16).uint32(m.uploadOrderIndex);
             return w;
@@ -57096,7 +57068,7 @@ export const WAAICommon = WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.collectionID = r.string();
+                        m.collectionId = r.string();
                         break;
                     }
                 case 2: {
@@ -57119,8 +57091,8 @@ export const WAAICommon = WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAICommon.AIMediaCollectionMetadata();
-            if (d.collectionID != null) {
-                m.collectionID = String(d.collectionID);
+            if (d.collectionId != null) {
+                m.collectionId = String(d.collectionId);
             }
             if (d.uploadOrderIndex != null) {
                 m.uploadOrderIndex = d.uploadOrderIndex >>> 0;
@@ -57132,10 +57104,10 @@ export const WAAICommon = WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.collectionID != null && m.hasOwnProperty("collectionID")) {
-                d.collectionID = m.collectionID;
+            if (m.collectionId != null && m.hasOwnProperty("collectionId")) {
+                d.collectionId = m.collectionId;
                 if (o.oneofs)
-                    d._collectionID = "collectionID";
+                    d._collectionId = "collectionId";
             }
             if (m.uploadOrderIndex != null && m.hasOwnProperty("uploadOrderIndex")) {
                 d.uploadOrderIndex = m.uploadOrderIndex;
@@ -57168,15 +57140,15 @@ export const WAAICommon = WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        AIMediaCollectionMessage.prototype.collectionID = null;
+        AIMediaCollectionMessage.prototype.collectionId = null;
         AIMediaCollectionMessage.prototype.expectedMediaCount = null;
         AIMediaCollectionMessage.prototype.hasGlobalCaption = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIMediaCollectionMessage.prototype, "_collectionID", {
-            get: $util.oneOfGetter($oneOfFields = ["collectionID"]),
+        Object.defineProperty(AIMediaCollectionMessage.prototype, "_collectionId", {
+            get: $util.oneOfGetter($oneOfFields = ["collectionId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -57199,8 +57171,8 @@ export const WAAICommon = WAAICommon = (() => {
         AIMediaCollectionMessage.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.collectionID != null && Object.hasOwnProperty.call(m, "collectionID"))
-                w.uint32(10).string(m.collectionID);
+            if (m.collectionId != null && Object.hasOwnProperty.call(m, "collectionId"))
+                w.uint32(10).string(m.collectionId);
             if (m.expectedMediaCount != null && Object.hasOwnProperty.call(m, "expectedMediaCount"))
                 w.uint32(16).uint32(m.expectedMediaCount);
             if (m.hasGlobalCaption != null && Object.hasOwnProperty.call(m, "hasGlobalCaption"))
@@ -57222,7 +57194,7 @@ export const WAAICommon = WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.collectionID = r.string();
+                        m.collectionId = r.string();
                         break;
                     }
                 case 2: {
@@ -57249,8 +57221,8 @@ export const WAAICommon = WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAICommon.AIMediaCollectionMessage();
-            if (d.collectionID != null) {
-                m.collectionID = String(d.collectionID);
+            if (d.collectionId != null) {
+                m.collectionId = String(d.collectionId);
             }
             if (d.expectedMediaCount != null) {
                 m.expectedMediaCount = d.expectedMediaCount >>> 0;
@@ -57265,10 +57237,10 @@ export const WAAICommon = WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.collectionID != null && m.hasOwnProperty("collectionID")) {
-                d.collectionID = m.collectionID;
+            if (m.collectionId != null && m.hasOwnProperty("collectionId")) {
+                d.collectionId = m.collectionId;
                 if (o.oneofs)
-                    d._collectionID = "collectionID";
+                    d._collectionId = "collectionId";
             }
             if (m.expectedMediaCount != null && m.hasOwnProperty("expectedMediaCount")) {
                 d.expectedMediaCount = m.expectedMediaCount;
@@ -57444,14 +57416,14 @@ export const WAAICommon = WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BotResolvedToolCallMetadata.prototype.toolCallID = null;
+        BotResolvedToolCallMetadata.prototype.toolCallId = null;
         BotResolvedToolCallMetadata.prototype.resolutionDataSerialized = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotResolvedToolCallMetadata.prototype, "_toolCallID", {
-            get: $util.oneOfGetter($oneOfFields = ["toolCallID"]),
+        Object.defineProperty(BotResolvedToolCallMetadata.prototype, "_toolCallId", {
+            get: $util.oneOfGetter($oneOfFields = ["toolCallId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -57468,8 +57440,8 @@ export const WAAICommon = WAAICommon = (() => {
         BotResolvedToolCallMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.toolCallID != null && Object.hasOwnProperty.call(m, "toolCallID"))
-                w.uint32(10).string(m.toolCallID);
+            if (m.toolCallId != null && Object.hasOwnProperty.call(m, "toolCallId"))
+                w.uint32(10).string(m.toolCallId);
             if (m.resolutionDataSerialized != null && Object.hasOwnProperty.call(m, "resolutionDataSerialized"))
                 w.uint32(18).string(m.resolutionDataSerialized);
             return w;
@@ -57489,7 +57461,7 @@ export const WAAICommon = WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.toolCallID = r.string();
+                        m.toolCallId = r.string();
                         break;
                     }
                 case 2: {
@@ -57512,8 +57484,8 @@ export const WAAICommon = WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAICommon.BotResolvedToolCallMetadata();
-            if (d.toolCallID != null) {
-                m.toolCallID = String(d.toolCallID);
+            if (d.toolCallId != null) {
+                m.toolCallId = String(d.toolCallId);
             }
             if (d.resolutionDataSerialized != null) {
                 m.resolutionDataSerialized = String(d.resolutionDataSerialized);
@@ -57525,10 +57497,10 @@ export const WAAICommon = WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.toolCallID != null && m.hasOwnProperty("toolCallID")) {
-                d.toolCallID = m.toolCallID;
+            if (m.toolCallId != null && m.hasOwnProperty("toolCallId")) {
+                d.toolCallId = m.toolCallId;
                 if (o.oneofs)
-                    d._toolCallID = "toolCallID";
+                    d._toolCallId = "toolCallId";
             }
             if (m.resolutionDataSerialized != null && m.hasOwnProperty("resolutionDataSerialized")) {
                 d.resolutionDataSerialized = m.resolutionDataSerialized;
@@ -57561,10 +57533,10 @@ export const WAAICommon = WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BotMetadata.prototype.personaID = null;
+        BotMetadata.prototype.personaId = null;
         BotMetadata.prototype.pluginMetadata = null;
         BotMetadata.prototype.suggestedPromptMetadata = null;
-        BotMetadata.prototype.invokerJID = null;
+        BotMetadata.prototype.invokerJid = null;
         BotMetadata.prototype.sessionMetadata = null;
         BotMetadata.prototype.memuMetadata = null;
         BotMetadata.prototype.timezone = null;
@@ -57584,8 +57556,8 @@ export const WAAICommon = WAAICommon = (() => {
         BotMetadata.prototype.botModeSelectionMetadata = null;
         BotMetadata.prototype.botQuotaMetadata = null;
         BotMetadata.prototype.botAgeCollectionMetadata = null;
-        BotMetadata.prototype.conversationStarterPromptID = null;
-        BotMetadata.prototype.botResponseID = null;
+        BotMetadata.prototype.conversationStarterPromptId = null;
+        BotMetadata.prototype.botResponseId = null;
         BotMetadata.prototype.verificationMetadata = null;
         BotMetadata.prototype.unifiedResponseMutation = null;
         BotMetadata.prototype.botMessageOriginMetadata = null;
@@ -57606,8 +57578,8 @@ export const WAAICommon = WAAICommon = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMetadata.prototype, "_personaID", {
-            get: $util.oneOfGetter($oneOfFields = ["personaID"]),
+        Object.defineProperty(BotMetadata.prototype, "_personaId", {
+            get: $util.oneOfGetter($oneOfFields = ["personaId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -57624,8 +57596,8 @@ export const WAAICommon = WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMetadata.prototype, "_invokerJID", {
-            get: $util.oneOfGetter($oneOfFields = ["invokerJID"]),
+        Object.defineProperty(BotMetadata.prototype, "_invokerJid", {
+            get: $util.oneOfGetter($oneOfFields = ["invokerJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -57744,14 +57716,14 @@ export const WAAICommon = WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMetadata.prototype, "_conversationStarterPromptID", {
-            get: $util.oneOfGetter($oneOfFields = ["conversationStarterPromptID"]),
+        Object.defineProperty(BotMetadata.prototype, "_conversationStarterPromptId", {
+            get: $util.oneOfGetter($oneOfFields = ["conversationStarterPromptId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotMetadata.prototype, "_botResponseID", {
-            get: $util.oneOfGetter($oneOfFields = ["botResponseID"]),
+        Object.defineProperty(BotMetadata.prototype, "_botResponseId", {
+            get: $util.oneOfGetter($oneOfFields = ["botResponseId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -57858,14 +57830,14 @@ export const WAAICommon = WAAICommon = (() => {
         BotMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.personaID != null && Object.hasOwnProperty.call(m, "personaID"))
-                w.uint32(18).string(m.personaID);
+            if (m.personaId != null && Object.hasOwnProperty.call(m, "personaId"))
+                w.uint32(18).string(m.personaId);
             if (m.pluginMetadata != null && Object.hasOwnProperty.call(m, "pluginMetadata"))
                 WAAICommon.BotPluginMetadata.encode(m.pluginMetadata, w.uint32(26).fork()).ldelim();
             if (m.suggestedPromptMetadata != null && Object.hasOwnProperty.call(m, "suggestedPromptMetadata"))
                 WAAICommon.BotSuggestedPromptMetadata.encode(m.suggestedPromptMetadata, w.uint32(34).fork()).ldelim();
-            if (m.invokerJID != null && Object.hasOwnProperty.call(m, "invokerJID"))
-                w.uint32(42).string(m.invokerJID);
+            if (m.invokerJid != null && Object.hasOwnProperty.call(m, "invokerJid"))
+                w.uint32(42).string(m.invokerJid);
             if (m.sessionMetadata != null && Object.hasOwnProperty.call(m, "sessionMetadata"))
                 WAAICommon.BotSessionMetadata.encode(m.sessionMetadata, w.uint32(50).fork()).ldelim();
             if (m.memuMetadata != null && Object.hasOwnProperty.call(m, "memuMetadata"))
@@ -57904,10 +57876,10 @@ export const WAAICommon = WAAICommon = (() => {
                 WAAICommon.BotQuotaMetadata.encode(m.botQuotaMetadata, w.uint32(186).fork()).ldelim();
             if (m.botAgeCollectionMetadata != null && Object.hasOwnProperty.call(m, "botAgeCollectionMetadata"))
                 WAAICommon.BotAgeCollectionMetadata.encode(m.botAgeCollectionMetadata, w.uint32(194).fork()).ldelim();
-            if (m.conversationStarterPromptID != null && Object.hasOwnProperty.call(m, "conversationStarterPromptID"))
-                w.uint32(202).string(m.conversationStarterPromptID);
-            if (m.botResponseID != null && Object.hasOwnProperty.call(m, "botResponseID"))
-                w.uint32(210).string(m.botResponseID);
+            if (m.conversationStarterPromptId != null && Object.hasOwnProperty.call(m, "conversationStarterPromptId"))
+                w.uint32(202).string(m.conversationStarterPromptId);
+            if (m.botResponseId != null && Object.hasOwnProperty.call(m, "botResponseId"))
+                w.uint32(210).string(m.botResponseId);
             if (m.verificationMetadata != null && Object.hasOwnProperty.call(m, "verificationMetadata"))
                 WAAICommon.BotSignatureVerificationMetadata.encode(m.verificationMetadata, w.uint32(218).fork()).ldelim();
             if (m.unifiedResponseMutation != null && Object.hasOwnProperty.call(m, "unifiedResponseMutation"))
@@ -57957,7 +57929,7 @@ export const WAAICommon = WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 2: {
-                        m.personaID = r.string();
+                        m.personaId = r.string();
                         break;
                     }
                 case 3: {
@@ -57969,7 +57941,7 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     }
                 case 5: {
-                        m.invokerJID = r.string();
+                        m.invokerJid = r.string();
                         break;
                     }
                 case 6: {
@@ -58049,11 +58021,11 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     }
                 case 25: {
-                        m.conversationStarterPromptID = r.string();
+                        m.conversationStarterPromptId = r.string();
                         break;
                     }
                 case 26: {
-                        m.botResponseID = r.string();
+                        m.botResponseId = r.string();
                         break;
                     }
                 case 27: {
@@ -58136,8 +58108,8 @@ export const WAAICommon = WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAICommon.BotMetadata();
-            if (d.personaID != null) {
-                m.personaID = String(d.personaID);
+            if (d.personaId != null) {
+                m.personaId = String(d.personaId);
             }
             if (d.pluginMetadata != null) {
                 if (typeof d.pluginMetadata !== "object")
@@ -58149,8 +58121,8 @@ export const WAAICommon = WAAICommon = (() => {
                     throw TypeError(".WAAICommon.BotMetadata.suggestedPromptMetadata: object expected");
                 m.suggestedPromptMetadata = WAAICommon.BotSuggestedPromptMetadata.fromObject(d.suggestedPromptMetadata, n + 1);
             }
-            if (d.invokerJID != null) {
-                m.invokerJID = String(d.invokerJID);
+            if (d.invokerJid != null) {
+                m.invokerJid = String(d.invokerJid);
             }
             if (d.sessionMetadata != null) {
                 if (typeof d.sessionMetadata !== "object")
@@ -58244,11 +58216,11 @@ export const WAAICommon = WAAICommon = (() => {
                     throw TypeError(".WAAICommon.BotMetadata.botAgeCollectionMetadata: object expected");
                 m.botAgeCollectionMetadata = WAAICommon.BotAgeCollectionMetadata.fromObject(d.botAgeCollectionMetadata, n + 1);
             }
-            if (d.conversationStarterPromptID != null) {
-                m.conversationStarterPromptID = String(d.conversationStarterPromptID);
+            if (d.conversationStarterPromptId != null) {
+                m.conversationStarterPromptId = String(d.conversationStarterPromptId);
             }
-            if (d.botResponseID != null) {
-                m.botResponseID = String(d.botResponseID);
+            if (d.botResponseId != null) {
+                m.botResponseId = String(d.botResponseId);
             }
             if (d.verificationMetadata != null) {
                 if (typeof d.verificationMetadata !== "object")
@@ -58338,10 +58310,10 @@ export const WAAICommon = WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.personaID != null && m.hasOwnProperty("personaID")) {
-                d.personaID = m.personaID;
+            if (m.personaId != null && m.hasOwnProperty("personaId")) {
+                d.personaId = m.personaId;
                 if (o.oneofs)
-                    d._personaID = "personaID";
+                    d._personaId = "personaId";
             }
             if (m.pluginMetadata != null && m.hasOwnProperty("pluginMetadata")) {
                 d.pluginMetadata = WAAICommon.BotPluginMetadata.toObject(m.pluginMetadata, o);
@@ -58353,10 +58325,10 @@ export const WAAICommon = WAAICommon = (() => {
                 if (o.oneofs)
                     d._suggestedPromptMetadata = "suggestedPromptMetadata";
             }
-            if (m.invokerJID != null && m.hasOwnProperty("invokerJID")) {
-                d.invokerJID = m.invokerJID;
+            if (m.invokerJid != null && m.hasOwnProperty("invokerJid")) {
+                d.invokerJid = m.invokerJid;
                 if (o.oneofs)
-                    d._invokerJID = "invokerJID";
+                    d._invokerJid = "invokerJid";
             }
             if (m.sessionMetadata != null && m.hasOwnProperty("sessionMetadata")) {
                 d.sessionMetadata = WAAICommon.BotSessionMetadata.toObject(m.sessionMetadata, o);
@@ -58453,15 +58425,15 @@ export const WAAICommon = WAAICommon = (() => {
                 if (o.oneofs)
                     d._botAgeCollectionMetadata = "botAgeCollectionMetadata";
             }
-            if (m.conversationStarterPromptID != null && m.hasOwnProperty("conversationStarterPromptID")) {
-                d.conversationStarterPromptID = m.conversationStarterPromptID;
+            if (m.conversationStarterPromptId != null && m.hasOwnProperty("conversationStarterPromptId")) {
+                d.conversationStarterPromptId = m.conversationStarterPromptId;
                 if (o.oneofs)
-                    d._conversationStarterPromptID = "conversationStarterPromptID";
+                    d._conversationStarterPromptId = "conversationStarterPromptId";
             }
-            if (m.botResponseID != null && m.hasOwnProperty("botResponseID")) {
-                d.botResponseID = m.botResponseID;
+            if (m.botResponseId != null && m.hasOwnProperty("botResponseId")) {
+                d.botResponseId = m.botResponseId;
                 if (o.oneofs)
-                    d._botResponseID = "botResponseID";
+                    d._botResponseId = "botResponseId";
             }
             if (m.verificationMetadata != null && m.hasOwnProperty("verificationMetadata")) {
                 d.verificationMetadata = WAAICommon.BotSignatureVerificationMetadata.toObject(m.verificationMetadata, o);
@@ -58790,14 +58762,14 @@ export const WAAICommon = WAAICommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        BotRenderingConfigMetadata.prototype.bloksVersioningID = null;
+        BotRenderingConfigMetadata.prototype.bloksVersioningId = null;
         BotRenderingConfigMetadata.prototype.pixelDensity = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(BotRenderingConfigMetadata.prototype, "_bloksVersioningID", {
-            get: $util.oneOfGetter($oneOfFields = ["bloksVersioningID"]),
+        Object.defineProperty(BotRenderingConfigMetadata.prototype, "_bloksVersioningId", {
+            get: $util.oneOfGetter($oneOfFields = ["bloksVersioningId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -58814,8 +58786,8 @@ export const WAAICommon = WAAICommon = (() => {
         BotRenderingConfigMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.bloksVersioningID != null && Object.hasOwnProperty.call(m, "bloksVersioningID"))
-                w.uint32(10).string(m.bloksVersioningID);
+            if (m.bloksVersioningId != null && Object.hasOwnProperty.call(m, "bloksVersioningId"))
+                w.uint32(10).string(m.bloksVersioningId);
             if (m.pixelDensity != null && Object.hasOwnProperty.call(m, "pixelDensity"))
                 w.uint32(17).double(m.pixelDensity);
             return w;
@@ -58835,7 +58807,7 @@ export const WAAICommon = WAAICommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.bloksVersioningID = r.string();
+                        m.bloksVersioningId = r.string();
                         break;
                     }
                 case 2: {
@@ -58858,8 +58830,8 @@ export const WAAICommon = WAAICommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAICommon.BotRenderingConfigMetadata();
-            if (d.bloksVersioningID != null) {
-                m.bloksVersioningID = String(d.bloksVersioningID);
+            if (d.bloksVersioningId != null) {
+                m.bloksVersioningId = String(d.bloksVersioningId);
             }
             if (d.pixelDensity != null) {
                 m.pixelDensity = Number(d.pixelDensity);
@@ -58871,10 +58843,10 @@ export const WAAICommon = WAAICommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.bloksVersioningID != null && m.hasOwnProperty("bloksVersioningID")) {
-                d.bloksVersioningID = m.bloksVersioningID;
+            if (m.bloksVersioningId != null && m.hasOwnProperty("bloksVersioningId")) {
+                d.bloksVersioningId = m.bloksVersioningId;
                 if (o.oneofs)
-                    d._bloksVersioningID = "bloksVersioningID";
+                    d._bloksVersioningId = "bloksVersioningId";
             }
             if (m.pixelDensity != null && m.hasOwnProperty("pixelDensity")) {
                 d.pixelDensity = o.json && !isFinite(m.pixelDensity) ? String(m.pixelDensity) : m.pixelDensity;
@@ -59004,7 +58976,7 @@ export const WAAICommon = WAAICommon = (() => {
         }
 
         ForwardedAIBotMessageInfo.prototype.botName = null;
-        ForwardedAIBotMessageInfo.prototype.botJID = null;
+        ForwardedAIBotMessageInfo.prototype.botJid = null;
         ForwardedAIBotMessageInfo.prototype.creatorName = null;
 
         let $oneOfFields;
@@ -59016,8 +58988,8 @@ export const WAAICommon = WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ForwardedAIBotMessageInfo.prototype, "_botJID", {
-            get: $util.oneOfGetter($oneOfFields = ["botJID"]),
+        Object.defineProperty(ForwardedAIBotMessageInfo.prototype, "_botJid", {
+            get: $util.oneOfGetter($oneOfFields = ["botJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -59036,8 +59008,8 @@ export const WAAICommon = WAAICommon = (() => {
                 w = $Writer.create();
             if (m.botName != null && Object.hasOwnProperty.call(m, "botName"))
                 w.uint32(10).string(m.botName);
-            if (m.botJID != null && Object.hasOwnProperty.call(m, "botJID"))
-                w.uint32(18).string(m.botJID);
+            if (m.botJid != null && Object.hasOwnProperty.call(m, "botJid"))
+                w.uint32(18).string(m.botJid);
             if (m.creatorName != null && Object.hasOwnProperty.call(m, "creatorName"))
                 w.uint32(26).string(m.creatorName);
             return w;
@@ -59061,7 +59033,7 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     }
                 case 2: {
-                        m.botJID = r.string();
+                        m.botJid = r.string();
                         break;
                     }
                 case 3: {
@@ -59087,8 +59059,8 @@ export const WAAICommon = WAAICommon = (() => {
             if (d.botName != null) {
                 m.botName = String(d.botName);
             }
-            if (d.botJID != null) {
-                m.botJID = String(d.botJID);
+            if (d.botJid != null) {
+                m.botJid = String(d.botJid);
             }
             if (d.creatorName != null) {
                 m.creatorName = String(d.creatorName);
@@ -59105,10 +59077,10 @@ export const WAAICommon = WAAICommon = (() => {
                 if (o.oneofs)
                     d._botName = "botName";
             }
-            if (m.botJID != null && m.hasOwnProperty("botJID")) {
-                d.botJID = m.botJID;
+            if (m.botJid != null && m.hasOwnProperty("botJid")) {
+                d.botJid = m.botJid;
                 if (o.oneofs)
-                    d._botJID = "botJID";
+                    d._botJid = "botJid";
             }
             if (m.creatorName != null && m.hasOwnProperty("creatorName")) {
                 d.creatorName = m.creatorName;
@@ -59555,7 +59527,7 @@ export const WAAICommon = WAAICommon = (() => {
         }
 
         AIRegenerateMetadata.prototype.messageKey = null;
-        AIRegenerateMetadata.prototype.responseTimestampMS = null;
+        AIRegenerateMetadata.prototype.responseTimestampMs = null;
 
         let $oneOfFields;
 
@@ -59566,8 +59538,8 @@ export const WAAICommon = WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRegenerateMetadata.prototype, "_responseTimestampMS", {
-            get: $util.oneOfGetter($oneOfFields = ["responseTimestampMS"]),
+        Object.defineProperty(AIRegenerateMetadata.prototype, "_responseTimestampMs", {
+            get: $util.oneOfGetter($oneOfFields = ["responseTimestampMs"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -59580,8 +59552,8 @@ export const WAAICommon = WAAICommon = (() => {
                 w = $Writer.create();
             if (m.messageKey != null && Object.hasOwnProperty.call(m, "messageKey"))
                 WACommon.MessageKey.encode(m.messageKey, w.uint32(10).fork()).ldelim();
-            if (m.responseTimestampMS != null && Object.hasOwnProperty.call(m, "responseTimestampMS"))
-                w.uint32(16).int64(m.responseTimestampMS);
+            if (m.responseTimestampMs != null && Object.hasOwnProperty.call(m, "responseTimestampMs"))
+                w.uint32(16).int64(m.responseTimestampMs);
             return w;
         };
 
@@ -59603,7 +59575,7 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     }
                 case 2: {
-                        m.responseTimestampMS = r.int64();
+                        m.responseTimestampMs = r.int64();
                         break;
                     }
                 default:
@@ -59627,15 +59599,15 @@ export const WAAICommon = WAAICommon = (() => {
                     throw TypeError(".WAAICommon.AIRegenerateMetadata.messageKey: object expected");
                 m.messageKey = WACommon.MessageKey.fromObject(d.messageKey, n + 1);
             }
-            if (d.responseTimestampMS != null) {
+            if (d.responseTimestampMs != null) {
                 if ($util.Long)
-                    (m.responseTimestampMS = $util.Long.fromValue(d.responseTimestampMS)).unsigned = false;
-                else if (typeof d.responseTimestampMS === "string")
-                    m.responseTimestampMS = parseInt(d.responseTimestampMS, 10);
-                else if (typeof d.responseTimestampMS === "number")
-                    m.responseTimestampMS = d.responseTimestampMS;
-                else if (typeof d.responseTimestampMS === "object")
-                    m.responseTimestampMS = new $util.LongBits(d.responseTimestampMS.low >>> 0, d.responseTimestampMS.high >>> 0).toNumber();
+                    (m.responseTimestampMs = $util.Long.fromValue(d.responseTimestampMs)).unsigned = false;
+                else if (typeof d.responseTimestampMs === "string")
+                    m.responseTimestampMs = parseInt(d.responseTimestampMs, 10);
+                else if (typeof d.responseTimestampMs === "number")
+                    m.responseTimestampMs = d.responseTimestampMs;
+                else if (typeof d.responseTimestampMs === "object")
+                    m.responseTimestampMs = new $util.LongBits(d.responseTimestampMs.low >>> 0, d.responseTimestampMs.high >>> 0).toNumber();
             }
             return m;
         };
@@ -59649,13 +59621,13 @@ export const WAAICommon = WAAICommon = (() => {
                 if (o.oneofs)
                     d._messageKey = "messageKey";
             }
-            if (m.responseTimestampMS != null && m.hasOwnProperty("responseTimestampMS")) {
-                if (typeof m.responseTimestampMS === "number")
-                    d.responseTimestampMS = o.longs === String ? String(m.responseTimestampMS) : m.responseTimestampMS;
+            if (m.responseTimestampMs != null && m.hasOwnProperty("responseTimestampMs")) {
+                if (typeof m.responseTimestampMs === "number")
+                    d.responseTimestampMs = o.longs === String ? String(m.responseTimestampMs) : m.responseTimestampMs;
                 else
-                    d.responseTimestampMS = o.longs === String ? $util.Long.prototype.toString.call(m.responseTimestampMS) : o.longs === Number ? new $util.LongBits(m.responseTimestampMS.low >>> 0, m.responseTimestampMS.high >>> 0).toNumber() : m.responseTimestampMS;
+                    d.responseTimestampMs = o.longs === String ? $util.Long.prototype.toString.call(m.responseTimestampMs) : o.longs === Number ? new $util.LongBits(m.responseTimestampMs.low >>> 0, m.responseTimestampMs.high >>> 0).toNumber() : m.responseTimestampMs;
                 if (o.oneofs)
-                    d._responseTimestampMS = "responseTimestampMS";
+                    d._responseTimestampMs = "responseTimestampMs";
             }
             return d;
         };
@@ -59684,7 +59656,7 @@ export const WAAICommon = WAAICommon = (() => {
         }
 
         SessionTransparencyMetadata.prototype.disclaimerText = null;
-        SessionTransparencyMetadata.prototype.hcaID = null;
+        SessionTransparencyMetadata.prototype.hcaId = null;
         SessionTransparencyMetadata.prototype.sessionTransparencyType = null;
 
         let $oneOfFields;
@@ -59696,8 +59668,8 @@ export const WAAICommon = WAAICommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SessionTransparencyMetadata.prototype, "_hcaID", {
-            get: $util.oneOfGetter($oneOfFields = ["hcaID"]),
+        Object.defineProperty(SessionTransparencyMetadata.prototype, "_hcaId", {
+            get: $util.oneOfGetter($oneOfFields = ["hcaId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -59716,8 +59688,8 @@ export const WAAICommon = WAAICommon = (() => {
                 w = $Writer.create();
             if (m.disclaimerText != null && Object.hasOwnProperty.call(m, "disclaimerText"))
                 w.uint32(10).string(m.disclaimerText);
-            if (m.hcaID != null && Object.hasOwnProperty.call(m, "hcaID"))
-                w.uint32(18).string(m.hcaID);
+            if (m.hcaId != null && Object.hasOwnProperty.call(m, "hcaId"))
+                w.uint32(18).string(m.hcaId);
             if (m.sessionTransparencyType != null && Object.hasOwnProperty.call(m, "sessionTransparencyType"))
                 w.uint32(24).int32(m.sessionTransparencyType);
             return w;
@@ -59741,7 +59713,7 @@ export const WAAICommon = WAAICommon = (() => {
                         break;
                     }
                 case 2: {
-                        m.hcaID = r.string();
+                        m.hcaId = r.string();
                         break;
                     }
                 case 3: {
@@ -59767,8 +59739,8 @@ export const WAAICommon = WAAICommon = (() => {
             if (d.disclaimerText != null) {
                 m.disclaimerText = String(d.disclaimerText);
             }
-            if (d.hcaID != null) {
-                m.hcaID = String(d.hcaID);
+            if (d.hcaId != null) {
+                m.hcaId = String(d.hcaId);
             }
             switch (d.sessionTransparencyType) {
             default:
@@ -59798,10 +59770,10 @@ export const WAAICommon = WAAICommon = (() => {
                 if (o.oneofs)
                     d._disclaimerText = "disclaimerText";
             }
-            if (m.hcaID != null && m.hasOwnProperty("hcaID")) {
-                d.hcaID = m.hcaID;
+            if (m.hcaId != null && m.hasOwnProperty("hcaId")) {
+                d.hcaId = m.hcaId;
                 if (o.oneofs)
-                    d._hcaID = "hcaID";
+                    d._hcaId = "hcaId";
             }
             if (m.sessionTransparencyType != null && m.hasOwnProperty("sessionTransparencyType")) {
                 d.sessionTransparencyType = o.enums === String ? WAAICommon.SessionTransparencyType[m.sessionTransparencyType] === undefined ? m.sessionTransparencyType : WAAICommon.SessionTransparencyType[m.sessionTransparencyType] : m.sessionTransparencyType;
@@ -60234,16 +60206,16 @@ export const WACommon = WACommon = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        MessageKey.prototype.remoteJID = null;
+        MessageKey.prototype.remoteJid = null;
         MessageKey.prototype.fromMe = null;
-        MessageKey.prototype.ID = null;
+        MessageKey.prototype.id = null;
         MessageKey.prototype.participant = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MessageKey.prototype, "_remoteJID", {
-            get: $util.oneOfGetter($oneOfFields = ["remoteJID"]),
+        Object.defineProperty(MessageKey.prototype, "_remoteJid", {
+            get: $util.oneOfGetter($oneOfFields = ["remoteJid"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -60254,8 +60226,8 @@ export const WACommon = WACommon = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MessageKey.prototype, "_ID", {
-            get: $util.oneOfGetter($oneOfFields = ["ID"]),
+        Object.defineProperty(MessageKey.prototype, "_id", {
+            get: $util.oneOfGetter($oneOfFields = ["id"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -60272,12 +60244,12 @@ export const WACommon = WACommon = (() => {
         MessageKey.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.remoteJID != null && Object.hasOwnProperty.call(m, "remoteJID"))
-                w.uint32(10).string(m.remoteJID);
+            if (m.remoteJid != null && Object.hasOwnProperty.call(m, "remoteJid"))
+                w.uint32(10).string(m.remoteJid);
             if (m.fromMe != null && Object.hasOwnProperty.call(m, "fromMe"))
                 w.uint32(16).bool(m.fromMe);
-            if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                w.uint32(26).string(m.ID);
+            if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                w.uint32(26).string(m.id);
             if (m.participant != null && Object.hasOwnProperty.call(m, "participant"))
                 w.uint32(34).string(m.participant);
             return w;
@@ -60297,7 +60269,7 @@ export const WACommon = WACommon = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.remoteJID = r.string();
+                        m.remoteJid = r.string();
                         break;
                     }
                 case 2: {
@@ -60305,7 +60277,7 @@ export const WACommon = WACommon = (() => {
                         break;
                     }
                 case 3: {
-                        m.ID = r.string();
+                        m.id = r.string();
                         break;
                     }
                 case 4: {
@@ -60328,14 +60300,14 @@ export const WACommon = WACommon = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WACommon.MessageKey();
-            if (d.remoteJID != null) {
-                m.remoteJID = String(d.remoteJID);
+            if (d.remoteJid != null) {
+                m.remoteJid = String(d.remoteJid);
             }
             if (d.fromMe != null) {
                 m.fromMe = Boolean(d.fromMe);
             }
-            if (d.ID != null) {
-                m.ID = String(d.ID);
+            if (d.id != null) {
+                m.id = String(d.id);
             }
             if (d.participant != null) {
                 m.participant = String(d.participant);
@@ -60347,20 +60319,20 @@ export const WACommon = WACommon = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.remoteJID != null && m.hasOwnProperty("remoteJID")) {
-                d.remoteJID = m.remoteJID;
+            if (m.remoteJid != null && m.hasOwnProperty("remoteJid")) {
+                d.remoteJid = m.remoteJid;
                 if (o.oneofs)
-                    d._remoteJID = "remoteJID";
+                    d._remoteJid = "remoteJid";
             }
             if (m.fromMe != null && m.hasOwnProperty("fromMe")) {
                 d.fromMe = m.fromMe;
                 if (o.oneofs)
                     d._fromMe = "fromMe";
             }
-            if (m.ID != null && m.hasOwnProperty("ID")) {
-                d.ID = m.ID;
+            if (m.id != null && m.hasOwnProperty("id")) {
+                d.id = m.id;
                 if (o.oneofs)
-                    d._ID = "ID";
+                    d._id = "id";
             }
             if (m.participant != null && m.hasOwnProperty("participant")) {
                 d.participant = m.participant;
@@ -60422,16 +60394,16 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        AIRichResponseInlineImageMetadata.prototype.imageURL = null;
+        AIRichResponseInlineImageMetadata.prototype.imageUrl = null;
         AIRichResponseInlineImageMetadata.prototype.imageText = null;
         AIRichResponseInlineImageMetadata.prototype.alignment = null;
-        AIRichResponseInlineImageMetadata.prototype.tapLinkURL = null;
+        AIRichResponseInlineImageMetadata.prototype.tapLinkUrl = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseInlineImageMetadata.prototype, "_imageURL", {
-            get: $util.oneOfGetter($oneOfFields = ["imageURL"]),
+        Object.defineProperty(AIRichResponseInlineImageMetadata.prototype, "_imageUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["imageUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -60448,8 +60420,8 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseInlineImageMetadata.prototype, "_tapLinkURL", {
-            get: $util.oneOfGetter($oneOfFields = ["tapLinkURL"]),
+        Object.defineProperty(AIRichResponseInlineImageMetadata.prototype, "_tapLinkUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["tapLinkUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -60460,14 +60432,14 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
         AIRichResponseInlineImageMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.imageURL != null && Object.hasOwnProperty.call(m, "imageURL"))
-                WAAICommonDeprecated.AIRichResponseImageURL.encode(m.imageURL, w.uint32(10).fork()).ldelim();
+            if (m.imageUrl != null && Object.hasOwnProperty.call(m, "imageUrl"))
+                WAAICommonDeprecated.AIRichResponseImageURL.encode(m.imageUrl, w.uint32(10).fork()).ldelim();
             if (m.imageText != null && Object.hasOwnProperty.call(m, "imageText"))
                 w.uint32(18).string(m.imageText);
             if (m.alignment != null && Object.hasOwnProperty.call(m, "alignment"))
                 w.uint32(24).int32(m.alignment);
-            if (m.tapLinkURL != null && Object.hasOwnProperty.call(m, "tapLinkURL"))
-                w.uint32(34).string(m.tapLinkURL);
+            if (m.tapLinkUrl != null && Object.hasOwnProperty.call(m, "tapLinkUrl"))
+                w.uint32(34).string(m.tapLinkUrl);
             return w;
         };
 
@@ -60485,7 +60457,7 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.imageURL = WAAICommonDeprecated.AIRichResponseImageURL.decode(r, r.uint32(), undefined, n + 1);
+                        m.imageUrl = WAAICommonDeprecated.AIRichResponseImageURL.decode(r, r.uint32(), undefined, n + 1);
                         break;
                     }
                 case 2: {
@@ -60497,7 +60469,7 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                         break;
                     }
                 case 4: {
-                        m.tapLinkURL = r.string();
+                        m.tapLinkUrl = r.string();
                         break;
                     }
                 default:
@@ -60516,10 +60488,10 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAICommonDeprecated.AIRichResponseInlineImageMetadata();
-            if (d.imageURL != null) {
-                if (typeof d.imageURL !== "object")
-                    throw TypeError(".WAAICommonDeprecated.AIRichResponseInlineImageMetadata.imageURL: object expected");
-                m.imageURL = WAAICommonDeprecated.AIRichResponseImageURL.fromObject(d.imageURL, n + 1);
+            if (d.imageUrl != null) {
+                if (typeof d.imageUrl !== "object")
+                    throw TypeError(".WAAICommonDeprecated.AIRichResponseInlineImageMetadata.imageUrl: object expected");
+                m.imageUrl = WAAICommonDeprecated.AIRichResponseImageURL.fromObject(d.imageUrl, n + 1);
             }
             if (d.imageText != null) {
                 m.imageText = String(d.imageText);
@@ -60544,8 +60516,8 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                 m.alignment = 2;
                 break;
             }
-            if (d.tapLinkURL != null) {
-                m.tapLinkURL = String(d.tapLinkURL);
+            if (d.tapLinkUrl != null) {
+                m.tapLinkUrl = String(d.tapLinkUrl);
             }
             return m;
         };
@@ -60554,10 +60526,10 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.imageURL != null && m.hasOwnProperty("imageURL")) {
-                d.imageURL = WAAICommonDeprecated.AIRichResponseImageURL.toObject(m.imageURL, o);
+            if (m.imageUrl != null && m.hasOwnProperty("imageUrl")) {
+                d.imageUrl = WAAICommonDeprecated.AIRichResponseImageURL.toObject(m.imageUrl, o);
                 if (o.oneofs)
-                    d._imageURL = "imageURL";
+                    d._imageUrl = "imageUrl";
             }
             if (m.imageText != null && m.hasOwnProperty("imageText")) {
                 d.imageText = m.imageText;
@@ -60569,10 +60541,10 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                 if (o.oneofs)
                     d._alignment = "alignment";
             }
-            if (m.tapLinkURL != null && m.hasOwnProperty("tapLinkURL")) {
-                d.tapLinkURL = m.tapLinkURL;
+            if (m.tapLinkUrl != null && m.hasOwnProperty("tapLinkUrl")) {
+                d.tapLinkUrl = m.tapLinkUrl;
                 if (o.oneofs)
-                    d._tapLinkURL = "tapLinkURL";
+                    d._tapLinkUrl = "tapLinkUrl";
             }
             return d;
         };
@@ -60894,7 +60866,7 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
 
         AIRichResponseDynamicMetadata.prototype.type = null;
         AIRichResponseDynamicMetadata.prototype.version = null;
-        AIRichResponseDynamicMetadata.prototype.URL = null;
+        AIRichResponseDynamicMetadata.prototype.url = null;
         AIRichResponseDynamicMetadata.prototype.loopCount = null;
 
         let $oneOfFields;
@@ -60912,8 +60884,8 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseDynamicMetadata.prototype, "_URL", {
-            get: $util.oneOfGetter($oneOfFields = ["URL"]),
+        Object.defineProperty(AIRichResponseDynamicMetadata.prototype, "_url", {
+            get: $util.oneOfGetter($oneOfFields = ["url"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -60934,8 +60906,8 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                 w.uint32(8).int32(m.type);
             if (m.version != null && Object.hasOwnProperty.call(m, "version"))
                 w.uint32(16).uint64(m.version);
-            if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                w.uint32(26).string(m.URL);
+            if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                w.uint32(26).string(m.url);
             if (m.loopCount != null && Object.hasOwnProperty.call(m, "loopCount"))
                 w.uint32(32).uint32(m.loopCount);
             return w;
@@ -60963,7 +60935,7 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                         break;
                     }
                 case 3: {
-                        m.URL = r.string();
+                        m.url = r.string();
                         break;
                     }
                 case 4: {
@@ -61016,8 +60988,8 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                 else if (typeof d.version === "object")
                     m.version = new $util.LongBits(d.version.low >>> 0, d.version.high >>> 0).toNumber(true);
             }
-            if (d.URL != null) {
-                m.URL = String(d.URL);
+            if (d.url != null) {
+                m.url = String(d.url);
             }
             if (d.loopCount != null) {
                 m.loopCount = d.loopCount >>> 0;
@@ -61042,10 +61014,10 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                 if (o.oneofs)
                     d._version = "version";
             }
-            if (m.URL != null && m.hasOwnProperty("URL")) {
-                d.URL = m.URL;
+            if (m.url != null && m.hasOwnProperty("url")) {
+                d.url = m.url;
                 if (o.oneofs)
-                    d._URL = "URL";
+                    d._url = "url";
             }
             if (m.loopCount != null && m.hasOwnProperty("loopCount")) {
                 d.loopCount = m.loopCount;
@@ -61328,9 +61300,9 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
             }
 
             AIRichResponseReelItem.prototype.title = null;
-            AIRichResponseReelItem.prototype.profileIconURL = null;
-            AIRichResponseReelItem.prototype.thumbnailURL = null;
-            AIRichResponseReelItem.prototype.videoURL = null;
+            AIRichResponseReelItem.prototype.profileIconUrl = null;
+            AIRichResponseReelItem.prototype.thumbnailUrl = null;
+            AIRichResponseReelItem.prototype.videoUrl = null;
 
             let $oneOfFields;
 
@@ -61341,20 +61313,20 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIRichResponseReelItem.prototype, "_profileIconURL", {
-                get: $util.oneOfGetter($oneOfFields = ["profileIconURL"]),
+            Object.defineProperty(AIRichResponseReelItem.prototype, "_profileIconUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["profileIconUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIRichResponseReelItem.prototype, "_thumbnailURL", {
-                get: $util.oneOfGetter($oneOfFields = ["thumbnailURL"]),
+            Object.defineProperty(AIRichResponseReelItem.prototype, "_thumbnailUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["thumbnailUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIRichResponseReelItem.prototype, "_videoURL", {
-                get: $util.oneOfGetter($oneOfFields = ["videoURL"]),
+            Object.defineProperty(AIRichResponseReelItem.prototype, "_videoUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["videoUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -61367,12 +61339,12 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                     w = $Writer.create();
                 if (m.title != null && Object.hasOwnProperty.call(m, "title"))
                     w.uint32(10).string(m.title);
-                if (m.profileIconURL != null && Object.hasOwnProperty.call(m, "profileIconURL"))
-                    w.uint32(18).string(m.profileIconURL);
-                if (m.thumbnailURL != null && Object.hasOwnProperty.call(m, "thumbnailURL"))
-                    w.uint32(26).string(m.thumbnailURL);
-                if (m.videoURL != null && Object.hasOwnProperty.call(m, "videoURL"))
-                    w.uint32(34).string(m.videoURL);
+                if (m.profileIconUrl != null && Object.hasOwnProperty.call(m, "profileIconUrl"))
+                    w.uint32(18).string(m.profileIconUrl);
+                if (m.thumbnailUrl != null && Object.hasOwnProperty.call(m, "thumbnailUrl"))
+                    w.uint32(26).string(m.thumbnailUrl);
+                if (m.videoUrl != null && Object.hasOwnProperty.call(m, "videoUrl"))
+                    w.uint32(34).string(m.videoUrl);
                 return w;
             };
 
@@ -61394,15 +61366,15 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                             break;
                         }
                     case 2: {
-                            m.profileIconURL = r.string();
+                            m.profileIconUrl = r.string();
                             break;
                         }
                     case 3: {
-                            m.thumbnailURL = r.string();
+                            m.thumbnailUrl = r.string();
                             break;
                         }
                     case 4: {
-                            m.videoURL = r.string();
+                            m.videoUrl = r.string();
                             break;
                         }
                     default:
@@ -61424,14 +61396,14 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                 if (d.title != null) {
                     m.title = String(d.title);
                 }
-                if (d.profileIconURL != null) {
-                    m.profileIconURL = String(d.profileIconURL);
+                if (d.profileIconUrl != null) {
+                    m.profileIconUrl = String(d.profileIconUrl);
                 }
-                if (d.thumbnailURL != null) {
-                    m.thumbnailURL = String(d.thumbnailURL);
+                if (d.thumbnailUrl != null) {
+                    m.thumbnailUrl = String(d.thumbnailUrl);
                 }
-                if (d.videoURL != null) {
-                    m.videoURL = String(d.videoURL);
+                if (d.videoUrl != null) {
+                    m.videoUrl = String(d.videoUrl);
                 }
                 return m;
             };
@@ -61445,20 +61417,20 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                     if (o.oneofs)
                         d._title = "title";
                 }
-                if (m.profileIconURL != null && m.hasOwnProperty("profileIconURL")) {
-                    d.profileIconURL = m.profileIconURL;
+                if (m.profileIconUrl != null && m.hasOwnProperty("profileIconUrl")) {
+                    d.profileIconUrl = m.profileIconUrl;
                     if (o.oneofs)
-                        d._profileIconURL = "profileIconURL";
+                        d._profileIconUrl = "profileIconUrl";
                 }
-                if (m.thumbnailURL != null && m.hasOwnProperty("thumbnailURL")) {
-                    d.thumbnailURL = m.thumbnailURL;
+                if (m.thumbnailUrl != null && m.hasOwnProperty("thumbnailUrl")) {
+                    d.thumbnailUrl = m.thumbnailUrl;
                     if (o.oneofs)
-                        d._thumbnailURL = "thumbnailURL";
+                        d._thumbnailUrl = "thumbnailUrl";
                 }
-                if (m.videoURL != null && m.hasOwnProperty("videoURL")) {
-                    d.videoURL = m.videoURL;
+                if (m.videoUrl != null && m.hasOwnProperty("videoUrl")) {
+                    d.videoUrl = m.videoUrl;
                     if (o.oneofs)
-                        d._videoURL = "videoURL";
+                        d._videoUrl = "videoUrl";
                 }
                 return d;
             };
@@ -61489,27 +61461,27 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        AIRichResponseImageURL.prototype.imagePreviewURL = null;
-        AIRichResponseImageURL.prototype.imageHighResURL = null;
-        AIRichResponseImageURL.prototype.sourceURL = null;
+        AIRichResponseImageURL.prototype.imagePreviewUrl = null;
+        AIRichResponseImageURL.prototype.imageHighResUrl = null;
+        AIRichResponseImageURL.prototype.sourceUrl = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseImageURL.prototype, "_imagePreviewURL", {
-            get: $util.oneOfGetter($oneOfFields = ["imagePreviewURL"]),
+        Object.defineProperty(AIRichResponseImageURL.prototype, "_imagePreviewUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["imagePreviewUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseImageURL.prototype, "_imageHighResURL", {
-            get: $util.oneOfGetter($oneOfFields = ["imageHighResURL"]),
+        Object.defineProperty(AIRichResponseImageURL.prototype, "_imageHighResUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["imageHighResUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseImageURL.prototype, "_sourceURL", {
-            get: $util.oneOfGetter($oneOfFields = ["sourceURL"]),
+        Object.defineProperty(AIRichResponseImageURL.prototype, "_sourceUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["sourceUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -61520,12 +61492,12 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
         AIRichResponseImageURL.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.imagePreviewURL != null && Object.hasOwnProperty.call(m, "imagePreviewURL"))
-                w.uint32(10).string(m.imagePreviewURL);
-            if (m.imageHighResURL != null && Object.hasOwnProperty.call(m, "imageHighResURL"))
-                w.uint32(18).string(m.imageHighResURL);
-            if (m.sourceURL != null && Object.hasOwnProperty.call(m, "sourceURL"))
-                w.uint32(26).string(m.sourceURL);
+            if (m.imagePreviewUrl != null && Object.hasOwnProperty.call(m, "imagePreviewUrl"))
+                w.uint32(10).string(m.imagePreviewUrl);
+            if (m.imageHighResUrl != null && Object.hasOwnProperty.call(m, "imageHighResUrl"))
+                w.uint32(18).string(m.imageHighResUrl);
+            if (m.sourceUrl != null && Object.hasOwnProperty.call(m, "sourceUrl"))
+                w.uint32(26).string(m.sourceUrl);
             return w;
         };
 
@@ -61543,15 +61515,15 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.imagePreviewURL = r.string();
+                        m.imagePreviewUrl = r.string();
                         break;
                     }
                 case 2: {
-                        m.imageHighResURL = r.string();
+                        m.imageHighResUrl = r.string();
                         break;
                     }
                 case 3: {
-                        m.sourceURL = r.string();
+                        m.sourceUrl = r.string();
                         break;
                     }
                 default:
@@ -61570,14 +61542,14 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAICommonDeprecated.AIRichResponseImageURL();
-            if (d.imagePreviewURL != null) {
-                m.imagePreviewURL = String(d.imagePreviewURL);
+            if (d.imagePreviewUrl != null) {
+                m.imagePreviewUrl = String(d.imagePreviewUrl);
             }
-            if (d.imageHighResURL != null) {
-                m.imageHighResURL = String(d.imageHighResURL);
+            if (d.imageHighResUrl != null) {
+                m.imageHighResUrl = String(d.imageHighResUrl);
             }
-            if (d.sourceURL != null) {
-                m.sourceURL = String(d.sourceURL);
+            if (d.sourceUrl != null) {
+                m.sourceUrl = String(d.sourceUrl);
             }
             return m;
         };
@@ -61586,20 +61558,20 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.imagePreviewURL != null && m.hasOwnProperty("imagePreviewURL")) {
-                d.imagePreviewURL = m.imagePreviewURL;
+            if (m.imagePreviewUrl != null && m.hasOwnProperty("imagePreviewUrl")) {
+                d.imagePreviewUrl = m.imagePreviewUrl;
                 if (o.oneofs)
-                    d._imagePreviewURL = "imagePreviewURL";
+                    d._imagePreviewUrl = "imagePreviewUrl";
             }
-            if (m.imageHighResURL != null && m.hasOwnProperty("imageHighResURL")) {
-                d.imageHighResURL = m.imageHighResURL;
+            if (m.imageHighResUrl != null && m.hasOwnProperty("imageHighResUrl")) {
+                d.imageHighResUrl = m.imageHighResUrl;
                 if (o.oneofs)
-                    d._imageHighResURL = "imageHighResURL";
+                    d._imageHighResUrl = "imageHighResUrl";
             }
-            if (m.sourceURL != null && m.hasOwnProperty("sourceURL")) {
-                d.sourceURL = m.sourceURL;
+            if (m.sourceUrl != null && m.hasOwnProperty("sourceUrl")) {
+                d.sourceUrl = m.sourceUrl;
                 if (o.oneofs)
-                    d._sourceURL = "sourceURL";
+                    d._sourceUrl = "sourceUrl";
             }
             return d;
         };
@@ -61621,21 +61593,21 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
     WAAICommonDeprecated.AIRichResponseGridImageMetadata = (function() {
 
         function AIRichResponseGridImageMetadata(p) {
-            this.imageURLs = [];
+            this.imageUrls = [];
             if (p)
                 for (var ks = Object.keys(p), i = 0; i < ks.length; ++i)
                     if (p[ks[i]] != null && ks[i] !== "__proto__")
                         this[ks[i]] = p[ks[i]];
         }
 
-        AIRichResponseGridImageMetadata.prototype.gridImageURL = null;
-        AIRichResponseGridImageMetadata.prototype.imageURLs = $util.emptyArray;
+        AIRichResponseGridImageMetadata.prototype.gridImageUrl = null;
+        AIRichResponseGridImageMetadata.prototype.imageUrls = $util.emptyArray;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(AIRichResponseGridImageMetadata.prototype, "_gridImageURL", {
-            get: $util.oneOfGetter($oneOfFields = ["gridImageURL"]),
+        Object.defineProperty(AIRichResponseGridImageMetadata.prototype, "_gridImageUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["gridImageUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -61646,11 +61618,11 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
         AIRichResponseGridImageMetadata.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.gridImageURL != null && Object.hasOwnProperty.call(m, "gridImageURL"))
-                WAAICommonDeprecated.AIRichResponseImageURL.encode(m.gridImageURL, w.uint32(10).fork()).ldelim();
-            if (m.imageURLs != null && m.imageURLs.length) {
-                for (var i = 0; i < m.imageURLs.length; ++i)
-                    WAAICommonDeprecated.AIRichResponseImageURL.encode(m.imageURLs[i], w.uint32(18).fork()).ldelim();
+            if (m.gridImageUrl != null && Object.hasOwnProperty.call(m, "gridImageUrl"))
+                WAAICommonDeprecated.AIRichResponseImageURL.encode(m.gridImageUrl, w.uint32(10).fork()).ldelim();
+            if (m.imageUrls != null && m.imageUrls.length) {
+                for (var i = 0; i < m.imageUrls.length; ++i)
+                    WAAICommonDeprecated.AIRichResponseImageURL.encode(m.imageUrls[i], w.uint32(18).fork()).ldelim();
             }
             return w;
         };
@@ -61669,13 +61641,13 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.gridImageURL = WAAICommonDeprecated.AIRichResponseImageURL.decode(r, r.uint32(), undefined, n + 1);
+                        m.gridImageUrl = WAAICommonDeprecated.AIRichResponseImageURL.decode(r, r.uint32(), undefined, n + 1);
                         break;
                     }
                 case 2: {
-                        if (!(m.imageURLs && m.imageURLs.length))
-                            m.imageURLs = [];
-                        m.imageURLs.push(WAAICommonDeprecated.AIRichResponseImageURL.decode(r, r.uint32(), undefined, n + 1));
+                        if (!(m.imageUrls && m.imageUrls.length))
+                            m.imageUrls = [];
+                        m.imageUrls.push(WAAICommonDeprecated.AIRichResponseImageURL.decode(r, r.uint32(), undefined, n + 1));
                         break;
                     }
                 default:
@@ -61694,19 +61666,19 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAICommonDeprecated.AIRichResponseGridImageMetadata();
-            if (d.gridImageURL != null) {
-                if (typeof d.gridImageURL !== "object")
-                    throw TypeError(".WAAICommonDeprecated.AIRichResponseGridImageMetadata.gridImageURL: object expected");
-                m.gridImageURL = WAAICommonDeprecated.AIRichResponseImageURL.fromObject(d.gridImageURL, n + 1);
+            if (d.gridImageUrl != null) {
+                if (typeof d.gridImageUrl !== "object")
+                    throw TypeError(".WAAICommonDeprecated.AIRichResponseGridImageMetadata.gridImageUrl: object expected");
+                m.gridImageUrl = WAAICommonDeprecated.AIRichResponseImageURL.fromObject(d.gridImageUrl, n + 1);
             }
-            if (d.imageURLs) {
-                if (!Array.isArray(d.imageURLs))
-                    throw TypeError(".WAAICommonDeprecated.AIRichResponseGridImageMetadata.imageURLs: array expected");
-                m.imageURLs = [];
-                for (var i = 0; i < d.imageURLs.length; ++i) {
-                    if (typeof d.imageURLs[i] !== "object")
-                        throw TypeError(".WAAICommonDeprecated.AIRichResponseGridImageMetadata.imageURLs: object expected");
-                    m.imageURLs[i] = WAAICommonDeprecated.AIRichResponseImageURL.fromObject(d.imageURLs[i], n + 1);
+            if (d.imageUrls) {
+                if (!Array.isArray(d.imageUrls))
+                    throw TypeError(".WAAICommonDeprecated.AIRichResponseGridImageMetadata.imageUrls: array expected");
+                m.imageUrls = [];
+                for (var i = 0; i < d.imageUrls.length; ++i) {
+                    if (typeof d.imageUrls[i] !== "object")
+                        throw TypeError(".WAAICommonDeprecated.AIRichResponseGridImageMetadata.imageUrls: object expected");
+                    m.imageUrls[i] = WAAICommonDeprecated.AIRichResponseImageURL.fromObject(d.imageUrls[i], n + 1);
                 }
             }
             return m;
@@ -61717,17 +61689,17 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                 o = {};
             var d = {};
             if (o.arrays || o.defaults) {
-                d.imageURLs = [];
+                d.imageUrls = [];
             }
-            if (m.gridImageURL != null && m.hasOwnProperty("gridImageURL")) {
-                d.gridImageURL = WAAICommonDeprecated.AIRichResponseImageURL.toObject(m.gridImageURL, o);
+            if (m.gridImageUrl != null && m.hasOwnProperty("gridImageUrl")) {
+                d.gridImageUrl = WAAICommonDeprecated.AIRichResponseImageURL.toObject(m.gridImageUrl, o);
                 if (o.oneofs)
-                    d._gridImageURL = "gridImageURL";
+                    d._gridImageUrl = "gridImageUrl";
             }
-            if (m.imageURLs && m.imageURLs.length) {
-                d.imageURLs = [];
-                for (var j = 0; j < m.imageURLs.length; ++j) {
-                    d.imageURLs[j] = WAAICommonDeprecated.AIRichResponseImageURL.toObject(m.imageURLs[j], o);
+            if (m.imageUrls && m.imageUrls.length) {
+                d.imageUrls = [];
+                for (var j = 0; j < m.imageUrls.length; ++j) {
+                    d.imageUrls[j] = WAAICommonDeprecated.AIRichResponseImageURL.toObject(m.imageUrls[j], o);
                 }
             }
             return d;
@@ -62133,7 +62105,7 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
             }
 
             AIRichResponseLatexExpression.prototype.latexExpression = null;
-            AIRichResponseLatexExpression.prototype.URL = null;
+            AIRichResponseLatexExpression.prototype.url = null;
             AIRichResponseLatexExpression.prototype.width = null;
             AIRichResponseLatexExpression.prototype.height = null;
             AIRichResponseLatexExpression.prototype.fontHeight = null;
@@ -62151,8 +62123,8 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(AIRichResponseLatexExpression.prototype, "_URL", {
-                get: $util.oneOfGetter($oneOfFields = ["URL"]),
+            Object.defineProperty(AIRichResponseLatexExpression.prototype, "_url", {
+                get: $util.oneOfGetter($oneOfFields = ["url"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -62207,8 +62179,8 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                     w = $Writer.create();
                 if (m.latexExpression != null && Object.hasOwnProperty.call(m, "latexExpression"))
                     w.uint32(10).string(m.latexExpression);
-                if (m.URL != null && Object.hasOwnProperty.call(m, "URL"))
-                    w.uint32(18).string(m.URL);
+                if (m.url != null && Object.hasOwnProperty.call(m, "url"))
+                    w.uint32(18).string(m.url);
                 if (m.width != null && Object.hasOwnProperty.call(m, "width"))
                     w.uint32(25).double(m.width);
                 if (m.height != null && Object.hasOwnProperty.call(m, "height"))
@@ -62244,7 +62216,7 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                             break;
                         }
                     case 2: {
-                            m.URL = r.string();
+                            m.url = r.string();
                             break;
                         }
                     case 3: {
@@ -62294,8 +62266,8 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                 if (d.latexExpression != null) {
                     m.latexExpression = String(d.latexExpression);
                 }
-                if (d.URL != null) {
-                    m.URL = String(d.URL);
+                if (d.url != null) {
+                    m.url = String(d.url);
                 }
                 if (d.width != null) {
                     m.width = Number(d.width);
@@ -62330,10 +62302,10 @@ export const WAAICommonDeprecated = WAAICommonDeprecated = (() => {
                     if (o.oneofs)
                         d._latexExpression = "latexExpression";
                 }
-                if (m.URL != null && m.hasOwnProperty("URL")) {
-                    d.URL = m.URL;
+                if (m.url != null && m.hasOwnProperty("url")) {
+                    d.url = m.url;
                     if (o.oneofs)
-                        d._URL = "URL";
+                        d._url = "url";
                 }
                 if (m.width != null && m.hasOwnProperty("width")) {
                     d.width = o.json && !isFinite(m.width) ? String(m.width) : m.width;
@@ -63152,7 +63124,7 @@ export const WAAdv = WAAdv = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        ADVKeyIndexList.prototype.rawID = null;
+        ADVKeyIndexList.prototype.rawId = null;
         ADVKeyIndexList.prototype.timestamp = null;
         ADVKeyIndexList.prototype.currentIndex = null;
         ADVKeyIndexList.prototype.validIndexes = $util.emptyArray;
@@ -63161,8 +63133,8 @@ export const WAAdv = WAAdv = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ADVKeyIndexList.prototype, "_rawID", {
-            get: $util.oneOfGetter($oneOfFields = ["rawID"]),
+        Object.defineProperty(ADVKeyIndexList.prototype, "_rawId", {
+            get: $util.oneOfGetter($oneOfFields = ["rawId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -63191,8 +63163,8 @@ export const WAAdv = WAAdv = (() => {
         ADVKeyIndexList.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.rawID != null && Object.hasOwnProperty.call(m, "rawID"))
-                w.uint32(8).uint32(m.rawID);
+            if (m.rawId != null && Object.hasOwnProperty.call(m, "rawId"))
+                w.uint32(8).uint32(m.rawId);
             if (m.timestamp != null && Object.hasOwnProperty.call(m, "timestamp"))
                 w.uint32(16).uint64(m.timestamp);
             if (m.currentIndex != null && Object.hasOwnProperty.call(m, "currentIndex"))
@@ -63222,7 +63194,7 @@ export const WAAdv = WAAdv = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.rawID = r.uint32();
+                        m.rawId = r.uint32();
                         break;
                     }
                 case 2: {
@@ -63264,8 +63236,8 @@ export const WAAdv = WAAdv = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAdv.ADVKeyIndexList();
-            if (d.rawID != null) {
-                m.rawID = d.rawID >>> 0;
+            if (d.rawId != null) {
+                m.rawId = d.rawId >>> 0;
             }
             if (d.timestamp != null) {
                 if ($util.Long)
@@ -63318,10 +63290,10 @@ export const WAAdv = WAAdv = (() => {
             if (o.arrays || o.defaults) {
                 d.validIndexes = [];
             }
-            if (m.rawID != null && m.hasOwnProperty("rawID")) {
-                d.rawID = m.rawID;
+            if (m.rawId != null && m.hasOwnProperty("rawId")) {
+                d.rawId = m.rawId;
                 if (o.oneofs)
-                    d._rawID = "rawID";
+                    d._rawId = "rawId";
             }
             if (m.timestamp != null && m.hasOwnProperty("timestamp")) {
                 if (typeof m.timestamp === "number")
@@ -63520,7 +63492,7 @@ export const WAAdv = WAAdv = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        ADVDeviceIdentity.prototype.rawID = null;
+        ADVDeviceIdentity.prototype.rawId = null;
         ADVDeviceIdentity.prototype.timestamp = null;
         ADVDeviceIdentity.prototype.keyIndex = null;
         ADVDeviceIdentity.prototype.accountType = null;
@@ -63529,8 +63501,8 @@ export const WAAdv = WAAdv = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ADVDeviceIdentity.prototype, "_rawID", {
-            get: $util.oneOfGetter($oneOfFields = ["rawID"]),
+        Object.defineProperty(ADVDeviceIdentity.prototype, "_rawId", {
+            get: $util.oneOfGetter($oneOfFields = ["rawId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -63565,8 +63537,8 @@ export const WAAdv = WAAdv = (() => {
         ADVDeviceIdentity.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.rawID != null && Object.hasOwnProperty.call(m, "rawID"))
-                w.uint32(8).uint32(m.rawID);
+            if (m.rawId != null && Object.hasOwnProperty.call(m, "rawId"))
+                w.uint32(8).uint32(m.rawId);
             if (m.timestamp != null && Object.hasOwnProperty.call(m, "timestamp"))
                 w.uint32(16).uint64(m.timestamp);
             if (m.keyIndex != null && Object.hasOwnProperty.call(m, "keyIndex"))
@@ -63592,7 +63564,7 @@ export const WAAdv = WAAdv = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.rawID = r.uint32();
+                        m.rawId = r.uint32();
                         break;
                     }
                 case 2: {
@@ -63627,8 +63599,8 @@ export const WAAdv = WAAdv = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAAdv.ADVDeviceIdentity();
-            if (d.rawID != null) {
-                m.rawID = d.rawID >>> 0;
+            if (d.rawId != null) {
+                m.rawId = d.rawId >>> 0;
             }
             if (d.timestamp != null) {
                 if ($util.Long)
@@ -63690,10 +63662,10 @@ export const WAAdv = WAAdv = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.rawID != null && m.hasOwnProperty("rawID")) {
-                d.rawID = m.rawID;
+            if (m.rawId != null && m.hasOwnProperty("rawId")) {
+                d.rawId = m.rawId;
                 if (o.oneofs)
-                    d._rawID = "rawID";
+                    d._rawId = "rawId";
             }
             if (m.timestamp != null && m.hasOwnProperty("timestamp")) {
                 if (typeof m.timestamp === "number")
@@ -63916,7 +63888,7 @@ export const WAAdv = WAAdv = (() => {
         }
 
         ADVSignedDeviceIdentityHMAC.prototype.details = null;
-        ADVSignedDeviceIdentityHMAC.prototype.HMAC = null;
+        ADVSignedDeviceIdentityHMAC.prototype.hmac = null;
         ADVSignedDeviceIdentityHMAC.prototype.accountType = null;
 
         let $oneOfFields;
@@ -63928,8 +63900,8 @@ export const WAAdv = WAAdv = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ADVSignedDeviceIdentityHMAC.prototype, "_HMAC", {
-            get: $util.oneOfGetter($oneOfFields = ["HMAC"]),
+        Object.defineProperty(ADVSignedDeviceIdentityHMAC.prototype, "_hmac", {
+            get: $util.oneOfGetter($oneOfFields = ["hmac"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -63948,8 +63920,8 @@ export const WAAdv = WAAdv = (() => {
                 w = $Writer.create();
             if (m.details != null && Object.hasOwnProperty.call(m, "details"))
                 w.uint32(10).bytes(m.details);
-            if (m.HMAC != null && Object.hasOwnProperty.call(m, "HMAC"))
-                w.uint32(18).bytes(m.HMAC);
+            if (m.hmac != null && Object.hasOwnProperty.call(m, "hmac"))
+                w.uint32(18).bytes(m.hmac);
             if (m.accountType != null && Object.hasOwnProperty.call(m, "accountType"))
                 w.uint32(24).int32(m.accountType);
             return w;
@@ -63973,7 +63945,7 @@ export const WAAdv = WAAdv = (() => {
                         break;
                     }
                 case 2: {
-                        m.HMAC = r.bytes();
+                        m.hmac = r.bytes();
                         break;
                     }
                 case 3: {
@@ -64002,11 +63974,11 @@ export const WAAdv = WAAdv = (() => {
                 else if (d.details.length >= 0)
                     m.details = d.details;
             }
-            if (d.HMAC != null) {
-                if (typeof d.HMAC === "string")
-                    $util.base64.decode(d.HMAC, m.HMAC = $util.newBuffer($util.base64.length(d.HMAC)), 0);
-                else if (d.HMAC.length >= 0)
-                    m.HMAC = d.HMAC;
+            if (d.hmac != null) {
+                if (typeof d.hmac === "string")
+                    $util.base64.decode(d.hmac, m.hmac = $util.newBuffer($util.base64.length(d.hmac)), 0);
+                else if (d.hmac.length >= 0)
+                    m.hmac = d.hmac;
             }
             switch (d.accountType) {
             default:
@@ -64040,10 +64012,10 @@ export const WAAdv = WAAdv = (() => {
                 if (o.oneofs)
                     d._details = "details";
             }
-            if (m.HMAC != null && m.hasOwnProperty("HMAC")) {
-                d.HMAC = o.bytes === String ? $util.base64.encode(m.HMAC, 0, m.HMAC.length) : o.bytes === Array ? Array.prototype.slice.call(m.HMAC) : m.HMAC;
+            if (m.hmac != null && m.hasOwnProperty("hmac")) {
+                d.hmac = o.bytes === String ? $util.base64.encode(m.hmac, 0, m.hmac.length) : o.bytes === Array ? Array.prototype.slice.call(m.hmac) : m.hmac;
                 if (o.oneofs)
-                    d._HMAC = "HMAC";
+                    d._hmac = "hmac";
             }
             if (m.accountType != null && m.hasOwnProperty("accountType")) {
                 d.accountType = o.enums === String ? WAAdv.ADVEncryptionType[m.accountType] === undefined ? m.accountType : WAAdv.ADVEncryptionType[m.accountType] : m.accountType;
@@ -65907,7 +65879,7 @@ export const WACompanionReg = WACompanionReg = (() => {
         }
 
         EncryptedPairingRequest.prototype.encryptedPayload = null;
-        EncryptedPairingRequest.prototype.IV = null;
+        EncryptedPairingRequest.prototype.iv = null;
 
         let $oneOfFields;
 
@@ -65918,8 +65890,8 @@ export const WACompanionReg = WACompanionReg = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EncryptedPairingRequest.prototype, "_IV", {
-            get: $util.oneOfGetter($oneOfFields = ["IV"]),
+        Object.defineProperty(EncryptedPairingRequest.prototype, "_iv", {
+            get: $util.oneOfGetter($oneOfFields = ["iv"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -65932,8 +65904,8 @@ export const WACompanionReg = WACompanionReg = (() => {
                 w = $Writer.create();
             if (m.encryptedPayload != null && Object.hasOwnProperty.call(m, "encryptedPayload"))
                 w.uint32(10).bytes(m.encryptedPayload);
-            if (m.IV != null && Object.hasOwnProperty.call(m, "IV"))
-                w.uint32(18).bytes(m.IV);
+            if (m.iv != null && Object.hasOwnProperty.call(m, "iv"))
+                w.uint32(18).bytes(m.iv);
             return w;
         };
 
@@ -65955,7 +65927,7 @@ export const WACompanionReg = WACompanionReg = (() => {
                         break;
                     }
                 case 2: {
-                        m.IV = r.bytes();
+                        m.iv = r.bytes();
                         break;
                     }
                 default:
@@ -65980,11 +65952,11 @@ export const WACompanionReg = WACompanionReg = (() => {
                 else if (d.encryptedPayload.length >= 0)
                     m.encryptedPayload = d.encryptedPayload;
             }
-            if (d.IV != null) {
-                if (typeof d.IV === "string")
-                    $util.base64.decode(d.IV, m.IV = $util.newBuffer($util.base64.length(d.IV)), 0);
-                else if (d.IV.length >= 0)
-                    m.IV = d.IV;
+            if (d.iv != null) {
+                if (typeof d.iv === "string")
+                    $util.base64.decode(d.iv, m.iv = $util.newBuffer($util.base64.length(d.iv)), 0);
+                else if (d.iv.length >= 0)
+                    m.iv = d.iv;
             }
             return m;
         };
@@ -65998,10 +65970,10 @@ export const WACompanionReg = WACompanionReg = (() => {
                 if (o.oneofs)
                     d._encryptedPayload = "encryptedPayload";
             }
-            if (m.IV != null && m.hasOwnProperty("IV")) {
-                d.IV = o.bytes === String ? $util.base64.encode(m.IV, 0, m.IV.length) : o.bytes === Array ? Array.prototype.slice.call(m.IV) : m.IV;
+            if (m.iv != null && m.hasOwnProperty("iv")) {
+                d.iv = o.bytes === String ? $util.base64.encode(m.iv, 0, m.iv.length) : o.bytes === Array ? Array.prototype.slice.call(m.iv) : m.iv;
                 if (o.oneofs)
-                    d._IV = "IV";
+                    d._iv = "iv";
             }
             return d;
         };
@@ -66219,7 +66191,7 @@ export const WAMmsRetry = WAMmsRetry = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        MediaRetryNotification.prototype.stanzaID = null;
+        MediaRetryNotification.prototype.stanzaId = null;
         MediaRetryNotification.prototype.directPath = null;
         MediaRetryNotification.prototype.result = null;
         MediaRetryNotification.prototype.messageSecret = null;
@@ -66227,8 +66199,8 @@ export const WAMmsRetry = WAMmsRetry = (() => {
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(MediaRetryNotification.prototype, "_stanzaID", {
-            get: $util.oneOfGetter($oneOfFields = ["stanzaID"]),
+        Object.defineProperty(MediaRetryNotification.prototype, "_stanzaId", {
+            get: $util.oneOfGetter($oneOfFields = ["stanzaId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -66257,8 +66229,8 @@ export const WAMmsRetry = WAMmsRetry = (() => {
         MediaRetryNotification.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.stanzaID != null && Object.hasOwnProperty.call(m, "stanzaID"))
-                w.uint32(10).string(m.stanzaID);
+            if (m.stanzaId != null && Object.hasOwnProperty.call(m, "stanzaId"))
+                w.uint32(10).string(m.stanzaId);
             if (m.directPath != null && Object.hasOwnProperty.call(m, "directPath"))
                 w.uint32(18).string(m.directPath);
             if (m.result != null && Object.hasOwnProperty.call(m, "result"))
@@ -66282,7 +66254,7 @@ export const WAMmsRetry = WAMmsRetry = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.stanzaID = r.string();
+                        m.stanzaId = r.string();
                         break;
                     }
                 case 2: {
@@ -66313,8 +66285,8 @@ export const WAMmsRetry = WAMmsRetry = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAMmsRetry.MediaRetryNotification();
-            if (d.stanzaID != null) {
-                m.stanzaID = String(d.stanzaID);
+            if (d.stanzaId != null) {
+                m.stanzaId = String(d.stanzaId);
             }
             if (d.directPath != null) {
                 m.directPath = String(d.directPath);
@@ -66356,10 +66328,10 @@ export const WAMmsRetry = WAMmsRetry = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.stanzaID != null && m.hasOwnProperty("stanzaID")) {
-                d.stanzaID = m.stanzaID;
+            if (m.stanzaId != null && m.hasOwnProperty("stanzaId")) {
+                d.stanzaId = m.stanzaId;
                 if (o.oneofs)
-                    d._stanzaID = "stanzaID";
+                    d._stanzaId = "stanzaId";
             }
             if (m.directPath != null && m.hasOwnProperty("directPath")) {
                 d.directPath = m.directPath;
@@ -66411,13 +66383,13 @@ export const WAMmsRetry = WAMmsRetry = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        ServerErrorReceipt.prototype.stanzaID = null;
+        ServerErrorReceipt.prototype.stanzaId = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ServerErrorReceipt.prototype, "_stanzaID", {
-            get: $util.oneOfGetter($oneOfFields = ["stanzaID"]),
+        Object.defineProperty(ServerErrorReceipt.prototype, "_stanzaId", {
+            get: $util.oneOfGetter($oneOfFields = ["stanzaId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -66428,8 +66400,8 @@ export const WAMmsRetry = WAMmsRetry = (() => {
         ServerErrorReceipt.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.stanzaID != null && Object.hasOwnProperty.call(m, "stanzaID"))
-                w.uint32(10).string(m.stanzaID);
+            if (m.stanzaId != null && Object.hasOwnProperty.call(m, "stanzaId"))
+                w.uint32(10).string(m.stanzaId);
             return w;
         };
 
@@ -66447,7 +66419,7 @@ export const WAMmsRetry = WAMmsRetry = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.stanzaID = r.string();
+                        m.stanzaId = r.string();
                         break;
                     }
                 default:
@@ -66466,8 +66438,8 @@ export const WAMmsRetry = WAMmsRetry = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new WAMmsRetry.ServerErrorReceipt();
-            if (d.stanzaID != null) {
-                m.stanzaID = String(d.stanzaID);
+            if (d.stanzaId != null) {
+                m.stanzaId = String(d.stanzaId);
             }
             return m;
         };
@@ -66476,10 +66448,10 @@ export const WAMmsRetry = WAMmsRetry = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.stanzaID != null && m.hasOwnProperty("stanzaID")) {
-                d.stanzaID = m.stanzaID;
+            if (m.stanzaId != null && m.hasOwnProperty("stanzaId")) {
+                d.stanzaId = m.stanzaId;
                 if (o.oneofs)
-                    d._stanzaID = "stanzaID";
+                    d._stanzaId = "stanzaId";
             }
             return d;
         };
@@ -66521,7 +66493,7 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
         StatusAttribution.prototype.rlAttribution = null;
         StatusAttribution.prototype.aiCreatedAttribution = null;
         StatusAttribution.prototype.type = null;
-        StatusAttribution.prototype.actionURL = null;
+        StatusAttribution.prototype.actionUrl = null;
 
         let $oneOfFields;
 
@@ -66537,8 +66509,8 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(StatusAttribution.prototype, "_actionURL", {
-            get: $util.oneOfGetter($oneOfFields = ["actionURL"]),
+        Object.defineProperty(StatusAttribution.prototype, "_actionUrl", {
+            get: $util.oneOfGetter($oneOfFields = ["actionUrl"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -66551,8 +66523,8 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                 w = $Writer.create();
             if (m.type != null && Object.hasOwnProperty.call(m, "type"))
                 w.uint32(8).int32(m.type);
-            if (m.actionURL != null && Object.hasOwnProperty.call(m, "actionURL"))
-                w.uint32(18).string(m.actionURL);
+            if (m.actionUrl != null && Object.hasOwnProperty.call(m, "actionUrl"))
+                w.uint32(18).string(m.actionUrl);
             if (m.statusReshare != null && Object.hasOwnProperty.call(m, "statusReshare"))
                 WAStatusAttributions.StatusAttribution.StatusReshare.encode(m.statusReshare, w.uint32(26).fork()).ldelim();
             if (m.externalShare != null && Object.hasOwnProperty.call(m, "externalShare"))
@@ -66610,7 +66582,7 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                         break;
                     }
                 case 2: {
-                        m.actionURL = r.string();
+                        m.actionUrl = r.string();
                         break;
                     }
                 default:
@@ -66715,8 +66687,8 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                 m.type = 11;
                 break;
             }
-            if (d.actionURL != null) {
-                m.actionURL = String(d.actionURL);
+            if (d.actionUrl != null) {
+                m.actionUrl = String(d.actionUrl);
             }
             return m;
         };
@@ -66730,10 +66702,10 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                 if (o.oneofs)
                     d._type = "type";
             }
-            if (m.actionURL != null && m.hasOwnProperty("actionURL")) {
-                d.actionURL = m.actionURL;
+            if (m.actionUrl != null && m.hasOwnProperty("actionUrl")) {
+                d.actionUrl = m.actionUrl;
                 if (o.oneofs)
-                    d._actionURL = "actionURL";
+                    d._actionUrl = "actionUrl";
             }
             if (m.statusReshare != null && m.hasOwnProperty("statusReshare")) {
                 d.statusReshare = WAStatusAttributions.StatusAttribution.StatusReshare.toObject(m.statusReshare, o);
@@ -67047,16 +67019,16 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            ExternalShare.prototype.actionURL = null;
+            ExternalShare.prototype.actionUrl = null;
             ExternalShare.prototype.source = null;
             ExternalShare.prototype.duration = null;
-            ExternalShare.prototype.actionFallbackURL = null;
+            ExternalShare.prototype.actionFallbackUrl = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ExternalShare.prototype, "_actionURL", {
-                get: $util.oneOfGetter($oneOfFields = ["actionURL"]),
+            Object.defineProperty(ExternalShare.prototype, "_actionUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["actionUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -67073,8 +67045,8 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(ExternalShare.prototype, "_actionFallbackURL", {
-                get: $util.oneOfGetter($oneOfFields = ["actionFallbackURL"]),
+            Object.defineProperty(ExternalShare.prototype, "_actionFallbackUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["actionFallbackUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -67085,14 +67057,14 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
             ExternalShare.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.actionURL != null && Object.hasOwnProperty.call(m, "actionURL"))
-                    w.uint32(10).string(m.actionURL);
+                if (m.actionUrl != null && Object.hasOwnProperty.call(m, "actionUrl"))
+                    w.uint32(10).string(m.actionUrl);
                 if (m.source != null && Object.hasOwnProperty.call(m, "source"))
                     w.uint32(16).int32(m.source);
                 if (m.duration != null && Object.hasOwnProperty.call(m, "duration"))
                     w.uint32(24).int32(m.duration);
-                if (m.actionFallbackURL != null && Object.hasOwnProperty.call(m, "actionFallbackURL"))
-                    w.uint32(34).string(m.actionFallbackURL);
+                if (m.actionFallbackUrl != null && Object.hasOwnProperty.call(m, "actionFallbackUrl"))
+                    w.uint32(34).string(m.actionFallbackUrl);
                 return w;
             };
 
@@ -67110,7 +67082,7 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.actionURL = r.string();
+                            m.actionUrl = r.string();
                             break;
                         }
                     case 2: {
@@ -67122,7 +67094,7 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                             break;
                         }
                     case 4: {
-                            m.actionFallbackURL = r.string();
+                            m.actionFallbackUrl = r.string();
                             break;
                         }
                     default:
@@ -67141,8 +67113,8 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new WAStatusAttributions.StatusAttribution.ExternalShare();
-                if (d.actionURL != null) {
-                    m.actionURL = String(d.actionURL);
+                if (d.actionUrl != null) {
+                    m.actionUrl = String(d.actionUrl);
                 }
                 switch (d.source) {
                 default:
@@ -67207,8 +67179,8 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                 if (d.duration != null) {
                     m.duration = d.duration | 0;
                 }
-                if (d.actionFallbackURL != null) {
-                    m.actionFallbackURL = String(d.actionFallbackURL);
+                if (d.actionFallbackUrl != null) {
+                    m.actionFallbackUrl = String(d.actionFallbackUrl);
                 }
                 return m;
             };
@@ -67217,10 +67189,10 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.actionURL != null && m.hasOwnProperty("actionURL")) {
-                    d.actionURL = m.actionURL;
+                if (m.actionUrl != null && m.hasOwnProperty("actionUrl")) {
+                    d.actionUrl = m.actionUrl;
                     if (o.oneofs)
-                        d._actionURL = "actionURL";
+                        d._actionUrl = "actionUrl";
                 }
                 if (m.source != null && m.hasOwnProperty("source")) {
                     d.source = o.enums === String ? WAStatusAttributions.StatusAttribution.ExternalShare.Source[m.source] === undefined ? m.source : WAStatusAttributions.StatusAttribution.ExternalShare.Source[m.source] : m.source;
@@ -67232,10 +67204,10 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                     if (o.oneofs)
                         d._duration = "duration";
                 }
-                if (m.actionFallbackURL != null && m.hasOwnProperty("actionFallbackURL")) {
-                    d.actionFallbackURL = m.actionFallbackURL;
+                if (m.actionFallbackUrl != null && m.hasOwnProperty("actionFallbackUrl")) {
+                    d.actionFallbackUrl = m.actionFallbackUrl;
                     if (o.oneofs)
-                        d._actionFallbackURL = "actionFallbackURL";
+                        d._actionFallbackUrl = "actionFallbackUrl";
                 }
                 return d;
             };
@@ -67433,8 +67405,8 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                 }
 
                 Metadata.prototype.duration = null;
-                Metadata.prototype.channelJID = null;
-                Metadata.prototype.channelMessageID = null;
+                Metadata.prototype.channelJid = null;
+                Metadata.prototype.channelMessageId = null;
                 Metadata.prototype.hasMultipleReshares = null;
 
                 let $oneOfFields;
@@ -67446,14 +67418,14 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(Metadata.prototype, "_channelJID", {
-                    get: $util.oneOfGetter($oneOfFields = ["channelJID"]),
+                Object.defineProperty(Metadata.prototype, "_channelJid", {
+                    get: $util.oneOfGetter($oneOfFields = ["channelJid"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(Metadata.prototype, "_channelMessageID", {
-                    get: $util.oneOfGetter($oneOfFields = ["channelMessageID"]),
+                Object.defineProperty(Metadata.prototype, "_channelMessageId", {
+                    get: $util.oneOfGetter($oneOfFields = ["channelMessageId"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -67472,10 +67444,10 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                         w = $Writer.create();
                     if (m.duration != null && Object.hasOwnProperty.call(m, "duration"))
                         w.uint32(8).int32(m.duration);
-                    if (m.channelJID != null && Object.hasOwnProperty.call(m, "channelJID"))
-                        w.uint32(18).string(m.channelJID);
-                    if (m.channelMessageID != null && Object.hasOwnProperty.call(m, "channelMessageID"))
-                        w.uint32(24).int32(m.channelMessageID);
+                    if (m.channelJid != null && Object.hasOwnProperty.call(m, "channelJid"))
+                        w.uint32(18).string(m.channelJid);
+                    if (m.channelMessageId != null && Object.hasOwnProperty.call(m, "channelMessageId"))
+                        w.uint32(24).int32(m.channelMessageId);
                     if (m.hasMultipleReshares != null && Object.hasOwnProperty.call(m, "hasMultipleReshares"))
                         w.uint32(32).bool(m.hasMultipleReshares);
                     return w;
@@ -67499,11 +67471,11 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                                 break;
                             }
                         case 2: {
-                                m.channelJID = r.string();
+                                m.channelJid = r.string();
                                 break;
                             }
                         case 3: {
-                                m.channelMessageID = r.int32();
+                                m.channelMessageId = r.int32();
                                 break;
                             }
                         case 4: {
@@ -67529,11 +67501,11 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                     if (d.duration != null) {
                         m.duration = d.duration | 0;
                     }
-                    if (d.channelJID != null) {
-                        m.channelJID = String(d.channelJID);
+                    if (d.channelJid != null) {
+                        m.channelJid = String(d.channelJid);
                     }
-                    if (d.channelMessageID != null) {
-                        m.channelMessageID = d.channelMessageID | 0;
+                    if (d.channelMessageId != null) {
+                        m.channelMessageId = d.channelMessageId | 0;
                     }
                     if (d.hasMultipleReshares != null) {
                         m.hasMultipleReshares = Boolean(d.hasMultipleReshares);
@@ -67550,15 +67522,15 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                         if (o.oneofs)
                             d._duration = "duration";
                     }
-                    if (m.channelJID != null && m.hasOwnProperty("channelJID")) {
-                        d.channelJID = m.channelJID;
+                    if (m.channelJid != null && m.hasOwnProperty("channelJid")) {
+                        d.channelJid = m.channelJid;
                         if (o.oneofs)
-                            d._channelJID = "channelJID";
+                            d._channelJid = "channelJid";
                     }
-                    if (m.channelMessageID != null && m.hasOwnProperty("channelMessageID")) {
-                        d.channelMessageID = m.channelMessageID;
+                    if (m.channelMessageId != null && m.hasOwnProperty("channelMessageId")) {
+                        d.channelMessageId = m.channelMessageId;
                         if (o.oneofs)
-                            d._channelMessageID = "channelMessageID";
+                            d._channelMessageId = "channelMessageId";
                     }
                     if (m.hasMultipleReshares != null && m.hasOwnProperty("hasMultipleReshares")) {
                         d.hasMultipleReshares = m.hasMultipleReshares;
@@ -67594,13 +67566,13 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                             this[ks[i]] = p[ks[i]];
             }
 
-            GroupStatus.prototype.authorJID = null;
+            GroupStatus.prototype.authorJid = null;
 
             let $oneOfFields;
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(GroupStatus.prototype, "_authorJID", {
-                get: $util.oneOfGetter($oneOfFields = ["authorJID"]),
+            Object.defineProperty(GroupStatus.prototype, "_authorJid", {
+                get: $util.oneOfGetter($oneOfFields = ["authorJid"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -67611,8 +67583,8 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
             GroupStatus.encode = function encode(m, w) {
                 if (!w)
                     w = $Writer.create();
-                if (m.authorJID != null && Object.hasOwnProperty.call(m, "authorJID"))
-                    w.uint32(10).string(m.authorJID);
+                if (m.authorJid != null && Object.hasOwnProperty.call(m, "authorJid"))
+                    w.uint32(10).string(m.authorJid);
                 return w;
             };
 
@@ -67630,7 +67602,7 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                         break;
                     switch (t >>> 3) {
                     case 1: {
-                            m.authorJID = r.string();
+                            m.authorJid = r.string();
                             break;
                         }
                     default:
@@ -67649,8 +67621,8 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                 if (n > $util.recursionLimit)
                     throw Error("maximum nesting depth exceeded");
                 var m = new WAStatusAttributions.StatusAttribution.GroupStatus();
-                if (d.authorJID != null) {
-                    m.authorJID = String(d.authorJID);
+                if (d.authorJid != null) {
+                    m.authorJid = String(d.authorJid);
                 }
                 return m;
             };
@@ -67659,10 +67631,10 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                 if (!o)
                     o = {};
                 var d = {};
-                if (m.authorJID != null && m.hasOwnProperty("authorJID")) {
-                    d.authorJID = m.authorJID;
+                if (m.authorJid != null && m.hasOwnProperty("authorJid")) {
+                    d.authorJid = m.authorJid;
                     if (o.oneofs)
-                        d._authorJID = "authorJID";
+                        d._authorJid = "authorJid";
                 }
                 return d;
             };
@@ -67691,7 +67663,7 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
             }
 
             Music.prototype.authorName = null;
-            Music.prototype.songID = null;
+            Music.prototype.songId = null;
             Music.prototype.title = null;
             Music.prototype.author = null;
             Music.prototype.artistAttribution = null;
@@ -67706,8 +67678,8 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(Music.prototype, "_songID", {
-                get: $util.oneOfGetter($oneOfFields = ["songID"]),
+            Object.defineProperty(Music.prototype, "_songId", {
+                get: $util.oneOfGetter($oneOfFields = ["songId"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -67744,8 +67716,8 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                     w = $Writer.create();
                 if (m.authorName != null && Object.hasOwnProperty.call(m, "authorName"))
                     w.uint32(10).string(m.authorName);
-                if (m.songID != null && Object.hasOwnProperty.call(m, "songID"))
-                    w.uint32(18).string(m.songID);
+                if (m.songId != null && Object.hasOwnProperty.call(m, "songId"))
+                    w.uint32(18).string(m.songId);
                 if (m.title != null && Object.hasOwnProperty.call(m, "title"))
                     w.uint32(26).string(m.title);
                 if (m.author != null && Object.hasOwnProperty.call(m, "author"))
@@ -67775,7 +67747,7 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                             break;
                         }
                     case 2: {
-                            m.songID = r.string();
+                            m.songId = r.string();
                             break;
                         }
                     case 3: {
@@ -67813,8 +67785,8 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                 if (d.authorName != null) {
                     m.authorName = String(d.authorName);
                 }
-                if (d.songID != null) {
-                    m.songID = String(d.songID);
+                if (d.songId != null) {
+                    m.songId = String(d.songId);
                 }
                 if (d.title != null) {
                     m.title = String(d.title);
@@ -67840,10 +67812,10 @@ export const WAStatusAttributions = WAStatusAttributions = (() => {
                     if (o.oneofs)
                         d._authorName = "authorName";
                 }
-                if (m.songID != null && m.hasOwnProperty("songID")) {
-                    d.songID = m.songID;
+                if (m.songId != null && m.hasOwnProperty("songId")) {
+                    d.songId = m.songId;
                     if (o.oneofs)
-                        d._songID = "songID";
+                        d._songId = "songId";
                 }
                 if (m.title != null && m.hasOwnProperty("title")) {
                     d.title = m.title;

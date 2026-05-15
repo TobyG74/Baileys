@@ -588,13 +588,13 @@ export const WAServerSync = $root.WAServerSync = (() => {
                         this[ks[i]] = p[ks[i]];
         }
 
-        KeyId.prototype.ID = null;
+        KeyId.prototype.id = null;
 
         let $oneOfFields;
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(KeyId.prototype, "_ID", {
-            get: $util.oneOfGetter($oneOfFields = ["ID"]),
+        Object.defineProperty(KeyId.prototype, "_id", {
+            get: $util.oneOfGetter($oneOfFields = ["id"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -605,8 +605,8 @@ export const WAServerSync = $root.WAServerSync = (() => {
         KeyId.encode = function encode(m, w) {
             if (!w)
                 w = $Writer.create();
-            if (m.ID != null && Object.hasOwnProperty.call(m, "ID"))
-                w.uint32(10).bytes(m.ID);
+            if (m.id != null && Object.hasOwnProperty.call(m, "id"))
+                w.uint32(10).bytes(m.id);
             return w;
         };
 
@@ -624,7 +624,7 @@ export const WAServerSync = $root.WAServerSync = (() => {
                     break;
                 switch (t >>> 3) {
                 case 1: {
-                        m.ID = r.bytes();
+                        m.id = r.bytes();
                         break;
                     }
                 default:
@@ -643,11 +643,11 @@ export const WAServerSync = $root.WAServerSync = (() => {
             if (n > $util.recursionLimit)
                 throw Error("maximum nesting depth exceeded");
             var m = new $root.WAServerSync.KeyId();
-            if (d.ID != null) {
-                if (typeof d.ID === "string")
-                    $util.base64.decode(d.ID, m.ID = $util.newBuffer($util.base64.length(d.ID)), 0);
-                else if (d.ID.length >= 0)
-                    m.ID = d.ID;
+            if (d.id != null) {
+                if (typeof d.id === "string")
+                    $util.base64.decode(d.id, m.id = $util.newBuffer($util.base64.length(d.id)), 0);
+                else if (d.id.length >= 0)
+                    m.id = d.id;
             }
             return m;
         };
@@ -656,10 +656,10 @@ export const WAServerSync = $root.WAServerSync = (() => {
             if (!o)
                 o = {};
             var d = {};
-            if (m.ID != null && m.hasOwnProperty("ID")) {
-                d.ID = o.bytes === String ? $util.base64.encode(m.ID, 0, m.ID.length) : o.bytes === Array ? Array.prototype.slice.call(m.ID) : m.ID;
+            if (m.id != null && m.hasOwnProperty("id")) {
+                d.id = o.bytes === String ? $util.base64.encode(m.id, 0, m.id.length) : o.bytes === Array ? Array.prototype.slice.call(m.id) : m.id;
                 if (o.oneofs)
-                    d._ID = "ID";
+                    d._id = "id";
             }
             return d;
         };
@@ -689,7 +689,7 @@ export const WAServerSync = $root.WAServerSync = (() => {
 
         SyncdRecord.prototype.index = null;
         SyncdRecord.prototype.value = null;
-        SyncdRecord.prototype.keyID = null;
+        SyncdRecord.prototype.keyId = null;
 
         let $oneOfFields;
 
@@ -706,8 +706,8 @@ export const WAServerSync = $root.WAServerSync = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SyncdRecord.prototype, "_keyID", {
-            get: $util.oneOfGetter($oneOfFields = ["keyID"]),
+        Object.defineProperty(SyncdRecord.prototype, "_keyId", {
+            get: $util.oneOfGetter($oneOfFields = ["keyId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -722,8 +722,8 @@ export const WAServerSync = $root.WAServerSync = (() => {
                 $root.WAServerSync.SyncdIndex.encode(m.index, w.uint32(10).fork()).ldelim();
             if (m.value != null && Object.hasOwnProperty.call(m, "value"))
                 $root.WAServerSync.SyncdValue.encode(m.value, w.uint32(18).fork()).ldelim();
-            if (m.keyID != null && Object.hasOwnProperty.call(m, "keyID"))
-                $root.WAServerSync.KeyId.encode(m.keyID, w.uint32(26).fork()).ldelim();
+            if (m.keyId != null && Object.hasOwnProperty.call(m, "keyId"))
+                $root.WAServerSync.KeyId.encode(m.keyId, w.uint32(26).fork()).ldelim();
             return w;
         };
 
@@ -749,7 +749,7 @@ export const WAServerSync = $root.WAServerSync = (() => {
                         break;
                     }
                 case 3: {
-                        m.keyID = $root.WAServerSync.KeyId.decode(r, r.uint32(), undefined, n + 1);
+                        m.keyId = $root.WAServerSync.KeyId.decode(r, r.uint32(), undefined, n + 1);
                         break;
                     }
                 default:
@@ -778,10 +778,10 @@ export const WAServerSync = $root.WAServerSync = (() => {
                     throw TypeError(".WAServerSync.SyncdRecord.value: object expected");
                 m.value = $root.WAServerSync.SyncdValue.fromObject(d.value, n + 1);
             }
-            if (d.keyID != null) {
-                if (typeof d.keyID !== "object")
-                    throw TypeError(".WAServerSync.SyncdRecord.keyID: object expected");
-                m.keyID = $root.WAServerSync.KeyId.fromObject(d.keyID, n + 1);
+            if (d.keyId != null) {
+                if (typeof d.keyId !== "object")
+                    throw TypeError(".WAServerSync.SyncdRecord.keyId: object expected");
+                m.keyId = $root.WAServerSync.KeyId.fromObject(d.keyId, n + 1);
             }
             return m;
         };
@@ -800,10 +800,10 @@ export const WAServerSync = $root.WAServerSync = (() => {
                 if (o.oneofs)
                     d._value = "value";
             }
-            if (m.keyID != null && m.hasOwnProperty("keyID")) {
-                d.keyID = $root.WAServerSync.KeyId.toObject(m.keyID, o);
+            if (m.keyId != null && m.hasOwnProperty("keyId")) {
+                d.keyId = $root.WAServerSync.KeyId.toObject(m.keyId, o);
                 if (o.oneofs)
-                    d._keyID = "keyID";
+                    d._keyId = "keyId";
             }
             return d;
         };
@@ -835,8 +835,8 @@ export const WAServerSync = $root.WAServerSync = (() => {
         ExternalBlobReference.prototype.directPath = null;
         ExternalBlobReference.prototype.handle = null;
         ExternalBlobReference.prototype.fileSizeBytes = null;
-        ExternalBlobReference.prototype.fileSHA256 = null;
-        ExternalBlobReference.prototype.fileEncSHA256 = null;
+        ExternalBlobReference.prototype.fileSha256 = null;
+        ExternalBlobReference.prototype.fileEncSha256 = null;
 
         let $oneOfFields;
 
@@ -865,14 +865,14 @@ export const WAServerSync = $root.WAServerSync = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ExternalBlobReference.prototype, "_fileSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileSHA256"]),
+        Object.defineProperty(ExternalBlobReference.prototype, "_fileSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(ExternalBlobReference.prototype, "_fileEncSHA256", {
-            get: $util.oneOfGetter($oneOfFields = ["fileEncSHA256"]),
+        Object.defineProperty(ExternalBlobReference.prototype, "_fileEncSha256", {
+            get: $util.oneOfGetter($oneOfFields = ["fileEncSha256"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -891,10 +891,10 @@ export const WAServerSync = $root.WAServerSync = (() => {
                 w.uint32(26).string(m.handle);
             if (m.fileSizeBytes != null && Object.hasOwnProperty.call(m, "fileSizeBytes"))
                 w.uint32(32).uint64(m.fileSizeBytes);
-            if (m.fileSHA256 != null && Object.hasOwnProperty.call(m, "fileSHA256"))
-                w.uint32(42).bytes(m.fileSHA256);
-            if (m.fileEncSHA256 != null && Object.hasOwnProperty.call(m, "fileEncSHA256"))
-                w.uint32(50).bytes(m.fileEncSHA256);
+            if (m.fileSha256 != null && Object.hasOwnProperty.call(m, "fileSha256"))
+                w.uint32(42).bytes(m.fileSha256);
+            if (m.fileEncSha256 != null && Object.hasOwnProperty.call(m, "fileEncSha256"))
+                w.uint32(50).bytes(m.fileEncSha256);
             return w;
         };
 
@@ -928,11 +928,11 @@ export const WAServerSync = $root.WAServerSync = (() => {
                         break;
                     }
                 case 5: {
-                        m.fileSHA256 = r.bytes();
+                        m.fileSha256 = r.bytes();
                         break;
                     }
                 case 6: {
-                        m.fileEncSHA256 = r.bytes();
+                        m.fileEncSha256 = r.bytes();
                         break;
                     }
                 default:
@@ -973,17 +973,17 @@ export const WAServerSync = $root.WAServerSync = (() => {
                 else if (typeof d.fileSizeBytes === "object")
                     m.fileSizeBytes = new $util.LongBits(d.fileSizeBytes.low >>> 0, d.fileSizeBytes.high >>> 0).toNumber(true);
             }
-            if (d.fileSHA256 != null) {
-                if (typeof d.fileSHA256 === "string")
-                    $util.base64.decode(d.fileSHA256, m.fileSHA256 = $util.newBuffer($util.base64.length(d.fileSHA256)), 0);
-                else if (d.fileSHA256.length >= 0)
-                    m.fileSHA256 = d.fileSHA256;
+            if (d.fileSha256 != null) {
+                if (typeof d.fileSha256 === "string")
+                    $util.base64.decode(d.fileSha256, m.fileSha256 = $util.newBuffer($util.base64.length(d.fileSha256)), 0);
+                else if (d.fileSha256.length >= 0)
+                    m.fileSha256 = d.fileSha256;
             }
-            if (d.fileEncSHA256 != null) {
-                if (typeof d.fileEncSHA256 === "string")
-                    $util.base64.decode(d.fileEncSHA256, m.fileEncSHA256 = $util.newBuffer($util.base64.length(d.fileEncSHA256)), 0);
-                else if (d.fileEncSHA256.length >= 0)
-                    m.fileEncSHA256 = d.fileEncSHA256;
+            if (d.fileEncSha256 != null) {
+                if (typeof d.fileEncSha256 === "string")
+                    $util.base64.decode(d.fileEncSha256, m.fileEncSha256 = $util.newBuffer($util.base64.length(d.fileEncSha256)), 0);
+                else if (d.fileEncSha256.length >= 0)
+                    m.fileEncSha256 = d.fileEncSha256;
             }
             return m;
         };
@@ -1015,15 +1015,15 @@ export const WAServerSync = $root.WAServerSync = (() => {
                 if (o.oneofs)
                     d._fileSizeBytes = "fileSizeBytes";
             }
-            if (m.fileSHA256 != null && m.hasOwnProperty("fileSHA256")) {
-                d.fileSHA256 = o.bytes === String ? $util.base64.encode(m.fileSHA256, 0, m.fileSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSHA256) : m.fileSHA256;
+            if (m.fileSha256 != null && m.hasOwnProperty("fileSha256")) {
+                d.fileSha256 = o.bytes === String ? $util.base64.encode(m.fileSha256, 0, m.fileSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileSha256) : m.fileSha256;
                 if (o.oneofs)
-                    d._fileSHA256 = "fileSHA256";
+                    d._fileSha256 = "fileSha256";
             }
-            if (m.fileEncSHA256 != null && m.hasOwnProperty("fileEncSHA256")) {
-                d.fileEncSHA256 = o.bytes === String ? $util.base64.encode(m.fileEncSHA256, 0, m.fileEncSHA256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSHA256) : m.fileEncSHA256;
+            if (m.fileEncSha256 != null && m.hasOwnProperty("fileEncSha256")) {
+                d.fileEncSha256 = o.bytes === String ? $util.base64.encode(m.fileEncSha256, 0, m.fileEncSha256.length) : o.bytes === Array ? Array.prototype.slice.call(m.fileEncSha256) : m.fileEncSha256;
                 if (o.oneofs)
-                    d._fileEncSHA256 = "fileEncSHA256";
+                    d._fileEncSha256 = "fileEncSha256";
             }
             return d;
         };
@@ -1055,7 +1055,7 @@ export const WAServerSync = $root.WAServerSync = (() => {
         SyncdSnapshot.prototype.version = null;
         SyncdSnapshot.prototype.records = $util.emptyArray;
         SyncdSnapshot.prototype.mac = null;
-        SyncdSnapshot.prototype.keyID = null;
+        SyncdSnapshot.prototype.keyId = null;
 
         let $oneOfFields;
 
@@ -1072,8 +1072,8 @@ export const WAServerSync = $root.WAServerSync = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SyncdSnapshot.prototype, "_keyID", {
-            get: $util.oneOfGetter($oneOfFields = ["keyID"]),
+        Object.defineProperty(SyncdSnapshot.prototype, "_keyId", {
+            get: $util.oneOfGetter($oneOfFields = ["keyId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1092,8 +1092,8 @@ export const WAServerSync = $root.WAServerSync = (() => {
             }
             if (m.mac != null && Object.hasOwnProperty.call(m, "mac"))
                 w.uint32(26).bytes(m.mac);
-            if (m.keyID != null && Object.hasOwnProperty.call(m, "keyID"))
-                $root.WAServerSync.KeyId.encode(m.keyID, w.uint32(34).fork()).ldelim();
+            if (m.keyId != null && Object.hasOwnProperty.call(m, "keyId"))
+                $root.WAServerSync.KeyId.encode(m.keyId, w.uint32(34).fork()).ldelim();
             return w;
         };
 
@@ -1125,7 +1125,7 @@ export const WAServerSync = $root.WAServerSync = (() => {
                         break;
                     }
                 case 4: {
-                        m.keyID = $root.WAServerSync.KeyId.decode(r, r.uint32(), undefined, n + 1);
+                        m.keyId = $root.WAServerSync.KeyId.decode(r, r.uint32(), undefined, n + 1);
                         break;
                     }
                 default:
@@ -1165,10 +1165,10 @@ export const WAServerSync = $root.WAServerSync = (() => {
                 else if (d.mac.length >= 0)
                     m.mac = d.mac;
             }
-            if (d.keyID != null) {
-                if (typeof d.keyID !== "object")
-                    throw TypeError(".WAServerSync.SyncdSnapshot.keyID: object expected");
-                m.keyID = $root.WAServerSync.KeyId.fromObject(d.keyID, n + 1);
+            if (d.keyId != null) {
+                if (typeof d.keyId !== "object")
+                    throw TypeError(".WAServerSync.SyncdSnapshot.keyId: object expected");
+                m.keyId = $root.WAServerSync.KeyId.fromObject(d.keyId, n + 1);
             }
             return m;
         };
@@ -1196,10 +1196,10 @@ export const WAServerSync = $root.WAServerSync = (() => {
                 if (o.oneofs)
                     d._mac = "mac";
             }
-            if (m.keyID != null && m.hasOwnProperty("keyID")) {
-                d.keyID = $root.WAServerSync.KeyId.toObject(m.keyID, o);
+            if (m.keyId != null && m.hasOwnProperty("keyId")) {
+                d.keyId = $root.WAServerSync.KeyId.toObject(m.keyId, o);
                 if (o.oneofs)
-                    d._keyID = "keyID";
+                    d._keyId = "keyId";
             }
             return d;
         };
@@ -1335,9 +1335,9 @@ export const WAServerSync = $root.WAServerSync = (() => {
         SyncdPatch.prototype.version = null;
         SyncdPatch.prototype.mutations = $util.emptyArray;
         SyncdPatch.prototype.externalMutations = null;
-        SyncdPatch.prototype.snapshotMAC = null;
-        SyncdPatch.prototype.patchMAC = null;
-        SyncdPatch.prototype.keyID = null;
+        SyncdPatch.prototype.snapshotMac = null;
+        SyncdPatch.prototype.patchMac = null;
+        SyncdPatch.prototype.keyId = null;
         SyncdPatch.prototype.exitCode = null;
         SyncdPatch.prototype.deviceIndex = null;
         SyncdPatch.prototype.clientDebugData = null;
@@ -1357,20 +1357,20 @@ export const WAServerSync = $root.WAServerSync = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SyncdPatch.prototype, "_snapshotMAC", {
-            get: $util.oneOfGetter($oneOfFields = ["snapshotMAC"]),
+        Object.defineProperty(SyncdPatch.prototype, "_snapshotMac", {
+            get: $util.oneOfGetter($oneOfFields = ["snapshotMac"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SyncdPatch.prototype, "_patchMAC", {
-            get: $util.oneOfGetter($oneOfFields = ["patchMAC"]),
+        Object.defineProperty(SyncdPatch.prototype, "_patchMac", {
+            get: $util.oneOfGetter($oneOfFields = ["patchMac"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(SyncdPatch.prototype, "_keyID", {
-            get: $util.oneOfGetter($oneOfFields = ["keyID"]),
+        Object.defineProperty(SyncdPatch.prototype, "_keyId", {
+            get: $util.oneOfGetter($oneOfFields = ["keyId"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1407,12 +1407,12 @@ export const WAServerSync = $root.WAServerSync = (() => {
             }
             if (m.externalMutations != null && Object.hasOwnProperty.call(m, "externalMutations"))
                 $root.WAServerSync.ExternalBlobReference.encode(m.externalMutations, w.uint32(26).fork()).ldelim();
-            if (m.snapshotMAC != null && Object.hasOwnProperty.call(m, "snapshotMAC"))
-                w.uint32(34).bytes(m.snapshotMAC);
-            if (m.patchMAC != null && Object.hasOwnProperty.call(m, "patchMAC"))
-                w.uint32(42).bytes(m.patchMAC);
-            if (m.keyID != null && Object.hasOwnProperty.call(m, "keyID"))
-                $root.WAServerSync.KeyId.encode(m.keyID, w.uint32(50).fork()).ldelim();
+            if (m.snapshotMac != null && Object.hasOwnProperty.call(m, "snapshotMac"))
+                w.uint32(34).bytes(m.snapshotMac);
+            if (m.patchMac != null && Object.hasOwnProperty.call(m, "patchMac"))
+                w.uint32(42).bytes(m.patchMac);
+            if (m.keyId != null && Object.hasOwnProperty.call(m, "keyId"))
+                $root.WAServerSync.KeyId.encode(m.keyId, w.uint32(50).fork()).ldelim();
             if (m.exitCode != null && Object.hasOwnProperty.call(m, "exitCode"))
                 $root.WAServerSync.ExitCode.encode(m.exitCode, w.uint32(58).fork()).ldelim();
             if (m.deviceIndex != null && Object.hasOwnProperty.call(m, "deviceIndex"))
@@ -1450,15 +1450,15 @@ export const WAServerSync = $root.WAServerSync = (() => {
                         break;
                     }
                 case 4: {
-                        m.snapshotMAC = r.bytes();
+                        m.snapshotMac = r.bytes();
                         break;
                     }
                 case 5: {
-                        m.patchMAC = r.bytes();
+                        m.patchMac = r.bytes();
                         break;
                     }
                 case 6: {
-                        m.keyID = $root.WAServerSync.KeyId.decode(r, r.uint32(), undefined, n + 1);
+                        m.keyId = $root.WAServerSync.KeyId.decode(r, r.uint32(), undefined, n + 1);
                         break;
                     }
                 case 7: {
@@ -1509,22 +1509,22 @@ export const WAServerSync = $root.WAServerSync = (() => {
                     throw TypeError(".WAServerSync.SyncdPatch.externalMutations: object expected");
                 m.externalMutations = $root.WAServerSync.ExternalBlobReference.fromObject(d.externalMutations, n + 1);
             }
-            if (d.snapshotMAC != null) {
-                if (typeof d.snapshotMAC === "string")
-                    $util.base64.decode(d.snapshotMAC, m.snapshotMAC = $util.newBuffer($util.base64.length(d.snapshotMAC)), 0);
-                else if (d.snapshotMAC.length >= 0)
-                    m.snapshotMAC = d.snapshotMAC;
+            if (d.snapshotMac != null) {
+                if (typeof d.snapshotMac === "string")
+                    $util.base64.decode(d.snapshotMac, m.snapshotMac = $util.newBuffer($util.base64.length(d.snapshotMac)), 0);
+                else if (d.snapshotMac.length >= 0)
+                    m.snapshotMac = d.snapshotMac;
             }
-            if (d.patchMAC != null) {
-                if (typeof d.patchMAC === "string")
-                    $util.base64.decode(d.patchMAC, m.patchMAC = $util.newBuffer($util.base64.length(d.patchMAC)), 0);
-                else if (d.patchMAC.length >= 0)
-                    m.patchMAC = d.patchMAC;
+            if (d.patchMac != null) {
+                if (typeof d.patchMac === "string")
+                    $util.base64.decode(d.patchMac, m.patchMac = $util.newBuffer($util.base64.length(d.patchMac)), 0);
+                else if (d.patchMac.length >= 0)
+                    m.patchMac = d.patchMac;
             }
-            if (d.keyID != null) {
-                if (typeof d.keyID !== "object")
-                    throw TypeError(".WAServerSync.SyncdPatch.keyID: object expected");
-                m.keyID = $root.WAServerSync.KeyId.fromObject(d.keyID, n + 1);
+            if (d.keyId != null) {
+                if (typeof d.keyId !== "object")
+                    throw TypeError(".WAServerSync.SyncdPatch.keyId: object expected");
+                m.keyId = $root.WAServerSync.KeyId.fromObject(d.keyId, n + 1);
             }
             if (d.exitCode != null) {
                 if (typeof d.exitCode !== "object")
@@ -1566,20 +1566,20 @@ export const WAServerSync = $root.WAServerSync = (() => {
                 if (o.oneofs)
                     d._externalMutations = "externalMutations";
             }
-            if (m.snapshotMAC != null && m.hasOwnProperty("snapshotMAC")) {
-                d.snapshotMAC = o.bytes === String ? $util.base64.encode(m.snapshotMAC, 0, m.snapshotMAC.length) : o.bytes === Array ? Array.prototype.slice.call(m.snapshotMAC) : m.snapshotMAC;
+            if (m.snapshotMac != null && m.hasOwnProperty("snapshotMac")) {
+                d.snapshotMac = o.bytes === String ? $util.base64.encode(m.snapshotMac, 0, m.snapshotMac.length) : o.bytes === Array ? Array.prototype.slice.call(m.snapshotMac) : m.snapshotMac;
                 if (o.oneofs)
-                    d._snapshotMAC = "snapshotMAC";
+                    d._snapshotMac = "snapshotMac";
             }
-            if (m.patchMAC != null && m.hasOwnProperty("patchMAC")) {
-                d.patchMAC = o.bytes === String ? $util.base64.encode(m.patchMAC, 0, m.patchMAC.length) : o.bytes === Array ? Array.prototype.slice.call(m.patchMAC) : m.patchMAC;
+            if (m.patchMac != null && m.hasOwnProperty("patchMac")) {
+                d.patchMac = o.bytes === String ? $util.base64.encode(m.patchMac, 0, m.patchMac.length) : o.bytes === Array ? Array.prototype.slice.call(m.patchMac) : m.patchMac;
                 if (o.oneofs)
-                    d._patchMAC = "patchMAC";
+                    d._patchMac = "patchMac";
             }
-            if (m.keyID != null && m.hasOwnProperty("keyID")) {
-                d.keyID = $root.WAServerSync.KeyId.toObject(m.keyID, o);
+            if (m.keyId != null && m.hasOwnProperty("keyId")) {
+                d.keyId = $root.WAServerSync.KeyId.toObject(m.keyId, o);
                 if (o.oneofs)
-                    d._keyID = "keyID";
+                    d._keyId = "keyId";
             }
             if (m.exitCode != null && m.hasOwnProperty("exitCode")) {
                 d.exitCode = $root.WAServerSync.ExitCode.toObject(m.exitCode, o);

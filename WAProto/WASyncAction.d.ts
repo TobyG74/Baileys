@@ -120,10 +120,10 @@ export namespace WASyncAction {
         isVideo?: (boolean|null);
         isCallLink?: (boolean|null);
         callLinkToken?: (string|null);
-        scheduledCallID?: (string|null);
-        callID?: (string|null);
-        callCreatorJID?: (string|null);
-        groupJID?: (string|null);
+        scheduledCallId?: (string|null);
+        callId?: (string|null);
+        callCreatorJid?: (string|null);
+        groupJid?: (string|null);
         participants?: (WASyncAction.CallLogRecord.IParticipantInfo[]|null);
         callType?: (WASyncAction.CallLogRecord.CallType|null);
     }
@@ -139,10 +139,10 @@ export namespace WASyncAction {
         public isVideo?: (boolean|null);
         public isCallLink?: (boolean|null);
         public callLinkToken?: (string|null);
-        public scheduledCallID?: (string|null);
-        public callID?: (string|null);
-        public callCreatorJID?: (string|null);
-        public groupJID?: (string|null);
+        public scheduledCallId?: (string|null);
+        public callId?: (string|null);
+        public callCreatorJid?: (string|null);
+        public groupJid?: (string|null);
         public participants: WASyncAction.CallLogRecord.IParticipantInfo[];
         public callType?: (WASyncAction.CallLogRecord.CallType|null);
         public static create(properties?: WASyncAction.ICallLogRecord): WASyncAction.CallLogRecord;
@@ -184,13 +184,13 @@ export namespace WASyncAction {
         }
 
         interface IParticipantInfo {
-            userJID?: (string|null);
+            userJid?: (string|null);
             callResult?: (WASyncAction.CallLogRecord.CallResult|null);
         }
 
         class ParticipantInfo implements IParticipantInfo {
             constructor(p?: WASyncAction.CallLogRecord.IParticipantInfo);
-            public userJID?: (string|null);
+            public userJid?: (string|null);
             public callResult?: (WASyncAction.CallLogRecord.CallResult|null);
             public static create(properties?: WASyncAction.CallLogRecord.IParticipantInfo): WASyncAction.CallLogRecord.ParticipantInfo;
             public static encode(m: WASyncAction.CallLogRecord.IParticipantInfo, w?: $protobuf.Writer): $protobuf.Writer;
@@ -214,10 +214,10 @@ export namespace WASyncAction {
         isReactionsNotificationEnabled?: (boolean|null);
         isStatusReactionsNotificationEnabled?: (boolean|null);
         isTextPreviewForNotificationEnabled?: (boolean|null);
-        defaultNotificationToneID?: (number|null);
-        groupDefaultNotificationToneID?: (number|null);
+        defaultNotificationToneId?: (number|null);
+        groupDefaultNotificationToneId?: (number|null);
         appTheme?: (number|null);
-        wallpaperID?: (number|null);
+        wallpaperId?: (number|null);
         isDoodleWallpaperEnabled?: (boolean|null);
         fontSize?: (number|null);
         isPhotosAutodownloadEnabled?: (boolean|null);
@@ -225,17 +225,17 @@ export namespace WASyncAction {
         isVideosAutodownloadEnabled?: (boolean|null);
         isDocumentsAutodownloadEnabled?: (boolean|null);
         disableLinkPreviews?: (boolean|null);
-        notificationToneID?: (number|null);
+        notificationToneId?: (number|null);
         mediaUploadQuality?: (WASyncAction.SettingsSyncAction.MediaQualitySetting|null);
         isSpellCheckEnabled?: (boolean|null);
         isEnterToSendEnabled?: (boolean|null);
         isGroupMessageNotificationEnabled?: (boolean|null);
         isGroupReactionsNotificationEnabled?: (boolean|null);
         isStatusNotificationEnabled?: (boolean|null);
-        statusNotificationToneID?: (number|null);
+        statusNotificationToneId?: (number|null);
         shouldPlaySoundForCallNotification?: (boolean|null);
-        chatThemeID?: (string|null);
-        colorSchemeID?: (string|null);
+        chatThemeId?: (string|null);
+        colorSchemeId?: (string|null);
     }
 
     class SettingsSyncAction implements ISettingsSyncAction {
@@ -251,10 +251,10 @@ export namespace WASyncAction {
         public isReactionsNotificationEnabled?: (boolean|null);
         public isStatusReactionsNotificationEnabled?: (boolean|null);
         public isTextPreviewForNotificationEnabled?: (boolean|null);
-        public defaultNotificationToneID?: (number|null);
-        public groupDefaultNotificationToneID?: (number|null);
+        public defaultNotificationToneId?: (number|null);
+        public groupDefaultNotificationToneId?: (number|null);
         public appTheme?: (number|null);
-        public wallpaperID?: (number|null);
+        public wallpaperId?: (number|null);
         public isDoodleWallpaperEnabled?: (boolean|null);
         public fontSize?: (number|null);
         public isPhotosAutodownloadEnabled?: (boolean|null);
@@ -262,17 +262,17 @@ export namespace WASyncAction {
         public isVideosAutodownloadEnabled?: (boolean|null);
         public isDocumentsAutodownloadEnabled?: (boolean|null);
         public disableLinkPreviews?: (boolean|null);
-        public notificationToneID?: (number|null);
+        public notificationToneId?: (number|null);
         public mediaUploadQuality?: (WASyncAction.SettingsSyncAction.MediaQualitySetting|null);
         public isSpellCheckEnabled?: (boolean|null);
         public isEnterToSendEnabled?: (boolean|null);
         public isGroupMessageNotificationEnabled?: (boolean|null);
         public isGroupReactionsNotificationEnabled?: (boolean|null);
         public isStatusNotificationEnabled?: (boolean|null);
-        public statusNotificationToneID?: (number|null);
+        public statusNotificationToneId?: (number|null);
         public shouldPlaySoundForCallNotification?: (boolean|null);
-        public chatThemeID?: (string|null);
-        public colorSchemeID?: (string|null);
+        public chatThemeId?: (string|null);
+        public colorSchemeId?: (string|null);
         public static create(properties?: WASyncAction.ISettingsSyncAction): WASyncAction.SettingsSyncAction;
         public static encode(m: WASyncAction.ISettingsSyncAction, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.SettingsSyncAction;
@@ -345,13 +345,13 @@ export namespace WASyncAction {
 
     interface IInteractiveMessageAction {
         type?: (WASyncAction.InteractiveMessageAction.InteractiveMessageActionMode|null);
-        agmID?: (string|null);
+        agmId?: (string|null);
     }
 
     class InteractiveMessageAction implements IInteractiveMessageAction {
         constructor(p?: WASyncAction.IInteractiveMessageAction);
-        public type?: (WASyncAction.InteractiveMessageAction.InteractiveMessageActionMode|null);
-        public agmID?: (string|null);
+        public type: WASyncAction.InteractiveMessageAction.InteractiveMessageActionMode;
+        public agmId?: (string|null);
         public static create(properties?: WASyncAction.IInteractiveMessageAction): WASyncAction.InteractiveMessageAction;
         public static encode(m: WASyncAction.IInteractiveMessageAction, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.InteractiveMessageAction;
@@ -423,14 +423,14 @@ export namespace WASyncAction {
     interface IBizAISettingsNudgeAction {
         category?: (WASyncAction.BizAISettingsNudgeAction.BizAISettingsCategory|null);
         version?: (number|Long|null);
-        updatedAtMS?: (number|Long|null);
+        updatedAtMs?: (number|Long|null);
     }
 
     class BizAISettingsNudgeAction implements IBizAISettingsNudgeAction {
         constructor(p?: WASyncAction.IBizAISettingsNudgeAction);
         public category?: (WASyncAction.BizAISettingsNudgeAction.BizAISettingsCategory|null);
         public version?: (number|Long|null);
-        public updatedAtMS?: (number|Long|null);
+        public updatedAtMs?: (number|Long|null);
         public static create(properties?: WASyncAction.IBizAISettingsNudgeAction): WASyncAction.BizAISettingsNudgeAction;
         public static encode(m: WASyncAction.IBizAISettingsNudgeAction, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.BizAISettingsNudgeAction;
@@ -484,8 +484,8 @@ export namespace WASyncAction {
 
     class PaymentTosAction implements IPaymentTosAction {
         constructor(p?: WASyncAction.IPaymentTosAction);
-        public paymentNotice?: (WASyncAction.PaymentTosAction.PaymentNotice|null);
-        public accepted?: (boolean|null);
+        public paymentNotice: WASyncAction.PaymentTosAction.PaymentNotice;
+        public accepted: boolean;
         public static create(properties?: WASyncAction.IPaymentTosAction): WASyncAction.PaymentTosAction;
         public static encode(m: WASyncAction.IPaymentTosAction, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.PaymentTosAction;
@@ -557,15 +557,15 @@ export namespace WASyncAction {
         status?: (WASyncAction.MerchantPaymentPartnerAction.Status|null);
         country?: (string|null);
         gatewayName?: (string|null);
-        credentialID?: (string|null);
+        credentialId?: (string|null);
     }
 
     class MerchantPaymentPartnerAction implements IMerchantPaymentPartnerAction {
         constructor(p?: WASyncAction.IMerchantPaymentPartnerAction);
-        public status?: (WASyncAction.MerchantPaymentPartnerAction.Status|null);
-        public country?: (string|null);
+        public status: WASyncAction.MerchantPaymentPartnerAction.Status;
+        public country: string;
         public gatewayName?: (string|null);
-        public credentialID?: (string|null);
+        public credentialId?: (string|null);
         public static create(properties?: WASyncAction.IMerchantPaymentPartnerAction): WASyncAction.MerchantPaymentPartnerAction;
         public static encode(m: WASyncAction.IMerchantPaymentPartnerAction, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.MerchantPaymentPartnerAction;
@@ -585,7 +585,7 @@ export namespace WASyncAction {
 
     interface INoteEditAction {
         type?: (WASyncAction.NoteEditAction.NoteType|null);
-        chatJID?: (string|null);
+        chatJid?: (string|null);
         createdAt?: (number|Long|null);
         deleted?: (boolean|null);
         unstructuredContent?: (string|null);
@@ -594,7 +594,7 @@ export namespace WASyncAction {
     class NoteEditAction implements INoteEditAction {
         constructor(p?: WASyncAction.INoteEditAction);
         public type?: (WASyncAction.NoteEditAction.NoteType|null);
-        public chatJID?: (string|null);
+        public chatJid?: (string|null);
         public createdAt?: (number|Long|null);
         public deleted?: (boolean|null);
         public unstructuredContent?: (string|null);
@@ -617,7 +617,7 @@ export namespace WASyncAction {
 
     interface IStatusPrivacyAction {
         mode?: (WASyncAction.StatusPrivacyAction.StatusDistributionMode|null);
-        userJID?: (string[]|null);
+        userJid?: (string[]|null);
         shareToFB?: (boolean|null);
         shareToIG?: (boolean|null);
         customLists?: (WASyncAction.StatusPrivacyAction.ICustomList[]|null);
@@ -627,7 +627,7 @@ export namespace WASyncAction {
     class StatusPrivacyAction implements IStatusPrivacyAction {
         constructor(p?: WASyncAction.IStatusPrivacyAction);
         public mode?: (WASyncAction.StatusPrivacyAction.StatusDistributionMode|null);
-        public userJID: string[];
+        public userJid: string[];
         public shareToFB?: (boolean|null);
         public shareToIG?: (boolean|null);
         public customLists: WASyncAction.StatusPrivacyAction.ICustomList[];
@@ -652,20 +652,20 @@ export namespace WASyncAction {
         }
 
         interface ICustomList {
-            listID?: (string|null);
+            listId?: (string|null);
             name?: (string|null);
             emoji?: (string|null);
             isSelected?: (boolean|null);
-            userJID?: (string[]|null);
+            userJid?: (string[]|null);
         }
 
         class CustomList implements ICustomList {
             constructor(p?: WASyncAction.StatusPrivacyAction.ICustomList);
-            public listID?: (string|null);
+            public listId?: (string|null);
             public name?: (string|null);
             public emoji?: (string|null);
             public isSelected?: (boolean|null);
-            public userJID: string[];
+            public userJid: string[];
             public static create(properties?: WASyncAction.StatusPrivacyAction.ICustomList): WASyncAction.StatusPrivacyAction.CustomList;
             public static encode(m: WASyncAction.StatusPrivacyAction.ICustomList, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.StatusPrivacyAction.CustomList;
@@ -683,7 +683,7 @@ export namespace WASyncAction {
         createdAt?: (number|Long|null);
         lastSentAt?: (number|Long|null);
         isDeleted?: (boolean|null);
-        mediaID?: (string|null);
+        mediaId?: (string|null);
     }
 
     class MarketingMessageAction implements IMarketingMessageAction {
@@ -694,7 +694,7 @@ export namespace WASyncAction {
         public createdAt?: (number|Long|null);
         public lastSentAt?: (number|Long|null);
         public isDeleted?: (boolean|null);
-        public mediaID?: (string|null);
+        public mediaId?: (string|null);
         public static create(properties?: WASyncAction.IMarketingMessageAction): WASyncAction.MarketingMessageAction;
         public static encode(m: WASyncAction.IMarketingMessageAction, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.MarketingMessageAction;
@@ -738,26 +738,26 @@ export namespace WASyncAction {
     interface ILabelEditAction {
         name?: (string|null);
         color?: (number|null);
-        predefinedID?: (number|null);
+        predefinedId?: (number|null);
         deleted?: (boolean|null);
         orderIndex?: (number|null);
         isActive?: (boolean|null);
         type?: (WASyncAction.LabelEditAction.ListType|null);
         isImmutable?: (boolean|null);
-        muteEndTimeMS?: (number|Long|null);
+        muteEndTimeMs?: (number|Long|null);
     }
 
     class LabelEditAction implements ILabelEditAction {
         constructor(p?: WASyncAction.ILabelEditAction);
         public name?: (string|null);
         public color?: (number|null);
-        public predefinedID?: (number|null);
+        public predefinedId?: (number|null);
         public deleted?: (boolean|null);
         public orderIndex?: (number|null);
         public isActive?: (boolean|null);
         public type?: (WASyncAction.LabelEditAction.ListType|null);
         public isImmutable?: (boolean|null);
-        public muteEndTimeMS?: (number|Long|null);
+        public muteEndTimeMs?: (number|Long|null);
         public static create(properties?: WASyncAction.ILabelEditAction): WASyncAction.LabelEditAction;
         public static encode(m: WASyncAction.ILabelEditAction, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.LabelEditAction;
@@ -790,7 +790,7 @@ export namespace WASyncAction {
         newLthash?: (Uint8Array|null);
         patchVersion?: (Uint8Array|null);
         collectionName?: (Uint8Array|null);
-        firstFourBytesFromAHashOfSnapshotMACKey?: (Uint8Array|null);
+        firstFourBytesFromAHashOfSnapshotMacKey?: (Uint8Array|null);
         newLthashSubtract?: (Uint8Array|null);
         numberAdd?: (number|null);
         numberRemove?: (number|null);
@@ -805,7 +805,7 @@ export namespace WASyncAction {
         public newLthash?: (Uint8Array|null);
         public patchVersion?: (Uint8Array|null);
         public collectionName?: (Uint8Array|null);
-        public firstFourBytesFromAHashOfSnapshotMACKey?: (Uint8Array|null);
+        public firstFourBytesFromAHashOfSnapshotMacKey?: (Uint8Array|null);
         public newLthashSubtract?: (Uint8Array|null);
         public numberAdd?: (number|null);
         public numberRemove?: (number|null);
@@ -919,7 +919,7 @@ export namespace WASyncAction {
         detectedOutcomesStatusAction?: (WASyncAction.IDetectedOutcomesStatusAction|null);
         maibaAiFeaturesControlAction?: (WASyncAction.IMaibaAIFeaturesControlAction|null);
         businessBroadcastListAction?: (WASyncAction.IBusinessBroadcastListAction|null);
-        musicUserIDAction?: (WASyncAction.IMusicUserIdAction|null);
+        musicUserIdAction?: (WASyncAction.IMusicUserIdAction|null);
         statusPostOptInNotificationPreferencesAction?: (WASyncAction.IStatusPostOptInNotificationPreferencesAction|null);
         avatarUpdatedAction?: (WASyncAction.IAvatarUpdatedAction|null);
         privateProcessingSettingAction?: (WASyncAction.IPrivateProcessingSettingAction|null);
@@ -1001,7 +1001,7 @@ export namespace WASyncAction {
         public detectedOutcomesStatusAction?: (WASyncAction.IDetectedOutcomesStatusAction|null);
         public maibaAiFeaturesControlAction?: (WASyncAction.IMaibaAIFeaturesControlAction|null);
         public businessBroadcastListAction?: (WASyncAction.IBusinessBroadcastListAction|null);
-        public musicUserIDAction?: (WASyncAction.IMusicUserIdAction|null);
+        public musicUserIdAction?: (WASyncAction.IMusicUserIdAction|null);
         public statusPostOptInNotificationPreferencesAction?: (WASyncAction.IStatusPostOptInNotificationPreferencesAction|null);
         public avatarUpdatedAction?: (WASyncAction.IAvatarUpdatedAction|null);
         public privateProcessingSettingAction?: (WASyncAction.IPrivateProcessingSettingAction|null);
@@ -1070,7 +1070,7 @@ export namespace WASyncAction {
         }
 
         interface ISubscriptionInfo {
-            ID?: (string|null);
+            id?: (string|null);
             tier?: (number|null);
             status?: (string|null);
             startTime?: (number|Long|null);
@@ -1082,7 +1082,7 @@ export namespace WASyncAction {
 
         class SubscriptionInfo implements ISubscriptionInfo {
             constructor(p?: WASyncAction.SubscriptionsSyncV2Action.ISubscriptionInfo);
-            public ID?: (string|null);
+            public id?: (string|null);
             public tier?: (number|null);
             public status?: (string|null);
             public startTime?: (number|Long|null);
@@ -1101,7 +1101,7 @@ export namespace WASyncAction {
     }
 
     interface ICustomerDataAction {
-        chatJID?: (string|null);
+        chatJid?: (string|null);
         contactType?: (number|null);
         email?: (string|null);
         altPhoneNumbers?: (string|null);
@@ -1116,7 +1116,7 @@ export namespace WASyncAction {
 
     class CustomerDataAction implements ICustomerDataAction {
         constructor(p?: WASyncAction.ICustomerDataAction);
-        public chatJID?: (string|null);
+        public chatJid?: (string|null);
         public contactType?: (number|null);
         public email?: (string|null);
         public altPhoneNumbers?: (string|null);
@@ -1241,14 +1241,14 @@ export namespace WASyncAction {
     }
 
     interface IBroadcastListParticipant {
-        lidJID?: (string|null);
-        pnJID?: (string|null);
+        lidJid?: (string|null);
+        pnJid?: (string|null);
     }
 
     class BroadcastListParticipant implements IBroadcastListParticipant {
         constructor(p?: WASyncAction.IBroadcastListParticipant);
-        public lidJID?: (string|null);
-        public pnJID?: (string|null);
+        public lidJid: string;
+        public pnJid?: (string|null);
         public static create(properties?: WASyncAction.IBroadcastListParticipant): WASyncAction.BroadcastListParticipant;
         public static encode(m: WASyncAction.IBroadcastListParticipant, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.BroadcastListParticipant;
@@ -1259,11 +1259,11 @@ export namespace WASyncAction {
     }
 
     interface IBusinessBroadcastCampaignAction {
-        deviceID?: (number|null);
-        adID?: (string|null);
+        deviceId?: (number|null);
+        adId?: (string|null);
         name?: (string|null);
-        msgID?: (string|null);
-        broadcastJID?: (string|null);
+        msgId?: (string|null);
+        broadcastJid?: (string|null);
         reservedQuota?: (number|null);
         scheduledTimestamp?: (number|Long|null);
         createTimestamp?: (number|Long|null);
@@ -1272,11 +1272,11 @@ export namespace WASyncAction {
 
     class BusinessBroadcastCampaignAction implements IBusinessBroadcastCampaignAction {
         constructor(p?: WASyncAction.IBusinessBroadcastCampaignAction);
-        public deviceID?: (number|null);
-        public adID?: (string|null);
+        public deviceId?: (number|null);
+        public adId?: (string|null);
         public name?: (string|null);
-        public msgID?: (string|null);
-        public broadcastJID?: (string|null);
+        public msgId?: (string|null);
+        public broadcastJid?: (string|null);
         public reservedQuota?: (number|null);
         public scheduledTimestamp?: (number|Long|null);
         public createTimestamp?: (number|Long|null);
@@ -1294,7 +1294,7 @@ export namespace WASyncAction {
         deleted?: (boolean|null);
         participants?: (WASyncAction.IBroadcastListParticipant[]|null);
         listName?: (string|null);
-        labelIDs?: (string[]|null);
+        labelIds?: (string[]|null);
         audienceExpression?: (string|null);
     }
 
@@ -1303,7 +1303,7 @@ export namespace WASyncAction {
         public deleted?: (boolean|null);
         public participants: WASyncAction.IBroadcastListParticipant[];
         public listName?: (string|null);
-        public labelIDs: string[];
+        public labelIds: string[];
         public audienceExpression?: (string|null);
         public static create(properties?: WASyncAction.IBusinessBroadcastListAction): WASyncAction.BusinessBroadcastListAction;
         public static encode(m: WASyncAction.IBusinessBroadcastListAction, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1403,12 +1403,12 @@ export namespace WASyncAction {
     namespace FavoritesAction {
 
         interface IFavorite {
-            ID?: (string|null);
+            id?: (string|null);
         }
 
         class Favorite implements IFavorite {
             constructor(p?: WASyncAction.FavoritesAction.IFavorite);
-            public ID?: (string|null);
+            public id?: (string|null);
             public static create(properties?: WASyncAction.FavoritesAction.IFavorite): WASyncAction.FavoritesAction.Favorite;
             public static encode(m: WASyncAction.FavoritesAction.IFavorite, w?: $protobuf.Writer): $protobuf.Writer;
             public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.FavoritesAction.Favorite;
@@ -1500,7 +1500,7 @@ export namespace WASyncAction {
     }
 
     interface ICustomPaymentMethod {
-        credentialID?: (string|null);
+        credentialId?: (string|null);
         country?: (string|null);
         type?: (string|null);
         metadata?: (WASyncAction.ICustomPaymentMethodMetadata[]|null);
@@ -1508,9 +1508,9 @@ export namespace WASyncAction {
 
     class CustomPaymentMethod implements ICustomPaymentMethod {
         constructor(p?: WASyncAction.ICustomPaymentMethod);
-        public credentialID?: (string|null);
-        public country?: (string|null);
-        public type?: (string|null);
+        public credentialId: string;
+        public country: string;
+        public type: string;
         public metadata: WASyncAction.ICustomPaymentMethodMetadata[];
         public static create(properties?: WASyncAction.ICustomPaymentMethod): WASyncAction.CustomPaymentMethod;
         public static encode(m: WASyncAction.ICustomPaymentMethod, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1528,8 +1528,8 @@ export namespace WASyncAction {
 
     class CustomPaymentMethodMetadata implements ICustomPaymentMethodMetadata {
         constructor(p?: WASyncAction.ICustomPaymentMethodMetadata);
-        public key?: (string|null);
-        public value?: (string|null);
+        public key: string;
+        public value: string;
         public static create(properties?: WASyncAction.ICustomPaymentMethodMetadata): WASyncAction.CustomPaymentMethodMetadata;
         public static encode(m: WASyncAction.ICustomPaymentMethodMetadata, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.CustomPaymentMethodMetadata;
@@ -1556,12 +1556,12 @@ export namespace WASyncAction {
     }
 
     interface ILabelReorderingAction {
-        sortedLabelIDs?: (number[]|null);
+        sortedLabelIds?: (number[]|null);
     }
 
     class LabelReorderingAction implements ILabelReorderingAction {
         constructor(p?: WASyncAction.ILabelReorderingAction);
-        public sortedLabelIDs: number[];
+        public sortedLabelIds: number[];
         public static create(properties?: WASyncAction.ILabelReorderingAction): WASyncAction.LabelReorderingAction;
         public static encode(m: WASyncAction.ILabelReorderingAction, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.LabelReorderingAction;
@@ -1572,13 +1572,13 @@ export namespace WASyncAction {
     }
 
     interface IDeleteIndividualCallLogAction {
-        peerJID?: (string|null);
+        peerJid?: (string|null);
         isIncoming?: (boolean|null);
     }
 
     class DeleteIndividualCallLogAction implements IDeleteIndividualCallLogAction {
         constructor(p?: WASyncAction.IDeleteIndividualCallLogAction);
-        public peerJID?: (string|null);
+        public peerJid?: (string|null);
         public isIncoming?: (boolean|null);
         public static create(properties?: WASyncAction.IDeleteIndividualCallLogAction): WASyncAction.DeleteIndividualCallLogAction;
         public static encode(m: WASyncAction.IDeleteIndividualCallLogAction, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1622,13 +1622,13 @@ export namespace WASyncAction {
     }
 
     interface IMusicUserIdAction {
-        musicUserID?: (string|null);
+        musicUserId?: (string|null);
         musicUserIdMap?: ({ [k: string]: Uint8Array }|null);
     }
 
     class MusicUserIdAction implements IMusicUserIdAction {
         constructor(p?: WASyncAction.IMusicUserIdAction);
-        public musicUserID?: (string|null);
+        public musicUserId?: (string|null);
         public musicUserIdMap: { [k: string]: Uint8Array };
         public static create(properties?: WASyncAction.IMusicUserIdAction): WASyncAction.MusicUserIdAction;
         public static encode(m: WASyncAction.IMusicUserIdAction, w?: $protobuf.Writer): $protobuf.Writer;
@@ -1736,12 +1736,12 @@ export namespace WASyncAction {
     }
 
     interface IPnForLidChatAction {
-        pnJID?: (string|null);
+        pnJid?: (string|null);
     }
 
     class PnForLidChatAction implements IPnForLidChatAction {
         constructor(p?: WASyncAction.IPnForLidChatAction);
-        public pnJID?: (string|null);
+        public pnJid?: (string|null);
         public static create(properties?: WASyncAction.IPnForLidChatAction): WASyncAction.PnForLidChatAction;
         public static encode(m: WASyncAction.IPnForLidChatAction, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.PnForLidChatAction;
@@ -1784,8 +1784,8 @@ export namespace WASyncAction {
     }
 
     interface IStickerAction {
-        URL?: (string|null);
-        fileEncSHA256?: (Uint8Array|null);
+        url?: (string|null);
+        fileEncSha256?: (Uint8Array|null);
         mediaKey?: (Uint8Array|null);
         mimetype?: (string|null);
         height?: (number|null);
@@ -1793,7 +1793,7 @@ export namespace WASyncAction {
         directPath?: (string|null);
         fileLength?: (number|Long|null);
         isFavorite?: (boolean|null);
-        deviceIDHint?: (number|null);
+        deviceIdHint?: (number|null);
         isLottie?: (boolean|null);
         imageHash?: (string|null);
         isAvatarSticker?: (boolean|null);
@@ -1801,8 +1801,8 @@ export namespace WASyncAction {
 
     class StickerAction implements IStickerAction {
         constructor(p?: WASyncAction.IStickerAction);
-        public URL?: (string|null);
-        public fileEncSHA256?: (Uint8Array|null);
+        public url?: (string|null);
+        public fileEncSha256?: (Uint8Array|null);
         public mediaKey?: (Uint8Array|null);
         public mimetype?: (string|null);
         public height?: (number|null);
@@ -1810,7 +1810,7 @@ export namespace WASyncAction {
         public directPath?: (string|null);
         public fileLength?: (number|Long|null);
         public isFavorite?: (boolean|null);
-        public deviceIDHint?: (number|null);
+        public deviceIdHint?: (number|null);
         public isLottie?: (boolean|null);
         public imageHash?: (string|null);
         public isAvatarSticker?: (boolean|null);
@@ -1824,12 +1824,12 @@ export namespace WASyncAction {
     }
 
     interface IRemoveRecentStickerAction {
-        lastStickerSentTS?: (number|Long|null);
+        lastStickerSentTs?: (number|Long|null);
     }
 
     class RemoveRecentStickerAction implements IRemoveRecentStickerAction {
         constructor(p?: WASyncAction.IRemoveRecentStickerAction);
-        public lastStickerSentTS?: (number|Long|null);
+        public lastStickerSentTs?: (number|Long|null);
         public static create(properties?: WASyncAction.IRemoveRecentStickerAction): WASyncAction.RemoveRecentStickerAction;
         public static encode(m: WASyncAction.IRemoveRecentStickerAction, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.RemoveRecentStickerAction;
@@ -2169,7 +2169,7 @@ export namespace WASyncAction {
         keywords?: (string[]|null);
         count?: (number|null);
         deleted?: (boolean|null);
-        associatedLabelIDs?: (string[]|null);
+        associatedLabelIds?: (string[]|null);
     }
 
     class QuickReplyAction implements IQuickReplyAction {
@@ -2179,7 +2179,7 @@ export namespace WASyncAction {
         public keywords: string[];
         public count?: (number|null);
         public deleted?: (boolean|null);
-        public associatedLabelIDs: string[];
+        public associatedLabelIds: string[];
         public static create(properties?: WASyncAction.IQuickReplyAction): WASyncAction.QuickReplyAction;
         public static encode(m: WASyncAction.IQuickReplyAction, w?: $protobuf.Writer): $protobuf.Writer;
         public static decode(r: ($protobuf.Reader|Uint8Array), l?: number): WASyncAction.QuickReplyAction;
@@ -2262,9 +2262,9 @@ export namespace WASyncAction {
     interface IContactAction {
         fullName?: (string|null);
         firstName?: (string|null);
-        lidJID?: (string|null);
+        lidJid?: (string|null);
         saveOnPrimaryAddressbook?: (boolean|null);
-        pnJID?: (string|null);
+        pnJid?: (string|null);
         username?: (string|null);
     }
 
@@ -2272,9 +2272,9 @@ export namespace WASyncAction {
         constructor(p?: WASyncAction.IContactAction);
         public fullName?: (string|null);
         public firstName?: (string|null);
-        public lidJID?: (string|null);
+        public lidJid?: (string|null);
         public saveOnPrimaryAddressbook?: (boolean|null);
-        public pnJID?: (string|null);
+        public pnJid?: (string|null);
         public username?: (string|null);
         public static create(properties?: WASyncAction.IContactAction): WASyncAction.ContactAction;
         public static encode(m: WASyncAction.IContactAction, w?: $protobuf.Writer): $protobuf.Writer;

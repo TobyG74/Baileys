@@ -1842,7 +1842,7 @@ export const WACompanionReg = $root.WACompanionReg = (() => {
         }
 
         EncryptedPairingRequest.prototype.encryptedPayload = null;
-        EncryptedPairingRequest.prototype.IV = null;
+        EncryptedPairingRequest.prototype.iv = null;
 
         let $oneOfFields;
 
@@ -1853,8 +1853,8 @@ export const WACompanionReg = $root.WACompanionReg = (() => {
         });
 
         // Virtual OneOf for proto3 optional field
-        Object.defineProperty(EncryptedPairingRequest.prototype, "_IV", {
-            get: $util.oneOfGetter($oneOfFields = ["IV"]),
+        Object.defineProperty(EncryptedPairingRequest.prototype, "_iv", {
+            get: $util.oneOfGetter($oneOfFields = ["iv"]),
             set: $util.oneOfSetter($oneOfFields)
         });
 
@@ -1867,8 +1867,8 @@ export const WACompanionReg = $root.WACompanionReg = (() => {
                 w = $Writer.create();
             if (m.encryptedPayload != null && Object.hasOwnProperty.call(m, "encryptedPayload"))
                 w.uint32(10).bytes(m.encryptedPayload);
-            if (m.IV != null && Object.hasOwnProperty.call(m, "IV"))
-                w.uint32(18).bytes(m.IV);
+            if (m.iv != null && Object.hasOwnProperty.call(m, "iv"))
+                w.uint32(18).bytes(m.iv);
             return w;
         };
 
@@ -1890,7 +1890,7 @@ export const WACompanionReg = $root.WACompanionReg = (() => {
                         break;
                     }
                 case 2: {
-                        m.IV = r.bytes();
+                        m.iv = r.bytes();
                         break;
                     }
                 default:
@@ -1915,11 +1915,11 @@ export const WACompanionReg = $root.WACompanionReg = (() => {
                 else if (d.encryptedPayload.length >= 0)
                     m.encryptedPayload = d.encryptedPayload;
             }
-            if (d.IV != null) {
-                if (typeof d.IV === "string")
-                    $util.base64.decode(d.IV, m.IV = $util.newBuffer($util.base64.length(d.IV)), 0);
-                else if (d.IV.length >= 0)
-                    m.IV = d.IV;
+            if (d.iv != null) {
+                if (typeof d.iv === "string")
+                    $util.base64.decode(d.iv, m.iv = $util.newBuffer($util.base64.length(d.iv)), 0);
+                else if (d.iv.length >= 0)
+                    m.iv = d.iv;
             }
             return m;
         };
@@ -1933,10 +1933,10 @@ export const WACompanionReg = $root.WACompanionReg = (() => {
                 if (o.oneofs)
                     d._encryptedPayload = "encryptedPayload";
             }
-            if (m.IV != null && m.hasOwnProperty("IV")) {
-                d.IV = o.bytes === String ? $util.base64.encode(m.IV, 0, m.IV.length) : o.bytes === Array ? Array.prototype.slice.call(m.IV) : m.IV;
+            if (m.iv != null && m.hasOwnProperty("iv")) {
+                d.iv = o.bytes === String ? $util.base64.encode(m.iv, 0, m.iv.length) : o.bytes === Array ? Array.prototype.slice.call(m.iv) : m.iv;
                 if (o.oneofs)
-                    d._IV = "IV";
+                    d._iv = "iv";
             }
             return d;
         };

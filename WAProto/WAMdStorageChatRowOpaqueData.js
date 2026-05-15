@@ -114,7 +114,7 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
             }
 
             DraftMessage.prototype.text = null;
-            DraftMessage.prototype.omittedURL = null;
+            DraftMessage.prototype.omittedUrl = null;
             DraftMessage.prototype.ctwaContextLinkData = null;
             DraftMessage.prototype.ctwaContext = null;
             DraftMessage.prototype.timestamp = null;
@@ -128,8 +128,8 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
             });
 
             // Virtual OneOf for proto3 optional field
-            Object.defineProperty(DraftMessage.prototype, "_omittedURL", {
-                get: $util.oneOfGetter($oneOfFields = ["omittedURL"]),
+            Object.defineProperty(DraftMessage.prototype, "_omittedUrl", {
+                get: $util.oneOfGetter($oneOfFields = ["omittedUrl"]),
                 set: $util.oneOfSetter($oneOfFields)
             });
 
@@ -160,8 +160,8 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                     w = $Writer.create();
                 if (m.text != null && Object.hasOwnProperty.call(m, "text"))
                     w.uint32(10).string(m.text);
-                if (m.omittedURL != null && Object.hasOwnProperty.call(m, "omittedURL"))
-                    w.uint32(18).string(m.omittedURL);
+                if (m.omittedUrl != null && Object.hasOwnProperty.call(m, "omittedUrl"))
+                    w.uint32(18).string(m.omittedUrl);
                 if (m.ctwaContextLinkData != null && Object.hasOwnProperty.call(m, "ctwaContextLinkData"))
                     $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextLinkData.encode(m.ctwaContextLinkData, w.uint32(26).fork()).ldelim();
                 if (m.ctwaContext != null && Object.hasOwnProperty.call(m, "ctwaContext"))
@@ -189,7 +189,7 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                             break;
                         }
                     case 2: {
-                            m.omittedURL = r.string();
+                            m.omittedUrl = r.string();
                             break;
                         }
                     case 3: {
@@ -223,8 +223,8 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                 if (d.text != null) {
                     m.text = String(d.text);
                 }
-                if (d.omittedURL != null) {
-                    m.omittedURL = String(d.omittedURL);
+                if (d.omittedUrl != null) {
+                    m.omittedUrl = String(d.omittedUrl);
                 }
                 if (d.ctwaContextLinkData != null) {
                     if (typeof d.ctwaContextLinkData !== "object")
@@ -258,10 +258,10 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                     if (o.oneofs)
                         d._text = "text";
                 }
-                if (m.omittedURL != null && m.hasOwnProperty("omittedURL")) {
-                    d.omittedURL = m.omittedURL;
+                if (m.omittedUrl != null && m.hasOwnProperty("omittedUrl")) {
+                    d.omittedUrl = m.omittedUrl;
                     if (o.oneofs)
-                        d._omittedURL = "omittedURL";
+                        d._omittedUrl = "omittedUrl";
                 }
                 if (m.ctwaContextLinkData != null && m.hasOwnProperty("ctwaContextLinkData")) {
                     d.ctwaContextLinkData = $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextLinkData.toObject(m.ctwaContextLinkData, o);
@@ -306,15 +306,15 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
 
                 CtwaContextData.prototype.conversionSource = null;
                 CtwaContextData.prototype.conversionData = null;
-                CtwaContextData.prototype.sourceURL = null;
-                CtwaContextData.prototype.sourceID = null;
+                CtwaContextData.prototype.sourceUrl = null;
+                CtwaContextData.prototype.sourceId = null;
                 CtwaContextData.prototype.sourceType = null;
                 CtwaContextData.prototype.title = null;
                 CtwaContextData.prototype.description = null;
                 CtwaContextData.prototype.thumbnail = null;
-                CtwaContextData.prototype.thumbnailURL = null;
+                CtwaContextData.prototype.thumbnailUrl = null;
                 CtwaContextData.prototype.mediaType = null;
-                CtwaContextData.prototype.mediaURL = null;
+                CtwaContextData.prototype.mediaUrl = null;
                 CtwaContextData.prototype.isSuspiciousLink = null;
 
                 let $oneOfFields;
@@ -332,14 +332,14 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(CtwaContextData.prototype, "_sourceURL", {
-                    get: $util.oneOfGetter($oneOfFields = ["sourceURL"]),
+                Object.defineProperty(CtwaContextData.prototype, "_sourceUrl", {
+                    get: $util.oneOfGetter($oneOfFields = ["sourceUrl"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(CtwaContextData.prototype, "_sourceID", {
-                    get: $util.oneOfGetter($oneOfFields = ["sourceID"]),
+                Object.defineProperty(CtwaContextData.prototype, "_sourceId", {
+                    get: $util.oneOfGetter($oneOfFields = ["sourceId"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -368,8 +368,8 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(CtwaContextData.prototype, "_thumbnailURL", {
-                    get: $util.oneOfGetter($oneOfFields = ["thumbnailURL"]),
+                Object.defineProperty(CtwaContextData.prototype, "_thumbnailUrl", {
+                    get: $util.oneOfGetter($oneOfFields = ["thumbnailUrl"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -380,8 +380,8 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(CtwaContextData.prototype, "_mediaURL", {
-                    get: $util.oneOfGetter($oneOfFields = ["mediaURL"]),
+                Object.defineProperty(CtwaContextData.prototype, "_mediaUrl", {
+                    get: $util.oneOfGetter($oneOfFields = ["mediaUrl"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -402,10 +402,10 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                         w.uint32(10).string(m.conversionSource);
                     if (m.conversionData != null && Object.hasOwnProperty.call(m, "conversionData"))
                         w.uint32(18).bytes(m.conversionData);
-                    if (m.sourceURL != null && Object.hasOwnProperty.call(m, "sourceURL"))
-                        w.uint32(26).string(m.sourceURL);
-                    if (m.sourceID != null && Object.hasOwnProperty.call(m, "sourceID"))
-                        w.uint32(34).string(m.sourceID);
+                    if (m.sourceUrl != null && Object.hasOwnProperty.call(m, "sourceUrl"))
+                        w.uint32(26).string(m.sourceUrl);
+                    if (m.sourceId != null && Object.hasOwnProperty.call(m, "sourceId"))
+                        w.uint32(34).string(m.sourceId);
                     if (m.sourceType != null && Object.hasOwnProperty.call(m, "sourceType"))
                         w.uint32(42).string(m.sourceType);
                     if (m.title != null && Object.hasOwnProperty.call(m, "title"))
@@ -414,12 +414,12 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                         w.uint32(58).string(m.description);
                     if (m.thumbnail != null && Object.hasOwnProperty.call(m, "thumbnail"))
                         w.uint32(66).string(m.thumbnail);
-                    if (m.thumbnailURL != null && Object.hasOwnProperty.call(m, "thumbnailURL"))
-                        w.uint32(74).string(m.thumbnailURL);
+                    if (m.thumbnailUrl != null && Object.hasOwnProperty.call(m, "thumbnailUrl"))
+                        w.uint32(74).string(m.thumbnailUrl);
                     if (m.mediaType != null && Object.hasOwnProperty.call(m, "mediaType"))
                         w.uint32(80).int32(m.mediaType);
-                    if (m.mediaURL != null && Object.hasOwnProperty.call(m, "mediaURL"))
-                        w.uint32(90).string(m.mediaURL);
+                    if (m.mediaUrl != null && Object.hasOwnProperty.call(m, "mediaUrl"))
+                        w.uint32(90).string(m.mediaUrl);
                     if (m.isSuspiciousLink != null && Object.hasOwnProperty.call(m, "isSuspiciousLink"))
                         w.uint32(96).bool(m.isSuspiciousLink);
                     return w;
@@ -447,11 +447,11 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                                 break;
                             }
                         case 3: {
-                                m.sourceURL = r.string();
+                                m.sourceUrl = r.string();
                                 break;
                             }
                         case 4: {
-                                m.sourceID = r.string();
+                                m.sourceId = r.string();
                                 break;
                             }
                         case 5: {
@@ -471,7 +471,7 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                                 break;
                             }
                         case 9: {
-                                m.thumbnailURL = r.string();
+                                m.thumbnailUrl = r.string();
                                 break;
                             }
                         case 10: {
@@ -479,7 +479,7 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                                 break;
                             }
                         case 11: {
-                                m.mediaURL = r.string();
+                                m.mediaUrl = r.string();
                                 break;
                             }
                         case 12: {
@@ -511,11 +511,11 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                         else if (d.conversionData.length >= 0)
                             m.conversionData = d.conversionData;
                     }
-                    if (d.sourceURL != null) {
-                        m.sourceURL = String(d.sourceURL);
+                    if (d.sourceUrl != null) {
+                        m.sourceUrl = String(d.sourceUrl);
                     }
-                    if (d.sourceID != null) {
-                        m.sourceID = String(d.sourceID);
+                    if (d.sourceId != null) {
+                        m.sourceId = String(d.sourceId);
                     }
                     if (d.sourceType != null) {
                         m.sourceType = String(d.sourceType);
@@ -529,8 +529,8 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                     if (d.thumbnail != null) {
                         m.thumbnail = String(d.thumbnail);
                     }
-                    if (d.thumbnailURL != null) {
-                        m.thumbnailURL = String(d.thumbnailURL);
+                    if (d.thumbnailUrl != null) {
+                        m.thumbnailUrl = String(d.thumbnailUrl);
                     }
                     switch (d.mediaType) {
                     default:
@@ -552,8 +552,8 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                         m.mediaType = 2;
                         break;
                     }
-                    if (d.mediaURL != null) {
-                        m.mediaURL = String(d.mediaURL);
+                    if (d.mediaUrl != null) {
+                        m.mediaUrl = String(d.mediaUrl);
                     }
                     if (d.isSuspiciousLink != null) {
                         m.isSuspiciousLink = Boolean(d.isSuspiciousLink);
@@ -575,15 +575,15 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                         if (o.oneofs)
                             d._conversionData = "conversionData";
                     }
-                    if (m.sourceURL != null && m.hasOwnProperty("sourceURL")) {
-                        d.sourceURL = m.sourceURL;
+                    if (m.sourceUrl != null && m.hasOwnProperty("sourceUrl")) {
+                        d.sourceUrl = m.sourceUrl;
                         if (o.oneofs)
-                            d._sourceURL = "sourceURL";
+                            d._sourceUrl = "sourceUrl";
                     }
-                    if (m.sourceID != null && m.hasOwnProperty("sourceID")) {
-                        d.sourceID = m.sourceID;
+                    if (m.sourceId != null && m.hasOwnProperty("sourceId")) {
+                        d.sourceId = m.sourceId;
                         if (o.oneofs)
-                            d._sourceID = "sourceID";
+                            d._sourceId = "sourceId";
                     }
                     if (m.sourceType != null && m.hasOwnProperty("sourceType")) {
                         d.sourceType = m.sourceType;
@@ -605,20 +605,20 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                         if (o.oneofs)
                             d._thumbnail = "thumbnail";
                     }
-                    if (m.thumbnailURL != null && m.hasOwnProperty("thumbnailURL")) {
-                        d.thumbnailURL = m.thumbnailURL;
+                    if (m.thumbnailUrl != null && m.hasOwnProperty("thumbnailUrl")) {
+                        d.thumbnailUrl = m.thumbnailUrl;
                         if (o.oneofs)
-                            d._thumbnailURL = "thumbnailURL";
+                            d._thumbnailUrl = "thumbnailUrl";
                     }
                     if (m.mediaType != null && m.hasOwnProperty("mediaType")) {
                         d.mediaType = o.enums === String ? $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextData.ContextInfoExternalAdReplyInfoMediaType[m.mediaType] === undefined ? m.mediaType : $root.WAMdStorageChatRowOpaqueData.ChatRowOpaqueData.DraftMessage.CtwaContextData.ContextInfoExternalAdReplyInfoMediaType[m.mediaType] : m.mediaType;
                         if (o.oneofs)
                             d._mediaType = "mediaType";
                     }
-                    if (m.mediaURL != null && m.hasOwnProperty("mediaURL")) {
-                        d.mediaURL = m.mediaURL;
+                    if (m.mediaUrl != null && m.hasOwnProperty("mediaUrl")) {
+                        d.mediaUrl = m.mediaUrl;
                         if (o.oneofs)
-                            d._mediaURL = "mediaURL";
+                            d._mediaUrl = "mediaUrl";
                     }
                     if (m.isSuspiciousLink != null && m.hasOwnProperty("isSuspiciousLink")) {
                         d.isSuspiciousLink = m.isSuspiciousLink;
@@ -660,7 +660,7 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                 }
 
                 CtwaContextLinkData.prototype.context = null;
-                CtwaContextLinkData.prototype.sourceURL = null;
+                CtwaContextLinkData.prototype.sourceUrl = null;
                 CtwaContextLinkData.prototype.icebreaker = null;
                 CtwaContextLinkData.prototype.phone = null;
 
@@ -673,8 +673,8 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                 });
 
                 // Virtual OneOf for proto3 optional field
-                Object.defineProperty(CtwaContextLinkData.prototype, "_sourceURL", {
-                    get: $util.oneOfGetter($oneOfFields = ["sourceURL"]),
+                Object.defineProperty(CtwaContextLinkData.prototype, "_sourceUrl", {
+                    get: $util.oneOfGetter($oneOfFields = ["sourceUrl"]),
                     set: $util.oneOfSetter($oneOfFields)
                 });
 
@@ -699,8 +699,8 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                         w = $Writer.create();
                     if (m.context != null && Object.hasOwnProperty.call(m, "context"))
                         w.uint32(10).string(m.context);
-                    if (m.sourceURL != null && Object.hasOwnProperty.call(m, "sourceURL"))
-                        w.uint32(18).string(m.sourceURL);
+                    if (m.sourceUrl != null && Object.hasOwnProperty.call(m, "sourceUrl"))
+                        w.uint32(18).string(m.sourceUrl);
                     if (m.icebreaker != null && Object.hasOwnProperty.call(m, "icebreaker"))
                         w.uint32(26).string(m.icebreaker);
                     if (m.phone != null && Object.hasOwnProperty.call(m, "phone"))
@@ -726,7 +726,7 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                                 break;
                             }
                         case 2: {
-                                m.sourceURL = r.string();
+                                m.sourceUrl = r.string();
                                 break;
                             }
                         case 3: {
@@ -756,8 +756,8 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                     if (d.context != null) {
                         m.context = String(d.context);
                     }
-                    if (d.sourceURL != null) {
-                        m.sourceURL = String(d.sourceURL);
+                    if (d.sourceUrl != null) {
+                        m.sourceUrl = String(d.sourceUrl);
                     }
                     if (d.icebreaker != null) {
                         m.icebreaker = String(d.icebreaker);
@@ -777,10 +777,10 @@ export const WAMdStorageChatRowOpaqueData = $root.WAMdStorageChatRowOpaqueData =
                         if (o.oneofs)
                             d._context = "context";
                     }
-                    if (m.sourceURL != null && m.hasOwnProperty("sourceURL")) {
-                        d.sourceURL = m.sourceURL;
+                    if (m.sourceUrl != null && m.hasOwnProperty("sourceUrl")) {
+                        d.sourceUrl = m.sourceUrl;
                         if (o.oneofs)
-                            d._sourceURL = "sourceURL";
+                            d._sourceUrl = "sourceUrl";
                     }
                     if (m.icebreaker != null && m.hasOwnProperty("icebreaker")) {
                         d.icebreaker = m.icebreaker;
