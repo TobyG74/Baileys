@@ -623,7 +623,17 @@ const processMessage = async (
 			})
 		}
 
-		const participantsIncludesMe = () => participants.find(jid => areJidsSameUser(meId, jid.phoneNumber)) // ADD SUPPORT FOR LID
+		const meLid = creds.me?.lid
+		// A participant entry may carry the user's PN as `phoneNumber`, the
+		// user's LID as `lid`, or either of those formats inside `id`. To
+		// reliably detect whether the bot is in the list we have to compare
+		const participantsIncludesMe = () =>
+			participants.find(jid => {
+				const candidates = [jid.phoneNumber, jid.lid, jid.id]
+				return candidates.some(
+					c => areJidsSameUser(meId, c) || (meLid ? areJidsSameUser(meLid, c) : false)
+				)
+			})
 
 		switch (message.messageStubType) {
 			case WAMessageStubType.GROUP_PARTICIPANT_CHANGE_NUMBER:
